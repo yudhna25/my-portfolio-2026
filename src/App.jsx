@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
-import { ArrowUpRight, ArrowDown, Mail, Linkedin, Facebook, Globe, Star, Sparkles, Zap, Box } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { ArrowDown, Mail, Linkedin, Facebook, Globe, Star, Sparkles, Zap } from 'lucide-react';
 
 // --- THEME CONFIGURATION ---
 const THEME = {
-  black: '#1a1a1a', // Soft Black
-  white: '#F5F5F0', // Warm White / Eggshell
-  accent: '#FF3333', // Bold Red Accent (Graphic Design style)
+  black: '#1a1a1a', 
+  white: '#F5F5F0', 
+  accent: '#FF3333', 
 };
 
 // --- DATA ---
@@ -54,14 +54,8 @@ const PORTFOLIO_DATA = {
     }
   ],
   skills: [
-    "Design Thinking",
-    "AI-Assisted Design",
-    "Motion Graphics",
-    "Project Management",
-    "Time Management",
-    "Adaptability",
-    "Teamwork",
-    "Attention to Detail"
+    "Design Thinking", "AI-Assisted Design", "Motion Graphics", "Project Management",
+    "Time Management", "Adaptability", "Teamwork", "Attention to Detail"
   ],
   experience: [
     {
@@ -102,7 +96,189 @@ const PORTFOLIO_DATA = {
   ]
 };
 
+// --- ANIMATION VARIANTS (SCROLL EFFECTS) ---
+const SECTION_ANIMATIONS = {
+  profile: {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } }
+  },
+  education: {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } }
+  },
+  work: {
+    hidden: { opacity: 0, y: 100 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, ease: [0.22, 1, 0.36, 1] } }
+  },
+  footer: {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 1, delay: 0.2 } }
+  }
+};
+
 // --- COMPONENTS ---
+
+// 1. ARCANE RUNES INTRO (FIXED: NO FREEZING)
+const RuneGlitchIntro = ({ onComplete }) => {
+  const [count, setCount] = useState(0);
+  const [runeText, setRuneText] = useState("");
+  const [showWelcome, setShowWelcome] = useState(false);
+  const [triggerGlitch, setTriggerGlitch] = useState(false);
+
+  const RUNES = "ᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛊᛏᛒᛖᛗᛚᛜᛞᛟ∆∑∏ΩΨΦΞ";
+
+  // EFFECT 1: Counter Progress (Chạy 0-100%)
+  useEffect(() => {
+    // Tổng thời gian chạy số: khoảng 3.5 giây
+    const counterDuration = 3500; 
+    const intervalTime = counterDuration / 100;
+
+    const timer = setInterval(() => {
+      setCount((prev) => {
+        if (prev >= 100) {
+          clearInterval(timer);
+          return 100;
+        }
+        return prev + 1;
+      });
+    }, intervalTime);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  // EFFECT 2: Runes Animation (Chữ chạy loạn xạ)
+  useEffect(() => {
+    // Nếu đã hiện chữ Welcome thì dừng chạy runes
+    if (showWelcome) return; 
+
+    const runeInterval = setInterval(() => {
+      let randomRunes = "";
+      for (let i = 0; i < 6; i++) {
+        randomRunes += RUNES[Math.floor(Math.random() * RUNES.length)];
+      }
+      setRuneText(randomRunes);
+    }, 60); 
+
+    return () => clearInterval(runeInterval);
+  }, [showWelcome]); 
+
+  // EFFECT 3: Trigger Welcome (Khi đếm xong)
+  useEffect(() => {
+    if (count === 100) {
+      setShowWelcome(true);
+    }
+  }, [count]);
+
+  // EFFECT 4: Exit Sequence (Khi Welcome hiện ra -> Glitch -> Thoát)
+  // Tách riêng Effect này để đảm bảo không bị hủy ngang chừng
+  useEffect(() => {
+    if (showWelcome) {
+      const sequence = async () => {
+        // 1. Giữ chữ WELCOME đứng yên khoảng 1 giây cho người xem đọc
+        await new Promise(resolve => setTimeout(resolve, 500));
+        
+        // 2. Kích hoạt hiệu ứng Glitch
+        setTriggerGlitch(true);
+        
+        // 3. Glitch trong 0.6 giây
+        await new Promise(resolve => setTimeout(resolve, 600));
+
+        // 4. Gọi hàm kết thúc để vào web chính
+        onComplete();
+      };
+
+      sequence();
+    }
+  }, [showWelcome, onComplete]);
+
+  return (
+    <motion.div
+      className="fixed inset-0 z-[9999] bg-[#0a0a0a] flex items-center justify-center overflow-hidden"
+      exit={{ opacity: 0, transition: { duration: 0.5 } }} 
+    >
+      <style>{`
+        @keyframes glitch-anim-1 {
+          0% { clip-path: inset(20% 0 80% 0); transform: translate(-2px, 1px); }
+          20% { clip-path: inset(60% 0 10% 0); transform: translate(2px, -1px); }
+          40% { clip-path: inset(40% 0 50% 0); transform: translate(-2px, 2px); }
+          60% { clip-path: inset(80% 0 5% 0); transform: translate(2px, -2px); }
+          80% { clip-path: inset(10% 0 70% 0); transform: translate(-1px, 1px); }
+          100% { clip-path: inset(30% 0 50% 0); transform: translate(1px, -1px); }
+        }
+        @keyframes glitch-anim-2 {
+          0% { clip-path: inset(10% 0 60% 0); transform: translate(2px, -1px); }
+          20% { clip-path: inset(80% 0 5% 0); transform: translate(-2px, 2px); }
+          40% { clip-path: inset(30% 0 20% 0); transform: translate(2px, 1px); }
+          60% { clip-path: inset(10% 0 80% 0); transform: translate(-1px, -2px); }
+          80% { clip-path: inset(50% 0 30% 0); transform: translate(1px, 2px); }
+          100% { clip-path: inset(70% 0 10% 0); transform: translate(-2px, 1px); }
+        }
+        .glitch-text {
+          position: relative;
+        }
+        .glitch-text::before, .glitch-text::after {
+          content: attr(data-text);
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #0a0a0a;
+        }
+        .glitch-text::before {
+          left: 2px;
+          text-shadow: -1px 0 #ff00c1;
+          clip-path: inset(0);
+          animation: glitch-anim-1 0.3s infinite linear alternate-reverse;
+        }
+        .glitch-text::after {
+          left: -2px;
+          text-shadow: -1px 0 #00fff9;
+          clip-path: inset(0);
+          animation: glitch-anim-2 0.3s infinite linear alternate-reverse;
+        }
+      `}</style>
+
+      {/* BACKGROUND: COUNTER (Low Opacity, Blur) */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
+        <span className="font-syne font-black text-[30vw] text-white opacity-10 blur-sm tabular-nums tracking-tighter">
+          {count}%
+        </span>
+      </div>
+
+      {/* FOREGROUND: RUNES & WELCOME */}
+      <div className="relative z-10 text-center">
+         {!showWelcome ? (
+            <motion.div 
+               initial={{ opacity: 0 }} 
+               animate={{ opacity: 1 }}
+               className="font-mono text-[#FF3333] text-4xl md:text-6xl tracking-[1em] font-bold min-h-[60px]"
+            >
+               {runeText}
+            </motion.div>
+         ) : (
+            <motion.div
+               initial={{ scale: 0.8, opacity: 0 }}
+               animate={{ scale: 1, opacity: 1 }}
+               className={`font-syne font-black text-6xl md:text-9xl text-white uppercase tracking-tighter ${triggerGlitch ? 'glitch-text' : ''}`}
+               data-text="WELCOME"
+            >
+               WELCOME
+            </motion.div>
+         )}
+      </div>
+
+      <div className="absolute bottom-10 w-full px-12">
+        <div className="w-full h-[1px] bg-white/10 overflow-hidden">
+           <motion.div 
+             className="h-full bg-[#FF3333]" 
+             style={{ width: `${count}%` }}
+           />
+        </div>
+      </div>
+    </motion.div>
+  );
+};
 
 const Marquee = ({ text, speed = 20, direction = 1, className = "bg-white border-y border-black" }) => (
   <div className={`overflow-hidden whitespace-nowrap py-2 ${className}`}> 
@@ -120,7 +296,6 @@ const Marquee = ({ text, speed = 20, direction = 1, className = "bg-white border
   </div>
 );
 
-// --- EASTER EGG COMPONENT ---
 const EasterEgg = () => {
   const [active, setActive] = useState(false);
   const [particles, setParticles] = useState([]);
@@ -196,17 +371,14 @@ const EasterEgg = () => {
   );
 };
 
-// --- PROJECT CARD COMPONENT (Đã sửa lỗi đóng thẻ) ---
 const ProjectCard = ({ project }) => {
   return (
     <a 
       href={project.link}
       target="_blank"
       rel="noopener noreferrer"
-      // QUAN TRỌNG: Thẻ <a> này mở ở đây và bao trùm TẤT CẢ mọi thứ bên dưới
       className="group relative block w-full border-t border-white/20 min-h-[80vh] flex flex-col justify-center hover:bg-white/5 transition-colors duration-500 cursor-pointer overflow-hidden"
     >
-      {/* 1. Phần nội dung chữ */}
       <div className="px-6 md:px-12 flex flex-col md:flex-row justify-between items-start md:items-center relative z-20 w-full">
         <div className="mb-8 md:mb-0">
            <span className="font-mono text-xs text-[#FF3333] mb-2 block tracking-widest">
@@ -232,7 +404,6 @@ const ProjectCard = ({ project }) => {
         </div>
       </div>
 
-      {/* 2. Phần hình ảnh nền */}
       <div className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
          <img 
             src={project.imageUrl} 
@@ -241,16 +412,24 @@ const ProjectCard = ({ project }) => {
          />
       </div>
       
-      {/* 3. Phần lớp phủ gradient (Dòng gây lỗi cũ giờ đã nằm trong thẻ a) */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
     </a>
   );
 };
 
 export default function GraphicDesignPortfolio() {
+  const [loading, setLoading] = useState(true);
   const { scrollYProgress } = useScroll();
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
   const yHeroBg = useTransform(scrollYProgress, [0, 1], [0, 200]);
+
+  useEffect(() => {
+    if (loading) {
+      document.body.style.overflow = 'hidden';
+      window.scrollTo(0, 0);
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [loading]);
 
   return (
     <div className="bg-[#F5F5F0] text-[#1a1a1a] min-h-screen selection:bg-[#FF3333] selection:text-white font-sans overflow-x-hidden">
@@ -293,6 +472,11 @@ export default function GraphicDesignPortfolio() {
         ::-webkit-scrollbar-thumb { background: #1a1a1a; }
       `}</style>
 
+      {/* --- INTRO OVERLAY --- */}
+      <AnimatePresence>
+        {loading && <RuneGlitchIntro onComplete={() => setLoading(false)} />}
+      </AnimatePresence>
+
       {/* --- HEADER --- */}
       <nav className="fixed w-full px-6 py-6 flex justify-between items-center z-50 bg-[#F5F5F0]/80 backdrop-blur-md border-b border-black/10">
         <div className="font-syne font-bold text-xl uppercase tracking-tighter flex items-center gap-2">
@@ -323,8 +507,8 @@ export default function GraphicDesignPortfolio() {
         <div className="relative z-10">
           <motion.h1 
             initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            animate={!loading ? { y: 0, opacity: 1 } : {}}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
             className="font-syne font-extrabold text-[15vw] leading-[0.8] tracking-tighter text-black mix-blend-darken"
           >
             {PORTFOLIO_DATA.intro.line1}
@@ -334,16 +518,16 @@ export default function GraphicDesignPortfolio() {
              <div className="md:ml-2">
                 <motion.p 
                   initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 1, delay: 0.5 }}
+                  animate={!loading ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 1, delay: 1 }}
                   className="font-mono text-sm text-[#FF3333] mb-2 uppercase tracking-widest"
                 >
                   Multimedia Executive
                 </motion.p>
                 <motion.p 
                   initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 1, delay: 0.6 }}
+                  animate={!loading ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 1, delay: 1.1 }}
                   className="max-w-md font-sans text-xl font-medium border-l-4 border-black pl-6 text-gray-800 leading-relaxed"
                 >
                   {PORTFOLIO_DATA.intro.sub}
@@ -354,8 +538,8 @@ export default function GraphicDesignPortfolio() {
 
         <motion.div 
            initial={{ opacity: 0 }}
-           animate={{ opacity: 1 }}
-           transition={{ delay: 1, duration: 1 }}
+           animate={!loading ? { opacity: 1 } : {}}
+           transition={{ delay: 1.5, duration: 1 }}
            className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 font-mono text-xs border-t border-black pt-6 relative z-10"
         >
            <div>
@@ -379,93 +563,124 @@ export default function GraphicDesignPortfolio() {
       {/* --- MARQUEE 1: HERO -> PROFILE --- */}
       <Marquee text="Design • Strategy • Motion • UI/UX" />
 
-      {/* --- PROFILE / THE CREATOR --- */}
-      <section id="about" className="py-24 px-6 md:px-12 bg-[#1a1a1a] text-[#F5F5F0]">
-         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-start">
-            <div className="md:col-span-4 sticky top-24">
-               <h2 className="font-syne text-5xl md:text-7xl font-bold mb-8 leading-[0.85]">
-                 THE <br/><span className="text-[#FF3333]">CREATOR</span>
-               </h2>
-               
-               <div className="w-full max-w-sm aspect-[4/5] bg-neutral-800 grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden relative group border border-gray-800">
-                  <div className="absolute inset-0 flex items-center justify-center text-neutral-600 font-syne text-xl opacity-50 group-hover:opacity-0 transition-opacity">
-                     Portrait
-                  </div>
-                  <img 
-                    src="/Me1.png" 
-                    alt="Tran Vu Anh Duy"
-                    className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500"
-                  />
-               </div>
-            </div>
+      {/* --- PROFILE / THE CREATOR (WITH SCROLL ANIMATION: SLIDE LEFT) --- */}
+      <motion.section 
+        id="about" 
+        className="py-24 px-6 md:px-12 bg-[#1a1a1a] text-[#F5F5F0] relative overflow-hidden"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={SECTION_ANIMATIONS.profile}
+      >
+        
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-5 select-none flex items-center justify-center">
+          <span className="font-syne font-black text-[13vw] leading-none text-white whitespace-nowrap">
+            THE CREATOR
+          </span>
+        </div>
 
-            <div className="md:col-span-8 flex flex-col gap-12 md:pl-8">
-               <div>
-                  <h3 className="font-syne text-3xl md:text-4xl font-bold mb-4 text-white">
-                    Trần Vũ Anh Duy
-                  </h3>
-                  <p className="font-sans text-lg text-gray-400 border-l border-[#FF3333] pl-6 leading-relaxed max-w-2xl">
-                    User-centric <span className="text-white font-bold">UX/UI Designer</span> with a passion for solving complex problems through clean, functional, and aesthetic interfaces. 
-                    <br/><br/>
-                    I focus on creating seamless user journeys that drive engagement and retention, ensuring every design decision adds genuine value to both the user and the business.
-                  </p>
-               </div>
-
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-gray-800 pt-8">
-                  <div>
-                     <h4 className="text-[#FF3333] mb-4 uppercase font-mono text-xs tracking-widest flex items-center gap-2">
-                       <span className="w-1.5 h-1.5 bg-[#FF3333]"></span> Software
-                     </h4>
-                     <ul className="space-y-2 text-gray-400 font-sans text-sm">
-                        <li className="flex justify-between border-b border-gray-800 pb-1 hover:text-white transition-colors"><span>Adobe Photoshop</span></li>
-                        <li className="flex justify-between border-b border-gray-800 pb-1 hover:text-white transition-colors"><span>Adobe Illustrator</span></li>
-                        <li className="flex justify-between border-b border-gray-800 pb-1 hover:text-white transition-colors"><span>Adobe After Effects</span></li>
-                        <li className="flex justify-between border-b border-gray-800 pb-1 hover:text-white transition-colors"><span>Figma</span></li>
-                        <li className="flex justify-between border-b border-gray-800 pb-1 hover:text-white transition-colors"><span>Adobe Premiere</span></li>
-                     </ul>
-                  </div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+            
+            <div className="lg:col-span-5 flex flex-col items-center lg:items-start sticky top-24">
+              <div className="relative w-full max-w-md aspect-[3/4] group">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-[#FF3333]/20 rounded-full animate-[spin_10s_linear_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] border border-dashed border-white/10 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
                   
-                  <div>
-                     <h4 className="text-[#FF3333] mb-4 uppercase font-mono text-xs tracking-widest flex items-center gap-2">
-                       <span className="w-1.5 h-1.5 bg-[#FF3333]"></span> Core Skills
-                     </h4>
-                     <div className="flex flex-wrap gap-2">
-                        {PORTFOLIO_DATA.skills.map((skill, idx) => (
-                           <span key={idx} className="border border-gray-700 px-3 py-1 text-xs font-mono text-gray-500 hover:border-[#FF3333] hover:text-white transition-colors cursor-default">
-                              {skill}
-                           </span>
-                        ))}
-                     </div>
+                  <div className="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-700 relative overflow-visible">
+                    <img 
+                      src="/avatar.png" 
+                      alt="Tran Vu Anh Duy"
+                      className="w-full h-full object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
-               </div>
-
-               <div className="border-t border-gray-800 pt-8">
-                  <h4 className="text-[#FF3333] mb-6 uppercase font-mono text-xs tracking-widest flex items-center gap-2">
-                     <span className="w-1.5 h-1.5 bg-[#FF3333]"></span> Experience Log
-                  </h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                     {PORTFOLIO_DATA.experience.map((exp, idx) => (
-                        <div key={idx} className="group relative pl-6 border-l border-gray-800 hover:border-[#FF3333] transition-colors pb-2">
-                           <div className="absolute -left-[3px] top-2 w-1.5 h-1.5 bg-gray-800 group-hover:bg-[#FF3333] rounded-full transition-colors"></div>
-                           
-                           <div className="flex flex-col mb-1">
-                              <h4 className="font-syne text-xl font-bold text-white group-hover:text-[#FF3333] transition-colors">{exp.company}</h4>
-                              <span className="font-mono text-xs text-gray-500 mb-1">{exp.year}</span>
-                           </div>
-                           <p className="font-sans text-xs font-bold text-gray-400 uppercase tracking-wide mb-2">{exp.role}</p>
-                           <p className="font-sans text-sm text-gray-500 leading-relaxed group-hover:text-gray-400 transition-colors">
-                              {exp.details}
-                           </p>
-                        </div>
-                     ))}
-                  </div>
-               </div>
+              </div>
             </div>
-         </div>
-      </section>
 
-      {/* --- NEW EDUCATION SECTION (Moved Up & Connected) --- */}
-      <section id="education" className="py-24 px-6 md:px-12 bg-[#F5F5F0] text-[#1a1a1a] border-t border-black">
+            <div className="lg:col-span-7 flex flex-col gap-12">
+              <div className="border-l-4 border-[#FF3333] pl-6 md:pl-10 py-2">
+                <motion.h2 
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  className="font-syne text-5xl md:text-7xl font-bold uppercase leading-[0.9] mb-2"
+                >
+                  Trần Vũ <br/> <span className="text-transparent stroke-text-white">Anh Duy</span>
+                </motion.h2>
+                <p className="font-mono text-[#FF3333] text-sm tracking-[0.2em] uppercase mt-4">
+                  Multimedia Executive & UX/UI Designer
+                </p>
+              </div>
+
+              <p className="font-sans text-lg md:text-xl text-gray-400 leading-relaxed max-w-2xl">
+                <span className="text-white font-bold">Design is not just about visuals, it's about solving problems.</span> I focus on creating seamless user journeys that blend UX logic with UI aesthetics to deliver tangible business value. My goal is to bridge the gap between functional interfaces and cinematic storytelling.
+              </p>
+
+              <div className="space-y-8">
+                 <div>
+                    <h4 className="font-mono text-xs text-gray-500 uppercase tracking-widest mb-4">Software Arsenal</h4>
+                    <div className="flex flex-wrap gap-4">
+                      {[
+                        { name: "Photoshop", src: "/icons/ps.png" },
+                        { name: "Illustrator", src: "/icons/ai.png" },
+                        { name: "After Effects", src: "/icons/ae.png" },
+                        { name: "Davinci Resolve", src: "/icons/pr.png" },
+                        { name: "Figma", src: "/icons/figma.png" },
+                      ].map((tool) => (
+                        <div key={tool.name} className="group/icon relative w-12 h-12 md:w-14 md:h-14 bg-white/5 border border-white/10 rounded-xl p-2 hover:border-[#FF3333] transition-colors cursor-pointer">
+                          <img src={tool.src} alt={tool.name} className="w-full h-full object-contain opacity-70 group-hover/icon:opacity-100 transition-opacity" />
+                          <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-[#FF3333] text-white text-[10px] font-mono px-2 py-1 rounded opacity-0 group-hover/icon:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                            {tool.name}
+                          </div>
+                        </div>
+                      ))}
+                      <div className="h-12 md:h-14 flex items-center px-4 border border-white/20 rounded-xl text-xs font-mono text-gray-400 hover:text-white hover:border-[#FF3333] transition-colors cursor-default">
+                        + Generative AI Tools
+                      </div>
+                    </div>
+                 </div>
+
+                 <div>
+                    <h4 className="font-mono text-xs text-gray-500 uppercase tracking-widest mb-4">Core Competencies</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {PORTFOLIO_DATA.skills.map((skill, idx) => (
+                         <span key={idx} className="px-4 py-1.5 bg-white/5 border border-white/10 rounded-full text-xs font-sans text-gray-300 hover:border-[#FF3333] hover:bg-[#FF3333]/10 transition-colors cursor-default">
+                            {skill}
+                         </span>
+                      ))}
+                    </div>
+                 </div>
+              </div>
+
+              <div className="pt-8 border-t border-white/10 w-full">
+                <h4 className="font-mono text-xs text-[#FF3333] uppercase tracking-widest mb-6">Professional History</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {PORTFOLIO_DATA.experience.map((exp, idx) => (
+                    <div key={idx} className="bg-white/5 p-5 rounded-xl hover:bg-white/10 transition-colors border border-transparent hover:border-white/20 flex flex-col h-full">
+                      <div className="flex justify-between items-start mb-3">
+                        <h5 className="font-syne font-bold text-lg leading-tight">{exp.company}</h5>
+                      </div>
+                      <span className="font-mono text-[10px] bg-white/10 px-2 py-1 rounded text-gray-400 w-fit mb-2">{exp.year}</span>
+                      <p className="text-xs font-mono text-[#FF3333] mb-3 uppercase tracking-wide">{exp.role}</p>
+                      <p className="text-xs text-gray-400 leading-relaxed opacity-80 mt-auto">{exp.details}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* --- NEW EDUCATION SECTION (WITH SCROLL ANIMATION: ZOOM IN) --- */}
+      <motion.section 
+        id="education" 
+        className="py-24 px-6 md:px-12 bg-[#F5F5F0] text-[#1a1a1a] border-t border-black"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={SECTION_ANIMATIONS.education}
+      >
          <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
             <div className="md:col-span-4">
                <h2 className="font-syne text-5xl md:text-7xl font-bold leading-none mb-6">
@@ -493,15 +708,21 @@ export default function GraphicDesignPortfolio() {
                </div>
             </div>
          </div>
-      </section>
+      </motion.section>
 
-      {/* --- MARQUEE 3: EDUCATION -> WORK --- */}
+      {/* --- MARQUEE 3 --- */}
       <Marquee text="Projects • Case Studies • Impact • Results" />
 
-      {/* --- WORK SECTION (DARK THEME) --- */}
-      <section id="work" className="bg-[#1a1a1a] border-t border-white/20">
+      {/* --- WORK SECTION (WITH SCROLL ANIMATION: SLIDE UP) --- */}
+      <motion.section 
+        id="work" 
+        className="bg-[#1a1a1a] border-t border-white/20"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        variants={SECTION_ANIMATIONS.work}
+      >
          <div className="px-6 md:px-12 py-24 flex flex-col md:flex-row items-center justify-center relative overflow-hidden">
-            {/* Left Animation Object - Wireframe Sphere (CSS Based) */}
             <motion.div 
                animate={{ rotateY: 360, rotateZ: 45 }}
                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -514,7 +735,6 @@ export default function GraphicDesignPortfolio() {
                </div>
             </motion.div>
 
-            {/* Right Animation Object - North Star Ripple */}
             <div className="hidden md:block absolute right-10 md:right-32">
                <motion.div 
                   animate={{ scale: [1, 1.5], opacity: [0.5, 0] }}
@@ -522,20 +742,17 @@ export default function GraphicDesignPortfolio() {
                   className="absolute inset-0 bg-[#FF3333] rounded-full blur-xl"
                />
                <div className="relative text-[#FF3333]">
-                  {/* North Star Shape using SVG path */}
                   <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
                      <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" />
                   </svg>
                </div>
             </div>
 
-            {/* Centered Title - Adjusted Size (8vw) & Spacing */}
             <h2 className="font-syne text-5xl md:text-[8vw] font-bold leading-none text-white text-center z-10 relative tracking-tighter px-4 md:px-20">
                SELECTED <span className="text-transparent stroke-text-white">WORKS</span>
             </h2>
          </div>
          
-         {/* Mapping through all projects */}
          {PORTFOLIO_DATA.projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
          ))}
@@ -543,13 +760,20 @@ export default function GraphicDesignPortfolio() {
          <div className="w-full border-t border-white/20 py-24 text-center">
             <h3 className="font-syne text-4xl text-gray-600">Archive Loading...</h3>
          </div>
-      </section>
+      </motion.section>
 
-      {/* --- MARQUEE 4: WORK -> FOOTER --- */}
+      {/* --- MARQUEE 4 --- */}
       <Marquee text="Let's Talk • Collaboration • Vision • Success" direction={-1} className="bg-[#F5F5F0] border-y border-black" />
 
-      {/* --- FOOTER --- */}
-      <footer id="contact" className="py-24 px-6 md:px-12 bg-[#F5F5F0] border-t border-black">
+      {/* --- FOOTER (WITH SCROLL ANIMATION: FADE IN) --- */}
+      <motion.footer 
+        id="contact" 
+        className="py-24 px-6 md:px-12 bg-[#F5F5F0] border-t border-black"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={SECTION_ANIMATIONS.footer}
+      >
          <div className="flex flex-col md:flex-row justify-between items-end">
             <div>
                <h2 className="font-syne font-extrabold text-[12vw] leading-none tracking-tighter text-black uppercase">
@@ -574,7 +798,7 @@ export default function GraphicDesignPortfolio() {
             <span>© 2026 Tran Vu Anh Duy</span>
             <span>Graphic / Multimedia / UXUI</span>
          </div>
-      </footer>
+      </motion.footer>
     </div>
   );
 }
