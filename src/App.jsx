@@ -392,7 +392,7 @@ export default function GraphicDesignPortfolio() {
                      Portrait
                   </div>
                   <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" 
+                    src="/Me1.png" 
                     alt="Tran Vu Anh Duy"
                     className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500"
                   />
