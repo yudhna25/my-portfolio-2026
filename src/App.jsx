@@ -82,6 +82,12 @@ const PORTFOLIO_DATA = {
   ],
   education: [
     { 
+      school: "Saigon University", 
+      degree: "Bachelor's Degree in Information Technology",
+      year: "2021 — 2026",
+      details: "Performance: Graduated with Good Tier. Key Focus: System Analyze and Design, Human-Computer Interaction (HCI), Usability Testing, and Web/App Prototyping."
+    },
+    { 
       school: "Arena Multimedia", 
       degree: "Advanced Diploma in Multimedia",
       year: "2024 — Present",
