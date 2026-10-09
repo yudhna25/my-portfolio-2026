@@ -1,0 +1,241 @@
+{
+  "status": "pass",
+  "interactionFinished": "2026-10-08T04:38:21.016Z",
+  "viewport": [
+    1440,
+    900
+  ],
+  "rect": {
+    "x": 104,
+    "y": 162.125,
+    "width": 448,
+    "height": 560
+  },
+  "source": "outputs/redesign/r0.2/portrait/avatar-cutout-color.webp",
+  "sourceSha256": "6b2fea6dcbd2bd204fc0aa6c545cbe7a696670fc4532c992378c3393d53b511f",
+  "imageSha256": "4fcfe4c67c5ddbb43f010ce920dee8babe0901344953a910378f409a9397b6f5",
+  "backgroundSha256": "3fe7a3ba61551f318b1ad3c34890446459320cd2324b7cdf808d60b16c379ccc",
+  "counts": {
+    "transparent": 158831,
+    "transparentChanged": 0,
+    "transparentMaxDelta": 0,
+    "opaque": 69469,
+    "opaqueChanged": 69391,
+    "outside": 1045120,
+    "outsideChanged": 0
+  },
+  "probes": [
+    {
+      "label": "leftMargin",
+      "source": [
+        20,
+        200
+      ],
+      "screen": [
+        115,
+        274
+      ],
+      "sourceAlpha": 0,
+      "imageRGB": [
+        5,
+        5,
+        5
+      ],
+      "backgroundRGB": [
+        5,
+        5,
+        5
+      ],
+      "maxDelta": 0
+    },
+    {
+      "label": "rightMargin",
+      "source": [
+        750,
+        300
+      ],
+      "screen": [
+        524,
+        330
+      ],
+      "sourceAlpha": 0,
+      "imageRGB": [
+        5,
+        5,
+        5
+      ],
+      "backgroundRGB": [
+        5,
+        5,
+        5
+      ],
+      "maxDelta": 0
+    },
+    {
+      "label": "bottomMargin",
+      "source": [
+        720,
+        850
+      ],
+      "screen": [
+        507,
+        638
+      ],
+      "sourceAlpha": 0,
+      "imageRGB": [
+        6,
+        6,
+        6
+      ],
+      "backgroundRGB": [
+        6,
+        6,
+        6
+      ],
+      "maxDelta": 0
+    },
+    {
+      "label": "hairOutside",
+      "source": [
+        420,
+        100
+      ],
+      "screen": [
+        339,
+        218
+      ],
+      "sourceAlpha": 0,
+      "imageRGB": [
+        5,
+        5,
+        5
+      ],
+      "backgroundRGB": [
+        5,
+        5,
+        5
+      ],
+      "maxDelta": 0
+    },
+    {
+      "label": "handGap",
+      "source": [
+        430,
+        220
+      ],
+      "screen": [
+        345,
+        285
+      ],
+      "sourceAlpha": 0,
+      "imageRGB": [
+        5,
+        5,
+        5
+      ],
+      "backgroundRGB": [
+        5,
+        5,
+        5
+      ],
+      "maxDelta": 0
+    },
+    {
+      "label": "betweenLegs",
+      "source": [
+        375,
+        750
+      ],
+      "screen": [
+        314,
+        582
+      ],
+      "sourceAlpha": 0,
+      "imageRGB": [
+        5,
+        5,
+        5
+      ],
+      "backgroundRGB": [
+        5,
+        5,
+        5
+      ],
+      "maxDelta": 0
+    },
+    {
+      "label": "face",
+      "source": [
+        340,
+        205
+      ],
+      "screen": [
+        294,
+        277
+      ],
+      "sourceAlpha": 253,
+      "imageRGB": [
+        194,
+        194,
+        194
+      ],
+      "backgroundRGB": [
+        5,
+        5,
+        5
+      ],
+      "maxDelta": 189
+    },
+    {
+      "label": "shirt",
+      "source": [
+        350,
+        405
+      ],
+      "screen": [
+        300,
+        389
+      ],
+      "sourceAlpha": 253,
+      "imageRGB": [
+        225,
+        225,
+        225
+      ],
+      "backgroundRGB": [
+        5,
+        5,
+        5
+      ],
+      "maxDelta": 220
+    },
+    {
+      "label": "pants",
+      "source": [
+        530,
+        730
+      ],
+      "screen": [
+        401,
+        571
+      ],
+      "sourceAlpha": 253,
+      "imageRGB": [
+        26,
+        26,
+        26
+      ],
+      "backgroundRGB": [
+        5,
+        5,
+        5
+      ],
+      "maxDelta": 21
+    }
+  ],
+  "limits": [
+    "Desktop DPR1 snapshot pair only; scene held at frameloop never.",
+    "Four-source-pixel guard excludes partially transparent and resampled silhouette edges.",
+    "Asset identity/halo verdict uses the separate visual source review, not this pixel difference alone."
+  ]
+}

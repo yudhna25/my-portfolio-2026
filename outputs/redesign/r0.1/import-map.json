@@ -1,0 +1,1002 @@
+[
+  {
+    "path": "public/theme-init.js",
+    "imports": [],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d-lab.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { createRoot } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport ",
+        "line": 3
+      },
+      {
+        "specifier": ";\nimport { GalaxyScene } from ",
+        "line": 5
+      },
+      {
+        "specifier": ";\nimport { useLabScroll } from ",
+        "line": 7
+      },
+      {
+        "specifier": ";\nimport { useMediaQuery } from ",
+        "line": 9
+      },
+      {
+        "specifier": ";\nimport vi from ",
+        "line": 11
+      },
+      {
+        "specifier": ";\n\ni18n.addResourceBundle(",
+        "line": 13
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/GalaxyScene.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { Canvas } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport { SceneBoundary } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\r\nimport { useMediaQuery } from ",
+        "line": 5
+      },
+      {
+        "specifier": ";\nimport { StarField } from ",
+        "line": 7
+      },
+      {
+        "specifier": ";\nimport { Constellations } from ",
+        "line": 9
+      },
+      {
+        "specifier": ";\nimport { Nebula } from ",
+        "line": 11
+      },
+      {
+        "specifier": ";\nimport { CameraRig } from ",
+        "line": 13
+      },
+      {
+        "specifier": ";\nimport { INITIAL_CAMERA_POSITION } from ",
+        "line": 15
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/components/BlackHole.jsx",
+    "imports": [
+      {
+        "specifier": ";\r\nimport { useFrame } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\r\nimport { RAY_QUALITY } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\r\nimport { BLACK_HOLE_VERT, BLACK_HOLE_FRAG, BLACK_HOLE_COPY } from ",
+        "line": 5
+      },
+      {
+        "specifier": ";\r\n\r\nconst center = new Vector3(...BLACK_HOLE_CENTER);\r\n\r\nexport function BlackHole({ target, frozen = false, quality = ",
+        "line": 7
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/components/BlackHoleBloomMask.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { BlendFunction, Effect } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\n\nconst MASK_FRAG = /* glsl */ `\n  uniform sampler2D uBlackHoleImage;\n  void mainImage(const in vec4 inputColor, const in vec2 uv, out vec4 outputColor) {\n    vec4 ray = texture2D(uBlackHoleImage, uv);\n    // Restore only rays absorbed by the horizon. Foreground disk emission can\n    // cross the shadow; a circular cutout would incorrectly erase that light.\n    float captured = smoothstep(0.97, 1.0, ray.a) * (1.0 - step(0.0001, ray.r));\n    outputColor = vec4(inputColor.rgb * (1.0 - captured), inputColor.a);\n  }\n`;\n\nexport function BlackHoleBloomMask({ texture }) {\n  const effect = useMemo(() => new Effect(",
+        "line": 3
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/components/BlackHoleSystem.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { useThree } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport { HalfFloatType, LinearFilter, WebGLRenderTarget } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\nimport { BlackHoleBloomMask } from ",
+        "line": 5
+      },
+      {
+        "specifier": ";\n\nexport function BlackHoleSystem({ frozen = false, quality = ",
+        "line": 7
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/components/CameraRig.jsx",
+    "imports": [
+      {
+        "specifier": ";\r\nimport { useFrame, useThree } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\r\nimport { cameraPath } from ",
+        "line": 3
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/components/Constellations.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { useFrame } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport { useScrollStore } from ",
+        "line": 3
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/components/LabTelemetry.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { useFrame } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport { useScrollStore } from ",
+        "line": 3
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/components/Nebula.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { useFrame } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\n\nconst NEBULA_VERT = /* glsl */ `\n  varying vec2 vUv;\n  void main() {\n    vUv = uv;\n    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);\n  }\n`;\n\nconst NEBULA_FRAG = /* glsl */ `\n  uniform float uTime;\n  uniform vec3 uColorA;\n  uniform vec3 uColorB;\n  varying vec2 vUv;\n  float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }\n  float noise(vec2 p) {\n    vec2 i = floor(p);\n    vec2 f = fract(p);\n    vec2 u = f * f * (3.0 - 2.0 * f);\n    return mix(mix(hash(i), hash(i + vec2(1.0, 0.0)), u.x),\n               mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), u.x), u.y);\n  }\n  float fbm(vec2 p) {\n    float v = 0.0;\n    float a = 0.5;\n    for (int i = 0; i < FBM_OCTAVES; i++) {\n      v += a * noise(p);\n      p = p * 2.03 + vec2(1.7, 9.2);\n      a *= 0.5;\n    }\n    return v;\n  }\n  void main() {\n    vec2 p = vUv * 3.2 + vec2(uTime * 0.008, uTime * 0.004);\n    float f = fbm(p);\n    float g = fbm(p * 2.1 - f * 0.7);\n    vec3 col = mix(uColorA, uColorB, clamp(g * 1.4, 0.0, 1.0));\n    vec2 edge = 1.0 - smoothstep(vec2(0.30), vec2(0.50), abs(vUv - 0.5));\n    float alpha = smoothstep(0.28, 0.95, g) * 0.2 * edge.x * edge.y;\n    gl_FragColor = vec4(col, alpha);\n  }\n`;\n\nexport function Nebula({ position, scale, colorA = ",
+        "line": 3
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/components/OrbitalSkills.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { useFrame } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport { useScrollStore } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\nimport { useSectionAnchor } from ",
+        "line": 5
+      },
+      {
+        "specifier": ";\n\nfunction Satellites({ count, radius, name }) {\n  const mesh = useRef(null);\n  useLayoutEffect(() => {\n    const matrix = new Matrix4();\n    for (let index = 0; index < count; index++) {\n      const angle = index / count * Math.PI * 2;\n      matrix.makeTranslation(Math.cos(angle) * radius, Math.sin(angle) * radius, 0);\n      mesh.current.setMatrixAt(index, matrix);\n    }\n    mesh.current.instanceMatrix.needsUpdate = true;\n    mesh.current.computeBoundingSphere();\n  }, [count, radius]);\n  return (\n    <instancedMesh ref={mesh} name={name} args={[undefined, undefined, count]}>\n      <octahedronGeometry args={[0.14, 0]} />\n      <meshBasicMaterial color=",
+        "line": 7
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/components/Planet.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { useScrollStore } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport { useSectionAnchor } from ",
+        "line": 3
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/components/SceneBoundary.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { SceneFallback } from ",
+        "line": 1
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/components/SceneFallback.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { i18n } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport en from ",
+        "line": 3
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/components/ShootingStars.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { useFrame } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport {\n  advanceShootingStars,\n  createShootingStars,\n  triggerReactiveMeteor,\n  METEOR_COUNT,\n  METEOR_SAMPLES,\n} from ",
+        "line": 3
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/components/StarField.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { useFrame } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport { QUALITY } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\nimport { useScrollStore } from ",
+        "line": 5
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/components/StardustWake.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { useFrame } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\n\nconst PARTICLE_COUNT = 150;\n\nconst VERTEX = /* glsl */ `\n  attribute float aAlpha;\n  attribute float aSize;\n  attribute vec3 aColor;\n  uniform float uPixelRatio;\n  varying vec3 vColor;\n  varying float vAlpha;\n\n  void main() {\n    vColor = aColor;\n    vAlpha = aAlpha;\n    gl_PointSize = aSize * uPixelRatio * (1.2 + aAlpha * 1.5);\n    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);\n  }\n`;\n\nconst FRAGMENT = /* glsl */ `\n  varying vec3 vColor;\n  varying float vAlpha;\n\n  void main() {\n    if (vAlpha < 0.005) discard;\n    float dist = length(gl_PointCoord - 0.5);\n    if (dist > 0.5) discard;\n    float core = 1.0 - smoothstep(0.0, 0.48, dist);\n    gl_FragColor = vec4(vColor, vAlpha * core);\n  }\n`;\n\nfunction createParticlePool() {\n  return Array.from({ length: PARTICLE_COUNT }, (_, index) => ({\n    x: 0,\n    y: 0,\n    z: 0,\n    vx: 0,\n    vy: 0,\n    vz: 0,\n    life: 1,\n    maxLife: 1,\n    size: 1.5 + (index % 3) * 0.8,\n  }));\n}\n\nexport function StardustWake({ frozen = false }) {\n  const root = useRef(null);\n  const pointerRef = useRef({\n    x: 0,\n    y: 0,\n    prevX: 0,\n    prevY: 0,\n    vx: 0,\n    vy: 0,\n    moved: false,\n  });\n\n  const particlesRef = useRef(createParticlePool());\n  const cursorRef = useRef(0);\n\n  const geometry = useMemo(() => {\n    const geom = new BufferGeometry();\n    const pos = new Float32Array(PARTICLE_COUNT * 3);\n    const alpha = new Float32Array(PARTICLE_COUNT);\n    const sizes = new Float32Array(PARTICLE_COUNT);\n    const col = new Float32Array(PARTICLE_COUNT * 3);\n\n    for (let i = 0; i < PARTICLE_COUNT; i++) {\n      sizes[i] = 1.5 + (i % 3) * 0.8;\n      // 85% pure white, 15% electric cyan\n      const isCyan = i % 7 === 0;\n      col[i * 3] = isCyan ? 0.15 : 0.98;\n      col[i * 3 + 1] = isCyan ? 0.92 : 0.98;\n      col[i * 3 + 2] = isCyan ? 1.0 : 1.0;\n    }\n\n    geom.setAttribute(",
+        "line": 3
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/hooks/useLabScroll.js",
+    "imports": [
+      {
+        "specifier": ";\nimport { useScrollStore } from ",
+        "line": 1
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/hooks/useMediaQuery.js",
+    "imports": [
+      {
+        "specifier": ";\n\nexport function useMediaQuery(query) {\n  const subscribe = useCallback((notify) => {\n    const media = window.matchMedia(query);\n    media.addEventListener(",
+        "line": 1
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/hooks/useScrollProgress.js",
+    "imports": [
+      {
+        "specifier": ";\nimport { useScrollStore } from ",
+        "line": 1
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/hooks/useSectionAnchor.js",
+    "imports": [
+      {
+        "specifier": ";\nimport { useFrame } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport { useScrollStore } from ",
+        "line": 3
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/quality.js",
+    "imports": [],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/shaders/blackHole.js",
+    "imports": [],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/utils/buildStarGeometry.js",
+    "imports": [
+      {
+        "specifier": ";\n\n// Called only when a StarField is mounted or its count changes, never per frame.\n//\n// Uniform directions on a distant shell. StarField moves its center with the\n// observer: distant stars do not rush toward a vanishing point during travel.\nexport function buildStarGeometry(count) {\n  const positions = new Float32Array(count * 3);\n  const sizes = new Float32Array(count);\n  const seeds = new Float32Array(count);\n  const MIN_R = 280;\n  const MAX_R = 340;\n\n  for (let i = 0; i < count; i++) {\n    // Uniform direction on the sphere\n    const u = Math.random() * 2 - 1; // cos(theta)\n    const phi = Math.random() * Math.PI * 2;\n    const r = MIN_R + (MAX_R - MIN_R) * Math.random();\n    const sinTheta = Math.sqrt(1 - u * u);\n    positions[i * 3] = r * sinTheta * Math.cos(phi);\n    positions[i * 3 + 1] = r * sinTheta * Math.sin(phi);\n    positions[i * 3 + 2] = r * u;\n\n    // Real-star size mix: mostly tiny pinpoints, a few brighter, rare large.\n    const roll = Math.random();\n    if (roll < 0.82) sizes[i] = 0.8 + Math.random() * 0.4; // 82% tiny\n    else if (roll < 0.97) sizes[i] = 1.25 + Math.random() * 0.6; // 15% medium\n    else sizes[i] = 2.0 + Math.random(); // 3% bright; sizes are CSS pixels\n    seeds[i] = Math.random();\n  }\n\n  const geometry = new BufferGeometry();\n  geometry.setAttribute(",
+        "line": 1
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/utils/cameraPath.js",
+    "imports": [],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/3d/utils/shootingStars.js",
+    "imports": [],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/App.jsx",
+    "imports": [
+      {
+        "specifier": ";\r\nimport { ScrollTrigger, useGSAPSetup } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\r\nimport { useScrollProgress } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\r\n\r\nimport Preloader from ",
+        "line": 5
+      },
+      {
+        "specifier": ";\r\nimport { Nav } from ",
+        "line": 8
+      },
+      {
+        "specifier": ";\r\nimport Hero from ",
+        "line": 10
+      },
+      {
+        "specifier": ";\r\nimport Work from ",
+        "line": 12
+      },
+      {
+        "specifier": ";\r\nimport Education from ",
+        "line": 14
+      },
+      {
+        "specifier": ";\r\nimport Contact from ",
+        "line": 16
+      },
+      {
+        "specifier": ";\r\nimport { ThemeToggle } from ",
+        "line": 18
+      },
+      {
+        "specifier": ";\r\n\r\nconst GalaxyScene = lazy(() => import(",
+        "line": 20
+      }
+    ],
+    "dynamicImports": [
+      {
+        "specifier": "@/3d/GalaxyScene",
+        "line": 22
+      },
+      {
+        "specifier": "@/3d/components/OrbitalSkills",
+        "line": 23
+      },
+      {
+        "specifier": "@/3d/components/Planet",
+        "line": 24
+      }
+    ]
+  },
+  {
+    "path": "src/components/About.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { useTranslation } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport { gsap, ScrollTrigger, revealHeadings } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\nimport { PORTFOLIO_DATA } from ",
+        "line": 5
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/Aurora.jsx",
+    "imports": [
+      {
+        "specifier": ";\r\nimport { useEffect, useRef } from ",
+        "line": 3
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/Cursor.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { useTranslation } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport { gsap } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\n\nconst desktopQuery = typeof window === ",
+        "line": 5
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/Education.jsx",
+    "imports": [
+      {
+        "specifier": ";\r\nimport { useTranslation } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\r\nimport { gsap, ScrollTrigger, revealHeadings } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\r\n\r\nconst institutions = [",
+        "line": 5
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/EvilEye.jsx",
+    "imports": [
+      {
+        "specifier": ";\r\nimport { useEffect, useRef } from ",
+        "line": 3
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/Footer.jsx",
+    "imports": [
+      {
+        "specifier": ";\r\r\nimport { useTranslation } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\r\r\nimport { Mail, Facebook, Linkedin, Globe } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\r\r\nimport { useReducedMotion } from ",
+        "line": 5
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/Hero.jsx",
+    "imports": [
+      {
+        "specifier": ";\r\nimport { useTranslation } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\r\nimport { gsap, splitText } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\r\n\r\nexport default function Hero({ active }) {\r\n  const root = useRef(null);\r\n  const { t } = useTranslation();\r\n  const reducedMotion = useReducedMotion();\r\n  const name = t(",
+        "line": 5
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/Preloader.jsx",
+    "imports": [
+      {
+        "specifier": ";\r\nimport { useGSAP } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\r\nimport { gsap } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\r\n\r\nconst MOTION = {\r\n  count: 2,\r\n  reveal: 0.32,\r\n  spin: 1.2,\r\n  maxWaitMs: 2400,\r\n};\r\n\r\nexport function Preloader({ onComplete }) {\r\n  const root = useRef(null);\r\n  const content = useRef(null);\r\n  const spinner = useRef(null);\r\n  const counter = useRef(null);\r\n  const done = useRef(onComplete);\r\n  const completed = useRef(false);\r\n  const percent = useRef(0);\r\n  const deadline = useRef(null);\r\n  const reducedMotion = useReducedMotion();\r\n  const { t, i18n } = useTranslation();\r\n  const gradientId = `stellar-spinner-${useId()}`;\r\n  const format = useMemo(() => new Intl.NumberFormat(i18n.resolvedLanguage ?? ",
+        "line": 5
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/SplashCursor.jsx",
+    "imports": [
+      {
+        "specifier": ";\r\n\r\nfunction SplashCursor({\r\n  SIM_RESOLUTION = 128,\r\n  DYE_RESOLUTION = 1440,\r\n  CAPTURE_RESOLUTION = 512,\r\n  DENSITY_DISSIPATION = 3.5,\r\n  VELOCITY_DISSIPATION = 2,\r\n  PRESSURE = 0.1,\r\n  PRESSURE_ITERATIONS = 20,\r\n  CURL = 3,\r\n  SPLAT_RADIUS = 0.2,\r\n  SPLAT_FORCE = 6000,\r\n  SHADING = true,\r\n  COLOR_UPDATE_SPEED = 10,\r\n  BACK_COLOR = { r: 0.5, g: 0, b: 0 },\r\n  TRANSPARENT = true,\r\n  RAINBOW_MODE = true,\r\n  COLOR = ",
+        "line": 2
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/Work.jsx",
+    "imports": [
+      {
+        "specifier": ";\r\r\nimport { flushSync } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\r\r\nimport { useGSAP } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\r\r\nimport { useReducedMotion } from ",
+        "line": 5
+      },
+      {
+        "specifier": ";\r\r\nimport { playRadioClick } from ",
+        "line": 7
+      },
+      {
+        "specifier": ";\r\r\nimport { TargetLockReticle } from ",
+        "line": 9
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/layout/CockpitRails.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { useTranslation } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport { gsap } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\nimport { useThemeStore } from ",
+        "line": 5
+      },
+      {
+        "specifier": ";\nimport { useLangStore } from ",
+        "line": 7
+      },
+      {
+        "specifier": ";\nimport { KnurledSwitch } from ",
+        "line": 9
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/layout/MenuOverlay.jsx",
+    "imports": [
+      {
+        "specifier": ";\r\r\nimport { useGSAP } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\r\r\nimport { gsap, revealHeadings, ScrollSmoother, ScrollTrigger } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\r\r\nimport { useLangStore } from ",
+        "line": 5
+      },
+      {
+        "specifier": ";\r\r\nimport ",
+        "line": 7
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/layout/Nav.jsx",
+    "imports": [
+      {
+        "specifier": ";\r\nimport { useGSAP } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\r\nimport { gsap, ScrollTrigger, ScrollSmoother } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\r\nimport { useScrollStore } from ",
+        "line": 5
+      },
+      {
+        "specifier": ";\nimport { SoundToggle } from ",
+        "line": 7
+      },
+      {
+        "specifier": ";\nimport { playRadioClick } from ",
+        "line": 9
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/sections/Contact.jsx",
+    "imports": [
+      {
+        "specifier": ";\r\nimport { useTranslation } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\r\nimport { gsap, ScrollTrigger, revealHeadings } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\r\nimport { useScrollStore } from ",
+        "line": 5
+      },
+      {
+        "specifier": ";\r\nimport { playRadioClick } from ",
+        "line": 7
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/sections/Experience.jsx",
+    "imports": [
+      {
+        "specifier": ";\r\nimport { useTranslation } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\r\nimport { gsap, ScrollTrigger, revealHeadings } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\r\nimport { PORTFOLIO_DATA } from ",
+        "line": 5
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/sections/Skills.jsx",
+    "imports": [
+      {
+        "specifier": ";\r\r\nimport { useTranslation } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\r\r\nimport { Code2, Gem, Wrench } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\r\r\nimport { useReducedMotion } from ",
+        "line": 5
+      },
+      {
+        "specifier": ";\r\r\nimport { playRadioClick } from ",
+        "line": 7
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/ui/KnurledSwitch.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { useGSAP } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport { useReducedMotion } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\n\n/**\n * KnurledSwitch: Precision mechanical dial switch with 45-degree tactile click.\n * Inspired by aerospace cockpit dials & high-end Leica/Hasselblad knurled metal dials.\n *\n * @param {Object} props\n * @param {boolean} props.checked - Active state\n * @param {Function} props.onChange - Toggle callback\n * @param {string} props.label - Accessible text label\n * @param {[string, string]} [props.options=[",
+        "line": 5
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/ui/MissionProgressOrbit.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { useTranslation } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport { gsap } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\nimport { useScrollStore } from ",
+        "line": 5
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/ui/SoundToggle.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { useTranslation } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport { gsap } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\nimport { useAudioStore } from ",
+        "line": 5
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/ui/TargetLockReticle.jsx",
+    "imports": [
+      {
+        "specifier": ";\nimport { useTranslation } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport { gsap, ScrollTrigger } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\nimport { playRadioClick } from ",
+        "line": 5
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/components/ui/ThemeToggle.jsx",
+    "imports": [
+      {
+        "specifier": ";\r\nimport { useTranslation } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport { playRadioClick } from ",
+        "line": 3
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/data.js",
+    "imports": [],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/data/navigation.js",
+    "imports": [],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/data/skills.js",
+    "imports": [
+      {
+        "specifier": ";\n\n// The same ten approved labels describe the geometry and its DOM legend.\nexport const orbitalSkills = [\n  ...PORTFOLIO_DATA.tools.map(({ id }, index) => ({ id, key: `skills.tools.${index}` })),\n  ...[",
+        "line": 1
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/hooks/useGSAPSetup.js",
+    "imports": [
+      {
+        "specifier": ";\nimport { useGSAP } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport { ScrollSmoother } from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\nimport { ScrambleTextPlugin } from ",
+        "line": 5
+      },
+      {
+        "specifier": ";\nimport { Flip } from ",
+        "line": 7
+      },
+      {
+        "specifier": ";\n\n// Module initialization runs once, before React",
+        "line": 9
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/hooks/useReducedMotion.js",
+    "imports": [
+      {
+        "specifier": ";\n\nconst motionQuery = typeof window !== ",
+        "line": 1
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/hooks/useSmoothScroll.js",
+    "imports": [
+      {
+        "specifier": ";\nimport { gsap, ScrollSmoother } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\n\nexport function useSmoothScroll({ scope, paused = false } = {}) {\n  const reducedMotion = useReducedMotion();\n\n  useGSAP(() => {\n    const media = gsap.matchMedia(scope);\n\n    media.add(",
+        "line": 3
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/i18n/config.js",
+    "imports": [
+      {
+        "specifier": ";\nimport { initReactI18next } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport en from ",
+        "line": 3
+      },
+      {
+        "specifier": ";\n\ni18n.use(initReactI18next).init({\n  lng: useLangStore.getState().lang, // The store defaults to ",
+        "line": 5
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/lib/audioEngine.js",
+    "imports": [],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/lib/utils.js",
+    "imports": [],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/main.jsx",
+    "imports": [
+      {
+        "specifier": "\nimport { createRoot } from ",
+        "line": 1
+      },
+      {
+        "specifier": "\nimport ",
+        "line": 3
+      },
+      {
+        "specifier": "\nimport App from ",
+        "line": 5
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/stores/useAudioStore.js",
+    "imports": [
+      {
+        "specifier": ";\nimport { createJSONStorage, persist } from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\n\nexport const useAudioStore = create(persist((set, get) => ({\n  isMuted: true,\n  // Consent is per document, even if the saved preference was ON.\n  isStarted: false,\n  isPending: false,\n  error: false,\n  toggleSound: async () => {\n    const state = get();\n    if (state.isPending) return;\n    if (state.isStarted && !state.isMuted) {\n      playRadioClick();\n      set({ isMuted: true });\n      await setMuted(true);\n      return;\n    }\n    set({ isPending: true, error: false });\n    try {\n      const started = await startSpaceDrone();\n      if (!started) await setMuted(true);\n      set({ isMuted: !started, isStarted: started, isPending: false, error: !started });\n      if (started) playRadioClick();\n    } catch {\n      disposeAudio();\n      set({ isMuted: true, isStarted: false, isPending: false, error: true });\n    }\n  },\n  resetAudio: () => {\n    disposeAudio();\n    set({ isStarted: false, isPending: false, error: false });\n  },\n}), {\n  name: ",
+        "line": 3
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/stores/useLangStore.js",
+    "imports": [
+      {
+        "specifier": ";\n\nexport const useLangStore = create((set) => ({\n  lang: ",
+        "line": 1
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/stores/useLoadingStore.js",
+    "imports": [
+      {
+        "specifier": "zustand",
+        "line": 1
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/stores/useScrollStore.js",
+    "imports": [
+      {
+        "specifier": ";\n\nexport const useScrollStore = create((set) => ({\n  scrollProgress: 0,\n  currentSection: ",
+        "line": 1
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "src/stores/useThemeStore.js",
+    "imports": [
+      {
+        "specifier": ";\n\nexport const useThemeStore = create((set, get) => ({\n  // The head bootstrap resolves storage/OS before React renders. SSR stays dark.\n  theme: typeof document !== ",
+        "line": 1
+      }
+    ],
+    "dynamicImports": []
+  },
+  {
+    "path": "vite.config.js",
+    "imports": [
+      {
+        "specifier": ";\nimport react from ",
+        "line": 1
+      },
+      {
+        "specifier": ";\nimport path from ",
+        "line": 3
+      }
+    ],
+    "dynamicImports": []
+  }
+]

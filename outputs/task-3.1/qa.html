@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/index.css" />
+  <title>Task 3.1 — App scene checks</title>
+  <style>
+    #qa { position: fixed; z-index: 200; right: 12px; bottom: 12px; max-width: 360px; background: #111; color: #fafafa; padding: 10px; font: 12px monospace; border: 1px solid #555; }
+    #qa button { border: 1px solid #555; padding: 5px; margin: 2px; }
+    #qa pre { max-height: 90px; overflow: auto; white-space: pre-wrap; }
+    #qa details { max-height: 160px; overflow: auto; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <aside id="qa">
+    <div id="controls">
+      <button data-section="hero">Hero</button><button data-section="about">About</button>
+      <button data-section="skills">Skills</button><button data-section="education">Education</button>
+      <button data-section="transmission">Contact</button>
+      <button id="capture">Capture</button><button id="fps">Measure Fiber FPS</button>
+      <button id="checks">Run lifecycle</button><button id="motion">Reduced motion</button>
+    </div>
+    <pre id="status">Loading actual App…</pre>
+    <details><summary>JSON evidence</summary><pre id="results">{}</pre></details>
+  </aside>
+  <script type="module" src="./qa.jsx"></script>
+</body>
+</html>

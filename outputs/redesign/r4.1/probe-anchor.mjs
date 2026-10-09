@@ -1,0 +1,7 @@
+import { readFileSync } from 'node:fs';
+let script = readFileSync(new URL('./verify-browser.mjs', import.meta.url), 'utf8').split('try {\n  await init();')[0];
+script += `try { await init('education'); await select('saigonUniversity'); await page.waitForTimeout(1600);
+ console.log(JSON.stringify(await page.evaluate(()=>{const f=window.qa.fiber.getState(),s=window.qa.useScrollStore.getState(),root=f.scene.getObjectByName('symbol-anchor'),r=document.querySelector('[data-symbol-anchor="education"]').getBoundingClientRect(), p=root.position.clone().project(f.camera); return {rootCenter:[(p.x+1)*innerWidth/2,(1-p.y)*innerHeight/2],domCenter:[r.x+r.width/2,r.y+r.height/2],scrollProgress:s.scrollProgress, visibleY:window.qa.ScrollSmoother.get()?.scrollTop(), nativeY:scrollY,htmlHeight:document.documentElement.scrollHeight, contentHeight:document.querySelector('#smooth-content').getBoundingClientRect().height,contentTop:document.querySelector('#smooth-content').getBoundingClientRect().top,contentTransform:document.querySelector('#smooth-content').style.transform,cacheY:document.querySelector('#smooth-content')._gsap?.y,wrapperTop:document.querySelector('#smooth-wrapper').getBoundingClientRect().top};}),null,2));
+} finally { await browser.close(); }`;
+await import('data:text/javascript;base64,'+Buffer.from(script.replace("const out = new URL('./', import.meta.url);", `const out = new URL(${JSON.stringify(new URL('./', import.meta.url).href)});`)).toString('base64'));
+

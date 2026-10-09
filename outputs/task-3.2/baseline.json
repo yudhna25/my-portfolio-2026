@@ -1,0 +1,346 @@
+{
+  "capturedAt": "2026-10-06T00:29:35.212Z",
+  "hashes": {
+    "src/components/Hero.jsx": "9e94ba379c0113f399d77c0ed20420980b1e305b2b0d40234d6448aed4db0983",
+    "src/3d/utils/cameraPath.js": "85fc600e91bf6300c3bde5b73f2ce32f109f659d3414c1723e18a8bec52d6210",
+    "src/3d/components/CameraRig.jsx": "825fe59fd665a74adffe6864606d6e0827577ea0372ba4be667e140d45311c07",
+    "src/3d/components/BlackHoleSystem.jsx": "0a819d7f98b63584dd4bc714ff0a0b493ccffd56909c4cab28d3ef3620e12ea5",
+    "src/3d/components/BlackHoleBloomMask.jsx": "17b3d5b7b151b3f4e4999c09c181757985813a749a2fcd0980ee3b32bac92860",
+    "src/3d/components/BlackHole.jsx": "dfbbeec22d47ca4c7a9805f5672b9ee9d7d91bd6d1a1c1f5a99e0801f18c18ab",
+    "src/3d/shaders/blackHole.js": "00efc9eb980f1a0cb18029fde7d98bc6ccaba4fca58df3cd3549eaf8b1c24100",
+    "src/components/sections/Contact.jsx": "b1714103b0df95051a8fea3492c30bf8959573459909f084fbd9314297fa30c9",
+    "src/stores/useScrollStore.js": "ee8bbb4c8e39160404f8366a8cb5f0cd490447b2ce1afce5704d76fba560f7a2"
+  },
+  "sources": {
+    "src/3d/components/CameraRig.jsx": "import { useEffect, useRef } from 'react';\nimport { useFrame, useThree } from '@react-three/fiber';\nimport { useScrollStore } from '@/stores/useScrollStore';\nimport { cameraPath } from '@/3d/utils/cameraPath';\n\nconst mouse = { x: 0, y: 0 };\n\nfunction trackMouse(event) {\n  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;\n  mouse.y = (event.clientY / window.innerHeight) * 2 - 1;\n}\n\nexport function CameraRig({ frozen = false }) {\n  const camera = useThree((state) => state.camera);\n  const size = useThree((state) => state.size);\n  const cameraRef = useRef(null);\n\n  useEffect(() => {\n    cameraRef.current = camera;\n    mouse.x = mouse.y = 0;\n    window.addEventListener('pointermove', trackMouse, { passive: true });\n    return () => {\n      window.removeEventListener('pointermove', trackMouse);\n      cameraRef.current = null;\n      mouse.x = mouse.y = 0;\n    };\n  }, [camera]);\n\n  useEffect(() => {\n    const activeCamera = cameraRef.current;\n    if (!activeCamera) return;\n    // Keep the disk framed on portrait screens while preserving desktop FOV 60.\n    activeCamera.fov = 2 * Math.atan(Math.tan(Math.PI / 6) / Math.min(1, size.width / size.height)) * 180 / Math.PI;\n    activeCamera.updateProjectionMatrix();\n  }, [size.width, size.height]);\n\n  useFrame((_, delta) => {\n    const activeCamera = cameraRef.current;\n    if (!activeCamera) return;\n\n    if (frozen) {\n      const start = cameraPath(0);\n      activeCamera.position.set(start.x, start.y, start.z);\n      activeCamera.lookAt(start.lookX, start.lookY, -200);\n      return;\n    }\n\n    const p = useScrollStore.getState().scrollProgress;\n    const target = cameraPath(p);\n    const zEase = 1 - Math.pow(1 - 0.12, Math.min(delta, 0.1) * 60);\n    const xyEase = 1 - Math.pow(1 - 0.09, Math.min(delta, 0.1) * 60);\n\n    // Start nearby; finish above the emitting disk, never below its surface.\n    activeCamera.position.z += (target.z - activeCamera.position.z) * zEase;\n\n    // x: lượn trái-phải-trái-phải-trái + trôi dần sang trái; cộng parallax chuột.\n    activeCamera.position.x += (target.x + mouse.x * target.parallax - activeCamera.position.x) * xyEase;\n    activeCamera.position.y += (target.y - mouse.y * target.parallax * 0.5 - activeCamera.position.y) * xyEase;\n\n    // lookAt trượt từ hố đen (đầu hành trình) sang lệch TRÁI hố đen ở cuối →\n    // hố đen hiện về bên PHẢI khung hình lúc tiếp cận.\n    // Adapt the aim to horizontal FOV, keeping the shadow visible at the right\n    // edge on square/portrait screens even when the foreground disk fills them.\n    const frameBias = Math.min(1, 0.54 * Math.max(1, size.width / size.height));\n    activeCamera.lookAt(target.lookX * frameBias, target.lookY, -200);\n  });\n\n  return null;\n}\n",
+    "src/components/sections/Contact.jsx": "import { useRef } from 'react';\nimport { useTranslation } from 'react-i18next';\nimport { useGSAP } from '@gsap/react';\nimport { gsap, ScrollTrigger } from '@/hooks/useGSAPSetup';\nimport { useReducedMotion } from '@/hooks/useReducedMotion';\n\nexport default function Contact() {\n  const root = useRef(null);\n  const { t, i18n } = useTranslation();\n  const reducedMotion = useReducedMotion();\n  const language = i18n.resolvedLanguage;\n\n  useGSAP(() => {\n    if (!reducedMotion) {\n      gsap.fromTo('[data-contact-line]', { y: (_, line) => line.offsetHeight * 1.1, opacity: 0 }, {\n        y: 0, opacity: 1, duration: 0.9, stagger: 0.14, ease: 'power3.out',\n        scrollTrigger: { trigger: '#transmission-heading', start: 'top 85%', once: true },\n      });\n      // Composite the button's fixed shadow; never tween box-shadow or the magnetic target.\n      gsap.fromTo('[data-contact-glow]', { opacity: 0.12 }, {\n        opacity: 0.38, duration: 2.4, repeat: -1, yoyo: true, ease: 'sine.inOut',\n        scrollTrigger: {\n          trigger: '[data-contact-email]', start: 'top bottom', end: 'bottom top',\n          toggleActions: 'play pause resume pause',\n        },\n      });\n    }\n    const frame = requestAnimationFrame(() => ScrollTrigger.refresh());\n    return () => cancelAnimationFrame(frame);\n  }, { scope: root, dependencies: [reducedMotion, language], revertOnUpdate: true });\n\n  const linkStyle = 'inline-flex min-h-11 items-center py-2 text-(--text-secondary) hover:text-(--text-primary) focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white';\n\n  return (\n    <section\n      ref={root}\n      id=\"transmission\"\n      lang={language}\n      data-theme=\"dark\"\n      aria-labelledby=\"transmission-heading\"\n      className=\"relative overflow-clip border-y border-white/[0.06] bg-(--bg-void) px-6 py-24 text-(--text-primary) sm:px-8 lg:px-12 lg:py-36\"\n    >\n      <div className=\"mx-auto max-w-7xl\">\n        <p lang=\"en\" className=\"mb-10 flex items-center gap-4 font-mono text-xs tracking-[0.2em] text-(--text-secondary)\">\n          <span aria-hidden=\"true\" className=\"h-px w-10 bg-white/30\" />\n          {t('contact.sectionLabel')}\n        </p>\n        <h2 id=\"transmission-heading\" className=\"font-display text-[clamp(1.35rem,7vw,7rem)] font-bold leading-[1.25] tracking-[-0.045em]\">\n          <span className=\"block overflow-clip\">\n            <span data-contact-line className=\"block whitespace-nowrap motion-safe:opacity-0\">{t('contact.heading')}</span>\n          </span>\n          <span className=\"block overflow-clip\">\n            <span data-contact-line lang={language === 'vi' ? 'en' : 'vi'} className=\"stroke-text-white block whitespace-nowrap motion-safe:opacity-0\">{t('contact.alternateHeading')}</span>\n          </span>\n        </h2>\n        <p className=\"mt-8 max-w-xl font-body text-lg leading-relaxed text-(--text-secondary) sm:text-xl\">\n          {t('contact.subHeading')}\n        </p>\n\n        <div className=\"mt-12 sm:mt-16\">\n          <a\n            data-contact-email\n            data-magnetic\n            href={t('contact.emailUrl')}\n            className=\"relative inline-flex min-h-18 w-full items-center justify-center gap-6 rounded-full bg-(--text-primary) px-8 py-6 font-display text-xs font-semibold tracking-[0.06em] text-black shadow-(--glow-button) focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-white sm:w-auto sm:px-10 sm:text-sm\"\n          >\n            <span data-contact-glow aria-hidden=\"true\" className=\"pointer-events-none absolute inset-0 rounded-full opacity-15 shadow-(--glow-button)\" />\n            <span className=\"relative\">{t('contact.emailCta')}</span>\n            <svg aria-hidden=\"true\" focusable=\"false\" viewBox=\"0 0 24 24\" fill=\"none\" className=\"relative h-5 w-5 shrink-0 stroke-current stroke-[1.5]\">\n              <path d=\"M5 19 19 5M5 5h14v14\" />\n            </svg>\n          </a>\n        </div>\n\n        <div className=\"mt-16 flex flex-col gap-4 border-t border-white/10 pt-6 font-mono text-xs sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-10 sm:text-sm lg:mt-24\">\n          <a href={t('contact.emailUrl')} className={`${linkStyle} [overflow-wrap:anywhere]`}>{t('contact.email')}</a>\n          {['facebook', 'linkedin', 'behance'].map((social) => t(`contact.${social}Url`) ? (\n            <a key={social} href={t(`contact.${social}Url`)} target=\"_blank\" rel=\"noopener noreferrer\" className={linkStyle}>\n              {t(`contact.${social}Label`)}\n            </a>\n          ) : null)}\n          <a href={`tel:${t('contact.phone').replace(/\\s/g, '')}`} className={`${linkStyle} sm:ml-auto`}>{t('contact.phone')}</a>\n        </div>\n      </div>\n    </section>\n  );\n}\n",
+    "src/stores/useScrollStore.js": "import { create } from 'zustand';\n\nexport const useScrollStore = create((set) => ({\n  scrollProgress: 0,\n  currentSection: 'hero',\n  // The scroll bridge supplies progress; CameraRig consumes it without measuring again.\n  setProgress: (progress) => {\n    if (Number.isFinite(progress)) {\n      set({ scrollProgress: Math.min(1, Math.max(0, progress)) });\n    }\n  },\n  setCurrentSection: (currentSection) => set({ currentSection }),\n}));\n"
+  },
+  "poses": [
+    {
+      "reducedMotion": "no-preference",
+      "requestedScroll": 0,
+      "scrollY": 0,
+      "section": "hero",
+      "progress": 0,
+      "camera": [
+        0,
+        2.2,
+        -168
+      ],
+      "quaternion": [
+        -0.03431425698308484,
+        0,
+        0,
+        0.9994110924778146
+      ],
+      "fov": 59.99999999999999,
+      "heroOpacity": "1",
+      "heroTransform": "matrix(1, 0, 0, 1, 0, 0)",
+      "smoother": true,
+      "canvas": 1,
+      "blackHole": true,
+      "programs": [
+        {
+          "id": 0,
+          "name": ""
+        },
+        {
+          "id": 1,
+          "name": ""
+        },
+        {
+          "id": 2,
+          "name": ""
+        },
+        {
+          "id": 3,
+          "name": ""
+        },
+        {
+          "id": 4,
+          "name": ""
+        },
+        {
+          "id": 5,
+          "name": ""
+        },
+        {
+          "id": 6,
+          "name": ""
+        },
+        {
+          "id": 7,
+          "name": ""
+        },
+        {
+          "id": 8,
+          "name": "DepthMaskMaterial"
+        },
+        {
+          "id": 9,
+          "name": "LuminanceMaterial"
+        },
+        {
+          "id": 10,
+          "name": "DownsamplingMaterial"
+        },
+        {
+          "id": 11,
+          "name": "UpsamplingMaterial"
+        },
+        {
+          "id": 12,
+          "name": "EffectMaterial"
+        }
+      ],
+      "calls": 1,
+      "geometry": 11,
+      "textures": 23
+    },
+    {
+      "reducedMotion": "no-preference",
+      "requestedScroll": 180,
+      "scrollY": 180,
+      "section": "hero",
+      "progress": 0,
+      "camera": [
+        -0.5133702431154827,
+        2.198638800078006,
+        -168.01550049292968
+      ],
+      "quaternion": [
+        -0.03430891480515302,
+        -0.007986313120256426,
+        -0.00027417190717136773,
+        0.999379328382073
+      ],
+      "fov": 59.99999999999999,
+      "heroOpacity": "0.8364",
+      "heroTransform": "matrix(0.9902, 0, 0, 0.9902, 0, 0)",
+      "smoother": true,
+      "canvas": 1,
+      "blackHole": true,
+      "programs": [
+        {
+          "id": 0,
+          "name": ""
+        },
+        {
+          "id": 1,
+          "name": ""
+        },
+        {
+          "id": 2,
+          "name": ""
+        },
+        {
+          "id": 3,
+          "name": ""
+        },
+        {
+          "id": 4,
+          "name": ""
+        },
+        {
+          "id": 5,
+          "name": ""
+        },
+        {
+          "id": 6,
+          "name": ""
+        },
+        {
+          "id": 7,
+          "name": ""
+        },
+        {
+          "id": 8,
+          "name": "DepthMaskMaterial"
+        },
+        {
+          "id": 9,
+          "name": "LuminanceMaterial"
+        },
+        {
+          "id": 10,
+          "name": "DownsamplingMaterial"
+        },
+        {
+          "id": 11,
+          "name": "UpsamplingMaterial"
+        },
+        {
+          "id": 12,
+          "name": "EffectMaterial"
+        }
+      ],
+      "calls": 1,
+      "geometry": 11,
+      "textures": 23
+    },
+    {
+      "reducedMotion": "reduce",
+      "requestedScroll": 0,
+      "scrollY": 0,
+      "section": "hero",
+      "progress": 0,
+      "camera": [
+        0,
+        2.2,
+        -168
+      ],
+      "quaternion": [
+        -0.03431425698308484,
+        0,
+        0,
+        0.9994110924778146
+      ],
+      "fov": 59.99999999999999,
+      "heroOpacity": "1",
+      "heroTransform": "none",
+      "smoother": false,
+      "canvas": 1,
+      "blackHole": true,
+      "programs": [
+        {
+          "id": 0,
+          "name": ""
+        },
+        {
+          "id": 1,
+          "name": ""
+        },
+        {
+          "id": 2,
+          "name": ""
+        },
+        {
+          "id": 3,
+          "name": ""
+        },
+        {
+          "id": 4,
+          "name": ""
+        },
+        {
+          "id": 5,
+          "name": ""
+        },
+        {
+          "id": 6,
+          "name": ""
+        },
+        {
+          "id": 7,
+          "name": "DepthMaskMaterial"
+        },
+        {
+          "id": 8,
+          "name": "LuminanceMaterial"
+        },
+        {
+          "id": 9,
+          "name": "DownsamplingMaterial"
+        },
+        {
+          "id": 10,
+          "name": "UpsamplingMaterial"
+        },
+        {
+          "id": 11,
+          "name": "EffectMaterial"
+        }
+      ],
+      "calls": 1,
+      "geometry": 10,
+      "textures": 23
+    },
+    {
+      "reducedMotion": "reduce",
+      "requestedScroll": 180,
+      "scrollY": 180,
+      "section": "hero",
+      "progress": 0,
+      "camera": [
+        0,
+        2.2,
+        -168
+      ],
+      "quaternion": [
+        -0.03431425698308484,
+        0,
+        0,
+        0.9994110924778146
+      ],
+      "fov": 59.99999999999999,
+      "heroOpacity": "1",
+      "heroTransform": "none",
+      "smoother": false,
+      "canvas": 1,
+      "blackHole": true,
+      "programs": [
+        {
+          "id": 0,
+          "name": ""
+        },
+        {
+          "id": 1,
+          "name": ""
+        },
+        {
+          "id": 2,
+          "name": ""
+        },
+        {
+          "id": 3,
+          "name": ""
+        },
+        {
+          "id": 4,
+          "name": ""
+        },
+        {
+          "id": 5,
+          "name": ""
+        },
+        {
+          "id": 6,
+          "name": ""
+        },
+        {
+          "id": 7,
+          "name": "DepthMaskMaterial"
+        },
+        {
+          "id": 8,
+          "name": "LuminanceMaterial"
+        },
+        {
+          "id": 9,
+          "name": "DownsamplingMaterial"
+        },
+        {
+          "id": 10,
+          "name": "UpsamplingMaterial"
+        },
+        {
+          "id": 11,
+          "name": "EffectMaterial"
+        }
+      ],
+      "calls": 1,
+      "geometry": 10,
+      "textures": 23
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "probeLimitations": [
+    "Unversioned scroll-store import yielded a separate development module; pose progress/currentSection fields are probe values, not authoritative. Camera, quaternion, Hero DOM, smoother and GPU data use the actual versioned Fiber root."
+  ]
+}

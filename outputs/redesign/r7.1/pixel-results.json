@@ -1,0 +1,234 @@
+{
+  "status": "pass",
+  "checkedAt": "2026-10-09T01:30:31.484Z",
+  "images": [
+    {
+      "file": "1440-direct-contact-canvas.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.9505655864197531,
+      "whiteFraction": 0.0015285493827160493,
+      "blackPixels": 6331
+    },
+    {
+      "file": "1440-forward-0-canvas.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.9967878086419754,
+      "whiteFraction": 0.00003626543209876543,
+      "blackPixels": 0
+    },
+    {
+      "file": "1440-forward-0.25-canvas.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.9854421296296296,
+      "whiteFraction": 0.00004243827160493827,
+      "blackPixels": 0
+    },
+    {
+      "file": "1440-forward-0.4-canvas.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.9894236111111111,
+      "whiteFraction": 0.00002546296296296296,
+      "blackPixels": 0
+    },
+    {
+      "file": "1440-forward-0.44-canvas.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.9854807098765432,
+      "whiteFraction": 0.0009012345679012346,
+      "blackPixels": 0
+    },
+    {
+      "file": "1440-forward-0.5-canvas.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.7517145061728395,
+      "whiteFraction": 7.716049382716049e-7,
+      "blackPixels": 0
+    },
+    {
+      "file": "1440-forward-0.58-canvas.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.17066820987654321,
+      "whiteFraction": 7.716049382716049e-7,
+      "blackPixels": 0
+    },
+    {
+      "file": "1440-forward-0.75-canvas.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.146429012345679,
+      "whiteFraction": 0,
+      "blackPixels": 0
+    },
+    {
+      "file": "1440-forward-1-canvas.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.9504135802469136,
+      "whiteFraction": 0.001529320987654321,
+      "blackPixels": 6332
+    },
+    {
+      "file": "1440-locale-en-canvas.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.17066820987654321,
+      "whiteFraction": 7.716049382716049e-7,
+      "blackPixels": 0
+    },
+    {
+      "file": "1440-locale-vi-canvas.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.17066820987654321,
+      "whiteFraction": 7.716049382716049e-7,
+      "blackPixels": 0
+    },
+    {
+      "file": "1440-nav-contact-canvas.png",
+      "width": 1350,
+      "height": 1500,
+      "colored": 0,
+      "darkFraction": 0.9402923456790123,
+      "whiteFraction": 0.0020938271604938274,
+      "blackPixels": 12426
+    },
+    {
+      "file": "1440-reduced-0-canvas.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.9506226851851852,
+      "whiteFraction": 0.001529320987654321,
+      "blackPixels": 6332
+    },
+    {
+      "file": "390-direct-contact-canvas.png",
+      "width": 390,
+      "height": 844,
+      "colored": 0,
+      "darkFraction": 0.9729280593024668,
+      "whiteFraction": 0.001689148134645765,
+      "blackPixels": 1550
+    },
+    {
+      "file": "390-forward-0-canvas.png",
+      "width": 390,
+      "height": 844,
+      "colored": 0,
+      "darkFraction": 0.9974602017256046,
+      "whiteFraction": 0.00015493984688297484,
+      "blackPixels": 0
+    },
+    {
+      "file": "390-forward-0.25-canvas.png",
+      "width": 390,
+      "height": 844,
+      "colored": 0,
+      "darkFraction": 0.9919522420707255,
+      "whiteFraction": 0.00014582573824279985,
+      "blackPixels": 0
+    },
+    {
+      "file": "390-forward-0.4-canvas.png",
+      "width": 390,
+      "height": 844,
+      "colored": 0,
+      "darkFraction": 0.9978703366144125,
+      "whiteFraction": 0.00008202697776157492,
+      "blackPixels": 0
+    },
+    {
+      "file": "390-forward-0.44-canvas.png",
+      "width": 390,
+      "height": 844,
+      "colored": 0,
+      "darkFraction": 0.9909831085186536,
+      "whiteFraction": 0.00004253250698748329,
+      "blackPixels": 0
+    },
+    {
+      "file": "390-forward-0.5-canvas.png",
+      "width": 390,
+      "height": 844,
+      "colored": 0,
+      "darkFraction": 0.9697016648438449,
+      "whiteFraction": 0,
+      "blackPixels": 0
+    },
+    {
+      "file": "390-forward-0.58-canvas.png",
+      "width": 390,
+      "height": 844,
+      "colored": 0,
+      "darkFraction": 0.751403572730587,
+      "whiteFraction": 0,
+      "blackPixels": 0
+    },
+    {
+      "file": "390-forward-0.75-canvas.png",
+      "width": 390,
+      "height": 844,
+      "colored": 0,
+      "darkFraction": 0.6747508810305018,
+      "whiteFraction": 0,
+      "blackPixels": 0
+    },
+    {
+      "file": "390-forward-1-canvas.png",
+      "width": 390,
+      "height": 844,
+      "colored": 0,
+      "darkFraction": 0.9729584396646008,
+      "whiteFraction": 0.001689148134645765,
+      "blackPixels": 1550
+    },
+    {
+      "file": "390-locale-en-canvas.png",
+      "width": 390,
+      "height": 844,
+      "colored": 0,
+      "darkFraction": 0.751403572730587,
+      "whiteFraction": 0,
+      "blackPixels": 0
+    },
+    {
+      "file": "390-locale-vi-canvas.png",
+      "width": 390,
+      "height": 844,
+      "colored": 0,
+      "darkFraction": 0.751403572730587,
+      "whiteFraction": 0,
+      "blackPixels": 0
+    },
+    {
+      "file": "390-reduced-0-canvas.png",
+      "width": 390,
+      "height": 844,
+      "colored": 0,
+      "darkFraction": 0.9730465427147892,
+      "whiteFraction": 0.001689148134645765,
+      "blackPixels": 1550
+    }
+  ],
+  "domPoses": 152,
+  "maxDomReverseOffset": 0.40625,
+  "scope": "Actual rendered Canvas PNGs plus recorded DOM story poses; native scroll fractional rounding stays below 0.5px. Product preview is intentionally color. Screen-space gas is the existing R2.4 approximation."
+}

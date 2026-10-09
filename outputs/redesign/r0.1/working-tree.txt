@@ -1,0 +1,60 @@
+{
+  "head": {
+    "args": [
+      "rev-parse",
+      "HEAD"
+    ],
+    "exitCode": 0,
+    "stdout": "69ca97dcda6c9cbf3907ec5366b5b4e0247663bb",
+    "stderr": ""
+  },
+  "branch": {
+    "args": [
+      "branch",
+      "--show-current"
+    ],
+    "exitCode": 0,
+    "stdout": "feature/stellar-odyssey",
+    "stderr": ""
+  },
+  "statusTracked": {
+    "args": [
+      "status",
+      "--porcelain=v1",
+      "--untracked-files=no"
+    ],
+    "exitCode": 0,
+    "stdout": " M eslint.config.js\n M index.html\n M package-lock.json\n M package.json\n M postcss.config.js\nD  public/avatar.png\nD  public/project1.jpg\nD  public/project2.jpg\nD  public/project3.jpg\nD  public/vite.svg\nD  src/App.css\n M src/App.jsx\n M src/index.css\n M src/main.jsx\n D tailwind.config.js\n M vite.config.js",
+    "stderr": ""
+  },
+  "status": {
+    "args": [
+      "status",
+      "--short",
+      "--branch",
+      "--untracked-files=normal"
+    ],
+    "exitCode": 0,
+    "stdout": "## feature/stellar-odyssey\n M eslint.config.js\n M index.html\n M package-lock.json\n M package.json\n M postcss.config.js\nD  public/avatar.png\nD  public/project1.jpg\nD  public/project2.jpg\nD  public/project3.jpg\nD  public/vite.svg\nD  src/App.css\n M src/App.jsx\n M src/index.css\n M src/main.jsx\n D tailwind.config.js\n M vite.config.js\n?? 3d-lab.html\n?? AGENTS.md\n?? CLAUDE.md\n?? components.json\n?? design-lab.html\n?? docs/\n?? gsap-public/\n?? ho-n-th-nh-tri-n-khai-c13-hero-ritual.json\n?? jsconfig.json\n?? ke-hoach-stellar-odyssey.xlsx\n?? \"k\\341\\272\\277-ho\\341\\272\\241ch.md\"\n?? outputs/\n?? public/avatar.webp\n?? public/favicon.svg\n?? public/og-image.jpg\n?? public/project1.webp\n?? public/project2.webp\n?? public/project3.webp\n?? public/pwa-192x192.png\n?? public/pwa-512x512.png\n?? public/pwa-maskable-192x192.png\n?? public/pwa-maskable-512x512.png\n?? public/theme-init.js\n?? src/3d-lab.jsx\n?? src/3d/\n?? src/components/\n?? src/data.js\n?? src/data/\n?? src/hooks/\n?? src/i18n/\n?? src/lib/\n?? src/stores/\n?? src/styles/\n?? tools/",
+    "stderr": ""
+  },
+  "diff": {
+    "args": [
+      "diff",
+      "--stat"
+    ],
+    "exitCode": 0,
+    "stdout": " eslint.config.js   |     2 +-\n index.html         |   124 +-\n package-lock.json  | 12406 ++++++++++++++++++++++++++++++++++++++++-----------\n package.json       |    26 +-\n postcss.config.js  |     5 +-\n src/App.jsx        |   884 +---\n src/index.css      |   202 +-\n src/main.jsx       |     6 +-\n tailwind.config.js |    11 -\n vite.config.js     |    75 +-\n 10 files changed, 10422 insertions(+), 3319 deletions(-)",
+    "stderr": "warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'postcss.config.js', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'src/App.jsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'src/main.jsx', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'vite.config.js', LF will be replaced by CRLF the next time Git touches it"
+  },
+  "staged": {
+    "args": [
+      "diff",
+      "--cached",
+      "--stat"
+    ],
+    "exitCode": 0,
+    "stdout": " public/avatar.png   | Bin 2326468 -> 0 bytes\n public/project1.jpg | Bin 2336649 -> 0 bytes\n public/project2.jpg | Bin 11483789 -> 0 bytes\n public/project3.jpg | Bin 1063874 -> 0 bytes\n public/vite.svg     |   1 -\n src/App.css         |  42 ------------------------------------------\n 6 files changed, 43 deletions(-)",
+    "stderr": ""
+  }
+}

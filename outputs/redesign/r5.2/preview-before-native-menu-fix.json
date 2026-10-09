@@ -1,0 +1,128 @@
+{
+  "started": "2026-10-08T15:51:51.338Z",
+  "records": [
+    {
+      "width": 1440,
+      "motion": "no-preference",
+      "id": "edura",
+      "locale": "vi",
+      "hash": "#work",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "active": "edura",
+      "preview": {
+        "x": 144,
+        "y": 692.0005493164062,
+        "width": 1152,
+        "height": 192,
+        "top": 692.0005493164062,
+        "right": 1296,
+        "bottom": 884.0005493164062,
+        "left": 144
+      },
+      "stageTop": 0.00007515624747611582,
+      "image": {
+        "src": "/project1.webp",
+        "alt": "Ảnh giới thiệu dự án EDURA LMS",
+        "width": 1600,
+        "height": 1131,
+        "filter": "none",
+        "colorPixels": 749
+      },
+      "text": "EDURA LMSProduct DesignXem case studyCase study nội bộ đang được chuẩn bị.Tham khảo trên Behance ↗",
+      "action": true,
+      "links": [
+        {
+          "href": "https://www.behance.net/gallery/241524417/Edura-LMS",
+          "rel": "noopener noreferrer",
+          "target": "_blank"
+        }
+      ],
+      "bodyHidden": false
+    },
+    {
+      "width": 1440,
+      "motion": "no-preference",
+      "id": "veris",
+      "locale": "vi",
+      "hash": "#work",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "active": "veris",
+      "preview": {
+        "x": 144,
+        "y": 692.0005493164062,
+        "width": 1152,
+        "height": 192,
+        "top": 692.0005493164062,
+        "right": 1296,
+        "bottom": 884.0005493164062,
+        "left": 144
+      },
+      "stageTop": 0.00007515624747611582,
+      "image": {
+        "src": "/project2.webp",
+        "alt": "Ảnh giới thiệu ứng dụng VERIS",
+        "width": 1600,
+        "height": 900,
+        "filter": "none",
+        "colorPixels": 985
+      },
+      "text": "VERIS APPUX/UI DesignCase study sắp ra mắt",
+      "action": null,
+      "links": [],
+      "bodyHidden": false
+    },
+    {
+      "width": 1440,
+      "motion": "no-preference",
+      "id": "vie",
+      "locale": "vi",
+      "hash": "#work",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "active": "vie",
+      "preview": {
+        "x": 144,
+        "y": 692.0005493164062,
+        "width": 1152,
+        "height": 192,
+        "top": 692.0005493164062,
+        "right": 1296,
+        "bottom": 884.0005493164062,
+        "left": 144
+      },
+      "stageTop": 0.00007515624747611582,
+      "image": {
+        "src": "/project3.webp",
+        "alt": "Ảnh nhận diện thương hiệu nước hoa VIE",
+        "width": 1600,
+        "height": 900,
+        "filter": "none",
+        "colorPixels": 792
+      },
+      "text": "VIE PERFUMEGraphic DesignCase study sắp ra mắt",
+      "action": null,
+      "links": [],
+      "bodyHidden": false
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "status": "FAIL",
+  "failure": "The expression evaluated to a falsy value:\n\n  assert(Math.abs(record.stageTop)<1)\n"
+}

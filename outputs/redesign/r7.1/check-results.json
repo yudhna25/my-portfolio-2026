@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "checkedAt": "2026-10-09T01:09:50.682Z",
+  "assertions": 31544,
+  "maxCollisionError": 1.0658141036401503e-14,
+  "maxBoundaryError": 0.0000012644628117897128,
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "origins": 7,
+      "sampledProgress": 101
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "origins": 7,
+      "sampledProgress": 101
+    },
+    {
+      "width": 320,
+      "height": 844,
+      "origins": 7,
+      "sampledProgress": 101
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "origins": 7,
+      "sampledProgress": 101
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "origins": 7,
+      "sampledProgress": 101
+    }
+  ],
+  "originalAssertions": 27292,
+  "regressions": {
+    "assertions": 4252,
+    "gasSamples": 2121,
+    "maxGasStraightRgb": 0.82,
+    "tierOctavesChecked": [
+      3,
+      2,
+      4
+    ],
+    "previousHotspotStraightRgb": 0.8114356285955011
+  }
+}

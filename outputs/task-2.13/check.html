@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="UTF-8"><title>Marquee — runnable check</title></head>
+<body>
+<button id="run" class="fixed top-4 right-4 z-50 border border-white bg-black p-3 text-white">Run check</button>
+<pre id="results" class="fixed top-20 right-4 z-50 max-h-48 overflow-auto bg-black p-3 text-xs text-white">Ready</pre>
+<div id="root" class="py-20"></div>
+<script type="module">
+  import '/src/index.css';
+  import '@fontsource-variable/unbounded';
+  const params = new URLSearchParams(location.search), preview = params.has('preview');
+  document.querySelector('#run').hidden = preview;
+  document.querySelector('#results').hidden = preview;
+  let reduced = params.has('reduced');
+  const queries = [], originalMatchMedia = window.matchMedia.bind(window);
+  window.matchMedia = query => {
+    const result = originalMatchMedia(query);
+    if (query.includes('prefers-reduced-motion')) {
+      Object.defineProperty(result, 'matches', {get: () => reduced});
+      queries.push(result);
+    }
+    return result;
+  };
+  const React = await import('react');
+  const {createRoot} = await import('react-dom/client');
+  const {flushSync} = await import('react-dom');
+  const {useTranslation} = await import('react-i18next');
+  const {i18n} = await import('/src/i18n/config.js');
+  const {useLangStore} = await import('/src/stores/useLangStore.js');
+  const {default: Marquee} = await import('/src/components/Marquee.jsx');
+  const {gsap, ScrollTrigger} = await import('/src/hooks/useGSAPSetup.js');
+  gsap.ticker.lagSmoothing(0); // QA only: let background tabs finish their checks.
+  const h = React.createElement, wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+  const keys = ['design', 'projects', 'collaboration'], speeds = [18, 22, 20], directions = [false, true, false];
+  const errors = [];
+  window.addEventListener('error', event => errors.push(event.message));
+  window.addEventListener('unhandledrejection', event => errors.push(String(event.reason)));
+  let changed = false;
+  function Demo() {
+    const {t} = useTranslation();
+    return keys.map((key, index) => h('section', {key, className:'my-16', 'data-ticker':key},
+      h(Marquee, {text:t(`common.marquees.${key}`), speed: speeds[index] + (changed ? 1 : 0), reverse:changed ? !directions[index] : directions[index], className:'qa-marquee'})));
+  }
+  const root = createRoot(document.querySelector('#root'));
+  const mount = () => flushSync(() => root.render(h(React.StrictMode, null, h(Demo))));
+  const tracks = () => [...document.querySelectorAll('.marquee-track')];
+  const loops = () => gsap.globalTimeline.getChildren(true, true, false).filter(tween => tween.repeat() === -1);
+  const setMotion = async value => {
+    reduced = value;
+    queries.forEach(query => query.dispatchEvent(new Event('change')));
+    await wait(100);
+  };
+  mount();
+  document.querySelector('#run').onclick = async () => {
+    const results = [], output = document.querySelector('#results');
+    const assert = (pass, message) => {
+      results.push({pass:Boolean(pass), message});
+      output.textContent = JSON.stringify(results, null, 2);
+      if (!pass) throw Error(message);
+    };
+    const checkMode = () => {
+      assert(loops().length === (reduced ? 0 : 3), reduced ? 'Reduced motion: zero loops' : 'Exactly one loop per strip');
+      assert(tracks().length === (reduced ? 0 : 3), reduced ? 'Reduced motion: static, readable phrases' : 'Three animated tracks');
+    };
+    try {
+      await document.fonts.ready;
+      checkMode();
+      assert(ScrollTrigger.getAll().length === 0, 'No scroll triggers or velocity boost');
+      const strips = [...document.querySelectorAll('.qa-marquee')];
+      assert(strips.every(strip => getComputedStyle(strip).backgroundColor === 'rgb(5, 5, 5)' && getComputedStyle(strip).color === 'rgb(250, 250, 250)'), 'Mono #050505 / #FAFAFA');
+      assert(strips.every(strip => getComputedStyle(strip).fontFamily.includes('Unbounded') && getComputedStyle(strip).fontSize === '48px' && getComputedStyle(strip).fontWeight === '600'), 'Unbounded 3rem / 600');
+      assert(strips.every(strip => getComputedStyle(strip).borderTopColor === 'rgba(255, 255, 255, 0.08)' && getComputedStyle(strip).borderBottomColor === 'rgba(255, 255, 255, 0.08)'), 'Both borders white / 0.08');
+      assert([...document.querySelectorAll('.qa-marquee span')].filter(span => span.textContent === '•').every(span => getComputedStyle(span).color === 'rgb(153, 153, 153)'), 'Every bullet is gray');
+      document.documentElement.dataset.theme = 'light';
+      assert(strips.every(strip => getComputedStyle(strip).color === 'rgb(250, 250, 250)' && getComputedStyle(strip).backgroundColor === 'rgb(5, 5, 5)'), 'Mono strip keeps contrast in light theme');
+      document.documentElement.dataset.theme = 'dark';
+      for (const lang of ['en', 'vi']) {
+        useLangStore.getState().setLang(lang); await wait(100); checkMode();
+        assert(keys.every(key => document.querySelector(`[data-ticker="${key}"] .sr-only`).textContent === i18n.t(`common.marquees.${key}`)), `${lang}: unchanged locale content, once for assistive tech`);
+        assert([...document.querySelectorAll('.qa-marquee > [aria-hidden="true"]')].length === 3, `${lang}: decorative copies hidden from screen readers`);
+      }
+      if (!reduced) {
+        for (const [index, track] of tracks().entries()) {
+          const [tween] = gsap.getTweensOf(track);
+          assert(tween.duration() === speeds[index] && tween.vars.ease === 'none' && tween.repeat() === -1, `${keys[index]}: speed API and linear infinite loop`);
+          const [first, second] = track.children;
+          assert(first.textContent === second.textContent && Math.abs(first.offsetWidth-second.offsetWidth) < 1, `${keys[index]}: identical halves`);
+          tween.pause().progress(0);
+          const start = (directions[index] ? second : first).getBoundingClientRect().left;
+          tween.progress(0.5);
+          assert(Math.abs(gsap.getProperty(track, 'xPercent')+25) < 0.001, `${keys[index]}: midpoint -25%`);
+          tween.progress(1);
+          const end = (directions[index] ? first : second).getBoundingClientRect().left;
+          assert(Math.abs(start-end) < 1, `${keys[index]}: seamless repeat boundary`);
+          tween.progress(0.5).play();
+        }
+        const before = tracks().map(track => Number(gsap.getProperty(track, 'xPercent')));
+        await wait(300);
+        assert(tracks().every((track, index) => (Number(gsap.getProperty(track, 'xPercent'))-before[index]) * (directions[index] ? 1 : -1) > 0), 'Live movement: left / right / left');
+        for (let index=0; index<4; index++) {
+          changed = !changed; mount();
+          assert(loops().length === 3, 'Prop changes clean previous loops');
+        }
+      }
+      for (const width of [320, 768, 1280, 1920]) {
+        document.querySelector('#root').style.width = `${width}px`;
+        assert([...document.querySelectorAll('.qa-marquee')].every(strip => strip.clientWidth === width && getComputedStyle(strip).overflowX === 'hidden' && (!reduced || strip.scrollWidth <= strip.clientWidth+1)), `${width}px: text stays within strip`);
+        if (!reduced) assert(tracks().every(track => track.children[0].offsetWidth >= width), `${width}px: loop fills viewport`);
+      }
+      document.querySelector('#root').style.removeProperty('width');
+      await setMotion(!reduced); checkMode();
+      await setMotion(!reduced); checkMode();
+      await setMotion(true);
+      const staticBefore = strips.map(strip => strip.getBoundingClientRect().left);
+      await wait(150);
+      assert(strips.every((strip, index) => strip.getBoundingClientRect().left === staticBefore[index] && strip.querySelector('p').textContent === strip.querySelector('.sr-only').textContent), 'Live reduced motion stays still and preserves the whole phrase');
+      await setMotion(false); checkMode();
+      flushSync(() => root.render(null));
+      assert(loops().length === 0 && ScrollTrigger.getAll().length === 0, 'Unmount: zero retained loops / triggers');
+      mount(); checkMode();
+      assert(errors.length === 0, 'Zero runtime errors');
+      output.dataset.status = 'pass';
+      output.textContent = JSON.stringify({status:'pass', count:results.length, results}, null, 2);
+    } catch (error) {
+      output.dataset.status = 'fail';
+      output.textContent = JSON.stringify({status:'fail', error:error.message, results}, null, 2);
+    }
+  };
+</script>
+</body>
+</html>

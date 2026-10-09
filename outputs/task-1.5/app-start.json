@@ -1,0 +1,24 @@
+{
+  "scrollY": 0,
+  "maxScroll": 3534,
+  "scrollProgress": 0,
+  "currentSection": "hero",
+  "quality": "high",
+  "frames": 0,
+  "fpsSamples": [
+    165,
+    164,
+    165,
+    164,
+    164,
+    165,
+    164,
+    165,
+    162,
+    165
+  ],
+  "hidden": false,
+  "canvasCount": 1,
+  "smoother": true,
+  "paused": false
+}

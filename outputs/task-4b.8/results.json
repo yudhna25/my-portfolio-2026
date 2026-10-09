@@ -1,0 +1,46 @@
+{
+  "checks": [
+    "Contact frequency telemetry banner is visible",
+    "Contact transmission terminal container is visible",
+    "Screen reader email text is preserved in sr-only",
+    "Visible email resolved cleanly: anhduy25work@gmail.com",
+    "Transmit/copy button is visible",
+    "Transmission status role=\"status\" banner appears on dispatch",
+    "Status message is correct: ĐÃ TRUYỀN TÍN HIỆU // GÓI TIN ĐÃ GỬI TỚI KHOANG LÁI",
+    "Skills constellation grid is visible",
+    "Constellation HUD telemetry header is visible",
+    "Ambient base constellation snake path is rendered in SVG",
+    "Figma skill node button is present",
+    "Figma node has aria-pressed=\"true\" on hover",
+    "Figma renders 3 constellation link paths (found 3)",
+    "Companion skills [wireframing, prototyping, react] highlighted with [LINK]",
+    "After Effects renders 2 constellation link paths (found 2)",
+    "Companion skills [videoEditing, photoshop] highlighted with [LINK]",
+    "Constellation dynamic links cleanly clear when mouse leaves",
+    "Reduced motion renders constellation links immediately without animation errors"
+  ],
+  "contact": {
+    "frequencyBanner": true,
+    "terminalCard": true,
+    "srEmailPreserved": true,
+    "visibleEmail": "anhduy25work@gmail.com",
+    "dispatchFeedback": "ĐÃ TRUYỀN TÍN HIỆU // GÓI TIN ĐÃ GỬI TỚI KHOANG LÁI"
+  },
+  "skills": {
+    "gridFound": true,
+    "hudHeader": true,
+    "figmaLinks": 3,
+    "aeLinks": 2,
+    "keyboardAccessible": true
+  },
+  "errors": [],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "browser": "154.0.4258.53",
+  "reducedMotion": {
+    "linksRendered": 3,
+    "zeroErrors": true
+  }
+}

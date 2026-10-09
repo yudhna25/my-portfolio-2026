@@ -1,0 +1,486 @@
+{
+  "hero.name": {
+    "vi": 23,
+    "en": 22
+  },
+  "hero.tagline": {
+    "vi": 24,
+    "en": 23
+  },
+  "hero.subTagline": {
+    "vi": 25,
+    "en": 24
+  },
+  "hero.scrollIndicator": {
+    "vi": 26,
+    "en": 25
+  },
+  "about.sectionLabel": {
+    "vi": 39,
+    "en": 30
+  },
+  "about.heading": {
+    "vi": 40,
+    "en": 31
+  },
+  "about.subLabel": {
+    "vi": 41,
+    "en": 32
+  },
+  "about.bioFirst": {
+    "vi": 43,
+    "en": 34
+  },
+  "about.bioSecond": {
+    "vi": 44,
+    "en": 35
+  },
+  "about.quote": {
+    "vi": 45,
+    "en": 36
+  },
+  "about.photoCaption": {
+    "vi": 46,
+    "en": 37
+  },
+  "about.toolsLabel": {
+    "vi": 47,
+    "en": 38
+  },
+  "about.skillsLabel": {
+    "vi": 48,
+    "en": 39
+  },
+  "works.sectionLabel": {
+    "vi": 50,
+    "en": 41
+  },
+  "works.heading": {
+    "vi": 51,
+    "en": 42
+  },
+  "works.filters.all": {
+    "vi": 52,
+    "en": 43
+  },
+  "works.filters.productDesign": {
+    "vi": 52,
+    "en": 43
+  },
+  "works.filters.uxUi": {
+    "vi": 52,
+    "en": 43
+  },
+  "works.filters.graphic": {
+    "vi": 52,
+    "en": 43
+  },
+  "works.cursorCta": {
+    "vi": 53,
+    "en": 44
+  },
+  "works.projects.eduraLms.title": {
+    "vi": 55,
+    "en": 46
+  },
+  "works.projects.eduraLms.category": {
+    "vi": 56,
+    "en": 47
+  },
+  "works.projects.eduraLms.description": {
+    "vi": 57,
+    "en": 48
+  },
+  "works.projects.eduraLms.tags": {
+    "vi": 58,
+    "en": 49
+  },
+  "works.projects.eduraLms.linkUrl": {
+    "vi": 59,
+    "en": 50
+  },
+  "works.projects.verisApp.title": {
+    "vi": 61,
+    "en": 52
+  },
+  "works.projects.verisApp.category": {
+    "vi": 62,
+    "en": 53
+  },
+  "works.projects.verisApp.description": {
+    "vi": 63,
+    "en": 54
+  },
+  "works.projects.verisApp.tags": {
+    "vi": 64,
+    "en": 55
+  },
+  "works.projects.verisApp.caseStudyLabel": {
+    "vi": 61,
+    "en": 52
+  },
+  "works.projects.viePerfume.title": {
+    "vi": 66,
+    "en": 57
+  },
+  "works.projects.viePerfume.category": {
+    "vi": 67,
+    "en": 58
+  },
+  "works.projects.viePerfume.description": {
+    "vi": 68,
+    "en": 59
+  },
+  "works.projects.viePerfume.tags": {
+    "vi": 69,
+    "en": 60
+  },
+  "works.projects.viePerfume.caseStudyLabel": {
+    "vi": 66,
+    "en": 57
+  },
+  "skills.heading": {
+    "vi": 71,
+    "en": 62
+  },
+  "skills.toolsLabel": {
+    "vi": 72,
+    "en": 63
+  },
+  "skills.tools": {
+    "vi": 73,
+    "en": 64
+  },
+  "skills.competenciesLabel": {
+    "vi": 75,
+    "en": 66
+  },
+  "skills.competencies": {
+    "vi": 76,
+    "en": 67
+  },
+  "skills.technicalLabel": {
+    "vi": 78,
+    "en": 69
+  },
+  "skills.technicalLevel": {
+    "vi": 78,
+    "en": 69
+  },
+  "skills.technical": {
+    "vi": 79,
+    "en": 70
+  },
+  "education.heading": {
+    "vi": 81,
+    "en": 72
+  },
+  "education.institutions.saigonUniversity.name": {
+    "vi": 82,
+    "en": 73
+  },
+  "education.institutions.saigonUniversity.period": {
+    "vi": 82,
+    "en": 73
+  },
+  "education.institutions.saigonUniversity.degree": {
+    "vi": 83,
+    "en": 74
+  },
+  "education.institutions.saigonUniversity.description": {
+    "vi": 84,
+    "en": 75
+  },
+  "education.institutions.arenaMultimedia.name": {
+    "vi": 86,
+    "en": 77
+  },
+  "education.institutions.arenaMultimedia.period": {
+    "vi": 86,
+    "en": 77
+  },
+  "education.institutions.arenaMultimedia.degree": {
+    "vi": 87,
+    "en": 78
+  },
+  "education.institutions.arenaMultimedia.description": {
+    "vi": 88,
+    "en": 79
+  },
+  "education.institutions.greenAcademy.name": {
+    "vi": 90,
+    "en": 81
+  },
+  "education.institutions.greenAcademy.period": {
+    "vi": 90,
+    "en": 81
+  },
+  "education.institutions.greenAcademy.degree": {
+    "vi": 91,
+    "en": 82
+  },
+  "education.institutions.greenAcademy.description": {
+    "vi": 92,
+    "en": 83
+  },
+  "experience.heading": {
+    "vi": 94,
+    "en": 85
+  },
+  "experience.positions.hosanaMedia.company": {
+    "vi": 95,
+    "en": 86
+  },
+  "experience.positions.hosanaMedia.role": {
+    "vi": 95,
+    "en": 86
+  },
+  "experience.positions.hosanaMedia.period": {
+    "vi": 95,
+    "en": 86
+  },
+  "experience.positions.hosanaMedia.type": {
+    "vi": 95,
+    "en": 86
+  },
+  "experience.positions.hosanaMedia.description": {
+    "vi": 96,
+    "en": 87
+  },
+  "experience.positions.upwork.company": {
+    "vi": 98,
+    "en": 89
+  },
+  "experience.positions.upwork.role": {
+    "vi": 98,
+    "en": 89
+  },
+  "experience.positions.upwork.period": {
+    "vi": 98,
+    "en": 89
+  },
+  "experience.positions.upwork.type": {
+    "vi": 98,
+    "en": 89
+  },
+  "experience.positions.upwork.description": {
+    "vi": 99,
+    "en": 90
+  },
+  "experience.positions.designveloper.company": {
+    "vi": 101,
+    "en": 92
+  },
+  "experience.positions.designveloper.role": {
+    "vi": 101,
+    "en": 92
+  },
+  "experience.positions.designveloper.period": {
+    "vi": 101,
+    "en": 92
+  },
+  "experience.positions.designveloper.type": {
+    "vi": 101,
+    "en": 92
+  },
+  "experience.positions.designveloper.description": {
+    "vi": 102,
+    "en": 93
+  },
+  "playground.heading": {
+    "vi": 104,
+    "en": 95
+  },
+  "playground.experiments.starfieldExplorer.title": {
+    "vi": 107,
+    "en": 98
+  },
+  "playground.experiments.starfieldExplorer.type": {
+    "vi": 107,
+    "en": 98
+  },
+  "playground.experiments.nebulaShaderPlayground.title": {
+    "vi": 108,
+    "en": 99
+  },
+  "playground.experiments.nebulaShaderPlayground.type": {
+    "vi": 108,
+    "en": 99
+  },
+  "playground.experiments.scrollProgressOrbit.title": {
+    "vi": 109,
+    "en": 100
+  },
+  "playground.experiments.scrollProgressOrbit.type": {
+    "vi": 109,
+    "en": 100
+  },
+  "playground.experiments.magneticField.title": {
+    "vi": 110,
+    "en": 101
+  },
+  "playground.experiments.magneticField.type": {
+    "vi": 110,
+    "en": 101
+  },
+  "playground.experiments.textScrambleLab.title": {
+    "vi": 111,
+    "en": 102
+  },
+  "playground.experiments.textScrambleLab.type": {
+    "vi": 111,
+    "en": 102
+  },
+  "playground.experiments.constellationGrid.title": {
+    "vi": 112,
+    "en": 103
+  },
+  "playground.experiments.constellationGrid.type": {
+    "vi": 112,
+    "en": 103
+  },
+  "playground.experiments.wormholeTunnel.title": {
+    "vi": 113,
+    "en": 104
+  },
+  "playground.experiments.wormholeTunnel.type": {
+    "vi": 113,
+    "en": 104
+  },
+  "playground.experiments.marqueeGenerator.title": {
+    "vi": 114,
+    "en": 105
+  },
+  "playground.experiments.marqueeGenerator.type": {
+    "vi": 114,
+    "en": 105
+  },
+  "contact.sectionLabel": {
+    "vi": 116,
+    "en": 107
+  },
+  "contact.heading": {
+    "vi": 117,
+    "en": 108
+  },
+  "contact.alternateHeading": {
+    "vi": 117,
+    "en": 108
+  },
+  "contact.subHeading": {
+    "vi": 118,
+    "en": 109
+  },
+  "contact.emailCta": {
+    "vi": 119,
+    "en": 110
+  },
+  "contact.email": {
+    "vi": 12,
+    "en": 11
+  },
+  "contact.emailUrl": {
+    "vi": 119,
+    "en": 110
+  },
+  "contact.phone": {
+    "vi": 13,
+    "en": 12
+  },
+  "contact.facebookUrl": {
+    "vi": 14,
+    "en": 13
+  },
+  "contact.linkedinUrl": {
+    "vi": 15,
+    "en": 14
+  },
+  "contact.behanceUrl": {
+    "vi": 16,
+    "en": 15
+  },
+  "contact.facebookLabel": {
+    "vi": 120,
+    "en": 111
+  },
+  "contact.linkedinLabel": {
+    "vi": 120,
+    "en": 111
+  },
+  "contact.behanceLabel": {
+    "vi": 120,
+    "en": 111
+  },
+  "nav.about": {
+    "vi": 31,
+    "en": 28
+  },
+  "nav.works": {
+    "vi": 32,
+    "en": 28
+  },
+  "nav.skills": {
+    "vi": 33,
+    "en": 28
+  },
+  "nav.education": {
+    "vi": 34,
+    "en": 28
+  },
+  "nav.experience": {
+    "vi": 35,
+    "en": 28
+  },
+  "nav.playground": {
+    "vi": 36,
+    "en": 28
+  },
+  "nav.contact": {
+    "vi": 37,
+    "en": 28
+  },
+  "footer.copyright": {
+    "vi": 121,
+    "en": 112
+  },
+  "preloader.counterLabel": {
+    "vi": 19,
+    "en": 18
+  },
+  "preloader.counterRange": {
+    "vi": 19,
+    "en": 18
+  },
+  "preloader.minimalLabel": {
+    "vi": 20,
+    "en": 19
+  },
+  "common.profile.displayName": {
+    "vi": 9,
+    "en": 9
+  },
+  "common.profile.englishName": {
+    "vi": 10,
+    "en": null
+  },
+  "common.profile.role": {
+    "vi": 11,
+    "en": 10
+  },
+  "common.profile.disciplines": {
+    "vi": 11,
+    "en": 10
+  },
+  "common.marquees.design": {
+    "vi": 124,
+    "en": 115
+  },
+  "common.marquees.projects": {
+    "vi": 125,
+    "en": 116
+  },
+  "common.marquees.collaboration": {
+    "vi": 126,
+    "en": 117
+  }
+}

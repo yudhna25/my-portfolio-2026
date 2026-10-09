@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-08T04:46:23.785Z",
+  "assertions": 1457,
+  "minObserverRadius": 8.182909018191513,
+  "mainLocaleKeys": 183,
+  "scope": "Pure camera/portal contract and source/locale ownership; Browser, alpha pixels and focus still require real verification"
+}

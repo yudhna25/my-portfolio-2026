@@ -1,0 +1,4723 @@
+{
+  "checks": [
+    {
+      "pass": true,
+      "label": "Loader resolves to 100%"
+    },
+    {
+      "pass": true,
+      "label": "Loader scramble follows motion preference"
+    },
+    {
+      "pass": true,
+      "label": "initial: 31 page headings"
+    },
+    {
+      "pass": true,
+      "label": "initial: accessible labels"
+    },
+    {
+      "pass": true,
+      "label": "initial: no nested splitting"
+    },
+    {
+      "pass": true,
+      "label": "initial: no text overflow (rotation measured after reveal)"
+    },
+    {
+      "pass": true,
+      "label": "initial: no detached scroll triggers"
+    },
+    {
+      "pass": true,
+      "label": "initial: no detached tween targets"
+    },
+    {
+      "pass": true,
+      "label": "initial: every rendered heading split"
+    },
+    {
+      "pass": true,
+      "label": "initial: DOM copy matches accessible copy"
+    },
+    {
+      "pass": true,
+      "label": "responsive: 31 page headings"
+    },
+    {
+      "pass": true,
+      "label": "responsive: accessible labels"
+    },
+    {
+      "pass": true,
+      "label": "responsive: no nested splitting"
+    },
+    {
+      "pass": true,
+      "label": "responsive: no text overflow (rotation measured after reveal)"
+    },
+    {
+      "pass": true,
+      "label": "responsive: no detached scroll triggers"
+    },
+    {
+      "pass": true,
+      "label": "responsive: no detached tween targets"
+    },
+    {
+      "pass": true,
+      "label": "responsive: every rendered heading split"
+    },
+    {
+      "pass": true,
+      "label": "responsive: DOM copy matches accessible copy"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: 31 page headings"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: accessible labels"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: no nested splitting"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: no text overflow (rotation measured after reveal)"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: no detached scroll triggers"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: no detached tween targets"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: reduced motion has no split DOM"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: DOM copy matches accessible copy"
+    },
+    {
+      "pass": true,
+      "label": "Viewport 1440: split/plain line heights match"
+    },
+    {
+      "pass": true,
+      "label": "responsive: 31 page headings"
+    },
+    {
+      "pass": true,
+      "label": "responsive: accessible labels"
+    },
+    {
+      "pass": true,
+      "label": "responsive: no nested splitting"
+    },
+    {
+      "pass": true,
+      "label": "responsive: no text overflow (rotation measured after reveal)"
+    },
+    {
+      "pass": true,
+      "label": "responsive: no detached scroll triggers"
+    },
+    {
+      "pass": true,
+      "label": "responsive: no detached tween targets"
+    },
+    {
+      "pass": true,
+      "label": "responsive: every rendered heading split"
+    },
+    {
+      "pass": true,
+      "label": "responsive: DOM copy matches accessible copy"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: 31 page headings"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: accessible labels"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: no nested splitting"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: no text overflow (rotation measured after reveal)"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: no detached scroll triggers"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: no detached tween targets"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: reduced motion has no split DOM"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: DOM copy matches accessible copy"
+    },
+    {
+      "pass": true,
+      "label": "Viewport 320: split/plain line heights match"
+    },
+    {
+      "pass": true,
+      "label": "responsive: 31 page headings"
+    },
+    {
+      "pass": true,
+      "label": "responsive: accessible labels"
+    },
+    {
+      "pass": true,
+      "label": "responsive: no nested splitting"
+    },
+    {
+      "pass": true,
+      "label": "responsive: no text overflow (rotation measured after reveal)"
+    },
+    {
+      "pass": true,
+      "label": "responsive: no detached scroll triggers"
+    },
+    {
+      "pass": true,
+      "label": "responsive: no detached tween targets"
+    },
+    {
+      "pass": true,
+      "label": "responsive: every rendered heading split"
+    },
+    {
+      "pass": true,
+      "label": "responsive: DOM copy matches accessible copy"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: 31 page headings"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: accessible labels"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: no nested splitting"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: no text overflow (rotation measured after reveal)"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: no detached scroll triggers"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: no detached tween targets"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: reduced motion has no split DOM"
+    },
+    {
+      "pass": true,
+      "label": "responsive-reduced: DOM copy matches accessible copy"
+    },
+    {
+      "pass": true,
+      "label": "Viewport 768: split/plain line heights match"
+    }
+  ],
+  "layouts": [
+    {
+      "label": "initial",
+      "width": 1440,
+      "reduced": false,
+      "language": "vi",
+      "headings": [
+        {
+          "id": "hero-heading",
+          "text": "TRẦN VŨ ANH DUY",
+          "label": "TRẦN VŨ ANH DUY",
+          "width": 1334,
+          "height": 359,
+          "lines": 0,
+          "chars": 12,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-heading",
+          "text": "TRẦN VŨANH DUY",
+          "label": "TRẦN VŨ / ANH DUY",
+          "width": 713,
+          "height": 151,
+          "lines": 2,
+          "chars": 12,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-tools",
+          "text": "KHO VŨ KHÍ PHẦN MỀM",
+          "label": "KHO VŨ KHÍ PHẦN MỀM",
+          "width": 713,
+          "height": 20,
+          "lines": 1,
+          "chars": 15,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-skills",
+          "text": "NĂNG LỰC CỐT LÕI",
+          "label": "NĂNG LỰC CỐT LÕI",
+          "width": 713,
+          "height": 20,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-heading",
+          "text": "Tinh Vân Kỹ Năng",
+          "label": "Tinh Vân Kỹ Năng",
+          "width": 1280,
+          "height": 104,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-tools",
+          "text": "Công cụ thiết kế",
+          "label": "Công cụ thiết kế",
+          "width": 345,
+          "height": 25,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-competencies",
+          "text": "Năng lực cốt lõi",
+          "label": "Năng lực cốt lõi",
+          "width": 345,
+          "height": 25,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-technical",
+          "text": "Kỹ thuật",
+          "label": "Kỹ thuật",
+          "width": 345,
+          "height": 25,
+          "lines": 1,
+          "chars": 7,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "education-heading",
+          "text": "Bản Đồ Sao",
+          "label": "Bản Đồ Sao",
+          "width": 1152,
+          "height": 100,
+          "lines": 1,
+          "chars": 8,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Saigon University",
+          "text": "Saigon University",
+          "label": "Saigon University",
+          "width": 528,
+          "height": 30,
+          "lines": 1,
+          "chars": 16,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Arena Multimedia",
+          "text": "Arena Multimedia",
+          "label": "Arena Multimedia",
+          "width": 528,
+          "height": 30,
+          "lines": 1,
+          "chars": 15,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Green Academy",
+          "text": "Green Academy",
+          "label": "Green Academy",
+          "width": 528,
+          "height": 30,
+          "lines": 1,
+          "chars": 12,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experience-heading",
+          "text": "Nhật Ký Hành Trình",
+          "label": "Nhật Ký Hành Trình",
+          "width": 896,
+          "height": 77,
+          "lines": 1,
+          "chars": 15,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-hosanaMedia",
+          "text": "HOSANA MEDIA",
+          "label": "HOSANA MEDIA",
+          "width": 345,
+          "height": 25,
+          "lines": 1,
+          "chars": 11,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-upwork",
+          "text": "UPWORK",
+          "label": "UPWORK",
+          "width": 345,
+          "height": 25,
+          "lines": 1,
+          "chars": 6,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-designveloper",
+          "text": "DESIGNVELOPER",
+          "label": "DESIGNVELOPER",
+          "width": 345,
+          "height": 25,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "works-heading",
+          "text": "CHÒM SAO DỰ ÁN",
+          "label": "CHÒM SAO DỰ ÁN",
+          "width": 1334,
+          "height": 129,
+          "lines": 1,
+          "chars": 11,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-01",
+          "text": "EDURA LMS",
+          "label": "EDURA LMS",
+          "width": 815,
+          "height": 58,
+          "lines": 1,
+          "chars": 8,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-02",
+          "text": "VERIS APP",
+          "label": "VERIS APP",
+          "width": 702,
+          "height": 58,
+          "lines": 1,
+          "chars": 8,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-03",
+          "text": "VIE PERFUME",
+          "label": "VIE PERFUME",
+          "width": 815,
+          "height": 58,
+          "lines": 1,
+          "chars": 10,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "playground-heading",
+          "text": "Trạm Không Gian",
+          "label": "Trạm Không Gian",
+          "width": 1334,
+          "height": 113,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-starfieldExplorer",
+          "text": "Starfield Explorer",
+          "label": "Starfield Explorer",
+          "width": 210,
+          "height": 28,
+          "lines": 1,
+          "chars": 17,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-nebulaShaderPlayground",
+          "text": "Nebula Shader Playground",
+          "label": "Nebula Shader Playground",
+          "width": 320,
+          "height": 28,
+          "lines": 1,
+          "chars": 22,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-scrollProgressOrbit",
+          "text": "Scroll Progress Orbit",
+          "label": "Scroll Progress Orbit",
+          "width": 248,
+          "height": 28,
+          "lines": 1,
+          "chars": 19,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-magneticField",
+          "text": "Magnetic Field",
+          "label": "Magnetic Field",
+          "width": 176,
+          "height": 28,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-textScrambleLab",
+          "text": "Text Scramble Lab",
+          "label": "Text Scramble Lab",
+          "width": 225,
+          "height": 28,
+          "lines": 1,
+          "chars": 15,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-constellationGrid",
+          "text": "Constellation Grid",
+          "label": "Constellation Grid",
+          "width": 217,
+          "height": 28,
+          "lines": 1,
+          "chars": 17,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-wormholeTunnel",
+          "text": "Wormhole Tunnel",
+          "label": "Wormhole Tunnel",
+          "width": 210,
+          "height": 28,
+          "lines": 1,
+          "chars": 14,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-marqueeGenerator",
+          "text": "Marquee Generator",
+          "label": "Marquee Generator",
+          "width": 238,
+          "height": 28,
+          "lines": 1,
+          "chars": 16,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "transmission-heading",
+          "text": "HÃY KẾT NỐILET'S CONNECT",
+          "label": "HÃY KẾT NỐI LET'S CONNECT",
+          "width": 1280,
+          "height": 252,
+          "lines": 2,
+          "chars": 21,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "HÃY KẾT NỐI",
+          "text": "HÃY KẾT NỐI",
+          "label": "HÃY KẾT NỐI",
+          "width": 769,
+          "height": 86,
+          "lines": 0,
+          "chars": 9,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": true,
+          "nested": false
+        }
+      ]
+    },
+    {
+      "label": "responsive",
+      "width": 1440,
+      "reduced": false,
+      "language": "vi",
+      "headings": [
+        {
+          "id": "hero-heading",
+          "text": "TRẦN VŨ ANH DUY",
+          "label": "TRẦN VŨ ANH DUY",
+          "width": 1334,
+          "height": 359,
+          "lines": 0,
+          "chars": 12,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-heading",
+          "text": "TRẦN VŨANH DUY",
+          "label": "TRẦN VŨ / ANH DUY",
+          "width": 713,
+          "height": 151,
+          "lines": 2,
+          "chars": 12,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-tools",
+          "text": "KHO VŨ KHÍ PHẦN MỀM",
+          "label": "KHO VŨ KHÍ PHẦN MỀM",
+          "width": 713,
+          "height": 20,
+          "lines": 1,
+          "chars": 15,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-skills",
+          "text": "NĂNG LỰC CỐT LÕI",
+          "label": "NĂNG LỰC CỐT LÕI",
+          "width": 713,
+          "height": 20,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-heading",
+          "text": "Tinh Vân Kỹ Năng",
+          "label": "Tinh Vân Kỹ Năng",
+          "width": 1280,
+          "height": 104,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-tools",
+          "text": "Công cụ thiết kế",
+          "label": "Công cụ thiết kế",
+          "width": 345,
+          "height": 25,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-competencies",
+          "text": "Năng lực cốt lõi",
+          "label": "Năng lực cốt lõi",
+          "width": 345,
+          "height": 25,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-technical",
+          "text": "Kỹ thuật",
+          "label": "Kỹ thuật",
+          "width": 345,
+          "height": 25,
+          "lines": 1,
+          "chars": 7,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "education-heading",
+          "text": "Bản Đồ Sao",
+          "label": "Bản Đồ Sao",
+          "width": 1152,
+          "height": 100,
+          "lines": 1,
+          "chars": 8,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Saigon University",
+          "text": "Saigon University",
+          "label": "Saigon University",
+          "width": 528,
+          "height": 30,
+          "lines": 1,
+          "chars": 16,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Arena Multimedia",
+          "text": "Arena Multimedia",
+          "label": "Arena Multimedia",
+          "width": 528,
+          "height": 30,
+          "lines": 1,
+          "chars": 15,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Green Academy",
+          "text": "Green Academy",
+          "label": "Green Academy",
+          "width": 528,
+          "height": 30,
+          "lines": 1,
+          "chars": 12,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experience-heading",
+          "text": "Nhật Ký Hành Trình",
+          "label": "Nhật Ký Hành Trình",
+          "width": 896,
+          "height": 77,
+          "lines": 1,
+          "chars": 15,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-hosanaMedia",
+          "text": "HOSANA MEDIA",
+          "label": "HOSANA MEDIA",
+          "width": 345,
+          "height": 25,
+          "lines": 1,
+          "chars": 11,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-upwork",
+          "text": "UPWORK",
+          "label": "UPWORK",
+          "width": 345,
+          "height": 25,
+          "lines": 1,
+          "chars": 6,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-designveloper",
+          "text": "DESIGNVELOPER",
+          "label": "DESIGNVELOPER",
+          "width": 345,
+          "height": 25,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "works-heading",
+          "text": "CHÒM SAO DỰ ÁN",
+          "label": "CHÒM SAO DỰ ÁN",
+          "width": 1334,
+          "height": 129,
+          "lines": 1,
+          "chars": 11,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-01",
+          "text": "EDURA LMS",
+          "label": "EDURA LMS",
+          "width": 815,
+          "height": 58,
+          "lines": 1,
+          "chars": 8,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-02",
+          "text": "VERIS APP",
+          "label": "VERIS APP",
+          "width": 702,
+          "height": 58,
+          "lines": 1,
+          "chars": 8,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-03",
+          "text": "VIE PERFUME",
+          "label": "VIE PERFUME",
+          "width": 815,
+          "height": 58,
+          "lines": 1,
+          "chars": 10,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "playground-heading",
+          "text": "Trạm Không Gian",
+          "label": "Trạm Không Gian",
+          "width": 1334,
+          "height": 113,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-starfieldExplorer",
+          "text": "Starfield Explorer",
+          "label": "Starfield Explorer",
+          "width": 210,
+          "height": 28,
+          "lines": 1,
+          "chars": 17,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-nebulaShaderPlayground",
+          "text": "Nebula Shader Playground",
+          "label": "Nebula Shader Playground",
+          "width": 320,
+          "height": 28,
+          "lines": 1,
+          "chars": 22,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-scrollProgressOrbit",
+          "text": "Scroll Progress Orbit",
+          "label": "Scroll Progress Orbit",
+          "width": 248,
+          "height": 28,
+          "lines": 1,
+          "chars": 19,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-magneticField",
+          "text": "Magnetic Field",
+          "label": "Magnetic Field",
+          "width": 176,
+          "height": 28,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-textScrambleLab",
+          "text": "Text Scramble Lab",
+          "label": "Text Scramble Lab",
+          "width": 225,
+          "height": 28,
+          "lines": 1,
+          "chars": 15,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-constellationGrid",
+          "text": "Constellation Grid",
+          "label": "Constellation Grid",
+          "width": 217,
+          "height": 28,
+          "lines": 1,
+          "chars": 17,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-wormholeTunnel",
+          "text": "Wormhole Tunnel",
+          "label": "Wormhole Tunnel",
+          "width": 210,
+          "height": 28,
+          "lines": 1,
+          "chars": 14,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-marqueeGenerator",
+          "text": "Marquee Generator",
+          "label": "Marquee Generator",
+          "width": 238,
+          "height": 28,
+          "lines": 1,
+          "chars": 16,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "transmission-heading",
+          "text": "HÃY KẾT NỐILET'S CONNECT",
+          "label": "HÃY KẾT NỐI LET'S CONNECT",
+          "width": 1280,
+          "height": 252,
+          "lines": 2,
+          "chars": 21,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "HÃY KẾT NỐI",
+          "text": "HÃY KẾT NỐI",
+          "label": "HÃY KẾT NỐI",
+          "width": 769,
+          "height": 86,
+          "lines": 0,
+          "chars": 9,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        }
+      ]
+    },
+    {
+      "label": "responsive-reduced",
+      "width": 1440,
+      "reduced": true,
+      "language": "vi",
+      "headings": [
+        {
+          "id": "hero-heading",
+          "text": "TRẦN VŨ ANH DUY",
+          "label": "TRẦN VŨ ANH DUY",
+          "width": 1334,
+          "height": 359,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-heading",
+          "text": "TRẦN VŨANH DUY",
+          "label": "TRẦN VŨ / ANH DUY",
+          "width": 713,
+          "height": 151,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-tools",
+          "text": "KHO VŨ KHÍ PHẦN MỀM",
+          "label": "KHO VŨ KHÍ PHẦN MỀM",
+          "width": 713,
+          "height": 20,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-skills",
+          "text": "NĂNG LỰC CỐT LÕI",
+          "label": "NĂNG LỰC CỐT LÕI",
+          "width": 713,
+          "height": 20,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-heading",
+          "text": "Tinh Vân Kỹ Năng",
+          "label": "Tinh Vân Kỹ Năng",
+          "width": 1280,
+          "height": 104,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-tools",
+          "text": "Công cụ thiết kế",
+          "label": "Công cụ thiết kế",
+          "width": 345,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-competencies",
+          "text": "Năng lực cốt lõi",
+          "label": "Năng lực cốt lõi",
+          "width": 345,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-technical",
+          "text": "Kỹ thuật",
+          "label": "Kỹ thuật",
+          "width": 345,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "education-heading",
+          "text": "Bản Đồ Sao",
+          "label": "Bản Đồ Sao",
+          "width": 1152,
+          "height": 100,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Saigon University",
+          "text": "Saigon University",
+          "label": "Saigon University",
+          "width": 528,
+          "height": 30,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Arena Multimedia",
+          "text": "Arena Multimedia",
+          "label": "Arena Multimedia",
+          "width": 528,
+          "height": 30,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Green Academy",
+          "text": "Green Academy",
+          "label": "Green Academy",
+          "width": 528,
+          "height": 30,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experience-heading",
+          "text": "Nhật Ký Hành Trình",
+          "label": "Nhật Ký Hành Trình",
+          "width": 896,
+          "height": 77,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-hosanaMedia",
+          "text": "HOSANA MEDIA",
+          "label": "HOSANA MEDIA",
+          "width": 345,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-upwork",
+          "text": "UPWORK",
+          "label": "UPWORK",
+          "width": 345,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-designveloper",
+          "text": "DESIGNVELOPER",
+          "label": "DESIGNVELOPER",
+          "width": 345,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "works-heading",
+          "text": "CHÒM SAO DỰ ÁN",
+          "label": "CHÒM SAO DỰ ÁN",
+          "width": 1334,
+          "height": 129,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-01",
+          "text": "EDURA LMS",
+          "label": "EDURA LMS",
+          "width": 815,
+          "height": 58,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-02",
+          "text": "VERIS APP",
+          "label": "VERIS APP",
+          "width": 702,
+          "height": 58,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-03",
+          "text": "VIE PERFUME",
+          "label": "VIE PERFUME",
+          "width": 815,
+          "height": 58,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "playground-heading",
+          "text": "Trạm Không Gian",
+          "label": "Trạm Không Gian",
+          "width": 1334,
+          "height": 113,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-starfieldExplorer",
+          "text": "Starfield Explorer",
+          "label": "Starfield Explorer",
+          "width": 210,
+          "height": 28,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-nebulaShaderPlayground",
+          "text": "Nebula Shader Playground",
+          "label": "Nebula Shader Playground",
+          "width": 319,
+          "height": 28,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-scrollProgressOrbit",
+          "text": "Scroll Progress Orbit",
+          "label": "Scroll Progress Orbit",
+          "width": 248,
+          "height": 28,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-magneticField",
+          "text": "Magnetic Field",
+          "label": "Magnetic Field",
+          "width": 176,
+          "height": 28,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-textScrambleLab",
+          "text": "Text Scramble Lab",
+          "label": "Text Scramble Lab",
+          "width": 225,
+          "height": 28,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-constellationGrid",
+          "text": "Constellation Grid",
+          "label": "Constellation Grid",
+          "width": 217,
+          "height": 28,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-wormholeTunnel",
+          "text": "Wormhole Tunnel",
+          "label": "Wormhole Tunnel",
+          "width": 210,
+          "height": 28,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-marqueeGenerator",
+          "text": "Marquee Generator",
+          "label": "Marquee Generator",
+          "width": 238,
+          "height": 28,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "transmission-heading",
+          "text": "HÃY KẾT NỐILET'S CONNECT",
+          "label": "HÃY KẾT NỐI LET'S CONNECT",
+          "width": 1280,
+          "height": 252,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "HÃY KẾT NỐI",
+          "text": "HÃY KẾT NỐI",
+          "label": "HÃY KẾT NỐI",
+          "width": 746,
+          "height": 86,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        }
+      ]
+    },
+    {
+      "label": "responsive",
+      "width": 320,
+      "reduced": false,
+      "language": "vi",
+      "headings": [
+        {
+          "id": "hero-heading",
+          "text": "TRẦN VŨ ANH DUY",
+          "label": "TRẦN VŨ ANH DUY",
+          "width": 278,
+          "height": 92,
+          "lines": 0,
+          "chars": 12,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-heading",
+          "text": "TRẦN VŨANH DUY",
+          "label": "TRẦN VŨ / ANH DUY",
+          "width": 262,
+          "height": 66,
+          "lines": 2,
+          "chars": 12,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-tools",
+          "text": "KHO VŨ KHÍ PHẦN MỀM",
+          "label": "KHO VŨ KHÍ PHẦN MỀM",
+          "width": 262,
+          "height": 20,
+          "lines": 1,
+          "chars": 15,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-skills",
+          "text": "NĂNG LỰC CỐT LÕI",
+          "label": "NĂNG LỰC CỐT LÕI",
+          "width": 262,
+          "height": 20,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-heading",
+          "text": "Tinh Vân Kỹ Năng",
+          "label": "Tinh Vân Kỹ Năng",
+          "width": 262,
+          "height": 77,
+          "lines": 2,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-tools",
+          "text": "Công cụ thiết kế",
+          "label": "Công cụ thiết kế",
+          "width": 212,
+          "height": 25,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-competencies",
+          "text": "Năng lực cốt lõi",
+          "label": "Năng lực cốt lõi",
+          "width": 212,
+          "height": 25,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-technical",
+          "text": "Kỹ thuật",
+          "label": "Kỹ thuật",
+          "width": 212,
+          "height": 25,
+          "lines": 1,
+          "chars": 7,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "education-heading",
+          "text": "Bản Đồ Sao",
+          "label": "Bản Đồ Sao",
+          "width": 270,
+          "height": 40,
+          "lines": 1,
+          "chars": 8,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Saigon University",
+          "text": "Saigon University",
+          "label": "Saigon University",
+          "width": 230,
+          "height": 60,
+          "lines": 2,
+          "chars": 16,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Arena Multimedia",
+          "text": "Arena Multimedia",
+          "label": "Arena Multimedia",
+          "width": 230,
+          "height": 60,
+          "lines": 2,
+          "chars": 15,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Green Academy",
+          "text": "Green Academy",
+          "label": "Green Academy",
+          "width": 230,
+          "height": 60,
+          "lines": 2,
+          "chars": 12,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experience-heading",
+          "text": "Nhật Ký Hành Trình",
+          "label": "Nhật Ký Hành Trình",
+          "width": 262,
+          "height": 67,
+          "lines": 2,
+          "chars": 15,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-hosanaMedia",
+          "text": "HOSANA MEDIA",
+          "label": "HOSANA MEDIA",
+          "width": 212,
+          "height": 25,
+          "lines": 1,
+          "chars": 11,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-upwork",
+          "text": "UPWORK",
+          "label": "UPWORK",
+          "width": 212,
+          "height": 25,
+          "lines": 1,
+          "chars": 6,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-designveloper",
+          "text": "DESIGNVELOPER",
+          "label": "DESIGNVELOPER",
+          "width": 212,
+          "height": 25,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "works-heading",
+          "text": "CHÒM SAO DỰ ÁN",
+          "label": "CHÒM SAO DỰ ÁN",
+          "width": 270,
+          "height": 57,
+          "lines": 2,
+          "chars": 11,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-01",
+          "text": "EDURA LMS",
+          "label": "EDURA LMS",
+          "width": 228,
+          "height": 25,
+          "lines": 1,
+          "chars": 8,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-02",
+          "text": "VERIS APP",
+          "label": "VERIS APP",
+          "width": 228,
+          "height": 25,
+          "lines": 1,
+          "chars": 8,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-03",
+          "text": "VIE PERFUME",
+          "label": "VIE PERFUME",
+          "width": 228,
+          "height": 25,
+          "lines": 1,
+          "chars": 10,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "playground-heading",
+          "text": "Trạm Không Gian",
+          "label": "Trạm Không Gian",
+          "width": 270,
+          "height": 72,
+          "lines": 2,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-starfieldExplorer",
+          "text": "Starfield Explorer",
+          "label": "Starfield Explorer",
+          "width": 189,
+          "height": 25,
+          "lines": 1,
+          "chars": 17,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-nebulaShaderPlayground",
+          "text": "Nebula Shader Playground",
+          "label": "Nebula Shader Playground",
+          "width": 159,
+          "height": 50,
+          "lines": 2,
+          "chars": 22,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-scrollProgressOrbit",
+          "text": "Scroll Progress Orbit",
+          "label": "Scroll Progress Orbit",
+          "width": 163,
+          "height": 50,
+          "lines": 2,
+          "chars": 19,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-magneticField",
+          "text": "Magnetic Field",
+          "label": "Magnetic Field",
+          "width": 159,
+          "height": 25,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-textScrambleLab",
+          "text": "Text Scramble Lab",
+          "label": "Text Scramble Lab",
+          "width": 157,
+          "height": 50,
+          "lines": 2,
+          "chars": 15,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-constellationGrid",
+          "text": "Constellation Grid",
+          "label": "Constellation Grid",
+          "width": 196,
+          "height": 25,
+          "lines": 1,
+          "chars": 17,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-wormholeTunnel",
+          "text": "Wormhole Tunnel",
+          "label": "Wormhole Tunnel",
+          "width": 189,
+          "height": 25,
+          "lines": 1,
+          "chars": 14,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-marqueeGenerator",
+          "text": "Marquee Generator",
+          "label": "Marquee Generator",
+          "width": 112,
+          "height": 50,
+          "lines": 2,
+          "chars": 16,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "transmission-heading",
+          "text": "HÃY KẾT NỐILET'S CONNECT",
+          "label": "HÃY KẾT NỐI LET'S CONNECT",
+          "width": 262,
+          "height": 56,
+          "lines": 2,
+          "chars": 21,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "HÃY KẾT NỐI",
+          "text": "HÃY KẾT NỐI",
+          "label": "HÃY KẾT NỐI",
+          "width": 262,
+          "height": 71,
+          "lines": 0,
+          "chars": 9,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": true,
+          "nested": false
+        }
+      ]
+    },
+    {
+      "label": "responsive-reduced",
+      "width": 320,
+      "reduced": true,
+      "language": "vi",
+      "headings": [
+        {
+          "id": "hero-heading",
+          "text": "TRẦN VŨ ANH DUY",
+          "label": "TRẦN VŨ ANH DUY",
+          "width": 278,
+          "height": 92,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-heading",
+          "text": "TRẦN VŨANH DUY",
+          "label": "TRẦN VŨ / ANH DUY",
+          "width": 262,
+          "height": 66,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-tools",
+          "text": "KHO VŨ KHÍ PHẦN MỀM",
+          "label": "KHO VŨ KHÍ PHẦN MỀM",
+          "width": 262,
+          "height": 20,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-skills",
+          "text": "NĂNG LỰC CỐT LÕI",
+          "label": "NĂNG LỰC CỐT LÕI",
+          "width": 262,
+          "height": 20,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-heading",
+          "text": "Tinh Vân Kỹ Năng",
+          "label": "Tinh Vân Kỹ Năng",
+          "width": 262,
+          "height": 77,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-tools",
+          "text": "Công cụ thiết kế",
+          "label": "Công cụ thiết kế",
+          "width": 212,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-competencies",
+          "text": "Năng lực cốt lõi",
+          "label": "Năng lực cốt lõi",
+          "width": 212,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-technical",
+          "text": "Kỹ thuật",
+          "label": "Kỹ thuật",
+          "width": 212,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "education-heading",
+          "text": "Bản Đồ Sao",
+          "label": "Bản Đồ Sao",
+          "width": 270,
+          "height": 40,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Saigon University",
+          "text": "Saigon University",
+          "label": "Saigon University",
+          "width": 230,
+          "height": 60,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Arena Multimedia",
+          "text": "Arena Multimedia",
+          "label": "Arena Multimedia",
+          "width": 230,
+          "height": 60,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Green Academy",
+          "text": "Green Academy",
+          "label": "Green Academy",
+          "width": 230,
+          "height": 60,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experience-heading",
+          "text": "Nhật Ký Hành Trình",
+          "label": "Nhật Ký Hành Trình",
+          "width": 262,
+          "height": 67,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-hosanaMedia",
+          "text": "HOSANA MEDIA",
+          "label": "HOSANA MEDIA",
+          "width": 212,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-upwork",
+          "text": "UPWORK",
+          "label": "UPWORK",
+          "width": 212,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-designveloper",
+          "text": "DESIGNVELOPER",
+          "label": "DESIGNVELOPER",
+          "width": 212,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "works-heading",
+          "text": "CHÒM SAO DỰ ÁN",
+          "label": "CHÒM SAO DỰ ÁN",
+          "width": 270,
+          "height": 57,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-01",
+          "text": "EDURA LMS",
+          "label": "EDURA LMS",
+          "width": 228,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-02",
+          "text": "VERIS APP",
+          "label": "VERIS APP",
+          "width": 228,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-03",
+          "text": "VIE PERFUME",
+          "label": "VIE PERFUME",
+          "width": 228,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "playground-heading",
+          "text": "Trạm Không Gian",
+          "label": "Trạm Không Gian",
+          "width": 270,
+          "height": 72,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-starfieldExplorer",
+          "text": "Starfield Explorer",
+          "label": "Starfield Explorer",
+          "width": 189,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-nebulaShaderPlayground",
+          "text": "Nebula Shader Playground",
+          "label": "Nebula Shader Playground",
+          "width": 198,
+          "height": 50,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-scrollProgressOrbit",
+          "text": "Scroll Progress Orbit",
+          "label": "Scroll Progress Orbit",
+          "width": 198,
+          "height": 50,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-magneticField",
+          "text": "Magnetic Field",
+          "label": "Magnetic Field",
+          "width": 159,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-textScrambleLab",
+          "text": "Text Scramble Lab",
+          "label": "Text Scramble Lab",
+          "width": 198,
+          "height": 50,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-constellationGrid",
+          "text": "Constellation Grid",
+          "label": "Constellation Grid",
+          "width": 195,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-wormholeTunnel",
+          "text": "Wormhole Tunnel",
+          "label": "Wormhole Tunnel",
+          "width": 189,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-marqueeGenerator",
+          "text": "Marquee Generator",
+          "label": "Marquee Generator",
+          "width": 198,
+          "height": 50,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "transmission-heading",
+          "text": "HÃY KẾT NỐILET'S CONNECT",
+          "label": "HÃY KẾT NỐI LET'S CONNECT",
+          "width": 262,
+          "height": 56,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "HÃY KẾT NỐI",
+          "text": "HÃY KẾT NỐI",
+          "label": "HÃY KẾT NỐI",
+          "width": 262,
+          "height": 71,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        }
+      ]
+    },
+    {
+      "label": "responsive",
+      "width": 768,
+      "reduced": false,
+      "language": "vi",
+      "headings": [
+        {
+          "id": "hero-heading",
+          "text": "TRẦN VŨ ANH DUY",
+          "label": "TRẦN VŨ ANH DUY",
+          "width": 662,
+          "height": 192,
+          "lines": 0,
+          "chars": 12,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-heading",
+          "text": "TRẦN VŨANH DUY",
+          "label": "TRẦN VŨ / ANH DUY",
+          "width": 694,
+          "height": 91,
+          "lines": 2,
+          "chars": 12,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-tools",
+          "text": "KHO VŨ KHÍ PHẦN MỀM",
+          "label": "KHO VŨ KHÍ PHẦN MỀM",
+          "width": 694,
+          "height": 20,
+          "lines": 1,
+          "chars": 15,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-skills",
+          "text": "NĂNG LỰC CỐT LÕI",
+          "label": "NĂNG LỰC CỐT LÕI",
+          "width": 694,
+          "height": 20,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-heading",
+          "text": "Tinh Vân Kỹ Năng",
+          "label": "Tinh Vân Kỹ Năng",
+          "width": 694,
+          "height": 55,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-tools",
+          "text": "Công cụ thiết kế",
+          "label": "Công cụ thiết kế",
+          "width": 644,
+          "height": 25,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-competencies",
+          "text": "Năng lực cốt lõi",
+          "label": "Năng lực cốt lõi",
+          "width": 644,
+          "height": 25,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-technical",
+          "text": "Kỹ thuật",
+          "label": "Kỹ thuật",
+          "width": 644,
+          "height": 25,
+          "lines": 1,
+          "chars": 7,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "education-heading",
+          "text": "Bản Đồ Sao",
+          "label": "Bản Đồ Sao",
+          "width": 662,
+          "height": 58,
+          "lines": 1,
+          "chars": 8,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Saigon University",
+          "text": "Saigon University",
+          "label": "Saigon University",
+          "width": 283,
+          "height": 30,
+          "lines": 1,
+          "chars": 16,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Arena Multimedia",
+          "text": "Arena Multimedia",
+          "label": "Arena Multimedia",
+          "width": 283,
+          "height": 30,
+          "lines": 1,
+          "chars": 15,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Green Academy",
+          "text": "Green Academy",
+          "label": "Green Academy",
+          "width": 283,
+          "height": 30,
+          "lines": 1,
+          "chars": 12,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experience-heading",
+          "text": "Nhật Ký Hành Trình",
+          "label": "Nhật Ký Hành Trình",
+          "width": 694,
+          "height": 41,
+          "lines": 1,
+          "chars": 15,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-hosanaMedia",
+          "text": "HOSANA MEDIA",
+          "label": "HOSANA MEDIA",
+          "width": 644,
+          "height": 25,
+          "lines": 1,
+          "chars": 11,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-upwork",
+          "text": "UPWORK",
+          "label": "UPWORK",
+          "width": 644,
+          "height": 25,
+          "lines": 1,
+          "chars": 6,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-designveloper",
+          "text": "DESIGNVELOPER",
+          "label": "DESIGNVELOPER",
+          "width": 644,
+          "height": 25,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "works-heading",
+          "text": "CHÒM SAO DỰ ÁN",
+          "label": "CHÒM SAO DỰ ÁN",
+          "width": 662,
+          "height": 138,
+          "lines": 2,
+          "chars": 11,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-01",
+          "text": "EDURA LMS",
+          "label": "EDURA LMS",
+          "width": 367,
+          "height": 31,
+          "lines": 1,
+          "chars": 8,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-02",
+          "text": "VERIS APP",
+          "label": "VERIS APP",
+          "width": 310,
+          "height": 31,
+          "lines": 1,
+          "chars": 8,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-03",
+          "text": "VIE PERFUME",
+          "label": "VIE PERFUME",
+          "width": 367,
+          "height": 31,
+          "lines": 1,
+          "chars": 10,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "playground-heading",
+          "text": "Trạm Không Gian",
+          "label": "Trạm Không Gian",
+          "width": 694,
+          "height": 60,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-starfieldExplorer",
+          "text": "Starfield Explorer",
+          "label": "Starfield Explorer",
+          "width": 189,
+          "height": 25,
+          "lines": 1,
+          "chars": 17,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-nebulaShaderPlayground",
+          "text": "Nebula Shader Playground",
+          "label": "Nebula Shader Playground",
+          "width": 159,
+          "height": 50,
+          "lines": 2,
+          "chars": 22,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-scrollProgressOrbit",
+          "text": "Scroll Progress Orbit",
+          "label": "Scroll Progress Orbit",
+          "width": 223,
+          "height": 25,
+          "lines": 1,
+          "chars": 19,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-magneticField",
+          "text": "Magnetic Field",
+          "label": "Magnetic Field",
+          "width": 159,
+          "height": 25,
+          "lines": 1,
+          "chars": 13,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-textScrambleLab",
+          "text": "Text Scramble Lab",
+          "label": "Text Scramble Lab",
+          "width": 203,
+          "height": 25,
+          "lines": 1,
+          "chars": 15,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-constellationGrid",
+          "text": "Constellation Grid",
+          "label": "Constellation Grid",
+          "width": 196,
+          "height": 25,
+          "lines": 1,
+          "chars": 17,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-wormholeTunnel",
+          "text": "Wormhole Tunnel",
+          "label": "Wormhole Tunnel",
+          "width": 189,
+          "height": 25,
+          "lines": 1,
+          "chars": 14,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-marqueeGenerator",
+          "text": "Marquee Generator",
+          "label": "Marquee Generator",
+          "width": 214,
+          "height": 25,
+          "lines": 1,
+          "chars": 16,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "transmission-heading",
+          "text": "HÃY KẾT NỐILET'S CONNECT",
+          "label": "HÃY KẾT NỐI LET'S CONNECT",
+          "width": 694,
+          "height": 134,
+          "lines": 2,
+          "chars": 21,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "HÃY KẾT NỐI",
+          "text": "HÃY KẾT NỐI",
+          "label": "HÃY KẾT NỐI",
+          "width": 662,
+          "height": 46,
+          "lines": 0,
+          "chars": 9,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": true,
+          "nested": false
+        }
+      ]
+    },
+    {
+      "label": "responsive-reduced",
+      "width": 768,
+      "reduced": true,
+      "language": "vi",
+      "headings": [
+        {
+          "id": "hero-heading",
+          "text": "TRẦN VŨ ANH DUY",
+          "label": "TRẦN VŨ ANH DUY",
+          "width": 662,
+          "height": 192,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-heading",
+          "text": "TRẦN VŨANH DUY",
+          "label": "TRẦN VŨ / ANH DUY",
+          "width": 694,
+          "height": 91,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-tools",
+          "text": "KHO VŨ KHÍ PHẦN MỀM",
+          "label": "KHO VŨ KHÍ PHẦN MỀM",
+          "width": 694,
+          "height": 20,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "about-skills",
+          "text": "NĂNG LỰC CỐT LÕI",
+          "label": "NĂNG LỰC CỐT LÕI",
+          "width": 694,
+          "height": 20,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-heading",
+          "text": "Tinh Vân Kỹ Năng",
+          "label": "Tinh Vân Kỹ Năng",
+          "width": 694,
+          "height": 55,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-tools",
+          "text": "Công cụ thiết kế",
+          "label": "Công cụ thiết kế",
+          "width": 644,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-competencies",
+          "text": "Năng lực cốt lõi",
+          "label": "Năng lực cốt lõi",
+          "width": 644,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "skills-technical",
+          "text": "Kỹ thuật",
+          "label": "Kỹ thuật",
+          "width": 644,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "education-heading",
+          "text": "Bản Đồ Sao",
+          "label": "Bản Đồ Sao",
+          "width": 662,
+          "height": 58,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Saigon University",
+          "text": "Saigon University",
+          "label": "Saigon University",
+          "width": 283,
+          "height": 30,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Arena Multimedia",
+          "text": "Arena Multimedia",
+          "label": "Arena Multimedia",
+          "width": 283,
+          "height": 30,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "Green Academy",
+          "text": "Green Academy",
+          "label": "Green Academy",
+          "width": 283,
+          "height": 30,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experience-heading",
+          "text": "Nhật Ký Hành Trình",
+          "label": "Nhật Ký Hành Trình",
+          "width": 694,
+          "height": 41,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-hosanaMedia",
+          "text": "HOSANA MEDIA",
+          "label": "HOSANA MEDIA",
+          "width": 644,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-upwork",
+          "text": "UPWORK",
+          "label": "UPWORK",
+          "width": 644,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "mission-designveloper",
+          "text": "DESIGNVELOPER",
+          "label": "DESIGNVELOPER",
+          "width": 644,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "works-heading",
+          "text": "CHÒM SAO DỰ ÁN",
+          "label": "CHÒM SAO DỰ ÁN",
+          "width": 662,
+          "height": 138,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-01",
+          "text": "EDURA LMS",
+          "label": "EDURA LMS",
+          "width": 367,
+          "height": 31,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-02",
+          "text": "VERIS APP",
+          "label": "VERIS APP",
+          "width": 310,
+          "height": 31,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "project-title-03",
+          "text": "VIE PERFUME",
+          "label": "VIE PERFUME",
+          "width": 367,
+          "height": 31,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "playground-heading",
+          "text": "Trạm Không Gian",
+          "label": "Trạm Không Gian",
+          "width": 694,
+          "height": 60,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-starfieldExplorer",
+          "text": "Starfield Explorer",
+          "label": "Starfield Explorer",
+          "width": 189,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-nebulaShaderPlayground",
+          "text": "Nebula Shader Playground",
+          "label": "Nebula Shader Playground",
+          "width": 259,
+          "height": 50,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-scrollProgressOrbit",
+          "text": "Scroll Progress Orbit",
+          "label": "Scroll Progress Orbit",
+          "width": 223,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-magneticField",
+          "text": "Magnetic Field",
+          "label": "Magnetic Field",
+          "width": 159,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-textScrambleLab",
+          "text": "Text Scramble Lab",
+          "label": "Text Scramble Lab",
+          "width": 203,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-constellationGrid",
+          "text": "Constellation Grid",
+          "label": "Constellation Grid",
+          "width": 195,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-wormholeTunnel",
+          "text": "Wormhole Tunnel",
+          "label": "Wormhole Tunnel",
+          "width": 189,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "experiment-marqueeGenerator",
+          "text": "Marquee Generator",
+          "label": "Marquee Generator",
+          "width": 214,
+          "height": 25,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "transmission-heading",
+          "text": "HÃY KẾT NỐILET'S CONNECT",
+          "label": "HÃY KẾT NỐI LET'S CONNECT",
+          "width": 694,
+          "height": 134,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        },
+        {
+          "id": "HÃY KẾT NỐI",
+          "text": "HÃY KẾT NỐI",
+          "label": "HÃY KẾT NỐI",
+          "width": 662,
+          "height": 46,
+          "lines": 0,
+          "chars": 0,
+          "rendered": true,
+          "overflow": 0,
+          "entranceRotation": false,
+          "nested": false
+        }
+      ]
+    }
+  ],
+  "loader": [
+    {
+      "time": 227.40000000596046,
+      "text": "8832",
+      "duration": 2.32,
+      "scramble": true
+    },
+    {
+      "time": 608.4000000059605,
+      "text": "1416",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 623.8000000119209,
+      "text": "1983",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 815.5,
+      "text": "1983",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 825.4000000059605,
+      "text": "1755",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 827.3000000119209,
+      "text": "1755",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 828,
+      "text": "1755",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 834.3000000119209,
+      "text": "1755",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 844.1999999880791,
+      "text": "1755",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 848.0999999940395,
+      "text": "1755",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 852.3000000119209,
+      "text": "1755",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 858.3000000119209,
+      "text": "1755",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 864.3000000119209,
+      "text": "1755",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 870.5,
+      "text": "1755",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 876.4000000059605,
+      "text": "1755",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 882.5999999940395,
+      "text": "1755",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 888.6999999880791,
+      "text": "1755",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 894.5,
+      "text": "1755",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 900.5999999940395,
+      "text": "1755",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 906.6999999880791,
+      "text": "1755",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 932,
+      "text": "1755",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 939.9000000059605,
+      "text": "1808",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 951.5999999940395,
+      "text": "1808",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 953,
+      "text": "1808",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 960.0999999940395,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 961.5999999940395,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 968.1999999880791,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 973.4000000059605,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 979.5,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 985.5999999940395,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 991.5999999940395,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 997.6999999880791,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1003.8000000119209,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1009.9000000059605,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1015.9000000059605,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1022.4000000059605,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1028,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1034,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1040.199999988079,
+      "text": "1043",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1046.0999999940395,
+      "text": "1043",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1052.199999988079,
+      "text": "1043",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1058.4000000059605,
+      "text": "1043",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1064.4000000059605,
+      "text": "1043",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1070.4000000059605,
+      "text": "1043",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1076.5,
+      "text": "1043",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1082.5999999940395,
+      "text": "1043",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1088.699999988079,
+      "text": "1043",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1094.5,
+      "text": "1043",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1100.5999999940395,
+      "text": "1043",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1106.800000011921,
+      "text": "1043",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1112.800000011921,
+      "text": "1043",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1118.9000000059605,
+      "text": "1043",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1125,
+      "text": "1043",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1130.9000000059605,
+      "text": "1043",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1137.0999999940395,
+      "text": "1043",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1143,
+      "text": "1024",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1149.0999999940395,
+      "text": "1024",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1155.0999999940395,
+      "text": "1024",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1161.0999999940395,
+      "text": "1024",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1167.300000011921,
+      "text": "1024",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1173.199999988079,
+      "text": "1024",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1179.4000000059605,
+      "text": "1024",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1185.5999999940395,
+      "text": "1024",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1191.4000000059605,
+      "text": "1024",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1197.5999999940395,
+      "text": "1024",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1203.5999999940395,
+      "text": "1024",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1209.800000011921,
+      "text": "1024",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1215.800000011921,
+      "text": "1024",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1221.9000000059605,
+      "text": "1024",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1227.9000000059605,
+      "text": "1024",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1233.9000000059605,
+      "text": "1024",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1240.699999988079,
+      "text": "1024",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1273,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1276.199999988079,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1282.5,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1288.5999999940395,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1294.699999988079,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1300.699999988079,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1306.800000011921,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1312.800000011921,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1318.9000000059605,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1325,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1331,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1337.0999999940395,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1343.0999999940395,
+      "text": "1008",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1349.199999988079,
+      "text": "1083",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1355.300000011921,
+      "text": "1083",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1361.300000011921,
+      "text": "1083",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1367.4000000059605,
+      "text": "1083",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1373.4000000059605,
+      "text": "1083",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1379.4000000059605,
+      "text": "1083",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1385.5999999940395,
+      "text": "1083",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1391.699999988079,
+      "text": "1083",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1397.9000000059605,
+      "text": "1083",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1403.699999988079,
+      "text": "1083",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1409.800000011921,
+      "text": "1083",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1415.800000011921,
+      "text": "1083",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1421.800000011921,
+      "text": "1083",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1427.9000000059605,
+      "text": "1083",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1433.9000000059605,
+      "text": "1083",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1439.9000000059605,
+      "text": "1083",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1446.0999999940395,
+      "text": "1083",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1452.0999999940395,
+      "text": "1099",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1458.199999988079,
+      "text": "1009",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1464.300000011921,
+      "text": "1009",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1470.300000011921,
+      "text": "1009",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1476.5,
+      "text": "1009",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1482.4000000059605,
+      "text": "1009",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1488.5,
+      "text": "1009",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1494.5,
+      "text": "1009",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1500.699999988079,
+      "text": "1009",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1506.9000000059605,
+      "text": "1009",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1512.800000011921,
+      "text": "1009",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1518.800000011921,
+      "text": "1009",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1524.9000000059605,
+      "text": "1009",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1530.9000000059605,
+      "text": "1009",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1537.0999999940395,
+      "text": "1009",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1543.0999999940395,
+      "text": "1009",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1549.0999999940395,
+      "text": "1009",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1555.199999988079,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1561.199999988079,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1567.300000011921,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1573.4000000059605,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1579.4000000059605,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1585.5999999940395,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1591.5,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1597.5999999940395,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1603.5999999940395,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1610.4000000059605,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1615.800000011921,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1621.800000011921,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1627.800000011921,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1634,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1640,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1646.0999999940395,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1652.0999999940395,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1658.199999988079,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1664.300000011921,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1670.300000011921,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1676.5,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1682.4000000059605,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1688.5999999940395,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1694.5,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1700.699999988079,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1706.9000000059605,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1712.699999988079,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1718.800000011921,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1724.800000011921,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1731,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1736.9000000059605,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1743,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1749.0999999940395,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1755.199999988079,
+      "text": "1005",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1761.0999999940395,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1767.199999988079,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1773.300000011921,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1779.5,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1785.4000000059605,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1791.5,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1797.699999988079,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1803.5999999940395,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1809.699999988079,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1815.800000011921,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1821.699999988079,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1827.9000000059605,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1833.9000000059605,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1840,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1846.199999988079,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1852.0999999940395,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1858.0999999940395,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1864.300000011921,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1870.300000011921,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1876.4000000059605,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1882.4000000059605,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1888.4000000059605,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1894.5999999940395,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1900.699999988079,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1906.699999988079,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1912.800000011921,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1918.800000011921,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1924.800000011921,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1930.9000000059605,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1937,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1943.0999999940395,
+      "text": "1003",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1949.0999999940395,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1955.199999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1961.199999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1967.300000011921,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1973.5,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1979.4000000059605,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1985.699999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1991.800000011921,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 1997.4000000059605,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2003.5999999940395,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2009.5999999940395,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2015.800000011921,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2022.199999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2027.9000000059605,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2034,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2039.9000000059605,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2046.0999999940395,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2052.199999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2058.199999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2064.800000011921,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2070.300000011921,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2076.300000011921,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2082.4000000059605,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2088.5,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2094.5999999940395,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2100.699999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2106.699999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2112.699999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2118.699999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2124.800000011921,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2131,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2137,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2143,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2149.0999999940395,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2155.0999999940395,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2161.199999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2167.300000011921,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2173.4000000059605,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2179.4000000059605,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2185.5,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2191.5,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2197.9000000059605,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2203.699999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2209.699999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2215.800000011921,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2221.800000011921,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2227.9000000059605,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2234,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2240,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2246.0999999940395,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2252.199999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2258.199999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2264.199999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2270.4000000059605,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2276.5,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2282.5,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2288.5999999940395,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2294.699999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2300.699999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2306.699999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2312.800000011921,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2318.9000000059605,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2324.9000000059605,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2331,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2337,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2343.0999999940395,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2349.0999999940395,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2355.199999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2361.199999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2367.199999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2373.300000011921,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2379.4000000059605,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2385.4000000059605,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2391.5,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2397.5999999940395,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2403.5999999940395,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2409.5999999940395,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2415.699999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2421.699999988079,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2427.9000000059605,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    },
+    {
+      "time": 2433.800000011921,
+      "text": "100%",
+      "duration": 2.3,
+      "scramble": true
+    }
+  ],
+  "errors": [],
+  "reduced": false,
+  "loaderFinal": "100%",
+  "loaderEnd": 2482.9000000059605
+}

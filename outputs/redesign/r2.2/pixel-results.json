@@ -1,0 +1,383 @@
+{
+  "complete": true,
+  "passed": true,
+  "missing": [],
+  "pairs": [
+    {
+      "viewport": "desktop",
+      "progress": 0.0,
+      "size": [
+        1440,
+        900
+      ],
+      "same_size": true,
+      "exact": true,
+      "changed_pixels": 0,
+      "changed_fraction": 0.0,
+      "pixels_over_3": 0,
+      "fraction_over_3": 0.0,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0,
+      "pass": true
+    },
+    {
+      "viewport": "desktop",
+      "progress": 0.25,
+      "size": [
+        1440,
+        900
+      ],
+      "same_size": true,
+      "exact": true,
+      "changed_pixels": 0,
+      "changed_fraction": 0.0,
+      "pixels_over_3": 0,
+      "fraction_over_3": 0.0,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0,
+      "pass": true
+    },
+    {
+      "viewport": "desktop",
+      "progress": 0.5,
+      "size": [
+        1440,
+        900
+      ],
+      "same_size": true,
+      "exact": true,
+      "changed_pixels": 0,
+      "changed_fraction": 0.0,
+      "pixels_over_3": 0,
+      "fraction_over_3": 0.0,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0,
+      "pass": true
+    },
+    {
+      "viewport": "desktop",
+      "progress": 0.75,
+      "size": [
+        1440,
+        900
+      ],
+      "same_size": true,
+      "exact": true,
+      "changed_pixels": 0,
+      "changed_fraction": 0.0,
+      "pixels_over_3": 0,
+      "fraction_over_3": 0.0,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0,
+      "pass": true
+    },
+    {
+      "viewport": "desktop",
+      "progress": 1.0,
+      "size": [
+        1440,
+        900
+      ],
+      "same_size": true,
+      "exact": true,
+      "changed_pixels": 0,
+      "changed_fraction": 0.0,
+      "pixels_over_3": 0,
+      "fraction_over_3": 0.0,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0,
+      "pass": true
+    },
+    {
+      "viewport": "mobile",
+      "progress": 0.0,
+      "size": [
+        390,
+        844
+      ],
+      "same_size": true,
+      "exact": true,
+      "changed_pixels": 0,
+      "changed_fraction": 0.0,
+      "pixels_over_3": 0,
+      "fraction_over_3": 0.0,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0,
+      "pass": true
+    },
+    {
+      "viewport": "mobile",
+      "progress": 0.25,
+      "size": [
+        390,
+        844
+      ],
+      "same_size": true,
+      "exact": true,
+      "changed_pixels": 0,
+      "changed_fraction": 0.0,
+      "pixels_over_3": 0,
+      "fraction_over_3": 0.0,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0,
+      "pass": true
+    },
+    {
+      "viewport": "mobile",
+      "progress": 0.5,
+      "size": [
+        390,
+        844
+      ],
+      "same_size": true,
+      "exact": true,
+      "changed_pixels": 0,
+      "changed_fraction": 0.0,
+      "pixels_over_3": 0,
+      "fraction_over_3": 0.0,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0,
+      "pass": true
+    },
+    {
+      "viewport": "mobile",
+      "progress": 0.75,
+      "size": [
+        390,
+        844
+      ],
+      "same_size": true,
+      "exact": true,
+      "changed_pixels": 0,
+      "changed_fraction": 0.0,
+      "pixels_over_3": 0,
+      "fraction_over_3": 0.0,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0,
+      "pass": true
+    },
+    {
+      "viewport": "mobile",
+      "progress": 1.0,
+      "size": [
+        390,
+        844
+      ],
+      "same_size": true,
+      "exact": true,
+      "changed_pixels": 0,
+      "changed_fraction": 0.0,
+      "pixels_over_3": 0,
+      "fraction_over_3": 0.0,
+      "max_channel_difference": 0,
+      "mean_absolute_channel_difference": 0.0,
+      "pass": true
+    }
+  ],
+  "frame_metrics": [
+    {
+      "file": "desktop-forward-0.png",
+      "size": [
+        1440,
+        900
+      ],
+      "maximum_rgb": 255,
+      "white_fraction": 0.046098765432098766,
+      "non_mono_pixels_over_1": 0
+    },
+    {
+      "file": "desktop-reverse-0.png",
+      "size": [
+        1440,
+        900
+      ],
+      "maximum_rgb": 255,
+      "white_fraction": 0.046098765432098766,
+      "non_mono_pixels_over_1": 0
+    },
+    {
+      "file": "desktop-forward-0.25.png",
+      "size": [
+        1440,
+        900
+      ],
+      "maximum_rgb": 255,
+      "white_fraction": 0.0460354938271605,
+      "non_mono_pixels_over_1": 0
+    },
+    {
+      "file": "desktop-reverse-0.25.png",
+      "size": [
+        1440,
+        900
+      ],
+      "maximum_rgb": 255,
+      "white_fraction": 0.0460354938271605,
+      "non_mono_pixels_over_1": 0
+    },
+    {
+      "file": "desktop-forward-0.5.png",
+      "size": [
+        1440,
+        900
+      ],
+      "maximum_rgb": 0,
+      "white_fraction": 0.0,
+      "non_mono_pixels_over_1": 0
+    },
+    {
+      "file": "desktop-reverse-0.5.png",
+      "size": [
+        1440,
+        900
+      ],
+      "maximum_rgb": 0,
+      "white_fraction": 0.0,
+      "non_mono_pixels_over_1": 0
+    },
+    {
+      "file": "desktop-forward-0.75.png",
+      "size": [
+        1440,
+        900
+      ],
+      "maximum_rgb": 255,
+      "white_fraction": 0.006424382716049382,
+      "non_mono_pixels_over_1": 0
+    },
+    {
+      "file": "desktop-reverse-0.75.png",
+      "size": [
+        1440,
+        900
+      ],
+      "maximum_rgb": 255,
+      "white_fraction": 0.006424382716049382,
+      "non_mono_pixels_over_1": 0
+    },
+    {
+      "file": "desktop-forward-1.png",
+      "size": [
+        1440,
+        900
+      ],
+      "maximum_rgb": 255,
+      "white_fraction": 0.001335648148148148,
+      "non_mono_pixels_over_1": 0
+    },
+    {
+      "file": "desktop-reverse-1.png",
+      "size": [
+        1440,
+        900
+      ],
+      "maximum_rgb": 255,
+      "white_fraction": 0.001335648148148148,
+      "non_mono_pixels_over_1": 0
+    },
+    {
+      "file": "mobile-forward-0.png",
+      "size": [
+        390,
+        844
+      ],
+      "maximum_rgb": 255,
+      "white_fraction": 0.01228885648316928,
+      "non_mono_pixels_over_1": 0
+    },
+    {
+      "file": "mobile-reverse-0.png",
+      "size": [
+        390,
+        844
+      ],
+      "maximum_rgb": 255,
+      "white_fraction": 0.01228885648316928,
+      "non_mono_pixels_over_1": 0
+    },
+    {
+      "file": "mobile-forward-0.25.png",
+      "size": [
+        390,
+        844
+      ],
+      "maximum_rgb": 255,
+      "white_fraction": 0.012225057722688054,
+      "non_mono_pixels_over_1": 0
+    },
+    {
+      "file": "mobile-reverse-0.25.png",
+      "size": [
+        390,
+        844
+      ],
+      "maximum_rgb": 255,
+      "white_fraction": 0.012225057722688054,
+      "non_mono_pixels_over_1": 0
+    },
+    {
+      "file": "mobile-forward-0.5.png",
+      "size": [
+        390,
+        844
+      ],
+      "maximum_rgb": 0,
+      "white_fraction": 0.0,
+      "non_mono_pixels_over_1": 0
+    },
+    {
+      "file": "mobile-reverse-0.5.png",
+      "size": [
+        390,
+        844
+      ],
+      "maximum_rgb": 0,
+      "white_fraction": 0.0,
+      "non_mono_pixels_over_1": 0
+    },
+    {
+      "file": "mobile-forward-0.75.png",
+      "size": [
+        390,
+        844
+      ],
+      "maximum_rgb": 255,
+      "white_fraction": 0.00445679912504557,
+      "non_mono_pixels_over_1": 0
+    },
+    {
+      "file": "mobile-reverse-0.75.png",
+      "size": [
+        390,
+        844
+      ],
+      "maximum_rgb": 255,
+      "white_fraction": 0.00445679912504557,
+      "non_mono_pixels_over_1": 0
+    },
+    {
+      "file": "mobile-forward-1.png",
+      "size": [
+        390,
+        844
+      ],
+      "maximum_rgb": 255,
+      "white_fraction": 0.0008111556689755742,
+      "non_mono_pixels_over_1": 0
+    },
+    {
+      "file": "mobile-reverse-1.png",
+      "size": [
+        390,
+        844
+      ],
+      "maximum_rgb": 255,
+      "white_fraction": 0.0008111556689755742,
+      "non_mono_pixels_over_1": 0
+    }
+  ],
+  "dark_interval_pass": true,
+  "monochrome_pass": true,
+  "scope": "Encoded screenshot pixels; does not establish raw HDR finite values or real-device FPS.",
+  "capture_policy": "Original PNGs unchanged; Browser hides HUD/controls before capture. Comparison uses all original pixels."
+}

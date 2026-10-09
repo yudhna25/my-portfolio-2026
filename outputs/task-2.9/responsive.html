@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="UTF-8"><title>Education — responsive App check</title></head>
+<body>
+  <label>Viewport <select id="size"><option>320</option><option>768</option><option>1280</option></select></label>
+  <iframe title="Stellar Odyssey responsive preview" id="preview" src="/" width="320" height="800" frameborder="0"></iframe>
+  <script>
+    const frame = document.querySelector('#preview');
+    document.querySelector('#size').addEventListener('change', event => frame.width = event.target.value);
+  </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "src/styles/globals.css": "855de5ca5cc96c0ba0a01e41fc4701c8cb8154a010e0aa542317c8da856836d3",
+  "src/index.css": "7cf5317063d0c2bd1eaecb90bd31db5ea49e65cb2d5adf358cf4e855a2e842c2",
+  "src/components/About.jsx": "a0cecd7cfc704015503451d1be0700f754f2fb23e67999ecdd7d839aadec49e1",
+  "src/components/Work.jsx": "925365623575262cc7b85cf9b54bc16a7db66bc30cc17a5d705d915ca38d251c",
+  "src/components/Education.jsx": "1d8feee7dcf0250c87f7282445f9f5cf11cc15d14913db1cd750a35143ffad94",
+  "src/components/sections/Experience.jsx": "ac1c9bf32d6524497618ed0b2fb45cb152342dfbde9f5fdfa0b06eab4f288acf",
+  "src/components/sections/Contact.jsx": "18d40875ca9a57b3f54f7606c7b5afde052514c2b239f81f38b825be211cd112"
+}

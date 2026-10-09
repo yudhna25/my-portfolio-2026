@@ -1,0 +1,179 @@
+{
+  "note": "App fullscreen turbulence grain removed. Full PNG channel deviations remain on LCD text antialias; core/gutter/background ROIs have no channel deviations. ROIs manually selected on actual Hero PNGs; localized outside-O gutter does not prove all glyph margins. No screenshot pixels altered.",
+  "results": [
+    {
+      "file": "screenshots\\inspect-1440.png",
+      "sha256": "39804c9501abddd502a6d4e35658b58f761c1283830688ccc6a19d1568467812",
+      "size": [
+        1440,
+        900
+      ],
+      "pixels": 1296000,
+      "maxChannelDeviation": 210,
+      "coloredPixelsOver1": 3441,
+      "regions": {
+        "core_above_disk": {
+          "box": [
+            1282,
+            298,
+            1300,
+            308
+          ],
+          "pixels": 180,
+          "minRGBMax": 0,
+          "maxRGBMax": 0,
+          "meanRGBMax": 0.0,
+          "pixelsAtMost16": 180,
+          "pixelsOver32": 0,
+          "maxChannelDeviation": 0
+        },
+        "outside_O_right_gutter": {
+          "box": [
+            1384,
+            280,
+            1390,
+            340
+          ],
+          "pixels": 360,
+          "minRGBMax": 5,
+          "maxRGBMax": 5,
+          "meanRGBMax": 5.0,
+          "pixelsAtMost16": 360,
+          "pixelsOver32": 0,
+          "maxChannelDeviation": 0
+        },
+        "empty_background": {
+          "box": [
+            60,
+            610,
+            1380,
+            790
+          ],
+          "pixels": 237600,
+          "minRGBMax": 5,
+          "maxRGBMax": 15,
+          "meanRGBMax": 5.0005,
+          "pixelsAtMost16": 237600,
+          "pixelsOver32": 0,
+          "maxChannelDeviation": 0
+        }
+      }
+    },
+    {
+      "file": "screenshots\\inspect-390.png",
+      "sha256": "d0d53bf8f4514da0c3b8435b5ac15b948927ad797c1174894da374ef9d29401a",
+      "size": [
+        390,
+        844
+      ],
+      "pixels": 329160,
+      "maxChannelDeviation": 210,
+      "coloredPixelsOver1": 971,
+      "regions": {
+        "core_above_disk": {
+          "box": [
+            348,
+            224,
+            352,
+            227
+          ],
+          "pixels": 12,
+          "minRGBMax": 0,
+          "maxRGBMax": 0,
+          "meanRGBMax": 0.0,
+          "pixelsAtMost16": 12,
+          "pixelsOver32": 0,
+          "maxChannelDeviation": 0
+        },
+        "outside_O_right_gutter": {
+          "box": [
+            377,
+            214,
+            383,
+            241
+          ],
+          "pixels": 162,
+          "minRGBMax": 5,
+          "maxRGBMax": 5,
+          "meanRGBMax": 5.0,
+          "pixelsAtMost16": 162,
+          "pixelsOver32": 0,
+          "maxChannelDeviation": 0
+        },
+        "empty_background": {
+          "box": [
+            20,
+            600,
+            370,
+            740
+          ],
+          "pixels": 49000,
+          "minRGBMax": 5,
+          "maxRGBMax": 5,
+          "meanRGBMax": 5.0,
+          "pixelsAtMost16": 49000,
+          "pixelsOver32": 0,
+          "maxChannelDeviation": 0
+        }
+      }
+    },
+    {
+      "file": "screenshots\\inspect-320.png",
+      "sha256": "6d6d14dc64aae8aaa6976638dec4793ee50aadb9a583db02749a7896f11dac88",
+      "size": [
+        320,
+        844
+      ],
+      "pixels": 270080,
+      "maxChannelDeviation": 210,
+      "coloredPixelsOver1": 971,
+      "regions": {
+        "core_above_disk": {
+          "box": [
+            282,
+            220,
+            285,
+            223
+          ],
+          "pixels": 9,
+          "minRGBMax": 0,
+          "maxRGBMax": 0,
+          "meanRGBMax": 0.0,
+          "pixelsAtMost16": 9,
+          "pixelsOver32": 0,
+          "maxChannelDeviation": 0
+        },
+        "outside_O_right_gutter": {
+          "box": [
+            306,
+            212,
+            313,
+            233
+          ],
+          "pixels": 147,
+          "minRGBMax": 5,
+          "maxRGBMax": 5,
+          "meanRGBMax": 5.0,
+          "pixelsAtMost16": 147,
+          "pixelsOver32": 0,
+          "maxChannelDeviation": 0
+        },
+        "empty_background": {
+          "box": [
+            20,
+            600,
+            300,
+            740
+          ],
+          "pixels": 39200,
+          "minRGBMax": 5,
+          "maxRGBMax": 5,
+          "meanRGBMax": 5.0,
+          "pixelsAtMost16": 39200,
+          "pixelsOver32": 0,
+          "maxChannelDeviation": 0
+        }
+      }
+    }
+  ]
+}

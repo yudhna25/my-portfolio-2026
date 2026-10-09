@@ -1,0 +1,68 @@
+{
+  "dom": {
+    "canvases": 1,
+    "quality": "high",
+    "sections": [
+      {
+        "background": "rgb(245, 245, 240)",
+        "id": ""
+      },
+      {
+        "background": "rgb(26, 26, 26)",
+        "id": "about"
+      },
+      {
+        "background": "rgb(245, 245, 240)",
+        "id": "education"
+      },
+      {
+        "background": "rgb(26, 26, 26)",
+        "id": "work"
+      }
+    ]
+  },
+  "logs": [
+    {
+      "level": "warn",
+      "message": "GSAP target .welcome-word not found. https://gsap.com",
+      "timestamp": "2026-10-04T19:57:43.813Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+    },
+    {
+      "level": "warn",
+      "message": "GSAP target  not found. https://gsap.com",
+      "timestamp": "2026-10-04T19:57:43.813Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+    },
+    {
+      "level": "warn",
+      "message": "GSAP target  not found. https://gsap.com",
+      "timestamp": "2026-10-04T19:57:43.906Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+    },
+    {
+      "level": "warn",
+      "message": "GSAP target .welcome-word not found. https://gsap.com",
+      "timestamp": "2026-10-04T19:57:43.926Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+    },
+    {
+      "level": "warn",
+      "message": "GSAP target  not found. https://gsap.com",
+      "timestamp": "2026-10-04T19:57:43.926Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+    },
+    {
+      "level": "warn",
+      "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+      "timestamp": "2026-10-04T19:57:44.174Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7b016c04"
+    },
+    {
+      "level": "warn",
+      "message": "GSAP target  not found. https://gsap.com",
+      "timestamp": "2026-10-04T19:57:46.177Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+    }
+  ]
+}

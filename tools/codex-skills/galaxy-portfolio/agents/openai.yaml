@@ -1,0 +1,4 @@
+interface:
+  display_name: "Galaxy Portfolio"
+  short_description: "Stellar Odyssey galaxy-themed portfolio guidelines"
+  default_prompt: "Use $galaxy-portfolio to build sections for the Stellar Odyssey portfolio."

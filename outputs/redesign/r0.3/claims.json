@@ -1,0 +1,311 @@
+{
+  "claims": [
+    {
+      "id": "C01",
+      "status": "documented-artifact",
+      "statement": {
+        "vi": "EDURA là dự án thiết kế LMS cho học viên tại trung tâm đào tạo.",
+        "en": "EDURA is an LMS design project for learners at training centers."
+      },
+      "sourceIds": [
+        "S-PROJECT"
+      ],
+      "assetIds": [
+        "A02",
+        "A19"
+      ],
+      "publication": "allow",
+      "restriction": "Không suy ra đã ra mắt hoặc đang vận hành."
+    },
+    {
+      "id": "C02",
+      "status": "user-confirmed",
+      "statement": {
+        "vi": "Vai trò cá nhân: Lead UI.",
+        "en": "Individual role: Lead UI."
+      },
+      "sourceIds": [
+        "S-OLD-AUDIT",
+        "S-USER-20261008"
+      ],
+      "assetIds": [],
+      "publication": "allow",
+      "restriction": "Q04 audit cũ đã chốt; không mở rộng thành Lead UX hoặc ownership toàn bộ dự án."
+    },
+    {
+      "id": "C03",
+      "status": "user-confirmed",
+      "statement": {
+        "vi": "Tác giả phụ trách quyết định quy tắc bố cục, màu chủ đạo và thiết kế hệ thống giao diện.",
+        "en": "The author owned decisions about layout rules, primary color direction and interface system design."
+      },
+      "sourceIds": [
+        "S-USER-20261008"
+      ],
+      "assetIds": [],
+      "publication": "allow",
+      "restriction": "Chưa có rationale, tradeoff, quy tắc cụ thể hoặc feedback; không tự viết thay."
+    },
+    {
+      "id": "C04",
+      "status": "user-confirmed",
+      "statement": {
+        "vi": "EDURA là concept/prototype UI/UX trên Figma.",
+        "en": "EDURA is a UI/UX concept and Figma prototype."
+      },
+      "sourceIds": [
+        "S-USER-20261008"
+      ],
+      "assetIds": [],
+      "publication": "allow",
+      "restriction": "Không gọi shipped, production-ready hoặc app đang phục vụ người dùng."
+    },
+    {
+      "id": "C05",
+      "status": "documented-project-framing",
+      "statement": {
+        "vi": "Tài liệu đặt vấn đề thông tin học tập phân tán và đề xuất đưa về một nơi.",
+        "en": "The materials frame fragmented learning information as a problem and propose bringing it together."
+      },
+      "sourceIds": [
+        "S-PROJECT"
+      ],
+      "assetIds": [
+        "A07",
+        "A09",
+        "A18"
+      ],
+      "publication": "allow",
+      "restriction": "Định hướng dự án, không phải kết luận nghiên cứu cá nhân hoặc hiệu quả đo."
+    },
+    {
+      "id": "C06",
+      "status": "observed-artifact",
+      "statement": {
+        "vi": "Overview EDURA hiển thị điểm, lịch học, học phí, khóa học, điểm danh, bài tập, nộp bài và tiến độ.",
+        "en": "The EDURA overview shows grades, schedules, tuition, courses, attendance, assignments, submission and progress."
+      },
+      "sourceIds": [
+        "S-PROJECT"
+      ],
+      "assetIds": [
+        "A02"
+      ],
+      "publication": "allow",
+      "restriction": "Bằng chứng một overview mockup, không full flow. Số trong màn là dữ liệu minh họa."
+    },
+    {
+      "id": "C07",
+      "status": "observed-artifact",
+      "statement": {
+        "vi": "Tư liệu EDURA dùng xanh lam với bề mặt sáng và nhóm chức năng có màu riêng.",
+        "en": "EDURA materials use blue alongside light surfaces and separately colored function groups."
+      },
+      "sourceIds": [
+        "S-PROJECT"
+      ],
+      "assetIds": [
+        "A02",
+        "A19"
+      ],
+      "publication": "allow",
+      "restriction": "Không suy ra rationale màu, mã token chuẩn hoặc contrast/accessibility đã được kiểm thử."
+    },
+    {
+      "id": "C08",
+      "status": "user-confirmed-ownership-artifact-missing",
+      "statement": {
+        "vi": "Thiết kế hệ thống giao diện thuộc phạm vi Lead UI được tác giả xác nhận.",
+        "en": "Interface system design is within the author-confirmed Lead UI scope."
+      },
+      "sourceIds": [
+        "S-USER-20261008"
+      ],
+      "assetIds": [],
+      "publication": "qualified",
+      "restriction": "Chưa thấy library/token/variant/state; được nói scope, không được khẳng định complete design system."
+    },
+    {
+      "id": "C09",
+      "status": "documented-expectation-not-outcome",
+      "statement": {
+        "vi": "Tăng hài lòng/tập trung trong A19 là kỳ vọng của concept.",
+        "en": "Improved satisfaction and focus in A19 are expectations for the concept."
+      },
+      "sourceIds": [
+        "S-PROJECT"
+      ],
+      "assetIds": [
+        "A19"
+      ],
+      "publication": "qualified",
+      "restriction": "Không viết đã tăng hài lòng hoặc biến kỳ vọng thành số đo. Copy legacy giảm fatigue không đủ bằng chứng."
+    },
+    {
+      "id": "C10",
+      "status": "external-publisher-verified",
+      "statement": {
+        "vi": "Gần 60% là số OnCourse về tích hợp công cụ; cohort 300 giáo viên, 18 học khu K–12, tháng 5/2023.",
+        "en": "The nearly 60% figure is OnCourse context about tool integration: 300 educators, 18 K–12 districts, May 2023."
+      },
+      "sourceIds": [
+        "S-ONCOURSE",
+        "S-PROJECT"
+      ],
+      "assetIds": [
+        "A08"
+      ],
+      "publication": "withhold",
+      "restriction": "Không phải nghiên cứu/outcome EDURA. Publisher metadata 2023-08-04; slide ghi2024. Copy chính không cần số; raw data chưa kiểm toán."
+    },
+    {
+      "id": "C11",
+      "status": "documented-artifact-method-missing",
+      "statement": {
+        "vi": "Phân khúc và persona có trong hồ sơ; chưa xác minh phương pháp, người tham gia thật hoặc ownership UX cá nhân.",
+        "en": "Segmentation and personas exist in the materials; methods, real participants and individual UX ownership are not verified."
+      },
+      "sourceIds": [
+        "S-PROJECT",
+        "S-OLD-AUDIT"
+      ],
+      "assetIds": [
+        "A10",
+        "A11",
+        "A12",
+        "A13"
+      ],
+      "publication": "qualified",
+      "restriction": "Không viết tôi khảo sát/phỏng vấn hoặc coi persona/quote là nghiên cứu kiểm định; consent chưa có."
+    },
+    {
+      "id": "C12",
+      "status": "observed-competitor",
+      "statement": {
+        "vi": "A15–A17 phân tích APMS, không phải UI EDURA.",
+        "en": "A15–A17 analyze APMS, not the EDURA interface."
+      },
+      "sourceIds": [
+        "S-PROJECT"
+      ],
+      "assetIds": [
+        "A15",
+        "A16",
+        "A17"
+      ],
+      "publication": "withhold",
+      "restriction": "Exclude khỏi product gallery; chỉ được dùng với nhãn competitor nếu task sau thật sự cần."
+    },
+    {
+      "id": "C13",
+      "status": "documented-identity-idea",
+      "statement": {
+        "vi": "A22 ghi ý tưởng Education + App / Edu + A; lưới minh họa có chữ Logo.",
+        "en": "A22 states Education + App / Edu + A; its illustrative grid spells Logo."
+      },
+      "sourceIds": [
+        "S-PROJECT"
+      ],
+      "assetIds": [
+        "A22"
+      ],
+      "publication": "qualified",
+      "restriction": "Không gọi generic grid là bản dựng hình hoàn chỉnh logo EDURA; chưa xác nhận cá nhân sở hữu quyết định nhận diện này."
+    },
+    {
+      "id": "C14",
+      "status": "user-confirmed-assessment-public-proof-missing",
+      "statement": {
+        "vi": "Theo tác giả, dự án được hội đồng giám khảo UX/UI của Arena Multimedia đánh giá Excellent.",
+        "en": "According to the author, the project received an Excellent evaluation from Arena Multimedia’s UX/UI design jury."
+      },
+      "sourceIds": [
+        "S-USER-20261008",
+        "S-OLD-AUDIT",
+        "S-LEGACY"
+      ],
+      "assetIds": [],
+      "publication": "qualified",
+      "restriction": "Chức danh Lead có trong lời tác giả; không suy ra cấu thành/số người hội đồng. Chưa có record/rubric/phạm vi. Không innovation award, usability validation hay excellent UX innovation."
+    },
+    {
+      "id": "C15",
+      "status": "missing-flow-evidence",
+      "statement": {
+        "vi": "Tác giả cho biết có video nhưng chưa gửi URL/file; chưa có flow chi tiết đã xem.",
+        "en": "The author reports a video but has not provided a URL/file; no detailed flow has been reviewed."
+      },
+      "sourceIds": [
+        "S-USER-20261008",
+        "S-PROJECT"
+      ],
+      "assetIds": [
+        "A02"
+      ],
+      "publication": "withhold",
+      "restriction": "Không dựng step/timestamp từ overview hoặc thay bằng APMS. Không placeholder flow để xuất bản."
+    },
+    {
+      "id": "C16",
+      "status": "missing-measured-outcome",
+      "statement": {
+        "vi": "Bộ tài liệu chưa có test/feedback hoặc dữ liệu trước–sau xác minh outcome.",
+        "en": "The reviewed materials contain no test/feedback or before-and-after data establishing an outcome."
+      },
+      "sourceIds": [
+        "S-PROJECT",
+        "S-OLD-AUDIT"
+      ],
+      "assetIds": [],
+      "publication": "withhold",
+      "restriction": "Chỉ mô tả deliverables, không giảm stress/thời gian hoặc tăng hài lòng/kinh doanh đo được."
+    },
+    {
+      "id": "C17",
+      "status": "missing-author-reflection",
+      "statement": {
+        "vi": "Chưa có lời tác giả về bài học từ constraint, iteration hoặc feedback.",
+        "en": "No author reflection on constraints, iteration or feedback has been supplied."
+      },
+      "sourceIds": [
+        "S-USER-20261008",
+        "S-OLD-AUDIT"
+      ],
+      "assetIds": [],
+      "publication": "withhold",
+      "restriction": "Không viết Tôi học được/I learned thay tác giả; omit section thiếu, không coming soon."
+    },
+    {
+      "id": "C18",
+      "status": "verified-cache-inventory",
+      "statement": {
+        "vi": "Tập hiện có26WebP/24nội dung SHA khác nhau; không phải đầy đủ119module.",
+        "en": "The cache holds 26 WebP files and 24 distinct SHA values; it is not the complete 119-module gallery."
+      },
+      "sourceIds": [
+        "S-PROJECT",
+        "S-OLD-AUDIT"
+      ],
+      "assetIds": [],
+      "publication": "allow",
+      "restriction": "Cache discovery order chưa xác minh gallery order. Audit cũ chỉ skim0–118, không kiểm hết119module."
+    },
+    {
+      "id": "C19",
+      "status": "documented-proposal-implementation-missing",
+      "statement": {
+        "vi": "Chatbot/hỗ trợ tự động là đề xuất trong concept; chưa xác minh triển khai.",
+        "en": "Chatbot and automated support are concept proposals; implementation is not verified."
+      },
+      "sourceIds": [
+        "S-PROJECT"
+      ],
+      "assetIds": [
+        "A09",
+        "A18"
+      ],
+      "publication": "qualified",
+      "restriction": "Không gọi tính năng đang hoạt động; ảnh slide không chứng minh backend hoặc product availability."
+    }
+  ]
+}

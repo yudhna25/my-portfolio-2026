@@ -1,0 +1,28 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+const dir=path.dirname(fileURLToPath(import.meta.url)),root=path.resolve(dir,'../../..');
+const read=p=>JSON.parse(fs.readFileSync(path.join(dir,p),'utf8'));
+const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const baseline=read('baseline.json'),manifest=read('frame-manifest.json'),browser=read('browser-verification.json');
+const differences=baseline.files.filter(f=>hash(path.join(root,f.path))!==f.sha256).map(f=>f.path);
+assert.deepEqual(differences,[]);
+assert.equal(execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim(),baseline.head);
+assert.equal(execFileSync('git',['status','--short','--untracked-files=no'],{cwd:root,encoding:'utf8'}).trim(),baseline.trackedStatus.trim());
+const before=fs.readFileSync(path.join(dir,'agents-before.txt')),after=fs.readFileSync(path.join(root,'AGENTS.md'));
+assert(after.subarray(0,before.length).equals(before));
+const appended=after.subarray(before.length).toString('utf8');
+assert.equal(appended.trim().split('\n').length,1);assert(appended.includes('R1.1 —'));
+assert.equal(manifest.states.length,25);assert.equal(manifest.frames.length,150);assert.equal(browser.frameCount,150);assert.equal(browser.errorCount,0);assert.equal(browser.clipCount,0);
+assert(manifest.scrollRanges.finale.compressionFraction>=.08&&manifest.scrollRanges.finale.compressionFraction<=.12);
+const images=[];
+for(const f of manifest.frames){const p=path.join(dir,f.screenshot);assert(fs.existsSync(p));images.push({key:f.key,path:f.screenshot,bytes:fs.statSync(p).size,sha256:hash(p)})}
+for(const file of ['storyboard.html','content.json','handoff-notes.md','verification.md','contact-sheet-1440.png','contact-sheet-390.png','contact-sheet-320.png'])assert(fs.existsSync(path.join(dir,file)));
+const summary={checkedAt:new Date().toISOString(),sourceAndHandoffFilesPreserved:baseline.files.length,productionFilesPreserved:baseline.files.filter(f=>f.path.startsWith('src/')||f.path.startsWith('public/')||['index.html','vite.config.js','package.json','package-lock.json'].includes(f.path)).length,differences,headUnchanged:true,trackedStatusUnchanged:true,agentsPrefixUnchanged:true,agentsRowsAppended:1,frames:150,viewports:browser.viewports,consoleErrors:0,clippedText:0,geometryGroupsChecked:browser.results.reduce((n,r)=>n+r.constellations.length,0),edgesChecked:browser.results.reduce((n,r)=>n+r.constellations.reduce((q,g)=>q+g.edges.length,0),0),storyboardSha256:hash(path.join(dir,'storyboard.html')),images};
+fs.writeFileSync(path.join(dir,'artifact-integrity.json'),JSON.stringify(summary,null,2)+'\n');
+const anchors=browser.results.filter(r=>r.o).map(r=>({key:r.key,oScreenNormalized:r.o,yearBox:r.year?.box,lastDigitBox:r.year?.lastDigit}));
+fs.writeFileSync(path.join(dir,'measured-anchors.json'),JSON.stringify({note:'SVG/Browser layout measurements, not validated world camera poses. Hero and portal25 only; R2 must remeasure live DOM.',anchors},null,2)+'\n');
+console.log(JSON.stringify({...summary,images:images.length}));

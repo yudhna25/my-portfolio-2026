@@ -1,0 +1,4777 @@
+{
+  "samples": [
+    {
+      "id": "work",
+      "reduced": false,
+      "lang": "vi",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "CHÒM SAO DỰ ÁN",
+          "rect": {
+            "x": 20,
+            "y": 229.40625,
+            "w": 270,
+            "h": 57.3125,
+            "right": 290
+          },
+          "font": "25.6px",
+          "scroll": 270,
+          "client": 270,
+          "lines": [
+            "CHÒM ",
+            "SAO DỰ ÁN"
+          ],
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "EDURA LMS",
+          "rect": {
+            "x": 41,
+            "y": 725.21875,
+            "w": 228,
+            "h": 25,
+            "right": 269
+          },
+          "font": "20px",
+          "scroll": 228,
+          "client": 228,
+          "lines": [
+            "EDURA LMS"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VERIS APP",
+          "rect": {
+            "x": 41,
+            "y": 1426.71875,
+            "w": 228,
+            "h": 25,
+            "right": 269
+          },
+          "font": "20px",
+          "scroll": 228,
+          "client": 228,
+          "lines": [
+            "VERIS APP"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VIE PERFUME",
+          "rect": {
+            "x": 41,
+            "y": 2110.21875,
+            "w": 228,
+            "h": 25,
+            "right": 269
+          },
+          "font": "20px",
+          "scroll": 228,
+          "client": 228,
+          "lines": [
+            "VIE PERFUME"
+          ],
+          "outside": [],
+          "clipped": 1
+        }
+      ],
+      "controls": [
+        {
+          "text": "Tất cả",
+          "tag": "BUTTON",
+          "x": 20,
+          "y": 351.71875,
+          "w": 76.75,
+          "h": 44,
+          "right": 96.75
+        },
+        {
+          "text": "Product Design",
+          "tag": "BUTTON",
+          "x": 104.75,
+          "y": 351.71875,
+          "w": 137.765625,
+          "h": 44,
+          "right": 242.515625
+        },
+        {
+          "text": "UX/UI",
+          "tag": "BUTTON",
+          "x": 20,
+          "y": 403.71875,
+          "w": 70.1875,
+          "h": 44,
+          "right": 90.1875
+        },
+        {
+          "text": "Graphic",
+          "tag": "BUTTON",
+          "x": 98.1875,
+          "y": 403.71875,
+          "w": 85.734375,
+          "h": 44,
+          "right": 183.921875
+        },
+        {
+          "text": "Product Design01EDURA LMSNền tảng học tập thiết kế để chống lại sự mệt mỏi của người dùng bằng hệ thống phân cấp thị giác chặt chẽ và hành trình mượt mà. Được đánh giá 'Excellent' về đổi mới UX.UX ResearchUI DesignPrototypingXem case study↗",
+          "tag": "A",
+          "x": 20,
+          "y": 495.71875,
+          "w": 270,
+          "h": 637.5,
+          "right": 290
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 41,
+          "y": 1751.71875,
+          "w": 184.40625,
+          "h": 44,
+          "right": 225.40625
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 41,
+          "y": 2427.21875,
+          "w": 184.40625,
+          "h": 44,
+          "right": 225.40625
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Về đầu trang",
+          "x": 24,
+          "y": -20.033424377441406,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Mở menu điều hướng",
+          "x": 242,
+          "y": -20.033424377441406,
+          "w": 44,
+          "h": 44,
+          "right": 286
+        },
+        {
+          "text": "Chuyển chế độ sáng",
+          "x": 250,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 294
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -33.533424377441406,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": -7463,
+            "w": 262,
+            "h": 1971.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": 495.71875,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": -4493.15625,
+            "w": 262,
+            "h": 1584.25,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 7137.375,
+        "w": 262,
+        "h": 334.78125,
+        "right": 286
+      },
+      "localScroll": 310,
+      "localClient": 310,
+      "marquees": [
+        {
+          "viewport": {
+            "x": 0,
+            "y": -7539.2001953125,
+            "w": 310,
+            "h": 82,
+            "right": 310
+          },
+          "track": {
+            "x": -508.8021545410156,
+            "y": -7522.2001953125,
+            "w": 10261.625,
+            "h": 48,
+            "right": 9752.822845458984
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 71.005859375,
+            "w": 310,
+            "h": 82,
+            "right": 310
+          },
+          "track": {
+            "x": -5285.1904296875,
+            "y": 88.005859375,
+            "w": 11503.75,
+            "h": 48,
+            "right": 6218.5595703125
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 6062.0751953125,
+            "w": 310,
+            "h": 82,
+            "right": 310
+          },
+          "track": {
+            "x": -545.1724853515625,
+            "y": 6079.0751953125,
+            "w": 12216.75,
+            "h": 48,
+            "right": 11671.577514648438
+          }
+        }
+      ],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -7463,
+          "w": 262,
+          "h": 1971.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -5297.9375,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -5173.15625,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -4885.15625,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -4493.15625,
+          "w": 262,
+          "h": 1584.25,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -1414.90625,
+          "w": 262,
+          "h": 1324.3125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 184.40625,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 2685.21875,
+          "w": 270,
+          "h": 3383.65625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6343.875,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 7137.375,
+          "w": 262,
+          "h": 334.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 7552.15625,
+          "w": 262,
+          "h": 89,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "reduced": false,
+      "lang": "en",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "CONSTELLATION OF PROJECTS",
+          "rect": {
+            "x": 20,
+            "y": 229.5625,
+            "w": 270,
+            "h": 57.3125,
+            "right": 290
+          },
+          "font": "25.6px",
+          "scroll": 270,
+          "client": 270,
+          "lines": [
+            "CONSTELLATION ",
+            "OF PROJECTS"
+          ],
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "EDURA LMS",
+          "rect": {
+            "x": 41,
+            "y": 725.375,
+            "w": 228,
+            "h": 25,
+            "right": 269
+          },
+          "font": "20px",
+          "scroll": 228,
+          "client": 228,
+          "lines": [
+            "EDURA LMS"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VERIS APP",
+          "rect": {
+            "x": 41,
+            "y": 1400.875,
+            "w": 228,
+            "h": 25,
+            "right": 269
+          },
+          "font": "20px",
+          "scroll": 228,
+          "client": 228,
+          "lines": [
+            "VERIS APP"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VIE PERFUME",
+          "rect": {
+            "x": 41,
+            "y": 2110.375,
+            "w": 228,
+            "h": 25,
+            "right": 269
+          },
+          "font": "20px",
+          "scroll": 228,
+          "client": 228,
+          "lines": [
+            "VIE PERFUME"
+          ],
+          "outside": [],
+          "clipped": 1
+        }
+      ],
+      "controls": [
+        {
+          "text": "All",
+          "tag": "BUTTON",
+          "x": 20,
+          "y": 351.875,
+          "w": 49.6875,
+          "h": 44,
+          "right": 69.6875
+        },
+        {
+          "text": "Product Design",
+          "tag": "BUTTON",
+          "x": 77.6875,
+          "y": 351.875,
+          "w": 137.765625,
+          "h": 44,
+          "right": 215.453125
+        },
+        {
+          "text": "UX/UI",
+          "tag": "BUTTON",
+          "x": 20,
+          "y": 403.875,
+          "w": 70.1875,
+          "h": 44,
+          "right": 90.1875
+        },
+        {
+          "text": "Graphic",
+          "tag": "BUTTON",
+          "x": 98.1875,
+          "y": 403.875,
+          "w": 85.734375,
+          "h": 44,
+          "right": 183.921875
+        },
+        {
+          "text": "Product Design01EDURA LMSA learning platform designed to combat user fatigue through strict visual hierarchy and seamless user journeys. Rated 'Excellent' for UX innovation.UX ResearchUI DesignPrototypingView case study↗",
+          "tag": "A",
+          "x": 20,
+          "y": 495.875,
+          "w": 270,
+          "h": 611.5,
+          "right": 290
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 41,
+          "y": 1751.875,
+          "w": 184.40625,
+          "h": 44,
+          "right": 225.40625
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 41,
+          "y": 2427.375,
+          "w": 184.40625,
+          "h": 44,
+          "right": 225.40625
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Back to top",
+          "x": 24,
+          "y": -47.86732864379883,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Open navigation menu",
+          "x": 242,
+          "y": -47.86732864379883,
+          "w": 44,
+          "h": 44,
+          "right": 286
+        },
+        {
+          "text": "Switch to light mode",
+          "x": 250,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 294
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -61.36732864379883,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": -7508,
+            "w": 262,
+            "h": 1943.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": 495.875,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": -4566.15625,
+            "w": 262,
+            "h": 1609,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 7157.03125,
+        "w": 262,
+        "h": 334.78125,
+        "right": 286
+      },
+      "localScroll": 310,
+      "localClient": 310,
+      "marquees": [
+        {
+          "viewport": {
+            "x": 0,
+            "y": -7584.2001953125,
+            "w": 310,
+            "h": 82,
+            "right": 310
+          },
+          "track": {
+            "x": -26.148033142089844,
+            "y": -7567.2001953125,
+            "w": 9508.375,
+            "h": 48,
+            "right": 9482.22696685791
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 70.962890625,
+            "w": 310,
+            "h": 82,
+            "right": 310
+          },
+          "track": {
+            "x": -5917.12744140625,
+            "y": 87.962890625,
+            "w": 11887.75,
+            "h": 48,
+            "right": 5970.62255859375
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 6081.7314453125,
+            "w": 310,
+            "h": 82,
+            "right": 310
+          },
+          "track": {
+            "x": -31.29668426513672,
+            "y": 6098.7314453125,
+            "w": 12645.125,
+            "h": 48,
+            "right": 12613.828315734863
+          }
+        }
+      ],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -7508,
+          "w": 262,
+          "h": 1943.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -5370.9375,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -5246.15625,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -4958.15625,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -4566.15625,
+          "w": 262,
+          "h": 1609,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -1437.15625,
+          "w": 262,
+          "h": 1346.71875,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 184.5625,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 2685.375,
+          "w": 270,
+          "h": 3403.15625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6363.53125,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 7157.03125,
+          "w": 262,
+          "h": 334.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 7571.8125,
+          "w": 262,
+          "h": 89,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "reduced": false,
+      "lang": "vi",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "CHÒM SAO DỰ ÁN",
+          "rect": {
+            "x": 20,
+            "y": 242.40475463867188,
+            "w": 340,
+            "h": 34.9375,
+            "right": 360
+          },
+          "font": "31.2px",
+          "scroll": 340,
+          "client": 340,
+          "lines": [
+            "CHÒM SAO DỰ ÁN"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "EDURA LMS",
+          "rect": {
+            "x": 41,
+            "y": 759.59228515625,
+            "w": 298,
+            "h": 25,
+            "right": 339
+          },
+          "font": "20px",
+          "scroll": 298,
+          "client": 298,
+          "lines": [
+            "EDURA LMS"
+          ],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "VERIS APP",
+          "rect": {
+            "x": 41,
+            "y": 1452.84228515625,
+            "w": 298,
+            "h": 25,
+            "right": 339
+          },
+          "font": "20px",
+          "scroll": 298,
+          "client": 298,
+          "lines": [
+            "VERIS APP"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VIE PERFUME",
+          "rect": {
+            "x": 41,
+            "y": 2120.09228515625,
+            "w": 298,
+            "h": 25,
+            "right": 339
+          },
+          "font": "20px",
+          "scroll": 298,
+          "client": 298,
+          "lines": [
+            "VIE PERFUME"
+          ],
+          "outside": [],
+          "clipped": 1
+        }
+      ],
+      "controls": [
+        {
+          "text": "Tất cả",
+          "tag": "BUTTON",
+          "x": 20,
+          "y": 342.3422546386719,
+          "w": 76.75,
+          "h": 44,
+          "right": 96.75
+        },
+        {
+          "text": "Product Design",
+          "tag": "BUTTON",
+          "x": 104.75,
+          "y": 342.3422546386719,
+          "w": 137.765625,
+          "h": 44,
+          "right": 242.515625
+        },
+        {
+          "text": "UX/UI",
+          "tag": "BUTTON",
+          "x": 250.515625,
+          "y": 342.3422546386719,
+          "w": 70.1875,
+          "h": 44,
+          "right": 320.703125
+        },
+        {
+          "text": "Graphic",
+          "tag": "BUTTON",
+          "x": 20,
+          "y": 394.3422546386719,
+          "w": 85.734375,
+          "h": 44,
+          "right": 105.734375
+        },
+        {
+          "text": "Product Design01EDURA LMSNền tảng học tập thiết kế để chống lại sự mệt mỏi của người dùng bằng hệ thống phân cấp thị giác chặt chẽ và hành trình mượt mà. Được đánh giá 'Excellent' về đổi mới UX.UX ResearchUI DesignPrototypingXem case study↗",
+          "tag": "A",
+          "x": 20,
+          "y": 486.3422546386719,
+          "w": 340,
+          "h": 629.25,
+          "right": 360
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 41,
+          "y": 1717.84228515625,
+          "w": 184.40625,
+          "h": 44,
+          "right": 225.40625
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 41,
+          "y": 2411.09228515625,
+          "w": 184.40625,
+          "h": 44,
+          "right": 225.40625
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Về đầu trang",
+          "x": 24,
+          "y": -27.95111846923828,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Mở menu điều hướng",
+          "x": 312,
+          "y": -27.95111846923828,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Chuyển chế độ sáng",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -41.45111846923828,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": -6961.00146484375,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": 486.3422546386719,
+            "w": 340,
+            "h": 1989.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": -4111.15771484375,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 6990.96728515625,
+        "w": 332,
+        "h": 266.390625,
+        "right": 356
+      },
+      "localScroll": 380,
+      "localClient": 380,
+      "marquees": [
+        {
+          "viewport": {
+            "x": 0,
+            "y": -7024.20166015625,
+            "w": 380,
+            "h": 82,
+            "right": 380
+          },
+          "track": {
+            "x": -138.5319366455078,
+            "y": -7007.20166015625,
+            "w": 10261.625,
+            "h": 48,
+            "right": 10123.093063354492
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 91.80514526367188,
+            "w": 380,
+            "h": 82,
+            "right": 380
+          },
+          "track": {
+            "x": -5624.81640625,
+            "y": 108.80514526367188,
+            "w": 11503.75,
+            "h": 48,
+            "right": 5878.93359375
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 5919.69873046875,
+            "w": 380,
+            "h": 82,
+            "right": 380
+          },
+          "track": {
+            "x": -148.4335174560547,
+            "y": 5936.69873046875,
+            "w": 12216.75,
+            "h": 48,
+            "right": 12068.316482543945
+          }
+        }
+      ],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -6961.00146484375,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -4915.93896484375,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -4791.15771484375,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -4503.15771484375,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -4111.15771484375,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -1226.90771484375,
+          "w": 332,
+          "h": 1149.3125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 197.40475463867188,
+          "w": 340,
+          "h": 2278.6875,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 2669.09228515625,
+          "w": 340,
+          "h": 3270.40625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6214.49853515625,
+          "w": 332,
+          "h": 582.46875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6990.96728515625,
+          "w": 332,
+          "h": 266.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 7337.35791015625,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "reduced": false,
+      "lang": "en",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "CONSTELLATION OF PROJECTS",
+          "rect": {
+            "x": 20,
+            "y": 241.81747436523438,
+            "w": 340,
+            "h": 69.875,
+            "right": 360
+          },
+          "font": "31.2px",
+          "scroll": 340,
+          "client": 340,
+          "lines": [
+            "CONSTELLATION ",
+            "OF PROJECTS"
+          ],
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "EDURA LMS",
+          "rect": {
+            "x": 41,
+            "y": 793.9424438476562,
+            "w": 298,
+            "h": 25,
+            "right": 339
+          },
+          "font": "20px",
+          "scroll": 298,
+          "client": 298,
+          "lines": [
+            "EDURA LMS"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VERIS APP",
+          "rect": {
+            "x": 41,
+            "y": 1487.1925048828125,
+            "w": 298,
+            "h": 25,
+            "right": 339
+          },
+          "font": "20px",
+          "scroll": 298,
+          "client": 298,
+          "lines": [
+            "VERIS APP"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VIE PERFUME",
+          "rect": {
+            "x": 41,
+            "y": 2154.4423828125,
+            "w": 298,
+            "h": 25,
+            "right": 339
+          },
+          "font": "20px",
+          "scroll": 298,
+          "client": 298,
+          "lines": [
+            "VIE PERFUME"
+          ],
+          "outside": [],
+          "clipped": 1
+        }
+      ],
+      "controls": [
+        {
+          "text": "All",
+          "tag": "BUTTON",
+          "x": 20,
+          "y": 376.6924743652344,
+          "w": 49.6875,
+          "h": 44,
+          "right": 69.6875
+        },
+        {
+          "text": "Product Design",
+          "tag": "BUTTON",
+          "x": 77.6875,
+          "y": 376.6924743652344,
+          "w": 137.765625,
+          "h": 44,
+          "right": 215.453125
+        },
+        {
+          "text": "UX/UI",
+          "tag": "BUTTON",
+          "x": 223.453125,
+          "y": 376.6924743652344,
+          "w": 70.1875,
+          "h": 44,
+          "right": 293.640625
+        },
+        {
+          "text": "Graphic",
+          "tag": "BUTTON",
+          "x": 20,
+          "y": 428.6924743652344,
+          "w": 85.734375,
+          "h": 44,
+          "right": 105.734375
+        },
+        {
+          "text": "Product Design01EDURA LMSA learning platform designed to combat user fatigue through strict visual hierarchy and seamless user journeys. Rated 'Excellent' for UX innovation.UX ResearchUI DesignPrototypingView case study↗",
+          "tag": "A",
+          "x": 20,
+          "y": 520.6924438476562,
+          "w": 340,
+          "h": 629.2500610351562,
+          "right": 360
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 41,
+          "y": 1752.1925048828125,
+          "w": 184.40625,
+          "h": 44,
+          "right": 225.40625
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 41,
+          "y": 2419.4423828125,
+          "w": 184.40625,
+          "h": 44,
+          "right": 225.40625
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Back to top",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Open navigation menu",
+          "x": 312,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Switch to light mode",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": -6953.9951171875,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": 520.6924438476562,
+            "w": 340,
+            "h": 1963.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": -4104.1513671875,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 6992.7392578125,
+        "w": 332,
+        "h": 312.390625,
+        "right": 356
+      },
+      "localScroll": 380,
+      "localClient": 380,
+      "marquees": [
+        {
+          "viewport": {
+            "x": 0,
+            "y": -7017.19482421875,
+            "w": 380,
+            "h": 82,
+            "right": 380
+          },
+          "track": {
+            "x": -221.60218811035156,
+            "y": -7000.19482421875,
+            "w": 9508.375,
+            "h": 48,
+            "right": 9286.772811889648
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 91.21640014648438,
+            "w": 380,
+            "h": 82,
+            "right": 380
+          },
+          "track": {
+            "x": -5717.19921875,
+            "y": 108.21640014648438,
+            "w": 11887.75,
+            "h": 48,
+            "right": 6170.55078125
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 5892.220703125,
+            "w": 380,
+            "h": 82,
+            "right": 380
+          },
+          "track": {
+            "x": -265.23150634765625,
+            "y": 5909.220703125,
+            "w": 12645.125,
+            "h": 48,
+            "right": 12379.893493652344
+          }
+        }
+      ],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -6953.9951171875,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -4908.9326171875,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -4784.1513671875,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -4496.1513671875,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -4104.1513671875,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -1193.9012451171875,
+          "w": 332,
+          "h": 1115.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 196.81747436523438,
+          "w": 340,
+          "h": 2287.625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 2677.4423828125,
+          "w": 340,
+          "h": 3234.578125,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6187.0205078125,
+          "w": 332,
+          "h": 611.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6992.7392578125,
+          "w": 332,
+          "h": 312.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 7385.1298828125,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "reduced": false,
+      "lang": "vi",
+      "width": 768,
+      "height": 1024,
+      "client": 758,
+      "scroll": 758,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "CHÒM SAO DỰ ÁN",
+          "rect": {
+            "x": 48,
+            "y": 311.84796142578125,
+            "w": 662,
+            "h": 137.59375,
+            "right": 710
+          },
+          "font": "61.44px",
+          "scroll": 662,
+          "client": 662,
+          "lines": [
+            "CHÒM ",
+            "SAO DỰ ÁN"
+          ],
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "EDURA LMS",
+          "rect": {
+            "x": 81,
+            "y": 998.0198364257812,
+            "w": 367.328125,
+            "h": 30.71881103515625,
+            "right": 448.328125
+          },
+          "font": "24.576px",
+          "scroll": 367,
+          "client": 367,
+          "lines": [
+            "EDURA LMS"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VERIS APP",
+          "rect": {
+            "x": 366.828125,
+            "y": 1731.5823974609375,
+            "w": 310.171875,
+            "h": 30.71875,
+            "right": 677
+          },
+          "font": "24.576px",
+          "scroll": 310,
+          "client": 310,
+          "lines": [
+            "VERIS APP"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VIE PERFUME",
+          "rect": {
+            "x": 81,
+            "y": 2534.879150390625,
+            "w": 367.328125,
+            "h": 30.71875,
+            "right": 448.328125
+          },
+          "font": "24.576px",
+          "scroll": 367,
+          "client": 367,
+          "lines": [
+            "VIE PERFUME"
+          ],
+          "outside": [],
+          "clipped": 1
+        }
+      ],
+      "controls": [
+        {
+          "text": "Tất cả",
+          "tag": "BUTTON",
+          "x": 48,
+          "y": 530.4417114257812,
+          "w": 76.75,
+          "h": 44,
+          "right": 124.75
+        },
+        {
+          "text": "Product Design",
+          "tag": "BUTTON",
+          "x": 132.75,
+          "y": 530.4417114257812,
+          "w": 137.765625,
+          "h": 44,
+          "right": 270.515625
+        },
+        {
+          "text": "UX/UI",
+          "tag": "BUTTON",
+          "x": 278.515625,
+          "y": 530.4417114257812,
+          "w": 70.1875,
+          "h": 44,
+          "right": 348.703125
+        },
+        {
+          "text": "Graphic",
+          "tag": "BUTTON",
+          "x": 356.703125,
+          "y": 530.4417114257812,
+          "w": 85.734375,
+          "h": 44,
+          "right": 442.4375
+        },
+        {
+          "text": "Product Design01EDURA LMSNền tảng học tập thiết kế để chống lại sự mệt mỏi của người dùng bằng hệ thống phân cấp thị giác chặt chẽ và hành trình mượt mà. Được đánh giá 'Excellent' về đổi mới UX.UX ResearchUI DesignPrototypingXem case study↗",
+          "tag": "A",
+          "x": 48,
+          "y": 654.4417114257812,
+          "w": 433.328125,
+          "h": 657.2969360351562,
+          "right": 481.328125
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 366.828125,
+          "y": 2002.3011474609375,
+          "w": 184.40625,
+          "h": 44,
+          "right": 551.234375
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 81,
+          "y": 2771.597900390625,
+          "w": 184.40625,
+          "h": 44,
+          "right": 265.40625
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Về đầu trang",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Mở menu điều hướng",
+          "x": 690,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 734
+        },
+        {
+          "text": "Chuyển chế độ sáng",
+          "x": 698,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 742
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 758,
+        "h": 72,
+        "right": 758
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "57.8281px 57.8281px 57.8281px 57.8281px 57.8281px 57.8281px 57.8281px 57.8281px 57.8281px 57.8281px 57.8281px 57.8281px",
+          "rect": {
+            "x": 32,
+            "y": -6748.99560546875,
+            "w": 694,
+            "h": 1785.875,
+            "right": 726
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "33.1562px 33.1562px 33.1562px 33.1562px 33.1562px 33.1562px 33.1562px 33.1562px 33.1562px 33.1562px 33.1562px 33.1562px",
+          "rect": {
+            "x": 48,
+            "y": 654.4417114257812,
+            "w": 662,
+            "h": 2194.15625,
+            "right": 710
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "694px",
+          "rect": {
+            "x": 32,
+            "y": -4103.33935546875,
+            "w": 694,
+            "h": 1584.249755859375,
+            "right": 726
+          }
+        }
+      ],
+      "footer": {
+        "x": 48,
+        "y": 5848.45751953125,
+        "w": 662,
+        "h": 282.21875,
+        "right": 710
+      },
+      "localScroll": 758,
+      "localClient": 758,
+      "marquees": [
+        {
+          "viewport": {
+            "x": 0,
+            "y": -6789.7958984375,
+            "w": 758,
+            "h": 82,
+            "right": 758
+          },
+          "track": {
+            "x": -772.187255859375,
+            "y": -6772.7958984375,
+            "w": 10261.625,
+            "h": 48,
+            "right": 9489.437744140625
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 126.84699249267578,
+            "w": 758,
+            "h": 82.00000762939453,
+            "right": 758
+          },
+          "track": {
+            "x": -5043.6123046875,
+            "y": 143.8470001220703,
+            "w": 11503.75,
+            "h": 48,
+            "right": 6460.1376953125
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 4789.35107421875,
+            "w": 758,
+            "h": 82,
+            "right": 758
+          },
+          "track": {
+            "x": -827.37939453125,
+            "y": 4806.35107421875,
+            "w": 12216.75,
+            "h": 48,
+            "right": 11389.37060546875
+          }
+        }
+      ],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 32,
+          "y": -6748.99560546875,
+          "w": 694,
+          "h": 1785.875,
+          "right": 726
+        },
+        {
+          "tag": "H2",
+          "x": 32,
+          "y": -4769.12060546875,
+          "w": 694,
+          "h": 55.28125,
+          "right": 726
+        },
+        {
+          "tag": "DIV",
+          "x": 32,
+          "y": -4665.83935546875,
+          "w": 694,
+          "h": 320,
+          "right": 726
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 32,
+          "y": -4345.83935546875,
+          "w": 694,
+          "h": 194.5,
+          "right": 726
+        },
+        {
+          "tag": "DIV",
+          "x": 32,
+          "y": -4103.33935546875,
+          "w": 694,
+          "h": 1584.249755859375,
+          "right": 726
+        },
+        {
+          "tag": "DIV",
+          "x": 32,
+          "y": -1021.4957885742188,
+          "w": 694,
+          "h": 965.34375,
+          "right": 726
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 266.84796142578125,
+          "w": 662,
+          "h": 2581.75,
+          "right": 710
+        },
+        {
+          "tag": "DIV",
+          "x": 32,
+          "y": 3089.597900390625,
+          "w": 694,
+          "h": 1741.953369140625,
+          "right": 726
+        },
+        {
+          "tag": "DIV",
+          "x": 32,
+          "y": 5106.55126953125,
+          "w": 694,
+          "h": 547.90625,
+          "right": 726
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 5848.45751953125,
+          "w": 662,
+          "h": 282.21875,
+          "right": 710
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 6210.67626953125,
+          "w": 662,
+          "h": 73,
+          "right": 710
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "reduced": false,
+      "lang": "en",
+      "width": 768,
+      "height": 1024,
+      "client": 758,
+      "scroll": 758,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "CONSTELLATION OF PROJECTS",
+          "rect": {
+            "x": 48,
+            "y": 311.84375,
+            "w": 662,
+            "h": 137.59375,
+            "right": 710
+          },
+          "font": "61.44px",
+          "scroll": 662,
+          "client": 662,
+          "lines": [
+            "CONSTELLATION ",
+            "OF PROJECTS"
+          ],
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "EDURA LMS",
+          "rect": {
+            "x": 81,
+            "y": 998.015625,
+            "w": 367.328125,
+            "h": 30.71875,
+            "right": 448.328125
+          },
+          "font": "24.576px",
+          "scroll": 367,
+          "client": 367,
+          "lines": [
+            "EDURA LMS"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VERIS APP",
+          "rect": {
+            "x": 366.828125,
+            "y": 1731.578125,
+            "w": 310.171875,
+            "h": 30.71875,
+            "right": 677
+          },
+          "font": "24.576px",
+          "scroll": 310,
+          "client": 310,
+          "lines": [
+            "VERIS APP"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VIE PERFUME",
+          "rect": {
+            "x": 81,
+            "y": 2534.875,
+            "w": 367.328125,
+            "h": 30.71875,
+            "right": 448.328125
+          },
+          "font": "24.576px",
+          "scroll": 367,
+          "client": 367,
+          "lines": [
+            "VIE PERFUME"
+          ],
+          "outside": [],
+          "clipped": 1
+        }
+      ],
+      "controls": [
+        {
+          "text": "All",
+          "tag": "BUTTON",
+          "x": 48,
+          "y": 530.4375,
+          "w": 49.6875,
+          "h": 44,
+          "right": 97.6875
+        },
+        {
+          "text": "Product Design",
+          "tag": "BUTTON",
+          "x": 105.6875,
+          "y": 530.4375,
+          "w": 137.765625,
+          "h": 44,
+          "right": 243.453125
+        },
+        {
+          "text": "UX/UI",
+          "tag": "BUTTON",
+          "x": 251.453125,
+          "y": 530.4375,
+          "w": 70.1875,
+          "h": 44,
+          "right": 321.640625
+        },
+        {
+          "text": "Graphic",
+          "tag": "BUTTON",
+          "x": 329.640625,
+          "y": 530.4375,
+          "w": 85.734375,
+          "h": 44,
+          "right": 415.375
+        },
+        {
+          "text": "Product Design01EDURA LMSA learning platform designed to combat user fatigue through strict visual hierarchy and seamless user journeys. Rated 'Excellent' for UX innovation.UX ResearchUI DesignPrototypingView case study↗",
+          "tag": "A",
+          "x": 48,
+          "y": 654.4375,
+          "w": 433.328125,
+          "h": 657.296875,
+          "right": 481.328125
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 366.828125,
+          "y": 2002.296875,
+          "w": 184.40625,
+          "h": 44,
+          "right": 551.234375
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 81,
+          "y": 2745.59375,
+          "w": 184.40625,
+          "h": 44,
+          "right": 265.40625
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Back to top",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Open navigation menu",
+          "x": 690,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 734
+        },
+        {
+          "text": "Switch to light mode",
+          "x": 698,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 742
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 758,
+        "h": 72,
+        "right": 758
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "57.8281px 57.8281px 57.8281px 57.8281px 57.8281px 57.8281px 57.8281px 57.8281px 57.8281px 57.8281px 57.8281px 57.8281px",
+          "rect": {
+            "x": 32,
+            "y": -6723,
+            "w": 694,
+            "h": 1785.875,
+            "right": 726
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "33.1562px 33.1562px 33.1562px 33.1562px 33.1562px 33.1562px 33.1562px 33.1562px 33.1562px 33.1562px 33.1562px 33.1562px",
+          "rect": {
+            "x": 48,
+            "y": 654.4375,
+            "w": 662,
+            "h": 2168.15625,
+            "right": 710
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "694px",
+          "rect": {
+            "x": 32,
+            "y": -4077.34375,
+            "w": 694,
+            "h": 1584.25,
+            "right": 726
+          }
+        }
+      ],
+      "footer": {
+        "x": 48,
+        "y": 5822.453125,
+        "w": 662,
+        "h": 282.21875,
+        "right": 710
+      },
+      "localScroll": 758,
+      "localClient": 758,
+      "marquees": [
+        {
+          "viewport": {
+            "x": 0,
+            "y": -6763.7998046875,
+            "w": 758,
+            "h": 82,
+            "right": 758
+          },
+          "track": {
+            "x": -717.349853515625,
+            "y": -6746.7998046875,
+            "w": 9508.375,
+            "h": 48,
+            "right": 8791.025146484375
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 126.84375,
+            "w": 758,
+            "h": 82,
+            "right": 758
+          },
+          "track": {
+            "x": -5210.080078125,
+            "y": 143.84375,
+            "w": 11887.75,
+            "h": 48,
+            "right": 6677.669921875
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 4763.3466796875,
+            "w": 758,
+            "h": 82,
+            "right": 758
+          },
+          "track": {
+            "x": -858.60400390625,
+            "y": 4780.3466796875,
+            "w": 12645.125,
+            "h": 48,
+            "right": 11786.52099609375
+          }
+        }
+      ],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 32,
+          "y": -6723,
+          "w": 694,
+          "h": 1785.875,
+          "right": 726
+        },
+        {
+          "tag": "H2",
+          "x": 32,
+          "y": -4743.125,
+          "w": 694,
+          "h": 55.28125,
+          "right": 726
+        },
+        {
+          "tag": "DIV",
+          "x": 32,
+          "y": -4639.84375,
+          "w": 694,
+          "h": 320,
+          "right": 726
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 32,
+          "y": -4319.84375,
+          "w": 694,
+          "h": 194.5,
+          "right": 726
+        },
+        {
+          "tag": "DIV",
+          "x": 32,
+          "y": -4077.34375,
+          "w": 694,
+          "h": 1584.25,
+          "right": 726
+        },
+        {
+          "tag": "DIV",
+          "x": 32,
+          "y": -1021.5,
+          "w": 694,
+          "h": 965.34375,
+          "right": 726
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 266.84375,
+          "w": 662,
+          "h": 2555.75,
+          "right": 710
+        },
+        {
+          "tag": "DIV",
+          "x": 32,
+          "y": 3063.59375,
+          "w": 694,
+          "h": 1741.953125,
+          "right": 726
+        },
+        {
+          "tag": "DIV",
+          "x": 32,
+          "y": 5080.546875,
+          "w": 694,
+          "h": 547.90625,
+          "right": 726
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 5822.453125,
+          "w": 662,
+          "h": 282.21875,
+          "right": 710
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 6184.671875,
+          "w": 662,
+          "h": 73,
+          "right": 710
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "reduced": false,
+      "lang": "vi",
+      "width": 1024,
+      "height": 768,
+      "client": 1014,
+      "scroll": 1014,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "CHÒM SAO DỰ ÁN",
+          "rect": {
+            "x": 48,
+            "y": 280.9833679199219,
+            "w": 918,
+            "h": 91.75,
+            "right": 966
+          },
+          "font": "81.92px",
+          "scroll": 918,
+          "client": 918,
+          "lines": [
+            "CHÒM SAO DỰ ÁN"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "EDURA LMS",
+          "rect": {
+            "x": 81,
+            "y": 1027.9833984375,
+            "w": 538,
+            "h": 40.953125,
+            "right": 619
+          },
+          "font": "32.768px",
+          "scroll": 538,
+          "client": 538,
+          "lines": [
+            "EDURA LMS"
+          ],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "VERIS APP",
+          "rect": {
+            "x": 473.5,
+            "y": 1839.1240234375,
+            "w": 459.5,
+            "h": 40.953125,
+            "right": 933
+          },
+          "font": "32.768px",
+          "scroll": 460,
+          "client": 460,
+          "lines": [
+            "VERIS APP"
+          ],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "VIE PERFUME",
+          "rect": {
+            "x": 81,
+            "y": 2699.3271484375,
+            "w": 538,
+            "h": 40.953125,
+            "right": 619
+          },
+          "font": "32.768px",
+          "scroll": 538,
+          "client": 538,
+          "lines": [
+            "VIE PERFUME"
+          ],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [
+        {
+          "text": "Tất cả",
+          "tag": "BUTTON",
+          "x": 48,
+          "y": 453.7333679199219,
+          "w": 76.75,
+          "h": 44,
+          "right": 124.75
+        },
+        {
+          "text": "Product Design",
+          "tag": "BUTTON",
+          "x": 132.75,
+          "y": 453.7333679199219,
+          "w": 137.765625,
+          "h": 44,
+          "right": 270.515625
+        },
+        {
+          "text": "UX/UI",
+          "tag": "BUTTON",
+          "x": 278.515625,
+          "y": 453.7333679199219,
+          "w": 70.1875,
+          "h": 44,
+          "right": 348.703125
+        },
+        {
+          "text": "Graphic",
+          "tag": "BUTTON",
+          "x": 356.703125,
+          "y": 453.7333679199219,
+          "w": 85.734375,
+          "h": 44,
+          "right": 442.4375
+        },
+        {
+          "text": "Product Design01EDURA LMSNền tảng học tập thiết kế để chống lại sự mệt mỏi của người dùng bằng hệ thống phân cấp thị giác chặt chẽ và hành trình mượt mà. Được đánh giá 'Excellent' về đổi mới UX.UX ResearchUI DesignPrototypingXem case study↗",
+          "tag": "A",
+          "x": 48,
+          "y": 577.7333374023438,
+          "w": 604,
+          "h": 748.2031860351562,
+          "right": 652
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 473.5,
+          "y": 2100.0771484375,
+          "w": 184.40625,
+          "h": 44,
+          "right": 657.90625
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 81,
+          "y": 2960.2802734375,
+          "w": 184.40625,
+          "h": 44,
+          "right": 265.40625
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Về đầu trang",
+          "x": 32,
+          "y": -58.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 134.015625
+        },
+        {
+          "text": "Về tôi",
+          "x": 227.59375,
+          "y": -58.5,
+          "w": 47.09375,
+          "h": 44,
+          "right": 274.6875
+        },
+        {
+          "text": "Dự án",
+          "x": 290.6875,
+          "y": -58.5,
+          "w": 46.375,
+          "h": 44,
+          "right": 337.0625
+        },
+        {
+          "text": "Kỹ năng",
+          "x": 353.0625,
+          "y": -58.5,
+          "w": 65.171875,
+          "h": 44,
+          "right": 418.234375
+        },
+        {
+          "text": "Học vấn",
+          "x": 434.234375,
+          "y": -58.5,
+          "w": 65.578125,
+          "h": 44,
+          "right": 499.8125
+        },
+        {
+          "text": "Kinh nghiệm",
+          "x": 515.8125,
+          "y": -58.5,
+          "w": 97.484375,
+          "h": 44,
+          "right": 613.296875
+        },
+        {
+          "text": "Thử nghiệm",
+          "x": 629.296875,
+          "y": -58.5,
+          "w": 93.296875,
+          "h": 44,
+          "right": 722.59375
+        },
+        {
+          "text": "Liên hệ",
+          "x": 738.59375,
+          "y": -58.5,
+          "w": 56.75,
+          "h": 44,
+          "right": 795.34375
+        },
+        {
+          "text": "Mở menu điều hướng",
+          "x": 888.90625,
+          "y": -58.5,
+          "w": 93.09375,
+          "h": 44,
+          "right": 982
+        },
+        {
+          "text": "Chuyển chế độ sáng",
+          "x": 954,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 998
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -72,
+        "w": 1014,
+        "h": 72,
+        "right": 1014
+      },
+      "cursor": 1,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "17.8281px 17.8281px 17.8281px 17.8281px 17.8281px 17.8281px 17.8281px 17.8281px 17.8281px 17.8281px 17.8281px 17.8281px",
+          "rect": {
+            "x": 48,
+            "y": -4825.0009765625,
+            "w": 918,
+            "h": 1101.5625,
+            "right": 966
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "54.5px 54.5px 54.5px 54.5px 54.5px 54.5px 54.5px 54.5px 54.5px 54.5px 54.5px 54.5px",
+          "rect": {
+            "x": 48,
+            "y": 577.7333374023438,
+            "w": 918,
+            "h": 2419.546875,
+            "right": 966
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "290px 290px 290px",
+          "rect": {
+            "x": 48,
+            "y": -2772.7197265625,
+            "w": 918,
+            "h": 642.75,
+            "right": 966
+          }
+        }
+      ],
+      "footer": {
+        "x": 48,
+        "y": 5986.0302734375,
+        "w": 918,
+        "h": 306.65625,
+        "right": 966
+      },
+      "localScroll": 1014,
+      "localClient": 1014,
+      "marquees": [
+        {
+          "viewport": {
+            "x": 0,
+            "y": -4929.80078125,
+            "w": 1014,
+            "h": 82,
+            "right": 1014
+          },
+          "track": {
+            "x": -773.9009399414062,
+            "y": -4912.80078125,
+            "w": 10261.625,
+            "h": 48,
+            "right": 9487.724060058594
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 76.58346557617188,
+            "w": 1014,
+            "h": 82,
+            "right": 1014
+          },
+          "track": {
+            "x": -5042.0361328125,
+            "y": 93.58346557617188,
+            "w": 11503.75,
+            "h": 48,
+            "right": 6461.7138671875
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 4786.111328125,
+            "w": 1014,
+            "h": 82,
+            "right": 1014
+          },
+          "track": {
+            "x": -829.2118530273438,
+            "y": 4803.111328125,
+            "w": 12216.75,
+            "h": 48,
+            "right": 11387.538146972656
+          }
+        }
+      ],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": -4825.0009765625,
+          "w": 918,
+          "h": 1101.5625,
+          "right": 966
+        },
+        {
+          "tag": "H2",
+          "x": 48,
+          "y": -3465.4384765625,
+          "w": 918,
+          "h": 73.71875,
+          "right": 966
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": -3343.7197265625,
+          "w": 918,
+          "h": 384,
+          "right": 966
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 48,
+          "y": -2959.7197265625,
+          "w": 918,
+          "h": 139,
+          "right": 966
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": -2772.7197265625,
+          "w": 918,
+          "h": 642.75,
+          "right": 966
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": -653.1729125976562,
+          "w": 918,
+          "h": 534.15625,
+          "right": 966
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 235.98336791992188,
+          "w": 918,
+          "h": 2761.296875,
+          "right": 966
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 3270.2802734375,
+          "w": 918,
+          "h": 1494.03125,
+          "right": 966
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 5119.3115234375,
+          "w": 918,
+          "h": 624.71875,
+          "right": 966
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 5986.0302734375,
+          "w": 918,
+          "h": 306.65625,
+          "right": 966
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 6372.6865234375,
+          "w": 918,
+          "h": 41,
+          "right": 966
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "reduced": false,
+      "lang": "en",
+      "width": 1024,
+      "height": 768,
+      "client": 1014,
+      "scroll": 1014,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "CONSTELLATION OF PROJECTS",
+          "rect": {
+            "x": 48,
+            "y": 280.984375,
+            "w": 918,
+            "h": 183.5,
+            "right": 966
+          },
+          "font": "81.92px",
+          "scroll": 918,
+          "client": 918,
+          "lines": [
+            "CONSTELLATION ",
+            "OF PROJECTS"
+          ],
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "EDURA LMS",
+          "rect": {
+            "x": 81,
+            "y": 1119.734375,
+            "w": 538,
+            "h": 40.953125,
+            "right": 619
+          },
+          "font": "32.768px",
+          "scroll": 538,
+          "client": 538,
+          "lines": [
+            "EDURA LMS"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VERIS APP",
+          "rect": {
+            "x": 473.5,
+            "y": 1930.875,
+            "w": 459.5,
+            "h": 40.953125,
+            "right": 933
+          },
+          "font": "32.768px",
+          "scroll": 460,
+          "client": 460,
+          "lines": [
+            "VERIS APP"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VIE PERFUME",
+          "rect": {
+            "x": 81,
+            "y": 2791.078125,
+            "w": 538,
+            "h": 40.953125,
+            "right": 619
+          },
+          "font": "32.768px",
+          "scroll": 538,
+          "client": 538,
+          "lines": [
+            "VIE PERFUME"
+          ],
+          "outside": [],
+          "clipped": 1
+        }
+      ],
+      "controls": [
+        {
+          "text": "All",
+          "tag": "BUTTON",
+          "x": 48,
+          "y": 545.484375,
+          "w": 49.6875,
+          "h": 44,
+          "right": 97.6875
+        },
+        {
+          "text": "Product Design",
+          "tag": "BUTTON",
+          "x": 105.6875,
+          "y": 545.484375,
+          "w": 137.765625,
+          "h": 44,
+          "right": 243.453125
+        },
+        {
+          "text": "UX/UI",
+          "tag": "BUTTON",
+          "x": 251.453125,
+          "y": 545.484375,
+          "w": 70.1875,
+          "h": 44,
+          "right": 321.640625
+        },
+        {
+          "text": "Graphic",
+          "tag": "BUTTON",
+          "x": 329.640625,
+          "y": 545.484375,
+          "w": 85.734375,
+          "h": 44,
+          "right": 415.375
+        },
+        {
+          "text": "Product Design01EDURA LMSA learning platform designed to combat user fatigue through strict visual hierarchy and seamless user journeys. Rated 'Excellent' for UX innovation.UX ResearchUI DesignPrototypingView case study↗",
+          "tag": "A",
+          "x": 48,
+          "y": 669.484375,
+          "w": 604,
+          "h": 748.203125,
+          "right": 652
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 473.5,
+          "y": 2151.828125,
+          "w": 184.40625,
+          "h": 44,
+          "right": 657.90625
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 81,
+          "y": 2986.03125,
+          "w": 184.40625,
+          "h": 44,
+          "right": 265.40625
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Back to top",
+          "x": 32,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 134.015625
+        },
+        {
+          "text": "About",
+          "x": 215.578125,
+          "y": 13.5,
+          "w": 50.609375,
+          "h": 44,
+          "right": 266.1875
+        },
+        {
+          "text": "Works",
+          "x": 282.1875,
+          "y": 13.5,
+          "w": 53.015625,
+          "h": 44,
+          "right": 335.203125
+        },
+        {
+          "text": "Skills",
+          "x": 351.203125,
+          "y": 13.5,
+          "w": 51.140625,
+          "h": 44,
+          "right": 402.34375
+        },
+        {
+          "text": "Education",
+          "x": 418.34375,
+          "y": 13.5,
+          "w": 83.546875,
+          "h": 44,
+          "right": 501.890625
+        },
+        {
+          "text": "Experience",
+          "x": 517.890625,
+          "y": 13.5,
+          "w": 90.609375,
+          "h": 44,
+          "right": 608.5
+        },
+        {
+          "text": "Playground",
+          "x": 624.5,
+          "y": 13.5,
+          "w": 98.515625,
+          "h": 44,
+          "right": 723.015625
+        },
+        {
+          "text": "Contact",
+          "x": 739.015625,
+          "y": 13.5,
+          "w": 68.34375,
+          "h": 44,
+          "right": 807.359375
+        },
+        {
+          "text": "Open navigation menu",
+          "x": 888.90625,
+          "y": 13.5,
+          "w": 93.09375,
+          "h": 44,
+          "right": 982
+        },
+        {
+          "text": "Switch to light mode",
+          "x": 954,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 998
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 1014,
+        "h": 72,
+        "right": 1014
+      },
+      "cursor": 1,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "17.8281px 17.8281px 17.8281px 17.8281px 17.8281px 17.8281px 17.8281px 17.8281px 17.8281px 17.8281px 17.8281px 17.8281px",
+          "rect": {
+            "x": 48,
+            "y": -4736,
+            "w": 918,
+            "h": 1038.5625,
+            "right": 966
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "54.5px 54.5px 54.5px 54.5px 54.5px 54.5px 54.5px 54.5px 54.5px 54.5px 54.5px 54.5px",
+          "rect": {
+            "x": 48,
+            "y": 669.484375,
+            "w": 918,
+            "h": 2393.546875,
+            "right": 966
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "290px 290px 290px",
+          "rect": {
+            "x": 48,
+            "y": -2746.71875,
+            "w": 918,
+            "h": 642.75,
+            "right": 966
+          }
+        }
+      ],
+      "footer": {
+        "x": 48,
+        "y": 6029.78125,
+        "w": 918,
+        "h": 306.65625,
+        "right": 966
+      },
+      "localScroll": 1014,
+      "localClient": 1014,
+      "marquees": [
+        {
+          "viewport": {
+            "x": 0,
+            "y": -4840.7998046875,
+            "w": 1014,
+            "h": 82,
+            "right": 1014
+          },
+          "track": {
+            "x": -717.0931396484375,
+            "y": -4823.7998046875,
+            "w": 9508.375,
+            "h": 48,
+            "right": 8791.281860351562
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 76.58447265625,
+            "w": 1014,
+            "h": 82,
+            "right": 1014
+          },
+          "track": {
+            "x": -5210.34130859375,
+            "y": 93.58447265625,
+            "w": 11887.75,
+            "h": 48,
+            "right": 6677.40869140625
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 4829.8623046875,
+            "w": 1014,
+            "h": 82,
+            "right": 1014
+          },
+          "track": {
+            "x": -858.287841796875,
+            "y": 4846.8623046875,
+            "w": 12645.125,
+            "h": 48,
+            "right": 11786.837158203125
+          }
+        }
+      ],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": -4736,
+          "w": 918,
+          "h": 1038.5625,
+          "right": 966
+        },
+        {
+          "tag": "H2",
+          "x": 48,
+          "y": -3439.4375,
+          "w": 918,
+          "h": 73.71875,
+          "right": 966
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": -3317.71875,
+          "w": 918,
+          "h": 384,
+          "right": 966
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 48,
+          "y": -2933.71875,
+          "w": 918,
+          "h": 139,
+          "right": 966
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": -2746.71875,
+          "w": 918,
+          "h": 642.75,
+          "right": 966
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": -653.171875,
+          "w": 918,
+          "h": 534.15625,
+          "right": 966
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 235.984375,
+          "w": 918,
+          "h": 2827.046875,
+          "right": 966
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 3336.03125,
+          "w": 918,
+          "h": 1472.03125,
+          "right": 966
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 5163.0625,
+          "w": 918,
+          "h": 624.71875,
+          "right": 966
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 6029.78125,
+          "w": 918,
+          "h": 306.65625,
+          "right": 966
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 6416.4375,
+          "w": 918,
+          "h": 41,
+          "right": 966
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "reduced": false,
+      "lang": "vi",
+      "width": 1440,
+      "height": 900,
+      "client": 1430,
+      "scroll": 1430,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "CHÒM SAO DỰ ÁN",
+          "rect": {
+            "x": 48,
+            "y": 297.3866271972656,
+            "w": 1334,
+            "h": 129.015625,
+            "right": 1382
+          },
+          "font": "115.2px",
+          "scroll": 1334,
+          "client": 1334,
+          "lines": [
+            "CHÒM SAO DỰ ÁN"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "EDURA LMS",
+          "rect": {
+            "x": 81,
+            "y": 1254.9803466796875,
+            "w": 815.328125,
+            "h": 57.59375,
+            "right": 896.328125
+          },
+          "font": "46.08px",
+          "scroll": 815,
+          "client": 815,
+          "lines": [
+            "EDURA LMS"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VERIS APP",
+          "rect": {
+            "x": 646.828125,
+            "y": 2234.41796875,
+            "w": 702.15625,
+            "h": 57.59375,
+            "right": 1348.984375
+          },
+          "font": "46.08px",
+          "scroll": 702,
+          "client": 702,
+          "lines": [
+            "VERIS APP"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VIE PERFUME",
+          "rect": {
+            "x": 81,
+            "y": 3258.58984375,
+            "w": 815.328125,
+            "h": 57.59375,
+            "right": 896.328125
+          },
+          "font": "46.08px",
+          "scroll": 815,
+          "client": 815,
+          "lines": [
+            "VIE PERFUME"
+          ],
+          "outside": [],
+          "clipped": 1
+        }
+      ],
+      "controls": [
+        {
+          "text": "Tất cả",
+          "tag": "BUTTON",
+          "x": 48,
+          "y": 507.4022521972656,
+          "w": 76.75,
+          "h": 43.999969482421875,
+          "right": 124.75
+        },
+        {
+          "text": "Product Design",
+          "tag": "BUTTON",
+          "x": 132.75,
+          "y": 507.4022521972656,
+          "w": 137.765625,
+          "h": 43.999969482421875,
+          "right": 270.515625
+        },
+        {
+          "text": "UX/UI",
+          "tag": "BUTTON",
+          "x": 278.515625,
+          "y": 507.4022521972656,
+          "w": 70.1875,
+          "h": 43.999969482421875,
+          "right": 348.703125
+        },
+        {
+          "text": "Graphic",
+          "tag": "BUTTON",
+          "x": 356.703125,
+          "y": 507.4022521972656,
+          "w": 85.734375,
+          "h": 43.999969482421875,
+          "right": 442.4375
+        },
+        {
+          "text": "Product Design01EDURA LMSNền tảng học tập thiết kế để chống lại sự mệt mỏi của người dùng bằng hệ thống phân cấp thị giác chặt chẽ và hành trình mượt mà. Được đánh giá 'Excellent' về đổi mới UX.UX ResearchUI DesignPrototypingXem case study↗",
+          "tag": "A",
+          "x": 48,
+          "y": 631.4022216796875,
+          "w": 881.328125,
+          "h": 938.171875,
+          "right": 929.328125
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 646.828125,
+          "y": 2446.01171875,
+          "w": 184.40625,
+          "h": 44,
+          "right": 831.234375
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 81,
+          "y": 3496.18359375,
+          "w": 184.40625,
+          "h": 44,
+          "right": 265.40625
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Về đầu trang",
+          "x": 32,
+          "y": -58.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 134.015625
+        },
+        {
+          "text": "Về tôi",
+          "x": 411.59375,
+          "y": -58.5,
+          "w": 47.09375,
+          "h": 44,
+          "right": 458.6875
+        },
+        {
+          "text": "Dự án",
+          "x": 482.6875,
+          "y": -58.5,
+          "w": 46.375,
+          "h": 44,
+          "right": 529.0625
+        },
+        {
+          "text": "Kỹ năng",
+          "x": 553.0625,
+          "y": -58.5,
+          "w": 65.171875,
+          "h": 44,
+          "right": 618.234375
+        },
+        {
+          "text": "Học vấn",
+          "x": 642.234375,
+          "y": -58.5,
+          "w": 65.578125,
+          "h": 44,
+          "right": 707.8125
+        },
+        {
+          "text": "Kinh nghiệm",
+          "x": 731.8125,
+          "y": -58.5,
+          "w": 97.484375,
+          "h": 44,
+          "right": 829.296875
+        },
+        {
+          "text": "Thử nghiệm",
+          "x": 853.296875,
+          "y": -58.5,
+          "w": 93.296875,
+          "h": 44,
+          "right": 946.59375
+        },
+        {
+          "text": "Liên hệ",
+          "x": 970.59375,
+          "y": -58.5,
+          "w": 56.75,
+          "h": 44,
+          "right": 1027.34375
+        },
+        {
+          "text": "Mở menu điều hướng",
+          "x": 1304.90625,
+          "y": -58.5,
+          "w": 93.09375,
+          "h": 44,
+          "right": 1398
+        },
+        {
+          "text": "Chuyển chế độ sáng",
+          "x": 1370,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 1414
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -72,
+        "w": 1430,
+        "h": 72,
+        "right": 1430
+      },
+      "cursor": 1,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px",
+          "rect": {
+            "x": 75,
+            "y": -4561.00390625,
+            "w": 1280,
+            "h": 923.78125,
+            "right": 1355
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "89.1562px 89.1562px 89.1562px 89.1562px 89.1562px 89.1562px 89.1562px 89.1562px 89.1562px 89.1562px 89.1562px 89.1562px",
+          "rect": {
+            "x": 48,
+            "y": 631.4022216796875,
+            "w": 1334,
+            "h": 2941.78125,
+            "right": 1382
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "410.656px 410.672px 410.656px",
+          "rect": {
+            "x": 75,
+            "y": -2695.53515625,
+            "w": 1280,
+            "h": 658.7498779296875,
+            "right": 1355
+          }
+        }
+      ],
+      "footer": {
+        "x": 48,
+        "y": 6823.87109375,
+        "w": 1334,
+        "h": 186.875,
+        "right": 1382
+      },
+      "localScroll": 1430,
+      "localClient": 1430,
+      "marquees": [
+        {
+          "viewport": {
+            "x": 0,
+            "y": -4649.2041015625,
+            "w": 1430,
+            "h": 82,
+            "right": 1430
+          },
+          "track": {
+            "x": -650.761474609375,
+            "y": -4632.2041015625,
+            "w": 10261.625,
+            "h": 48,
+            "right": 9610.863525390625
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 102.98721313476562,
+            "w": 1430,
+            "h": 82,
+            "right": 1430
+          },
+          "track": {
+            "x": -5154.99169921875,
+            "y": 119.98721313476562,
+            "w": 11503.75,
+            "h": 48,
+            "right": 6348.75830078125
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 5534.6025390625,
+            "w": 1430,
+            "h": 82,
+            "right": 1430
+          },
+          "track": {
+            "x": -697.27099609375,
+            "y": 5551.6025390625,
+            "w": 12216.75,
+            "h": 48,
+            "right": 11519.47900390625
+          }
+        }
+      ],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 75,
+          "y": -4561.00390625,
+          "w": 1280,
+          "h": 923.78125,
+          "right": 1355
+        },
+        {
+          "tag": "H2",
+          "x": 75,
+          "y": -3379.22265625,
+          "w": 1280,
+          "h": 103.6875,
+          "right": 1355
+        },
+        {
+          "tag": "DIV",
+          "x": 75,
+          "y": -3227.53515625,
+          "w": 1280,
+          "h": 384,
+          "right": 1355
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 75,
+          "y": -2843.53515625,
+          "w": 1280,
+          "h": 100,
+          "right": 1355
+        },
+        {
+          "tag": "DIV",
+          "x": 75,
+          "y": -2695.53515625,
+          "w": 1280,
+          "h": 658.7498779296875,
+          "right": 1355
+        },
+        {
+          "tag": "DIV",
+          "x": 75,
+          "y": -614.7852783203125,
+          "w": 1280,
+          "h": 512.171875,
+          "right": 1355
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 252.38662719726562,
+          "w": 1334,
+          "h": 3320.796875,
+          "right": 1382
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 3846.18359375,
+          "w": 1334,
+          "h": 1683.21875,
+          "right": 1382
+        },
+        {
+          "tag": "DIV",
+          "x": 75,
+          "y": 5884.40234375,
+          "w": 1280,
+          "h": 697.46875,
+          "right": 1355
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 6823.87109375,
+          "w": 1334,
+          "h": 186.875,
+          "right": 1382
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 7090.74609375,
+          "w": 1334,
+          "h": 41,
+          "right": 1382
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "reduced": false,
+      "lang": "en",
+      "width": 1440,
+      "height": 900,
+      "client": 1430,
+      "scroll": 1430,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "CONSTELLATION OF PROJECTS",
+          "rect": {
+            "x": 48,
+            "y": 297.3922424316406,
+            "w": 1334,
+            "h": 258.0312194824219,
+            "right": 1382
+          },
+          "font": "115.2px",
+          "scroll": 1334,
+          "client": 1334,
+          "lines": [
+            "CONSTELLATION ",
+            "OF PROJECTS"
+          ],
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "EDURA LMS",
+          "rect": {
+            "x": 81,
+            "y": 1384.0015869140625,
+            "w": 815.328125,
+            "h": 57.59375,
+            "right": 896.328125
+          },
+          "font": "46.08px",
+          "scroll": 815,
+          "client": 815,
+          "lines": [
+            "EDURA LMS"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VERIS APP",
+          "rect": {
+            "x": 646.828125,
+            "y": 2363.439208984375,
+            "w": 702.15625,
+            "h": 57.59375,
+            "right": 1348.984375
+          },
+          "font": "46.08px",
+          "scroll": 702,
+          "client": 702,
+          "lines": [
+            "VERIS APP"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VIE PERFUME",
+          "rect": {
+            "x": 81,
+            "y": 3387.611083984375,
+            "w": 815.328125,
+            "h": 57.59375,
+            "right": 896.328125
+          },
+          "font": "46.08px",
+          "scroll": 815,
+          "client": 815,
+          "lines": [
+            "VIE PERFUME"
+          ],
+          "outside": [],
+          "clipped": 1
+        }
+      ],
+      "controls": [
+        {
+          "text": "All",
+          "tag": "BUTTON",
+          "x": 48,
+          "y": 636.4234619140625,
+          "w": 49.6875,
+          "h": 44,
+          "right": 97.6875
+        },
+        {
+          "text": "Product Design",
+          "tag": "BUTTON",
+          "x": 105.6875,
+          "y": 636.4234619140625,
+          "w": 137.765625,
+          "h": 44,
+          "right": 243.453125
+        },
+        {
+          "text": "UX/UI",
+          "tag": "BUTTON",
+          "x": 251.453125,
+          "y": 636.4234619140625,
+          "w": 70.1875,
+          "h": 44,
+          "right": 321.640625
+        },
+        {
+          "text": "Graphic",
+          "tag": "BUTTON",
+          "x": 329.640625,
+          "y": 636.4234619140625,
+          "w": 85.734375,
+          "h": 44,
+          "right": 415.375
+        },
+        {
+          "text": "Product Design01EDURA LMSA learning platform designed to combat user fatigue through strict visual hierarchy and seamless user journeys. Rated 'Excellent' for UX innovation.UX ResearchUI DesignPrototypingView case study↗",
+          "tag": "A",
+          "x": 48,
+          "y": 760.4234619140625,
+          "w": 881.328125,
+          "h": 938.171875,
+          "right": 929.328125
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 646.828125,
+          "y": 2575.032958984375,
+          "w": 184.40625,
+          "h": 44,
+          "right": 831.234375
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 81,
+          "y": 3599.204833984375,
+          "w": 184.40625,
+          "h": 44,
+          "right": 265.40625
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Back to top",
+          "x": 32,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 134.015625
+        },
+        {
+          "text": "About",
+          "x": 399.578125,
+          "y": 13.5,
+          "w": 50.609375,
+          "h": 44,
+          "right": 450.1875
+        },
+        {
+          "text": "Works",
+          "x": 474.1875,
+          "y": 13.5,
+          "w": 53.015625,
+          "h": 44,
+          "right": 527.203125
+        },
+        {
+          "text": "Skills",
+          "x": 551.203125,
+          "y": 13.5,
+          "w": 51.140625,
+          "h": 44,
+          "right": 602.34375
+        },
+        {
+          "text": "Education",
+          "x": 626.34375,
+          "y": 13.5,
+          "w": 83.546875,
+          "h": 44,
+          "right": 709.890625
+        },
+        {
+          "text": "Experience",
+          "x": 733.890625,
+          "y": 13.5,
+          "w": 90.609375,
+          "h": 44,
+          "right": 824.5
+        },
+        {
+          "text": "Playground",
+          "x": 848.5,
+          "y": 13.5,
+          "w": 98.515625,
+          "h": 44,
+          "right": 947.015625
+        },
+        {
+          "text": "Contact",
+          "x": 971.015625,
+          "y": 13.5,
+          "w": 68.34375,
+          "h": 44,
+          "right": 1039.359375
+        },
+        {
+          "text": "Open navigation menu",
+          "x": 1304.90625,
+          "y": 13.5,
+          "w": 93.09375,
+          "h": 44,
+          "right": 1398
+        },
+        {
+          "text": "Switch to light mode",
+          "x": 1370,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 1414
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 1430,
+        "h": 72,
+        "right": 1430
+      },
+      "cursor": 1,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px",
+          "rect": {
+            "x": 75,
+            "y": -4560.99853515625,
+            "w": 1280,
+            "h": 923.781494140625,
+            "right": 1355
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "89.1562px 89.1562px 89.1562px 89.1562px 89.1562px 89.1562px 89.1562px 89.1562px 89.1562px 89.1562px 89.1562px 89.1562px",
+          "rect": {
+            "x": 48,
+            "y": 760.4234619140625,
+            "w": 1334,
+            "h": 2915.78125,
+            "right": 1382
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "410.656px 410.672px 410.656px",
+          "rect": {
+            "x": 75,
+            "y": -2695.529541015625,
+            "w": 1280,
+            "h": 658.7498779296875,
+            "right": 1355
+          }
+        }
+      ],
+      "footer": {
+        "x": 48,
+        "y": 6926.89208984375,
+        "w": 1334,
+        "h": 231.8125,
+        "right": 1382
+      },
+      "localScroll": 1430,
+      "localClient": 1430,
+      "marquees": [
+        {
+          "viewport": {
+            "x": 0,
+            "y": -4649.1982421875,
+            "w": 1430,
+            "h": 82,
+            "right": 1430
+          },
+          "track": {
+            "x": -599.5601196289062,
+            "y": -4632.1982421875,
+            "w": 9508.375,
+            "h": 48,
+            "right": 8908.814880371094
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 102.99185180664062,
+            "w": 1430,
+            "h": 82,
+            "right": 1430
+          },
+          "track": {
+            "x": -5330.57421875,
+            "y": 119.99185180664062,
+            "w": 11887.75,
+            "h": 48,
+            "right": 6557.17578125
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 5637.62353515625,
+            "w": 1430,
+            "h": 82,
+            "right": 1430
+          },
+          "track": {
+            "x": -717.61083984375,
+            "y": 5654.62353515625,
+            "w": 12645.125,
+            "h": 48,
+            "right": 11927.51416015625
+          }
+        }
+      ],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 75,
+          "y": -4560.99853515625,
+          "w": 1280,
+          "h": 923.781494140625,
+          "right": 1355
+        },
+        {
+          "tag": "H2",
+          "x": 75,
+          "y": -3379.217041015625,
+          "w": 1280,
+          "h": 103.6875,
+          "right": 1355
+        },
+        {
+          "tag": "DIV",
+          "x": 75,
+          "y": -3227.529541015625,
+          "w": 1280,
+          "h": 384,
+          "right": 1355
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 75,
+          "y": -2843.529541015625,
+          "w": 1280,
+          "h": 100,
+          "right": 1355
+        },
+        {
+          "tag": "DIV",
+          "x": 75,
+          "y": -2695.529541015625,
+          "w": 1280,
+          "h": 658.7498779296875,
+          "right": 1355
+        },
+        {
+          "tag": "DIV",
+          "x": 75,
+          "y": -614.7796630859375,
+          "w": 1280,
+          "h": 512.171875,
+          "right": 1355
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 252.39224243164062,
+          "w": 1334,
+          "h": 3423.8125,
+          "right": 1382
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 3949.204833984375,
+          "w": 1334,
+          "h": 1683.218505859375,
+          "right": 1382
+        },
+        {
+          "tag": "DIV",
+          "x": 75,
+          "y": 5987.42333984375,
+          "w": 1280,
+          "h": 697.46875,
+          "right": 1355
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 6926.89208984375,
+          "w": 1334,
+          "h": 231.8125,
+          "right": 1382
+        },
+        {
+          "tag": "DIV",
+          "x": 48,
+          "y": 7238.70458984375,
+          "w": 1334,
+          "h": 41,
+          "right": 1382
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "reduced": false,
+      "lang": "vi",
+      "width": 1920,
+      "height": 1080,
+      "client": 1910,
+      "scroll": 1910,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "CHÒM SAO DỰ ÁN",
+          "rect": {
+            "x": 155,
+            "y": 318.8946228027344,
+            "w": 1539.1875,
+            "h": 143.359375,
+            "right": 1694.1875
+          },
+          "font": "128px",
+          "scroll": 1539,
+          "client": 1539,
+          "lines": [
+            "CHÒM SAO DỰ ÁN"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "EDURA LMS",
+          "rect": {
+            "x": 188,
+            "y": 1401.6602783203125,
+            "w": 992.65625,
+            "h": 70,
+            "right": 1180.65625
+          },
+          "font": "56px",
+          "scroll": 993,
+          "client": 993,
+          "lines": [
+            "EDURA LMS"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VERIS APP",
+          "rect": {
+            "x": 864.65625,
+            "y": 2490.48828125,
+            "w": 857.34375,
+            "h": 70,
+            "right": 1722
+          },
+          "font": "56px",
+          "scroll": 857,
+          "client": 857,
+          "lines": [
+            "VERIS APP"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VIE PERFUME",
+          "rect": {
+            "x": 188,
+            "y": 3637.89453125,
+            "w": 992.65625,
+            "h": 70,
+            "right": 1180.65625
+          },
+          "font": "56px",
+          "scroll": 993,
+          "client": 993,
+          "lines": [
+            "VIE PERFUME"
+          ],
+          "outside": [],
+          "clipped": 1
+        }
+      ],
+      "controls": [
+        {
+          "text": "Tất cả",
+          "tag": "BUTTON",
+          "x": 155,
+          "y": 543.2540283203125,
+          "w": 76.75,
+          "h": 44,
+          "right": 231.75
+        },
+        {
+          "text": "Product Design",
+          "tag": "BUTTON",
+          "x": 239.75,
+          "y": 543.2540283203125,
+          "w": 137.765625,
+          "h": 44,
+          "right": 377.515625
+        },
+        {
+          "text": "UX/UI",
+          "tag": "BUTTON",
+          "x": 385.515625,
+          "y": 543.2540283203125,
+          "w": 70.1875,
+          "h": 44,
+          "right": 455.703125
+        },
+        {
+          "text": "Graphic",
+          "tag": "BUTTON",
+          "x": 463.703125,
+          "y": 543.2540283203125,
+          "w": 85.734375,
+          "h": 44,
+          "right": 549.4375
+        },
+        {
+          "text": "Product Design01EDURA LMSNền tảng học tập thiết kế để chống lại sự mệt mỏi của người dùng bằng hệ thống phân cấp thị giác chặt chẽ và hành trình mượt mà. Được đánh giá 'Excellent' về đổi mới UX.UX ResearchUI DesignPrototypingXem case study↗",
+          "tag": "A",
+          "x": 155,
+          "y": 667.2540283203125,
+          "w": 1058.65625,
+          "h": 1061.40625,
+          "right": 1213.65625
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 864.65625,
+          "y": 2714.48828125,
+          "w": 184.40625,
+          "h": 44,
+          "right": 1049.0625
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 188,
+          "y": 3887.89453125,
+          "w": 184.40625,
+          "h": 44,
+          "right": 372.40625
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Về đầu trang",
+          "x": 32,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 134.015625
+        },
+        {
+          "text": "Về tôi",
+          "x": 651.59375,
+          "y": 13.5,
+          "w": 47.09375,
+          "h": 44,
+          "right": 698.6875
+        },
+        {
+          "text": "Dự án",
+          "x": 722.6875,
+          "y": 13.5,
+          "w": 46.375,
+          "h": 44,
+          "right": 769.0625
+        },
+        {
+          "text": "Kỹ năng",
+          "x": 793.0625,
+          "y": 13.5,
+          "w": 65.171875,
+          "h": 44,
+          "right": 858.234375
+        },
+        {
+          "text": "Học vấn",
+          "x": 882.234375,
+          "y": 13.5,
+          "w": 65.578125,
+          "h": 44,
+          "right": 947.8125
+        },
+        {
+          "text": "Kinh nghiệm",
+          "x": 971.8125,
+          "y": 13.5,
+          "w": 97.484375,
+          "h": 44,
+          "right": 1069.296875
+        },
+        {
+          "text": "Thử nghiệm",
+          "x": 1093.296875,
+          "y": 13.5,
+          "w": 93.296875,
+          "h": 44,
+          "right": 1186.59375
+        },
+        {
+          "text": "Liên hệ",
+          "x": 1210.59375,
+          "y": 13.5,
+          "w": 56.75,
+          "h": 44,
+          "right": 1267.34375
+        },
+        {
+          "text": "Mở menu điều hướng",
+          "x": 1784.90625,
+          "y": 13.5,
+          "w": 93.09375,
+          "h": 44,
+          "right": 1878
+        },
+        {
+          "text": "Chuyển chế độ sáng",
+          "x": 1850,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 1894
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 1910,
+        "h": 72,
+        "right": 1910
+      },
+      "cursor": 1,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px",
+          "rect": {
+            "x": 315,
+            "y": -4555.99609375,
+            "w": 1280,
+            "h": 923.78125,
+            "right": 1595
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "111.328px 111.328px 111.328px 111.328px 111.328px 111.328px 111.328px 111.328px 111.328px 111.328px 111.328px 111.328px",
+          "rect": {
+            "x": 155,
+            "y": 667.2540283203125,
+            "w": 1600,
+            "h": 3297.640625,
+            "right": 1755
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "410.656px 410.672px 410.656px",
+          "rect": {
+            "x": 315,
+            "y": -2679.02734375,
+            "w": 1280,
+            "h": 658.7501220703125,
+            "right": 1595
+          }
+        }
+      ],
+      "footer": {
+        "x": 155,
+        "y": 7418.26953125,
+        "w": 1600,
+        "h": 188.390625,
+        "right": 1755
+      },
+      "localScroll": 1910,
+      "localClient": 1910,
+      "marquees": [
+        {
+          "viewport": {
+            "x": 0,
+            "y": -4621.7958984375,
+            "w": 1910,
+            "h": 82,
+            "right": 1910
+          },
+          "track": {
+            "x": -647.9087524414062,
+            "y": -4604.7958984375,
+            "w": 10261.625,
+            "h": 48,
+            "right": 9613.716247558594
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 138.09385681152344,
+            "w": 1910,
+            "h": 82,
+            "right": 1910
+          },
+          "track": {
+            "x": -5157.6025390625,
+            "y": 155.09385681152344,
+            "w": 11503.75,
+            "h": 48,
+            "right": 6346.1474609375
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 6078.5693359375,
+            "w": 1910,
+            "h": 82,
+            "right": 1910
+          },
+          "track": {
+            "x": -694.216796875,
+            "y": 6095.5693359375,
+            "w": 12216.75,
+            "h": 48,
+            "right": 11522.533203125
+          }
+        }
+      ],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 315,
+          "y": -4555.99609375,
+          "w": 1280,
+          "h": 923.78125,
+          "right": 1595
+        },
+        {
+          "tag": "H2",
+          "x": 315,
+          "y": -3374.21484375,
+          "w": 1280,
+          "h": 115.1875,
+          "right": 1595
+        },
+        {
+          "tag": "DIV",
+          "x": 315,
+          "y": -3211.02734375,
+          "w": 1280,
+          "h": 384,
+          "right": 1595
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 315,
+          "y": -2827.02734375,
+          "w": 1280,
+          "h": 100,
+          "right": 1595
+        },
+        {
+          "tag": "DIV",
+          "x": 315,
+          "y": -2679.02734375,
+          "w": 1280,
+          "h": 658.7501220703125,
+          "right": 1595
+        },
+        {
+          "tag": "DIV",
+          "x": 315,
+          "y": -598.2772216796875,
+          "w": 1280,
+          "h": 517.171875,
+          "right": 1595
+        },
+        {
+          "tag": "DIV",
+          "x": 155,
+          "y": 273.8946228027344,
+          "w": 1600,
+          "h": 3691,
+          "right": 1755
+        },
+        {
+          "tag": "DIV",
+          "x": 155,
+          "y": 4237.89453125,
+          "w": 1600,
+          "h": 1857.875,
+          "right": 1755
+        },
+        {
+          "tag": "DIV",
+          "x": 315,
+          "y": 6450.76953125,
+          "w": 1280,
+          "h": 725.5,
+          "right": 1595
+        },
+        {
+          "tag": "DIV",
+          "x": 155,
+          "y": 7418.26953125,
+          "w": 1600,
+          "h": 188.390625,
+          "right": 1755
+        },
+        {
+          "tag": "DIV",
+          "x": 155,
+          "y": 7686.66015625,
+          "w": 1600,
+          "h": 41,
+          "right": 1755
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "reduced": false,
+      "lang": "en",
+      "width": 1920,
+      "height": 1080,
+      "client": 1910,
+      "scroll": 1910,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "CONSTELLATION OF PROJECTS",
+          "rect": {
+            "x": 155,
+            "y": 318.8926696777344,
+            "w": 1539.1875,
+            "h": 286.7187194824219,
+            "right": 1694.1875
+          },
+          "font": "128px",
+          "scroll": 1539,
+          "client": 1539,
+          "lines": [
+            "CONSTELLATION ",
+            "OF PROJECTS"
+          ],
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "EDURA LMS",
+          "rect": {
+            "x": 188,
+            "y": 1545.0177001953125,
+            "w": 992.65625,
+            "h": 70,
+            "right": 1180.65625
+          },
+          "font": "56px",
+          "scroll": 993,
+          "client": 993,
+          "lines": [
+            "EDURA LMS"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VERIS APP",
+          "rect": {
+            "x": 864.65625,
+            "y": 2633.845703125,
+            "w": 857.34375,
+            "h": 70,
+            "right": 1722
+          },
+          "font": "56px",
+          "scroll": 857,
+          "client": 857,
+          "lines": [
+            "VERIS APP"
+          ],
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VIE PERFUME",
+          "rect": {
+            "x": 188,
+            "y": 3781.251953125,
+            "w": 992.65625,
+            "h": 70,
+            "right": 1180.65625
+          },
+          "font": "56px",
+          "scroll": 993,
+          "client": 993,
+          "lines": [
+            "VIE PERFUME"
+          ],
+          "outside": [],
+          "clipped": 1
+        }
+      ],
+      "controls": [
+        {
+          "text": "All",
+          "tag": "BUTTON",
+          "x": 155,
+          "y": 686.6113891601562,
+          "w": 49.6875,
+          "h": 44,
+          "right": 204.6875
+        },
+        {
+          "text": "Product Design",
+          "tag": "BUTTON",
+          "x": 212.6875,
+          "y": 686.6113891601562,
+          "w": 137.765625,
+          "h": 44,
+          "right": 350.453125
+        },
+        {
+          "text": "UX/UI",
+          "tag": "BUTTON",
+          "x": 358.453125,
+          "y": 686.6113891601562,
+          "w": 70.1875,
+          "h": 44,
+          "right": 428.640625
+        },
+        {
+          "text": "Graphic",
+          "tag": "BUTTON",
+          "x": 436.640625,
+          "y": 686.6113891601562,
+          "w": 85.734375,
+          "h": 44,
+          "right": 522.375
+        },
+        {
+          "text": "Product Design01EDURA LMSA learning platform designed to combat user fatigue through strict visual hierarchy and seamless user journeys. Rated 'Excellent' for UX innovation.UX ResearchUI DesignPrototypingView case study↗",
+          "tag": "A",
+          "x": 155,
+          "y": 810.6113891601562,
+          "w": 1058.65625,
+          "h": 1061.40625,
+          "right": 1213.65625
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 864.65625,
+          "y": 2857.845703125,
+          "w": 184.40625,
+          "h": 44,
+          "right": 1049.0625
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 188,
+          "y": 4005.251953125,
+          "w": 184.40625,
+          "h": 44,
+          "right": 372.40625
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Back to top",
+          "x": 32,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 134.015625
+        },
+        {
+          "text": "About",
+          "x": 639.578125,
+          "y": 13.5,
+          "w": 50.609375,
+          "h": 44,
+          "right": 690.1875
+        },
+        {
+          "text": "Works",
+          "x": 714.1875,
+          "y": 13.5,
+          "w": 53.015625,
+          "h": 44,
+          "right": 767.203125
+        },
+        {
+          "text": "Skills",
+          "x": 791.203125,
+          "y": 13.5,
+          "w": 51.140625,
+          "h": 44,
+          "right": 842.34375
+        },
+        {
+          "text": "Education",
+          "x": 866.34375,
+          "y": 13.5,
+          "w": 83.546875,
+          "h": 44,
+          "right": 949.890625
+        },
+        {
+          "text": "Experience",
+          "x": 973.890625,
+          "y": 13.5,
+          "w": 90.609375,
+          "h": 44,
+          "right": 1064.5
+        },
+        {
+          "text": "Playground",
+          "x": 1088.5,
+          "y": 13.5,
+          "w": 98.515625,
+          "h": 44,
+          "right": 1187.015625
+        },
+        {
+          "text": "Contact",
+          "x": 1211.015625,
+          "y": 13.5,
+          "w": 68.34375,
+          "h": 44,
+          "right": 1279.359375
+        },
+        {
+          "text": "Open navigation menu",
+          "x": 1784.90625,
+          "y": 13.5,
+          "w": 93.09375,
+          "h": 44,
+          "right": 1878
+        },
+        {
+          "text": "Switch to light mode",
+          "x": 1850,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 1894
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 1910,
+        "h": 72,
+        "right": 1910
+      },
+      "cursor": 1,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px 33.3281px",
+          "rect": {
+            "x": 315,
+            "y": -4555.998046875,
+            "w": 1280,
+            "h": 923.78125,
+            "right": 1595
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "111.328px 111.328px 111.328px 111.328px 111.328px 111.328px 111.328px 111.328px 111.328px 111.328px 111.328px 111.328px",
+          "rect": {
+            "x": 155,
+            "y": 810.6113891601562,
+            "w": 1600,
+            "h": 3271.640625,
+            "right": 1755
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "410.656px 410.672px 410.656px",
+          "rect": {
+            "x": 315,
+            "y": -2679.029296875,
+            "w": 1280,
+            "h": 658.7501220703125,
+            "right": 1595
+          }
+        }
+      ],
+      "footer": {
+        "x": 155,
+        "y": 7535.626953125,
+        "w": 1600,
+        "h": 257.59375,
+        "right": 1755
+      },
+      "localScroll": 1910,
+      "localClient": 1910,
+      "marquees": [
+        {
+          "viewport": {
+            "x": 0,
+            "y": -4621.7978515625,
+            "w": 1910,
+            "h": 82,
+            "right": 1910
+          },
+          "track": {
+            "x": -599.5601196289062,
+            "y": -4604.7978515625,
+            "w": 9508.375,
+            "h": 48,
+            "right": 8908.814880371094
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 138.0923614501953,
+            "w": 1910,
+            "h": 82,
+            "right": 1910
+          },
+          "track": {
+            "x": -5330.57421875,
+            "y": 155.0923614501953,
+            "w": 11887.75,
+            "h": 48,
+            "right": 6557.17578125
+          }
+        },
+        {
+          "viewport": {
+            "x": 0,
+            "y": 6195.9267578125,
+            "w": 1910,
+            "h": 82,
+            "right": 1910
+          },
+          "track": {
+            "x": -717.61083984375,
+            "y": 6212.9267578125,
+            "w": 12645.125,
+            "h": 48,
+            "right": 11927.51416015625
+          }
+        }
+      ],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 315,
+          "y": -4555.998046875,
+          "w": 1280,
+          "h": 923.78125,
+          "right": 1595
+        },
+        {
+          "tag": "H2",
+          "x": 315,
+          "y": -3374.216796875,
+          "w": 1280,
+          "h": 115.1875,
+          "right": 1595
+        },
+        {
+          "tag": "DIV",
+          "x": 315,
+          "y": -3211.029296875,
+          "w": 1280,
+          "h": 384,
+          "right": 1595
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 315,
+          "y": -2827.029296875,
+          "w": 1280,
+          "h": 100,
+          "right": 1595
+        },
+        {
+          "tag": "DIV",
+          "x": 315,
+          "y": -2679.029296875,
+          "w": 1280,
+          "h": 658.7501220703125,
+          "right": 1595
+        },
+        {
+          "tag": "DIV",
+          "x": 315,
+          "y": -598.2792358398438,
+          "w": 1280,
+          "h": 517.171875,
+          "right": 1595
+        },
+        {
+          "tag": "DIV",
+          "x": 155,
+          "y": 273.8926696777344,
+          "w": 1600,
+          "h": 3808.359375,
+          "right": 1755
+        },
+        {
+          "tag": "DIV",
+          "x": 155,
+          "y": 4355.251953125,
+          "w": 1600,
+          "h": 1857.875,
+          "right": 1755
+        },
+        {
+          "tag": "DIV",
+          "x": 315,
+          "y": 6568.126953125,
+          "w": 1280,
+          "h": 725.5,
+          "right": 1595
+        },
+        {
+          "tag": "DIV",
+          "x": 155,
+          "y": 7535.626953125,
+          "w": 1600,
+          "h": 257.59375,
+          "right": 1755
+        },
+        {
+          "tag": "DIV",
+          "x": 155,
+          "y": 7873.220703125,
+          "w": 1600,
+          "h": 41,
+          "right": 1755
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

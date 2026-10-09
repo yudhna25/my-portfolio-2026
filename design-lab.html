@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Design Lab — Stellar Odyssey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800;900&family=Space+Grotesk:wght@300;400;500&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-void: #050505;
+      --bg-nebula: #0A0A0A;
+      --bg-surface: #111111;
+      --bg-elevated: #1A1A1A;
+      --text-primary: #FAFAFA;
+      --text-secondary: #999999;
+      --text-muted: #555555;
+      --glow-button: 0 0 30px rgba(255, 255, 255, 0.35);
+      --glow-button-strong: 0 0 50px rgba(255, 255, 255, 0.55);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg-void);
+      color: var(--text-primary);
+      font-family: 'Space Grotesk', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      padding: 0 0 120px;
+    }
+    header {
+      padding: 72px 6vw 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    header h1 {
+      font-family: 'Unbounded', sans-serif;
+      font-weight: 800;
+      font-size: clamp(36px, 6vw, 76px);
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      background: linear-gradient(180deg, #FAFAFA 30%, #AAAAAA 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    header p { margin-top: 14px; color: var(--text-secondary); max-width: 60ch; }
+    section { padding: 48px 6vw 0; }
+    h2 {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 400;
+      font-size: 12px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+    /* ---- color swatches (mono) ---- */
+    .swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 14px; }
+    .swatch { border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden; }
+    .swatch .color { height: 90px; }
+    .swatch .meta { padding: 10px 12px; background: var(--bg-surface); font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+    .swatch .meta b { display: block; color: var(--text-primary); font-weight: 700; margin-bottom: 3px; }
+    .swatch .meta span { color: var(--text-muted); }
+    /* ---- type scale ---- */
+    .type-row { padding: 22px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .type-row .label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; }
+    .unb { font-family: 'Unbounded', sans-serif; }
+    .sg { font-family: 'Space Grotesk', sans-serif; }
+    .jbm { font-family: 'JetBrains Mono', monospace; }
+    /* ---- buttons: glow chỉ dành cho button ---- */
+    .btn-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .btn-primary {
+      font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 14px;
+      padding: 16px 34px; border-radius: 999px; border: none; cursor: pointer;
+      color: #050505; background: #FAFAFA;
+      box-shadow: var(--glow-button);
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s;
+    }
+    .btn-primary:hover { transform: scale(1.05); box-shadow: var(--glow-button-strong); }
+    .btn-ghost {
+      font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 14px;
+      padding: 16px 34px; border-radius: 999px; cursor: pointer;
+      color: var(--text-primary); background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .btn-ghost:hover { border-color: #FAFAFA; box-shadow: var(--glow-button); }
+    /* ---- cards: mono, không glow (glow chỉ button) ---- */
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+    .card { background: var(--bg-surface); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 22px; transition: transform .3s, border-color .3s; }
+    .card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.4); }
+    .card h3 { font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 17px; }
+    .card p { color: var(--text-secondary); font-size: 13px; margin-top: 8px; line-height: 1.5; }
+    /* ---- black hole preview ---- */
+    .bh { width: 220px; height: 220px; margin: 12px 0 20px; position: relative; border-radius: 50%; overflow: visible; }
+    .bh .disk {
+      position: absolute; inset: 0; border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0) 30%, rgba(255,255,255,0.9) 38%, rgba(255,255,255,0.12) 52%, rgba(255,255,255,0) 70%);
+      filter: blur(2px);
+    }
+    .bh .horizon {
+      position: absolute; inset: 34%; border-radius: 50%; background: #000;
+      box-shadow: 0 0 40px rgba(255,255,255,0.5);
+    }
+    .bh .ring {
+      position: absolute; inset: -12% 8%; border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.55);
+      transform: rotate(-24deg);
+    }
+    /* ---- light mode preview ---- */
+    .light-preview {
+      background: #FAFAFA; color: #111111; border-radius: 16px; padding: 28px;
+    }
+    .light-preview .lbl { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #555555; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 12px; }
+    .light-preview h3 { font-family: 'Unbounded', sans-serif; font-weight: 800; font-size: 28px; }
+    .light-preview p { color: #666666; max-width: 55ch; margin-top: 8px; }
+    .note { color: var(--text-muted); font-size: 13px; margin-top: 18px; max-width: 70ch; }
+    .note a { color: var(--text-secondary); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DESIGN LAB<br />STELLAR ODYSSEY</h1>
+    <p>Bản v2 — MONO TRẮNG ĐEN. Trang kiểm tra color palette &amp; type scale — Phase 0.2. Mở bằng dev server: <b>npm run dev</b> rồi vào <b>/design-lab.html</b>. Nguyên tắc mới: toàn bộ UI mono đen-trắng, <b>glow chỉ xuất hiện ở button</b>.</p>
+  </header>
+
+  <section>
+    <h2>01 · Color — Mono B&amp;W (Dark Primary)</h2>
+    <div class="swatch-grid" id="swatches"></div>
+  </section>
+
+  <section>
+    <h2>02 · Glow — chỉ dành cho Button</h2>
+    <div class="btn-row">
+      <button class="btn-primary">Button Trắng Glow</button>
+      <button class="btn-ghost">Button Ghost Glow</button>
+    </div>
+    <div class="card-grid" style="margin-top: 20px;">
+      <div class="card"><h3>Card Mono — không glow</h3><p>Hover chỉ đổi border/translate, KHÔNG có glow. Glow là đặc quyền của button.</p></div>
+      <div class="card"><h3>Card Mono #2</h3><p>Nền surface #111111, border trắng mờ, text xám #999999.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>03 · Typography — Unbounded / Space Grotesk / JetBrains Mono</h2>
+
+    <div class="type-row">
+      <div class="label">Unbounded 800 — Hero Name · 10vw</div>
+      <div class="unb" style="font-weight: 800; font-size: clamp(34px, 10vw, 120px); line-height: 0.95; letter-spacing: -0.02em;">TRẦN VŨ ANH DUY</div>
+    </div>
+
+    <div class="type-row">
+      <div class="label">Unbounded 700 — Section Heading · 7vw</div>
+      <div class="unb" style="font-weight: 700; font-size: clamp(28px, 7vw, 84px); line-height: 1;">CHÒM SAO DỰ ÁN</div>
+    </div>
+
+    <div class="type-row">
+      <div class="label">Unbounded 600 — Card Title · 3.5rem</div>
+      <div class="unb" style="font-weight: 600; font-size: clamp(24px, 3.5rem, 56px);">EDURA LMS</div>
+    </div>
+
+    <div class="type-row">
+      <div class="label">Space Grotesk 400 — Body · 1.25rem</div>
+      <p class="sg" style="font-size: 1.25rem; color: var(--text-primary); max-width: 60ch;">Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI.</p>
+    </div>
+
+    <div class="type-row">
+      <div class="label">Space Grotesk 300 — Body Secondary</div>
+      <p class="sg" style="font-weight: 300; font-size: 1.1rem; color: var(--text-secondary); max-width: 60ch;">A learning platform designed to combat user fatigue through strict visual hierarchy and seamless user journeys.</p>
+    </div>
+
+    <div class="type-row">
+      <div class="label">JetBrains Mono 400 — Label / Code · 0.875rem</div>
+      <p class="jbm" style="font-size: 0.875rem; color: var(--text-muted); letter-spacing: 0.12em;">FIG.01 — NGƯỜI DẪN ĐƯỜNG · SCROLL TO EXPLORE · UX/UI · 2026</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>04 · Hố đen — điểm đến của hành trình scroll</h2>
+    <div class="bh" aria-hidden="true">
+      <div class="disk"></div>
+      <div class="ring"></div>
+      <div class="horizon"></div>
+    </div>
+    <p style="color: var(--text-secondary); max-width: 60ch;">Cuối hành trình là hố đen: chân trời sự kiện đen tuyền + đĩa bồi tụ sáng trắng. Thay thế "ngôi sao" ở bản trước — chuẩn mono, chất Interstellar.</p>
+  </section>
+
+  <section>
+    <h2>05 · Light Mode (toggle secondary)</h2>
+    <div class="light-preview">
+      <div class="lbl">Preview — Mono Light</div>
+      <h3>Chế độ sáng thứ cấp</h3>
+      <p>--bg-void: #FAFAFA · --text-primary: #111111 · glow button vẫn trắng (giảm opacity trên nền sáng). Dark mode vẫn là mặc định.</p>
+    </div>
+  </section>
+
+  <p class="note" style="margin: 40px 6vw 0;">
+    Token đầy đủ: xem <b>kế-hoạch.md</b> (mục 4.1) hoặc sheet "4. Design System" trong <b>ke-hoach-stellar-odyssey.xlsx</b>.
+  </p>
+
+  <script>
+    const swatches = [
+      ['--bg-void', '#050505', 'deep black — nền chính'],
+      ['--bg-nebula', '#0A0A0A', 'nebula dark'],
+      ['--bg-surface', '#111111', 'card surface'],
+      ['--bg-elevated', '#1A1A1A', 'elevated card'],
+      ['--text-primary', '#FAFAFA', 'white — 90% text'],
+      ['--text-secondary', '#999999', 'gray'],
+      ['--text-muted', '#555555', 'dark gray'],
+      ['--glow-button', null, '0 0 30px rgba(255,255,255,.35) — CHỈ cho button'],
+      ['--glow-button-strong', null, '0 0 50px rgba(255,255,255,.55) — hover button'],
+    ];
+    const grid = document.getElementById('swatches');
+    swatches.forEach(([name, hex, desc]) => {
+      const el = document.createElement('div');
+      el.className = 'swatch';
+      const bg = hex || 'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.7), rgba(255,255,255,0) 70%)';
+      el.innerHTML = '<div class="color" style="background:' + bg + '"></div>' +
+        '<div class="meta"><b>' + name + '</b><span>' + (hex || '') + ' ' + desc + '</span></div>';
+      grid.appendChild(el);
+    });
+  </script>
+</body>
+</html>

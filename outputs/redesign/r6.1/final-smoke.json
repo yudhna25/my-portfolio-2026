@@ -1,0 +1,40 @@
+{
+  "errors": [],
+  "warnings": [
+    "Service Worker registration blocked by Playwright",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "assets": [
+    {
+      "url": "projects/edura/overview.webp",
+      "status": 200,
+      "bytes": 92204,
+      "sha256": "cc792c5dfb8d3acaf30925372969711e6b18a19ca831e6cc9baa8e63900d9b23"
+    },
+    {
+      "url": "projects/edura/problem.webp",
+      "status": 200,
+      "bytes": 135960,
+      "sha256": "11e86ff9ffe00bf747a3b50db209e68658b08fcaa2989e4cb6300146b2fc1c4d"
+    },
+    {
+      "url": "projects/edura/solution.webp",
+      "status": 200,
+      "bytes": 96112,
+      "sha256": "7714b0840765fecc8a397c5c3a03eb97da448d752090821752998948f8ba47a8"
+    }
+  ],
+  "swPrecache": [
+    "projects/edura/overview.webp",
+    "projects/edura/problem.webp",
+    "projects/edura/solution.webp"
+  ],
+  "shell": {
+    "reader": 0,
+    "canvas": 1,
+    "hero": "PORTFOLIO",
+    "overflow": 0
+  },
+  "browser": "154.0.4258.62",
+  "status": "pass"
+}

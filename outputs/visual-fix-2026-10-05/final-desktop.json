@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "bloomOn": {
+    "viewport": [
+      1101,
+      930
+    ],
+    "camera": [
+      -2.9961160586618756,
+      -0.00046843529550188393,
+      -159.98059933388697
+    ],
+    "center": [
+      671.9343822387098,
+      464.9998936069474
+    ],
+    "radius": 44.15216126775012,
+    "corePixels": 2589,
+    "darkFraction": 1,
+    "maxCore": 0,
+    "meanCore": 0,
+    "brightPixels": 26752,
+    "tinted": 0,
+    "corePass": true,
+    "programsPass": true,
+    "stars": 10000,
+    "visibleStars": 939,
+    "quadrants": [
+      230,
+      226,
+      251,
+      232
+    ],
+    "centerToOuterDensity": 1.2233883058470765,
+    "maxStarCssPixels": 2.9996888637542725,
+    "starCameraOffset": 0.0008823049997217153,
+    "selected": [
+      "accretion-disk"
+    ],
+    "liveComposers": 1
+  },
+  "bloomEmpty": {
+    "viewport": [
+      1101,
+      930
+    ],
+    "camera": [
+      -2.9961160586618756,
+      -0.00046843529550188393,
+      -159.98059933388697
+    ],
+    "center": [
+      671.9343822387098,
+      464.9998936069474
+    ],
+    "radius": 44.15216126775012,
+    "corePixels": 2589,
+    "darkFraction": 1,
+    "maxCore": 0,
+    "meanCore": 0,
+    "brightPixels": 26225,
+    "tinted": 0,
+    "corePass": true,
+    "programsPass": true,
+    "stars": 10000,
+    "visibleStars": 939,
+    "quadrants": [
+      230,
+      226,
+      251,
+      232
+    ],
+    "centerToOuterDensity": 1.2233883058470765,
+    "maxStarCssPixels": 2.9996888637542725,
+    "starCameraOffset": 0.0008966707543400745,
+    "selected": [],
+    "liveComposers": 1
+  },
+  "glow": {
+    "raised": 66367,
+    "far": 0,
+    "maxFar": 3
+  },
+  "reducedMotion": false
+}

@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "checks": 1157,
+  "staticPairs": 36,
+  "osEvents": [
+    false,
+    true,
+    false
+  ],
+  "normalTriggerCounts": [
+    95,
+    95,
+    95,
+    95,
+    95
+  ],
+  "reducedTriggerCounts": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "preloaderMs": 283.19999999925494,
+  "finalPreloaderMs": 110.09999999776483,
+  "finalLiveAnimationDuration": 0
+}

@@ -1,0 +1,17 @@
+{
+  "insideChangedPixels": 405,
+  "outsideChangedPixels": 0,
+  "maxDifference": 230,
+  "differenceBounds": [
+    440,
+    235,
+    505,
+    301
+  ],
+  "rect": {
+    "x": 430,
+    "y": 230,
+    "width": 80,
+    "height": 80
+  }
+}

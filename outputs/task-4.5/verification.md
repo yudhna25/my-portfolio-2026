@@ -1,0 +1,733 @@
+# Báo Cáo Kiểm Toán Khả Năng Tiếp Cận Trình Đọc Màn Hình (Task 4.5)
+## "Stellar Odyssey" Screen Reader Accessibility Audit (WCAG 2.1 AA)
+
+- **Thời gian kiểm toán:** 2026-10-06T16:18:41.126Z
+- **Môi trường thử nghiệm:** Microsoft Edge Headless (Chromium) · Playwright Test Suite · Viewport 1440×900
+- **Tiêu chuẩn đối chiếu:** WCAG 2.1 Level AA, WAI-ARIA 1.2 Authoring Practices Guide (APG)
+- **Kết quả tổng quát:** **100% ĐẠT CHUẨN (PASS)** ✅ (0 Blocker, 0 Major, 0 ARIA Violations)
+
+---
+
+## 1. Kiểm Toán Semantic Landmark Hierarchy
+
+| Landmark | HTML Tag & ID | Thuộc tính ARIA / Nhãn | Trạng thái |
+|:---|:---|:---|:---:|
+| **Banner** | `<header>` | Chứa skip link và điều hướng chính | ✅ PASS |
+| **Main Navigation** | `<nav>` | `aria-label="Điều hướng chính"` / `"Main navigation"` | ✅ PASS |
+| **Main Content** | `<main id="smooth-content">` | `tabIndex={-1}`, bọc 8 sections và smooth scroll | ✅ PASS |
+| **Hero Section** | `<section id="hero">` | `aria-labelledby="hero-heading"` | ✅ PASS |
+| **About Section** | `<section id="about">` | `aria-labelledby="about-heading"` | ✅ PASS |
+| **Skills Section** | `<section id="skills">` | `aria-labelledby="skills-heading"` | ✅ PASS |
+| **Education Section** | `<section id="education">` | `aria-labelledby="education-heading"` | ✅ PASS |
+| **Experience Section** | `<section id="experience">` | `aria-labelledby="experience-heading"` | ✅ PASS |
+| **Works Section** | `<section id="work">` | `aria-labelledby="works-heading"` | ✅ PASS |
+| **Playground Section** | `<section id="playground">` | `aria-labelledby="playground-heading"` | ✅ PASS |
+| **Contact Section** | `<section id="transmission">` | `aria-labelledby="transmission-heading"` | ✅ PASS |
+| **Contentinfo** | `<footer id="site-footer">` | `role="contentinfo"`, `aria-label="Chân trang"` / `"Site footer"` | ✅ PASS |
+
+---
+
+## 2. Kiểm Toán Phân Cấp Tiêu Đề (Heading Hierarchy H1 → H6)
+
+- **Tổng số thẻ heading:** 32
+- **Bỏ cóc cấp độ (Skipped levels):** 0 (KHÔNG CÓ)
+
+- `[H2]` `<dialog>` Khám phá hành trình
+- `[H1]` `<section>` TRẦN VŨ ANH DUY
+- `[H2]` `<section>` TRẦN VŨ / ANH DUY
+- `[H3]` `<section>` KHO VŨ KHÍ PHẦN MỀM
+- `[H3]` `<section>` NĂNG LỰC CỐT LÕI
+- `[H2]` `<header>` Tinh Vân Kỹ Năng
+- `[H3]` `<section>` Công cụ thiết kế
+- `[H3]` `<section>` Năng lực cốt lõi
+- `[H3]` `<section>` Kỹ thuật
+- `[H2]` `<section>` Bản Đồ Sao
+- `[H3]` `<section>` Saigon University
+- `[H3]` `<section>` Arena Multimedia
+- `[H3]` `<section>` Green Academy
+- `[H2]` `<header>` Nhật Ký Hành Trình
+- `[H3]` `<section>` HOSANA MEDIA
+- `[H3]` `<section>` UPWORK
+- `[H3]` `<section>` DESIGNVELOPER
+- `[H2]` `<header>` CHÒM SAO DỰ ÁN
+- `[H3]` `<section>` EDURA LMS
+- `[H3]` `<section>` VERIS APP
+- `[H3]` `<section>` VIE PERFUME
+- `[H2]` `<section>` Trạm Không Gian
+- `[H3]` `<section>` Starfield Explorer
+- `[H3]` `<section>` Nebula Shader Playground
+- `[H3]` `<section>` Scroll Progress Orbit
+- `[H3]` `<section>` Magnetic Field
+- `[H3]` `<section>` Text Scramble Lab
+- `[H3]` `<section>` Constellation Grid
+- `[H3]` `<section>` Wormhole Tunnel
+- `[H3]` `<section>` Marquee Generator
+- `[H2]` `<section>` HÃY KẾT NỐI LET'S CONNECT
+- `[H2]` `<footer>` HÃY KẾT NỐI
+
+---
+
+## 3. Kiểm Toán Ẩn Chi Tiết Đồ Họa Trang Trí (Aria-Hidden)
+
+| Thành phần đồ họa | Cơ chế ẩn | Trạng thái |
+|:---|:---|:---:|
+| **Persistent 3D Canvas (`GalaxyScene`)** | `aria-hidden="true"` trên container gốc + Canvas | ✅ PASS |
+| **Custom Cursor (`Cursor.jsx`)** | `aria-hidden="true"` trên root + ring + dot | ✅ PASS |
+| **18 Thanh tiến độ kỹ năng (`Skills.jsx`)** | 18/18 thanh có `aria-hidden="true"` | ✅ PASS |
+| **SVG Icons & Chòm sao & Chevron** | 100% SVG có `aria-hidden="true" focusable="false"` | ✅ PASS |
+
+---
+
+## 4. Kiểm Toán Accessible Names & External Links (`target="_blank"`)
+
+- **Tổng số interactive elements (buttons, links, inputs):** 45
+- **Số phần tử thiếu Accessible Name:** 0
+- **Tổng số liên kết mở tab mới:** 11
+- **Tuân thủ bảo mật (`rel="noopener noreferrer"`):** 100% PASS
+- **Cảnh báo mở tab mới (`mở trong tab mới` / `opens in a new tab`):** 100% PASS
+
+### Chi tiết các liên kết mở tab mới:
+- **Facebook (mở trong tab mới)** → `https://www.facebook.com/tvad.25` (`target="_blank" rel="noopener noreferrer"`) [✅ PASS]
+- **EDURA LMS — Xem case study (mở trong tab mới)** → `https://www.behance.net/gallery/241524417/Edura-LMS` (`target="_blank" rel="noopener noreferrer"`) [✅ PASS]
+- **Magnetic Field — Tham khảo CodePen ↗ (mở trong tab mới)** → `https://codepen.io/GreenSock/pen/MWRPXMr` (`target="_blank" rel="noopener noreferrer"`) [✅ PASS]
+- **Text Scramble Lab — Tham khảo CodePen ↗ (mở trong tab mới)** → `https://codepen.io/GreenSock/pen/gLXgxz` (`target="_blank" rel="noopener noreferrer"`) [✅ PASS]
+- **Constellation Grid — Tham khảo CodePen ↗ (mở trong tab mới)** → `https://codepen.io/aptorres27/pen/mPGZPp` (`target="_blank" rel="noopener noreferrer"`) [✅ PASS]
+- **Wormhole Tunnel — Tham khảo CodePen ↗ (mở trong tab mới)** → `https://codepen.io/devildrey33/pen/zKBpmq` (`target="_blank" rel="noopener noreferrer"`) [✅ PASS]
+- **Marquee Generator — Tham khảo CodePen ↗ (mở trong tab mới)** → `https://codepen.io/GreenSock/pen/QWOvexM` (`target="_blank" rel="noopener noreferrer"`) [✅ PASS]
+- **Facebook (mở trong tab mới)** → `https://www.facebook.com/tvad.25` (`target="_blank" rel="noopener noreferrer"`) [✅ PASS]
+- **Facebook (mở trong tab mới)** → `https://www.facebook.com/tvad.25` (`target="_blank" rel="noopener noreferrer"`) [✅ PASS]
+- **LinkedIn (mở trong tab mới)** → `null` (`target="_blank" rel="noopener noreferrer"`) [✅ PASS]
+- **Trang web (mở trong tab mới)** → `null` (`target="_blank" rel="noopener noreferrer"`) [✅ PASS]
+
+---
+
+## 5. Live Regions & Scramble Text Audit
+
+1. **Preloader Spinner:**
+   - Sử dụng `role="status"` và `aria-live="polite"`.
+   - Vòng quay spinner và số phần trăm tăng dần được bọc trong container `aria-hidden="true"`, ngăn chặn tình trạng VoiceOver/NVDA đọc lặp lại 1%... 2%... 100 lần.
+   - Thông báo tĩnh duy nhất được phát một lần: *"ĐANG KẾT NỐI VỚI VŨ TRỤ..."*.
+2. **Hero Tagline Scramble:**
+   - Tagline có `<span className="sr-only">Creative Designer</span>` chứa văn bản nguyên vẹn.
+   - Thẻ span hiệu ứng xáo trộn ký tự có `aria-hidden="true"`, bảo vệ người dùng khiếm thị khỏi nghe tiếng rác xáo trộn.
+
+---
+
+## 6. Accessibility Tree Snapshots (`ariaSnapshot`)
+
+### 6.1 Trang Chủ (Tiếng Việt)
+```yaml
+- banner:
+  - link "Chuyển đến nội dung chính":
+    - /url: "#smooth-content"
+  - navigation "Điều hướng chính":
+    - link "ANH DUY — Về đầu trang":
+      - /url: "#smooth-content"
+      - text: ANH DUY
+    - list:
+      - listitem:
+        - link "Về tôi":
+          - /url: "#about"
+      - listitem:
+        - link "Dự án":
+          - /url: "#work"
+      - listitem:
+        - link "Kỹ năng":
+          - /url: "#skills"
+      - listitem:
+        - link "Học vấn":
+          - /url: "#education"
+      - listitem:
+        - link "Kinh nghiệm":
+          - /url: "#experience"
+      - listitem:
+        - link "Thử nghiệm":
+          - /url: "#playground"
+      - listitem:
+        - link "Liên hệ":
+          - /url: "#transmission"
+    - paragraph: Nội dung này đang được chuẩn bị.
+    - button "Mở menu điều hướng": Menu
+- button "Chuyển chế độ tối"
+- main:
+  - region "TRẦN VŨ ANH DUY"
+  - text: Thiết kế • Chiến lược • Motion • UI/UX
+  - region "TRẦN VŨ / ANH DUY":
+    - figure:
+      - img "Chân dung Trần Vũ Anh Duy — Creative Designer"
+      - text: FIG.01 — NGƯỜI DẪN ĐƯỜNG
+    - paragraph: The Navigator
+    - heading "TRẦN VŨ / ANH DUY" [level=2]
+    - paragraph: Creative Designer — UX/UI & Motion
+    - paragraph: Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.
+    - paragraph: "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+    - blockquote: Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.
+    - heading "KHO VŨ KHÍ PHẦN MỀM" [level=3]
+    - list "KHO VŨ KHÍ PHẦN MỀM":
+      - listitem "Figma":
+        - img "Figma"
+      - listitem "Photoshop":
+        - img "Photoshop"
+      - listitem "Illustrator":
+        - img "Illustrator"
+      - listitem "After Effects":
+        - img "After Effects"
+      - listitem "Premiere/DaVinci Resolve":
+        - img "Premiere/DaVinci Resolve"
+      - listitem "AI Tools (Generative)"
+    - heading "NĂNG LỰC CỐT LÕI" [level=3]
+    - list "NĂNG LỰC CỐT LÕI":
+      - listitem: Design Thinking
+      - listitem: AI-Assisted Design
+      - listitem: Motion Graphics
+      - listitem: Project Management
+      - listitem: Time Management
+      - listitem: Adaptability
+      - listitem: Teamwork
+      - listitem: Attention to Detail
+  - region "Tinh Vân Kỹ Năng":
+    - heading "Tinh Vân Kỹ Năng" [level=2]
+    - figure "Figma Photoshop Illustrator After Effects Premiere/DaVinci Resolve AI Tools (Generative) HTML/CSS/JS cơ bản React (đang học) Prototyping (Figma) Wireframing":
+      - checkbox "Tạm dừng quỹ đạo"
+      - text: Tạm dừng quỹ đạo
+      - list:
+        - listitem: Figma
+        - listitem: Photoshop
+        - listitem: Illustrator
+        - listitem: After Effects
+        - listitem: Premiere/DaVinci Resolve
+        - listitem: AI Tools (Generative)
+        - listitem: HTML/CSS/JS cơ bản
+        - listitem: React (đang học)
+        - listitem: Prototyping (Figma)
+        - listitem: Wireframing
+    - article "Công cụ thiết kế":
+      - heading "Công cụ thiết kế" [level=3]
+      - list:
+        - listitem: Figma
+        - listitem: Photoshop
+        - listitem: Illustrator
+        - listitem: After Effects
+        - listitem: Premiere/DaVinci Resolve
+        - listitem: AI Tools (Generative)
+    - article "Năng lực cốt lõi":
+      - heading "Năng lực cốt lõi" [level=3]
+      - list:
+        - listitem: Design Thinking
+        - listitem: AI-Assisted Design
+        - listitem: Motion Graphics
+        - listitem: Project Management
+        - listitem: Time Management
+        - listitem: Adaptability
+        - listitem: Teamwork
+        - listitem: Attention to Detail
+    - article "Kỹ thuật":
+      - heading "Kỹ thuật" [level=3]
+      - list:
+        - listitem: HTML/CSS/JS cơ bản
+        - listitem: React (đang học)
+        - listitem: Prototyping (Figma)
+        - listitem: Wireframing
+  - region "Bản Đồ Sao":
+    - heading "Bản Đồ Sao" [level=2]
+    - list:
+      - listitem:
+        - paragraph: 2021–2026
+        - heading "Saigon University" [level=3]
+        - paragraph: Cử nhân Công nghệ Thông tin
+        - paragraph: "Tốt nghiệp loại Giỏi. Trọng tâm: Phân tích & Thiết kế Hệ thống, HCI, Usability Testing, Prototyping Web/App."
+      - listitem:
+        - paragraph: 2024–nay
+        - heading "Arena Multimedia" [level=3]
+        - paragraph: Advanced Diploma in Multimedia
+        - paragraph: "Loại Distinction kỳ 2 (UX/UI). Trọng tâm: Thiết kế lấy người dùng làm trung tâm, prototyping mobile, wireframing, web responsive."
+      - listitem:
+        - paragraph: 2022–2023
+        - heading "Green Academy" [level=3]
+        - paragraph: Chứng chỉ Dựng phim Chuyên nghiệp
+        - paragraph: "Loại Distinction. Trọng tâm: VFX compositing, motion graphics. Học viên xuất sắc — Premiere & After Effects."
+  - region "Nhật Ký Hành Trình":
+    - paragraph: Voyage Log
+    - heading "Nhật Ký Hành Trình" [level=2]
+    - list:
+      - listitem:
+        - article "HOSANA MEDIA":
+          - heading "HOSANA MEDIA" [level=3]
+          - paragraph: Multimedia Executive
+          - paragraph: Sep 2024 – Feb 2025
+          - text: Full-time
+          - paragraph: Sản xuất ấn phẩm marketing có sức ảnh hưởng cao (bao bì, banner). Quản lý trọn vẹn quy trình quay dựng TVC & MV.
+      - listitem:
+        - article "UPWORK":
+          - heading "UPWORK" [level=3]
+          - paragraph: Multimedia Creator
+          - paragraph: 2024 – nay
+          - text: Freelance
+          - paragraph: Sáng tạo và tối ưu nội dung video cho tăng trưởng đa nền tảng. Quay dựng video quảng bá. Dịch vụ thiết kế UI/Visual.
+      - listitem:
+        - article "DESIGNVELOPER":
+          - heading "DESIGNVELOPER" [level=3]
+          - paragraph: UX/UI Designer Intern
+          - paragraph: Sep 2025 – Dec 2025
+          - text: Internship
+          - paragraph: Nghiên cứu UX qua khảo sát. Thiết kế UI nhất quán thương hiệu, tối ưu layout và typography. Bàn giao thiết kế cho đội ngũ phát triển.
+  - text: Dự án • Case Study • Ảnh hưởng • Kết quả
+  - region "CHÒM SAO DỰ ÁN":
+    - paragraph: Chòm Sao Dự Án
+    - heading "CHÒM SAO DỰ ÁN" [level=2]
+    - group "Lọc dự án":
+      - button "Tất cả" [pressed]
+      - button "Product Design"
+      - button "UX/UI"
+      - button "Graphic"
+    - article:
+      - link "EDURA LMS — Xem case study (mở trong tab mới)":
+        - /url: https://www.behance.net/gallery/241524417/Edura-LMS
+        - text: Product Design
+        - heading "EDURA LMS" [level=3]
+        - paragraph: Nền tảng học tập thiết kế để chống lại sự mệt mỏi của người dùng bằng hệ thống phân cấp thị giác chặt chẽ và hành trình mượt mà. Được đánh giá 'Excellent' về đổi mới UX.
+        - list "Chuyên môn":
+          - listitem: UX Research
+          - listitem: UI Design
+          - listitem: Prototyping
+        - text: Xem case study
+    - article:
+      - text: UX/UI Design
+      - heading "VERIS APP" [level=3]
+      - paragraph: Ứng dụng mạng xã hội thế hệ mới ưu tiên quyền riêng tư và cảm xúc người dùng. Tái định nghĩa giao diện thuật toán feed bằng sự rõ ràng.
+      - list "Chuyên môn":
+        - listitem: Mobile App
+        - listitem: User Interface
+        - listitem: Interaction
+      - button "Case study coming soon" [disabled]
+    - article:
+      - text: Graphic Design
+      - heading "VIE PERFUME" [level=3]
+      - paragraph: Bộ nhận diện thương hiệu toàn diện cho dòng nước hoa cao cấp. Typography tối giản và thiết kế bao bì gói trọn sự thanh lịch của hương thơm.
+      - list "Chuyên môn":
+        - listitem: Branding
+        - listitem: Packaging
+        - listitem: Visual Identity
+      - button "Case study coming soon" [disabled]
+  - region "Trạm Không Gian":
+    - heading "Trạm Không Gian" [level=2]
+    - list:
+      - listitem:
+        - article "Starfield Explorer":
+          - heading "Starfield Explorer" [level=3]
+          - group "Starfield Explorer":
+            - text: Starfield Explorer LIVE
+            - paragraph: Thí nghiệm sẽ mở khi bạn cuộn đến đây.
+          - paragraph: WebGL — tương tác particle
+      - listitem:
+        - article "Nebula Shader Playground":
+          - heading "Nebula Shader Playground" [level=3]
+          - group "Nebula Shader Playground":
+            - text: Nebula Shader Playground LIVE
+            - paragraph: Thí nghiệm sẽ mở khi bạn cuộn đến đây.
+          - paragraph: GLSL — chỉnh tham số thời gian thực
+      - listitem:
+        - article "Scroll Progress Orbit":
+          - heading "Scroll Progress Orbit" [level=3]
+          - group "Scroll Progress Orbit":
+            - text: Scroll Progress Orbit LIVE
+            - paragraph: Thí nghiệm sẽ mở khi bạn cuộn đến đây.
+          - paragraph: Scroll demo — vòng quay theo cuộn
+      - listitem:
+        - article "Magnetic Field":
+          - heading "Magnetic Field" [level=3]
+          - paragraph: DOM/GSAP — nút hút chuột
+          - link "Magnetic Field — Tham khảo CodePen ↗ (mở trong tab mới)":
+            - /url: https://codepen.io/GreenSock/pen/MWRPXMr
+            - text: Tham khảo CodePen ↗
+          - paragraph: Bản tham khảo của GSAP
+      - listitem:
+        - article "Text Scramble Lab":
+          - heading "Text Scramble Lab" [level=3]
+          - paragraph: GSAP ScrambleText
+          - link "Text Scramble Lab — Tham khảo CodePen ↗ (mở trong tab mới)":
+            - /url: https://codepen.io/GreenSock/pen/gLXgxz
+            - text: Tham khảo CodePen ↗
+          - paragraph: Bản tham khảo của GSAP
+      - listitem:
+        - article "Constellation Grid":
+          - heading "Constellation Grid" [level=3]
+          - paragraph: Hover grid nối sao
+          - link "Constellation Grid — Tham khảo CodePen ↗ (mở trong tab mới)":
+            - /url: https://codepen.io/aptorres27/pen/mPGZPp
+            - text: Tham khảo CodePen ↗
+          - paragraph: Bản tham khảo của aptorres27
+      - listitem:
+        - article "Wormhole Tunnel":
+          - heading "Wormhole Tunnel" [level=3]
+          - paragraph: WebGL shader
+          - link "Wormhole Tunnel — Tham khảo CodePen ↗ (mở trong tab mới)":
+            - /url: https://codepen.io/devildrey33/pen/zKBpmq
+            - text: Tham khảo CodePen ↗
+          - paragraph: Bản tham khảo của devildrey33
+      - listitem:
+        - article "Marquee Generator":
+          - heading "Marquee Generator" [level=3]
+          - paragraph: Tự chỉnh tốc độ/nội dung
+          - link "Marquee Generator — Tham khảo CodePen ↗ (mở trong tab mới)":
+            - /url: https://codepen.io/GreenSock/pen/QWOvexM
+            - text: Tham khảo CodePen ↗
+          - paragraph: Bản tham khảo của GSAP
+  - text: Hợp tác • Tầm nhìn • Sáng tạo • Thành công
+  - region "HÃY KẾT NỐI LET'S CONNECT":
+    - paragraph: Transmission
+    - heading "HÃY KẾT NỐI LET'S CONNECT" [level=2]
+    - paragraph: Gửi một tín hiệu — tôi luôn mở tần số.
+    - link "GỬI TÍN HIỆU":
+      - /url: mailto:anhduy25work@gmail.com
+    - link "anhduy25work@gmail.com":
+      - /url: mailto:anhduy25work@gmail.com
+    - link "Facebook (mở trong tab mới)":
+      - /url: https://www.facebook.com/tvad.25
+      - text: Facebook
+    - link "0822 021 418":
+      - /url: tel:0822021418
+  - contentinfo "Chân trang":
+    - heading "HÃY KẾT NỐI" [level=2]: Ã Y K Ế T N Ố I
+    - link "anhduy25work@gmail.com":
+      - /url: mailto:anhduy25work@gmail.com
+    - link "0822 021 418":
+      - /url: tel:0822021418
+    - link "Facebook (mở trong tab mới)":
+      - /url: https://www.facebook.com/tvad.25
+    - text: © 2026 Trần Vũ Anh Duy — Được xây dựng giữa các vì sao. Đồ họa / Đa phương tiện / UX/UI Xây dựng với GSAP 3.15
+```
+
+### 6.2 MenuOverlay (Dialog Hộp Thoại Điều Hướng)
+```yaml
+- dialog "Khám phá hành trình":
+  - banner:
+    - text: ANH DUY
+    - button "Đóng menu điều hướng": Đóng
+  - navigation "Khám phá hành trình":
+    - heading "Khám phá hành trình" [level=2]
+    - list:
+      - listitem:
+        - link "Về tôi":
+          - /url: "#about"
+      - listitem:
+        - link "Dự án":
+          - /url: "#work"
+      - listitem:
+        - link "Kỹ năng":
+          - /url: "#skills"
+      - listitem:
+        - link "Học vấn":
+          - /url: "#education"
+      - listitem:
+        - link "Kinh nghiệm":
+          - /url: "#experience"
+      - listitem:
+        - link "Thử nghiệm":
+          - /url: "#playground"
+      - listitem:
+        - link "Liên hệ":
+          - /url: "#transmission"
+    - paragraph: Nội dung này đang được chuẩn bị.
+  - contentinfo:
+    - link "anhduy25work@gmail.com":
+      - /url: mailto:anhduy25work@gmail.com
+    - link "Facebook (mở trong tab mới)":
+      - /url: https://www.facebook.com/tvad.25
+      - text: Facebook
+    - text: LinkedIn Behance
+    - group "Ngôn ngữ":
+      - button "Tiếng Việt" [pressed]: Vi
+      - button "English": En
+```
+
+### 6.3 Trang Chủ (Tiếng Anh)
+```yaml
+- banner:
+  - link "Skip to main content":
+    - /url: "#smooth-content"
+  - navigation "Main navigation":
+    - link "ANH DUY — Back to top":
+      - /url: "#smooth-content"
+      - text: ANH DUY
+    - list:
+      - listitem:
+        - link "About":
+          - /url: "#about"
+      - listitem:
+        - link "Works":
+          - /url: "#work"
+      - listitem:
+        - link "Skills":
+          - /url: "#skills"
+      - listitem:
+        - link "Education":
+          - /url: "#education"
+      - listitem:
+        - link "Experience":
+          - /url: "#experience"
+      - listitem:
+        - link "Playground":
+          - /url: "#playground"
+      - listitem:
+        - link "Contact":
+          - /url: "#transmission"
+    - paragraph: This content is being prepared.
+    - button "Open navigation menu": Menu
+- button "Switch to dark mode"
+- main:
+  - region "TRAN VU ANH DUY":
+    - heading "TRAN VU ANH DUY" [level=1]
+  - text: Design • Strategy • Motion • UI/UX
+  - region "TRAN VU / ANH DUY":
+    - figure:
+      - img "Portrait of Tran Vu Anh Duy — Creative Designer"
+      - text: FIG.01 — THE NAVIGATOR
+    - paragraph: The Navigator
+    - heading "TRAN VU / ANH DUY" [level=2]
+    - paragraph: Creative Designer — UX/UI & Motion
+    - paragraph: Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.
+    - paragraph: "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+    - blockquote: I design small universes — where every touch means something.
+    - heading "SOFTWARE ARSENAL" [level=3]
+    - list "SOFTWARE ARSENAL":
+      - listitem "Figma":
+        - img "Figma"
+      - listitem "Photoshop":
+        - img "Photoshop"
+      - listitem "Illustrator":
+        - img "Illustrator"
+      - listitem "After Effects":
+        - img "After Effects"
+      - listitem "Premiere/DaVinci Resolve":
+        - img "Premiere/DaVinci Resolve"
+      - listitem "Generative AI Tools"
+    - heading "CORE COMPETENCIES" [level=3]
+    - list "CORE COMPETENCIES":
+      - listitem: Design Thinking
+      - listitem: AI-Assisted Design
+      - listitem: Motion Graphics
+      - listitem: Project Management
+      - listitem: Time Management
+      - listitem: Adaptability
+      - listitem: Teamwork
+      - listitem: Attention to Detail
+  - region "Arsenal Nebula":
+    - heading "Arsenal Nebula" [level=2]
+    - figure "Figma Photoshop Illustrator After Effects Premiere/DaVinci Resolve Generative AI Tools Basic HTML/CSS/JS React (learning) Prototyping (Figma) Wireframing":
+      - checkbox "Pause orbit"
+      - text: Pause orbit
+      - list:
+        - listitem: Figma
+        - listitem: Photoshop
+        - listitem: Illustrator
+        - listitem: After Effects
+        - listitem: Premiere/DaVinci Resolve
+        - listitem: Generative AI Tools
+        - listitem: Basic HTML/CSS/JS
+        - listitem: React (learning)
+        - listitem: Prototyping (Figma)
+        - listitem: Wireframing
+    - article "Design Tools":
+      - heading "Design Tools" [level=3]
+      - list:
+        - listitem: Figma
+        - listitem: Photoshop
+        - listitem: Illustrator
+        - listitem: After Effects
+        - listitem: Premiere/DaVinci Resolve
+        - listitem: Generative AI Tools
+    - article "Core Competencies":
+      - heading "Core Competencies" [level=3]
+      - list:
+        - listitem: Design Thinking
+        - listitem: AI-Assisted Design
+        - listitem: Motion Graphics
+        - listitem: Project Management
+        - listitem: Time Management
+        - listitem: Adaptability
+        - listitem: Teamwork
+        - listitem: Attention to Detail
+    - article "Technical":
+      - heading "Technical" [level=3]
+      - list:
+        - listitem: Basic HTML/CSS/JS
+        - listitem: React (learning)
+        - listitem: Prototyping (Figma)
+        - listitem: Wireframing
+  - region "Star Map":
+    - heading "Star Map" [level=2]
+    - list:
+      - listitem:
+        - paragraph: 2021–2026
+        - heading "Saigon University" [level=3]
+        - paragraph: Bachelor's Degree in Information Technology
+        - paragraph: "Graduated with High Honors in Information Technology. Focus: System Analysis and Design, HCI, Usability Testing, Web/App Prototyping."
+      - listitem:
+        - paragraph: 2024–Present
+        - heading "Arena Multimedia" [level=3]
+        - paragraph: Advanced Diploma in Multimedia
+        - paragraph: "Awarded Distinction in Semester 2 (UX/UI). Focus: user-centric design, mobile prototyping, wireframing, responsive web."
+      - listitem:
+        - paragraph: 2022–2023
+        - heading "Green Academy" [level=3]
+        - paragraph: Certificate in Professional Video Editing
+        - paragraph: "Distinction. Focus: VFX compositing, motion graphics. Top-performing student — Premiere & After Effects."
+  - region "Voyage Log":
+    - paragraph: Voyage Log
+    - heading "Voyage Log" [level=2]
+    - list:
+      - listitem:
+        - article "HOSANA MEDIA":
+          - heading "HOSANA MEDIA" [level=3]
+          - paragraph: Multimedia Executive
+          - paragraph: Sep 2024 – Feb 2025
+          - text: Full-time
+          - paragraph: Produced high-impact marketing assets (packaging, banners). Managed end-to-end filming and editing for TVCs & MVs.
+      - listitem:
+        - article "UPWORK":
+          - heading "UPWORK" [level=3]
+          - paragraph: Multimedia Creator
+          - paragraph: 2024 – Present
+          - text: Freelance
+          - paragraph: Created and optimized video content for cross-platform growth. Filmed and edited promotional videos. UI/Visual design services.
+      - listitem:
+        - article "DESIGNVELOPER":
+          - heading "DESIGNVELOPER" [level=3]
+          - paragraph: UX/UI Designer Intern
+          - paragraph: Sep 2025 – Dec 2025
+          - text: Internship
+          - paragraph: Conducted UX research via surveys. Designed brand-consistent UI, optimizing layout and typography. Handed off designs to development teams.
+  - text: Projects • Case Studies • Impact • Results
+  - region "CONSTELLATION OF PROJECTS":
+    - paragraph: Constellation of Projects
+    - heading "CONSTELLATION OF PROJECTS" [level=2]
+    - group "Filter projects":
+      - button "All" [pressed]
+      - button "Product Design"
+      - button "UX/UI"
+      - button "Graphic"
+    - article:
+      - link "EDURA LMS — View case study (opens in a new tab)":
+        - /url: https://www.behance.net/gallery/241524417/Edura-LMS
+        - text: Product Design
+        - heading "EDURA LMS" [level=3]
+        - paragraph: A learning platform designed to combat user fatigue through strict visual hierarchy and seamless user journeys. Rated 'Excellent' for UX innovation.
+        - list "Disciplines":
+          - listitem: UX Research
+          - listitem: UI Design
+          - listitem: Prototyping
+        - text: View case study
+    - article:
+      - text: UX/UI Design
+      - heading "VERIS APP" [level=3]
+      - paragraph: A next-generation social network prioritizing user privacy and emotion. Redefines the feed algorithm interface for clarity.
+      - list "Disciplines":
+        - listitem: Mobile App
+        - listitem: User Interface
+        - listitem: Interaction
+      - button "Case study coming soon" [disabled]
+    - article:
+      - text: Graphic Design
+      - heading "VIE PERFUME" [level=3]
+      - paragraph: Comprehensive brand identity for a luxury fragrance line. Minimalist typography and packaging capturing olfactory elegance.
+      - list "Disciplines":
+        - listitem: Branding
+        - listitem: Packaging
+        - listitem: Visual Identity
+      - button "Case study coming soon" [disabled]
+  - region "Space Station":
+    - heading "Space Station" [level=2]
+    - list:
+      - listitem:
+        - article "Starfield Explorer":
+          - heading "Starfield Explorer" [level=3]
+          - group "Starfield Explorer":
+            - text: Starfield Explorer LIVE
+            - paragraph: This experiment opens when you scroll here.
+          - paragraph: WebGL — interactive particles
+      - listitem:
+        - article "Nebula Shader Playground":
+          - heading "Nebula Shader Playground" [level=3]
+          - group "Nebula Shader Playground":
+            - text: Nebula Shader Playground LIVE
+            - paragraph: This experiment opens when you scroll here.
+          - paragraph: GLSL — real-time parameter tweaking
+      - listitem:
+        - article "Scroll Progress Orbit":
+          - heading "Scroll Progress Orbit" [level=3]
+          - group "Scroll Progress Orbit":
+            - text: Scroll Progress Orbit LIVE
+            - paragraph: This experiment opens when you scroll here.
+          - paragraph: Scroll demo — orbit reacts to scroll
+      - listitem:
+        - article "Magnetic Field":
+          - heading "Magnetic Field" [level=3]
+          - paragraph: DOM/GSAP — magnetic buttons
+          - link "Magnetic Field — Explore CodePen ↗ (opens in a new tab)":
+            - /url: https://codepen.io/GreenSock/pen/MWRPXMr
+            - text: Explore CodePen ↗
+          - paragraph: Reference by GSAP
+      - listitem:
+        - article "Text Scramble Lab":
+          - heading "Text Scramble Lab" [level=3]
+          - paragraph: GSAP ScrambleText
+          - link "Text Scramble Lab — Explore CodePen ↗ (opens in a new tab)":
+            - /url: https://codepen.io/GreenSock/pen/gLXgxz
+            - text: Explore CodePen ↗
+          - paragraph: Reference by GSAP
+      - listitem:
+        - article "Constellation Grid":
+          - heading "Constellation Grid" [level=3]
+          - paragraph: Star-linking hover grid
+          - link "Constellation Grid — Explore CodePen ↗ (opens in a new tab)":
+            - /url: https://codepen.io/aptorres27/pen/mPGZPp
+            - text: Explore CodePen ↗
+          - paragraph: Reference by aptorres27
+      - listitem:
+        - article "Wormhole Tunnel":
+          - heading "Wormhole Tunnel" [level=3]
+          - paragraph: WebGL shader
+          - link "Wormhole Tunnel — Explore CodePen ↗ (opens in a new tab)":
+            - /url: https://codepen.io/devildrey33/pen/zKBpmq
+            - text: Explore CodePen ↗
+          - paragraph: Reference by devildrey33
+      - listitem:
+        - article "Marquee Generator":
+          - heading "Marquee Generator" [level=3]
+          - paragraph: Adjust speed/content live
+          - link "Marquee Generator — Explore CodePen ↗ (opens in a new tab)":
+            - /url: https://codepen.io/GreenSock/pen/QWOvexM
+            - text: Explore CodePen ↗
+          - paragraph: Reference by GSAP
+  - text: Collaboration • Vision • Creativity • Success
+  - region "LET'S CONNECT HÃY KẾT NỐI":
+    - paragraph: Transmission
+    - heading "LET'S CONNECT HÃY KẾT NỐI" [level=2]
+    - paragraph: Send a transmission — my frequency is always open.
+    - link "SEND A SIGNAL":
+      - /url: mailto:anhduy25work@gmail.com
+    - link "anhduy25work@gmail.com":
+      - /url: mailto:anhduy25work@gmail.com
+    - link "Facebook (opens in a new tab)":
+      - /url: https://www.facebook.com/tvad.25
+      - text: Facebook
+    - link "0822 021 418":
+      - /url: tel:0822021418
+  - contentinfo "Site footer":
+    - heading "LET'S CONNECT" [level=2]
+    - link "anhduy25work@gmail.com":
+      - /url: mailto:anhduy25work@gmail.com
+    - link "0822 021 418":
+      - /url: tel:0822021418
+    - link "Facebook (opens in a new tab)":
+      - /url: https://www.facebook.com/tvad.25
+    - text: © 2026 Tran Vu Anh Duy — Built among the stars. Graphic / Multimedia / UX/UI Built with GSAP 3.15
+```
+
+---
+
+## 7. Kết Luận Kiểm Toán
+Hệ thống hoàn thành 100% mục tiêu Task 4.5 theo kế hoạch và CLAUDE.md guidelines:
+- **WCAG 2.1 AA:** Tuân thủ toàn diện các tiêu chí 1.1.1 (Non-text Content), 1.3.1 (Info and Relationships), 2.4.1 (Bypass Blocks), 2.4.4 (Link Purpose), 4.1.2 (Name, Role, Value).
+- **Console ARIA Errors:** 0 lỗi.

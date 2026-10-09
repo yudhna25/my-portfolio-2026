@@ -1,0 +1,13 @@
+{
+  "task": "R6.1",
+  "dateLocal": "2026-10-08",
+  "source": "Direct user reply in this chat to the EDURA walkthrough/reflection question",
+  "quoteVi": "dự án này là dự án cuối kì của học kì UX/UI ở Arena Multimedia, khó khăn duy nhất là giữa lúc làm đồ án nhóm bị thiếu đi một người nên mọi thứ về prototype bị chững lại một khoảng thời gian, dự án cũng thiếu mẫu tham khảo bởi LMS mà công khai thông tin và UI không có nhiều",
+  "facts": [
+    { "id": "R61-CONTEXT", "status": "owner-confirmed", "vi": "Đồ án cuối kỳ của học kỳ UX/UI tại Arena Multimedia.", "en": "The final project for the UX/UI semester at Arena Multimedia." },
+    { "id": "R61-PROTOTYPE-CONSTRAINT", "status": "owner-confirmed", "vi": "Giữa quá trình làm đồ án, nhóm thiếu một thành viên, khiến phần prototype bị chững lại trong một khoảng thời gian.", "en": "Partway through the project, the team was short of one member, which held up prototype work for a period." },
+    { "id": "R61-REFERENCE-CONSTRAINT", "status": "owner-confirmed", "vi": "Dự án cũng có ít mẫu tham khảo từ các sản phẩm LMS công khai thông tin và giao diện.", "en": "The project also had few references from LMS products with publicly available information and interfaces." }
+  ],
+  "notEstablished": ["Team size", "Which member or role was unavailable", "Duration of delay", "Recovery action or measured outcome", "Personal learning claim", "Walkthrough/video URL", "Detailed design-system artifacts"],
+  "publicTreatment": "Academic context and factual reflection on constraints; do not invent a lesson, recovery narrative or metric. R0.3 pack remains unchanged."
+}

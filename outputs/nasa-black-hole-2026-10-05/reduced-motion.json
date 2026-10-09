@@ -1,0 +1,377 @@
+{
+  "status": "PASS",
+  "samples": [
+    {
+      "progress": 0,
+      "viewport": [
+        1280,
+        720
+      ],
+      "rayResolution": [
+        1088,
+        612
+      ],
+      "camera": [
+        0,
+        2.2,
+        -168
+      ],
+      "distance": 32.07553584899245,
+      "heightAboveDisk": 2.2,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "emitting": 16768,
+      "captured": 3736,
+      "shadowLeaks": 0,
+      "insideEmission": 791,
+      "upper": 3696,
+      "lower": 2862,
+      "leftMean": 0.38397448957312535,
+      "rightMean": 0.16667042525382128,
+      "tinted": 0,
+      "programsPass": true,
+      "stars": 24000,
+      "visibleStars": 2864,
+      "quadrants": [
+        693,
+        657,
+        764,
+        750
+      ],
+      "starGrowth": 1,
+      "maxStarCssPixels": 2.9993927478790283,
+      "starCameraOffset": 0,
+      "time": 0,
+      "uniformsObserver": [
+        0,
+        2.2,
+        32
+      ],
+      "raySteps": 192,
+      "liveRays": 1,
+      "liveComposers": 1
+    },
+    {
+      "progress": 0.1,
+      "viewport": [
+        1280,
+        720
+      ],
+      "rayResolution": [
+        1088,
+        612
+      ],
+      "camera": [
+        0,
+        2.2,
+        -168
+      ],
+      "distance": 32.07553584899245,
+      "heightAboveDisk": 2.2,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "emitting": 16768,
+      "captured": 3736,
+      "shadowLeaks": 0,
+      "insideEmission": 791,
+      "upper": 3696,
+      "lower": 2862,
+      "leftMean": 0.38397448957312535,
+      "rightMean": 0.16667042525382128,
+      "tinted": 0,
+      "programsPass": true,
+      "stars": 24000,
+      "visibleStars": 2864,
+      "quadrants": [
+        693,
+        657,
+        764,
+        750
+      ],
+      "starGrowth": 1,
+      "maxStarCssPixels": 2.9993927478790283,
+      "starCameraOffset": 0,
+      "time": 0,
+      "uniformsObserver": [
+        0,
+        2.2,
+        32
+      ],
+      "raySteps": 192,
+      "liveRays": 1,
+      "liveComposers": 1
+    },
+    {
+      "progress": 0.3,
+      "viewport": [
+        1280,
+        720
+      ],
+      "rayResolution": [
+        1088,
+        612
+      ],
+      "camera": [
+        0,
+        2.2,
+        -168
+      ],
+      "distance": 32.07553584899245,
+      "heightAboveDisk": 2.2,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "emitting": 16768,
+      "captured": 3736,
+      "shadowLeaks": 0,
+      "insideEmission": 791,
+      "upper": 3696,
+      "lower": 2862,
+      "leftMean": 0.38397448957312535,
+      "rightMean": 0.16667042525382128,
+      "tinted": 0,
+      "programsPass": true,
+      "stars": 24000,
+      "visibleStars": 2864,
+      "quadrants": [
+        693,
+        657,
+        764,
+        750
+      ],
+      "starGrowth": 1,
+      "maxStarCssPixels": 2.9993927478790283,
+      "starCameraOffset": 0,
+      "time": 0,
+      "uniformsObserver": [
+        0,
+        2.2,
+        32
+      ],
+      "raySteps": 192,
+      "liveRays": 1,
+      "liveComposers": 1
+    },
+    {
+      "progress": 0.5,
+      "viewport": [
+        1280,
+        720
+      ],
+      "rayResolution": [
+        1088,
+        612
+      ],
+      "camera": [
+        0,
+        2.2,
+        -168
+      ],
+      "distance": 32.07553584899245,
+      "heightAboveDisk": 2.2,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "emitting": 16768,
+      "captured": 3736,
+      "shadowLeaks": 0,
+      "insideEmission": 791,
+      "upper": 3696,
+      "lower": 2862,
+      "leftMean": 0.38397448957312535,
+      "rightMean": 0.16667042525382128,
+      "tinted": 0,
+      "programsPass": true,
+      "stars": 24000,
+      "visibleStars": 2864,
+      "quadrants": [
+        693,
+        657,
+        764,
+        750
+      ],
+      "starGrowth": 1,
+      "maxStarCssPixels": 2.9993927478790283,
+      "starCameraOffset": 0,
+      "time": 0,
+      "uniformsObserver": [
+        0,
+        2.2,
+        32
+      ],
+      "raySteps": 192,
+      "liveRays": 1,
+      "liveComposers": 1
+    },
+    {
+      "progress": 0.7,
+      "viewport": [
+        1280,
+        720
+      ],
+      "rayResolution": [
+        1088,
+        612
+      ],
+      "camera": [
+        0,
+        2.2,
+        -168
+      ],
+      "distance": 32.07553584899245,
+      "heightAboveDisk": 2.2,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "emitting": 16768,
+      "captured": 3736,
+      "shadowLeaks": 0,
+      "insideEmission": 791,
+      "upper": 3696,
+      "lower": 2862,
+      "leftMean": 0.38397448957312535,
+      "rightMean": 0.16667042525382128,
+      "tinted": 0,
+      "programsPass": true,
+      "stars": 24000,
+      "visibleStars": 2864,
+      "quadrants": [
+        693,
+        657,
+        764,
+        750
+      ],
+      "starGrowth": 1,
+      "maxStarCssPixels": 2.9993927478790283,
+      "starCameraOffset": 0,
+      "time": 0,
+      "uniformsObserver": [
+        0,
+        2.2,
+        32
+      ],
+      "raySteps": 192,
+      "liveRays": 1,
+      "liveComposers": 1
+    },
+    {
+      "progress": 0.9,
+      "viewport": [
+        1280,
+        720
+      ],
+      "rayResolution": [
+        1088,
+        612
+      ],
+      "camera": [
+        0,
+        2.2,
+        -168
+      ],
+      "distance": 32.07553584899245,
+      "heightAboveDisk": 2.2,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "emitting": 16768,
+      "captured": 3736,
+      "shadowLeaks": 0,
+      "insideEmission": 791,
+      "upper": 3696,
+      "lower": 2862,
+      "leftMean": 0.38397448957312535,
+      "rightMean": 0.16667042525382128,
+      "tinted": 0,
+      "programsPass": true,
+      "stars": 24000,
+      "visibleStars": 2864,
+      "quadrants": [
+        693,
+        657,
+        764,
+        750
+      ],
+      "starGrowth": 1,
+      "maxStarCssPixels": 2.9993927478790283,
+      "starCameraOffset": 0,
+      "time": 0,
+      "uniformsObserver": [
+        0,
+        2.2,
+        32
+      ],
+      "raySteps": 192,
+      "liveRays": 1,
+      "liveComposers": 1
+    },
+    {
+      "progress": 1,
+      "viewport": [
+        1280,
+        720
+      ],
+      "rayResolution": [
+        1088,
+        612
+      ],
+      "camera": [
+        0,
+        2.2,
+        -168
+      ],
+      "distance": 32.07553584899245,
+      "heightAboveDisk": 2.2,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "emitting": 16768,
+      "captured": 3736,
+      "shadowLeaks": 0,
+      "insideEmission": 791,
+      "upper": 3696,
+      "lower": 2862,
+      "leftMean": 0.38397448957312535,
+      "rightMean": 0.16667042525382128,
+      "tinted": 0,
+      "programsPass": true,
+      "stars": 24000,
+      "visibleStars": 2864,
+      "quadrants": [
+        693,
+        657,
+        764,
+        750
+      ],
+      "starGrowth": 1,
+      "maxStarCssPixels": 2.9993927478790283,
+      "starCameraOffset": 0,
+      "time": 0,
+      "uniformsObserver": [
+        0,
+        2.2,
+        32
+      ],
+      "raySteps": 192,
+      "liveRays": 1,
+      "liveComposers": 1
+    }
+  ],
+  "fps": 165.42446827879357,
+  "rayRendersPerFrame": 1,
+  "animation": {
+    "start": 0,
+    "end": 0,
+    "reduced": true
+  },
+  "peakComposers": 1
+}

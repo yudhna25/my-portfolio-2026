@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "checkedAt": "2026-10-08T17:58:09.547Z",
+  "matrix": [
+    {
+      "prefix": "browser-route",
+      "configs": 8,
+      "extras": 1,
+      "snapshots": 53,
+      "maxScrollError": 0.0024219999995693797,
+      "exceptions": 0,
+      "firstPartyFailures": 0
+    },
+    {
+      "prefix": "production-route",
+      "configs": 8,
+      "extras": 1,
+      "snapshots": 53,
+      "maxScrollError": 0,
+      "exceptions": 0,
+      "firstPartyFailures": 0
+    }
+  ]
+}

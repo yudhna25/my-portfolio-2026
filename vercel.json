@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/projects/edura", "destination": "/index.html" },
+    { "source": "/projects/edura/", "destination": "/index.html" }
+  ]
+}

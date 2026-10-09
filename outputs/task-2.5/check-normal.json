@@ -1,0 +1,155 @@
+{
+  "status": "pass",
+  "count": 37,
+  "scene": true,
+  "results": [
+    {
+      "pass": true,
+      "message": "Inactive: hidden until preloader completes"
+    },
+    {
+      "pass": true,
+      "message": "Transparent Hero surface"
+    },
+    {
+      "pass": true,
+      "message": "DOM overlay lets pointer events through"
+    },
+    {
+      "pass": true,
+      "message": "Hero never creates a Canvas"
+    },
+    {
+      "pass": true,
+      "message": "One accessible translated h1"
+    },
+    {
+      "pass": true,
+      "message": "Unbounded / #FAFAFA"
+    },
+    {
+      "pass": true,
+      "message": "Font clamp 44px / 12vw / 200px"
+    },
+    {
+      "pass": true,
+      "message": "Tracking -0.02em"
+    },
+    {
+      "pass": true,
+      "message": "Hero covers at least the viewport"
+    },
+    {
+      "pass": true,
+      "message": "No horizontal overflow"
+    },
+    {
+      "pass": true,
+      "message": "Plan timeline: 1.5 / 2.0 / 2.5 seconds"
+    },
+    {
+      "pass": true,
+      "message": "Name stagger 0.03 / expo.out"
+    },
+    {
+      "pass": true,
+      "message": "Scramble 1.2s starts at 2.0s"
+    },
+    {
+      "pass": true,
+      "message": "Before 1.5s: name hidden"
+    },
+    {
+      "pass": true,
+      "message": "Name appears before tagline"
+    },
+    {
+      "pass": true,
+      "message": "Tagline appears before sub-tagline"
+    },
+    {
+      "pass": true,
+      "message": "Scramble never corrupts assistive text"
+    },
+    {
+      "pass": true,
+      "message": "Sub-tagline appears before indicator"
+    },
+    {
+      "pass": true,
+      "message": "Indicator appears after 2.5s"
+    },
+    {
+      "pass": true,
+      "message": "Scramble resolves to exact tagline"
+    },
+    {
+      "pass": true,
+      "message": "One scrubbed exit tween"
+    },
+    {
+      "pass": true,
+      "message": "en: exact name after SplitText cleanup"
+    },
+    {
+      "pass": true,
+      "message": "en: exact sub-tagline / indicator"
+    },
+    {
+      "pass": true,
+      "message": "en: no duplicate intro timeline"
+    },
+    {
+      "pass": true,
+      "message": "vi: exact name after SplitText cleanup"
+    },
+    {
+      "pass": true,
+      "message": "vi: exact sub-tagline / indicator"
+    },
+    {
+      "pass": true,
+      "message": "vi: no duplicate intro timeline"
+    },
+    {
+      "pass": true,
+      "message": "Native scroll bridge updates progress"
+    },
+    {
+      "pass": true,
+      "message": "Half scroll: content fades"
+    },
+    {
+      "pass": true,
+      "message": "Half scroll: gentle scale"
+    },
+    {
+      "pass": true,
+      "message": "Existing CameraRig moves; Hero never mutates camera"
+    },
+    {
+      "pass": true,
+      "message": "Past Hero: content fades out"
+    },
+    {
+      "pass": true,
+      "message": "Return to top: content returns"
+    },
+    {
+      "pass": true,
+      "message": "Live reduced motion reverts all effects"
+    },
+    {
+      "pass": true,
+      "message": "Live motion re-enable recreates one intro / exit"
+    },
+    {
+      "pass": true,
+      "message": "Deactivation cancels every Hero animation"
+    },
+    {
+      "pass": true,
+      "message": "Unmount cancels async font callback and cleans smoother / split / tweens"
+    }
+  ]
+}

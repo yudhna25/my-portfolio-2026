@@ -1,0 +1,1 @@
+import fs from 'node:fs';let text=fs.readFileSync('src/components/Work.jsx','utf8');text=text.replace('<img src={project.imageUrl}', '<img data-project-image src={project.imageUrl}');fs.writeFileSync('src/components/Work.jsx',text);

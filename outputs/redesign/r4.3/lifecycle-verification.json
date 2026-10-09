@@ -1,0 +1,178 @@
+{
+  "status": "pass",
+  "results": [
+    {
+      "cycle": 0,
+      "mounted": {
+        "counts": {
+          "geometries": 3,
+          "materials": 11,
+          "textures": 9
+        },
+        "memory": {
+          "geometries": 9,
+          "textures": 23
+        },
+        "subscribers": 10,
+        "canvas": 1,
+        "poolTarget": "saigonUniversity",
+        "target": "saigonUniversity",
+        "triggers": 31
+      },
+      "outside": {
+        "target": null,
+        "active": false,
+        "channels": [
+          null,
+          null,
+          null
+        ],
+        "version": 194,
+        "baseError": 0
+      },
+      "unmounted": {
+        "disposed": {
+          "geometries": 3,
+          "materials": 11,
+          "textures": 9
+        },
+        "canvas": 0,
+        "subscribers": 0,
+        "triggers": 0,
+        "smoother": false,
+        "education": {
+          "hover": null,
+          "focus": null,
+          "selection": null,
+          "visible": false
+        },
+        "skills": {
+          "hover": null,
+          "focus": null,
+          "selection": null,
+          "visible": false
+        }
+      }
+    },
+    {
+      "cycle": 1,
+      "mounted": {
+        "counts": {
+          "geometries": 3,
+          "materials": 11,
+          "textures": 9
+        },
+        "memory": {
+          "geometries": 9,
+          "textures": 23
+        },
+        "subscribers": 10,
+        "canvas": 1,
+        "poolTarget": "saigonUniversity",
+        "target": "saigonUniversity",
+        "triggers": 23
+      },
+      "outside": {
+        "target": null,
+        "active": false,
+        "channels": [
+          null,
+          null,
+          null
+        ],
+        "version": 195,
+        "baseError": 0
+      },
+      "unmounted": {
+        "disposed": {
+          "geometries": 3,
+          "materials": 11,
+          "textures": 9
+        },
+        "canvas": 0,
+        "subscribers": 0,
+        "triggers": 0,
+        "smoother": false,
+        "education": {
+          "hover": null,
+          "focus": null,
+          "selection": null,
+          "visible": false
+        },
+        "skills": {
+          "hover": null,
+          "focus": null,
+          "selection": null,
+          "visible": false
+        }
+      }
+    },
+    {
+      "cycle": 2,
+      "mounted": {
+        "counts": {
+          "geometries": 3,
+          "materials": 11,
+          "textures": 9
+        },
+        "memory": {
+          "geometries": 9,
+          "textures": 23
+        },
+        "subscribers": 10,
+        "canvas": 1,
+        "poolTarget": "saigonUniversity",
+        "target": "saigonUniversity",
+        "triggers": 23
+      },
+      "outside": {
+        "target": null,
+        "active": false,
+        "channels": [
+          null,
+          null,
+          null
+        ],
+        "version": 197,
+        "baseError": 0
+      },
+      "unmounted": {
+        "disposed": {
+          "geometries": 3,
+          "materials": 11,
+          "textures": 9
+        },
+        "canvas": 0,
+        "subscribers": 0,
+        "triggers": 0,
+        "smoother": false,
+        "education": {
+          "hover": null,
+          "focus": null,
+          "selection": null,
+          "visible": false
+        },
+        "skills": {
+          "hover": null,
+          "focus": null,
+          "selection": null,
+          "visible": false
+        }
+      }
+    },
+    {
+      "fallback": {
+        "canvas": 0,
+        "count": 3,
+        "text": "BẢN ĐỒ SAO\n\nBa hướng học tập song song, cùng nuôi dưỡng tư duy thiết kế.\n\nDi chuột hoặc dùng Tab để đánh thức một chòm sao. Chạm để chọn; chạm nền hoặc Escape để bỏ chọn.\n\nTan về nền sao\n\n2021–2026\nCircinus\n\nSaigon University\n\nCử nhân Công nghệ Thông tin\n\nTốt nghiệp loại Giỏi. Trọng tâm: Phân tích & Thiết kế Hệ thống, HCI, Usability Testing, Prototyping Web/App.\n\n2022–2023\nTelescopium\n\nGreen Academy\n\nChứng chỉ Dựng phim Chuyên nghiệp\n\nLoại Distinction. Trọng tâm: VFX compositing, motion graphics. Học viên xuất sắc — Premiere & After Effects.\n\n2024–nay\nPictor\n\nArena Multimedia\n\nAdvanced Diploma in Multimedia\n\nLoại Distinction kỳ 2 (UX/UI). Trọng tâm: Thiết kế lấy người dùng làm trung tâm, prototyping mobile, wireframing, web responsive.",
+        "focus": "saigonUniversity",
+        "background": "rgb(5, 5, 5)"
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.WebGLRenderer: WEBGL_lose_context extension not supported."
+  ]
+}

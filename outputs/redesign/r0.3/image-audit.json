@@ -1,0 +1,450 @@
+{
+  "checkedAt": "2026-10-07T17:24:29.002672+00:00",
+  "files": 26,
+  "uniqueContent": 24,
+  "totalBytes": 2878812,
+  "records": [
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/5a7b7d241524417.695a8ca8f2616.jpg",
+      "file": "5a7b7d241524417.695a8ca8f2616.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 114038,
+      "sha256": "b928d247ffddd2d40db8b30c6c031e5e010aee9aab27d56d11ae9cf7d6b55de4",
+      "cacheDiscoveryIndex": 1,
+      "path": "outputs/visual-redesign-2026-10-07/edura/5a7b7d241524417.695a8ca8f2616.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/b6e8ee241524417.695a8ca904163.jpg",
+      "file": "b6e8ee241524417.695a8ca904163.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 92204,
+      "sha256": "cc792c5dfb8d3acaf30925372969711e6b18a19ca831e6cc9baa8e63900d9b23",
+      "cacheDiscoveryIndex": 2,
+      "path": "outputs/visual-redesign-2026-10-07/edura/b6e8ee241524417.695a8ca904163.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/771865241524417.695a8ca8f2f07.jpg",
+      "file": "771865241524417.695a8ca8f2f07.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 44982,
+      "sha256": "8b0673e1181afa33e0ddfb5d0cc1140b9da190d042101367723c7b4f9d7813b7",
+      "cacheDiscoveryIndex": 3,
+      "path": "outputs/visual-redesign-2026-10-07/edura/771865241524417.695a8ca8f2f07.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/0b4b55241524417.695a8ca8f38a8.jpg",
+      "file": "0b4b55241524417.695a8ca8f38a8.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 30616,
+      "sha256": "d237d4b8c192cfb7f6825cf299fe10d1b24475b1e398717b2066aa6b6a40f63a",
+      "cacheDiscoveryIndex": 4,
+      "path": "outputs/visual-redesign-2026-10-07/edura/0b4b55241524417.695a8ca8f38a8.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/fcface241524417.695a8ca90580f.jpg",
+      "file": "fcface241524417.695a8ca90580f.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 124238,
+      "sha256": "8204552a556ae90fcb70b4ce0c7e6ed20866bb70b1237c6ad11abb5c3f7d70e1",
+      "cacheDiscoveryIndex": 5,
+      "path": "outputs/visual-redesign-2026-10-07/edura/fcface241524417.695a8ca90580f.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/b87766241524417.695a8ca901f8c.jpg",
+      "file": "b87766241524417.695a8ca901f8c.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 115284,
+      "sha256": "dd72c6daa130d014b357a71a2cef015917b73634e4ac2c614821c356d568846a",
+      "cacheDiscoveryIndex": 6,
+      "path": "outputs/visual-redesign-2026-10-07/edura/b87766241524417.695a8ca901f8c.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/1457a2241524417.695a8ca903243.jpg",
+      "file": "1457a2241524417.695a8ca903243.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 135960,
+      "sha256": "11e86ff9ffe00bf747a3b50db209e68658b08fcaa2989e4cb6300146b2fc1c4d",
+      "cacheDiscoveryIndex": 7,
+      "path": "outputs/visual-redesign-2026-10-07/edura/1457a2241524417.695a8ca903243.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/2a4491241524417.695a8ca900c89.jpg",
+      "file": "2a4491241524417.695a8ca900c89.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 173142,
+      "sha256": "800832981d065eacc93a343f8f802a14081d7ceffca177fffb9125ee846f8e8d",
+      "cacheDiscoveryIndex": 8,
+      "path": "outputs/visual-redesign-2026-10-07/edura/2a4491241524417.695a8ca900c89.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/1463c6241524417.695a8ca906149.jpg",
+      "file": "1463c6241524417.695a8ca906149.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 96112,
+      "sha256": "7714b0840765fecc8a397c5c3a03eb97da448d752090821752998948f8ba47a8",
+      "cacheDiscoveryIndex": 9,
+      "path": "outputs/visual-redesign-2026-10-07/edura/1463c6241524417.695a8ca906149.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/3cbdcf241524417.695a8ca902a03.jpg",
+      "file": "3cbdcf241524417.695a8ca902a03.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 112512,
+      "sha256": "ddbabdc1a2f1c0ea23e013794ae7d026eb58e899bbeb2b1b393455a4f07d4d25",
+      "cacheDiscoveryIndex": 10,
+      "path": "outputs/visual-redesign-2026-10-07/edura/3cbdcf241524417.695a8ca902a03.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/c3b02a241524417.695a8ca90aa94.jpg",
+      "file": "c3b02a241524417.695a8ca90aa94.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 142170,
+      "sha256": "c37e88cfe84f35818fe7e89af801da415db458c595abc9921f44bc5bf9981531",
+      "cacheDiscoveryIndex": 11,
+      "path": "outputs/visual-redesign-2026-10-07/edura/c3b02a241524417.695a8ca90aa94.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/aac771241524417.695a8ca90a36a.jpg",
+      "file": "aac771241524417.695a8ca90a36a.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 147304,
+      "sha256": "414853324fe035a8fac27418c9377e403e3767867eefbe29179c3f3295473827",
+      "cacheDiscoveryIndex": 12,
+      "path": "outputs/visual-redesign-2026-10-07/edura/aac771241524417.695a8ca90a36a.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/34630b241524417.695a8ca9038aa.jpg",
+      "file": "34630b241524417.695a8ca9038aa.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 147086,
+      "sha256": "38013f9ec0d0c2bd5592ed05ab7061e359fa529e9b28313d3f93418760b093c1",
+      "cacheDiscoveryIndex": 13,
+      "path": "outputs/visual-redesign-2026-10-07/edura/34630b241524417.695a8ca9038aa.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/e996ad241524417.695a8ca8f4200.jpg",
+      "file": "e996ad241524417.695a8ca8f4200.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 239922,
+      "sha256": "27cb6aeb18e35a858453448b3c625e9066a3a3dc16e84b4d90e8819e5389d1fb",
+      "cacheDiscoveryIndex": 14,
+      "path": "outputs/visual-redesign-2026-10-07/edura/e996ad241524417.695a8ca8f4200.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/6f4a58241524417.695a8ca9069ed.jpg",
+      "file": "6f4a58241524417.695a8ca9069ed.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 146686,
+      "sha256": "574f75f0a63e4cc30eb43297f2cd8217adfcdbfafd746d29db88d9ef3a3c36eb",
+      "cacheDiscoveryIndex": 15,
+      "path": "outputs/visual-redesign-2026-10-07/edura/6f4a58241524417.695a8ca9069ed.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/be0e54241524417.695a8ca90b297.jpg",
+      "file": "be0e54241524417.695a8ca90b297.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 180678,
+      "sha256": "4cac388c51cd41fb719f602d90e774733d2cb3c817cbc2b5fb4106f8af5ddacc",
+      "cacheDiscoveryIndex": 16,
+      "path": "outputs/visual-redesign-2026-10-07/edura/be0e54241524417.695a8ca90b297.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/d78a8f241524417.695a8ca905043.jpg",
+      "file": "d78a8f241524417.695a8ca905043.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 134814,
+      "sha256": "69d301f2b6eafb084743c98d2b519f65f78090427e1681f612d52a470d9875e2",
+      "cacheDiscoveryIndex": 17,
+      "path": "outputs/visual-redesign-2026-10-07/edura/d78a8f241524417.695a8ca905043.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/a81e82241524417.695a8ca9086ce.jpg",
+      "file": "a81e82241524417.695a8ca9086ce.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 135324,
+      "sha256": "1b05999368e6be080421b9f96eb72a785cf9c9015d5b6e178c7c8117e63eade0",
+      "cacheDiscoveryIndex": 18,
+      "path": "outputs/visual-redesign-2026-10-07/edura/a81e82241524417.695a8ca9086ce.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/210b6c241524417.695a8ca909d49.jpg",
+      "file": "210b6c241524417.695a8ca909d49.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 82744,
+      "sha256": "16f9a62018628bdae4de99d3bf265cd4d0301aef03934613cfbd3804412abd31",
+      "cacheDiscoveryIndex": 19,
+      "path": "outputs/visual-redesign-2026-10-07/edura/210b6c241524417.695a8ca909d49.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/2b1abd241524417.695a8ca9016db.jpg",
+      "file": "2b1abd241524417.695a8ca9016db.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 34270,
+      "sha256": "e037666df80e8e4fad80192bd35bb7d27958c7e2755f8fd915d9347000329a76",
+      "cacheDiscoveryIndex": 20,
+      "path": "outputs/visual-redesign-2026-10-07/edura/2b1abd241524417.695a8ca9016db.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/5bea05241524417.695a8ca9049cf.jpg",
+      "file": "5bea05241524417.695a8ca9049cf.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 63862,
+      "sha256": "f496d7198c97015962cf16517e1dedad22560b34af1f11eecc3aa0512f176744",
+      "cacheDiscoveryIndex": 21,
+      "path": "outputs/visual-redesign-2026-10-07/edura/5bea05241524417.695a8ca9049cf.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/ac4be7241524417.695a8ca90717b.jpg",
+      "file": "ac4be7241524417.695a8ca90717b.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 62732,
+      "sha256": "702ecad3b50cf2b3e72b84a039fce06e28c675a98b965837ab656b8f7dcc13c8",
+      "cacheDiscoveryIndex": 22,
+      "path": "outputs/visual-redesign-2026-10-07/edura/ac4be7241524417.695a8ca90717b.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/7ff846241524417.695f893f238f0.jpg",
+      "file": "7ff846241524417.695f893f238f0.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 104464,
+      "sha256": "b169ccddce693e5fe30d767b7738e518572f99dae32e0bf7329766c6ee17599d",
+      "cacheDiscoveryIndex": 23,
+      "path": "outputs/visual-redesign-2026-10-07/edura/7ff846241524417.695f893f238f0.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/0e07a1241524417.695f893f22f65.jpg",
+      "file": "0e07a1241524417.695f893f22f65.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 56602,
+      "sha256": "35ea84aebe46219eed22ed881dee18dbe499cc498dd226ad5b42bcad07858482",
+      "cacheDiscoveryIndex": 24,
+      "path": "outputs/visual-redesign-2026-10-07/edura/0e07a1241524417.695f893f22f65.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": null
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/a594b3241524417.695f893fb8ca5.jpg",
+      "file": "a594b3241524417.695f893fb8ca5.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 104464,
+      "sha256": "b169ccddce693e5fe30d767b7738e518572f99dae32e0bf7329766c6ee17599d",
+      "cacheDiscoveryIndex": 25,
+      "path": "outputs/visual-redesign-2026-10-07/edura/a594b3241524417.695f893fb8ca5.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": 23
+    },
+    {
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/7e0667241524417.695f893fb8517.jpg",
+      "file": "7e0667241524417.695f893fb8517.webp",
+      "httpStatus": 200,
+      "contentType": "image/webp",
+      "bytes": 56602,
+      "sha256": "35ea84aebe46219eed22ed881dee18dbe499cc498dd226ad5b42bcad07858482",
+      "cacheDiscoveryIndex": 26,
+      "path": "outputs/visual-redesign-2026-10-07/edura/7e0667241524417.695f893fb8517.webp",
+      "dimensions": [
+        1400,
+        989
+      ],
+      "mode": "RGB",
+      "decode": "pass",
+      "duplicateOfIndex": 24
+    }
+  ]
+}

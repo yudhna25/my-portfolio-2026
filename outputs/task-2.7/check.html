@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="UTF-8"><title>Works — runnable check</title></head>
+<body>
+  <button id="run" class="fixed right-4 top-4 z-50 border border-white bg-black px-4 py-2 text-white">Run check</button>
+  <pre id="results" class="fixed right-4 top-16 z-50 max-h-60 max-w-md overflow-auto bg-black p-3 text-xs text-white">Ready</pre>
+  <div id="root"></div>
+  <script type="module">
+    import '/src/index.css';
+    import '@fontsource-variable/unbounded';
+    let reduced = new URLSearchParams(location.search).has('reduced');
+    const motionQueries = [];
+    const matchMedia = window.matchMedia.bind(window);
+    window.matchMedia = (query) => {
+      const result = matchMedia(query);
+      if (query.includes('prefers-reduced-motion')) {
+        Object.defineProperty(result, 'matches', {get: () => query.includes('no-preference') ? !reduced : reduced});
+        motionQueries.push(result);
+      }
+      return result;
+    };
+    const setMotion = value => {
+      reduced = value;
+      motionQueries.forEach(query => query.dispatchEvent(new Event('change')));
+    };
+    const React = await import('react');
+    const {createRoot} = await import('react-dom/client');
+    const {flushSync} = await import('react-dom');
+    await import('/src/i18n/config.js');
+    const {default: Work} = await import('/src/components/Work.jsx');
+    const {default: Cursor} = await import('/src/components/Cursor.jsx');
+    const {gsap, Flip, ScrollTrigger, ScrollSmoother} = await import('/src/hooks/useGSAPSetup.js');
+    const {useSmoothScroll} = await import('/src/hooks/useSmoothScroll.js');
+    const {useLangStore} = await import('/src/stores/useLangStore.js');
+    // The check stays deterministic when its Browser tab is backgrounded.
+    gsap.ticker.lagSmoothing(0);
+    function Demo() {
+      const scope = React.useRef(null);
+      useSmoothScroll({scope});
+      return React.createElement('div', {ref: scope},
+        React.createElement(Cursor),
+        React.createElement('div', {id:'smooth-wrapper'},
+          React.createElement('div', {id:'smooth-content'}, React.createElement(Work))));
+    }
+    const root = createRoot(document.getElementById('root'));
+    const mount = () => flushSync(() => root.render(React.createElement(React.StrictMode, null, React.createElement(Demo))));
+    mount();
+    const results = [];
+    const output = document.getElementById('results');
+    const assert = (condition, message) => {
+      results.push({pass:Boolean(condition), message});
+      output.textContent = JSON.stringify(results, null, 2);
+      if (!condition) throw new Error(message);
+    };
+    const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+    const cards = () => [...document.querySelectorAll('[data-project-card]')];
+    const shown = () => cards().filter(card => !card.classList.contains('hidden'));
+    const filter = key => document.querySelector(`#work button[aria-controls="works-grid"]:nth-child(${key})`);
+    const settled = async () => {
+      await wait(750);
+      const deadline = performance.now() + 8000;
+      while (cards().some(card => Flip.isFlipping(card)) && performance.now() < deadline) await wait(30);
+      assert(!cards().some(card => Flip.isFlipping(card)), 'Flip settles');
+    };
+    document.getElementById('run').onclick = async () => {
+      try {
+        results.length = 0;
+        await document.fonts.ready;
+        assert(shown().length === 3, 'All: 3 cards');
+        assert(cards()[0].dataset.cursor === 'view' && cards().slice(1).every(c => c.dataset.cursor === 'default'), 'Only EDURA uses view cursor');
+        if (document.querySelector('[data-custom-cursor]')) {
+          for (const [index, mode] of [[0,'view'],[1,'default'],[2,'default']]) {
+            cards()[index].dispatchEvent(new PointerEvent('pointerover', {bubbles:true, pointerType:'mouse'}));
+            assert(document.querySelector('[data-custom-cursor]').dataset.cursorState === mode, `Cursor card ${index + 1}: ${mode}`);
+          }
+        }
+        assert(document.querySelectorAll('#work a').length === 1 && document.querySelectorAll('#work button:disabled').length === 2, 'One link / two coming-soon buttons');
+        const link = document.querySelector('#work a');
+        assert(link.target === '_blank' && link.rel.includes('noopener') && link.href.endsWith('/241524417/Edura-LMS'), 'Safe canonical EDURA link');
+        const grid = document.querySelector('[data-project-grid]');
+        for (const [index, id] of [[2,'project-01'],[3,'project-02'],[4,'project-03'],[1,null]]) {
+          const height = grid.getBoundingClientRect().height;
+          filter(index).click();
+          if (!reduced) assert(Math.abs(grid.getBoundingClientRect().height - height) < 3, 'Grid height preserves first Flip frame');
+          await settled();
+          assert(shown().length === (id ? 1 : 3) && (!id || shown()[0].dataset.flipId === id), `Filter ${index}: correct results`);
+          assert(!grid.style.height && shown().every(c => !c.style.position && !c.style.transform), 'Flip restores natural layout');
+        }
+        for (const index of [3,2,4,1]) filter(index).click();
+        await settled();
+        assert(shown().length === 3, 'Rapid interruption ends at All');
+        if (!reduced) {
+          filter(3).click();
+          await wait(50);
+          setMotion(true);
+          await wait(50);
+          assert(!grid.style.height && shown().every(c => !c.style.position && !c.style.transform), 'Live reduced motion completes active Flip');
+          assert(ScrollTrigger.getAll().length === 0 && !ScrollSmoother.get(), 'Live reduced motion clears scroll animation');
+          setMotion(false);
+          await wait(50);
+          filter(1).click();
+          await settled();
+        }
+        assert(ScrollTrigger.getAll().filter(t => t.vars.id?.startsWith('works-reveal')).length === (reduced ? 0 : 3), 'Stable reveal count');
+        assert(Boolean(ScrollSmoother.get()) === !reduced, 'ScrollSmoother / reduced motion match');
+        useLangStore.getState().setLang('en');
+        await wait(50);
+        assert(document.getElementById('works-heading').textContent === 'CONSTELLATION OF PROJECTS', 'English translation');
+        useLangStore.getState().setLang('vi');
+        await wait(50);
+        assert(document.getElementById('works-heading').textContent === 'CHÒM SAO DỰ ÁN', 'Vietnamese translation');
+        flushSync(() => root.render(null));
+        assert(ScrollTrigger.getAll().length === 0 && !ScrollSmoother.get(), 'Unmount cleans every trigger and smoother');
+        mount();
+        assert(shown().length === 3, 'StrictMode remount restores All');
+        output.dataset.done = 'true';
+        output.dataset.passed = String(results.filter(r => r.pass).length);
+      } catch (error) { output.dataset.done = 'failed'; console.error(error); }
+    };
+  </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,179 @@
+{
+  "appMode": true,
+  "nativeReduced": false,
+  "motionSimulation": true,
+  "checks": [
+    {
+      "name": "slow pointer: reuses quickTo and sustains 60fps",
+      "pass": true,
+      "details": {
+        "speed": "slow",
+        "frames": 330,
+        "events": 331,
+        "fps": 165.0082504125211,
+        "p95FrameMs": 6.100000000005821,
+        "quickToCreatedDuringMovement": 0
+      }
+    },
+    {
+      "name": "fast pointer: reuses quickTo and sustains 60fps",
+      "pass": true,
+      "details": {
+        "speed": "fast",
+        "frames": 330,
+        "events": 2648,
+        "fps": 165.0082504125211,
+        "p95FrameMs": 6.199999999982538,
+        "quickToCreatedDuringMovement": 0
+      }
+    }
+  ],
+  "performance": [
+    {
+      "speed": "slow",
+      "frames": 330,
+      "events": 331,
+      "fps": 165.0082504125211,
+      "p95FrameMs": 6.100000000005821,
+      "quickToCreatedDuringMovement": 0
+    },
+    {
+      "speed": "fast",
+      "frames": 330,
+      "events": 2648,
+      "fps": 165.0082504125211,
+      "p95FrameMs": 6.199999999982538,
+      "quickToCreatedDuringMovement": 0
+    }
+  ],
+  "nativeEvents": 13,
+  "cursorCount": 1,
+  "listeners": {
+    "document:pointermove": 1,
+    "document:pointerover": 1,
+    "document:pointerout": 1,
+    "html:pointerleave": 1,
+    "document:keydown": 1,
+    "document:visibilitychange": 1,
+    "window:blur": 1
+  },
+  "peaks": {
+    "document:pointermove": 1,
+    "document:pointerover": 1,
+    "document:pointerout": 1,
+    "html:pointerleave": 1,
+    "document:keydown": 1,
+    "document:visibilitychange": 1,
+    "window:blur": 1
+  },
+  "quickToCalls": 27,
+  "reduced": false,
+  "coarse": false,
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "lastNative": {
+    "x": 973,
+    "y": 558,
+    "pointerType": "mouse",
+    "target": "BUTTON"
+  },
+  "work": {
+    "mode": "view",
+    "opacity": 1,
+    "blend": "difference",
+    "pointerEvents": "none",
+    "ariaHidden": "true",
+    "ring": {
+      "x": 259.1953125,
+      "y": 468.28131103515625,
+      "width": 64,
+      "height": 64,
+      "cx": 291.1953125,
+      "cy": 500.28131103515625
+    },
+    "shape": {
+      "x": 259.1953125,
+      "y": 468.28131103515625,
+      "width": 64,
+      "height": 64,
+      "cx": 291.1953125,
+      "cy": 500.28131103515625
+    },
+    "dot": {
+      "x": 289.1953125,
+      "y": 498.28131103515625,
+      "width": 4,
+      "height": 4,
+      "cx": 291.1953125,
+      "cy": 500.28131103515625
+    },
+    "label": "XEM",
+    "labelOpacity": 1,
+    "font": "\"Unbounded Variable\", Unbounded, sans-serif",
+    "fontSize": "12px",
+    "dotOpacity": 0,
+    "fill": "rgb(250, 250, 250)"
+  },
+  "workCardBounds": {
+    "x": 48,
+    "y": 193.5,
+    "width": 486.390625,
+    "height": 613.5625,
+    "top": 193.5,
+    "right": 534.390625,
+    "bottom": 807.0625,
+    "left": 48
+  },
+  "workImageTransform": "translate(2.3696%, 0%) translate3d(0px, 0px, 0px)",
+  "email": {
+    "offset": {
+      "x": 5.74067,
+      "y": 5.57178
+    },
+    "distance": 8.000001526081105,
+    "transformPreserved": true,
+    "cursor": {
+      "mode": "link",
+      "opacity": 1,
+      "blend": "difference",
+      "pointerEvents": "none",
+      "ariaHidden": "true",
+      "ring": {
+        "x": 1189,
+        "y": 363.6405944824219,
+        "width": 64,
+        "height": 64,
+        "cx": 1221,
+        "cy": 395.6405944824219
+      },
+      "shape": {
+        "x": 1211.9984130859375,
+        "y": 386.6390075683594,
+        "width": 18.003173828125,
+        "height": 18.003173828125,
+        "cx": 1221,
+        "cy": 395.6405944824219
+      },
+      "dot": {
+        "x": 1219,
+        "y": 393.6405944824219,
+        "width": 4,
+        "height": 4,
+        "cx": 1221,
+        "cy": 395.6405944824219
+      },
+      "label": "XEM",
+      "labelOpacity": 0,
+      "font": "\"Unbounded Variable\", Unbounded, sans-serif",
+      "fontSize": "12px",
+      "dotOpacity": 1,
+      "fill": "rgb(250, 250, 250)"
+    },
+    "reset": {
+      "x": 0,
+      "y": 0
+    }
+  }
+}

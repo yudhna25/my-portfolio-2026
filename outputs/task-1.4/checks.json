@@ -1,0 +1,16 @@
+{
+  "languages": [
+    "vi",
+    "en"
+  ],
+  "sections": 12,
+  "stringLeavesPerLocale": 142,
+  "keyParity": true,
+  "draftContentExact": true,
+  "unchangedDraftsAndLangStore": true,
+  "defaultLanguage": "vi",
+  "fallbackLanguage": "en",
+  "defaultTagline": "Creative Designer",
+  "defaultSubTagline": "Nối nhịp giữa UI chức năng và cách kể chuyện điện ảnh.",
+  "storeSwitchesWithoutLoop": 20
+}

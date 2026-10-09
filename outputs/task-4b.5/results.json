@@ -1,0 +1,119 @@
+{
+  "timestamp": "2026-10-06T19:10:28.705Z",
+  "browser": "154.0.4258.53",
+  "checks": 14,
+  "sections": [
+    {
+      "section": "Hero",
+      "scrollProgress": 0,
+      "barrelRotation": 0,
+      "gyroOuterRotation": 0,
+      "gyroMidRotation": 0,
+      "gyroInnerRotation": 0,
+      "shuttleY": 0,
+      "leftTextSnippet": "┌ ┐ └ ┘ OPTICAL SYS LOCK 18 50 200 ∞ FOCAL 18mm f/1.2 ED SECTOR TAURUS TARGET M45 RA 04h 35m 55s DEC",
+      "rightTextSnippet": "┌ ┐ └ ┘ GYRO ATTITUDE 3-AXIS AZ: 000° POSITION 000% 00 25 50 75 100 00% SOUND OFF / ON THEME DARK / "
+    },
+    {
+      "section": "About",
+      "scrollProgress": 0,
+      "barrelRotation": 38.56132075471698,
+      "gyroOuterRotation": 38.56132075471698,
+      "gyroMidRotation": -57.84198113207547,
+      "gyroInnerRotation": 77.12264150943396,
+      "shuttleY": 12.8538,
+      "leftTextSnippet": "┌ ┐ └ ┘ OPTICAL SYS LOCK 18 50 200 ∞ FOCAL 30mm f/1.2 ED SECTOR TAURUS TARGET M45 RA 04h 35m 55s DEC",
+      "rightTextSnippet": "┌ ┐ └ ┘ GYRO ATTITUDE 3-AXIS AZ: 039° POSITION 011% 00 25 50 75 100 11% SOUND OFF / ON THEME DARK / "
+    },
+    {
+      "section": "Skills",
+      "scrollProgress": 0,
+      "barrelRotation": 89.50464000000001,
+      "gyroOuterRotation": 89.50464000000001,
+      "gyroMidRotation": -134.25696,
+      "gyroInnerRotation": 179.00928000000002,
+      "shuttleY": 29.8349,
+      "leftTextSnippet": "┌ ┐ └ ┘ OPTICAL SYS LOCK 18 50 200 ∞ FOCAL 46mm f/1.2 ED SECTOR TAURUS TARGET M45 RA 04h 35m 55s DEC",
+      "rightTextSnippet": "┌ ┐ └ ┘ GYRO ATTITUDE 3-AXIS AZ: 090° POSITION 025% 00 25 50 75 100 25% SOUND OFF / ON THEME DARK / "
+    },
+    {
+      "section": "Education",
+      "scrollProgress": 0,
+      "barrelRotation": 141.50943396226415,
+      "gyroOuterRotation": 141.50943396226415,
+      "gyroMidRotation": -212.26415094339623,
+      "gyroInnerRotation": 283.0188679245283,
+      "shuttleY": 47.1698,
+      "leftTextSnippet": "┌ ┐ └ ┘ OPTICAL SYS LOCK 18 50 200 ∞ FOCAL 80mm f/1.2 ED SECTOR CYGNUS TARGET DENEB RA 20h 41m 26s D",
+      "rightTextSnippet": "┌ ┐ └ ┘ GYRO ATTITUDE 3-AXIS AZ: 142° POSITION 039% 00 25 50 75 100 39% SOUND OFF / ON THEME DARK / "
+    },
+    {
+      "section": "Experience",
+      "scrollProgress": 0,
+      "barrelRotation": 178.83252,
+      "gyroOuterRotation": 178.83252,
+      "gyroMidRotation": -268.24878,
+      "gyroInnerRotation": 357.66504,
+      "shuttleY": 59.6108,
+      "leftTextSnippet": "┌ ┐ └ ┘ OPTICAL SYS LOCK 18 50 200 ∞ FOCAL 108mm f/1.2 ED SECTOR CYGNUS TARGET DENEB RA 20h 41m 26s ",
+      "rightTextSnippet": "┌ ┐ └ ┘ GYRO ATTITUDE 3-AXIS AZ: 179° POSITION 050% 00 25 50 75 100 50% SOUND OFF / ON THEME DARK / "
+    },
+    {
+      "section": "Work",
+      "scrollProgress": 0,
+      "barrelRotation": 256.4858490566038,
+      "gyroOuterRotation": 256.4858490566038,
+      "gyroMidRotation": -384.72877358490564,
+      "gyroInnerRotation": 512.9716981132076,
+      "shuttleY": 85.4953,
+      "leftTextSnippet": "┌ ┐ └ ┘ OPTICAL SYS LOCK 18 50 200 ∞ FOCAL 161mm f/1.2 ED SECTOR ORION TARGET ALNILAM RA 05h 35m 17s",
+      "rightTextSnippet": "┌ ┐ └ ┘ GYRO ATTITUDE 3-AXIS AZ: 256° POSITION 071% 00 25 50 75 100 71% SOUND OFF / ON THEME DARK / "
+    },
+    {
+      "section": "Transmission",
+      "scrollProgress": 0,
+      "barrelRotation": 339.09192,
+      "gyroOuterRotation": 339.09192,
+      "gyroMidRotation": -508.63788,
+      "gyroInnerRotation": 678.18384,
+      "shuttleY": 113.0306,
+      "leftTextSnippet": "┌ ┐ └ ┘ OPTICAL SYS LOCK 18 50 200 ∞ FOCAL ∞ f/1.2 ED SECTOR SAGITTARIUS TARGET SGR RA 17h 45m 40s D",
+      "rightTextSnippet": "┌ ┐ └ ┘ GYRO ATTITUDE 3-AXIS AZ: 339° POSITION 094% 00 25 50 75 100 94% SOUND OFF / ON THEME DARK / "
+    }
+  ],
+  "switches": {
+    "lang": {
+      "initialRotation": -22.5,
+      "postRotation": 22.5,
+      "delta": 45,
+      "checked": "true"
+    },
+    "sound": {
+      "initialRotation": -22.5,
+      "postRotation": 22.5,
+      "delta": 45,
+      "checked": "true"
+    },
+    "theme": {
+      "initialRotation": 22.5,
+      "postRotation": -22.5,
+      "delta": 45,
+      "checked": "false",
+      "dataTheme": null
+    }
+  },
+  "mobile": {
+    "railsHidden": true,
+    "zeroOverflow": true,
+    "scrollW": 390,
+    "clientW": 390
+  },
+  "reducedMotion": {
+    "barrelRotation": 0,
+    "gyroOuterRotation": 0,
+    "gyroMidRotation": 0,
+    "gyroInnerRotation": 0
+  },
+  "fps": 104,
+  "errors": []
+}

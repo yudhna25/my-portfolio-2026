@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="UTF-8"><title>Playground — runnable check</title><style>.qa-spacer{height:100vh}</style></head>
+<body>
+<button id="run" class="fixed top-4 right-4 z-50 border border-white bg-black p-3 text-white">Run check</button>
+<pre id="results" class="fixed top-20 right-4 z-50 max-h-48 overflow-auto bg-black p-3 text-xs text-white">Ready</pre>
+<div id="root"></div>
+<script type="module">
+  import '/src/index.css';
+  import '@fontsource-variable/unbounded';
+  const params = new URLSearchParams(location.search), preview = params.has('preview');
+  document.querySelector('#run').hidden = preview;
+  document.querySelector('#results').hidden = preview;
+  let reduced = params.has('reduced');
+  const queries = [], originalMatchMedia = window.matchMedia.bind(window);
+  window.matchMedia = query => {
+    const result = originalMatchMedia(query);
+    if (query.includes('prefers-reduced-motion')) {
+      Object.defineProperty(result, 'matches', {get: () => query.includes('no-preference') ? !reduced : reduced});
+      queries.push(result);
+    }
+    return result;
+  };
+  const React = await import('react');
+  const {createRoot} = await import('react-dom/client');
+  const {flushSync} = await import('react-dom');
+  const {i18n} = await import('/src/i18n/config.js');
+  const {default: Playground} = await import('/src/components/sections/Playground.jsx');
+  const {LiveDemo} = await import('/src/components/effects/LiveDemo.jsx');
+  const {useSmoothScroll} = await import('/src/hooks/useSmoothScroll.js');
+  const {gsap, ScrollTrigger, ScrollSmoother} = await import('/src/hooks/useGSAPSetup.js');
+  gsap.ticker.lagSmoothing(0); // QA only: background tabs must finish their tweens.
+  const h = React.createElement, wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+  function Demo() {
+    const ref = React.useRef(null);
+    useSmoothScroll({scope: ref});
+    return h('div', {ref}, h('div', {id:'smooth-wrapper'}, h('main', {id:'smooth-content'}, preview ? null : h('div', {className:'qa-spacer'}), h(Playground), preview ? null : h('div', {className:'qa-spacer'}))));
+  }
+  const root = createRoot(document.querySelector('#root'));
+  const mount = () => flushSync(() => root.render(h(React.StrictMode, null, h(Demo))));
+  mount();
+  document.querySelector('#run').onclick = async () => {
+    const assert = (pass, message) => {
+      results.push({pass: Boolean(pass), message});
+      document.querySelector('#results').textContent = JSON.stringify(results, null, 2);
+      if (!pass) throw Error(message);
+    }, results = [], cards = () => [...document.querySelectorAll('[data-experiment]')];
+    try {
+      await document.fonts.ready;
+      const section = document.querySelector('#playground');
+      assert(cards().length === 8, 'Exactly eight experiments');
+      assert(section.querySelectorAll('[data-live-demo]').length === 3, 'Three LiveDemo slots');
+      assert(cards().filter(card => !card.querySelector('[data-live-demo]')).length === 5, 'Five text thumbnails');
+      assert(section.querySelectorAll('button:disabled').length === 8, 'Every pending demo is disabled');
+      assert(!section.querySelector('canvas,img,a'), 'No real demo, image, or dead link');
+      assert(section.getAttribute('aria-labelledby') === 'playground-heading', 'Named semantic section');
+      assert([...section.querySelectorAll('[data-live-demo]')].every(frame => {const r=frame.getBoundingClientRect();return Math.abs(r.width/r.height-16/9)<0.02;}), 'Frames stay 16:9');
+      assert(getComputedStyle(section).backgroundColor === 'rgb(5, 5, 5)', 'Mono background #050505');
+      assert(section.scrollWidth <= section.clientWidth+1, 'No section horizontal overflow');
+      for (const lang of ['en', 'vi']) {
+        await i18n.changeLanguage(lang); await wait(100);
+        assert(cards().every(card => card.querySelector('h3').textContent === i18n.t(`playground.experiments.${card.dataset.experiment}.title`)), `${lang}: exact experiment names`);
+        assert(cards().every(card => card.querySelector('p').textContent === i18n.t(`playground.experiments.${card.dataset.experiment}.type`)), `${lang}: exact types / descriptions`);
+        assert([...section.querySelectorAll('button')].every(button => button.textContent.trim() === i18n.t('playground.comingSoon')), `${lang}: coming soon labels`);
+      }
+      const childHost = document.createElement('div'); document.body.append(childHost);
+      const childRoot = createRoot(childHost);
+      flushSync(() => childRoot.render(h(LiveDemo, {title:'Child contract'}, h('span', {'data-child':true}, 'Child content'))));
+      assert(childHost.querySelector('[data-child]') && !childHost.querySelector('button'), 'LiveDemo renders children in place of its placeholder');
+      childRoot.unmount(); childHost.remove();
+      const last = cards().at(-1), top = last.getBoundingClientRect().top + window.scrollY;
+      ScrollSmoother.get()?.scrollTo(top, false);
+      window.scrollTo(0, top); ScrollTrigger.update(); await wait(1600);
+      assert(cards().every(card => getComputedStyle(card).opacity === '1'), 'Every card reveals when scrolled into view');
+      if (!reduced) {
+        reduced = true;
+        queries.forEach(query => query.dispatchEvent(new Event('change'))); await wait(100);
+        assert(!ScrollTrigger.getAll().some(trigger => trigger.vars.id === 'playground-reveal'), 'Live reduced-motion removes reveal triggers');
+      }
+      assert(cards().every(card => !card.style.transform && !card.style.opacity), 'Reduced-motion restores static cards');
+      flushSync(() => root.render(null));
+      assert(ScrollTrigger.getAll().length === 0 && !ScrollSmoother.get(), 'Unmount cleans up triggers and smoother');
+      mount(); await wait(100);
+      assert(cards().length === 8, 'StrictMode remount keeps eight experiments');
+      document.querySelector('#results').dataset.done = 'true';
+    } catch (error) {
+      document.querySelector('#results').dataset.done = 'error';
+      console.error(error);
+    }
+  };
+</script>
+</body>
+</html>

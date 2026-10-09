@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="vi">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Task 1.5 — GalaxyScene QA</title></head>
+  <body>
+    <div id="qa-root"></div>
+    <aside class="fixed left-4 top-4 z-[100] max-h-[90vh] w-[min(560px,90vw)] overflow-auto border border-white/20 bg-black/90 p-4 font-mono text-xs text-white">
+      <strong>Task 1.5 — GalaxyScene QA (development only)</strong>
+      <button id="qa-unmount" class="mt-3 block border border-white/40 px-3 py-2">Test unmount cleanup</button>
+      <pre id="qa-state" class="mt-3 whitespace-pre-wrap"></pre>
+      <pre id="qa-results" class="mt-3 whitespace-pre-wrap">Running…</pre>
+    </aside>
+    <script type="module" src="./scene-qa.jsx"></script>
+  </body>
+</html>
+

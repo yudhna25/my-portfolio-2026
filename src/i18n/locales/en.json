@@ -1,0 +1,357 @@
+{
+  "hero": {
+    "portfolio": "PORTFOLIO",
+    "year": "2026",
+    "name": "TRAN VU ANH DUY",
+    "tagline": "Creative Designer",
+    "subTagline": "Bridging the gap between functional UI and cinematic storytelling.",
+    "scrollIndicator": "SCROLL TO BEGIN THE JOURNEY"
+  },
+  "about": {
+    "sectionLabel": "The Navigator",
+    "heading": "TRAN VU / ANH DUY",
+    "subLabel": "Creative Designer — UX/UI & Motion",
+    "bioFirst": "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+    "bioSecond": "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design.",
+    "quote": "I design small universes — where every touch means something.",
+    "photoCaption": "FIG.01 — THE NAVIGATOR",
+    "avatarAlt": "Portrait of Tran Vu Anh Duy — Creative Designer",
+    "toolsLabel": "SOFTWARE ARSENAL",
+    "skillsLabel": "CORE COMPETENCIES",
+    "tools": {
+      "figma": "Figma",
+      "photoshop": "Photoshop",
+      "illustrator": "Illustrator",
+      "afterEffects": "After Effects",
+      "videoEditing": "Premiere/DaVinci Resolve",
+      "generativeAi": "Generative AI Tools"
+    },
+    "coreSkills": [
+      "Design Thinking",
+      "AI-Assisted Design",
+      "Motion Graphics",
+      "Project Management",
+      "Time Management",
+      "Adaptability",
+      "Teamwork",
+      "Attention to Detail"
+    ],
+    "portraitToggle": "Keep portrait in color",
+    "portraitHint": "Hover or use Tab to reveal color. Tap to keep or turn off color."
+  },
+  "works": {
+    "sectionLabel": "Constellation of Projects",
+    "heading": "CONSTELLATION OF PROJECTS",
+    "cursorCta": "VIEW",
+    "projects": {
+      "eduraLms": {
+        "title": "EDURA LMS",
+        "category": "Product Design",
+        "description": "A learning platform designed to combat user fatigue through strict visual hierarchy and seamless user journeys. Rated 'Excellent' for UX innovation.",
+        "tags": [
+          "UX Research",
+          "UI Design",
+          "Prototyping"
+        ],
+        "linkUrl": "https://www.behance.net/gallery/241524417/Edura-LMS",
+        "previewAlt": "EDURA LMS project cover"
+      },
+      "verisApp": {
+        "title": "VERIS APP",
+        "category": "UX/UI Design",
+        "description": "A next-generation social network prioritizing user privacy and emotion. Redefines the feed algorithm interface for clarity.",
+        "tags": [
+          "Mobile App",
+          "User Interface",
+          "Interaction"
+        ],
+        "caseStudyLabel": "Case study coming soon",
+        "previewAlt": "VERIS app project cover"
+      },
+      "viePerfume": {
+        "title": "VIE PERFUME",
+        "category": "Graphic Design",
+        "description": "Comprehensive brand identity for a luxury fragrance line. Minimalist typography and packaging capturing olfactory elegance.",
+        "tags": [
+          "Branding",
+          "Packaging",
+          "Visual Identity"
+        ],
+        "caseStudyLabel": "Case study coming soon",
+        "previewAlt": "VIE perfume brand identity cover"
+      }
+    },
+    "tagsLabel": "Disciplines",
+    "viewCaseStudy": "View case study",
+    "selectLabel": "Select a project",
+    "interactionHint": "Hover or Tab to preview. Tap / press to keep a selection; tap again, tap the background or press Escape to clear.",
+    "behanceReference": "Reference on Behance",
+    "comingSoon": "Case study coming soon",
+    "constellations": {
+      "edura": "Centaurus",
+      "veris": "Gemini",
+      "vie": "Cygnus"
+    }
+  },
+  "skills": {
+    "heading": "Arsenal Nebula",
+    "toolsLabel": "Design Tools",
+    "competenciesLabel": "Core Competencies",
+    "technicalLabel": "Technical",
+    "commonLabel": "Common Skills",
+    "stageLabel": "Star logo stage",
+    "interactionHint": "Hover or use Tab to select a tool. Tap to select, tap again or press Escape to clear.",
+    "clearSelection": "Clear tool selection",
+    "activeTool": "Selected {{tool}}",
+    "idleStage": "Select a tool to see its star logo and related abilities.",
+    "toolNames": {
+      "figma": "Figma",
+      "photoshop": "Photoshop",
+      "illustrator": "Illustrator",
+      "after-effects": "After Effects",
+      "premiere-pro": "Premiere",
+      "davinci-resolve": "DaVinci Resolve",
+      "ai": "AI Tools"
+    },
+    "abilityNames": {
+      "wireframing": "Wireframing",
+      "prototyping": "Prototyping",
+      "designThinking": "Design Thinking",
+      "imageEditing": "Image editing",
+      "compositing": "Compositing",
+      "vectorDesign": "Vector design",
+      "brandingPackaging": "Branding/Packaging",
+      "motionGraphics": "Motion Graphics",
+      "vfx": "VFX",
+      "videoEditing": "Video editing",
+      "aiAssistedDesign": "AI-Assisted Design",
+      "teamwork": "Teamwork",
+      "projectManagement": "Project Management",
+      "timeManagement": "Time Management",
+      "adaptability": "Adaptability",
+      "attentionToDetail": "Attention to Detail"
+    },
+    "technicalNames": {
+      "web": "Basic HTML/CSS/JS",
+      "react": "React (learning)"
+    },
+    "aiMembers": "ChatGPT · Claude · Antigravity"
+  },
+  "education": {
+    "heading": "Star Map",
+    "institutions": {
+      "saigonUniversity": {
+        "name": "Saigon University",
+        "period": "2021–2026",
+        "degree": "Bachelor's Degree in Information Technology",
+        "description": "Graduated with High Honors in Information Technology. Focus: System Analysis and Design, HCI, Usability Testing, Web/App Prototyping."
+      },
+      "arenaMultimedia": {
+        "name": "Arena Multimedia",
+        "period": "2024–Present",
+        "degree": "Advanced Diploma in Multimedia",
+        "description": "Awarded Distinction in Semester 2 (UX/UI). Focus: user-centric design, mobile prototyping, wireframing, responsive web."
+      },
+      "greenAcademy": {
+        "name": "Green Academy",
+        "period": "2022–2023",
+        "degree": "Certificate in Professional Video Editing",
+        "description": "Distinction. Focus: VFX compositing, motion graphics. Top-performing student — Premiere & After Effects."
+      }
+    },
+    "mapNote": "Three overlapping paths of study, shaping one design practice.",
+    "interactionHint": "Hover or use Tab to awaken a constellation. Tap to select; tap the background or press Escape to clear.",
+    "clearSelection": "Return to the star field",
+    "constellations": {
+      "saigonUniversity": "Circinus",
+      "greenAcademy": "Telescopium",
+      "arenaMultimedia": "Pictor"
+    }
+  },
+  "experience": {
+    "sectionLabel": "Voyage Log",
+    "heading": "Voyage Log",
+    "positions": {
+      "hosanaMedia": {
+        "company": "HOSANA MEDIA",
+        "role": "Multimedia Executive",
+        "period": "Sep 2024 – Feb 2025",
+        "type": "Full-time",
+        "description": "Produced high-impact marketing assets (packaging, banners). Managed end-to-end filming and editing for TVCs & MVs."
+      },
+      "upwork": {
+        "company": "UPWORK",
+        "role": "Multimedia Creator",
+        "period": "2024 – Present",
+        "type": "Freelance",
+        "description": "Created and optimized video content for cross-platform growth. Filmed and edited promotional videos. UI/Visual design services."
+      },
+      "designveloper": {
+        "company": "DESIGNVELOPER",
+        "role": "UX/UI Designer Intern",
+        "period": "Sep 2025 – Dec 2025",
+        "type": "Internship",
+        "description": "Conducted UX research via surveys. Designed brand-consistent UI, optimizing layout and typography. Handed off designs to development teams."
+      }
+    }
+  },
+  "contact": {
+    "sectionLabel": "Transmission",
+    "heading": "LET'S CONNECT",
+    "alternateHeading": "HÃY KẾT NỐI",
+    "subHeading": "Send a transmission — my frequency is always open.",
+    "emailCta": "SEND A SIGNAL",
+    "email": "anhduy25work@gmail.com",
+    "emailUrl": "mailto:anhduy25work@gmail.com",
+    "phone": "0822 021 418",
+    "telemetryFreq": "FREQUENCY: 1420.405 MHz // HYDROGEN LINE (HI)",
+    "radioTerminal": "DEEP SPACE TRANSCEIVER",
+    "copyDispatch": "COPY DISPATCH",
+    "signalTransmitted": "SIGNAL TRANSMITTED // PACKET DELIVERED TO COCKPIT",
+    "facebookUrl": "https://www.facebook.com/tvad.25",
+    "linkedinUrl": "",
+    "behanceUrl": "",
+    "facebookLabel": "Facebook",
+    "linkedinLabel": "LinkedIn",
+    "behanceLabel": "Behance"
+  },
+  "nav": {
+    "menuLabel": "Menu",
+    "menuTitle": "Explore the odyssey",
+    "closeMenu": "Close navigation menu",
+    "closeLabel": "Close",
+    "languageLabel": "Language",
+    "langVi": "Vi",
+    "langEn": "En",
+    "langViFull": "Vietnamese",
+    "langEnFull": "English",
+    "socialPending": "This link is being updated.",
+    "logo": "ANH DUY",
+    "label": "Main navigation",
+    "homeLabel": "ANH DUY — Back to top",
+    "skip": "Skip to main content",
+    "openMenu": "Open navigation menu",
+    "menuPending": "The navigation menu is being prepared.",
+    "about": "About",
+    "works": "Works",
+    "skills": "Skills",
+    "education": "Education",
+    "experience": "Experience",
+    "contact": "Contact",
+    "hero": "Home",
+    "missionProgress": "Mission progress"
+  },
+  "footer": {
+    "label": "Site footer",
+    "copyright": "© 2026 Tran Vu Anh Duy — Built among the stars.",
+    "disciplines": "Graphic / Multimedia / UX/UI",
+    "buildCredit": "Built with GSAP {{version}}",
+    "websiteLabel": "Website",
+    "websiteUrl": ""
+  },
+  "preloader": {
+    "counterLabel": "LINKING TO THE COSMOS...",
+    "counterRange": "0–100%",
+    "minimalLabel": "STELLAR ODYSSEY — 2026"
+  },
+  "common": {
+    "opensInNewTab": "opens in a new tab",
+    "audio": {
+      "label": "Space audio",
+      "prefix": "SOUND:",
+      "on": "ON",
+      "off": "OFF",
+      "turnOn": "Turn space audio on",
+      "turnOff": "Turn space audio off",
+      "unavailable": "Audio could not start in this browser. You can try again."
+    },
+    "theme": {
+      "toLight": "Switch to light mode",
+      "toDark": "Switch to dark mode"
+    },
+    "profile": {
+      "displayName": "TRAN VU ANH DUY",
+      "englishName": "",
+      "role": "Creative Designer",
+      "disciplines": "UX/UI + Graphic + Motion"
+    }
+  },
+  "edura": {
+    "metaTitle": "EDURA LMS — UI/UX concept · Tran Vu Anh Duy",
+    "metaDescription": "The final UX/UI semester project at Arena Multimedia: an EDURA LMS concept and Figma prototype. Lead UI scope, interface decisions and the project's constraints.",
+    "overview": {
+      "intro": {
+        "heading": "EDURA LMS",
+        "body": "EDURA is a Figma UI/UX concept and prototype for a learning-management platform serving learners at training centers. The design aims to bring schedules, grades, tuition and assignments into one place."
+      },
+      "role": {
+        "heading": "Role: Lead UI",
+        "body": "As Lead UI, I made decisions about EDURA’s layout rules, primary color direction and interface system design."
+      }
+    },
+    "problem": {
+      "framing": {
+        "heading": "Learning information across multiple channels",
+        "body": "The project materials frame a problem of schedules, materials and submission deadlines spread across multiple channels. EDURA’s proposed direction is to bring this information together in a learner interface."
+      }
+    },
+    "decisions": {
+      "layout": {
+        "heading": "Layout rules",
+        "body": "I was responsible for decisions about layout rules. In the overview, entry points for grades, schedules, tuition and courses appear together, with attendance and learning progress below."
+      },
+      "color": {
+        "heading": "Primary color direction",
+        "body": "I was responsible for the primary color direction. The EDURA materials show blue in the identity and interface, alongside light surfaces and distinct colors for function groups in the overview."
+      },
+      "system": {
+        "heading": "Interface system design",
+        "body": "Interface system design was part of my Lead UI scope for the EDURA concept and Figma prototype."
+      },
+      "heading": "UI decisions"
+    },
+    "artifacts": {
+      "overview": {
+        "body": "The EDURA mockup presents information and actions for grades, schedules, tuition, courses, attendance, assignments, submission and progress. It is a design overview rather than a screen sequence documenting a complete interaction flow."
+      },
+      "direction": {
+        "body": "The concept materials propose centralized learning information, a progress dashboard and support tailored to training centers. These descriptions document design intent, without establishing operational features or measured impact."
+      },
+      "heading": "Interface and direction"
+    },
+    "results": {
+      "deliverables": {
+        "heading": "Concept and prototype deliverables",
+        "body": "The design takes the form of a UI/UX concept and Figma prototype."
+      }
+    },
+    "eyebrow": "Product Design · Concept & prototype",
+    "skip": "Skip to project content",
+    "return": "Back to projects",
+    "viewOriginal": "View original image",
+    "behance": "Source project on Behance",
+    "context": "The final project for the UX/UI semester at Arena Multimedia.",
+    "reflection": {
+      "heading": "Project reflection",
+      "prototype": "Partway through the project, the team was short of one member, which held up prototype work for a period.",
+      "references": "The project also had few references from LMS products with publicly available information and interfaces."
+    },
+    "figures": {
+      "overview": {
+        "alt": "EDURA overview mockup showing grades, schedules, tuition, courses, attendance, assignments and progress.",
+        "caption": "EDURA interface overview; figures within the mockup are sample interface data.",
+        "name": "Interface overview"
+      },
+      "problem": {
+        "alt": "Slide describing fragmented learning information and schedule tracking difficulties.",
+        "caption": "The problem as framed in the EDURA concept materials.",
+        "name": "Learning information across multiple channels"
+      },
+      "solution": {
+        "alt": "EDURA solution slide proposing centralized information, automated support, a dashboard and center-specific customization.",
+        "caption": "The EDURA concept’s proposed solution. The quote in this slide is a design statement.",
+        "name": "Proposed solution"
+      }
+    }
+  }
+}

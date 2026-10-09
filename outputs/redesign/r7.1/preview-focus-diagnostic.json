@@ -1,0 +1,429 @@
+{
+  "status": "fail",
+  "checkedAt": "2026-10-09T01:18:47.761Z",
+  "base": "http://127.0.0.1:4173",
+  "configurations": [
+    {
+      "width": 390,
+      "poses": [
+        {
+          "url": "/#work",
+          "canvas": 1,
+          "focus": "",
+          "y": 10374,
+          "nativeY": 10374,
+          "finaleHeightVH": 2.25,
+          "p": 0.059998683517640865,
+          "labelOpacity": 0.500016,
+          "copyOpacity": 0,
+          "copyInert": true,
+          "selected": "edura",
+          "lang": "vi",
+          "reduced": false,
+          "overflow": 0,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "history": null
+        },
+        {
+          "url": "/#work",
+          "canvas": 1,
+          "focus": "",
+          "y": 10735,
+          "nativeY": 10735,
+          "finaleHeightVH": 2.25,
+          "p": 0.25009873617693523,
+          "labelOpacity": 0,
+          "copyOpacity": 0,
+          "copyInert": true,
+          "selected": "edura",
+          "lang": "vi",
+          "reduced": false,
+          "overflow": 0,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "history": null
+        },
+        {
+          "url": "/#work",
+          "canvas": 1,
+          "focus": "",
+          "y": 11020,
+          "nativeY": 11020,
+          "finaleHeightVH": 2.25,
+          "p": 0.40017772511848343,
+          "labelOpacity": 0,
+          "copyOpacity": 0,
+          "copyInert": true,
+          "selected": "edura",
+          "lang": "vi",
+          "reduced": false,
+          "overflow": 0,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "history": null
+        },
+        {
+          "url": "/#work",
+          "canvas": 1,
+          "focus": "",
+          "y": 11361,
+          "nativeY": 11361,
+          "finaleHeightVH": 2.25,
+          "p": 0.5797459189046866,
+          "labelOpacity": 0,
+          "copyOpacity": 0,
+          "copyInert": true,
+          "selected": "edura",
+          "lang": "vi",
+          "reduced": false,
+          "overflow": 0,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "history": null
+        },
+        {
+          "url": "/#work",
+          "canvas": 1,
+          "focus": "",
+          "y": 11684,
+          "nativeY": 11684,
+          "finaleHeightVH": 2.25,
+          "p": 0.7498354397051079,
+          "labelOpacity": 0,
+          "copyOpacity": 0,
+          "copyInert": true,
+          "selected": "edura",
+          "lang": "vi",
+          "reduced": false,
+          "overflow": 0,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "history": null
+        },
+        {
+          "url": "/#work",
+          "canvas": 1,
+          "focus": "",
+          "y": 12064,
+          "nativeY": 12064,
+          "finaleHeightVH": 2.25,
+          "p": 0.9499407582938388,
+          "labelOpacity": 0,
+          "copyOpacity": 0.623123,
+          "copyInert": true,
+          "selected": "edura",
+          "lang": "vi",
+          "reduced": false,
+          "overflow": 0,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "history": null
+        },
+        {
+          "url": "/#work",
+          "canvas": 1,
+          "focus": "",
+          "y": 11684,
+          "nativeY": 11684,
+          "finaleHeightVH": 2.25,
+          "p": 0.7498354397051079,
+          "labelOpacity": 0,
+          "copyOpacity": 0,
+          "copyInert": true,
+          "selected": "edura",
+          "lang": "vi",
+          "reduced": false,
+          "overflow": 0,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "history": null
+        },
+        {
+          "url": "/#work",
+          "canvas": 1,
+          "focus": "",
+          "y": 11361,
+          "nativeY": 11361,
+          "finaleHeightVH": 2.25,
+          "p": 0.5797459189046866,
+          "labelOpacity": 0,
+          "copyOpacity": 0,
+          "copyInert": true,
+          "selected": "edura",
+          "lang": "vi",
+          "reduced": false,
+          "overflow": 0,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "history": null
+        },
+        {
+          "url": "/#work",
+          "canvas": 1,
+          "focus": "",
+          "y": 11020,
+          "nativeY": 11020,
+          "finaleHeightVH": 2.25,
+          "p": 0.40017772511848343,
+          "labelOpacity": 0,
+          "copyOpacity": 0,
+          "copyInert": true,
+          "selected": "edura",
+          "lang": "vi",
+          "reduced": false,
+          "overflow": 0,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "history": null
+        },
+        {
+          "url": "/#work",
+          "canvas": 1,
+          "focus": "",
+          "y": 10735,
+          "nativeY": 10735,
+          "finaleHeightVH": 2.25,
+          "p": 0.25009873617693523,
+          "labelOpacity": 0,
+          "copyOpacity": 0,
+          "copyInert": true,
+          "selected": "edura",
+          "lang": "vi",
+          "reduced": false,
+          "overflow": 0,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "history": null
+        },
+        {
+          "url": "/#work",
+          "canvas": 1,
+          "focus": "",
+          "y": 10374,
+          "nativeY": 10374,
+          "finaleHeightVH": 2.25,
+          "p": 0.059998683517640865,
+          "labelOpacity": 0.500016,
+          "copyOpacity": 0,
+          "copyInert": true,
+          "selected": "edura",
+          "lang": "vi",
+          "reduced": false,
+          "overflow": 0,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "history": null
+        }
+      ],
+      "errors": [],
+      "warnings": [
+        "Service Worker registration blocked by Playwright",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+      ],
+      "routes": [
+        {
+          "url": "/projects/edura",
+          "canvas": 0,
+          "focus": "edura-title",
+          "y": 0,
+          "nativeY": 0,
+          "finaleHeightVH": null,
+          "p": null,
+          "labelOpacity": null,
+          "copyOpacity": null,
+          "lang": "vi",
+          "reduced": false,
+          "overflow": 0,
+          "title": "EDURA LMS — UI/UX concept · Trần Vũ Anh Duy",
+          "history": {
+            "stellar": {
+              "id": "41c2e16a-4bab-4586-aeaa-49f40c7971f4",
+              "from": "1ec2b759-cb3e-4325-b779-6fa4b19fbaf1"
+            }
+          }
+        }
+      ],
+      "focusDiagnostic": {
+        "state": {
+          "url": "/#work",
+          "canvas": 1,
+          "focus": "work",
+          "y": 8814,
+          "nativeY": 8814,
+          "finaleHeightVH": 2.25,
+          "p": 0,
+          "labelOpacity": 1,
+          "copyOpacity": 0,
+          "copyInert": true,
+          "selected": "edura",
+          "lang": "vi",
+          "reduced": false,
+          "overflow": 0,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "history": {
+            "stellar": {
+              "id": "1ec2b759-cb3e-4325-b779-6fa4b19fbaf1",
+              "snapshot": {
+                "y": 8814,
+                "width": 390,
+                "height": 844,
+                "chapter": "departure",
+                "p": 0.8969486847198613,
+                "scrollProgress": 0.6770625288062683,
+                "selection": "edura",
+                "orbit": {
+                  "phase": 0,
+                  "origin": 0,
+                  "velocity": 0,
+                  "latched": true,
+                  "visited": true,
+                  "captures": 1,
+                  "resumePending": false
+                },
+                "pose": [
+                  0.05933999738486806,
+                  4.029669998692434,
+                  -158.5165000653783,
+                  72.33155294404146,
+                  -1.246139945082227,
+                  -209.70330001307565
+                ],
+                "focus": "work-case-edura"
+              }
+            }
+          }
+        },
+        "events": [
+          {
+            "event": "focus()",
+            "id": "work-target-edura",
+            "at": 808.1999999997206,
+            "stack": "Error\n    at HTMLElement.focus (<anonymous>:5:142)\n    at http://127.0.0.1:4173/assets/index-DyidfQ--.js:21:75648"
+          },
+          {
+            "event": "focusin",
+            "id": "work-target-edura",
+            "at": 809.0999999996275,
+            "active": "work-target-edura",
+            "history": null
+          },
+          {
+            "event": "popstate",
+            "at": 19929.5,
+            "active": "",
+            "history": null
+          },
+          {
+            "event": "focusin",
+            "id": "work",
+            "at": 19930,
+            "active": "work",
+            "history": null
+          },
+          {
+            "event": "focusin",
+            "id": "work-case-edura",
+            "at": 21178.599999999627,
+            "active": "work-case-edura",
+            "history": null
+          },
+          {
+            "event": "focus()",
+            "id": "edura-title",
+            "at": 21220.19999999972,
+            "stack": "Error\n    at HTMLElement.focus (<anonymous>:5:142)\n    at E3.$s.dependencies (http://127.0.0.1:4173/assets/index-DyidfQ--.js:21:78638)\n    at f (http://127.0.0.1:4173/assets/index-DyidfQ--.js:10:158401)\n    at t.add (http://127.0.0.1:4173/assets/index-DyidfQ--.js:10:158500)\n    at http://127.0.0.1:4173/assets/index-DyidfQ--.js:10:183926\n    at No (http://127.0.0.1:4173/assets/index-DyidfQ--.js:9:92988)\n    at bv (http://127.0.0.1:4173/assets/index-DyidfQ--.js:9:97531)\n    at qa (http://127.0.0.1:4173/assets/index-DyidfQ--.js:9:106421)\n    at bv (http://127.0.0.1:4173/assets/index-DyidfQ--.js:9:98523)\n    at qa (http://127.0.0.1:4173/assets/index-DyidfQ--.js:9:106421)"
+          },
+          {
+            "event": "focusin",
+            "id": "edura-title",
+            "at": 21220.5,
+            "active": "edura-title",
+            "history": {
+              "stellar": {
+                "id": "41c2e16a-4bab-4586-aeaa-49f40c7971f4",
+                "from": "1ec2b759-cb3e-4325-b779-6fa4b19fbaf1"
+              }
+            }
+          },
+          {
+            "event": "popstate",
+            "at": 22054,
+            "active": "edura-title",
+            "history": {
+              "stellar": {
+                "id": "1ec2b759-cb3e-4325-b779-6fa4b19fbaf1",
+                "snapshot": {
+                  "y": 8814,
+                  "width": 390,
+                  "height": 844,
+                  "chapter": "departure",
+                  "p": 0.8969486847198613,
+                  "scrollProgress": 0.6770625288062683,
+                  "selection": "edura",
+                  "orbit": {
+                    "phase": 0,
+                    "origin": 0,
+                    "velocity": 0,
+                    "latched": true,
+                    "visited": true,
+                    "captures": 1,
+                    "resumePending": false
+                  },
+                  "pose": [
+                    0.05933999738486806,
+                    4.029669998692434,
+                    -158.5165000653783,
+                    72.33155294404146,
+                    -1.246139945082227,
+                    -209.70330001307565
+                  ],
+                  "focus": "work-case-edura"
+                }
+              }
+            }
+          },
+          {
+            "event": "focusin",
+            "id": "work",
+            "at": 22099.099999999627,
+            "active": "work",
+            "history": {
+              "stellar": {
+                "id": "1ec2b759-cb3e-4325-b779-6fa4b19fbaf1",
+                "snapshot": {
+                  "y": 8814,
+                  "width": 390,
+                  "height": 844,
+                  "chapter": "departure",
+                  "p": 0.8969486847198613,
+                  "scrollProgress": 0.6770625288062683,
+                  "selection": "edura",
+                  "orbit": {
+                    "phase": 0,
+                    "origin": 0,
+                    "velocity": 0,
+                    "latched": true,
+                    "visited": true,
+                    "captures": 1,
+                    "resumePending": false
+                  },
+                  "pose": [
+                    0.05933999738486806,
+                    4.029669998692434,
+                    -158.5165000653783,
+                    72.33155294404146,
+                    -1.246139945082227,
+                    -209.70330001307565
+                  ],
+                  "focus": "work-case-edura"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Compiled DOM/native scroll verification; no dev imports or source probes.",
+    "Phone viewport/reduced-motion emulated on desktop Edge; not physical phone.",
+    "Exact geometry/phase and GPU timing are in the dev matrix."
+  ],
+  "browser": "154.0.4258.62",
+  "failure": {
+    "message": "page.waitForFunction: Timeout 30000ms exceeded.",
+    "stack": "page.waitForFunction: Timeout 30000ms exceeded.\n    at D:\\Projects\\my-portfolio-2026\\outputs\\redesign\\r7.1\\preview-smoke.mjs:65:22"
+  }
+}

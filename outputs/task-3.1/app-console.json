@@ -1,0 +1,20 @@
+[
+  {
+    "level": "warn",
+    "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "timestamp": "2026-10-05T18:49:39.891Z",
+    "url": "http://127.0.0.1:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7c99fbd2"
+  },
+  {
+    "level": "warn",
+    "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "timestamp": "2026-10-05T18:53:32.325Z",
+    "url": "http://127.0.0.1:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7c99fbd2"
+  },
+  {
+    "level": "warn",
+    "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "timestamp": "2026-10-05T18:54:54.903Z",
+    "url": "http://127.0.0.1:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7c99fbd2"
+  }
+]

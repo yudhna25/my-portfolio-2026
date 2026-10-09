@@ -1,0 +1,150 @@
+{
+  "results": [
+    {
+      "cycle": 0,
+      "mounted": {
+        "counts": {
+          "geometries": 3,
+          "materials": 11,
+          "textures": 9
+        },
+        "memory": {
+          "geometries": 10,
+          "textures": 26
+        },
+        "subscribers": 10,
+        "canvas": 1,
+        "triggers": 48
+      },
+      "out": {
+        "target": null,
+        "active": false,
+        "channels": [
+          null,
+          null,
+          null
+        ],
+        "uploads": 223
+      },
+      "unmounted": {
+        "disposed": {
+          "geometries": 3,
+          "materials": 11,
+          "textures": 9
+        },
+        "canvas": 0,
+        "subscribers": 0,
+        "triggers": 0,
+        "smoother": false,
+        "state": {
+          "hover": null,
+          "focus": null,
+          "selection": null,
+          "visible": false
+        }
+      }
+    },
+    {
+      "cycle": 1,
+      "mounted": {
+        "counts": {
+          "geometries": 3,
+          "materials": 11,
+          "textures": 9
+        },
+        "memory": {
+          "geometries": 10,
+          "textures": 26
+        },
+        "subscribers": 10,
+        "canvas": 1,
+        "triggers": 38
+      },
+      "out": {
+        "target": null,
+        "active": false,
+        "channels": [
+          null,
+          null,
+          null
+        ],
+        "uploads": 226
+      },
+      "unmounted": {
+        "disposed": {
+          "geometries": 3,
+          "materials": 11,
+          "textures": 9
+        },
+        "canvas": 0,
+        "subscribers": 0,
+        "triggers": 0,
+        "smoother": false,
+        "state": {
+          "hover": null,
+          "focus": null,
+          "selection": null,
+          "visible": false
+        }
+      }
+    },
+    {
+      "cycle": 2,
+      "mounted": {
+        "counts": {
+          "geometries": 3,
+          "materials": 11,
+          "textures": 9
+        },
+        "memory": {
+          "geometries": 10,
+          "textures": 26
+        },
+        "subscribers": 10,
+        "canvas": 1,
+        "triggers": 38
+      },
+      "out": {
+        "target": null,
+        "active": false,
+        "channels": [
+          null,
+          null,
+          null
+        ],
+        "uploads": 227
+      },
+      "unmounted": {
+        "disposed": {
+          "geometries": 3,
+          "materials": 11,
+          "textures": 9
+        },
+        "canvas": 0,
+        "subscribers": 0,
+        "triggers": 0,
+        "smoother": false,
+        "state": {
+          "hover": null,
+          "focus": null,
+          "selection": null,
+          "visible": false
+        }
+      }
+    },
+    {
+      "fallback": {
+        "canvas": 0,
+        "tools": 7,
+        "abilities": 11,
+        "text": "TINH VÂN KỸ NĂNG\n\nDi chuột hoặc dùng Tab để chọn công cụ. Chạm để chọn, chạm lại hoặc nhấn Escape để bỏ chọn.\n\nCÔNG CỤ THIẾT KẾ\nFigma\nPhotoshop\nIllustrator\nAfter Effects\nPremiere\nDaVinci Resolve\nAI Tools\nBỎ CHỌN CÔNG CỤ\nĐang chọn Figma\nNĂNG LỰC CỐT LÕI\nWireframing\nPrototyping\nDesign Thinking\nXử lý ảnh\nCompositing\nThiết kế vector\nBranding/Packaging\nMotion Graphics\nVFX\nDựng phim\nAI-Assisted Design\nKỸ NĂNG LÀM VIỆC CHUNG\nTeamwork\nProject Management\nTime Management\nAdaptability\nAttention to Detail\nKỸ THUẬT\nHTML/CSS/JS cơ bản\nReact (đang học)",
+        "fallback": "rgb(5, 5, 5)"
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.WebGLRenderer: WEBGL_lose_context extension not supported."
+  ]
+}

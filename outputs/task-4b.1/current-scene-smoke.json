@@ -1,0 +1,21 @@
+{
+  "time": "2026-10-06T18:57:13.264Z",
+  "errors": [],
+  "surface": {
+    "bg": "rgba(5, 5, 5, 0.65)",
+    "blur": "blur(12px)",
+    "guard": "linear-gradient(color(srgb 0.0196078 0.0196078 0.0196078 / 0.2), color(srgb 0.0196078 0.0196078 0.0196078 / 0.2))",
+    "color": "rgb(250, 250, 250)",
+    "client": 1440,
+    "scroll": 1440,
+    "canvas": 1
+  },
+  "concurrent3d": {
+    "src/3d/GalaxyScene.jsx": "e39c49a452674a3e76485b98758b40ba9e5d018799f04509cb34afb79554a648",
+    "src/3d/components/Constellations.jsx": "02f1502255101e29f1a45872479d165a03d366e7c9668fe8bb6168b89f0c0eb5",
+    "src/3d/components/ShootingStars.jsx": "c0ab81784ca2ed24ea76655eca18ec3c36b23afe984cc898733be6601242b36c",
+    "src/3d/components/StardustWake.jsx": "b7d39ef17020f46cc84ad7083a739ce222ff07b4d026355dd478b21aeec9b0ce",
+    "src/3d/shaders/blackHole.js": "6cb9002d236f12d481fa9b44df89adfa3da932eade9bbecde95fb7eb70ebc3ad",
+    "src/3d/utils/shootingStars.js": "81fc500abe958591e837aa2512d1237203ef94cb637e1f7d9d550c28f3ce2186"
+  }
+}

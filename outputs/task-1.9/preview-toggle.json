@@ -1,0 +1,19 @@
+{
+  "before": {
+    "attribute": "light",
+    "bodyBackground": "rgb(250, 250, 250)",
+    "bodyColor": "rgb(17, 17, 17)",
+    "buttonOutside": true,
+    "loading": true,
+    "meta": "#FAFAFA"
+  },
+  "after": {
+    "attribute": null,
+    "background": "rgb(5, 5, 5)",
+    "buttonOutside": true,
+    "color": "rgb(250, 250, 250)",
+    "label": "Chuyển chế độ sáng",
+    "loading": false,
+    "meta": "#050505"
+  }
+}

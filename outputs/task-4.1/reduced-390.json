@@ -1,0 +1,5324 @@
+{
+  "samples": [
+    {
+      "id": "hero",
+      "reduced": true,
+      "lang": "vi",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "TRẦN VŨ ANH DUY",
+          "rect": {
+            "x": 16,
+            "y": 245.34375,
+            "w": 348,
+            "h": 97.3125,
+            "right": 364
+          },
+          "font": "46.8px",
+          "scroll": 348,
+          "client": 348,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Về đầu trang",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Mở menu điều hướng",
+          "x": 312,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Chuyển chế độ sáng",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": 1090.171875,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": 8604.6875,
+            "w": 340,
+            "h": 1989.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": 3940.015625,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 15176.484375,
+        "w": 332,
+        "h": 266.390625,
+        "right": 356
+      },
+      "localScroll": 380,
+      "localClient": 380,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 1090.171875,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": 3135.234375,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3260.015625,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": 3548.015625,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3940.015625,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6824.265625,
+          "w": 332,
+          "h": 1149.3125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 8315.75,
+          "w": 340,
+          "h": 2278.6875,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 10787.4375,
+          "w": 340,
+          "h": 3270.40625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 14400.015625,
+          "w": 332,
+          "h": 582.46875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 15176.484375,
+          "w": 332,
+          "h": 266.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 15522.875,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "reduced": true,
+      "lang": "vi",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "TRẦN VŨ / ANH DUY",
+          "rect": {
+            "x": 24,
+            "y": 1004.671875,
+            "w": 332,
+            "h": 66.0625,
+            "right": 356
+          },
+          "font": "28px",
+          "scroll": 332,
+          "client": 332,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "KHO VŨ KHÍ PHẦN MỀM",
+          "rect": {
+            "x": 24,
+            "y": 1656.234375,
+            "w": 332,
+            "h": 19.5,
+            "right": 356
+          },
+          "font": "12px",
+          "scroll": 332,
+          "client": 332,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "NĂNG LỰC CỐT LÕI",
+          "rect": {
+            "x": 24,
+            "y": 1835.734375,
+            "w": 332,
+            "h": 19.5,
+            "right": 356
+          },
+          "font": "12px",
+          "scroll": 332,
+          "client": 332,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Về đầu trang",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Mở menu điều hướng",
+          "x": 312,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Chuyển chế độ sáng",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": 198.171875,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": 7712.6875,
+            "w": 340,
+            "h": 1989.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": 3048.015625,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 14284.484375,
+        "w": 332,
+        "h": 266.390625,
+        "right": 356
+      },
+      "localScroll": 380,
+      "localClient": 380,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 198.171875,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": 2243.234375,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 2368.015625,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": 2656.015625,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3048.015625,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 5932.265625,
+          "w": 332,
+          "h": 1149.3125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 7423.75,
+          "w": 340,
+          "h": 2278.6875,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 9895.4375,
+          "w": 340,
+          "h": 3270.40625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 13508.015625,
+          "w": 332,
+          "h": 582.46875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 14284.484375,
+          "w": 332,
+          "h": 266.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 14630.875,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "skills",
+      "reduced": true,
+      "lang": "vi",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "Tinh Vân Kỹ Năng",
+          "rect": {
+            "x": 24,
+            "y": 198.234375,
+            "w": 332,
+            "h": 76.78125,
+            "right": 356
+          },
+          "font": "32px",
+          "scroll": 332,
+          "client": 332,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Công cụ thiết kế",
+          "rect": {
+            "x": 49,
+            "y": 1076.015625,
+            "w": 282,
+            "h": 24.75,
+            "right": 331
+          },
+          "font": "18px",
+          "scroll": 282,
+          "client": 282,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Năng lực cốt lõi",
+          "rect": {
+            "x": 49,
+            "y": 1610.765625,
+            "w": 282,
+            "h": 24.75,
+            "right": 331
+          },
+          "font": "18px",
+          "scroll": 282,
+          "client": 282,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Kỹ thuật",
+          "rect": {
+            "x": 49,
+            "y": 2273.515625,
+            "w": 282,
+            "h": 24.75,
+            "right": 331
+          },
+          "font": "18px",
+          "scroll": 282,
+          "client": 282,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [
+        {
+          "text": "Tạm dừng quỹ đạo",
+          "tag": "INPUT",
+          "x": 173.796875,
+          "y": 554.015625,
+          "w": 169.203125,
+          "h": 44,
+          "right": 343
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Về đầu trang",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Mở menu điều hướng",
+          "x": 312,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Chuyển chế độ sáng",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": -1846.828125,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": 5667.6875,
+            "w": 340,
+            "h": 1989.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": 1003.015625,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 12239.484375,
+        "w": 332,
+        "h": 266.390625,
+        "right": 356
+      },
+      "localScroll": 380,
+      "localClient": 380,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -1846.828125,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": 198.234375,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 323.015625,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": 611.015625,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 1003.015625,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3887.265625,
+          "w": 332,
+          "h": 1149.3125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 5378.75,
+          "w": 340,
+          "h": 2278.6875,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 7850.4375,
+          "w": 340,
+          "h": 3270.40625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 11463.015625,
+          "w": 332,
+          "h": 582.46875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 12239.484375,
+          "w": 332,
+          "h": 266.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 12585.875,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "reduced": true,
+      "lang": "vi",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "Bản Đồ Sao",
+          "rect": {
+            "x": 20,
+            "y": 198.265625,
+            "w": 340,
+            "h": 40,
+            "right": 360
+          },
+          "font": "32px",
+          "scroll": 340,
+          "client": 340,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Saigon University",
+          "rect": {
+            "x": 60,
+            "y": 339.265625,
+            "w": 300,
+            "h": 30,
+            "right": 360
+          },
+          "font": "24px",
+          "scroll": 300,
+          "client": 300,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Arena Multimedia",
+          "rect": {
+            "x": 60,
+            "y": 618.265625,
+            "w": 300,
+            "h": 30,
+            "right": 360
+          },
+          "font": "24px",
+          "scroll": 300,
+          "client": 300,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Green Academy",
+          "rect": {
+            "x": 60,
+            "y": 923.265625,
+            "w": 300,
+            "h": 30,
+            "right": 360
+          },
+          "font": "24px",
+          "scroll": 300,
+          "client": 300,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Về đầu trang",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Mở menu điều hướng",
+          "x": 312,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Chuyển chế độ sáng",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": -4429.828125,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": 3084.6875,
+            "w": 340,
+            "h": 1989.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": -1579.984375,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 9656.484375,
+        "w": 332,
+        "h": 266.390625,
+        "right": 356
+      },
+      "localScroll": 380,
+      "localClient": 380,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -4429.828125,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -2384.765625,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -2259.984375,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -1971.984375,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -1579.984375,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 1304.265625,
+          "w": 332,
+          "h": 1149.3125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 2795.75,
+          "w": 340,
+          "h": 2278.6875,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 5267.4375,
+          "w": 340,
+          "h": 3270.40625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 8880.015625,
+          "w": 332,
+          "h": 582.46875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 9656.484375,
+          "w": 332,
+          "h": 266.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 10002.875,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "experience",
+      "reduced": true,
+      "lang": "vi",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "Nhật Ký Hành Trình",
+          "rect": {
+            "x": 24,
+            "y": 234.265625,
+            "w": 332,
+            "h": 67.1875,
+            "right": 356
+          },
+          "font": "28px",
+          "scroll": 332,
+          "client": 332,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "HOSANA MEDIA",
+          "rect": {
+            "x": 49,
+            "y": 374.453125,
+            "w": 282,
+            "h": 25,
+            "right": 331
+          },
+          "font": "20px",
+          "scroll": 282,
+          "client": 282,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "UPWORK",
+          "rect": {
+            "x": 49,
+            "y": 713.828125,
+            "w": 282,
+            "h": 25,
+            "right": 331
+          },
+          "font": "20px",
+          "scroll": 282,
+          "client": 282,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "DESIGNVELOPER",
+          "rect": {
+            "x": 49,
+            "y": 1053.203125,
+            "w": 282,
+            "h": 25,
+            "right": 331
+          },
+          "font": "20px",
+          "scroll": 282,
+          "client": 282,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Về đầu trang",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Mở menu điều hướng",
+          "x": 312,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Chuyển chế độ sáng",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": -5535.828125,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": 1978.6875,
+            "w": 340,
+            "h": 1989.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": -2685.984375,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 8550.484375,
+        "w": 332,
+        "h": 266.390625,
+        "right": 356
+      },
+      "localScroll": 865,
+      "localClient": 380,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -5535.828125,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -3490.765625,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -3365.984375,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -3077.984375,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -2685.984375,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 198.265625,
+          "w": 332,
+          "h": 1149.3125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 1689.75,
+          "w": 340,
+          "h": 2278.6875,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 4161.4375,
+          "w": 340,
+          "h": 3270.40625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 7774.015625,
+          "w": 332,
+          "h": 582.46875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 8550.484375,
+          "w": 332,
+          "h": 266.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 8896.875,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "reduced": true,
+      "lang": "vi",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "CHÒM SAO DỰ ÁN",
+          "rect": {
+            "x": 20,
+            "y": 242.75,
+            "w": 340,
+            "h": 34.9375,
+            "right": 360
+          },
+          "font": "31.2px",
+          "scroll": 340,
+          "client": 340,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "EDURA LMS",
+          "rect": {
+            "x": 41,
+            "y": 759.9375,
+            "w": 298,
+            "h": 25,
+            "right": 339
+          },
+          "font": "20px",
+          "scroll": 298,
+          "client": 298,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "VERIS APP",
+          "rect": {
+            "x": 41,
+            "y": 1453.1875,
+            "w": 298,
+            "h": 25,
+            "right": 339
+          },
+          "font": "20px",
+          "scroll": 298,
+          "client": 298,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "VIE PERFUME",
+          "rect": {
+            "x": 41,
+            "y": 2120.4375,
+            "w": 298,
+            "h": 25,
+            "right": 339
+          },
+          "font": "20px",
+          "scroll": 298,
+          "client": 298,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [
+        {
+          "text": "Tất cả",
+          "tag": "BUTTON",
+          "x": 20,
+          "y": 342.6875,
+          "w": 76.75,
+          "h": 44,
+          "right": 96.75
+        },
+        {
+          "text": "Product Design",
+          "tag": "BUTTON",
+          "x": 104.75,
+          "y": 342.6875,
+          "w": 137.765625,
+          "h": 44,
+          "right": 242.515625
+        },
+        {
+          "text": "UX/UI",
+          "tag": "BUTTON",
+          "x": 250.515625,
+          "y": 342.6875,
+          "w": 70.1875,
+          "h": 44,
+          "right": 320.703125
+        },
+        {
+          "text": "Graphic",
+          "tag": "BUTTON",
+          "x": 20,
+          "y": 394.6875,
+          "w": 85.734375,
+          "h": 44,
+          "right": 105.734375
+        },
+        {
+          "text": "Product Design01EDURA LMSNền tảng học tập thiết kế để chống lại sự mệt mỏi của người dùng bằng hệ thống phân cấp thị giác chặt chẽ và hành trình mượt mà. Được đánh giá 'Excellent' về đổi mới UX.UX ResearchUI DesignPrototypingXem case study↗",
+          "tag": "A",
+          "x": 20,
+          "y": 486.6875,
+          "w": 340,
+          "h": 629.25,
+          "right": 360
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 41,
+          "y": 1718.1875,
+          "w": 184.40625,
+          "h": 44,
+          "right": 225.40625
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 41,
+          "y": 2411.4375,
+          "w": 184.40625,
+          "h": 44,
+          "right": 225.40625
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Về đầu trang",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Mở menu điều hướng",
+          "x": 312,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Chuyển chế độ sáng",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": -7027.828125,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": 486.6875,
+            "w": 340,
+            "h": 1989.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": -4177.984375,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 7058.484375,
+        "w": 332,
+        "h": 266.390625,
+        "right": 356
+      },
+      "localScroll": 380,
+      "localClient": 380,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -7027.828125,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -4982.765625,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -4857.984375,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -4569.984375,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -4177.984375,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -1293.734375,
+          "w": 332,
+          "h": 1149.3125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 197.75,
+          "w": 340,
+          "h": 2278.6875,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 2669.4375,
+          "w": 340,
+          "h": 3270.40625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6282.015625,
+          "w": 332,
+          "h": 582.46875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 7058.484375,
+          "w": 332,
+          "h": 266.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 7404.875,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "playground",
+      "reduced": true,
+      "lang": "vi",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "Trạm Không Gian",
+          "rect": {
+            "x": 20,
+            "y": 198.4375,
+            "w": 340,
+            "h": 71.65625,
+            "right": 360
+          },
+          "font": "32px",
+          "scroll": 340,
+          "client": 340,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Starfield Explorer",
+          "rect": {
+            "x": 41,
+            "y": 339.09375,
+            "w": 189.234375,
+            "h": 24.75,
+            "right": 230.234375
+          },
+          "font": "18px",
+          "scroll": 189,
+          "client": 189,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Nebula Shader Playground",
+          "rect": {
+            "x": 41,
+            "y": 759.34375,
+            "w": 267.59375,
+            "h": 49.5,
+            "right": 308.59375
+          },
+          "font": "18px",
+          "scroll": 268,
+          "client": 268,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Scroll Progress Orbit",
+          "rect": {
+            "x": 41,
+            "y": 1204.34375,
+            "w": 222.859375,
+            "h": 24.75,
+            "right": 263.859375
+          },
+          "font": "18px",
+          "scroll": 223,
+          "client": 223,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Magnetic Field",
+          "rect": {
+            "x": 41,
+            "y": 1624.59375,
+            "w": 158.71875,
+            "h": 24.75,
+            "right": 199.71875
+          },
+          "font": "18px",
+          "scroll": 159,
+          "client": 159,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Text Scramble Lab",
+          "rect": {
+            "x": 41,
+            "y": 2000.84375,
+            "w": 202.734375,
+            "h": 24.75,
+            "right": 243.734375
+          },
+          "font": "18px",
+          "scroll": 203,
+          "client": 203,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Constellation Grid",
+          "rect": {
+            "x": 41,
+            "y": 2377.09375,
+            "w": 195.421875,
+            "h": 24.75,
+            "right": 236.421875
+          },
+          "font": "18px",
+          "scroll": 195,
+          "client": 195,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Wormhole Tunnel",
+          "rect": {
+            "x": 41,
+            "y": 2753.34375,
+            "w": 188.96875,
+            "h": 24.75,
+            "right": 229.96875
+          },
+          "font": "18px",
+          "scroll": 189,
+          "client": 189,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Marquee Generator",
+          "rect": {
+            "x": 41,
+            "y": 3129.59375,
+            "w": 214.296875,
+            "h": 24.75,
+            "right": 255.296875
+          },
+          "font": "18px",
+          "scroll": 214,
+          "client": 214,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [
+        {
+          "text": "Tham khảo CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 1874.84375,
+          "w": 164.390625,
+          "h": 44,
+          "right": 205.390625
+        },
+        {
+          "text": "Tham khảo CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 2251.09375,
+          "w": 164.390625,
+          "h": 44,
+          "right": 205.390625
+        },
+        {
+          "text": "Tham khảo CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 2627.34375,
+          "w": 164.390625,
+          "h": 44,
+          "right": 205.390625
+        },
+        {
+          "text": "Tham khảo CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 3003.59375,
+          "w": 164.390625,
+          "h": 44,
+          "right": 205.390625
+        },
+        {
+          "text": "Tham khảo CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 3379.84375,
+          "w": 164.390625,
+          "h": 44,
+          "right": 205.390625
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Về đầu trang",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Mở menu điều hướng",
+          "x": 312,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Chuyển chế độ sáng",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": -9498.828125,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": -1984.3125,
+            "w": 340,
+            "h": 1989.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": -6648.984375,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 4587.484375,
+        "w": 332,
+        "h": 266.390625,
+        "right": 356
+      },
+      "localScroll": 769,
+      "localClient": 380,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -9498.828125,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -7453.765625,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -7328.984375,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -7040.984375,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -6648.984375,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -3764.734375,
+          "w": 332,
+          "h": 1149.3125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -2273.25,
+          "w": 340,
+          "h": 2278.6875,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 198.4375,
+          "w": 340,
+          "h": 3270.40625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3811.015625,
+          "w": 332,
+          "h": 582.46875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 4587.484375,
+          "w": 332,
+          "h": 266.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 4933.875,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "transmission",
+      "reduced": true,
+      "lang": "vi",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "HÃY KẾT NỐI LET'S CONNECT",
+          "rect": {
+            "x": 24,
+            "y": 254.015625,
+            "w": 332,
+            "h": 68.21875,
+            "right": 356
+          },
+          "font": "27.3px",
+          "scroll": 332,
+          "client": 332,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [
+        {
+          "text": "GỬI TÍN HIỆU",
+          "tag": "A",
+          "x": 24,
+          "y": 431.484375,
+          "w": 332,
+          "h": 72,
+          "right": 356
+        },
+        {
+          "text": "anhduy25work@gmail.com",
+          "tag": "A",
+          "x": 40,
+          "y": 592.484375,
+          "w": 300,
+          "h": 44,
+          "right": 340
+        },
+        {
+          "text": "Facebook",
+          "tag": "A",
+          "x": 40,
+          "y": 652.484375,
+          "w": 300,
+          "h": 44,
+          "right": 340
+        },
+        {
+          "text": "0822 021 418",
+          "tag": "A",
+          "x": 40,
+          "y": 712.484375,
+          "w": 300,
+          "h": 44,
+          "right": 340
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Về đầu trang",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Mở menu điều hướng",
+          "x": 312,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Chuyển chế độ sáng",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": -13111.828125,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": -5597.3125,
+            "w": 340,
+            "h": 1989.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": -10261.984375,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 974.484375,
+        "w": 332,
+        "h": 266.390625,
+        "right": 356
+      },
+      "localScroll": 380,
+      "localClient": 380,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -13111.828125,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -11066.765625,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -10941.984375,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -10653.984375,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -10261.984375,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -7377.734375,
+          "w": 332,
+          "h": 1149.3125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -5886.25,
+          "w": 340,
+          "h": 2278.6875,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -3414.5625,
+          "w": 340,
+          "h": 3270.40625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 198.015625,
+          "w": 332,
+          "h": 582.46875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 974.484375,
+          "w": 332,
+          "h": 266.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 1320.875,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "reduced": true,
+      "lang": "vi",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "HÃY KẾT NỐI",
+          "rect": {
+            "x": 24,
+            "y": 312.484375,
+            "w": 332,
+            "h": 46,
+            "right": 356
+          },
+          "font": "40px",
+          "scroll": 332,
+          "client": 332,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [
+        {
+          "text": "anhduy25work@gmail.com",
+          "tag": "A",
+          "x": 24,
+          "y": 406.484375,
+          "w": 324.296875,
+          "h": 50.390625,
+          "right": 348.296875
+        },
+        {
+          "text": "0822 021 418",
+          "tag": "A",
+          "x": 24,
+          "y": 472.875,
+          "w": 129.609375,
+          "h": 44,
+          "right": 153.609375
+        },
+        {
+          "text": "Facebook",
+          "tag": "A",
+          "x": 24,
+          "y": 532.875,
+          "w": 46,
+          "h": 46,
+          "right": 70
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Về đầu trang",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Mở menu điều hướng",
+          "x": 312,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Chuyển chế độ sáng",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": -13773.828125,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": -6259.3125,
+            "w": 340,
+            "h": 1989.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": -10923.984375,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 312.484375,
+        "w": 332,
+        "h": 266.390625,
+        "right": 356
+      },
+      "localScroll": 380,
+      "localClient": 380,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -13773.828125,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -11728.765625,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -11603.984375,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -11315.984375,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -10923.984375,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -8039.734375,
+          "w": 332,
+          "h": 1149.3125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -6548.25,
+          "w": 340,
+          "h": 2278.6875,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -4076.5625,
+          "w": 340,
+          "h": 3270.40625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -463.984375,
+          "w": 332,
+          "h": 582.46875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 312.484375,
+          "w": 332,
+          "h": 266.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 658.875,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "stellar-menu",
+      "reduced": true,
+      "lang": "vi",
+      "width": 390,
+      "height": 844,
+      "client": 390,
+      "scroll": 390,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "Khám phá hành trình",
+          "rect": {
+            "x": 16.25,
+            "y": 96,
+            "w": 357.5,
+            "h": 16,
+            "right": 373.75
+          },
+          "font": "12px",
+          "scroll": 358,
+          "client": 358,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [
+        {
+          "text": "Đóng menu điều hướng",
+          "tag": "BUTTON",
+          "x": 272.328125,
+          "y": 13.5,
+          "w": 93.671875,
+          "h": 44,
+          "right": 366
+        },
+        {
+          "text": "01Về tôiVề tôi",
+          "tag": "A",
+          "x": 16.25,
+          "y": 137,
+          "w": 357.5,
+          "h": 44,
+          "right": 373.75
+        },
+        {
+          "text": "02Dự ánDự án",
+          "tag": "A",
+          "x": 16.25,
+          "y": 182,
+          "w": 357.5,
+          "h": 44,
+          "right": 373.75
+        },
+        {
+          "text": "03Kỹ năngKỹ năng",
+          "tag": "A",
+          "x": 16.25,
+          "y": 227,
+          "w": 357.5,
+          "h": 44,
+          "right": 373.75
+        },
+        {
+          "text": "04Học vấnHọc vấn",
+          "tag": "A",
+          "x": 16.25,
+          "y": 272,
+          "w": 357.5,
+          "h": 44,
+          "right": 373.75
+        },
+        {
+          "text": "05Kinh nghiệmKinh nghiệm",
+          "tag": "A",
+          "x": 16.25,
+          "y": 317,
+          "w": 357.5,
+          "h": 44,
+          "right": 373.75
+        },
+        {
+          "text": "06Thử nghiệmThử nghiệm",
+          "tag": "A",
+          "x": 16.25,
+          "y": 362,
+          "w": 357.5,
+          "h": 44,
+          "right": 373.75
+        },
+        {
+          "text": "07Liên hệLiên hệ",
+          "tag": "A",
+          "x": 16.25,
+          "y": 407,
+          "w": 357.5,
+          "h": 44,
+          "right": 373.75
+        },
+        {
+          "text": "anhduy25work@gmail.com",
+          "tag": "A",
+          "x": 16.25,
+          "y": 664,
+          "w": 183.546875,
+          "h": 44,
+          "right": 199.796875
+        },
+        {
+          "text": "Facebook",
+          "tag": "A",
+          "x": 16.25,
+          "y": 724,
+          "w": 65.84375,
+          "h": 44,
+          "right": 82.09375
+        },
+        {
+          "text": "Vi",
+          "tag": "BUTTON",
+          "x": 16.25,
+          "y": 784,
+          "w": 44,
+          "h": 44,
+          "right": 60.25
+        },
+        {
+          "text": "En",
+          "tag": "BUTTON",
+          "x": 64.25,
+          "y": 784,
+          "w": 44,
+          "h": 44,
+          "right": 108.25
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Về đầu trang",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Mở menu điều hướng",
+          "x": 322,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 366
+        },
+        {
+          "text": "Chuyển chế độ sáng",
+          "x": 330,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 374
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 72,
+        "right": 390
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "28.5px 28.5px 28.5px 28.5px 28.5px 28.5px 28.5px 28.5px 28.5px 28.5px 28.5px 28.5px",
+          "rect": {
+            "x": 24,
+            "y": 1051.78125,
+            "w": 342,
+            "h": 1863.5625,
+            "right": 366
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "7.15625px 7.15625px 7.15625px 7.15625px 7.15625px 7.15625px 7.15625px 7.15625px 7.15625px 7.15625px 7.15625px 7.15625px",
+          "rect": {
+            "x": 20,
+            "y": 8514.40625,
+            "w": 350,
+            "h": 1982.5,
+            "right": 370
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "342px",
+          "rect": {
+            "x": 24,
+            "y": 3914.125,
+            "w": 342,
+            "h": 1584.25,
+            "right": 366
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 15078.953125,
+        "w": 342,
+        "h": 266.390625,
+        "right": 366
+      },
+      "localScroll": 390,
+      "localClient": 390,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 1051.78125,
+          "w": 342,
+          "h": 1863.5625,
+          "right": 366
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": 3109.34375,
+          "w": 342,
+          "h": 76.78125,
+          "right": 366
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3234.125,
+          "w": 342,
+          "h": 288,
+          "right": 366
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": 3522.125,
+          "w": 342,
+          "h": 344,
+          "right": 366
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3914.125,
+          "w": 342,
+          "h": 1584.25,
+          "right": 366
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6772.375,
+          "w": 342,
+          "h": 1149.3125,
+          "right": 366
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 8225.46875,
+          "w": 350,
+          "h": 2271.4375,
+          "right": 370
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 10689.90625,
+          "w": 350,
+          "h": 3270.40625,
+          "right": 370
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 14302.484375,
+          "w": 342,
+          "h": 582.46875,
+          "right": 366
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 15078.953125,
+          "w": 342,
+          "h": 266.390625,
+          "right": 366
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 15425.34375,
+          "w": 342,
+          "h": 89,
+          "right": 366
+        }
+      ]
+    },
+    {
+      "id": "hero",
+      "reduced": true,
+      "lang": "en",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "TRAN VU ANH DUY",
+          "rect": {
+            "x": 16,
+            "y": 245.34375,
+            "w": 348,
+            "h": 97.3125,
+            "right": 364
+          },
+          "font": "46.8px",
+          "scroll": 348,
+          "client": 348,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Back to top",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Open navigation menu",
+          "x": 312,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Switch to light mode",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": 1051.78125,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": 8593.640625,
+            "w": 340,
+            "h": 1963.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": 3901.625,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 15132.859375,
+        "w": 332,
+        "h": 312.390625,
+        "right": 356
+      },
+      "localScroll": 380,
+      "localClient": 380,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 1051.78125,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": 3096.84375,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3221.625,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": 3509.625,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3901.625,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6811.875,
+          "w": 332,
+          "h": 1115.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 8269.765625,
+          "w": 340,
+          "h": 2287.625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 10750.390625,
+          "w": 340,
+          "h": 3234.578125,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 14327.140625,
+          "w": 332,
+          "h": 611.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 15132.859375,
+          "w": 332,
+          "h": 312.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 15525.25,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "reduced": true,
+      "lang": "en",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "TRAN VU / ANH DUY",
+          "rect": {
+            "x": 24,
+            "y": 1004.28125,
+            "w": 332,
+            "h": 66.0625,
+            "right": 356
+          },
+          "font": "28px",
+          "scroll": 332,
+          "client": 332,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "SOFTWARE ARSENAL",
+          "rect": {
+            "x": 24,
+            "y": 1655.84375,
+            "w": 332,
+            "h": 19.5,
+            "right": 356
+          },
+          "font": "12px",
+          "scroll": 332,
+          "client": 332,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "CORE COMPETENCIES",
+          "rect": {
+            "x": 24,
+            "y": 1835.34375,
+            "w": 332,
+            "h": 19.5,
+            "right": 356
+          },
+          "font": "12px",
+          "scroll": 332,
+          "client": 332,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Back to top",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Open navigation menu",
+          "x": 312,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Switch to light mode",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": 197.78125,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": 7739.640625,
+            "w": 340,
+            "h": 1963.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": 3047.625,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 14278.859375,
+        "w": 332,
+        "h": 312.390625,
+        "right": 356
+      },
+      "localScroll": 380,
+      "localClient": 380,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 197.78125,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": 2242.84375,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 2367.625,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": 2655.625,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3047.625,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 5957.875,
+          "w": 332,
+          "h": 1115.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 7415.765625,
+          "w": 340,
+          "h": 2287.625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 9896.390625,
+          "w": 340,
+          "h": 3234.578125,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 13473.140625,
+          "w": 332,
+          "h": 611.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 14278.859375,
+          "w": 332,
+          "h": 312.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 14671.25,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "skills",
+      "reduced": true,
+      "lang": "en",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "Arsenal Nebula",
+          "rect": {
+            "x": 24,
+            "y": 197.84375,
+            "w": 332,
+            "h": 76.78125,
+            "right": 356
+          },
+          "font": "32px",
+          "scroll": 332,
+          "client": 332,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Design Tools",
+          "rect": {
+            "x": 49,
+            "y": 1075.625,
+            "w": 282,
+            "h": 24.75,
+            "right": 331
+          },
+          "font": "18px",
+          "scroll": 282,
+          "client": 282,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Core Competencies",
+          "rect": {
+            "x": 49,
+            "y": 1610.375,
+            "w": 282,
+            "h": 24.75,
+            "right": 331
+          },
+          "font": "18px",
+          "scroll": 282,
+          "client": 282,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Technical",
+          "rect": {
+            "x": 49,
+            "y": 2273.125,
+            "w": 282,
+            "h": 24.75,
+            "right": 331
+          },
+          "font": "18px",
+          "scroll": 282,
+          "client": 282,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [
+        {
+          "text": "Pause orbit",
+          "tag": "INPUT",
+          "x": 209.796875,
+          "y": 553.625,
+          "w": 133.203125,
+          "h": 44,
+          "right": 343
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Back to top",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Open navigation menu",
+          "x": 312,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Switch to light mode",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": -1847.21875,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": 5694.640625,
+            "w": 340,
+            "h": 1963.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": 1002.625,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 12233.859375,
+        "w": 332,
+        "h": 312.390625,
+        "right": 356
+      },
+      "localScroll": 380,
+      "localClient": 380,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -1847.21875,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": 197.84375,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 322.625,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": 610.625,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 1002.625,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3912.875,
+          "w": 332,
+          "h": 1115.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 5370.765625,
+          "w": 340,
+          "h": 2287.625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 7851.390625,
+          "w": 340,
+          "h": 3234.578125,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 11428.140625,
+          "w": 332,
+          "h": 611.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 12233.859375,
+          "w": 332,
+          "h": 312.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 12626.25,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "reduced": true,
+      "lang": "en",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "Star Map",
+          "rect": {
+            "x": 20,
+            "y": 197.875,
+            "w": 340,
+            "h": 40,
+            "right": 360
+          },
+          "font": "32px",
+          "scroll": 340,
+          "client": 340,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Saigon University",
+          "rect": {
+            "x": 60,
+            "y": 338.875,
+            "w": 300,
+            "h": 30,
+            "right": 360
+          },
+          "font": "24px",
+          "scroll": 300,
+          "client": 300,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Arena Multimedia",
+          "rect": {
+            "x": 60,
+            "y": 643.875,
+            "w": 300,
+            "h": 30,
+            "right": 360
+          },
+          "font": "24px",
+          "scroll": 300,
+          "client": 300,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Green Academy",
+          "rect": {
+            "x": 60,
+            "y": 948.875,
+            "w": 300,
+            "h": 30,
+            "right": 360
+          },
+          "font": "24px",
+          "scroll": 300,
+          "client": 300,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Back to top",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Open navigation menu",
+          "x": 312,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Switch to light mode",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": -4430.21875,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": 3111.640625,
+            "w": 340,
+            "h": 1963.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": -1580.375,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 9650.859375,
+        "w": 332,
+        "h": 312.390625,
+        "right": 356
+      },
+      "localScroll": 380,
+      "localClient": 380,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -4430.21875,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -2385.15625,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -2260.375,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -1972.375,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -1580.375,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 1329.875,
+          "w": 332,
+          "h": 1115.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 2787.765625,
+          "w": 340,
+          "h": 2287.625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 5268.390625,
+          "w": 340,
+          "h": 3234.578125,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 8845.140625,
+          "w": 332,
+          "h": 611.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 9650.859375,
+          "w": 332,
+          "h": 312.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 10043.25,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "experience",
+      "reduced": true,
+      "lang": "en",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "Voyage Log",
+          "rect": {
+            "x": 24,
+            "y": 233.875,
+            "w": 332,
+            "h": 33.59375,
+            "right": 356
+          },
+          "font": "28px",
+          "scroll": 332,
+          "client": 332,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "HOSANA MEDIA",
+          "rect": {
+            "x": 49,
+            "y": 340.46875,
+            "w": 282,
+            "h": 25,
+            "right": 331
+          },
+          "font": "20px",
+          "scroll": 282,
+          "client": 282,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "UPWORK",
+          "rect": {
+            "x": 49,
+            "y": 679.84375,
+            "w": 282,
+            "h": 25,
+            "right": 331
+          },
+          "font": "20px",
+          "scroll": 282,
+          "client": 282,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "DESIGNVELOPER",
+          "rect": {
+            "x": 49,
+            "y": 1019.21875,
+            "w": 282,
+            "h": 25,
+            "right": 331
+          },
+          "font": "20px",
+          "scroll": 282,
+          "client": 282,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Back to top",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Open navigation menu",
+          "x": 312,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Switch to light mode",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": -5562.21875,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": 1979.640625,
+            "w": 340,
+            "h": 1963.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": -2712.375,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 8518.859375,
+        "w": 332,
+        "h": 312.390625,
+        "right": 356
+      },
+      "localScroll": 517,
+      "localClient": 380,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -5562.21875,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -3517.15625,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -3392.375,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -3104.375,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -2712.375,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 197.875,
+          "w": 332,
+          "h": 1115.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 1655.765625,
+          "w": 340,
+          "h": 2287.625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 4136.390625,
+          "w": 340,
+          "h": 3234.578125,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 7713.140625,
+          "w": 332,
+          "h": 611.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 8518.859375,
+          "w": 332,
+          "h": 312.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 8911.25,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "reduced": true,
+      "lang": "en",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "CONSTELLATION OF PROJECTS",
+          "rect": {
+            "x": 20,
+            "y": 242.765625,
+            "w": 340,
+            "h": 69.875,
+            "right": 360
+          },
+          "font": "31.2px",
+          "scroll": 340,
+          "client": 340,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "EDURA LMS",
+          "rect": {
+            "x": 41,
+            "y": 794.890625,
+            "w": 298,
+            "h": 25,
+            "right": 339
+          },
+          "font": "20px",
+          "scroll": 298,
+          "client": 298,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "VERIS APP",
+          "rect": {
+            "x": 41,
+            "y": 1488.140625,
+            "w": 298,
+            "h": 25,
+            "right": 339
+          },
+          "font": "20px",
+          "scroll": 298,
+          "client": 298,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "VIE PERFUME",
+          "rect": {
+            "x": 41,
+            "y": 2155.390625,
+            "w": 298,
+            "h": 25,
+            "right": 339
+          },
+          "font": "20px",
+          "scroll": 298,
+          "client": 298,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [
+        {
+          "text": "All",
+          "tag": "BUTTON",
+          "x": 20,
+          "y": 377.640625,
+          "w": 49.6875,
+          "h": 44,
+          "right": 69.6875
+        },
+        {
+          "text": "Product Design",
+          "tag": "BUTTON",
+          "x": 77.6875,
+          "y": 377.640625,
+          "w": 137.765625,
+          "h": 44,
+          "right": 215.453125
+        },
+        {
+          "text": "UX/UI",
+          "tag": "BUTTON",
+          "x": 223.453125,
+          "y": 377.640625,
+          "w": 70.1875,
+          "h": 44,
+          "right": 293.640625
+        },
+        {
+          "text": "Graphic",
+          "tag": "BUTTON",
+          "x": 20,
+          "y": 429.640625,
+          "w": 85.734375,
+          "h": 44,
+          "right": 105.734375
+        },
+        {
+          "text": "Product Design01EDURA LMSA learning platform designed to combat user fatigue through strict visual hierarchy and seamless user journeys. Rated 'Excellent' for UX innovation.UX ResearchUI DesignPrototypingView case study↗",
+          "tag": "A",
+          "x": 20,
+          "y": 521.640625,
+          "w": 340,
+          "h": 629.25,
+          "right": 360
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 41,
+          "y": 1753.140625,
+          "w": 184.40625,
+          "h": 44,
+          "right": 225.40625
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 41,
+          "y": 2420.390625,
+          "w": 184.40625,
+          "h": 44,
+          "right": 225.40625
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Back to top",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Open navigation menu",
+          "x": 312,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Switch to light mode",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": -7020.21875,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": 521.640625,
+            "w": 340,
+            "h": 1963.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": -4170.375,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 7060.859375,
+        "w": 332,
+        "h": 312.390625,
+        "right": 356
+      },
+      "localScroll": 380,
+      "localClient": 380,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -7020.21875,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -4975.15625,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -4850.375,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -4562.375,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -4170.375,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -1260.125,
+          "w": 332,
+          "h": 1115.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 197.765625,
+          "w": 340,
+          "h": 2287.625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 2678.390625,
+          "w": 340,
+          "h": 3234.578125,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6255.140625,
+          "w": 332,
+          "h": 611.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 7060.859375,
+          "w": 332,
+          "h": 312.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 7453.25,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "playground",
+      "reduced": true,
+      "lang": "en",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "Space Station",
+          "rect": {
+            "x": 20,
+            "y": 198.390625,
+            "w": 340,
+            "h": 35.828125,
+            "right": 360
+          },
+          "font": "32px",
+          "scroll": 340,
+          "client": 340,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Starfield Explorer",
+          "rect": {
+            "x": 41,
+            "y": 303.21875,
+            "w": 189.234375,
+            "h": 24.75,
+            "right": 230.234375
+          },
+          "font": "18px",
+          "scroll": 189,
+          "client": 189,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Nebula Shader Playground",
+          "rect": {
+            "x": 41,
+            "y": 723.46875,
+            "w": 267.59375,
+            "h": 49.5,
+            "right": 308.59375
+          },
+          "font": "18px",
+          "scroll": 268,
+          "client": 268,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Scroll Progress Orbit",
+          "rect": {
+            "x": 41,
+            "y": 1168.46875,
+            "w": 222.859375,
+            "h": 24.75,
+            "right": 263.859375
+          },
+          "font": "18px",
+          "scroll": 223,
+          "client": 223,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Magnetic Field",
+          "rect": {
+            "x": 41,
+            "y": 1588.71875,
+            "w": 158.71875,
+            "h": 24.75,
+            "right": 199.71875
+          },
+          "font": "18px",
+          "scroll": 159,
+          "client": 159,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Text Scramble Lab",
+          "rect": {
+            "x": 41,
+            "y": 1964.96875,
+            "w": 202.734375,
+            "h": 24.75,
+            "right": 243.734375
+          },
+          "font": "18px",
+          "scroll": 203,
+          "client": 203,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Constellation Grid",
+          "rect": {
+            "x": 41,
+            "y": 2341.21875,
+            "w": 195.421875,
+            "h": 24.75,
+            "right": 236.421875
+          },
+          "font": "18px",
+          "scroll": 195,
+          "client": 195,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Wormhole Tunnel",
+          "rect": {
+            "x": 41,
+            "y": 2717.46875,
+            "w": 188.96875,
+            "h": 24.75,
+            "right": 229.96875
+          },
+          "font": "18px",
+          "scroll": 189,
+          "client": 189,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Marquee Generator",
+          "rect": {
+            "x": 41,
+            "y": 3093.71875,
+            "w": 214.296875,
+            "h": 24.75,
+            "right": 255.296875
+          },
+          "font": "18px",
+          "scroll": 214,
+          "client": 214,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [
+        {
+          "text": "Repel particles",
+          "tag": "BUTTON",
+          "x": 188,
+          "y": 546.96875,
+          "w": 134,
+          "h": 44,
+          "right": 322
+        },
+        {
+          "text": "",
+          "tag": "INPUT",
+          "x": 70,
+          "y": 979.96875,
+          "w": 112,
+          "h": 44,
+          "right": 182
+        },
+        {
+          "text": "",
+          "tag": "INPUT",
+          "x": 198,
+          "y": 979.96875,
+          "w": 112,
+          "h": 44,
+          "right": 310
+        },
+        {
+          "text": "Explore CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 1838.96875,
+          "w": 149.984375,
+          "h": 44,
+          "right": 190.984375
+        },
+        {
+          "text": "Explore CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 2215.21875,
+          "w": 149.984375,
+          "h": 44,
+          "right": 190.984375
+        },
+        {
+          "text": "Explore CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 2591.46875,
+          "w": 149.984375,
+          "h": 44,
+          "right": 190.984375
+        },
+        {
+          "text": "Explore CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 2967.71875,
+          "w": 149.984375,
+          "h": 44,
+          "right": 190.984375
+        },
+        {
+          "text": "Explore CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 3343.96875,
+          "w": 149.984375,
+          "h": 44,
+          "right": 190.984375
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Back to top",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Open navigation menu",
+          "x": 312,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Switch to light mode",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": -9500.21875,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": -1958.359375,
+            "w": 340,
+            "h": 1963.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": -6650.375,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 4580.859375,
+        "w": 332,
+        "h": 312.390625,
+        "right": 356
+      },
+      "localScroll": 621,
+      "localClient": 380,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -9500.21875,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -7455.15625,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -7330.375,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -7042.375,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -6650.375,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -3740.125,
+          "w": 332,
+          "h": 1115.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -2282.234375,
+          "w": 340,
+          "h": 2287.625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 198.390625,
+          "w": 340,
+          "h": 3234.578125,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3775.140625,
+          "w": 332,
+          "h": 611.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 4580.859375,
+          "w": 332,
+          "h": 312.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 4973.25,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "transmission",
+      "reduced": true,
+      "lang": "en",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "LET'S CONNECT HÃY KẾT NỐI",
+          "rect": {
+            "x": 24,
+            "y": 254.140625,
+            "w": 332,
+            "h": 68.21875,
+            "right": 356
+          },
+          "font": "27.3px",
+          "scroll": 332,
+          "client": 332,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [
+        {
+          "text": "SEND A SIGNAL",
+          "tag": "A",
+          "x": 24,
+          "y": 460.859375,
+          "w": 332,
+          "h": 72,
+          "right": 356
+        },
+        {
+          "text": "anhduy25work@gmail.com",
+          "tag": "A",
+          "x": 40,
+          "y": 621.859375,
+          "w": 300,
+          "h": 44,
+          "right": 340
+        },
+        {
+          "text": "Facebook",
+          "tag": "A",
+          "x": 40,
+          "y": 681.859375,
+          "w": 300,
+          "h": 44,
+          "right": 340
+        },
+        {
+          "text": "0822 021 418",
+          "tag": "A",
+          "x": 40,
+          "y": 741.859375,
+          "w": 300,
+          "h": 44,
+          "right": 340
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Back to top",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Open navigation menu",
+          "x": 312,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Switch to light mode",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": -13077.21875,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": -5535.359375,
+            "w": 340,
+            "h": 1963.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": -10227.375,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 1003.859375,
+        "w": 332,
+        "h": 312.390625,
+        "right": 356
+      },
+      "localScroll": 380,
+      "localClient": 380,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -13077.21875,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -11032.15625,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -10907.375,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -10619.375,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -10227.375,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -7317.125,
+          "w": 332,
+          "h": 1115.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -5859.234375,
+          "w": 340,
+          "h": 2287.625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -3378.609375,
+          "w": 340,
+          "h": 3234.578125,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 198.140625,
+          "w": 332,
+          "h": 611.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 1003.859375,
+          "w": 332,
+          "h": 312.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 1396.25,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "reduced": true,
+      "lang": "en",
+      "width": 390,
+      "height": 844,
+      "client": 380,
+      "scroll": 380,
+      "bodyOverflow": "visible",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "LET'S CONNECT",
+          "rect": {
+            "x": 24,
+            "y": 266.859375,
+            "w": 332,
+            "h": 92,
+            "right": 356
+          },
+          "font": "40px",
+          "scroll": 332,
+          "client": 332,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [
+        {
+          "text": "anhduy25work@gmail.com",
+          "tag": "A",
+          "x": 24,
+          "y": 406.859375,
+          "w": 324.296875,
+          "h": 50.390625,
+          "right": 348.296875
+        },
+        {
+          "text": "0822 021 418",
+          "tag": "A",
+          "x": 24,
+          "y": 473.25,
+          "w": 129.609375,
+          "h": 44,
+          "right": 153.609375
+        },
+        {
+          "text": "Facebook",
+          "tag": "A",
+          "x": 24,
+          "y": 533.25,
+          "w": 46,
+          "h": 46,
+          "right": 70
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Back to top",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Open navigation menu",
+          "x": 312,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 356
+        },
+        {
+          "text": "Switch to light mode",
+          "x": 320,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 364
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 380,
+        "h": 72,
+        "right": 380
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px 27.6562px",
+          "rect": {
+            "x": 24,
+            "y": -13814.21875,
+            "w": 332,
+            "h": 1851.0625,
+            "right": 356
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px 6.32812px",
+          "rect": {
+            "x": 20,
+            "y": -6272.359375,
+            "w": 340,
+            "h": 1963.75,
+            "right": 360
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "332px",
+          "rect": {
+            "x": 24,
+            "y": -10964.375,
+            "w": 332,
+            "h": 1584.25,
+            "right": 356
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 266.859375,
+        "w": 332,
+        "h": 312.390625,
+        "right": 356
+      },
+      "localScroll": 380,
+      "localClient": 380,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -13814.21875,
+          "w": 332,
+          "h": 1851.0625,
+          "right": 356
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -11769.15625,
+          "w": 332,
+          "h": 76.78125,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -11644.375,
+          "w": 332,
+          "h": 288,
+          "right": 356
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -11356.375,
+          "w": 332,
+          "h": 344,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -10964.375,
+          "w": 332,
+          "h": 1584.25,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -8054.125,
+          "w": 332,
+          "h": 1115.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -6596.234375,
+          "w": 340,
+          "h": 2287.625,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -4115.609375,
+          "w": 340,
+          "h": 3234.578125,
+          "right": 360
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -538.859375,
+          "w": 332,
+          "h": 611.71875,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 266.859375,
+          "w": 332,
+          "h": 312.390625,
+          "right": 356
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 659.25,
+          "w": 332,
+          "h": 89,
+          "right": 356
+        }
+      ]
+    },
+    {
+      "id": "stellar-menu",
+      "reduced": true,
+      "lang": "en",
+      "width": 390,
+      "height": 844,
+      "client": 390,
+      "scroll": 390,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "visible",
+      "headings": [
+        {
+          "text": "Explore the odyssey",
+          "rect": {
+            "x": 16.25,
+            "y": 96,
+            "w": 357.5,
+            "h": 16,
+            "right": 373.75
+          },
+          "font": "12px",
+          "scroll": 358,
+          "client": 358,
+          "lines": [],
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [
+        {
+          "text": "Close navigation menu",
+          "tag": "BUTTON",
+          "x": 266.203125,
+          "y": 13.5,
+          "w": 99.796875,
+          "h": 44,
+          "right": 366
+        },
+        {
+          "text": "01AboutAbout",
+          "tag": "A",
+          "x": 16.25,
+          "y": 137,
+          "w": 357.5,
+          "h": 44,
+          "right": 373.75
+        },
+        {
+          "text": "02WorksWorks",
+          "tag": "A",
+          "x": 16.25,
+          "y": 182,
+          "w": 357.5,
+          "h": 44,
+          "right": 373.75
+        },
+        {
+          "text": "03SkillsSkills",
+          "tag": "A",
+          "x": 16.25,
+          "y": 227,
+          "w": 357.5,
+          "h": 44,
+          "right": 373.75
+        },
+        {
+          "text": "04EducationEducation",
+          "tag": "A",
+          "x": 16.25,
+          "y": 272,
+          "w": 357.5,
+          "h": 44,
+          "right": 373.75
+        },
+        {
+          "text": "05ExperienceExperience",
+          "tag": "A",
+          "x": 16.25,
+          "y": 317,
+          "w": 357.5,
+          "h": 44,
+          "right": 373.75
+        },
+        {
+          "text": "06PlaygroundPlayground",
+          "tag": "A",
+          "x": 16.25,
+          "y": 362,
+          "w": 357.5,
+          "h": 44,
+          "right": 373.75
+        },
+        {
+          "text": "07ContactContact",
+          "tag": "A",
+          "x": 16.25,
+          "y": 407,
+          "w": 357.5,
+          "h": 44,
+          "right": 373.75
+        },
+        {
+          "text": "anhduy25work@gmail.com",
+          "tag": "A",
+          "x": 16.25,
+          "y": 664,
+          "w": 183.546875,
+          "h": 44,
+          "right": 199.796875
+        },
+        {
+          "text": "Facebook",
+          "tag": "A",
+          "x": 16.25,
+          "y": 724,
+          "w": 65.84375,
+          "h": 44,
+          "right": 82.09375
+        },
+        {
+          "text": "Vi",
+          "tag": "BUTTON",
+          "x": 16.25,
+          "y": 784,
+          "w": 44,
+          "h": 44,
+          "right": 60.25
+        },
+        {
+          "text": "En",
+          "tag": "BUTTON",
+          "x": 64.25,
+          "y": 784,
+          "w": 44,
+          "h": 44,
+          "right": 108.25
+        }
+      ],
+      "fixedControls": [
+        {
+          "text": "ANH DUY — Back to top",
+          "x": 24,
+          "y": 13.5,
+          "w": 102.015625,
+          "h": 44,
+          "right": 126.015625
+        },
+        {
+          "text": "Open navigation menu",
+          "x": 322,
+          "y": 13.5,
+          "w": 44,
+          "h": 44,
+          "right": 366
+        },
+        {
+          "text": "Switch to light mode",
+          "x": 330,
+          "y": 80,
+          "w": 44,
+          "h": 44,
+          "right": 374
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 72,
+        "right": 390
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "28.5px 28.5px 28.5px 28.5px 28.5px 28.5px 28.5px 28.5px 28.5px 28.5px 28.5px 28.5px",
+          "rect": {
+            "x": 24,
+            "y": 1051.78125,
+            "w": 342,
+            "h": 1863.5625,
+            "right": 366
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "7.15625px 7.15625px 7.15625px 7.15625px 7.15625px 7.15625px 7.15625px 7.15625px 7.15625px 7.15625px 7.15625px 7.15625px",
+          "rect": {
+            "x": 20,
+            "y": 8580.140625,
+            "w": 350,
+            "h": 1956.5,
+            "right": 370
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "342px",
+          "rect": {
+            "x": 24,
+            "y": 3914.125,
+            "w": 342,
+            "h": 1584.25,
+            "right": 366
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 15112.109375,
+        "w": 342,
+        "h": 312.390625,
+        "right": 366
+      },
+      "localScroll": 390,
+      "localClient": 390,
+      "marquees": [],
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 1051.78125,
+          "w": 342,
+          "h": 1863.5625,
+          "right": 366
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": 3109.34375,
+          "w": 342,
+          "h": 76.78125,
+          "right": 366
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3234.125,
+          "w": 342,
+          "h": 288,
+          "right": 366
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": 3522.125,
+          "w": 342,
+          "h": 344,
+          "right": 366
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3914.125,
+          "w": 342,
+          "h": 1584.25,
+          "right": 366
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6798.375,
+          "w": 342,
+          "h": 1115.71875,
+          "right": 366
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 8256.265625,
+          "w": 350,
+          "h": 2280.375,
+          "right": 370
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 10729.640625,
+          "w": 350,
+          "h": 3234.578125,
+          "right": 370
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 14306.390625,
+          "w": 342,
+          "h": 611.71875,
+          "right": 366
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 15112.109375,
+          "w": 342,
+          "h": 312.390625,
+          "right": 366
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 15504.5,
+          "w": 342,
+          "h": 73,
+          "right": 366
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

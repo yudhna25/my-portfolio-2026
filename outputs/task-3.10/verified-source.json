@@ -1,0 +1,22 @@
+[
+  {
+    "path": "src/hooks/useSmoothScroll.js",
+    "sha256": "2dc0684b3f94d6ba7075d643b75caa3112bc5bd8a89d9d39ceb698b2129689cb"
+  },
+  {
+    "path": "src/components/About.jsx",
+    "sha256": "e93ff9b70b8c30e1014d5410b97f0e3d24800f5704f33f671c71f0ed21d36824"
+  },
+  {
+    "path": "src/components/Marquee.jsx",
+    "sha256": "3c5a13958c1a2939c4e603ad3920b40eac1648ec6e9bc47e4bce6389805bedba"
+  },
+  {
+    "path": "src/components/sections/Experience.jsx",
+    "sha256": "212f17b0cb1cf0e83e3239cd7d221f650fa5c46aa0db50429a723c4e030d1d63"
+  },
+  {
+    "path": "src/components/sections/Playground.jsx",
+    "sha256": "5974e3344483c93fc7664548bac297396eae3f750c64b38abcba3dc89041b9be"
+  }
+]

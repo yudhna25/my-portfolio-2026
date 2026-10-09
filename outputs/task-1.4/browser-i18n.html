@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <title>Task 1.4 — i18n Browser QA</title>
+    <link rel="stylesheet" href="/src/index.css">
+  </head>
+  <body>
+    <main class="p-6">
+      <h1 class="text-2xl">Task 1.4 — i18n QA</h1>
+      <div class="flex flex-wrap gap-6 py-4">
+        <button id="store-en" class="border p-3">Store → EN</button>
+        <button id="store-vi" class="border p-3">Store → VI</button>
+        <button id="direct-en" class="border p-3">i18n.changeLanguage('en')</button>
+        <button id="direct-vi" class="border p-3">i18n.changeLanguage('vi')</button>
+      </div>
+      <pre id="qa-results" role="status" class="text-sm">Loading configured i18n…</pre>
+    </main>
+    <script type="module" src="./browser-i18n.js"></script>
+  </body>
+</html>

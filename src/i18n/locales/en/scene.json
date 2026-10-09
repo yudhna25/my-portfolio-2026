@@ -1,0 +1,6 @@
+{
+  "fallback": {
+    "title": "Static view",
+    "description": "The browser could not create WebGL2. Controls and content remain available."
+  }
+}

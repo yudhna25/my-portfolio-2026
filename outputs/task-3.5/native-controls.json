@@ -1,0 +1,41 @@
+[
+  {
+    "label": "inspect",
+    "reduced": false,
+    "width": 1440,
+    "canvas": 3,
+    "demos": 3,
+    "strength": 0,
+    "scale": 8,
+    "warp": 0,
+    "rotation": 63.9101,
+    "progress": 0.1775,
+    "overflow": -10
+  },
+  {
+    "label": "inspect",
+    "reduced": false,
+    "width": 1440,
+    "canvas": 3,
+    "demos": 3,
+    "strength": 0.6645800111669997,
+    "scale": 8,
+    "warp": 0,
+    "rotation": 63.9101,
+    "progress": 0.1775,
+    "overflow": -10
+  },
+  {
+    "label": "inspect",
+    "reduced": false,
+    "width": 1440,
+    "canvas": 3,
+    "demos": 3,
+    "strength": 0,
+    "scale": 3.2,
+    "warp": 0.7,
+    "rotation": 108.1343,
+    "progress": 0.3004,
+    "overflow": -10
+  }
+]

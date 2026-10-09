@@ -1,0 +1,61 @@
+{
+  "started": "2026-10-08T13:26:31.610Z",
+  "samples": [
+    {
+      "mode": "saigonUniversity",
+      "frames": 496,
+      "ms": 3000.699999988079,
+      "fps": 165.29476455559384,
+      "rayCalls": 496,
+      "dpr": 1,
+      "size": [
+        1440,
+        900
+      ],
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "drawCalls": 1,
+      "geometries": 9,
+      "textures": 23,
+      "glError": 0,
+      "lens": "false"
+    },
+    {
+      "mode": "greenAcademy",
+      "frames": 496,
+      "ms": 3001,
+      "fps": 165.27824058647118,
+      "rayCalls": 496,
+      "dpr": 1,
+      "size": [
+        1440,
+        900
+      ],
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "drawCalls": 1,
+      "geometries": 9,
+      "textures": 23,
+      "glError": 0,
+      "lens": "false"
+    },
+    {
+      "mode": "arenaMultimedia",
+      "frames": 496,
+      "ms": 3005.7000000178814,
+      "fps": 165.01979572048083,
+      "rayCalls": 496,
+      "dpr": 1,
+      "size": [
+        1440,
+        900
+      ],
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "drawCalls": 1,
+      "geometries": 9,
+      "textures": 23,
+      "glError": 0,
+      "lens": "false"
+    }
+  ],
+  "errors": [],
+  "finished": "2026-10-08T13:26:50.339Z"
+}

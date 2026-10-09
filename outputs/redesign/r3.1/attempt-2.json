@@ -1,0 +1,988 @@
+{
+  "started": "2026-10-08T02:32:55.044Z",
+  "poses": [
+    {
+      "label": "1440-hero",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        0,
+        2.2,
+        -168
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0,
+      "section": "hero",
+      "dpr": 1,
+      "quality": "high",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        1440,
+        900
+      ],
+      "lens": 1,
+      "cursor": 1,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    },
+    {
+      "label": "1440-about",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        -2.4159542905295432,
+        2.331121639363279,
+        -168.44001560742666
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0.08213963738355204,
+      "section": "about",
+      "dpr": 1,
+      "quality": "high",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        1440,
+        900
+      ],
+      "lens": 1,
+      "cursor": 1,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    },
+    {
+      "label": "1440-skills",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        -0.40019303874059037,
+        2.1231319566086397,
+        -170.622659186992
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0.2102574376439948,
+      "section": "skills",
+      "dpr": 1,
+      "quality": "high",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        1440,
+        900
+      ],
+      "lens": 1,
+      "cursor": 1,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    },
+    {
+      "label": "1440-work",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        -3.3030232811596187,
+        1.1426461272966084,
+        -180.91138838156465
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0.5410197335470299,
+      "section": "work",
+      "dpr": 1,
+      "quality": "high",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        1440,
+        900
+      ],
+      "lens": 1,
+      "cursor": 1,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    },
+    {
+      "label": "1440-transmission",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        -3.5001890642509323,
+        0.18074798620839733,
+        -192.99919781336894
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0.9037363517980567,
+      "section": "transmission",
+      "dpr": 1,
+      "quality": "high",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        1440,
+        900
+      ],
+      "lens": 1,
+      "cursor": 1,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    },
+    {
+      "label": "1920-hero",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        -0.3475694265854199,
+        2.3730555465059266,
+        -168.00000000000003
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0,
+      "section": "hero",
+      "dpr": 1,
+      "quality": "high",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        1920,
+        900
+      ],
+      "lens": 1,
+      "cursor": 1,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    },
+    {
+      "label": "1920-about",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        -2.381703701385296,
+        2.334494402581055,
+        -168.4047136490783
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0.07867971598541547,
+      "section": "about",
+      "dpr": 1,
+      "quality": "high",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        1920,
+        900
+      ],
+      "lens": 1,
+      "cursor": 1,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    },
+    {
+      "label": "1920-skills",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        -0.639050457962759,
+        2.1421741337186346,
+        -170.42288520044082
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0.201400882748033,
+      "section": "skills",
+      "dpr": 1,
+      "quality": "high",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        1920,
+        900
+      ],
+      "lens": 1,
+      "cursor": 1,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    },
+    {
+      "label": "1920-work",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        -3.4570457525509473,
+        1.212188455335543,
+        -180.1810543745275
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0.5197658798695068,
+      "section": "work",
+      "dpr": 1,
+      "quality": "high",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        1920,
+        900
+      ],
+      "lens": 1,
+      "cursor": 1,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    },
+    {
+      "label": "1920-transmission",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        -3.500334622628183,
+        0.1808331927838431,
+        -192.99910703752627
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0.9015544041450777,
+      "section": "transmission",
+      "dpr": 1,
+      "quality": "high",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        1920,
+        900
+      ],
+      "lens": 1,
+      "cursor": 1,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    },
+    {
+      "label": "390-hero",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        -0.34817706070883525,
+        2.3730555441480483,
+        -168.00000000000003
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0,
+      "section": "hero",
+      "dpr": 1,
+      "quality": "low",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        390,
+        844
+      ],
+      "lens": 0,
+      "cursor": 0,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    },
+    {
+      "label": "390-about",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        -2.2530211694438673,
+        2.3427052167760176,
+        -168.31719512765912
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0.06942929843693202,
+      "section": "about",
+      "dpr": 1,
+      "quality": "low",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        390,
+        844
+      ],
+      "lens": 0,
+      "cursor": 0,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    },
+    {
+      "label": "390-skills",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        0.39634258702144076,
+        2.0432197610715317,
+        -171.4604428561115
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0.24482006543075246,
+      "section": "skills",
+      "dpr": 1,
+      "quality": "low",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        390,
+        844
+      ],
+      "lens": 0,
+      "cursor": 0,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    },
+    {
+      "label": "390-work",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        -1.5038760747049935,
+        0.6810939775254103,
+        -185.7552677508004
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0.690567066521265,
+      "section": "work",
+      "dpr": 1,
+      "quality": "low",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        390,
+        844
+      ],
+      "lens": 0,
+      "cursor": 0,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    },
+    {
+      "label": "390-transmission",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        -3.4986972530154477,
+        0.18041990980217917,
+        -192.99943742430656
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0.9144856415848782,
+      "section": "transmission",
+      "dpr": 1,
+      "quality": "low",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        390,
+        844
+      ],
+      "lens": 0,
+      "cursor": 0,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    },
+    {
+      "label": "320-hero",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        -0.34102563561229776,
+        2.372926527954249,
+        -168.00000000000003
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0,
+      "section": "hero",
+      "dpr": 1,
+      "quality": "low",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        320,
+        844
+      ],
+      "lens": 0,
+      "cursor": 0,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    },
+    {
+      "label": "320-about",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        -2.1861522316566324,
+        2.3460050618046386,
+        -168.28256755726517
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0.0654389721627409,
+      "section": "about",
+      "dpr": 1,
+      "quality": "low",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        320,
+        844
+      ],
+      "lens": 0,
+      "cursor": 0,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    },
+    {
+      "label": "320-skills",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        0.5094217044045665,
+        2.0271034961608243,
+        -171.62961142993512
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0.25139186295503213,
+      "section": "skills",
+      "dpr": 1,
+      "quality": "low",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        320,
+        844
+      ],
+      "lens": 0,
+      "cursor": 0,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    },
+    {
+      "label": "320-work",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        -1.588553811307331,
+        0.6339574921406546,
+        -186.24918629819993
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0.7075802997858672,
+      "section": "work",
+      "dpr": 1,
+      "quality": "low",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        320,
+        844
+      ],
+      "lens": 0,
+      "cursor": 0,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    },
+    {
+      "label": "320-transmission",
+      "theme": "dark",
+      "htmlClass": "dark",
+      "bodyClass": "dark",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "palette": [],
+      "names": [
+        "portal-backdrop",
+        "star-field",
+        "nebula",
+        "nebula",
+        "black-hole",
+        "accretion-disk",
+        "shooting-stars"
+      ],
+      "canvas": 1,
+      "hud": 0,
+      "glasses": 0,
+      "overflow": 0,
+      "camera": [
+        -3.4988592207347753,
+        0.18034838786657592,
+        -192.99953241070904
+      ],
+      "glError": 0,
+      "cameraWriters": 1,
+      "progress": 0.915717,
+      "section": "transmission",
+      "dpr": 1,
+      "quality": "low",
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "viewport": [
+        320,
+        844
+      ],
+      "lens": 0,
+      "cursor": 0,
+      "audio": {
+        "isMuted": true,
+        "isStarted": false
+      }
+    }
+  ],
+  "interactions": [
+    {
+      "test": "production first paint before modules",
+      "bg": "rgb(5, 5, 5)",
+      "meta": "#050505",
+      "storage": "dark",
+      "audio": false
+    },
+    {
+      "test": "production SW-controlled reload",
+      "controlled": true,
+      "bg": "rgb(5, 5, 5)",
+      "theme": "dark",
+      "meta": "#050505",
+      "audio": false
+    },
+    {
+      "test": "native menu trap/Vi-En/Escape",
+      "width": 1440,
+      "tabSteps": 24,
+      "restored": true
+    },
+    {
+      "test": "native menu trap/Vi-En/Escape",
+      "width": 1920,
+      "tabSteps": 24,
+      "restored": true
+    },
+    {
+      "test": "native menu trap/Vi-En/Escape",
+      "width": 390,
+      "tabSteps": 24,
+      "restored": true
+    },
+    {
+      "test": "native menu trap/Vi-En/Escape",
+      "width": 320,
+      "tabSteps": 24,
+      "restored": true
+    },
+    {
+      "test": "native menu keyboard section focus",
+      "target": "about"
+    },
+    {
+      "test": "lens scoped and stable hitbox",
+      "id": "hero",
+      "lens": {
+        "filter": "url(\"#cursor-gravity\")",
+        "width": 80,
+        "height": 80
+      }
+    },
+    {
+      "test": "lens scoped and stable hitbox",
+      "id": "about",
+      "lens": {
+        "filter": "url(\"#cursor-gravity\")",
+        "width": 80,
+        "height": 80
+      }
+    },
+    {
+      "test": "lens scoped and stable hitbox",
+      "id": "work",
+      "lens": {
+        "filter": "url(\"#cursor-gravity\")",
+        "width": 80,
+        "height": 80
+      }
+    },
+    {
+      "test": "VIEW cursor",
+      "state": "view"
+    }
+  ],
+  "lab": [],
+  "errors": [],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ]
+}

@@ -1,0 +1,1401 @@
+{
+  "catalog": {
+    "id": "I/239/hip_main",
+    "frame": "ICRS",
+    "positionEpoch": "J1991.25",
+    "magnitudeBand": "Johnson V",
+    "coordinatesUnit": "degree",
+    "properMotionApplied": false,
+    "note": "RAICRS/DEICRS are J1991.25 positions. They are not relabelled as J2000 or current-date positions."
+  },
+  "chartConvention": {
+    "id": "stellarium-modern",
+    "name": "Stellarium Modern",
+    "commit": "daace2add6a1bf886e8ee1934f51e9c69f818d18",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Star-line figures adapted from Stellarium team, Modern sky culture, CC BY-SA 4.0. Catalog positions from ESA 1997, Hipparcos Catalogue ESA SP-1200, CDS/VizieR I/239/hip_main.",
+    "iauNote": "IAU defines constellation boundaries and names, but no unique official stick figure. Selected edges are the Stellarium Modern convention, not an IAU-prescribed shape."
+  },
+  "sources": [
+    {
+      "id": "stellarium-modern",
+      "url": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/index.json",
+      "role": "edge HIP IDs",
+      "localPath": "astronomy/sources/stellarium-modern-index.json"
+    },
+    {
+      "id": "hipparcos",
+      "url": "https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=I%2F239%2Fhip_main&HIP=27321%2C27530%2C28734%2C29655%2C30343%2C30883%2C31681%2C32246%2C32362%2C32607%2C33018%2C34088%2C34693%2C35350%2C35550%2C36046%2C36850%2C36962%2C37740%2C37826%2C56480%2C56561%2C59196%2C60823%2C61932%2C65109%2C65936%2C66657%2C67464%2C67472%2C68002%2C68282%2C68702%2C68933%2C71352%2C71683%2C71908%2C73334%2C74824%2C75323%2C90422%2C90568%2C94779%2C95853%2C95947%2C97165%2C98110%2C100453%2C102098%2C102488%2C104732%2C107310&-out=HIP%2CRAICRS%2CDEICRS%2CVmag&-out.max=1000",
+      "role": "catalog positions/photometry",
+      "localPath": "astronomy/sources/hipparcos-main-stars.tsv"
+    },
+    {
+      "id": "iau-names",
+      "url": "https://www.iau.org/IAU/IAU/Astronomy-FAQs/Constellations.aspx?hkey=bb9dc841-0618-41b5-ac70-149741062141",
+      "role": "name meanings and absence of official stick figures; not edge geometry"
+    },
+    {
+      "id": "iau-charts",
+      "url": "https://iauarchive.eso.org/public/themes/constellations/",
+      "role": "comparison only; different chart convention"
+    },
+    {
+      "id": "chandra-centaurus",
+      "url": "https://chandra.harvard.edu/photo/constellations/centaurus.html",
+      "role": "Chiron/teacher mythology only; not geometry"
+    }
+  ],
+  "constellations": [
+    {
+      "id": "Cen",
+      "name": "Centaurus",
+      "assignment": "EDURA",
+      "section": "works",
+      "status": "ready",
+      "nameMeaning": "Centaur",
+      "designInterpretation": "Chiron là người thầy trong truyền thuyết; liên hệ LMS là diễn giải thiết kế. Không nhầm Sagittarius.",
+      "meaningSourceIds": [
+        "iau-names",
+        "chandra-centaurus"
+      ],
+      "geometry": {
+        "convention": "Stellarium Modern",
+        "sourceId": "stellarium-modern",
+        "sourceConstellationId": "CON modern Cen",
+        "polylinesHip": [
+          [
+            71683,
+            68702,
+            66657,
+            68002,
+            68282,
+            67472,
+            67464,
+            65936,
+            65109
+          ],
+          [
+            67464,
+            68933
+          ],
+          [
+            67472,
+            71352,
+            73334
+          ],
+          [
+            68002,
+            61932,
+            60823,
+            59196,
+            56480,
+            56561
+          ]
+        ],
+        "edges": [
+          [
+            "HIP 71683",
+            "HIP 68702"
+          ],
+          [
+            "HIP 68702",
+            "HIP 66657"
+          ],
+          [
+            "HIP 66657",
+            "HIP 68002"
+          ],
+          [
+            "HIP 68002",
+            "HIP 68282"
+          ],
+          [
+            "HIP 68282",
+            "HIP 67472"
+          ],
+          [
+            "HIP 67472",
+            "HIP 67464"
+          ],
+          [
+            "HIP 67464",
+            "HIP 65936"
+          ],
+          [
+            "HIP 65936",
+            "HIP 65109"
+          ],
+          [
+            "HIP 67464",
+            "HIP 68933"
+          ],
+          [
+            "HIP 67472",
+            "HIP 71352"
+          ],
+          [
+            "HIP 71352",
+            "HIP 73334"
+          ],
+          [
+            "HIP 68002",
+            "HIP 61932"
+          ],
+          [
+            "HIP 61932",
+            "HIP 60823"
+          ],
+          [
+            "HIP 60823",
+            "HIP 59196"
+          ],
+          [
+            "HIP 59196",
+            "HIP 56480"
+          ],
+          [
+            "HIP 56480",
+            "HIP 56561"
+          ]
+        ],
+        "stars": [
+          {
+            "id": "HIP 71683",
+            "hip": 71683,
+            "raDeg": 219.92041034,
+            "decDeg": -60.83514707,
+            "vmag": -0.01,
+            "position": [
+              -0.307695842,
+              -0.486701773,
+              0
+            ]
+          },
+          {
+            "id": "HIP 68702",
+            "hip": 68702,
+            "raDeg": 210.95601898,
+            "decDeg": -60.3729784,
+            "vmag": 0.61,
+            "position": [
+              -0.146504416,
+              -0.437272655,
+              0
+            ]
+          },
+          {
+            "id": "HIP 66657",
+            "hip": 66657,
+            "raDeg": 204.97196962,
+            "decDeg": -53.46636269,
+            "vmag": 2.29,
+            "position": [
+              -0.042895644,
+              -0.171161022,
+              0
+            ]
+          },
+          {
+            "id": "HIP 68002",
+            "hip": 68002,
+            "raDeg": 208.88514539,
+            "decDeg": -47.28826634,
+            "vmag": 2.55,
+            "position": [
+              -0.145783286,
+              0.04992893,
+              0
+            ]
+          },
+          {
+            "id": "HIP 68282",
+            "hip": 68282,
+            "raDeg": 209.6698807,
+            "decDeg": -44.8035314,
+            "vmag": 3.87,
+            "position": [
+              -0.173261171,
+              0.139267947,
+              0
+            ]
+          },
+          {
+            "id": "HIP 67472",
+            "hip": 67472,
+            "raDeg": 207.40419934,
+            "decDeg": -42.47368506,
+            "vmag": 3.47,
+            "position": [
+              -0.119265487,
+              0.229070817,
+              0
+            ]
+          },
+          {
+            "id": "HIP 67464",
+            "hip": 67464,
+            "raDeg": 207.3762392,
+            "decDeg": -41.68765971,
+            "vmag": 3.41,
+            "position": [
+              -0.120180556,
+              0.258212383,
+              0
+            ]
+          },
+          {
+            "id": "HIP 65936",
+            "hip": 65936,
+            "raDeg": 202.76111861,
+            "decDeg": -39.40727983,
+            "vmag": 3.9,
+            "position": [
+              0.006984487,
+              0.346317283,
+              0
+            ]
+          },
+          {
+            "id": "HIP 65109",
+            "hip": 65109,
+            "raDeg": 200.15027321,
+            "decDeg": -36.71208109,
+            "vmag": 2.75,
+            "position": [
+              0.085499381,
+              0.447012776,
+              0
+            ]
+          },
+          {
+            "id": "HIP 68933",
+            "hip": 68933,
+            "raDeg": 211.67218608,
+            "decDeg": -36.36869575,
+            "vmag": 2.06,
+            "position": [
+              -0.261598952,
+              0.449410549,
+              0
+            ]
+          },
+          {
+            "id": "HIP 71352",
+            "hip": 71352,
+            "raDeg": 218.87688163,
+            "decDeg": -42.15774562,
+            "vmag": 2.33,
+            "position": [
+              -0.435205128,
+              0.202876008,
+              0
+            ]
+          },
+          {
+            "id": "HIP 73334",
+            "hip": 73334,
+            "raDeg": 224.79041254,
+            "decDeg": -42.10414199,
+            "vmag": 3.13,
+            "position": [
+              -0.601203852,
+              0.167750701,
+              0
+            ]
+          },
+          {
+            "id": "HIP 61932",
+            "hip": 61932,
+            "raDeg": 190.38002079,
+            "decDeg": -48.95988553,
+            "vmag": 2.2,
+            "position": [
+              0.303448496,
+              -0.03094415,
+              0
+            ]
+          },
+          {
+            "id": "HIP 60823",
+            "hip": 60823,
+            "raDeg": 187.01004828,
+            "decDeg": -50.2306048,
+            "vmag": 3.91,
+            "position": [
+              0.375054917,
+              -0.092554338,
+              0
+            ]
+          },
+          {
+            "id": "HIP 59196",
+            "hip": 59196,
+            "raDeg": 182.08976505,
+            "decDeg": -50.72240999,
+            "vmag": 2.58,
+            "position": [
+              0.48650915,
+              -0.139565041,
+              0
+            ]
+          },
+          {
+            "id": "HIP 56480",
+            "hip": 56480,
+            "raDeg": 173.69046642,
+            "decDeg": -54.26413167,
+            "vmag": 4.62,
+            "position": [
+              0.632323671,
+              -0.334786523,
+              0
+            ]
+          },
+          {
+            "id": "HIP 56561",
+            "hip": 56561,
+            "raDeg": 173.94553448,
+            "decDeg": -63.01982488,
+            "vmag": 3.11,
+            "position": [
+              0.49483159,
+              -0.647878391,
+              0
+            ]
+          }
+        ],
+        "supportingStars": [
+          {
+            "id": "HIP 60718",
+            "hip": 60718,
+            "raDeg": 186.64975585,
+            "decDeg": -63.09905586,
+            "vmag": 0.77,
+            "position": [
+              0.278560807,
+              -0.569898981,
+              0
+            ]
+          },
+          {
+            "id": "HIP 62434",
+            "hip": 62434,
+            "raDeg": 191.93049537,
+            "decDeg": -59.68873246,
+            "vmag": 1.25,
+            "position": [
+              0.207870537,
+              -0.419983787,
+              0
+            ]
+          },
+          {
+            "id": "HIP 71681",
+            "hip": 71681,
+            "raDeg": 219.91412833,
+            "decDeg": -60.83947139,
+            "vmag": 1.35,
+            "position": [
+              -0.307544462,
+              -0.486833753,
+              0
+            ]
+          },
+          {
+            "id": "HIP 61084",
+            "hip": 61084,
+            "raDeg": 187.79137202,
+            "decDeg": -57.11256922,
+            "vmag": 1.59,
+            "position": [
+              0.305168212,
+              -0.340072986,
+              0
+            ]
+          },
+          {
+            "id": "HIP 71860",
+            "hip": 71860,
+            "raDeg": 220.48239101,
+            "decDeg": -47.38814127,
+            "vmag": 2.3,
+            "position": [
+              -0.434502065,
+              0.00261486,
+              0
+            ]
+          },
+          {
+            "id": "HIP 73273",
+            "hip": 73273,
+            "raDeg": 224.63314193,
+            "decDeg": -43.13386699,
+            "vmag": 2.68,
+            "position": [
+              -0.585448289,
+              0.130974462,
+              0
+            ]
+          },
+          {
+            "id": "HIP 61585",
+            "hip": 61585,
+            "raDeg": 189.29618208,
+            "decDeg": -69.13553358,
+            "vmag": 2.69,
+            "position": [
+              0.189689887,
+              -0.797924863,
+              0
+            ]
+          },
+          {
+            "id": "HIP 59747",
+            "hip": 59747,
+            "raDeg": 183.78648733,
+            "decDeg": -58.74890179,
+            "vmag": 2.79,
+            "position": [
+              0.369912392,
+              -0.421144772,
+              0
+            ]
+          },
+          {
+            "id": "HIP 76297",
+            "hip": 76297,
+            "raDeg": 233.78525156,
+            "decDeg": -41.16669497,
+            "vmag": 2.8,
+            "position": [
+              -0.874905893,
+              0.120687377,
+              0
+            ]
+          },
+          {
+            "id": "HIP 77952",
+            "hip": 77952,
+            "raDeg": 238.78670013,
+            "decDeg": -63.42974973,
+            "vmag": 2.83,
+            "position": [
+              -0.600003642,
+              -0.724970484,
+              0
+            ]
+          },
+          {
+            "id": "HIP 74946",
+            "hip": 74946,
+            "raDeg": 229.72787007,
+            "decDeg": -68.67946723,
+            "vmag": 2.87,
+            "position": [
+              -0.373910832,
+              -0.844288998,
+              0
+            ]
+          },
+          {
+            "id": "HIP 62322",
+            "hip": 62322,
+            "raDeg": 191.57029013,
+            "decDeg": -68.10809405,
+            "vmag": 3.04,
+            "position": [
+              0.164729477,
+              -0.749024484,
+              0
+            ]
+          }
+        ],
+        "supportingStarPolicy": "At most 12 brightest Johnson V <= 5.5 field stars, excluding stick-figure stars. No edge; a cone may include adjacent constellations. These are context, not members added to the figure.",
+        "fieldStarsReturned": 205
+      },
+      "projection": {
+        "type": "gnomonic",
+        "origin": {
+          "raDeg": 203.00533565794234,
+          "decDeg": -48.805858667496544
+        },
+        "fieldRadiusDeg": 25.544998835256287,
+        "uniformScale": 2.0923130619014265,
+        "xDirection": "celestial west right (increasing RA left)",
+        "yDirection": "north up",
+        "z": 0,
+        "view": "sky as seen from Earth, not exterior celestial globe",
+        "normalization": "same scalar for x/y; no independent stretch, mirroring or invented coordinates"
+      },
+      "referenceChart": {
+        "sourceId": "iau-charts",
+        "path": "astronomy/sources/iau-CEN.gif",
+        "role": "comparison only; IAU/MacRobert patterns can differ from selected Modern figure"
+      },
+      "notes": []
+    },
+    {
+      "id": "Gem",
+      "name": "Gemini",
+      "assignment": "VERIS",
+      "section": "works",
+      "status": "ready",
+      "nameMeaning": "Twins",
+      "designInterpretation": "Song Tử; liên hệ kết nối con người là diễn giải thiết kế, không phải ý nghĩa thiên văn về bảo mật.",
+      "meaningSourceIds": [
+        "iau-names"
+      ],
+      "geometry": {
+        "convention": "Stellarium Modern",
+        "sourceId": "stellarium-modern",
+        "sourceConstellationId": "CON modern Gem",
+        "polylinesHip": [
+          [
+            31681,
+            34088,
+            35550,
+            35350,
+            32362
+          ],
+          [
+            35550,
+            36962,
+            37740
+          ],
+          [
+            36962,
+            37826
+          ],
+          [
+            36962,
+            36046,
+            34693,
+            36850
+          ],
+          [
+            34693,
+            33018
+          ],
+          [
+            34693,
+            32246,
+            30883
+          ],
+          [
+            32246,
+            30343,
+            29655,
+            28734
+          ]
+        ],
+        "edges": [
+          [
+            "HIP 31681",
+            "HIP 34088"
+          ],
+          [
+            "HIP 34088",
+            "HIP 35550"
+          ],
+          [
+            "HIP 35550",
+            "HIP 35350"
+          ],
+          [
+            "HIP 35350",
+            "HIP 32362"
+          ],
+          [
+            "HIP 35550",
+            "HIP 36962"
+          ],
+          [
+            "HIP 36962",
+            "HIP 37740"
+          ],
+          [
+            "HIP 36962",
+            "HIP 37826"
+          ],
+          [
+            "HIP 36962",
+            "HIP 36046"
+          ],
+          [
+            "HIP 36046",
+            "HIP 34693"
+          ],
+          [
+            "HIP 34693",
+            "HIP 36850"
+          ],
+          [
+            "HIP 34693",
+            "HIP 33018"
+          ],
+          [
+            "HIP 34693",
+            "HIP 32246"
+          ],
+          [
+            "HIP 32246",
+            "HIP 30883"
+          ],
+          [
+            "HIP 32246",
+            "HIP 30343"
+          ],
+          [
+            "HIP 30343",
+            "HIP 29655"
+          ],
+          [
+            "HIP 29655",
+            "HIP 28734"
+          ]
+        ],
+        "stars": [
+          {
+            "id": "HIP 31681",
+            "hip": 31681,
+            "raDeg": 99.42792641,
+            "decDeg": 16.39941482,
+            "vmag": 1.93,
+            "position": [
+              0.344178419,
+              -0.481612,
+              0
+            ]
+          },
+          {
+            "id": "HIP 34088",
+            "hip": 34088,
+            "raDeg": 106.02723079,
+            "decDeg": 20.57029939,
+            "vmag": 4.01,
+            "position": [
+              -0.059330548,
+              -0.219484963,
+              0
+            ]
+          },
+          {
+            "id": "HIP 35550",
+            "hip": 35550,
+            "raDeg": 110.0307889,
+            "decDeg": 21.98233941,
+            "vmag": 3.5,
+            "position": [
+              -0.294515283,
+              -0.125217301,
+              0
+            ]
+          },
+          {
+            "id": "HIP 35350",
+            "hip": 35350,
+            "raDeg": 109.52336162,
+            "decDeg": 16.54047526,
+            "vmag": 3.58,
+            "position": [
+              -0.275684684,
+              -0.474210361,
+              0
+            ]
+          },
+          {
+            "id": "HIP 32362",
+            "hip": 32362,
+            "raDeg": 101.3226398,
+            "decDeg": 12.89605513,
+            "vmag": 3.35,
+            "position": [
+              0.233425897,
+              -0.712683705,
+              0
+            ]
+          },
+          {
+            "id": "HIP 36962",
+            "hip": 36962,
+            "raDeg": 113.98071783,
+            "decDeg": 26.89600343,
+            "vmag": 4.06,
+            "position": [
+              -0.509221808,
+              0.199388633,
+              0
+            ]
+          },
+          {
+            "id": "HIP 37740",
+            "hip": 37740,
+            "raDeg": 116.11195237,
+            "decDeg": 24.39812929,
+            "vmag": 3.57,
+            "position": [
+              -0.645239598,
+              0.048862986,
+              0
+            ]
+          },
+          {
+            "id": "HIP 37826",
+            "hip": 37826,
+            "raDeg": 116.33068263,
+            "decDeg": 28.02631031,
+            "vmag": 1.16,
+            "position": [
+              -0.639250098,
+              0.282964127,
+              0
+            ]
+          },
+          {
+            "id": "HIP 36046",
+            "hip": 36046,
+            "raDeg": 111.43198371,
+            "decDeg": 27.79828561,
+            "vmag": 3.78,
+            "position": [
+              -0.360562005,
+              0.248090263,
+              0
+            ]
+          },
+          {
+            "id": "HIP 34693",
+            "hip": 34693,
+            "raDeg": 107.78496505,
+            "decDeg": 30.24528065,
+            "vmag": 4.41,
+            "position": [
+              -0.151769773,
+              0.396676254,
+              0
+            ]
+          },
+          {
+            "id": "HIP 36850",
+            "hip": 36850,
+            "raDeg": 113.65001898,
+            "decDeg": 31.88863645,
+            "vmag": 1.58,
+            "position": [
+              -0.470357007,
+              0.519391673,
+              0
+            ]
+          },
+          {
+            "id": "HIP 33018",
+            "hip": 33018,
+            "raDeg": 103.1972503,
+            "decDeg": 33.96136985,
+            "vmag": 3.6,
+            "position": [
+              0.097663356,
+              0.635854568,
+              0
+            ]
+          },
+          {
+            "id": "HIP 32246",
+            "hip": 32246,
+            "raDeg": 100.98304088,
+            "decDeg": 25.13115531,
+            "vmag": 3.06,
+            "position": [
+              0.232256229,
+              0.072914269,
+              0
+            ]
+          },
+          {
+            "id": "HIP 30883",
+            "hip": 30883,
+            "raDeg": 97.24079361,
+            "decDeg": 20.2121672,
+            "vmag": 4.13,
+            "position": [
+              0.466088426,
+              -0.231453049,
+              0
+            ]
+          },
+          {
+            "id": "HIP 30343",
+            "hip": 30343,
+            "raDeg": 95.73996302,
+            "decDeg": 22.51385027,
+            "vmag": 2.87,
+            "position": [
+              0.547242429,
+              -0.079316294,
+              0
+            ]
+          },
+          {
+            "id": "HIP 29655",
+            "hip": 29655,
+            "raDeg": 93.71956952,
+            "decDeg": 22.50682376,
+            "vmag": 3.31,
+            "position": [
+              0.668500416,
+              -0.071444364,
+              0
+            ]
+          },
+          {
+            "id": "HIP 28734",
+            "hip": 28734,
+            "raDeg": 91.0300689,
+            "decDeg": 23.26363207,
+            "vmag": 4.16,
+            "position": [
+              0.82699209,
+              -0.008740061,
+              0
+            ]
+          }
+        ],
+        "supportingStars": [
+          {
+            "id": "HIP 36366",
+            "hip": 36366,
+            "raDeg": 112.27754045,
+            "decDeg": 31.78407932,
+            "vmag": 4.16,
+            "position": [
+              -0.395238313,
+              0.507047478,
+              0
+            ]
+          },
+          {
+            "id": "HIP 37629",
+            "hip": 37629,
+            "raDeg": 115.82785545,
+            "decDeg": 28.8840717,
+            "vmag": 4.23,
+            "position": [
+              -0.606021373,
+              0.335583258,
+              0
+            ]
+          },
+          {
+            "id": "HIP 29696",
+            "hip": 29696,
+            "raDeg": 93.84473576,
+            "decDeg": 29.49871224,
+            "vmag": 4.32,
+            "position": [
+              0.624772637,
+              0.3773118,
+              0
+            ]
+          },
+          {
+            "id": "HIP 29426",
+            "hip": 29426,
+            "raDeg": 92.98498656,
+            "decDeg": 14.20881425,
+            "vmag": 4.45,
+            "position": [
+              0.759853083,
+              -0.608452113,
+              0
+            ]
+          },
+          {
+            "id": "HIP 32249",
+            "hip": 32249,
+            "raDeg": 100.99705857,
+            "decDeg": 13.22814319,
+            "vmag": 4.49,
+            "position": [
+              0.253362529,
+              -0.690503651,
+              0
+            ]
+          },
+          {
+            "id": "HIP 36425",
+            "hip": 36425,
+            "raDeg": 112.44909205,
+            "decDeg": 12.00661101,
+            "vmag": 4.55,
+            "position": [
+              -0.472258663,
+              -0.766580289,
+              0
+            ]
+          },
+          {
+            "id": "HIP 28716",
+            "hip": 28716,
+            "raDeg": 90.9799315,
+            "decDeg": 20.13845865,
+            "vmag": 4.64,
+            "position": [
+              0.850685026,
+              -0.210956167,
+              0
+            ]
+          },
+          {
+            "id": "HIP 31978",
+            "hip": 31978,
+            "raDeg": 100.24442101,
+            "decDeg": 9.89576021,
+            "vmag": 4.66,
+            "position": [
+              0.308407901,
+              -0.91172119,
+              0
+            ]
+          },
+          {
+            "id": "HIP 33202",
+            "hip": 33202,
+            "raDeg": 103.66080771,
+            "decDeg": 13.17801628,
+            "vmag": 4.73,
+            "position": [
+              0.085876209,
+              -0.695633596,
+              0
+            ]
+          },
+          {
+            "id": "HIP 28237",
+            "hip": 28237,
+            "raDeg": 89.49857371,
+            "decDeg": 25.95391597,
+            "vmag": 4.81,
+            "position": [
+              0.900989773,
+              0.175368079,
+              0
+            ]
+          },
+          {
+            "id": "HIP 37265",
+            "hip": 37265,
+            "raDeg": 114.79148501,
+            "decDeg": 34.58463287,
+            "vmag": 4.89,
+            "position": [
+              -0.521023844,
+              0.701418688,
+              0
+            ]
+          },
+          {
+            "id": "HIP 37908",
+            "hip": 37908,
+            "raDeg": 116.53122379,
+            "decDeg": 18.51016877,
+            "vmag": 4.89,
+            "position": [
+              -0.70157441,
+              -0.328409368,
+              0
+            ]
+          }
+        ],
+        "supportingStarPolicy": "At most 12 brightest Johnson V <= 5.5 field stars, excluding stick-figure stars. No edge; a cone may include adjacent constellations. These are context, not members added to the figure.",
+        "fieldStarsReturned": 59
+      },
+      "projection": {
+        "type": "gnomonic",
+        "origin": {
+          "raDeg": 105.02842905030263,
+          "decDeg": 24.0348985856947
+        },
+        "fieldRadiusDeg": 15.408751370713073,
+        "uniformScale": 3.6283123917722766,
+        "xDirection": "celestial west right (increasing RA left)",
+        "yDirection": "north up",
+        "z": 0,
+        "view": "sky as seen from Earth, not exterior celestial globe",
+        "normalization": "same scalar for x/y; no independent stretch, mirroring or invented coordinates"
+      },
+      "referenceChart": {
+        "sourceId": "iau-charts",
+        "path": "astronomy/sources/iau-GEM.gif",
+        "role": "comparison only; IAU/MacRobert patterns can differ from selected Modern figure"
+      },
+      "notes": []
+    },
+    {
+      "id": "Cyg",
+      "name": "Cygnus",
+      "assignment": "VIE",
+      "section": "works",
+      "status": "ready",
+      "nameMeaning": "Swan",
+      "designInterpretation": "Thiên Nga; liên hệ sự thanh lịch là diễn giải thiết kế, không phải biểu tượng nước hoa truyền thống.",
+      "meaningSourceIds": [
+        "iau-names"
+      ],
+      "geometry": {
+        "convention": "Stellarium Modern",
+        "sourceId": "stellarium-modern",
+        "sourceConstellationId": "CON modern Cyg",
+        "polylinesHip": [
+          [
+            94779,
+            95853,
+            97165,
+            100453,
+            102098
+          ],
+          [
+            100453,
+            102488,
+            104732,
+            107310
+          ],
+          [
+            100453,
+            98110,
+            95947
+          ]
+        ],
+        "edges": [
+          [
+            "HIP 94779",
+            "HIP 95853"
+          ],
+          [
+            "HIP 95853",
+            "HIP 97165"
+          ],
+          [
+            "HIP 97165",
+            "HIP 100453"
+          ],
+          [
+            "HIP 100453",
+            "HIP 102098"
+          ],
+          [
+            "HIP 100453",
+            "HIP 102488"
+          ],
+          [
+            "HIP 102488",
+            "HIP 104732"
+          ],
+          [
+            "HIP 104732",
+            "HIP 107310"
+          ],
+          [
+            "HIP 100453",
+            "HIP 98110"
+          ],
+          [
+            "HIP 98110",
+            "HIP 95947"
+          ]
+        ],
+        "stars": [
+          {
+            "id": "HIP 94779",
+            "hip": 94779,
+            "raDeg": 289.27545794,
+            "decDeg": 53.36816064,
+            "vmag": 3.8,
+            "position": [
+              0.370876864,
+              0.571596722,
+              0
+            ]
+          },
+          {
+            "id": "HIP 95853",
+            "hip": 95853,
+            "raDeg": 292.42641389,
+            "decDeg": 51.72946747,
+            "vmag": 3.76,
+            "position": [
+              0.305509093,
+              0.490556608,
+              0
+            ]
+          },
+          {
+            "id": "HIP 97165",
+            "hip": 97165,
+            "raDeg": 296.24350878,
+            "decDeg": 45.13069195,
+            "vmag": 2.86,
+            "position": [
+              0.238042863,
+              0.218566525,
+              0
+            ]
+          },
+          {
+            "id": "HIP 100453",
+            "hip": 100453,
+            "raDeg": 305.55708346,
+            "decDeg": 40.2566815,
+            "vmag": 2.23,
+            "position": [
+              -0.015461407,
+              0.019032037,
+              0
+            ]
+          },
+          {
+            "id": "HIP 102098",
+            "hip": 102098,
+            "raDeg": 310.3579727,
+            "decDeg": 45.28033423,
+            "vmag": 1.25,
+            "position": [
+              -0.143942925,
+              0.216100064,
+              0
+            ]
+          },
+          {
+            "id": "HIP 102488",
+            "hip": 102488,
+            "raDeg": 311.55180091,
+            "decDeg": 33.96945334,
+            "vmag": 2.48,
+            "position": [
+              -0.207965938,
+              -0.214998147,
+              0
+            ]
+          },
+          {
+            "id": "HIP 104732",
+            "hip": 104732,
+            "raDeg": 318.23408977,
+            "decDeg": 30.22708128,
+            "vmag": 3.21,
+            "position": [
+              -0.445561764,
+              -0.340750681,
+              0
+            ]
+          },
+          {
+            "id": "HIP 107310",
+            "hip": 107310,
+            "raDeg": 326.03501874,
+            "decDeg": 28.74322228,
+            "vmag": 4.49,
+            "position": [
+              -0.733558863,
+              -0.358927398,
+              0
+            ]
+          },
+          {
+            "id": "HIP 98110",
+            "hip": 98110,
+            "raDeg": 299.07665069,
+            "decDeg": 35.08349079,
+            "vmag": 3.89,
+            "position": [
+              0.186677536,
+              -0.173198688,
+              0
+            ]
+          },
+          {
+            "id": "HIP 95947",
+            "hip": 95947,
+            "raDeg": 292.68035529,
+            "decDeg": 27.9596948,
+            "vmag": 3.05,
+            "position": [
+              0.428642124,
+              -0.434470976,
+              0
+            ]
+          }
+        ],
+        "supportingStars": [
+          {
+            "id": "HIP 91262",
+            "hip": 91262,
+            "raDeg": 279.23410832,
+            "decDeg": 38.78299311,
+            "vmag": 0.03,
+            "position": [
+              0.78866692,
+              0.075874696,
+              0
+            ]
+          },
+          {
+            "id": "HIP 105199",
+            "hip": 105199,
+            "raDeg": 319.64408982,
+            "decDeg": 62.58545529,
+            "vmag": 2.45,
+            "position": [
+              -0.279075555,
+              0.954610548,
+              0
+            ]
+          },
+          {
+            "id": "HIP 93194",
+            "hip": 93194,
+            "raDeg": 284.73593568,
+            "decDeg": 32.68955312,
+            "vmag": 3.25,
+            "position": [
+              0.670002775,
+              -0.20586612,
+              0
+            ]
+          },
+          {
+            "id": "HIP 102422",
+            "hip": 102422,
+            "raDeg": 311.32195263,
+            "decDeg": 61.83679404,
+            "vmag": 3.41,
+            "position": [
+              -0.122392178,
+              0.89309597,
+              0
+            ]
+          },
+          {
+            "id": "HIP 98337",
+            "hip": 98337,
+            "raDeg": 299.68911516,
+            "decDeg": 19.49209287,
+            "vmag": 3.51,
+            "position": [
+              0.205020535,
+              -0.803833004,
+              0
+            ]
+          },
+          {
+            "id": "HIP 92420",
+            "hip": 92420,
+            "raDeg": 282.51997462,
+            "decDeg": 33.36267788,
+            "vmag": 3.52,
+            "position": [
+              0.739675975,
+              -0.163629705,
+              0
+            ]
+          },
+          {
+            "id": "HIP 97365",
+            "hip": 97365,
+            "raDeg": 296.84693842,
+            "decDeg": 18.53425912,
+            "vmag": 3.68,
+            "position": [
+              0.318878293,
+              -0.841248004,
+              0
+            ]
+          },
+          {
+            "id": "HIP 104060",
+            "hip": 104060,
+            "raDeg": 316.23273251,
+            "decDeg": 43.92785122,
+            "vmag": 3.72,
+            "position": [
+              -0.310086381,
+              0.180500222,
+              0
+            ]
+          },
+          {
+            "id": "HIP 104887",
+            "hip": 104887,
+            "raDeg": 318.69727757,
+            "decDeg": 38.04432043,
+            "vmag": 3.74,
+            "position": [
+              -0.414195255,
+              -0.034834148,
+              0
+            ]
+          },
+          {
+            "id": "HIP 101958",
+            "hip": 101958,
+            "raDeg": 309.90939395,
+            "decDeg": 15.9120527,
+            "vmag": 3.77,
+            "position": [
+              -0.196244079,
+              -0.963821442,
+              0
+            ]
+          },
+          {
+            "id": "HIP 99675",
+            "hip": 99675,
+            "raDeg": 303.40792782,
+            "decDeg": 46.74132417,
+            "vmag": 3.8,
+            "position": [
+              0.042630486,
+              0.268172839,
+              0
+            ]
+          },
+          {
+            "id": "HIP 103413",
+            "hip": 103413,
+            "raDeg": 314.29338184,
+            "decDeg": 41.16719384,
+            "vmag": 3.94,
+            "position": [
+              -0.267118263,
+              0.067991722,
+              0
+            ]
+          }
+        ],
+        "supportingStarPolicy": "At most 12 brightest Johnson V <= 5.5 field stars, excluding stick-figure stars. No edge; a cone may include adjacent constellations. These are context, not members added to the figure.",
+        "fieldStarsReturned": 165
+      },
+      "projection": {
+        "type": "gnomonic",
+        "origin": {
+          "raDeg": 305.0261176402872,
+          "decDeg": 39.75909427296922
+        },
+        "fieldRadiusDeg": 24.58104455374974,
+        "uniformScale": 2.186099960839337,
+        "xDirection": "celestial west right (increasing RA left)",
+        "yDirection": "north up",
+        "z": 0,
+        "view": "sky as seen from Earth, not exterior celestial globe",
+        "normalization": "same scalar for x/y; no independent stretch, mirroring or invented coordinates"
+      },
+      "referenceChart": {
+        "sourceId": "iau-charts",
+        "path": "astronomy/sources/iau-CYG.gif",
+        "role": "comparison only; IAU/MacRobert patterns can differ from selected Modern figure"
+      },
+      "notes": []
+    }
+  ],
+  "sourceFile": "outputs/redesign/r0.2/constellation-data.json",
+  "sourceSha256": "1047432e95bcea8105c521801fee19ff81f2dce92ccf1f1cdfd682f56cfe1c9f"
+}

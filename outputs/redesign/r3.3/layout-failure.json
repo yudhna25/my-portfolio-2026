@@ -1,0 +1,3607 @@
+{
+  "started": "2026-10-08T04:25:43.563Z",
+  "browser": "Edge 154 / bundled Playwright fallback; Chrome plugin unavailable",
+  "layouts": [
+    {
+      "width": 320,
+      "height": 844,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": false,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 2.842170943040401e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8875244140625,
+        0.7358190165876777
+      ],
+      "scale": 154.82223422803625,
+      "aperture": [
+        5845.078125,
+        4656.1875
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 24,
+          "top": 298.0674133300781,
+          "right": 296,
+          "bottom": 638.0673828125,
+          "width": 272,
+          "height": 339.9999694824219
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 24,
+          "top": 298.0674133300781,
+          "right": 296,
+          "bottom": 638.0673828125,
+          "width": 272,
+          "height": 339.9999694824219
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 0.004906000103801489,
+        "right": 320,
+        "bottom": 1384.9267810001038,
+        "width": 320,
+        "height": 1384.921875
+      },
+      "paragraphRects": [
+        {
+          "left": 24,
+          "top": 737.0673828125,
+          "right": 296,
+          "bottom": 909.8486328125,
+          "width": 272,
+          "height": 172.78125
+        },
+        {
+          "left": 24,
+          "top": 933.8486328125,
+          "right": 296,
+          "bottom": 1135.4267578125,
+          "width": 272,
+          "height": 201.578125
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 24,
+            "top": 152.00491333007812,
+            "right": 296,
+            "bottom": 185.03616333007812,
+            "width": 272,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 24,
+            "top": 185.03616333007812,
+            "right": 296,
+            "bottom": 218.06741333007812,
+            "width": 272,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 24,
+            "top": 737.0673828125,
+            "right": 296,
+            "bottom": 794.6611328125,
+            "width": 272,
+            "height": 57.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0,
+      "bioFrame": {
+        "width": 320,
+        "height": 844,
+        "locale": "vi",
+        "reduced": false,
+        "chapter": "about",
+        "progress": 0.45277823870840267,
+        "hash": "#about",
+        "manual": false,
+        "camera": [
+          2,
+          5,
+          -154
+        ],
+        "cameraFinite": true,
+        "poseError": 0,
+        "observerR": 46.314144707637645,
+        "canvas": 1,
+        "writers": 1,
+        "glError": 0,
+        "overflow": 0,
+        "anchorError": 2.842170943040401e-14,
+        "mini": 0,
+        "visibility": 1,
+        "pull": 1,
+        "center": [
+          0.8875244140625,
+          0.7358190165876777
+        ],
+        "scale": 154.82223422803625,
+        "aperture": [
+          5845.078125,
+          4656.1875
+        ],
+        "backdrop": true,
+        "contentVisible": "visible",
+        "inert": false,
+        "semanticBio": [
+          "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+          "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+        ],
+        "expectedBio": [
+          "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+          "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+        ],
+        "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+        "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+        "headingLabel": "TRẦN VŨ ANH DUY",
+        "expectedName": "TRẦN VŨ ANH DUY",
+        "image": {
+          "src": "/avatar-cutout.webp",
+          "width": 800,
+          "height": 1000,
+          "decoded": true,
+          "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+          "aspect": "4 / 5",
+          "rect": {
+            "left": 24,
+            "top": -329,
+            "right": 296,
+            "bottom": 11,
+            "width": 272,
+            "height": 340
+          }
+        },
+        "portrait": {
+          "name": "Giữ màu chân dung",
+          "pressed": "false",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px",
+          "rect": {
+            "left": 24,
+            "top": -329,
+            "right": 296,
+            "bottom": 11,
+            "width": 272,
+            "height": 340
+          }
+        },
+        "aboutRect": {
+          "left": 0,
+          "top": -627.0625,
+          "right": 320,
+          "bottom": 757.859375,
+          "width": 320,
+          "height": 1384.921875
+        },
+        "paragraphRects": [
+          {
+            "left": 24,
+            "top": 110,
+            "right": 296,
+            "bottom": 282.78125,
+            "width": 272,
+            "height": 172.78125
+          },
+          {
+            "left": 24,
+            "top": 306.78125,
+            "right": 296,
+            "bottom": 508.359375,
+            "width": 272,
+            "height": 201.578125
+          }
+        ],
+        "display": [
+          {
+            "text": "TRẦN VŨ",
+            "rect": {
+              "left": 24,
+              "top": -475.0625,
+              "right": 296,
+              "bottom": -442.03125,
+              "width": 272,
+              "height": 33.03125
+            },
+            "opacity": 1
+          },
+          {
+            "text": "ANH DUY",
+            "rect": {
+              "left": 24,
+              "top": -442.03125,
+              "right": 296,
+              "bottom": -409,
+              "width": 272,
+              "height": 33.03125
+            },
+            "opacity": 1
+          },
+          {
+            "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+            "rect": {
+              "left": 24,
+              "top": 110,
+              "right": 296,
+              "bottom": 167.59375,
+              "width": 272,
+              "height": 57.59375
+            },
+            "opacity": 1
+          }
+        ],
+        "obsoleteDOM": 0,
+        "obsoleteScene": [],
+        "activePortrait": false,
+        "activeId": "",
+        "aboutIntroCount": 0
+      }
+    },
+    {
+      "width": 320,
+      "height": 844,
+      "locale": "vi",
+      "reduced": true,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": false,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 2.842170943040401e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8875244140625,
+        0.7358190165876777
+      ],
+      "scale": 154.82223422803625,
+      "aperture": [
+        5845.078125,
+        4656.1875
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 24,
+          "top": 298.0625,
+          "right": 296,
+          "bottom": 638.0625,
+          "width": 272,
+          "height": 340
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 24,
+          "top": 298.0625,
+          "right": 296,
+          "bottom": 638.0625,
+          "width": 272,
+          "height": 340
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 0,
+        "right": 320,
+        "bottom": 1384.921875,
+        "width": 320,
+        "height": 1384.921875
+      },
+      "paragraphRects": [
+        {
+          "left": 24,
+          "top": 737.0625,
+          "right": 296,
+          "bottom": 909.84375,
+          "width": 272,
+          "height": 172.78125
+        },
+        {
+          "left": 24,
+          "top": 933.84375,
+          "right": 296,
+          "bottom": 1135.421875,
+          "width": 272,
+          "height": 201.578125
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 24,
+            "top": 152,
+            "right": 296,
+            "bottom": 185.03125,
+            "width": 272,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 24,
+            "top": 185.03125,
+            "right": 296,
+            "bottom": 218.0625,
+            "width": 272,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 24,
+            "top": 737.0625,
+            "right": 296,
+            "bottom": 794.65625,
+            "width": 272,
+            "height": 57.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0,
+      "bioFrame": {
+        "width": 320,
+        "height": 844,
+        "locale": "vi",
+        "reduced": true,
+        "chapter": "about",
+        "progress": 0.4527331189710611,
+        "hash": "#about",
+        "manual": false,
+        "camera": [
+          2,
+          5,
+          -154
+        ],
+        "cameraFinite": true,
+        "poseError": 0,
+        "observerR": 46.314144707637645,
+        "canvas": 1,
+        "writers": 1,
+        "glError": 0,
+        "overflow": 0,
+        "anchorError": 2.842170943040401e-14,
+        "mini": 0,
+        "visibility": 1,
+        "pull": 1,
+        "center": [
+          0.8875244140625,
+          0.7358190165876777
+        ],
+        "scale": 154.82223422803625,
+        "aperture": [
+          5845.078125,
+          4656.1875
+        ],
+        "backdrop": true,
+        "contentVisible": "visible",
+        "inert": false,
+        "semanticBio": [
+          "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+          "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+        ],
+        "expectedBio": [
+          "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+          "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+        ],
+        "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+        "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+        "headingLabel": "TRẦN VŨ ANH DUY",
+        "expectedName": "TRẦN VŨ ANH DUY",
+        "image": {
+          "src": "/avatar-cutout.webp",
+          "width": 800,
+          "height": 1000,
+          "decoded": true,
+          "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+          "aspect": "4 / 5",
+          "rect": {
+            "left": 24,
+            "top": -328.9375,
+            "right": 296,
+            "bottom": 11.0625,
+            "width": 272,
+            "height": 340
+          }
+        },
+        "portrait": {
+          "name": "Giữ màu chân dung",
+          "pressed": "false",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px",
+          "rect": {
+            "left": 24,
+            "top": -328.9375,
+            "right": 296,
+            "bottom": 11.0625,
+            "width": 272,
+            "height": 340
+          }
+        },
+        "aboutRect": {
+          "left": 0,
+          "top": -627,
+          "right": 320,
+          "bottom": 757.921875,
+          "width": 320,
+          "height": 1384.921875
+        },
+        "paragraphRects": [
+          {
+            "left": 24,
+            "top": 110.0625,
+            "right": 296,
+            "bottom": 282.84375,
+            "width": 272,
+            "height": 172.78125
+          },
+          {
+            "left": 24,
+            "top": 306.84375,
+            "right": 296,
+            "bottom": 508.421875,
+            "width": 272,
+            "height": 201.578125
+          }
+        ],
+        "display": [
+          {
+            "text": "TRẦN VŨ",
+            "rect": {
+              "left": 24,
+              "top": -475,
+              "right": 296,
+              "bottom": -441.96875,
+              "width": 272,
+              "height": 33.03125
+            },
+            "opacity": 1
+          },
+          {
+            "text": "ANH DUY",
+            "rect": {
+              "left": 24,
+              "top": -441.96875,
+              "right": 296,
+              "bottom": -408.9375,
+              "width": 272,
+              "height": 33.03125
+            },
+            "opacity": 1
+          },
+          {
+            "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+            "rect": {
+              "left": 24,
+              "top": 110.0625,
+              "right": 296,
+              "bottom": 167.65625,
+              "width": 272,
+              "height": 57.59375
+            },
+            "opacity": 1
+          }
+        ],
+        "obsoleteDOM": 0,
+        "obsoleteScene": [],
+        "activePortrait": false,
+        "activeId": "",
+        "aboutIntroCount": 0
+      }
+    },
+    {
+      "width": 320,
+      "height": 844,
+      "locale": "en",
+      "reduced": false,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": false,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 2.842170943040401e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8875244140625,
+        0.7358190165876777
+      ],
+      "scale": 154.82223422803625,
+      "aperture": [
+        5845.078125,
+        4656.1875
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+        "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+      ],
+      "expectedBio": [
+        "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+        "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+      ],
+      "quote": "I design small universes — where every touch means something.",
+      "expectedQuote": "I design small universes — where every touch means something.",
+      "headingLabel": "TRAN VU ANH DUY",
+      "expectedName": "TRAN VU ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Portrait of Tran Vu Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 24,
+          "top": 298.0650329589844,
+          "right": 296,
+          "bottom": 638.0650634765625,
+          "width": 272,
+          "height": 340.0000305175781
+        }
+      },
+      "portrait": {
+        "name": "Keep portrait in color",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 24,
+          "top": 298.0650329589844,
+          "right": 296,
+          "bottom": 638.0650634765625,
+          "width": 272,
+          "height": 340.0000305175781
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 0.0025390000082552433,
+        "right": 320,
+        "bottom": 1356.1275390000083,
+        "width": 320,
+        "height": 1356.125
+      },
+      "paragraphRects": [
+        {
+          "left": 24,
+          "top": 737.0650634765625,
+          "right": 296,
+          "bottom": 881.0494384765625,
+          "width": 272,
+          "height": 143.984375
+        },
+        {
+          "left": 24,
+          "top": 905.0494384765625,
+          "right": 296,
+          "bottom": 1106.6275634765625,
+          "width": 272,
+          "height": 201.578125
+        }
+      ],
+      "display": [
+        {
+          "text": "TRAN VU",
+          "rect": {
+            "left": 24,
+            "top": 152.00253295898438,
+            "right": 296,
+            "bottom": 185.03378295898438,
+            "width": 272,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 24,
+            "top": 185.03378295898438,
+            "right": 296,
+            "bottom": 218.06503295898438,
+            "width": 272,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Design is not just about visuals — it's about solving problems.",
+          "rect": {
+            "left": 24,
+            "top": 737.0650634765625,
+            "right": 296,
+            "bottom": 794.6588134765625,
+            "width": 272,
+            "height": 57.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0,
+      "bioFrame": {
+        "width": 320,
+        "height": 844,
+        "locale": "en",
+        "reduced": false,
+        "chapter": "about",
+        "progress": 0.46239285697024274,
+        "hash": "#about",
+        "manual": false,
+        "camera": [
+          2,
+          5,
+          -154
+        ],
+        "cameraFinite": true,
+        "poseError": 0,
+        "observerR": 46.314144707637645,
+        "canvas": 1,
+        "writers": 1,
+        "glError": 0,
+        "overflow": 0,
+        "anchorError": 2.842170943040401e-14,
+        "mini": 0,
+        "visibility": 1,
+        "pull": 1,
+        "center": [
+          0.8875244140625,
+          0.7358190165876777
+        ],
+        "scale": 154.82223422803625,
+        "aperture": [
+          5845.078125,
+          4656.1875
+        ],
+        "backdrop": true,
+        "contentVisible": "visible",
+        "inert": false,
+        "semanticBio": [
+          "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+          "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+        ],
+        "expectedBio": [
+          "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+          "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+        ],
+        "quote": "I design small universes — where every touch means something.",
+        "expectedQuote": "I design small universes — where every touch means something.",
+        "headingLabel": "TRAN VU ANH DUY",
+        "expectedName": "TRAN VU ANH DUY",
+        "image": {
+          "src": "/avatar-cutout.webp",
+          "width": 800,
+          "height": 1000,
+          "decoded": true,
+          "alt": "Portrait of Tran Vu Anh Duy — Creative Designer",
+          "aspect": "4 / 5",
+          "rect": {
+            "left": 24,
+            "top": -329,
+            "right": 296,
+            "bottom": 11,
+            "width": 272,
+            "height": 340
+          }
+        },
+        "portrait": {
+          "name": "Keep portrait in color",
+          "pressed": "false",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px",
+          "rect": {
+            "left": 24,
+            "top": -329,
+            "right": 296,
+            "bottom": 11,
+            "width": 272,
+            "height": 340
+          }
+        },
+        "aboutRect": {
+          "left": 0,
+          "top": -627.0625,
+          "right": 320,
+          "bottom": 729.0625,
+          "width": 320,
+          "height": 1356.125
+        },
+        "paragraphRects": [
+          {
+            "left": 24,
+            "top": 110,
+            "right": 296,
+            "bottom": 253.984375,
+            "width": 272,
+            "height": 143.984375
+          },
+          {
+            "left": 24,
+            "top": 277.984375,
+            "right": 296,
+            "bottom": 479.5625,
+            "width": 272,
+            "height": 201.578125
+          }
+        ],
+        "display": [
+          {
+            "text": "TRAN VU",
+            "rect": {
+              "left": 24,
+              "top": -475.0625,
+              "right": 296,
+              "bottom": -442.03125,
+              "width": 272,
+              "height": 33.03125
+            },
+            "opacity": 1
+          },
+          {
+            "text": "ANH DUY",
+            "rect": {
+              "left": 24,
+              "top": -442.03125,
+              "right": 296,
+              "bottom": -409,
+              "width": 272,
+              "height": 33.03125
+            },
+            "opacity": 1
+          },
+          {
+            "text": "Design is not just about visuals — it's about solving problems.",
+            "rect": {
+              "left": 24,
+              "top": 110,
+              "right": 296,
+              "bottom": 167.59375,
+              "width": 272,
+              "height": 57.59375
+            },
+            "opacity": 1
+          }
+        ],
+        "obsoleteDOM": 0,
+        "obsoleteScene": [],
+        "activePortrait": false,
+        "activeId": "",
+        "aboutIntroCount": 0
+      }
+    },
+    {
+      "width": 320,
+      "height": 844,
+      "locale": "en",
+      "reduced": true,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": false,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 2.842170943040401e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8875244140625,
+        0.7358190165876777
+      ],
+      "scale": 154.82223422803625,
+      "aperture": [
+        5845.078125,
+        4656.1875
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+        "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+      ],
+      "expectedBio": [
+        "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+        "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+      ],
+      "quote": "I design small universes — where every touch means something.",
+      "expectedQuote": "I design small universes — where every touch means something.",
+      "headingLabel": "TRAN VU ANH DUY",
+      "expectedName": "TRAN VU ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Portrait of Tran Vu Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 24,
+          "top": 298.0625,
+          "right": 296,
+          "bottom": 638.0625,
+          "width": 272,
+          "height": 340
+        }
+      },
+      "portrait": {
+        "name": "Keep portrait in color",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 24,
+          "top": 298.0625,
+          "right": 296,
+          "bottom": 638.0625,
+          "width": 272,
+          "height": 340
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 0,
+        "right": 320,
+        "bottom": 1356.125,
+        "width": 320,
+        "height": 1356.125
+      },
+      "paragraphRects": [
+        {
+          "left": 24,
+          "top": 737.0625,
+          "right": 296,
+          "bottom": 881.046875,
+          "width": 272,
+          "height": 143.984375
+        },
+        {
+          "left": 24,
+          "top": 905.046875,
+          "right": 296,
+          "bottom": 1106.625,
+          "width": 272,
+          "height": 201.578125
+        }
+      ],
+      "display": [
+        {
+          "text": "TRAN VU",
+          "rect": {
+            "left": 24,
+            "top": 152,
+            "right": 296,
+            "bottom": 185.03125,
+            "width": 272,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 24,
+            "top": 185.03125,
+            "right": 296,
+            "bottom": 218.0625,
+            "width": 272,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Design is not just about visuals — it's about solving problems.",
+          "rect": {
+            "left": 24,
+            "top": 737.0625,
+            "right": 296,
+            "bottom": 794.65625,
+            "width": 272,
+            "height": 57.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0,
+      "bioFrame": {
+        "width": 320,
+        "height": 844,
+        "locale": "en",
+        "reduced": true,
+        "chapter": "about",
+        "progress": 0.46234676007005254,
+        "hash": "#about",
+        "manual": false,
+        "camera": [
+          2,
+          5,
+          -154
+        ],
+        "cameraFinite": true,
+        "poseError": 0,
+        "observerR": 46.314144707637645,
+        "canvas": 1,
+        "writers": 1,
+        "glError": 0,
+        "overflow": 0,
+        "anchorError": 2.842170943040401e-14,
+        "mini": 0,
+        "visibility": 1,
+        "pull": 1,
+        "center": [
+          0.8875244140625,
+          0.7358190165876777
+        ],
+        "scale": 154.82223422803625,
+        "aperture": [
+          5845.078125,
+          4656.1875
+        ],
+        "backdrop": true,
+        "contentVisible": "visible",
+        "inert": false,
+        "semanticBio": [
+          "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+          "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+        ],
+        "expectedBio": [
+          "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+          "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+        ],
+        "quote": "I design small universes — where every touch means something.",
+        "expectedQuote": "I design small universes — where every touch means something.",
+        "headingLabel": "TRAN VU ANH DUY",
+        "expectedName": "TRAN VU ANH DUY",
+        "image": {
+          "src": "/avatar-cutout.webp",
+          "width": 800,
+          "height": 1000,
+          "decoded": true,
+          "alt": "Portrait of Tran Vu Anh Duy — Creative Designer",
+          "aspect": "4 / 5",
+          "rect": {
+            "left": 24,
+            "top": -328.9375,
+            "right": 296,
+            "bottom": 11.0625,
+            "width": 272,
+            "height": 340
+          }
+        },
+        "portrait": {
+          "name": "Keep portrait in color",
+          "pressed": "false",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px",
+          "rect": {
+            "left": 24,
+            "top": -328.9375,
+            "right": 296,
+            "bottom": 11.0625,
+            "width": 272,
+            "height": 340
+          }
+        },
+        "aboutRect": {
+          "left": 0,
+          "top": -627,
+          "right": 320,
+          "bottom": 729.125,
+          "width": 320,
+          "height": 1356.125
+        },
+        "paragraphRects": [
+          {
+            "left": 24,
+            "top": 110.0625,
+            "right": 296,
+            "bottom": 254.046875,
+            "width": 272,
+            "height": 143.984375
+          },
+          {
+            "left": 24,
+            "top": 278.046875,
+            "right": 296,
+            "bottom": 479.625,
+            "width": 272,
+            "height": 201.578125
+          }
+        ],
+        "display": [
+          {
+            "text": "TRAN VU",
+            "rect": {
+              "left": 24,
+              "top": -475,
+              "right": 296,
+              "bottom": -441.96875,
+              "width": 272,
+              "height": 33.03125
+            },
+            "opacity": 1
+          },
+          {
+            "text": "ANH DUY",
+            "rect": {
+              "left": 24,
+              "top": -441.96875,
+              "right": 296,
+              "bottom": -408.9375,
+              "width": 272,
+              "height": 33.03125
+            },
+            "opacity": 1
+          },
+          {
+            "text": "Design is not just about visuals — it's about solving problems.",
+            "rect": {
+              "left": 24,
+              "top": 110.0625,
+              "right": 296,
+              "bottom": 167.65625,
+              "width": 272,
+              "height": 57.59375
+            },
+            "opacity": 1
+          }
+        ],
+        "obsoleteDOM": 0,
+        "obsoleteScene": [],
+        "activePortrait": false,
+        "activeId": "",
+        "aboutIntroCount": 0
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": false,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 2.842170943040401e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8952524038461539,
+        0.7299318720379147
+      ],
+      "scale": 157.89578558238233,
+      "aperture": [
+        7265.109375000001,
+        5789.0625
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 24,
+          "top": 298.0631408691406,
+          "right": 366,
+          "bottom": 725.5631713867188,
+          "width": 342,
+          "height": 427.5000305175781
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 24,
+          "top": 298.0631408691406,
+          "right": 366,
+          "bottom": 725.5631713867188,
+          "width": 342,
+          "height": 427.5000305175781
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 0.000645000021904707,
+        "right": 390,
+        "bottom": 1382.328770000022,
+        "width": 390,
+        "height": 1382.328125
+      },
+      "paragraphRects": [
+        {
+          "left": 24,
+          "top": 824.5631713867188,
+          "right": 366,
+          "bottom": 968.5475463867188,
+          "width": 342,
+          "height": 143.984375
+        },
+        {
+          "left": 24,
+          "top": 992.5475463867188,
+          "right": 366,
+          "bottom": 1165.3287353515625,
+          "width": 342,
+          "height": 172.78118896484375
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 24,
+            "top": 152.00064086914062,
+            "right": 366,
+            "bottom": 185.03189086914062,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 24,
+            "top": 185.03189086914062,
+            "right": 366,
+            "bottom": 218.06314086914062,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 24,
+            "top": 824.5631713867188,
+            "right": 366,
+            "bottom": 882.1569213867188,
+            "width": 342,
+            "height": 57.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0,
+      "bioFrame": {
+        "width": 390,
+        "height": 844,
+        "locale": "vi",
+        "reduced": false,
+        "chapter": "about",
+        "progress": 0.5169268651735031,
+        "hash": "#about",
+        "manual": false,
+        "camera": [
+          2,
+          5,
+          -154
+        ],
+        "cameraFinite": true,
+        "poseError": 0,
+        "observerR": 46.314144707637645,
+        "canvas": 1,
+        "writers": 1,
+        "glError": 0,
+        "overflow": 0,
+        "anchorError": 2.842170943040401e-14,
+        "mini": 0,
+        "visibility": 1,
+        "pull": 1,
+        "center": [
+          0.8952524038461539,
+          0.7299318720379147
+        ],
+        "scale": 157.89578558238233,
+        "aperture": [
+          7265.109375000001,
+          5789.0625
+        ],
+        "backdrop": true,
+        "contentVisible": "visible",
+        "inert": false,
+        "semanticBio": [
+          "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+          "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+        ],
+        "expectedBio": [
+          "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+          "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+        ],
+        "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+        "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+        "headingLabel": "TRẦN VŨ ANH DUY",
+        "expectedName": "TRẦN VŨ ANH DUY",
+        "image": {
+          "src": "/avatar-cutout.webp",
+          "width": 800,
+          "height": 1000,
+          "decoded": true,
+          "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+          "aspect": "4 / 5",
+          "rect": {
+            "left": 24,
+            "top": -416.50006103515625,
+            "right": 366,
+            "bottom": 10.99993896484375,
+            "width": 342,
+            "height": 427.5
+          }
+        },
+        "portrait": {
+          "name": "Giữ màu chân dung",
+          "pressed": "false",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px",
+          "rect": {
+            "left": 24,
+            "top": -416.50006103515625,
+            "right": 366,
+            "bottom": 10.99993896484375,
+            "width": 342,
+            "height": 427.5
+          }
+        },
+        "aboutRect": {
+          "left": 0,
+          "top": -714.5625610351562,
+          "right": 390,
+          "bottom": 667.7655639648438,
+          "width": 390,
+          "height": 1382.328125
+        },
+        "paragraphRects": [
+          {
+            "left": 24,
+            "top": 109.99993896484375,
+            "right": 366,
+            "bottom": 253.98431396484375,
+            "width": 342,
+            "height": 143.984375
+          },
+          {
+            "left": 24,
+            "top": 277.98431396484375,
+            "right": 366,
+            "bottom": 450.76556396484375,
+            "width": 342,
+            "height": 172.78125
+          }
+        ],
+        "display": [
+          {
+            "text": "TRẦN VŨ",
+            "rect": {
+              "left": 24,
+              "top": -562.5625610351562,
+              "right": 366,
+              "bottom": -529.5313110351562,
+              "width": 342,
+              "height": 33.03125
+            },
+            "opacity": 1
+          },
+          {
+            "text": "ANH DUY",
+            "rect": {
+              "left": 24,
+              "top": -529.5313110351562,
+              "right": 366,
+              "bottom": -496.50006103515625,
+              "width": 342,
+              "height": 33.03125
+            },
+            "opacity": 1
+          },
+          {
+            "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+            "rect": {
+              "left": 24,
+              "top": 109.99993896484375,
+              "right": 366,
+              "bottom": 167.59368896484375,
+              "width": 342,
+              "height": 57.59375
+            },
+            "opacity": 1
+          }
+        ],
+        "obsoleteDOM": 0,
+        "obsoleteScene": [],
+        "activePortrait": false,
+        "activeId": "",
+        "aboutIntroCount": 0
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "locale": "vi",
+      "reduced": true,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": false,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 2.842170943040401e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8952524038461539,
+        0.7299318720379147
+      ],
+      "scale": 157.89578558238233,
+      "aperture": [
+        7265.109375000001,
+        5789.0625
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 24,
+          "top": 298.0625,
+          "right": 366,
+          "bottom": 725.5625,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 24,
+          "top": 298.0625,
+          "right": 366,
+          "bottom": 725.5625,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 0,
+        "right": 390,
+        "bottom": 1382.328125,
+        "width": 390,
+        "height": 1382.328125
+      },
+      "paragraphRects": [
+        {
+          "left": 24,
+          "top": 824.5625,
+          "right": 366,
+          "bottom": 968.546875,
+          "width": 342,
+          "height": 143.984375
+        },
+        {
+          "left": 24,
+          "top": 992.546875,
+          "right": 366,
+          "bottom": 1165.328125,
+          "width": 342,
+          "height": 172.78125
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 24,
+            "top": 152,
+            "right": 366,
+            "bottom": 185.03125,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 24,
+            "top": 185.03125,
+            "right": 366,
+            "bottom": 218.0625,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 24,
+            "top": 824.5625,
+            "right": 366,
+            "bottom": 882.15625,
+            "width": 342,
+            "height": 57.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0,
+      "bioFrame": {
+        "width": 390,
+        "height": 844,
+        "locale": "vi",
+        "reduced": true,
+        "chapter": "about",
+        "progress": 0.5172433281714499,
+        "hash": "#about",
+        "manual": false,
+        "camera": [
+          2,
+          5,
+          -154
+        ],
+        "cameraFinite": true,
+        "poseError": 0,
+        "observerR": 46.314144707637645,
+        "canvas": 1,
+        "writers": 1,
+        "glError": 0,
+        "overflow": 0,
+        "anchorError": 2.842170943040401e-14,
+        "mini": 0,
+        "visibility": 1,
+        "pull": 1,
+        "center": [
+          0.8952524038461539,
+          0.7299318720379147
+        ],
+        "scale": 157.89578558238233,
+        "aperture": [
+          7265.109375000001,
+          5789.0625
+        ],
+        "backdrop": true,
+        "contentVisible": "visible",
+        "inert": false,
+        "semanticBio": [
+          "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+          "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+        ],
+        "expectedBio": [
+          "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+          "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+        ],
+        "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+        "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+        "headingLabel": "TRẦN VŨ ANH DUY",
+        "expectedName": "TRẦN VŨ ANH DUY",
+        "image": {
+          "src": "/avatar-cutout.webp",
+          "width": 800,
+          "height": 1000,
+          "decoded": true,
+          "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+          "aspect": "4 / 5",
+          "rect": {
+            "left": 24,
+            "top": -416.9375,
+            "right": 366,
+            "bottom": 10.5625,
+            "width": 342,
+            "height": 427.5
+          }
+        },
+        "portrait": {
+          "name": "Giữ màu chân dung",
+          "pressed": "false",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px",
+          "rect": {
+            "left": 24,
+            "top": -416.9375,
+            "right": 366,
+            "bottom": 10.5625,
+            "width": 342,
+            "height": 427.5
+          }
+        },
+        "aboutRect": {
+          "left": 0,
+          "top": -715,
+          "right": 390,
+          "bottom": 667.328125,
+          "width": 390,
+          "height": 1382.328125
+        },
+        "paragraphRects": [
+          {
+            "left": 24,
+            "top": 109.5625,
+            "right": 366,
+            "bottom": 253.546875,
+            "width": 342,
+            "height": 143.984375
+          },
+          {
+            "left": 24,
+            "top": 277.546875,
+            "right": 366,
+            "bottom": 450.328125,
+            "width": 342,
+            "height": 172.78125
+          }
+        ],
+        "display": [
+          {
+            "text": "TRẦN VŨ",
+            "rect": {
+              "left": 24,
+              "top": -563,
+              "right": 366,
+              "bottom": -529.96875,
+              "width": 342,
+              "height": 33.03125
+            },
+            "opacity": 1
+          },
+          {
+            "text": "ANH DUY",
+            "rect": {
+              "left": 24,
+              "top": -529.96875,
+              "right": 366,
+              "bottom": -496.9375,
+              "width": 342,
+              "height": 33.03125
+            },
+            "opacity": 1
+          },
+          {
+            "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+            "rect": {
+              "left": 24,
+              "top": 109.5625,
+              "right": 366,
+              "bottom": 167.15625,
+              "width": 342,
+              "height": 57.59375
+            },
+            "opacity": 1
+          }
+        ],
+        "obsoleteDOM": 0,
+        "obsoleteScene": [],
+        "activePortrait": false,
+        "activeId": "",
+        "aboutIntroCount": 0
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "locale": "en",
+      "reduced": false,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": false,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 2.842170943040401e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8952524038461539,
+        0.7299318720379147
+      ],
+      "scale": 157.89578558238233,
+      "aperture": [
+        7265.109375000001,
+        5789.0625
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+        "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+      ],
+      "expectedBio": [
+        "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+        "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+      ],
+      "quote": "I design small universes — where every touch means something.",
+      "expectedQuote": "I design small universes — where every touch means something.",
+      "headingLabel": "TRAN VU ANH DUY",
+      "expectedName": "TRAN VU ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Portrait of Tran Vu Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 24,
+          "top": 298.0675048828125,
+          "right": 366,
+          "bottom": 725.5675048828125,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "portrait": {
+        "name": "Keep portrait in color",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 24,
+          "top": 298.0675048828125,
+          "right": 366,
+          "bottom": 725.5675048828125,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 0.004991999827325344,
+        "right": 390,
+        "bottom": 1382.3331169998273,
+        "width": 390,
+        "height": 1382.328125
+      },
+      "paragraphRects": [
+        {
+          "left": 24,
+          "top": 824.5675048828125,
+          "right": 366,
+          "bottom": 968.5518798828125,
+          "width": 342,
+          "height": 143.984375
+        },
+        {
+          "left": 24,
+          "top": 992.5518798828125,
+          "right": 366,
+          "bottom": 1165.3331298828125,
+          "width": 342,
+          "height": 172.78125
+        }
+      ],
+      "display": [
+        {
+          "text": "TRAN VU",
+          "rect": {
+            "left": 24,
+            "top": 152.00498962402344,
+            "right": 366,
+            "bottom": 185.03623962402344,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 24,
+            "top": 185.03623962402344,
+            "right": 366,
+            "bottom": 218.06748962402344,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Design is not just about visuals — it's about solving problems.",
+          "rect": {
+            "left": 24,
+            "top": 824.5675048828125,
+            "right": 366,
+            "bottom": 882.1612548828125,
+            "width": 342,
+            "height": 57.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0,
+      "bioFrame": {
+        "width": 390,
+        "height": 844,
+        "locale": "en",
+        "reduced": false,
+        "chapter": "about",
+        "progress": 0.5169268376301208,
+        "hash": "#about",
+        "manual": false,
+        "camera": [
+          2,
+          5,
+          -154
+        ],
+        "cameraFinite": true,
+        "poseError": 0,
+        "observerR": 46.314144707637645,
+        "canvas": 1,
+        "writers": 1,
+        "glError": 0,
+        "overflow": 0,
+        "anchorError": 2.842170943040401e-14,
+        "mini": 0,
+        "visibility": 1,
+        "pull": 1,
+        "center": [
+          0.8952524038461539,
+          0.7299318720379147
+        ],
+        "scale": 157.89578558238233,
+        "aperture": [
+          7265.109375000001,
+          5789.0625
+        ],
+        "backdrop": true,
+        "contentVisible": "visible",
+        "inert": false,
+        "semanticBio": [
+          "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+          "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+        ],
+        "expectedBio": [
+          "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+          "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+        ],
+        "quote": "I design small universes — where every touch means something.",
+        "expectedQuote": "I design small universes — where every touch means something.",
+        "headingLabel": "TRAN VU ANH DUY",
+        "expectedName": "TRAN VU ANH DUY",
+        "image": {
+          "src": "/avatar-cutout.webp",
+          "width": 800,
+          "height": 1000,
+          "decoded": true,
+          "alt": "Portrait of Tran Vu Anh Duy — Creative Designer",
+          "aspect": "4 / 5",
+          "rect": {
+            "left": 24,
+            "top": -416.5,
+            "right": 366,
+            "bottom": 11,
+            "width": 342,
+            "height": 427.5
+          }
+        },
+        "portrait": {
+          "name": "Keep portrait in color",
+          "pressed": "false",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px",
+          "rect": {
+            "left": 24,
+            "top": -416.5,
+            "right": 366,
+            "bottom": 11,
+            "width": 342,
+            "height": 427.5
+          }
+        },
+        "aboutRect": {
+          "left": 0,
+          "top": -714.5625,
+          "right": 390,
+          "bottom": 667.765625,
+          "width": 390,
+          "height": 1382.328125
+        },
+        "paragraphRects": [
+          {
+            "left": 24,
+            "top": 110,
+            "right": 366,
+            "bottom": 253.984375,
+            "width": 342,
+            "height": 143.984375
+          },
+          {
+            "left": 24,
+            "top": 277.984375,
+            "right": 366,
+            "bottom": 450.765625,
+            "width": 342,
+            "height": 172.78125
+          }
+        ],
+        "display": [
+          {
+            "text": "TRAN VU",
+            "rect": {
+              "left": 24,
+              "top": -562.5625,
+              "right": 366,
+              "bottom": -529.53125,
+              "width": 342,
+              "height": 33.03125
+            },
+            "opacity": 1
+          },
+          {
+            "text": "ANH DUY",
+            "rect": {
+              "left": 24,
+              "top": -529.53125,
+              "right": 366,
+              "bottom": -496.5,
+              "width": 342,
+              "height": 33.03125
+            },
+            "opacity": 1
+          },
+          {
+            "text": "Design is not just about visuals — it's about solving problems.",
+            "rect": {
+              "left": 24,
+              "top": 110,
+              "right": 366,
+              "bottom": 167.59375,
+              "width": 342,
+              "height": 57.59375
+            },
+            "opacity": 1
+          }
+        ],
+        "obsoleteDOM": 0,
+        "obsoleteScene": [],
+        "activePortrait": false,
+        "activeId": "",
+        "aboutIntroCount": 0
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "locale": "en",
+      "reduced": true,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": false,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 2.842170943040401e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8952524038461539,
+        0.7299318720379147
+      ],
+      "scale": 157.89578558238233,
+      "aperture": [
+        7265.109375000001,
+        5789.0625
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+        "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+      ],
+      "expectedBio": [
+        "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+        "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+      ],
+      "quote": "I design small universes — where every touch means something.",
+      "expectedQuote": "I design small universes — where every touch means something.",
+      "headingLabel": "TRAN VU ANH DUY",
+      "expectedName": "TRAN VU ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Portrait of Tran Vu Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 24,
+          "top": 298.0625,
+          "right": 366,
+          "bottom": 725.5625,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "portrait": {
+        "name": "Keep portrait in color",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 24,
+          "top": 298.0625,
+          "right": 366,
+          "bottom": 725.5625,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 0,
+        "right": 390,
+        "bottom": 1382.328125,
+        "width": 390,
+        "height": 1382.328125
+      },
+      "paragraphRects": [
+        {
+          "left": 24,
+          "top": 824.5625,
+          "right": 366,
+          "bottom": 968.546875,
+          "width": 342,
+          "height": 143.984375
+        },
+        {
+          "left": 24,
+          "top": 992.546875,
+          "right": 366,
+          "bottom": 1165.328125,
+          "width": 342,
+          "height": 172.78125
+        }
+      ],
+      "display": [
+        {
+          "text": "TRAN VU",
+          "rect": {
+            "left": 24,
+            "top": 152,
+            "right": 366,
+            "bottom": 185.03125,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 24,
+            "top": 185.03125,
+            "right": 366,
+            "bottom": 218.0625,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Design is not just about visuals — it's about solving problems.",
+          "rect": {
+            "left": 24,
+            "top": 824.5625,
+            "right": 366,
+            "bottom": 882.15625,
+            "width": 342,
+            "height": 57.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0,
+      "bioFrame": {
+        "width": 390,
+        "height": 844,
+        "locale": "en",
+        "reduced": true,
+        "chapter": "about",
+        "progress": 0.5172433281714499,
+        "hash": "#about",
+        "manual": false,
+        "camera": [
+          2,
+          5,
+          -154
+        ],
+        "cameraFinite": true,
+        "poseError": 0,
+        "observerR": 46.314144707637645,
+        "canvas": 1,
+        "writers": 1,
+        "glError": 0,
+        "overflow": 0,
+        "anchorError": 2.842170943040401e-14,
+        "mini": 0,
+        "visibility": 1,
+        "pull": 1,
+        "center": [
+          0.8952524038461539,
+          0.7299318720379147
+        ],
+        "scale": 157.89578558238233,
+        "aperture": [
+          7265.109375000001,
+          5789.0625
+        ],
+        "backdrop": true,
+        "contentVisible": "visible",
+        "inert": false,
+        "semanticBio": [
+          "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+          "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+        ],
+        "expectedBio": [
+          "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+          "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+        ],
+        "quote": "I design small universes — where every touch means something.",
+        "expectedQuote": "I design small universes — where every touch means something.",
+        "headingLabel": "TRAN VU ANH DUY",
+        "expectedName": "TRAN VU ANH DUY",
+        "image": {
+          "src": "/avatar-cutout.webp",
+          "width": 800,
+          "height": 1000,
+          "decoded": true,
+          "alt": "Portrait of Tran Vu Anh Duy — Creative Designer",
+          "aspect": "4 / 5",
+          "rect": {
+            "left": 24,
+            "top": -416.9375,
+            "right": 366,
+            "bottom": 10.5625,
+            "width": 342,
+            "height": 427.5
+          }
+        },
+        "portrait": {
+          "name": "Keep portrait in color",
+          "pressed": "false",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "0px",
+          "rect": {
+            "left": 24,
+            "top": -416.9375,
+            "right": 366,
+            "bottom": 10.5625,
+            "width": 342,
+            "height": 427.5
+          }
+        },
+        "aboutRect": {
+          "left": 0,
+          "top": -715,
+          "right": 390,
+          "bottom": 667.328125,
+          "width": 390,
+          "height": 1382.328125
+        },
+        "paragraphRects": [
+          {
+            "left": 24,
+            "top": 109.5625,
+            "right": 366,
+            "bottom": 253.546875,
+            "width": 342,
+            "height": 143.984375
+          },
+          {
+            "left": 24,
+            "top": 277.546875,
+            "right": 366,
+            "bottom": 450.328125,
+            "width": 342,
+            "height": 172.78125
+          }
+        ],
+        "display": [
+          {
+            "text": "TRAN VU",
+            "rect": {
+              "left": 24,
+              "top": -563,
+              "right": 366,
+              "bottom": -529.96875,
+              "width": 342,
+              "height": 33.03125
+            },
+            "opacity": 1
+          },
+          {
+            "text": "ANH DUY",
+            "rect": {
+              "left": 24,
+              "top": -529.96875,
+              "right": 366,
+              "bottom": -496.9375,
+              "width": 342,
+              "height": 33.03125
+            },
+            "opacity": 1
+          },
+          {
+            "text": "Design is not just about visuals — it's about solving problems.",
+            "rect": {
+              "left": 24,
+              "top": 109.5625,
+              "right": 366,
+              "bottom": 167.15625,
+              "width": 342,
+              "height": 57.59375
+            },
+            "opacity": 1
+          }
+        ],
+        "obsoleteDOM": 0,
+        "obsoleteScene": [],
+        "activePortrait": false,
+        "activeId": "",
+        "aboutIntroCount": 0
+      }
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": false,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 0,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8960774739583334,
+        0.7043229166666667
+      ],
+      "scale": 158.2521746591277,
+      "aperture": [
+        14338.96875,
+        11424.9375
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 160,
+          "top": 326.6288146972656,
+          "right": 608,
+          "bottom": 886.6288146972656,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 160,
+          "top": 326.6288146972656,
+          "right": 608,
+          "bottom": 886.6288146972656,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 0.0038010000716894865,
+        "right": 768,
+        "bottom": 1421.7069260000717,
+        "width": 768,
+        "height": 1421.703125
+      },
+      "paragraphRects": [
+        {
+          "left": 32,
+          "top": 966.1287841796875,
+          "right": 606.328125,
+          "bottom": 1052.5194091796875,
+          "width": 574.328125,
+          "height": 86.390625
+        },
+        {
+          "left": 32,
+          "top": 1076.5194091796875,
+          "right": 606.328125,
+          "bottom": 1191.7069091796875,
+          "width": 574.328125,
+          "height": 115.1875
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 32,
+            "top": 152.00379943847656,
+            "right": 736,
+            "bottom": 197.31629943847656,
+            "width": 704,
+            "height": 45.3125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 32,
+            "top": 197.31629943847656,
+            "right": 736,
+            "bottom": 242.62879943847656,
+            "width": 704,
+            "height": 45.3125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 32,
+            "top": 966.1287841796875,
+            "right": 606.328125,
+            "bottom": 994.9256591796875,
+            "width": 574.328125,
+            "height": 28.796875
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "locale": "vi",
+      "reduced": true,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": false,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 0,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8960774739583334,
+        0.7043229166666667
+      ],
+      "scale": 158.2521746591277,
+      "aperture": [
+        14338.96875,
+        11424.9375
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 160,
+          "top": 326.625,
+          "right": 608,
+          "bottom": 886.625,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 160,
+          "top": 326.625,
+          "right": 608,
+          "bottom": 886.625,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 0,
+        "right": 768,
+        "bottom": 1421.703125,
+        "width": 768,
+        "height": 1421.703125
+      },
+      "paragraphRects": [
+        {
+          "left": 32,
+          "top": 966.125,
+          "right": 606.328125,
+          "bottom": 1052.515625,
+          "width": 574.328125,
+          "height": 86.390625
+        },
+        {
+          "left": 32,
+          "top": 1076.515625,
+          "right": 606.328125,
+          "bottom": 1191.703125,
+          "width": 574.328125,
+          "height": 115.1875
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 32,
+            "top": 152,
+            "right": 736,
+            "bottom": 197.3125,
+            "width": 704,
+            "height": 45.3125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 32,
+            "top": 197.3125,
+            "right": 736,
+            "bottom": 242.625,
+            "width": 704,
+            "height": 45.3125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 32,
+            "top": 966.125,
+            "right": 606.328125,
+            "bottom": 994.921875,
+            "width": 574.328125,
+            "height": 28.796875
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "locale": "en",
+      "reduced": false,
+      "chapter": "about",
+      "progress": 0.0000037479808948453735,
+      "hash": "#about",
+      "manual": false,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 0,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8960774739583334,
+        0.7043229166666667
+      ],
+      "scale": 158.2521746591277,
+      "aperture": [
+        14338.96875,
+        11424.9375
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+        "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+      ],
+      "expectedBio": [
+        "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+        "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+      ],
+      "quote": "I design small universes — where every touch means something.",
+      "expectedQuote": "I design small universes — where every touch means something.",
+      "headingLabel": "TRAN VU ANH DUY",
+      "expectedName": "TRAN VU ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Portrait of Tran Vu Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 160,
+          "top": 326.6197814941406,
+          "right": 608,
+          "bottom": 886.6197814941406,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "portrait": {
+        "name": "Keep portrait in color",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 160,
+          "top": 326.6197814941406,
+          "right": 608,
+          "bottom": 886.6197814941406,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": -0.005224999971687794,
+        "right": 768,
+        "bottom": 1392.9010250000283,
+        "width": 768,
+        "height": 1392.90625
+      },
+      "paragraphRects": [
+        {
+          "left": 32,
+          "top": 966.1197509765625,
+          "right": 606.328125,
+          "bottom": 1052.5103759765625,
+          "width": 574.328125,
+          "height": 86.390625
+        },
+        {
+          "left": 32,
+          "top": 1076.5103759765625,
+          "right": 606.328125,
+          "bottom": 1162.9010009765625,
+          "width": 574.328125,
+          "height": 86.390625
+        }
+      ],
+      "display": [
+        {
+          "text": "TRAN VU",
+          "rect": {
+            "left": 32,
+            "top": 151.99478149414062,
+            "right": 736,
+            "bottom": 197.30728149414062,
+            "width": 704,
+            "height": 45.3125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 32,
+            "top": 197.30728149414062,
+            "right": 736,
+            "bottom": 242.61978149414062,
+            "width": 704,
+            "height": 45.3125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Design is not just about visuals — it's about solving problems.",
+          "rect": {
+            "left": 32,
+            "top": 966.1197509765625,
+            "right": 606.328125,
+            "bottom": 994.9166259765625,
+            "width": 574.328125,
+            "height": 28.796875
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "locale": "en",
+      "reduced": true,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": false,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 0,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8960774739583334,
+        0.7043229166666667
+      ],
+      "scale": 158.2521746591277,
+      "aperture": [
+        14338.96875,
+        11424.9375
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+        "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+      ],
+      "expectedBio": [
+        "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+        "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+      ],
+      "quote": "I design small universes — where every touch means something.",
+      "expectedQuote": "I design small universes — where every touch means something.",
+      "headingLabel": "TRAN VU ANH DUY",
+      "expectedName": "TRAN VU ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Portrait of Tran Vu Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 160,
+          "top": 326.625,
+          "right": 608,
+          "bottom": 886.625,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "portrait": {
+        "name": "Keep portrait in color",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 160,
+          "top": 326.625,
+          "right": 608,
+          "bottom": 886.625,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 0,
+        "right": 768,
+        "bottom": 1392.90625,
+        "width": 768,
+        "height": 1392.90625
+      },
+      "paragraphRects": [
+        {
+          "left": 32,
+          "top": 966.125,
+          "right": 606.328125,
+          "bottom": 1052.515625,
+          "width": 574.328125,
+          "height": 86.390625
+        },
+        {
+          "left": 32,
+          "top": 1076.515625,
+          "right": 606.328125,
+          "bottom": 1162.90625,
+          "width": 574.328125,
+          "height": 86.390625
+        }
+      ],
+      "display": [
+        {
+          "text": "TRAN VU",
+          "rect": {
+            "left": 32,
+            "top": 152,
+            "right": 736,
+            "bottom": 197.3125,
+            "width": 704,
+            "height": 45.3125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 32,
+            "top": 197.3125,
+            "right": 736,
+            "bottom": 242.625,
+            "width": 704,
+            "height": 45.3125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Design is not just about visuals — it's about solving problems.",
+          "rect": {
+            "left": 32,
+            "top": 966.125,
+            "right": 606.328125,
+            "bottom": 994.921875,
+            "width": 574.328125,
+            "height": 28.796875
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": false,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 5.684341886080802e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8960015190972223,
+        0.6555989583333333
+      ],
+      "scale": 253.17533635363128,
+      "aperture": [
+        26882.578125,
+        21423.09375
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 104,
+          "top": 162.12599182128906,
+          "right": 552,
+          "bottom": 722.1259918212891,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 104,
+          "top": 162.12599182128906,
+          "right": 552,
+          "bottom": 722.1259918212891,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 0.0009960000170394778,
+        "right": 1440,
+        "bottom": 923.766621000017,
+        "width": 1440,
+        "height": 923.765625
+      },
+      "paragraphRects": [
+        {
+          "left": 640,
+          "top": 411.0322570800781,
+          "right": 1286.125,
+          "bottom": 508.2041320800781,
+          "width": 646.125,
+          "height": 97.171875
+        },
+        {
+          "left": 640,
+          "top": 532.2041015625,
+          "right": 1286.125,
+          "bottom": 661.7666015625,
+          "width": 646.125,
+          "height": 129.5625
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 640,
+            "top": 184.00099182128906,
+            "right": 1360,
+            "bottom": 259.5166320800781,
+            "width": 720,
+            "height": 75.51564025878906
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 640,
+            "top": 259.5166320800781,
+            "right": 1360,
+            "bottom": 335.0322570800781,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 640,
+            "top": 411.0322570800781,
+            "right": 1286.125,
+            "bottom": 443.4228820800781,
+            "width": 646.125,
+            "height": 32.390625
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "locale": "vi",
+      "reduced": true,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": false,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 5.684341886080802e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8960015190972223,
+        0.6555989583333333
+      ],
+      "scale": 253.17533635363128,
+      "aperture": [
+        26882.578125,
+        21423.09375
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 104,
+          "top": 162.125,
+          "right": 552,
+          "bottom": 722.125,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 104,
+          "top": 162.125,
+          "right": 552,
+          "bottom": 722.125,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 0,
+        "right": 1440,
+        "bottom": 923.765625,
+        "width": 1440,
+        "height": 923.765625
+      },
+      "paragraphRects": [
+        {
+          "left": 640,
+          "top": 411.03125,
+          "right": 1286.125,
+          "bottom": 508.203125,
+          "width": 646.125,
+          "height": 97.171875
+        },
+        {
+          "left": 640,
+          "top": 532.203125,
+          "right": 1286.125,
+          "bottom": 661.765625,
+          "width": 646.125,
+          "height": 129.5625
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 640,
+            "top": 184,
+            "right": 1360,
+            "bottom": 259.515625,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 640,
+            "top": 259.515625,
+            "right": 1360,
+            "bottom": 335.03125,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 640,
+            "top": 411.03125,
+            "right": 1286.125,
+            "bottom": 443.421875,
+            "width": 646.125,
+            "height": 32.390625
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "locale": "en",
+      "reduced": false,
+      "chapter": "about",
+      "progress": 0.000001154930584597199,
+      "hash": "#about",
+      "manual": false,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 5.684341886080802e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8960015190972223,
+        0.6555989583333333
+      ],
+      "scale": 253.17533635363128,
+      "aperture": [
+        26882.578125,
+        21423.09375
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+        "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+      ],
+      "expectedBio": [
+        "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+        "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+      ],
+      "quote": "I design small universes — where every touch means something.",
+      "expectedQuote": "I design small universes — where every touch means something.",
+      "headingLabel": "TRAN VU ANH DUY",
+      "expectedName": "TRAN VU ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Portrait of Tran Vu Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 104,
+          "top": 145.93649291992188,
+          "right": 552,
+          "bottom": 705.9364929199219,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "portrait": {
+        "name": "Keep portrait in color",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 104,
+          "top": 145.93649291992188,
+          "right": 552,
+          "bottom": 705.9364929199219,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": -0.0010079999919980764,
+        "right": 1440,
+        "bottom": 899.998992000008,
+        "width": 1440,
+        "height": 900
+      },
+      "paragraphRects": [
+        {
+          "left": 640,
+          "top": 411.0302429199219,
+          "right": 1286.125,
+          "bottom": 508.2021179199219,
+          "width": 646.125,
+          "height": 97.171875
+        },
+        {
+          "left": 640,
+          "top": 532.2020874023438,
+          "right": 1286.125,
+          "bottom": 629.3739624023438,
+          "width": 646.125,
+          "height": 97.171875
+        }
+      ],
+      "display": [
+        {
+          "text": "TRAN VU",
+          "rect": {
+            "left": 640,
+            "top": 183.99899291992188,
+            "right": 1360,
+            "bottom": 259.5146179199219,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 640,
+            "top": 259.5146179199219,
+            "right": 1360,
+            "bottom": 335.0302429199219,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Design is not just about visuals — it's about solving problems.",
+          "rect": {
+            "left": 640,
+            "top": 411.0302429199219,
+            "right": 1286.125,
+            "bottom": 443.4208679199219,
+            "width": 646.125,
+            "height": 32.390625
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "locale": "en",
+      "reduced": true,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": false,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 5.684341886080802e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8960015190972223,
+        0.6555989583333333
+      ],
+      "scale": 253.17533635363128,
+      "aperture": [
+        26882.578125,
+        21423.09375
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+        "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+      ],
+      "expectedBio": [
+        "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+        "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design."
+      ],
+      "quote": "I design small universes — where every touch means something.",
+      "expectedQuote": "I design small universes — where every touch means something.",
+      "headingLabel": "TRAN VU ANH DUY",
+      "expectedName": "TRAN VU ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Portrait of Tran Vu Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 104,
+          "top": 145.9375,
+          "right": 552,
+          "bottom": 705.9375,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "portrait": {
+        "name": "Keep portrait in color",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 104,
+          "top": 145.9375,
+          "right": 552,
+          "bottom": 705.9375,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 0,
+        "right": 1440,
+        "bottom": 900,
+        "width": 1440,
+        "height": 900
+      },
+      "paragraphRects": [
+        {
+          "left": 640,
+          "top": 411.03125,
+          "right": 1286.125,
+          "bottom": 508.203125,
+          "width": 646.125,
+          "height": 97.171875
+        },
+        {
+          "left": 640,
+          "top": 532.203125,
+          "right": 1286.125,
+          "bottom": 629.375,
+          "width": 646.125,
+          "height": 97.171875
+        }
+      ],
+      "display": [
+        {
+          "text": "TRAN VU",
+          "rect": {
+            "left": 640,
+            "top": 184,
+            "right": 1360,
+            "bottom": 259.515625,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 640,
+            "top": 259.515625,
+            "right": 1360,
+            "bottom": 335.03125,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Design is not just about visuals — it's about solving problems.",
+          "rect": {
+            "left": 640,
+            "top": 411.03125,
+            "right": 1286.125,
+            "bottom": 443.421875,
+            "width": 646.125,
+            "height": 32.390625
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0
+    }
+  ],
+  "portal": [],
+  "cycles": [],
+  "jumps": [],
+  "errors": [],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "measurements": "No FPS measurement; other browser verification may run concurrently",
+  "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'hero' !== 'about'\n\n    at check (file:///D:/Projects/my-portfolio-2026/outputs/redesign/r3.3/verify-layouts.mjs:100:23)\n    at file:///D:/Projects/my-portfolio-2026/outputs/redesign/r3.3/verify-layouts.mjs:153:46"
+}

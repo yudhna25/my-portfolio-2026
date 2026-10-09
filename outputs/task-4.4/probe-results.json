@@ -1,0 +1,688 @@
+[
+  {
+    "tag": "A",
+    "id": "",
+    "href": "#smooth-content",
+    "label": "Chuyển đến nội dung chính",
+    "type": "",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 12,
+    "bottom": 58,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "#smooth-content",
+    "label": "ANH DUY — Về đầu trang",
+    "type": "",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 13.5,
+    "bottom": 57.5,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "#about",
+    "label": "Về tôi",
+    "type": "",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 13.5,
+    "bottom": 57.5,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "#work",
+    "label": "Dự án",
+    "type": "",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 13.5,
+    "bottom": 57.5,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "#skills",
+    "label": "Kỹ năng",
+    "type": "",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 13.5,
+    "bottom": 57.5,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "#education",
+    "label": "Học vấn",
+    "type": "",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 13.5,
+    "bottom": 57.5,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "#experience",
+    "label": "Kinh nghiệm",
+    "type": "",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 13.5,
+    "bottom": 57.5,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "#playground",
+    "label": "Thử nghiệm",
+    "type": "",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 13.5,
+    "bottom": 57.5,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "#transmission",
+    "label": "Liên hệ",
+    "type": "",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 13.5,
+    "bottom": 57.5,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "href": null,
+    "label": "Mở menu điều hướng",
+    "type": "button",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 13.5,
+    "bottom": 57.5,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "href": null,
+    "label": "Chuyển chế độ tối",
+    "type": "button",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 80,
+    "bottom": 124,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "INPUT",
+    "id": "",
+    "href": null,
+    "label": "",
+    "type": "checkbox",
+    "section": "skills",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 442.46875,
+    "bottom": 458.46875,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "href": null,
+    "label": "Tất cả",
+    "type": "button",
+    "section": "work",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 446.0503234863281,
+    "bottom": 490.0503234863281,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "href": null,
+    "label": "Product Design",
+    "type": "button",
+    "section": "work",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 431.6548156738281,
+    "bottom": 475.6548156738281,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "href": null,
+    "label": "UX/UI",
+    "type": "button",
+    "section": "work",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 428.5488586425781,
+    "bottom": 472.5488586425781,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "href": null,
+    "label": "Graphic",
+    "type": "button",
+    "section": "work",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 428.4023742675781,
+    "bottom": 472.4023742675781,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "https://www.behance.net/gallery/241524417/Edura-LMS",
+    "label": "Product Design01EDURA LMSNền tảng học tập thiết kế để c",
+    "type": "",
+    "section": "work",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 552.40234375,
+    "bottom": 1494.74609375,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "DIV",
+    "id": "",
+    "href": null,
+    "label": "Starfield Explorer",
+    "section": "playground",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 220.31552124023438,
+    "bottom": 623.9874267578125,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "DIV",
+    "id": "",
+    "href": null,
+    "label": "Nebula Shader Playground",
+    "section": "playground",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 212.74151611328125,
+    "bottom": 488.53839111328125,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "INPUT",
+    "id": "",
+    "href": null,
+    "label": "",
+    "type": "range",
+    "section": "playground",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 411.5939025878906,
+    "bottom": 455.5939025878906,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "INPUT",
+    "id": "",
+    "href": null,
+    "label": "",
+    "type": "range",
+    "section": "playground",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 411.375,
+    "bottom": 455.375,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "DIV",
+    "id": "",
+    "href": null,
+    "label": "Scroll Progress Orbit",
+    "section": "playground",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 799.25,
+    "bottom": 1138.984375,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "BUTTON",
+    "id": "",
+    "href": null,
+    "label": "Thử cuộn",
+    "type": "button",
+    "section": "playground",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 427.984375,
+    "bottom": 471.984375,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "https://codepen.io/GreenSock/pen/MWRPXMr",
+    "label": "Tham khảo CodePen ↗",
+    "type": "",
+    "section": "playground",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 478.484375,
+    "bottom": 522.484375,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "https://codepen.io/GreenSock/pen/gLXgxz",
+    "label": "Tham khảo CodePen ↗",
+    "type": "",
+    "section": "playground",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 478.484375,
+    "bottom": 522.484375,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "https://codepen.io/aptorres27/pen/mPGZPp",
+    "label": "Tham khảo CodePen ↗",
+    "type": "",
+    "section": "playground",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 877.484375,
+    "bottom": 921.484375,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "https://codepen.io/devildrey33/pen/zKBpmq",
+    "label": "Tham khảo CodePen ↗",
+    "type": "",
+    "section": "playground",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 877.484375,
+    "bottom": 921.484375,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "https://codepen.io/GreenSock/pen/QWOvexM",
+    "label": "Tham khảo CodePen ↗",
+    "type": "",
+    "section": "playground",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 877.484375,
+    "bottom": 921.484375,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "mailto:anhduy25work@gmail.com",
+    "label": "GỬI TÍN HIỆU",
+    "type": "",
+    "section": "transmission",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 373.953125,
+    "bottom": 445.953125,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "mailto:anhduy25work@gmail.com",
+    "label": "anhduy25work@gmail.com",
+    "type": "",
+    "section": "transmission",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 566.953125,
+    "bottom": 610.953125,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "https://www.facebook.com/tvad.25",
+    "label": "Facebook",
+    "type": "",
+    "section": "transmission",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 566.953125,
+    "bottom": 610.953125,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "tel:0822021418",
+    "label": "0822 021 418",
+    "type": "",
+    "section": "transmission",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 566.953125,
+    "bottom": 610.953125,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "mailto:anhduy25work@gmail.com",
+    "label": "anhduy25work@gmail.com",
+    "type": "",
+    "section": "site-footer",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 518.2236938476562,
+    "bottom": 568.2236938476562,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "tel:0822021418",
+    "label": "0822 021 418",
+    "type": "",
+    "section": "site-footer",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 567.2528076171875,
+    "bottom": 611.2528076171875,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "https://www.facebook.com/tvad.25",
+    "label": "Facebook",
+    "type": "",
+    "section": "site-footer",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 630.9532470703125,
+    "bottom": 674.9532470703125,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  },
+  {
+    "tag": "BODY",
+    "id": "",
+    "href": null,
+    "label": "XEMChuyển đến nội dung chínhANH DUYVề tôiDự ánKỹ năngHọ",
+    "outline": [
+      "3px",
+      "none",
+      "rgb(17, 17, 17)",
+      "0px"
+    ],
+    "top": -12033,
+    "bottom": 900,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": false
+  },
+  {
+    "tag": "A",
+    "id": "",
+    "href": "#smooth-content",
+    "label": "Chuyển đến nội dung chính",
+    "type": "",
+    "outline": [
+      "2px",
+      "solid",
+      "rgb(255, 255, 255)",
+      "4px"
+    ],
+    "top": 12,
+    "bottom": 58,
+    "opacity": 1,
+    "visibility": "visible",
+    "focusVisible": true
+  }
+]

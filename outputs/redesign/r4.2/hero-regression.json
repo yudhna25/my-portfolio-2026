@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "label": "initial",
+      "opacity": "0",
+      "aria": "true",
+      "chapter": "skills",
+      "expected": 0
+    },
+    {
+      "label": "resize390",
+      "opacity": "0",
+      "aria": "true",
+      "chapter": "about",
+      "expected": 0
+    },
+    {
+      "label": "en",
+      "opacity": "0",
+      "aria": "true",
+      "chapter": "about",
+      "expected": 0
+    },
+    {
+      "label": "vi",
+      "opacity": "0",
+      "aria": "true",
+      "chapter": "about",
+      "expected": 0
+    },
+    {
+      "label": "nativeWheel",
+      "opacity": "0",
+      "aria": "true",
+      "chapter": "about",
+      "expected": 0
+    },
+    {
+      "label": "portal-0",
+      "opacity": "1",
+      "aria": "false",
+      "chapter": "portal",
+      "expected": 1
+    },
+    {
+      "label": "portal-0.2",
+      "opacity": "1",
+      "aria": "false",
+      "chapter": "portal",
+      "expected": 1
+    },
+    {
+      "label": "portal-0.35",
+      "opacity": "0.549926",
+      "aria": "false",
+      "chapter": "portal",
+      "expected": 0.5499259259259262
+    },
+    {
+      "label": "portal-0.43",
+      "opacity": "0",
+      "aria": "true",
+      "chapter": "portal",
+      "expected": 0
+    },
+    {
+      "label": "portal-1",
+      "opacity": "0",
+      "aria": "true",
+      "chapter": "portal",
+      "expected": 0
+    },
+    {
+      "label": "portal-0.35",
+      "opacity": "0.549926",
+      "aria": "false",
+      "chapter": "portal",
+      "expected": 0.5499259259259262
+    },
+    {
+      "label": "portal-0",
+      "opacity": "1",
+      "aria": "false",
+      "chapter": "portal",
+      "expected": 1
+    }
+  ]
+}

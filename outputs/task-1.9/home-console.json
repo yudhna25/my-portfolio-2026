@@ -1,0 +1,188 @@
+[
+  {
+    "level": "warn",
+    "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "timestamp": "2026-10-04T20:13:51.499Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:13:53.817Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target .welcome-word not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:17:19.653Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:17:19.653Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:17:19.790Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target .welcome-word not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:17:19.830Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:17:19.832Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "timestamp": "2026-10-04T20:17:20.384Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:17:22.037Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target .welcome-word not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:18:01.472Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:18:01.472Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:18:01.620Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target .welcome-word not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:18:01.669Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:18:01.672Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "timestamp": "2026-10-04T20:18:02.446Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:18:54.844Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target .welcome-word not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:18:55.861Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:18:55.870Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:18:56.035Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target .welcome-word not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:18:56.070Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:18:56.091Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "timestamp": "2026-10-04T20:18:57.070Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:19:38.838Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target .welcome-word not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:26:33.671Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:26:33.672Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:26:33.752Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target .welcome-word not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:26:33.771Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:26:33.771Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "timestamp": "2026-10-04T20:26:34.028Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:26:36.031Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-04T20:26:36.037Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  }
+]

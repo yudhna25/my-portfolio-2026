@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050505" />
+  <title>Task 2.1 — Preloader QA</title>
+  <script src="/theme-init.js"></script>
+  <link rel="stylesheet" href="./qa.css" />
+</head>
+<body>
+  <div id="root"></div>
+  <aside class="fixed bottom-3 left-3 z-[10000] max-h-72 max-w-xl overflow-auto bg-black/90 p-3 font-mono text-[10px] text-white" id="qa-panel">
+    <p id="qa-status">Waiting for App</p>
+    <div class="flex flex-wrap gap-4 py-2">
+      <a href="?motion=normal">Normal</a>
+      <a href="?motion=reduce">Reduced motion (simulation)</a>
+      <a href="?motion=normal&capture=1">Capture intro</a>
+      <a href="?motion=change">Live motion change</a>
+      <a href="?motion=normal&throttle=1">Ticker sleep / deadline</a>
+      <button id="qa-reduce">Reduce during intro</button>
+    </div>
+    <pre id="qa-results" class="whitespace-pre-wrap"></pre>
+  </aside>
+  <script type="module" src="./app-qa.js"></script>
+</body>
+</html>

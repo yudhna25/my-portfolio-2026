@@ -1,0 +1,45 @@
+{
+  "pageWidth": 1270,
+  "strips": [
+    {
+      "bg": "rgb(5, 5, 5)",
+      "border": "rgba(255, 255, 255, 0.08)",
+      "color": "rgb(250, 250, 250)",
+      "font": "\"Unbounded Variable\", Unbounded, sans-serif",
+      "halves": 2,
+      "height": 81.99951171875,
+      "size": "48px",
+      "text": "Thiết kế • Chiến lược • Motion • UI/UX",
+      "top": -8217.998046875,
+      "transform": "matrix(1, 0, 0, 1, -1745.33, 0)",
+      "weight": "600"
+    },
+    {
+      "bg": "rgb(5, 5, 5)",
+      "border": "rgba(255, 255, 255, 0.08)",
+      "color": "rgb(250, 250, 250)",
+      "font": "\"Unbounded Variable\", Unbounded, sans-serif",
+      "halves": 2,
+      "height": 82,
+      "size": "48px",
+      "text": "Dự án • Case Study • Ảnh hưởng • Kết quả",
+      "top": -5000.24853515625,
+      "transform": "matrix(1, 0, 0, 1, -4151.02, 0)",
+      "weight": "600"
+    },
+    {
+      "bg": "rgb(5, 5, 5)",
+      "border": "rgba(255, 255, 255, 0.08)",
+      "color": "rgb(250, 250, 250)",
+      "font": "\"Unbounded Variable\", Unbounded, sans-serif",
+      "halves": 2,
+      "height": 82,
+      "size": "48px",
+      "text": "Hợp tác • Tầm nhìn • Sáng tạo • Thành công",
+      "top": 271.5172424316406,
+      "transform": "matrix(1, 0, 0, 1, -1259.24, 0)",
+      "weight": "600"
+    }
+  ],
+  "viewport": 1270
+}

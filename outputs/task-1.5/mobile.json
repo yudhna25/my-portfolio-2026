@@ -1,0 +1,38 @@
+{
+  "state": {
+    "scrollY": 0,
+    "maxScroll": 2532,
+    "scrollProgress": 0,
+    "currentSection": "hero",
+    "quality": "low",
+    "frames": 15662,
+    "fpsSamples": [
+      165,
+      165,
+      165,
+      165,
+      165,
+      165,
+      165,
+      165,
+      165,
+      165
+    ],
+    "hidden": false,
+    "canvasCount": 1,
+    "smoother": true,
+    "paused": false,
+    "frameloop": "always"
+  },
+  "layout": {
+    "canvas": [
+      380,
+      844
+    ],
+    "quality": "low",
+    "viewport": [
+      380,
+      844
+    ]
+  }
+}

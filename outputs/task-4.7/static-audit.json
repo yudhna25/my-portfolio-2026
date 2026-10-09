@@ -1,0 +1,210 @@
+{
+  "buildHash": "189421f0de9792d99411a9417b8aa0f3eda4847a9730f2450ba7d1be3e4c37da",
+  "manifest": {
+    "name": "Trần Vũ Anh Duy — Stellar Odyssey",
+    "short_name": "Anh Duy Portfolio",
+    "description": "Portfolio của Trần Vũ Anh Duy — UX/UI, Đồ họa & Motion Design.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#050505",
+    "theme_color": "#050505",
+    "lang": "vi",
+    "scope": "/",
+    "id": "/",
+    "orientation": "any",
+    "icons": [
+      {
+        "src": "pwa-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "pwa-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "pwa-maskable-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "pwa-maskable-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      }
+    ]
+  },
+  "icons": [
+    {
+      "src": "pwa-192x192.png",
+      "size": 192,
+      "purpose": "any",
+      "minAlpha": 0,
+      "logoRadius": 68.20923691113983,
+      "safeRadius": 76.80000000000001
+    },
+    {
+      "src": "pwa-maskable-192x192.png",
+      "size": 192,
+      "purpose": "maskable",
+      "minAlpha": 255,
+      "logoRadius": 68.20923691113983,
+      "safeRadius": 76.80000000000001
+    },
+    {
+      "src": "pwa-512x512.png",
+      "size": 512,
+      "purpose": "any",
+      "minAlpha": 0,
+      "logoRadius": 181.38494976154996,
+      "safeRadius": 204.8
+    },
+    {
+      "src": "pwa-maskable-512x512.png",
+      "size": 512,
+      "purpose": "maskable",
+      "minAlpha": 255,
+      "logoRadius": 181.38494976154996,
+      "safeRadius": 204.8
+    }
+  ],
+  "precache": [
+    {
+      "url": "theme-init.js",
+      "revision": "d4a636a099620746a166069219ab7e59"
+    },
+    {
+      "url": "pwa-maskable-512x512.png",
+      "revision": "690135f20bf16acf08a197a564951296"
+    },
+    {
+      "url": "pwa-maskable-192x192.png",
+      "revision": "3d25cb23eee84a8adf44cae3c2f7dc51"
+    },
+    {
+      "url": "pwa-512x512.png",
+      "revision": "ac50f710678b8b86c2523eb644ac6c2c"
+    },
+    {
+      "url": "pwa-192x192.png",
+      "revision": "9563b5902f9a0db9fb6393a9c7c5fdf5"
+    },
+    {
+      "url": "project3.webp",
+      "revision": "094da48bfd78b9ee2f4a9e51c5003f10"
+    },
+    {
+      "url": "project2.webp",
+      "revision": "2787843b72f39deeb409fa0f660aad7e"
+    },
+    {
+      "url": "project1.webp",
+      "revision": "02d48c72691e7b34f5e78cce2c288548"
+    },
+    {
+      "url": "index.html",
+      "revision": "5284e5755fa7abd6316aa95890695485"
+    },
+    {
+      "url": "favicon.svg",
+      "revision": "6ca2cd71334d81e8dadb0565d8cd8bc5"
+    },
+    {
+      "url": "avatar.webp",
+      "revision": "e9867eba7ff8c849c6347e075584e374"
+    },
+    {
+      "url": "icons/ps.png",
+      "revision": "845ff5a301d8d717e3855b3dae76052b"
+    },
+    {
+      "url": "icons/pr.png",
+      "revision": "6565cae8847f5e0aec86d6725c672738"
+    },
+    {
+      "url": "icons/figma.png",
+      "revision": "5eb1b232bddb97294a298d7150b0a859"
+    },
+    {
+      "url": "icons/ai.png",
+      "revision": "1ba39b2a3f523b28eb2315dfcd42aa72"
+    },
+    {
+      "url": "icons/ae.png",
+      "revision": "6814759441a9c9459e0f86aeb0e47030"
+    },
+    {
+      "url": "assets/workbox-window.prod.es5-BBnX5xw4.js",
+      "revision": null
+    },
+    {
+      "url": "assets/useSectionAnchor-BPM1mZ88.js",
+      "revision": null
+    },
+    {
+      "url": "assets/unbounded-vietnamese-wght-normal-rat7GD3o.woff2",
+      "revision": null
+    },
+    {
+      "url": "assets/unbounded-latin-wght-normal-D5afBTBx.woff2",
+      "revision": null
+    },
+    {
+      "url": "assets/unbounded-latin-ext-wght-normal-D6H-S6MW.woff2",
+      "revision": null
+    },
+    {
+      "url": "assets/unbounded-cyrillic-wght-normal-C627f1f8.woff2",
+      "revision": null
+    },
+    {
+      "url": "assets/ShaderPlaygroundDemo-BBoyPbOh.js",
+      "revision": null
+    },
+    {
+      "url": "assets/ScrollOrbitDemo-Bm357Jds.js",
+      "revision": null
+    },
+    {
+      "url": "assets/SceneBoundary-CP_cqnDj.js",
+      "revision": null
+    },
+    {
+      "url": "assets/Planet-GGg7Ftwr.js",
+      "revision": null
+    },
+    {
+      "url": "assets/ParticleFieldDemo-CIkBQYnC.js",
+      "revision": null
+    },
+    {
+      "url": "assets/OrbitalSkills-DZZ8GCnj.js",
+      "revision": null
+    },
+    {
+      "url": "assets/index-CtJWhmH9.css",
+      "revision": null
+    },
+    {
+      "url": "assets/index-CJ7DpzSv.js",
+      "revision": null
+    },
+    {
+      "url": "assets/GalaxyScene-BJLBesGn.js",
+      "revision": null
+    },
+    {
+      "url": "assets/events-9ce18a08.esm-BwM3ciRE.js",
+      "revision": null
+    },
+    {
+      "url": "manifest.webmanifest",
+      "revision": "106bd21c09ba51da01fc4fd703c6f471"
+    }
+  ]
+}

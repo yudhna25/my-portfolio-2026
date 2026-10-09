@@ -1,0 +1,32 @@
+[
+  {
+    "path": "public/avatar.webp",
+    "bytes": 112382,
+    "identify": "WEBP 800x1000 srgba 4.0 False",
+    "status": 0
+  },
+  {
+    "path": "public/icons/pr.png",
+    "bytes": 16211,
+    "identify": "PNG 101x101 srgba 4.0 False",
+    "status": 0
+  },
+  {
+    "path": "public/project1.webp",
+    "bytes": 51014,
+    "identify": "WEBP 1600x1131 srgb  3.0 True",
+    "status": 0
+  },
+  {
+    "path": "public/project2.webp",
+    "bytes": 62292,
+    "identify": "WEBP 1600x900 srgb  3.0 True",
+    "status": 0
+  },
+  {
+    "path": "public/project3.webp",
+    "bytes": 43608,
+    "identify": "WEBP 1600x900 srgb  3.0 True",
+    "status": 0
+  }
+]

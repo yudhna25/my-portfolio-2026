@@ -1,0 +1,27 @@
+[
+  {
+    "viewport": "390x844",
+    "cursorCount": 0,
+    "report": {
+      "document:pointermove": 0,
+      "document:pointerover": 0,
+      "document:pointerout": 0,
+      "html:pointerleave": 0,
+      "document:keydown": 0,
+      "document:visibilitychange": 0,
+      "window:blur": 0
+    }
+  },
+  {
+    "viewport": "820x1180",
+    "cursorCount": 0
+  },
+  {
+    "viewport": "1023x768",
+    "cursorCount": 0
+  },
+  {
+    "viewport": "1280x720",
+    "cursorCount": 1
+  }
+]

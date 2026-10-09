@@ -1,0 +1,114 @@
+{
+  "results": {
+    "results": [
+      {
+        "name": "Canvas initializes and accepts an R3F child",
+        "passed": true
+      },
+      {
+        "name": "Prototype camera and renderer configuration",
+        "passed": true
+      },
+      {
+        "name": "Exact mono scene background",
+        "passed": true
+      },
+      {
+        "name": "One canvas, full viewport, fixed outside smoother",
+        "passed": true
+      },
+      {
+        "name": "One live smoother in StrictMode",
+        "passed": true
+      },
+      {
+        "name": "Bridge measurements create no extra ScrollTriggers",
+        "passed": true
+      },
+      {
+        "name": "Initial progress and section",
+        "passed": true
+      },
+      {
+        "name": "Middle progress comes from actual scrollY",
+        "passed": true
+      },
+      {
+        "name": "Bottom progress is 1 and section is contact",
+        "passed": true
+      },
+      {
+        "name": "Hidden document stops renderer",
+        "passed": true
+      },
+      {
+        "name": "Visible document resumes same renderer",
+        "passed": true
+      },
+      {
+        "name": "Continuous render samples collected",
+        "passed": true
+      }
+    ],
+    "failures": 0
+  },
+  "state": {
+    "scrollY": 0,
+    "maxScroll": 2160,
+    "scrollProgress": 0,
+    "currentSection": "hero",
+    "quality": "high",
+    "frames": 19470,
+    "fpsSamples": [
+      165,
+      165,
+      165,
+      165,
+      165,
+      165,
+      165,
+      165,
+      165,
+      165
+    ],
+    "hidden": false,
+    "canvasCount": 1,
+    "smoother": true,
+    "paused": false,
+    "frameloop": "always"
+  },
+  "desktopLayout": {
+    "canvas": [
+      1270,
+      720
+    ],
+    "pointerEvents": "none",
+    "quality": "high",
+    "viewport": [
+      1270,
+      720
+    ]
+  },
+  "mobileLayout": {
+    "canvas": [
+      380,
+      844
+    ],
+    "quality": "low",
+    "viewport": [
+      380,
+      844
+    ]
+  },
+  "tabletLayout": {
+    "canvas": [
+      840,
+      900
+    ],
+    "quality": "medium",
+    "viewport": [
+      840,
+      900
+    ]
+  }
+}

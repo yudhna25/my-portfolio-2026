@@ -1,0 +1,256 @@
+{
+  "started": "2026-10-08T03:58:28.679Z",
+  "benchmarks": [
+    {
+      "p": 0.25,
+      "frames": 496,
+      "ms": 3003.699999988079,
+      "fps": 165.12967340345855,
+      "rayCalls": 496,
+      "targets": 21,
+      "rayIds": [
+        "547be9c9-e9ea-40a7-92b8-7d8254eba46f"
+      ],
+      "dpr": 1,
+      "size": [
+        1440,
+        900
+      ],
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "gpuTimerSupported": true,
+      "hdr": {
+        "size": [
+          1224,
+          765
+        ],
+        "components": 3745440,
+        "nonfinite": 0,
+        "nonzero": 1196592,
+        "nonmono": 0,
+        "glError": 0
+      }
+    },
+    {
+      "p": 0.75,
+      "frames": 496,
+      "ms": 3005.300000011921,
+      "fps": 165.04175955745933,
+      "rayCalls": 496,
+      "targets": 21,
+      "rayIds": [
+        "547be9c9-e9ea-40a7-92b8-7d8254eba46f"
+      ],
+      "dpr": 1,
+      "size": [
+        1440,
+        900
+      ],
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "gpuTimerSupported": true,
+      "hdr": {
+        "size": [
+          1224,
+          765
+        ],
+        "components": 3745440,
+        "nonfinite": 0,
+        "nonzero": 2228662,
+        "nonmono": 0,
+        "glError": 0
+      }
+    }
+  ],
+  "production": [
+    {
+      "width": 1440,
+      "hash": "",
+      "canvas": 1,
+      "opacity": 1,
+      "inert": true,
+      "theme": "dark",
+      "year": "2026",
+      "anchor": 8,
+      "overflow": 0,
+      "controlled": true,
+      "registered": 1,
+      "htmlLang": "vi"
+    },
+    {
+      "width": 1440,
+      "hash": "#about",
+      "canvas": 1,
+      "opacity": 0,
+      "inert": false,
+      "theme": "dark",
+      "year": "2026",
+      "anchor": 8,
+      "overflow": 0,
+      "controlled": true,
+      "registered": 1,
+      "htmlLang": "vi"
+    },
+    {
+      "width": 1440,
+      "hash": "#work",
+      "canvas": 1,
+      "opacity": 0,
+      "inert": false,
+      "theme": "dark",
+      "year": "2026",
+      "anchor": 8,
+      "overflow": 0,
+      "controlled": true,
+      "registered": 1,
+      "htmlLang": "vi"
+    },
+    {
+      "width": 1440,
+      "hash": "#transmission",
+      "canvas": 1,
+      "opacity": 0,
+      "inert": false,
+      "theme": "dark",
+      "year": "2026",
+      "anchor": 8,
+      "overflow": 0,
+      "controlled": true,
+      "registered": 1,
+      "htmlLang": "vi"
+    },
+    {
+      "width": 390,
+      "hash": "",
+      "canvas": 1,
+      "opacity": 1,
+      "inert": true,
+      "theme": "dark",
+      "year": "2026",
+      "anchor": 8,
+      "overflow": 0,
+      "controlled": true,
+      "registered": 1,
+      "htmlLang": "vi"
+    },
+    {
+      "width": 390,
+      "hash": "#about",
+      "canvas": 1,
+      "opacity": 0,
+      "inert": false,
+      "theme": "dark",
+      "year": "2026",
+      "anchor": 8,
+      "overflow": 0,
+      "controlled": true,
+      "registered": 1,
+      "htmlLang": "vi"
+    },
+    {
+      "width": 390,
+      "hash": "#work",
+      "canvas": 1,
+      "opacity": 0,
+      "inert": false,
+      "theme": "dark",
+      "year": "2026",
+      "anchor": 8,
+      "overflow": 0,
+      "controlled": true,
+      "registered": 1,
+      "htmlLang": "vi"
+    },
+    {
+      "width": 390,
+      "hash": "#transmission",
+      "canvas": 1,
+      "opacity": 0,
+      "inert": false,
+      "theme": "dark",
+      "year": "2026",
+      "anchor": 8,
+      "overflow": 0,
+      "controlled": true,
+      "registered": 1,
+      "htmlLang": "vi"
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "legacyContact": [
+    {
+      "input": 0,
+      "camera": [
+        1.31640625,
+        1.90625,
+        -184.72265625
+      ],
+      "intensity": 1
+    },
+    {
+      "input": 1,
+      "camera": [
+        1.31640625,
+        1.90625,
+        -184.72265625
+      ],
+      "intensity": 1
+    },
+    {
+      "input": 0.5,
+      "camera": [
+        1.31640625,
+        1.90625,
+        -184.72265625
+      ],
+      "intensity": 1
+    },
+    {
+      "input": 0,
+      "camera": [
+        1.31640625,
+        1.90625,
+        -184.72265625
+      ],
+      "intensity": 1
+    }
+  ],
+  "native": {
+    "samples": 328,
+    "chapters": [
+      "hero",
+      "portal",
+      "about"
+    ],
+    "maxProgressError": 3.585367480685164e-8,
+    "maxPoseError": 0,
+    "maxPullError": 0,
+    "maxOpacityError": 0.00004652986235942347
+  },
+  "meteors": {
+    "active": {
+      "visible": true,
+      "alpha": 0.417955219745636,
+      "visibility": 1
+    },
+    "fading": 0.5000000000000004,
+    "suppressed": {
+      "visible": false,
+      "visibility": 0
+    },
+    "returnedAlpha": 0
+  },
+  "freshReduced": {
+    "year": "2026",
+    "digit": "6",
+    "keyboardFocus": "about",
+    "canvas": 1
+  },
+  "queryLabOnly": true,
+  "finished": "2026-10-08T03:58:58.438Z"
+}

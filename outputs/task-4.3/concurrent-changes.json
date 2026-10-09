@@ -1,0 +1,58 @@
+{
+  "src/App.jsx": {
+    "baseline": "819aeb22e0c4a869405e38cedab65c744f4b1b7e03e3538b690976487d86564d",
+    "current": "cd46f68875c909dc99c1cdaf57ef41b61410024e6dc2c95701545239d713e84d"
+  },
+  "src/index.css": {
+    "baseline": "ed26f5fd977418e98b6681dc84bb06acdbb03082e3cd7fbf0a8fa09338405de8",
+    "current": "22cd6957bd8cd9b726aace1fe98ed50a74181e1d297b97c8ed7b719335dd86f5"
+  },
+  "src/3d/GalaxyScene.jsx": {
+    "baseline": "f8ae5cbe13fdb1fc3ad3bc8ec3953333b4ce9dc90e9c9651f977cc506abf3b1a",
+    "current": "4789fd43efe1ca2b0ce8e2a3f52cd153b2ede1e013fe0bd027defe554403f92c"
+  },
+  "src/components/About.jsx": {
+    "baseline": "46ff9f403088f19b158d094f1a35e3d546fb409c712cc1f3da1f58b68363b593",
+    "current": "2336ce0884577d7e516757c872f542ec887bb48b6fd2c084cf7b254b6eb2806b"
+  },
+  "src/components/Cursor.jsx": {
+    "baseline": "c17b83dc831684f820506843b5bb287724b9f75268ea30b99eb23757a014c285",
+    "current": "288b025b9f7e68939aee3ce5d179b137bc1350d0d86a9cfd39e1c2de5ef0a628"
+  },
+  "src/components/Footer.jsx": {
+    "baseline": "570c3e2f141c683e76622c62884ba18a10f024ed17e8646154820759df4b947e",
+    "current": "7137a32fdbc93b3c03ca6758f1f8253c5d741ddf0cb0c01ad0fb97d5b1d2edd1"
+  },
+  "src/components/Work.jsx": {
+    "baseline": "41ded42afe7e67db7c6470d5ebf77d4f18a410e9b504536400ea2928f770b014",
+    "current": "ab3305928e94acb6d06442d12e8db3e6c8e980599abc2917077e252f8a0dc3a6"
+  },
+  "src/i18n/locales/en.json": {
+    "baseline": "98598483a1729d829fc468e73263e725447a78359305b7b6b3b9e35eb2acf8f7",
+    "current": "e26d8a09d0a377d763c7e0237e97d8bd296a64ce17ac76b61be1585ae8b19167"
+  },
+  "src/i18n/locales/vi.json": {
+    "baseline": "94cb7e49a16389df1c8654f503e4d024b2af1b892757092ed11801a202b9e926",
+    "current": "e2b8a805258fce76431cd620572cdb53c8aaba66305cf874ae16dcc9b60b5a75"
+  },
+  "src/components/layout/Nav.jsx": {
+    "baseline": "fc7aeff19920b34fc56a05567266b53ac2807844875ed40a98a602d38c0c96f6",
+    "current": "b643290281bc885ddfd46a905f5c985779343f905caa07304d07a3c12c8a1b61"
+  },
+  "src/components/sections/Contact.jsx": {
+    "baseline": "6759af14864e40c2e112aedefae83df6f59e595e335b368280a7d9970a22c9c4",
+    "current": "9471e8c9ffa5f43d0a30855dd969ab9e9f538a99d29b8c8006f91a6b696e70cd"
+  },
+  "src/components/sections/Playground.jsx": {
+    "baseline": "ad283f4db1099c69a1ba21a1bafc9fb46716afbc2e3c3807165c8bcf08db5afb",
+    "current": "2ed20104ed4b9e0cd5b4e10e9d6bb6814de488a8f505f0c9b80da514a7a9ed62"
+  },
+  "src/components/sections/Skills.jsx": {
+    "baseline": "310635fde52732a976ce7d5cf22c499592767a4130373fc12edc127e0e24e824",
+    "current": "a03fbdd0adcc0dc06e50db0daad100051ab86196cca992bb3f6e8ace926e4e35"
+  },
+  "src/components/ui/ThemeToggle.jsx": {
+    "baseline": "7af134a900b47541d45c2ed2f9d0fe79a018db121acdd53abdeb189d7d8eb4cd",
+    "current": "aa4111a903ba48e1865778d0926afd55f9303060bf6e46b31bfb223c571ece1b"
+  }
+}

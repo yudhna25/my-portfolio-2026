@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hero — runnable check</title></head>
+<body>
+<button id="run" class="fixed top-4 right-4 z-50 border border-white bg-black p-3 text-white">Run check</button>
+<pre id="results" class="fixed top-20 right-4 z-50 max-h-48 overflow-auto bg-black p-3 text-xs text-white">Ready</pre>
+<div id="root"></div>
+<script type="module">
+  import '/src/index.css';
+  import '@fontsource-variable/unbounded';
+  const params = new URLSearchParams(location.search), preview = params.has('preview'), scene = params.has('scene');
+  document.querySelector('#run').hidden = preview;
+  document.querySelector('#results').hidden = preview;
+  let reduced = params.has('reduced'), active = preview;
+  const queries = [], originalMatchMedia = window.matchMedia.bind(window);
+  window.matchMedia = query => {
+    const result = originalMatchMedia(query);
+    if (query.includes('prefers-reduced-motion')) {
+      Object.defineProperty(result, 'matches', {get: () => query.includes('no-preference') ? !reduced : reduced});
+      queries.push(result);
+    }
+    return result;
+  };
+  const React = await import('react');
+  const {createRoot} = await import('react-dom/client');
+  const {flushSync} = await import('react-dom');
+  const {i18n} = await import('/src/i18n/config.js');
+  const {useLangStore} = await import('/src/stores/useLangStore.js');
+  const {useScrollStore} = await import('/src/stores/useScrollStore.js');
+  const {default: Hero} = await import('/src/components/Hero.jsx');
+  const {useSmoothScroll} = await import('/src/hooks/useSmoothScroll.js');
+  const {useScrollProgress} = await import('/src/3d/hooks/useScrollProgress.js');
+  const {gsap, ScrollTrigger, ScrollSmoother} = await import('/src/hooks/useGSAPSetup.js');
+  gsap.ticker.lagSmoothing(0); // QA only: background tabs must finish their scrubs.
+  const h = React.createElement, wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+  const {GalaxyScene} = scene ? await import('/src/3d/GalaxyScene.jsx') : {};
+  const {useFrame} = scene ? await import('@react-three/fiber') : {};
+  let cameraPose = null;
+  function CameraProbe() {
+    useFrame(({camera}) => { cameraPose = camera.position.toArray(); }); // Read only; never change the scene.
+    return null;
+  }
+  function Demo() {
+    const ref = React.useRef(null);
+    useSmoothScroll({scope:ref, paused:!active});
+    useScrollProgress({scope:ref});
+    return h('div', {ref}, scene ? h(GalaxyScene, null, h(CameraProbe)) : null,
+      h('div', {id:'smooth-wrapper', className:'z-10'},
+        h('main', {id:'smooth-content'}, h(Hero, {active}), preview ? null : h('section', {id:'end', className:'h-[200vh] bg-black'}))));
+  }
+  const root = createRoot(document.querySelector('#root'));
+  const mount = () => flushSync(() => root.render(h(React.StrictMode, null, h(Demo))));
+  const exit = () => ScrollTrigger.getById('hero-exit');
+  const intro = () => gsap.getById('hero-intro');
+  const opacity = selector => Number(getComputedStyle(document.querySelector(selector)).opacity);
+  const goto = async y => {
+    ScrollSmoother.get()?.scrollTo(y, false);
+    window.scrollTo(0, y); ScrollTrigger.update(); await wait(1600);
+  };
+  const setMotion = async value => {
+    reduced = value;
+    queries.forEach(query => query.dispatchEvent(new Event('change')));
+    await wait(100);
+  };
+  mount();
+  document.querySelector('#run').onclick = async () => {
+    const results = [], output = document.querySelector('#results');
+    const assert = (pass, message) => {
+      results.push({pass:Boolean(pass), message}); output.textContent = JSON.stringify(results, null, 2);
+      if (!pass) throw Error(message);
+    };
+    const settle = async () => { await document.fonts.ready; await wait(100); intro()?.pause().time(4); };
+    try {
+      await document.fonts.ready;
+      assert(opacity('[data-hero-content]') === 0 && !intro() && !exit(), 'Inactive: hidden until preloader completes');
+      active = true; mount(); await wait(100);
+      const section = document.querySelector('#hero'), heading = section.querySelector('h1');
+      assert(getComputedStyle(section).backgroundColor === 'rgba(0, 0, 0, 0)', 'Transparent Hero surface');
+      assert(getComputedStyle(section).pointerEvents === 'none', 'DOM overlay lets pointer events through');
+      assert(!section.querySelector('canvas'), 'Hero never creates a Canvas');
+      assert(heading.getAttribute('aria-label') === i18n.t('hero.name'), 'One accessible translated h1');
+      assert(getComputedStyle(heading).color === 'rgb(250, 250, 250)' && getComputedStyle(heading).fontFamily.includes('Unbounded'), 'Unbounded / #FAFAFA');
+      assert(Math.abs(parseFloat(getComputedStyle(heading).fontSize)-Math.min(200,Math.max(44,innerWidth*0.12)))<0.1, 'Font clamp 44px / 12vw / 200px');
+      assert(Math.abs(parseFloat(getComputedStyle(heading).letterSpacing)/parseFloat(getComputedStyle(heading).fontSize)+0.02)<0.001, 'Tracking -0.02em');
+      assert(section.getBoundingClientRect().height >= innerHeight, 'Hero covers at least the viewport');
+      assert(document.documentElement.scrollWidth <= document.documentElement.clientWidth+1, 'No horizontal overflow');
+      if (reduced) {
+        assert(!intro() && !exit() && !section.querySelector('.hero-char'), 'Reduced: no split, scramble, pulse or scroll animation');
+        assert(opacity('[data-hero-content]') === 1 && opacity('[data-hero-name]') === 1, 'Reduced: text appears immediately');
+      } else {
+        const tl = intro(); tl.pause().time(0);
+        assert(tl.labels.name === 1.5 && tl.labels.tagline === 2 && tl.labels.indicator === 2.5, 'Plan timeline: 1.5 / 2.0 / 2.5 seconds');
+        const charTween = tl.getChildren().find(tween => tween.vars.stagger === 0.03);
+        assert(charTween?.vars.ease === 'expo.out', 'Name stagger 0.03 / expo.out');
+        const scrambleTween = tl.getChildren().find(tween => tween.vars.scrambleText);
+        assert(scrambleTween?.duration() === 1.2 && scrambleTween.startTime() === 2, 'Scramble 1.2s starts at 2.0s');
+        tl.time(1.49); assert(opacity('[data-hero-name]') === 0, 'Before 1.5s: name hidden');
+        tl.time(1.6); assert(opacity('[data-hero-name]') === 1 && opacity('[data-hero-tagline]') === 0, 'Name appears before tagline');
+        tl.time(2.2); assert(opacity('[data-hero-tagline]') > 0 && opacity('[data-hero-sub]') === 0, 'Tagline appears before sub-tagline');
+        assert(section.querySelector('[data-hero-tagline] .sr-only').textContent === i18n.t('hero.tagline') && section.querySelector('[data-hero-scramble]').getAttribute('aria-hidden') === 'true', 'Scramble never corrupts assistive text');
+        tl.time(2.49); assert(opacity('[data-hero-sub]') > 0 && opacity('[data-hero-scroll]') === 0, 'Sub-tagline appears before indicator');
+        tl.time(2.7); assert(opacity('[data-hero-scroll]') > 0, 'Indicator appears after 2.5s');
+        tl.time(4); assert(section.querySelector('[data-hero-scramble]').textContent === i18n.t('hero.tagline'), 'Scramble resolves to exact tagline');
+        assert(exit()?.vars.scrub === 1, 'One scrubbed exit tween');
+      }
+      for (const lang of ['en','vi']) {
+        useLangStore.getState().setLang(lang); await settle();
+        assert(document.querySelector('h1').getAttribute('aria-label') === i18n.t('hero.name'), `${lang}: exact name after SplitText cleanup`);
+        assert(section.querySelector('[data-hero-sub]').textContent === i18n.t('hero.subTagline') && section.querySelector('[data-hero-scroll] p').textContent === i18n.t('hero.scrollIndicator'), `${lang}: exact sub-tagline / indicator`);
+        assert(gsap.globalTimeline.getChildren(true, false, true).filter(tl=>tl.vars.id==='hero-intro').length === (reduced ? 0 : 1), `${lang}: no duplicate intro timeline`);
+      }
+      await settle();
+      const startPose = cameraPose?.slice();
+      await goto(section.offsetHeight/2);
+      assert(useScrollStore.getState().scrollProgress > 0 && useScrollStore.getState().scrollProgress < 1, 'Native scroll bridge updates progress');
+      if (reduced) assert(opacity('[data-hero-content]') === 1, 'Reduced: scrolling leaves text static');
+      else {
+        assert(opacity('[data-hero-content]') > 0 && opacity('[data-hero-content]') < 0.9, 'Half scroll: content fades');
+        assert(Number(gsap.getProperty(section.querySelector('[data-hero-content]'),'scaleX')) < 1, 'Half scroll: gentle scale');
+        if (scene) assert(cameraPose && startPose && cameraPose.some((value,index)=>Math.abs(value-startPose[index])>0.001), 'Existing CameraRig moves; Hero never mutates camera');
+        await goto(section.offsetHeight+10); assert(opacity('[data-hero-content]') < 0.02, 'Past Hero: content fades out');
+      }
+      await goto(0); assert(opacity('[data-hero-content]') > 0.98, 'Return to top: content returns');
+      await setMotion(true);
+      assert(!intro() && !exit() && !document.querySelector('.hero-char') && opacity('[data-hero-content]') === 1, 'Live reduced motion reverts all effects');
+      await setMotion(false); await settle();
+      assert(Boolean(intro()) && Boolean(exit()), 'Live motion re-enable recreates one intro / exit');
+      active = false; mount(); assert(opacity('[data-hero-content]') === 0 && !intro() && !exit(), 'Deactivation cancels every Hero animation');
+      active = true; mount();
+      flushSync(() => root.render(null)); await wait(100);
+      assert(!intro() && !exit() && !document.querySelector('.hero-char') && !ScrollSmoother.get(), 'Unmount cancels async font callback and cleans smoother / split / tweens');
+      active = true; mount(); await settle();
+      output.dataset.status = 'pass'; output.textContent = JSON.stringify({status:'pass', count:results.length, scene, results},null,2);
+    } catch (error) {
+      output.dataset.status = 'fail'; output.textContent = JSON.stringify({status:'fail',error:error.message,results},null,2);
+    }
+  };
+</script>
+</body>
+</html>

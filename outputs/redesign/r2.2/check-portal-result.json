@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "checks": 31187,
+  "sampledProgress": 1001,
+  "minimumObserverRadius": 8.182909018191513,
+  "boundary": {
+    "start": {
+      "mini": 1,
+      "visibility": 1,
+      "growth": 1,
+      "textOpacity": 1,
+      "dust": 0.12,
+      "pull": 0
+    },
+    "end": {
+      "mini": 0,
+      "visibility": 1,
+      "growth": 600,
+      "textOpacity": 0,
+      "dust": 0,
+      "pull": 1
+    }
+  },
+  "note": "Pure Node checks logic/source ownership only; Browser/GPU/color checks remain separate."
+}

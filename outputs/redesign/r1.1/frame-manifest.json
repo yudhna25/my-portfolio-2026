@@ -1,0 +1,5435 @@
+{
+  "version": 1,
+  "dateLocal": "2026-10-08",
+  "status": "storyboard-only",
+  "fontFamilies": [
+    "Unbounded",
+    "Space Grotesk",
+    "JetBrains Mono"
+  ],
+  "states": [
+    {
+      "id": "hero",
+      "title": "Hero · idle",
+      "chapter": "hero",
+      "progress": 0,
+      "note": "Chữ là điểm đọc đầu. Không galaxy lớn; O cuối là neo cổng."
+    },
+    {
+      "id": "glitch",
+      "title": "Hero · số 6 lóe thành 7",
+      "chapter": "hero",
+      "progress": 0,
+      "note": "Chỉ glyph cuối đổi trong 80–120ms / mỗi1,5s; năm semantic vẫn2026. Đây là frame mô tả."
+    },
+    {
+      "id": "portal25",
+      "title": "Portal · tiến về O",
+      "chapter": "portal",
+      "progress": 0.25,
+      "note": "Bụi/nét chữ gần O kéo cong; camera tiến về neo DOM."
+    },
+    {
+      "id": "portal50",
+      "title": "Portal · khoảng tối",
+      "chapter": "portal",
+      "progress": 0.5,
+      "note": "O mở rộng nuốt khung. Khoảng tối ngắn nối hai thang; không giữ observer trong chân trời."
+    },
+    {
+      "id": "portal75",
+      "title": "Portal · bật ra",
+      "chapter": "portal",
+      "progress": 0.75,
+      "note": "Camera lùi ra nhưng nhìn về hố đen. Đĩa và lõi cùng silhouette."
+    },
+    {
+      "id": "about",
+      "title": "About · điểm nghỉ đọc",
+      "chapter": "about",
+      "progress": 1,
+      "note": "Chân dung đứng tự do, hai đoạn bio giữ chữ thật; tên/câu mở đầu giải mã một lần."
+    },
+    {
+      "id": "aboutColor",
+      "title": "About · trả màu chân dung",
+      "chapter": "about",
+      "progress": 1,
+      "note": "Hover/focus/tap đổi màu; ghế có sẵn trong ảnh được giữ. Không panel/planet/tools."
+    },
+    {
+      "id": "skills",
+      "title": "Skills · Figma active",
+      "chapter": "skills",
+      "progress": null,
+      "note": "Ba vùng: tools → logo → năng lực. Một lựa chọn, tối đa3 nhánh."
+    },
+    {
+      "id": "skillsAI",
+      "title": "Skills · nhóm AI active",
+      "chapter": "skills",
+      "progress": null,
+      "note": "Một AI Tools với ChatGPT/Claude/Antigravity; glyph giữ hướng đọc."
+    },
+    {
+      "id": "educationCir",
+      "title": "Education · SGU / Circinus",
+      "chapter": "education",
+      "progress": null,
+      "note": "Bản đồ ba nhánh bất đối xứng; một vùng sáng. Thời gian học chồng nhau."
+    },
+    {
+      "id": "educationTel",
+      "title": "Education · Green / Telescopium",
+      "chapter": "education",
+      "progress": null,
+      "note": "Giữ mẫu Modern2sao/1cạnh; sao trường mờ không phải node thêm."
+    },
+    {
+      "id": "educationPic",
+      "title": "Education · Arena / Pictor",
+      "chapter": "education",
+      "progress": null,
+      "note": "Không minh họa giá vẽ: giữ vị trí sao theo projection R0.2."
+    },
+    {
+      "id": "experience",
+      "title": "Experience · cuối đường bay",
+      "chapter": "experience",
+      "progress": 1,
+      "note": "Một meteor qua3mốc rồi bẻ vào chiều sâu. Hố đen rời trái, camera theo đầu sao."
+    },
+    {
+      "id": "works",
+      "title": "Works · ba hệ sao",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Quỹ đạo ambient chậm đều; nhãn/đích chọn không chạy theo sao. Khoảng xem tách khỏi finale."
+    },
+    {
+      "id": "worksEdura",
+      "title": "Works · preview EDURA",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Chọn dừng quỹ đạo; preview cố định. Nút riêng mở /projects/edura."
+    },
+    {
+      "id": "worksVeris",
+      "title": "Works · preview VERIS",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Ảnh/tên/lĩnh vực thật. Chưa link; không dùng mô tả privacy/feed đang lệch cover."
+    },
+    {
+      "id": "worksVie",
+      "title": "Works · preview VIE",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Preview chất lượng tương đương EDURA, chưa có hành động mở."
+    },
+    {
+      "id": "finale0",
+      "title": "Finale · 1 / rút nội dung",
+      "chapter": "finale",
+      "progress": 0,
+      "note": "Khóa pha idle một lần; tên/preview rút. Tâm hợp nhất đã chốt."
+    },
+    {
+      "id": "finale25",
+      "title": "Finale · 2 / co quỹ đạo",
+      "chapter": "finale",
+      "progress": 0.25,
+      "note": "Co/rate tăng theo progress; các vệt cong chỉ là minh họa pose."
+    },
+    {
+      "id": "finale50",
+      "title": "Finale · 3 / nén và va chạm",
+      "chapter": "finale",
+      "progress": 0.5,
+      "note": "Nhịp nén p0,46–0,56 =10% quãng finale. Lóe cục bộ tại tâm chung."
+    },
+    {
+      "id": "finale75",
+      "title": "Finale · 4 / tinh vân bung",
+      "chapter": "finale",
+      "progress": 0.75,
+      "note": "Trắng–xám nhiều lớp có khe tối. Không frame trắng phẳng; đảo chiều cùng seed."
+    },
+    {
+      "id": "finale100",
+      "title": "Finale · 5 / khí trở thành hố đen",
+      "chapter": "finale",
+      "progress": 1,
+      "note": "Khí thu về đúng tâm va chạm. Đây cũng là pose Contact; không nối camera khác."
+    },
+    {
+      "id": "contact",
+      "title": "Contact · khoảng nghỉ thao tác",
+      "chapter": "contact",
+      "progress": 1,
+      "note": "Hố đen lệch; email nằm trên vùng tối, copy/mail riêng, không terminal."
+    },
+    {
+      "id": "edura",
+      "title": "EDURA · reader editorial",
+      "chapter": "edura",
+      "progress": null,
+      "note": "Concept/prototype và LeadUI có nguồn. Canvas nghỉ; không flow/outcome/lesson bịa."
+    },
+    {
+      "id": "reduced",
+      "title": "Reduced-motion · các pose đọc tĩnh",
+      "chapter": "reduced",
+      "progress": null,
+      "note": "Bỏ portal/glitch/orbit/meteor/explosion/lens; Nav đi thẳng pose nội dung, giữ chọn và hành động."
+    }
+  ],
+  "scrollRanges": {
+    "portal": {
+      "viewportHeights": 1.75,
+      "allowed": [
+        1.5,
+        2
+      ],
+      "steps": [
+        [
+          0,
+          0.4
+        ],
+        [
+          0.4,
+          0.6
+        ],
+        [
+          0.6,
+          1
+        ]
+      ]
+    },
+    "education": {
+      "viewportHeights": 1.75,
+      "allowed": [
+        1.5,
+        2
+      ]
+    },
+    "finale": {
+      "viewportHeights": 2.25,
+      "allowed": [
+        2,
+        2.5
+      ],
+      "compression": [
+        0.46,
+        0.56
+      ],
+      "compressionFraction": 0.1,
+      "separateFromWorksDwell": true
+    }
+  },
+  "cameraUnit": "Proposed exterior scene positions in existing Schwarzschild-radius units; require R2 validation, not validated shader poses",
+  "frames": [
+    {
+      "id": "hero",
+      "title": "Hero · idle",
+      "chapter": "hero",
+      "progress": 0,
+      "note": "Chữ là điểm đọc đầu. Không galaxy lớn; O cuối là neo cổng.",
+      "key": "1440-vi-hero",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-hero",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          0,
+          8
+        ],
+        "target": "DOM O[8]",
+        "reading": "Tên/role bên trái"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/hero.png"
+    },
+    {
+      "id": "glitch",
+      "title": "Hero · số 6 lóe thành 7",
+      "chapter": "hero",
+      "progress": 0,
+      "note": "Chỉ glyph cuối đổi trong 80–120ms / mỗi1,5s; năm semantic vẫn2026. Đây là frame mô tả.",
+      "key": "1440-vi-glitch",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-glitch",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          0,
+          8
+        ],
+        "target": "DOM O[8]",
+        "reading": "Tên/role bên trái"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/glitch.png"
+    },
+    {
+      "id": "portal25",
+      "title": "Portal · tiến về O",
+      "chapter": "portal",
+      "progress": 0.25,
+      "note": "Bụi/nét chữ gần O kéo cong; camera tiến về neo DOM.",
+      "key": "1440-vi-portal25",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-portal25",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": "R2: DOM-anchor dolly → exterior observer → retreat",
+        "target": "Cùng tâm O → BH; p0.5 chuyển scale trong tối",
+        "reading": "Không đặt copy dài trong portal"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.39
+        ],
+        "portal": [
+          0.9,
+          0.39
+        ],
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/portal25.png"
+    },
+    {
+      "id": "portal50",
+      "title": "Portal · khoảng tối",
+      "chapter": "portal",
+      "progress": 0.5,
+      "note": "O mở rộng nuốt khung. Khoảng tối ngắn nối hai thang; không giữ observer trong chân trời.",
+      "key": "1440-vi-portal50",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-portal50",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": "R2: DOM-anchor dolly → exterior observer → retreat",
+        "target": "Cùng tâm O → BH; p0.5 chuyển scale trong tối",
+        "reading": "Không đặt copy dài trong portal"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.39
+        ],
+        "portal": [
+          0.9,
+          0.39
+        ],
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/portal50.png"
+    },
+    {
+      "id": "portal75",
+      "title": "Portal · bật ra",
+      "chapter": "portal",
+      "progress": 0.75,
+      "note": "Camera lùi ra nhưng nhìn về hố đen. Đĩa và lõi cùng silhouette.",
+      "key": "1440-vi-portal75",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-portal75",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": "R2: DOM-anchor dolly → exterior observer → retreat",
+        "target": "Cùng tâm O → BH; p0.5 chuyển scale trong tối",
+        "reading": "Không đặt copy dài trong portal"
+      },
+      "anchor": {
+        "bh": [
+          0.78,
+          0.37
+        ],
+        "portal": [
+          0.78,
+          0.37
+        ],
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/portal75.png"
+    },
+    {
+      "id": "about",
+      "title": "About · điểm nghỉ đọc",
+      "chapter": "about",
+      "progress": 1,
+      "note": "Chân dung đứng tự do, hai đoạn bio giữ chữ thật; tên/câu mở đầu giải mã một lần.",
+      "key": "1440-vi-about",
+      "locale": "vi",
+      "width": 1440,
+      "height": 950,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-about",
+      "viewportHeight": 900,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          3,
+          -169
+        ],
+        "target": [
+          -12,
+          0,
+          -200
+        ],
+        "reading": "Trái/giữa; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.88,
+          0.2733333333333333
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/about.png"
+    },
+    {
+      "id": "aboutColor",
+      "title": "About · trả màu chân dung",
+      "chapter": "about",
+      "progress": 1,
+      "note": "Hover/focus/tap đổi màu; ghế có sẵn trong ảnh được giữ. Không panel/planet/tools.",
+      "key": "1440-vi-aboutColor",
+      "locale": "vi",
+      "width": 1440,
+      "height": 950,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-aboutColor",
+      "viewportHeight": 900,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          3,
+          -169
+        ],
+        "target": [
+          -12,
+          0,
+          -200
+        ],
+        "reading": "Trái/giữa; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.88,
+          0.2733333333333333
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/aboutColor.png"
+    },
+    {
+      "id": "skills",
+      "title": "Skills · Figma active",
+      "chapter": "skills",
+      "progress": null,
+      "note": "Ba vùng: tools → logo → năng lực. Một lựa chọn, tối đa3 nhánh.",
+      "key": "1440-vi-skills",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-skills",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          -2,
+          5,
+          -164
+        ],
+        "target": [
+          -13,
+          0,
+          -200
+        ],
+        "reading": "Ba vùng tối, BH phải trên dịu"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.17777777777777778
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/skills.png"
+    },
+    {
+      "id": "skillsAI",
+      "title": "Skills · nhóm AI active",
+      "chapter": "skills",
+      "progress": null,
+      "note": "Một AI Tools với ChatGPT/Claude/Antigravity; glyph giữ hướng đọc.",
+      "key": "1440-vi-skillsAI",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-skillsAI",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          -2,
+          5,
+          -164
+        ],
+        "target": [
+          -13,
+          0,
+          -200
+        ],
+        "reading": "Ba vùng tối, BH phải trên dịu"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.17777777777777778
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/skillsAI.png"
+    },
+    {
+      "id": "educationCir",
+      "title": "Education · SGU / Circinus",
+      "chapter": "education",
+      "progress": null,
+      "note": "Bản đồ ba nhánh bất đối xứng; một vùng sáng. Thời gian học chồng nhau.",
+      "key": "1440-vi-educationCir",
+      "locale": "vi",
+      "width": 1440,
+      "height": 1575,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-educationCir",
+      "viewportHeight": 900,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          5,
+          -156
+        ],
+        "target": [
+          -10,
+          0,
+          -200
+        ],
+        "reading": "Ba nhánh riêng; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.91,
+          0.18888888888888888
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/educationCir.png"
+    },
+    {
+      "id": "educationTel",
+      "title": "Education · Green / Telescopium",
+      "chapter": "education",
+      "progress": null,
+      "note": "Giữ mẫu Modern2sao/1cạnh; sao trường mờ không phải node thêm.",
+      "key": "1440-vi-educationTel",
+      "locale": "vi",
+      "width": 1440,
+      "height": 1575,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-educationTel",
+      "viewportHeight": 900,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          5,
+          -156
+        ],
+        "target": [
+          -10,
+          0,
+          -200
+        ],
+        "reading": "Ba nhánh riêng; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.91,
+          0.18888888888888888
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/educationTel.png"
+    },
+    {
+      "id": "educationPic",
+      "title": "Education · Arena / Pictor",
+      "chapter": "education",
+      "progress": null,
+      "note": "Không minh họa giá vẽ: giữ vị trí sao theo projection R0.2.",
+      "key": "1440-vi-educationPic",
+      "locale": "vi",
+      "width": 1440,
+      "height": 1575,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-educationPic",
+      "viewportHeight": 900,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          5,
+          -156
+        ],
+        "target": [
+          -10,
+          0,
+          -200
+        ],
+        "reading": "Ba nhánh riêng; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.91,
+          0.18888888888888888
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/educationPic.png"
+    },
+    {
+      "id": "experience",
+      "title": "Experience · cuối đường bay",
+      "chapter": "experience",
+      "progress": 1,
+      "note": "Một meteor qua3mốc rồi bẻ vào chiều sâu. Hố đen rời trái, camera theo đầu sao.",
+      "key": "1440-vi-experience",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-experience",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          12,
+          4,
+          -164
+        ],
+        "target": [
+          18,
+          0,
+          -200
+        ],
+        "reading": "Ba mốc; BH rời bên trái"
+      },
+      "anchor": {
+        "bh": [
+          -0.08,
+          0.47
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/experience.png"
+    },
+    {
+      "id": "works",
+      "title": "Works · ba hệ sao",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Quỹ đạo ambient chậm đều; nhãn/đích chọn không chạy theo sao. Khoảng xem tách khỏi finale.",
+      "key": "1440-vi-works",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-works",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/works.png"
+    },
+    {
+      "id": "worksEdura",
+      "title": "Works · preview EDURA",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Chọn dừng quỹ đạo; preview cố định. Nút riêng mở /projects/edura.",
+      "key": "1440-vi-worksEdura",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-worksEdura",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/worksEdura.png"
+    },
+    {
+      "id": "worksVeris",
+      "title": "Works · preview VERIS",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Ảnh/tên/lĩnh vực thật. Chưa link; không dùng mô tả privacy/feed đang lệch cover.",
+      "key": "1440-vi-worksVeris",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-worksVeris",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/worksVeris.png"
+    },
+    {
+      "id": "worksVie",
+      "title": "Works · preview VIE",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Preview chất lượng tương đương EDURA, chưa có hành động mở.",
+      "key": "1440-vi-worksVie",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-worksVie",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/worksVie.png"
+    },
+    {
+      "id": "finale0",
+      "title": "Finale · 1 / rút nội dung",
+      "chapter": "finale",
+      "progress": 0,
+      "note": "Khóa pha idle một lần; tên/preview rút. Tâm hợp nhất đã chốt.",
+      "key": "1440-vi-finale0",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-finale0",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.7900000000000001,
+          0.43333333333333335
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/finale0.png"
+    },
+    {
+      "id": "finale25",
+      "title": "Finale · 2 / co quỹ đạo",
+      "chapter": "finale",
+      "progress": 0.25,
+      "note": "Co/rate tăng theo progress; các vệt cong chỉ là minh họa pose.",
+      "key": "1440-vi-finale25",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-finale25",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.7900000000000001,
+          0.43333333333333335
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/finale25.png"
+    },
+    {
+      "id": "finale50",
+      "title": "Finale · 3 / nén và va chạm",
+      "chapter": "finale",
+      "progress": 0.5,
+      "note": "Nhịp nén p0,46–0,56 =10% quãng finale. Lóe cục bộ tại tâm chung.",
+      "key": "1440-vi-finale50",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-finale50",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.7900000000000001,
+          0.43333333333333335
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/finale50.png"
+    },
+    {
+      "id": "finale75",
+      "title": "Finale · 4 / tinh vân bung",
+      "chapter": "finale",
+      "progress": 0.75,
+      "note": "Trắng–xám nhiều lớp có khe tối. Không frame trắng phẳng; đảo chiều cùng seed.",
+      "key": "1440-vi-finale75",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-finale75",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.7900000000000001,
+          0.43333333333333335
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/finale75.png"
+    },
+    {
+      "id": "finale100",
+      "title": "Finale · 5 / khí trở thành hố đen",
+      "chapter": "finale",
+      "progress": 1,
+      "note": "Khí thu về đúng tâm va chạm. Đây cũng là pose Contact; không nối camera khác.",
+      "key": "1440-vi-finale100",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-finale100",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.7900000000000001,
+          0.43333333333333335
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/finale100.png"
+    },
+    {
+      "id": "contact",
+      "title": "Contact · khoảng nghỉ thao tác",
+      "chapter": "contact",
+      "progress": 1,
+      "note": "Hố đen lệch; email nằm trên vùng tối, copy/mail riêng, không terminal.",
+      "key": "1440-vi-contact",
+      "locale": "vi",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-contact",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          2,
+          3,
+          -389
+        ],
+        "target": [
+          -12,
+          0,
+          -420
+        ],
+        "reading": "Desktop trái, mobile dưới BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.7900000000000001,
+          0.43333333333333335
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/contact.png"
+    },
+    {
+      "id": "edura",
+      "title": "EDURA · reader editorial",
+      "chapter": "edura",
+      "progress": null,
+      "note": "Concept/prototype và LeadUI có nguồn. Canvas nghỉ; không flow/outcome/lesson bịa.",
+      "key": "1440-vi-edura",
+      "locale": "vi",
+      "width": 1440,
+      "height": 4160.685714285713,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-edura",
+      "viewportHeight": 900,
+      "fullSection": true,
+      "pose": {
+        "camera": "Canvas paused",
+        "target": "N/A",
+        "reading": "Cột editorial + ảnh màu thật"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/edura.png"
+    },
+    {
+      "id": "reduced",
+      "title": "Reduced-motion · các pose đọc tĩnh",
+      "chapter": "reduced",
+      "progress": null,
+      "note": "Bỏ portal/glitch/orbit/meteor/explosion/lens; Nav đi thẳng pose nội dung, giữ chọn và hành động.",
+      "key": "1440-vi-reduced",
+      "locale": "vi",
+      "width": 1440,
+      "height": 980,
+      "file": "storyboard.html",
+      "fragment": "1440-vi-reduced",
+      "viewportHeight": 900,
+      "fullSection": true,
+      "pose": {
+        "camera": "Các pose endpoint tĩnh",
+        "target": "Không dolly/orbit",
+        "reading": "Nội dung và lựa chọn luôn sẵn"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/vi/reduced.png"
+    },
+    {
+      "id": "hero",
+      "title": "Hero · idle",
+      "chapter": "hero",
+      "progress": 0,
+      "note": "Chữ là điểm đọc đầu. Không galaxy lớn; O cuối là neo cổng.",
+      "key": "1440-en-hero",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-en-hero",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          0,
+          8
+        ],
+        "target": "DOM O[8]",
+        "reading": "Tên/role bên trái"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/hero.png"
+    },
+    {
+      "id": "glitch",
+      "title": "Hero · số 6 lóe thành 7",
+      "chapter": "hero",
+      "progress": 0,
+      "note": "Chỉ glyph cuối đổi trong 80–120ms / mỗi1,5s; năm semantic vẫn2026. Đây là frame mô tả.",
+      "key": "1440-en-glitch",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-en-glitch",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          0,
+          8
+        ],
+        "target": "DOM O[8]",
+        "reading": "Tên/role bên trái"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/glitch.png"
+    },
+    {
+      "id": "portal25",
+      "title": "Portal · tiến về O",
+      "chapter": "portal",
+      "progress": 0.25,
+      "note": "Bụi/nét chữ gần O kéo cong; camera tiến về neo DOM.",
+      "key": "1440-en-portal25",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-en-portal25",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": "R2: DOM-anchor dolly → exterior observer → retreat",
+        "target": "Cùng tâm O → BH; p0.5 chuyển scale trong tối",
+        "reading": "Không đặt copy dài trong portal"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.39
+        ],
+        "portal": [
+          0.9,
+          0.39
+        ],
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/portal25.png"
+    },
+    {
+      "id": "portal50",
+      "title": "Portal · khoảng tối",
+      "chapter": "portal",
+      "progress": 0.5,
+      "note": "O mở rộng nuốt khung. Khoảng tối ngắn nối hai thang; không giữ observer trong chân trời.",
+      "key": "1440-en-portal50",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-en-portal50",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": "R2: DOM-anchor dolly → exterior observer → retreat",
+        "target": "Cùng tâm O → BH; p0.5 chuyển scale trong tối",
+        "reading": "Không đặt copy dài trong portal"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.39
+        ],
+        "portal": [
+          0.9,
+          0.39
+        ],
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/portal50.png"
+    },
+    {
+      "id": "portal75",
+      "title": "Portal · bật ra",
+      "chapter": "portal",
+      "progress": 0.75,
+      "note": "Camera lùi ra nhưng nhìn về hố đen. Đĩa và lõi cùng silhouette.",
+      "key": "1440-en-portal75",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-en-portal75",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": "R2: DOM-anchor dolly → exterior observer → retreat",
+        "target": "Cùng tâm O → BH; p0.5 chuyển scale trong tối",
+        "reading": "Không đặt copy dài trong portal"
+      },
+      "anchor": {
+        "bh": [
+          0.78,
+          0.37
+        ],
+        "portal": [
+          0.78,
+          0.37
+        ],
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/portal75.png"
+    },
+    {
+      "id": "about",
+      "title": "About · điểm nghỉ đọc",
+      "chapter": "about",
+      "progress": 1,
+      "note": "Chân dung đứng tự do, hai đoạn bio giữ chữ thật; tên/câu mở đầu giải mã một lần.",
+      "key": "1440-en-about",
+      "locale": "en",
+      "width": 1440,
+      "height": 950,
+      "file": "storyboard.html",
+      "fragment": "1440-en-about",
+      "viewportHeight": 900,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          3,
+          -169
+        ],
+        "target": [
+          -12,
+          0,
+          -200
+        ],
+        "reading": "Trái/giữa; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.88,
+          0.2733333333333333
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/about.png"
+    },
+    {
+      "id": "aboutColor",
+      "title": "About · trả màu chân dung",
+      "chapter": "about",
+      "progress": 1,
+      "note": "Hover/focus/tap đổi màu; ghế có sẵn trong ảnh được giữ. Không panel/planet/tools.",
+      "key": "1440-en-aboutColor",
+      "locale": "en",
+      "width": 1440,
+      "height": 950,
+      "file": "storyboard.html",
+      "fragment": "1440-en-aboutColor",
+      "viewportHeight": 900,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          3,
+          -169
+        ],
+        "target": [
+          -12,
+          0,
+          -200
+        ],
+        "reading": "Trái/giữa; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.88,
+          0.2733333333333333
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/aboutColor.png"
+    },
+    {
+      "id": "skills",
+      "title": "Skills · Figma active",
+      "chapter": "skills",
+      "progress": null,
+      "note": "Ba vùng: tools → logo → năng lực. Một lựa chọn, tối đa3 nhánh.",
+      "key": "1440-en-skills",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-en-skills",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          -2,
+          5,
+          -164
+        ],
+        "target": [
+          -13,
+          0,
+          -200
+        ],
+        "reading": "Ba vùng tối, BH phải trên dịu"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.17777777777777778
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/skills.png"
+    },
+    {
+      "id": "skillsAI",
+      "title": "Skills · nhóm AI active",
+      "chapter": "skills",
+      "progress": null,
+      "note": "Một AI Tools với ChatGPT/Claude/Antigravity; glyph giữ hướng đọc.",
+      "key": "1440-en-skillsAI",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-en-skillsAI",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          -2,
+          5,
+          -164
+        ],
+        "target": [
+          -13,
+          0,
+          -200
+        ],
+        "reading": "Ba vùng tối, BH phải trên dịu"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.17777777777777778
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/skillsAI.png"
+    },
+    {
+      "id": "educationCir",
+      "title": "Education · SGU / Circinus",
+      "chapter": "education",
+      "progress": null,
+      "note": "Bản đồ ba nhánh bất đối xứng; một vùng sáng. Thời gian học chồng nhau.",
+      "key": "1440-en-educationCir",
+      "locale": "en",
+      "width": 1440,
+      "height": 1575,
+      "file": "storyboard.html",
+      "fragment": "1440-en-educationCir",
+      "viewportHeight": 900,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          5,
+          -156
+        ],
+        "target": [
+          -10,
+          0,
+          -200
+        ],
+        "reading": "Ba nhánh riêng; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.91,
+          0.18888888888888888
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/educationCir.png"
+    },
+    {
+      "id": "educationTel",
+      "title": "Education · Green / Telescopium",
+      "chapter": "education",
+      "progress": null,
+      "note": "Giữ mẫu Modern2sao/1cạnh; sao trường mờ không phải node thêm.",
+      "key": "1440-en-educationTel",
+      "locale": "en",
+      "width": 1440,
+      "height": 1575,
+      "file": "storyboard.html",
+      "fragment": "1440-en-educationTel",
+      "viewportHeight": 900,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          5,
+          -156
+        ],
+        "target": [
+          -10,
+          0,
+          -200
+        ],
+        "reading": "Ba nhánh riêng; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.91,
+          0.18888888888888888
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/educationTel.png"
+    },
+    {
+      "id": "educationPic",
+      "title": "Education · Arena / Pictor",
+      "chapter": "education",
+      "progress": null,
+      "note": "Không minh họa giá vẽ: giữ vị trí sao theo projection R0.2.",
+      "key": "1440-en-educationPic",
+      "locale": "en",
+      "width": 1440,
+      "height": 1575,
+      "file": "storyboard.html",
+      "fragment": "1440-en-educationPic",
+      "viewportHeight": 900,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          5,
+          -156
+        ],
+        "target": [
+          -10,
+          0,
+          -200
+        ],
+        "reading": "Ba nhánh riêng; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.91,
+          0.18888888888888888
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/educationPic.png"
+    },
+    {
+      "id": "experience",
+      "title": "Experience · cuối đường bay",
+      "chapter": "experience",
+      "progress": 1,
+      "note": "Một meteor qua3mốc rồi bẻ vào chiều sâu. Hố đen rời trái, camera theo đầu sao.",
+      "key": "1440-en-experience",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-en-experience",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          12,
+          4,
+          -164
+        ],
+        "target": [
+          18,
+          0,
+          -200
+        ],
+        "reading": "Ba mốc; BH rời bên trái"
+      },
+      "anchor": {
+        "bh": [
+          -0.08,
+          0.47
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/experience.png"
+    },
+    {
+      "id": "works",
+      "title": "Works · ba hệ sao",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Quỹ đạo ambient chậm đều; nhãn/đích chọn không chạy theo sao. Khoảng xem tách khỏi finale.",
+      "key": "1440-en-works",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-en-works",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/works.png"
+    },
+    {
+      "id": "worksEdura",
+      "title": "Works · preview EDURA",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Chọn dừng quỹ đạo; preview cố định. Nút riêng mở /projects/edura.",
+      "key": "1440-en-worksEdura",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-en-worksEdura",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/worksEdura.png"
+    },
+    {
+      "id": "worksVeris",
+      "title": "Works · preview VERIS",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Ảnh/tên/lĩnh vực thật. Chưa link; không dùng mô tả privacy/feed đang lệch cover.",
+      "key": "1440-en-worksVeris",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-en-worksVeris",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/worksVeris.png"
+    },
+    {
+      "id": "worksVie",
+      "title": "Works · preview VIE",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Preview chất lượng tương đương EDURA, chưa có hành động mở.",
+      "key": "1440-en-worksVie",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-en-worksVie",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/worksVie.png"
+    },
+    {
+      "id": "finale0",
+      "title": "Finale · 1 / rút nội dung",
+      "chapter": "finale",
+      "progress": 0,
+      "note": "Khóa pha idle một lần; tên/preview rút. Tâm hợp nhất đã chốt.",
+      "key": "1440-en-finale0",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-en-finale0",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.7900000000000001,
+          0.43333333333333335
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/finale0.png"
+    },
+    {
+      "id": "finale25",
+      "title": "Finale · 2 / co quỹ đạo",
+      "chapter": "finale",
+      "progress": 0.25,
+      "note": "Co/rate tăng theo progress; các vệt cong chỉ là minh họa pose.",
+      "key": "1440-en-finale25",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-en-finale25",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.7900000000000001,
+          0.43333333333333335
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/finale25.png"
+    },
+    {
+      "id": "finale50",
+      "title": "Finale · 3 / nén và va chạm",
+      "chapter": "finale",
+      "progress": 0.5,
+      "note": "Nhịp nén p0,46–0,56 =10% quãng finale. Lóe cục bộ tại tâm chung.",
+      "key": "1440-en-finale50",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-en-finale50",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.7900000000000001,
+          0.43333333333333335
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/finale50.png"
+    },
+    {
+      "id": "finale75",
+      "title": "Finale · 4 / tinh vân bung",
+      "chapter": "finale",
+      "progress": 0.75,
+      "note": "Trắng–xám nhiều lớp có khe tối. Không frame trắng phẳng; đảo chiều cùng seed.",
+      "key": "1440-en-finale75",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-en-finale75",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.7900000000000001,
+          0.43333333333333335
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/finale75.png"
+    },
+    {
+      "id": "finale100",
+      "title": "Finale · 5 / khí trở thành hố đen",
+      "chapter": "finale",
+      "progress": 1,
+      "note": "Khí thu về đúng tâm va chạm. Đây cũng là pose Contact; không nối camera khác.",
+      "key": "1440-en-finale100",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-en-finale100",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.7900000000000001,
+          0.43333333333333335
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/finale100.png"
+    },
+    {
+      "id": "contact",
+      "title": "Contact · khoảng nghỉ thao tác",
+      "chapter": "contact",
+      "progress": 1,
+      "note": "Hố đen lệch; email nằm trên vùng tối, copy/mail riêng, không terminal.",
+      "key": "1440-en-contact",
+      "locale": "en",
+      "width": 1440,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "1440-en-contact",
+      "viewportHeight": 900,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          2,
+          3,
+          -389
+        ],
+        "target": [
+          -12,
+          0,
+          -420
+        ],
+        "reading": "Desktop trái, mobile dưới BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.7900000000000001,
+          0.43333333333333335
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/contact.png"
+    },
+    {
+      "id": "edura",
+      "title": "EDURA · reader editorial",
+      "chapter": "edura",
+      "progress": null,
+      "note": "Concept/prototype và LeadUI có nguồn. Canvas nghỉ; không flow/outcome/lesson bịa.",
+      "key": "1440-en-edura",
+      "locale": "en",
+      "width": 1440,
+      "height": 4160.685714285713,
+      "file": "storyboard.html",
+      "fragment": "1440-en-edura",
+      "viewportHeight": 900,
+      "fullSection": true,
+      "pose": {
+        "camera": "Canvas paused",
+        "target": "N/A",
+        "reading": "Cột editorial + ảnh màu thật"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/edura.png"
+    },
+    {
+      "id": "reduced",
+      "title": "Reduced-motion · các pose đọc tĩnh",
+      "chapter": "reduced",
+      "progress": null,
+      "note": "Bỏ portal/glitch/orbit/meteor/explosion/lens; Nav đi thẳng pose nội dung, giữ chọn và hành động.",
+      "key": "1440-en-reduced",
+      "locale": "en",
+      "width": 1440,
+      "height": 980,
+      "file": "storyboard.html",
+      "fragment": "1440-en-reduced",
+      "viewportHeight": 900,
+      "fullSection": true,
+      "pose": {
+        "camera": "Các pose endpoint tĩnh",
+        "target": "Không dolly/orbit",
+        "reading": "Nội dung và lựa chọn luôn sẵn"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/1440/en/reduced.png"
+    },
+    {
+      "id": "hero",
+      "title": "Hero · idle",
+      "chapter": "hero",
+      "progress": 0,
+      "note": "Chữ là điểm đọc đầu. Không galaxy lớn; O cuối là neo cổng.",
+      "key": "390-vi-hero",
+      "locale": "vi",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-vi-hero",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          0,
+          8
+        ],
+        "target": "DOM O[8]",
+        "reading": "Tên/role bên trái"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/hero.png"
+    },
+    {
+      "id": "glitch",
+      "title": "Hero · số 6 lóe thành 7",
+      "chapter": "hero",
+      "progress": 0,
+      "note": "Chỉ glyph cuối đổi trong 80–120ms / mỗi1,5s; năm semantic vẫn2026. Đây là frame mô tả.",
+      "key": "390-vi-glitch",
+      "locale": "vi",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-vi-glitch",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          0,
+          8
+        ],
+        "target": "DOM O[8]",
+        "reading": "Tên/role bên trái"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/glitch.png"
+    },
+    {
+      "id": "portal25",
+      "title": "Portal · tiến về O",
+      "chapter": "portal",
+      "progress": 0.25,
+      "note": "Bụi/nét chữ gần O kéo cong; camera tiến về neo DOM.",
+      "key": "390-vi-portal25",
+      "locale": "vi",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-vi-portal25",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "R2: DOM-anchor dolly → exterior observer → retreat",
+        "target": "Cùng tâm O → BH; p0.5 chuyển scale trong tối",
+        "reading": "Không đặt copy dài trong portal"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.28
+        ],
+        "portal": [
+          0.9,
+          0.28
+        ],
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/portal25.png"
+    },
+    {
+      "id": "portal50",
+      "title": "Portal · khoảng tối",
+      "chapter": "portal",
+      "progress": 0.5,
+      "note": "O mở rộng nuốt khung. Khoảng tối ngắn nối hai thang; không giữ observer trong chân trời.",
+      "key": "390-vi-portal50",
+      "locale": "vi",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-vi-portal50",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "R2: DOM-anchor dolly → exterior observer → retreat",
+        "target": "Cùng tâm O → BH; p0.5 chuyển scale trong tối",
+        "reading": "Không đặt copy dài trong portal"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.28
+        ],
+        "portal": [
+          0.9,
+          0.28
+        ],
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/portal50.png"
+    },
+    {
+      "id": "portal75",
+      "title": "Portal · bật ra",
+      "chapter": "portal",
+      "progress": 0.75,
+      "note": "Camera lùi ra nhưng nhìn về hố đen. Đĩa và lõi cùng silhouette.",
+      "key": "390-vi-portal75",
+      "locale": "vi",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-vi-portal75",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "R2: DOM-anchor dolly → exterior observer → retreat",
+        "target": "Cùng tâm O → BH; p0.5 chuyển scale trong tối",
+        "reading": "Không đặt copy dài trong portal"
+      },
+      "anchor": {
+        "bh": [
+          0.7799999999999999,
+          0.36999999999999994
+        ],
+        "portal": [
+          0.78,
+          0.37
+        ],
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/portal75.png"
+    },
+    {
+      "id": "about",
+      "title": "About · điểm nghỉ đọc",
+      "chapter": "about",
+      "progress": 1,
+      "note": "Chân dung đứng tự do, hai đoạn bio giữ chữ thật; tên/câu mở đầu giải mã một lần.",
+      "key": "390-vi-about",
+      "locale": "vi",
+      "width": 390,
+      "height": 1510,
+      "file": "storyboard.html",
+      "fragment": "390-vi-about",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          3,
+          -169
+        ],
+        "target": [
+          -12,
+          0,
+          -200
+        ],
+        "reading": "Trái/giữa; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.88,
+          0.18364928909952608
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/about.png"
+    },
+    {
+      "id": "aboutColor",
+      "title": "About · trả màu chân dung",
+      "chapter": "about",
+      "progress": 1,
+      "note": "Hover/focus/tap đổi màu; ghế có sẵn trong ảnh được giữ. Không panel/planet/tools.",
+      "key": "390-vi-aboutColor",
+      "locale": "vi",
+      "width": 390,
+      "height": 1510,
+      "file": "storyboard.html",
+      "fragment": "390-vi-aboutColor",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          3,
+          -169
+        ],
+        "target": [
+          -12,
+          0,
+          -200
+        ],
+        "reading": "Trái/giữa; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.88,
+          0.18364928909952608
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/aboutColor.png"
+    },
+    {
+      "id": "skills",
+      "title": "Skills · Figma active",
+      "chapter": "skills",
+      "progress": null,
+      "note": "Ba vùng: tools → logo → năng lực. Một lựa chọn, tối đa3 nhánh.",
+      "key": "390-vi-skills",
+      "locale": "vi",
+      "width": 390,
+      "height": 1060,
+      "file": "storyboard.html",
+      "fragment": "390-vi-skills",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          -2,
+          5,
+          -164
+        ],
+        "target": [
+          -13,
+          0,
+          -200
+        ],
+        "reading": "Ba vùng tối, BH phải trên dịu"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.2014218009478673
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/skills.png"
+    },
+    {
+      "id": "skillsAI",
+      "title": "Skills · nhóm AI active",
+      "chapter": "skills",
+      "progress": null,
+      "note": "Một AI Tools với ChatGPT/Claude/Antigravity; glyph giữ hướng đọc.",
+      "key": "390-vi-skillsAI",
+      "locale": "vi",
+      "width": 390,
+      "height": 1060,
+      "file": "storyboard.html",
+      "fragment": "390-vi-skillsAI",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          -2,
+          5,
+          -164
+        ],
+        "target": [
+          -13,
+          0,
+          -200
+        ],
+        "reading": "Ba vùng tối, BH phải trên dịu"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.2014218009478673
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/skillsAI.png"
+    },
+    {
+      "id": "educationCir",
+      "title": "Education · SGU / Circinus",
+      "chapter": "education",
+      "progress": null,
+      "note": "Bản đồ ba nhánh bất đối xứng; một vùng sáng. Thời gian học chồng nhau.",
+      "key": "390-vi-educationCir",
+      "locale": "vi",
+      "width": 390,
+      "height": 1477,
+      "file": "storyboard.html",
+      "fragment": "390-vi-educationCir",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          5,
+          -156
+        ],
+        "target": [
+          -10,
+          0,
+          -200
+        ],
+        "reading": "Ba nhánh riêng; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.9100000000000001,
+          0.15995260663507108
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/educationCir.png"
+    },
+    {
+      "id": "educationTel",
+      "title": "Education · Green / Telescopium",
+      "chapter": "education",
+      "progress": null,
+      "note": "Giữ mẫu Modern2sao/1cạnh; sao trường mờ không phải node thêm.",
+      "key": "390-vi-educationTel",
+      "locale": "vi",
+      "width": 390,
+      "height": 1477,
+      "file": "storyboard.html",
+      "fragment": "390-vi-educationTel",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          5,
+          -156
+        ],
+        "target": [
+          -10,
+          0,
+          -200
+        ],
+        "reading": "Ba nhánh riêng; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.9100000000000001,
+          0.15995260663507108
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/educationTel.png"
+    },
+    {
+      "id": "educationPic",
+      "title": "Education · Arena / Pictor",
+      "chapter": "education",
+      "progress": null,
+      "note": "Không minh họa giá vẽ: giữ vị trí sao theo projection R0.2.",
+      "key": "390-vi-educationPic",
+      "locale": "vi",
+      "width": 390,
+      "height": 1477,
+      "file": "storyboard.html",
+      "fragment": "390-vi-educationPic",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          5,
+          -156
+        ],
+        "target": [
+          -10,
+          0,
+          -200
+        ],
+        "reading": "Ba nhánh riêng; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.9100000000000001,
+          0.15995260663507108
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/educationPic.png"
+    },
+    {
+      "id": "experience",
+      "title": "Experience · cuối đường bay",
+      "chapter": "experience",
+      "progress": 1,
+      "note": "Một meteor qua3mốc rồi bẻ vào chiều sâu. Hố đen rời trái, camera theo đầu sao.",
+      "key": "390-vi-experience",
+      "locale": "vi",
+      "width": 390,
+      "height": 1120,
+      "file": "storyboard.html",
+      "fragment": "390-vi-experience",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          12,
+          4,
+          -164
+        ],
+        "target": [
+          18,
+          0,
+          -200
+        ],
+        "reading": "Ba mốc; BH rời bên trái"
+      },
+      "anchor": {
+        "bh": [
+          -0.08,
+          0.623696682464455
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/experience.png"
+    },
+    {
+      "id": "works",
+      "title": "Works · ba hệ sao",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Quỹ đạo ambient chậm đều; nhãn/đích chọn không chạy theo sao. Khoảng xem tách khỏi finale.",
+      "key": "390-vi-works",
+      "locale": "vi",
+      "width": 390,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "390-vi-works",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/works.png"
+    },
+    {
+      "id": "worksEdura",
+      "title": "Works · preview EDURA",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Chọn dừng quỹ đạo; preview cố định. Nút riêng mở /projects/edura.",
+      "key": "390-vi-worksEdura",
+      "locale": "vi",
+      "width": 390,
+      "height": 1200,
+      "file": "storyboard.html",
+      "fragment": "390-vi-worksEdura",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/worksEdura.png"
+    },
+    {
+      "id": "worksVeris",
+      "title": "Works · preview VERIS",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Ảnh/tên/lĩnh vực thật. Chưa link; không dùng mô tả privacy/feed đang lệch cover.",
+      "key": "390-vi-worksVeris",
+      "locale": "vi",
+      "width": 390,
+      "height": 1200,
+      "file": "storyboard.html",
+      "fragment": "390-vi-worksVeris",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/worksVeris.png"
+    },
+    {
+      "id": "worksVie",
+      "title": "Works · preview VIE",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Preview chất lượng tương đương EDURA, chưa có hành động mở.",
+      "key": "390-vi-worksVie",
+      "locale": "vi",
+      "width": 390,
+      "height": 1200,
+      "file": "storyboard.html",
+      "fragment": "390-vi-worksVie",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/worksVie.png"
+    },
+    {
+      "id": "finale0",
+      "title": "Finale · 1 / rút nội dung",
+      "chapter": "finale",
+      "progress": 0,
+      "note": "Khóa pha idle một lần; tên/preview rút. Tâm hợp nhất đã chốt.",
+      "key": "390-vi-finale0",
+      "locale": "vi",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-vi-finale0",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/finale0.png"
+    },
+    {
+      "id": "finale25",
+      "title": "Finale · 2 / co quỹ đạo",
+      "chapter": "finale",
+      "progress": 0.25,
+      "note": "Co/rate tăng theo progress; các vệt cong chỉ là minh họa pose.",
+      "key": "390-vi-finale25",
+      "locale": "vi",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-vi-finale25",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/finale25.png"
+    },
+    {
+      "id": "finale50",
+      "title": "Finale · 3 / nén và va chạm",
+      "chapter": "finale",
+      "progress": 0.5,
+      "note": "Nhịp nén p0,46–0,56 =10% quãng finale. Lóe cục bộ tại tâm chung.",
+      "key": "390-vi-finale50",
+      "locale": "vi",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-vi-finale50",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/finale50.png"
+    },
+    {
+      "id": "finale75",
+      "title": "Finale · 4 / tinh vân bung",
+      "chapter": "finale",
+      "progress": 0.75,
+      "note": "Trắng–xám nhiều lớp có khe tối. Không frame trắng phẳng; đảo chiều cùng seed.",
+      "key": "390-vi-finale75",
+      "locale": "vi",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-vi-finale75",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/finale75.png"
+    },
+    {
+      "id": "finale100",
+      "title": "Finale · 5 / khí trở thành hố đen",
+      "chapter": "finale",
+      "progress": 1,
+      "note": "Khí thu về đúng tâm va chạm. Đây cũng là pose Contact; không nối camera khác.",
+      "key": "390-vi-finale100",
+      "locale": "vi",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-vi-finale100",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/finale100.png"
+    },
+    {
+      "id": "contact",
+      "title": "Contact · khoảng nghỉ thao tác",
+      "chapter": "contact",
+      "progress": 1,
+      "note": "Hố đen lệch; email nằm trên vùng tối, copy/mail riêng, không terminal.",
+      "key": "390-vi-contact",
+      "locale": "vi",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-vi-contact",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          2,
+          3,
+          -389
+        ],
+        "target": [
+          -12,
+          0,
+          -420
+        ],
+        "reading": "Desktop trái, mobile dưới BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/contact.png"
+    },
+    {
+      "id": "edura",
+      "title": "EDURA · reader editorial",
+      "chapter": "edura",
+      "progress": null,
+      "note": "Concept/prototype và LeadUI có nguồn. Canvas nghỉ; không flow/outcome/lesson bịa.",
+      "key": "390-vi-edura",
+      "locale": "vi",
+      "width": 390,
+      "height": 2153.75,
+      "file": "storyboard.html",
+      "fragment": "390-vi-edura",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": "Canvas paused",
+        "target": "N/A",
+        "reading": "Cột editorial + ảnh màu thật"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/edura.png"
+    },
+    {
+      "id": "reduced",
+      "title": "Reduced-motion · các pose đọc tĩnh",
+      "chapter": "reduced",
+      "progress": null,
+      "note": "Bỏ portal/glitch/orbit/meteor/explosion/lens; Nav đi thẳng pose nội dung, giữ chọn và hành động.",
+      "key": "390-vi-reduced",
+      "locale": "vi",
+      "width": 390,
+      "height": 980,
+      "file": "storyboard.html",
+      "fragment": "390-vi-reduced",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": "Các pose endpoint tĩnh",
+        "target": "Không dolly/orbit",
+        "reading": "Nội dung và lựa chọn luôn sẵn"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/vi/reduced.png"
+    },
+    {
+      "id": "hero",
+      "title": "Hero · idle",
+      "chapter": "hero",
+      "progress": 0,
+      "note": "Chữ là điểm đọc đầu. Không galaxy lớn; O cuối là neo cổng.",
+      "key": "390-en-hero",
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-en-hero",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          0,
+          8
+        ],
+        "target": "DOM O[8]",
+        "reading": "Tên/role bên trái"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/hero.png"
+    },
+    {
+      "id": "glitch",
+      "title": "Hero · số 6 lóe thành 7",
+      "chapter": "hero",
+      "progress": 0,
+      "note": "Chỉ glyph cuối đổi trong 80–120ms / mỗi1,5s; năm semantic vẫn2026. Đây là frame mô tả.",
+      "key": "390-en-glitch",
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-en-glitch",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          0,
+          8
+        ],
+        "target": "DOM O[8]",
+        "reading": "Tên/role bên trái"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/glitch.png"
+    },
+    {
+      "id": "portal25",
+      "title": "Portal · tiến về O",
+      "chapter": "portal",
+      "progress": 0.25,
+      "note": "Bụi/nét chữ gần O kéo cong; camera tiến về neo DOM.",
+      "key": "390-en-portal25",
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-en-portal25",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "R2: DOM-anchor dolly → exterior observer → retreat",
+        "target": "Cùng tâm O → BH; p0.5 chuyển scale trong tối",
+        "reading": "Không đặt copy dài trong portal"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.28
+        ],
+        "portal": [
+          0.9,
+          0.28
+        ],
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/portal25.png"
+    },
+    {
+      "id": "portal50",
+      "title": "Portal · khoảng tối",
+      "chapter": "portal",
+      "progress": 0.5,
+      "note": "O mở rộng nuốt khung. Khoảng tối ngắn nối hai thang; không giữ observer trong chân trời.",
+      "key": "390-en-portal50",
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-en-portal50",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "R2: DOM-anchor dolly → exterior observer → retreat",
+        "target": "Cùng tâm O → BH; p0.5 chuyển scale trong tối",
+        "reading": "Không đặt copy dài trong portal"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.28
+        ],
+        "portal": [
+          0.9,
+          0.28
+        ],
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/portal50.png"
+    },
+    {
+      "id": "portal75",
+      "title": "Portal · bật ra",
+      "chapter": "portal",
+      "progress": 0.75,
+      "note": "Camera lùi ra nhưng nhìn về hố đen. Đĩa và lõi cùng silhouette.",
+      "key": "390-en-portal75",
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-en-portal75",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "R2: DOM-anchor dolly → exterior observer → retreat",
+        "target": "Cùng tâm O → BH; p0.5 chuyển scale trong tối",
+        "reading": "Không đặt copy dài trong portal"
+      },
+      "anchor": {
+        "bh": [
+          0.7799999999999999,
+          0.36999999999999994
+        ],
+        "portal": [
+          0.78,
+          0.37
+        ],
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/portal75.png"
+    },
+    {
+      "id": "about",
+      "title": "About · điểm nghỉ đọc",
+      "chapter": "about",
+      "progress": 1,
+      "note": "Chân dung đứng tự do, hai đoạn bio giữ chữ thật; tên/câu mở đầu giải mã một lần.",
+      "key": "390-en-about",
+      "locale": "en",
+      "width": 390,
+      "height": 1510,
+      "file": "storyboard.html",
+      "fragment": "390-en-about",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          3,
+          -169
+        ],
+        "target": [
+          -12,
+          0,
+          -200
+        ],
+        "reading": "Trái/giữa; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.88,
+          0.18364928909952608
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/about.png"
+    },
+    {
+      "id": "aboutColor",
+      "title": "About · trả màu chân dung",
+      "chapter": "about",
+      "progress": 1,
+      "note": "Hover/focus/tap đổi màu; ghế có sẵn trong ảnh được giữ. Không panel/planet/tools.",
+      "key": "390-en-aboutColor",
+      "locale": "en",
+      "width": 390,
+      "height": 1510,
+      "file": "storyboard.html",
+      "fragment": "390-en-aboutColor",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          3,
+          -169
+        ],
+        "target": [
+          -12,
+          0,
+          -200
+        ],
+        "reading": "Trái/giữa; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.88,
+          0.18364928909952608
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/aboutColor.png"
+    },
+    {
+      "id": "skills",
+      "title": "Skills · Figma active",
+      "chapter": "skills",
+      "progress": null,
+      "note": "Ba vùng: tools → logo → năng lực. Một lựa chọn, tối đa3 nhánh.",
+      "key": "390-en-skills",
+      "locale": "en",
+      "width": 390,
+      "height": 1060,
+      "file": "storyboard.html",
+      "fragment": "390-en-skills",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          -2,
+          5,
+          -164
+        ],
+        "target": [
+          -13,
+          0,
+          -200
+        ],
+        "reading": "Ba vùng tối, BH phải trên dịu"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.2014218009478673
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/skills.png"
+    },
+    {
+      "id": "skillsAI",
+      "title": "Skills · nhóm AI active",
+      "chapter": "skills",
+      "progress": null,
+      "note": "Một AI Tools với ChatGPT/Claude/Antigravity; glyph giữ hướng đọc.",
+      "key": "390-en-skillsAI",
+      "locale": "en",
+      "width": 390,
+      "height": 1060,
+      "file": "storyboard.html",
+      "fragment": "390-en-skillsAI",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          -2,
+          5,
+          -164
+        ],
+        "target": [
+          -13,
+          0,
+          -200
+        ],
+        "reading": "Ba vùng tối, BH phải trên dịu"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.2014218009478673
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/skillsAI.png"
+    },
+    {
+      "id": "educationCir",
+      "title": "Education · SGU / Circinus",
+      "chapter": "education",
+      "progress": null,
+      "note": "Bản đồ ba nhánh bất đối xứng; một vùng sáng. Thời gian học chồng nhau.",
+      "key": "390-en-educationCir",
+      "locale": "en",
+      "width": 390,
+      "height": 1477,
+      "file": "storyboard.html",
+      "fragment": "390-en-educationCir",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          5,
+          -156
+        ],
+        "target": [
+          -10,
+          0,
+          -200
+        ],
+        "reading": "Ba nhánh riêng; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.9100000000000001,
+          0.15995260663507108
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/educationCir.png"
+    },
+    {
+      "id": "educationTel",
+      "title": "Education · Green / Telescopium",
+      "chapter": "education",
+      "progress": null,
+      "note": "Giữ mẫu Modern2sao/1cạnh; sao trường mờ không phải node thêm.",
+      "key": "390-en-educationTel",
+      "locale": "en",
+      "width": 390,
+      "height": 1477,
+      "file": "storyboard.html",
+      "fragment": "390-en-educationTel",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          5,
+          -156
+        ],
+        "target": [
+          -10,
+          0,
+          -200
+        ],
+        "reading": "Ba nhánh riêng; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.9100000000000001,
+          0.15995260663507108
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/educationTel.png"
+    },
+    {
+      "id": "educationPic",
+      "title": "Education · Arena / Pictor",
+      "chapter": "education",
+      "progress": null,
+      "note": "Không minh họa giá vẽ: giữ vị trí sao theo projection R0.2.",
+      "key": "390-en-educationPic",
+      "locale": "en",
+      "width": 390,
+      "height": 1477,
+      "file": "storyboard.html",
+      "fragment": "390-en-educationPic",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          5,
+          -156
+        ],
+        "target": [
+          -10,
+          0,
+          -200
+        ],
+        "reading": "Ba nhánh riêng; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.9100000000000001,
+          0.15995260663507108
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/educationPic.png"
+    },
+    {
+      "id": "experience",
+      "title": "Experience · cuối đường bay",
+      "chapter": "experience",
+      "progress": 1,
+      "note": "Một meteor qua3mốc rồi bẻ vào chiều sâu. Hố đen rời trái, camera theo đầu sao.",
+      "key": "390-en-experience",
+      "locale": "en",
+      "width": 390,
+      "height": 1120,
+      "file": "storyboard.html",
+      "fragment": "390-en-experience",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          12,
+          4,
+          -164
+        ],
+        "target": [
+          18,
+          0,
+          -200
+        ],
+        "reading": "Ba mốc; BH rời bên trái"
+      },
+      "anchor": {
+        "bh": [
+          -0.08,
+          0.623696682464455
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/experience.png"
+    },
+    {
+      "id": "works",
+      "title": "Works · ba hệ sao",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Quỹ đạo ambient chậm đều; nhãn/đích chọn không chạy theo sao. Khoảng xem tách khỏi finale.",
+      "key": "390-en-works",
+      "locale": "en",
+      "width": 390,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "390-en-works",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/works.png"
+    },
+    {
+      "id": "worksEdura",
+      "title": "Works · preview EDURA",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Chọn dừng quỹ đạo; preview cố định. Nút riêng mở /projects/edura.",
+      "key": "390-en-worksEdura",
+      "locale": "en",
+      "width": 390,
+      "height": 1200,
+      "file": "storyboard.html",
+      "fragment": "390-en-worksEdura",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/worksEdura.png"
+    },
+    {
+      "id": "worksVeris",
+      "title": "Works · preview VERIS",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Ảnh/tên/lĩnh vực thật. Chưa link; không dùng mô tả privacy/feed đang lệch cover.",
+      "key": "390-en-worksVeris",
+      "locale": "en",
+      "width": 390,
+      "height": 1200,
+      "file": "storyboard.html",
+      "fragment": "390-en-worksVeris",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/worksVeris.png"
+    },
+    {
+      "id": "worksVie",
+      "title": "Works · preview VIE",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Preview chất lượng tương đương EDURA, chưa có hành động mở.",
+      "key": "390-en-worksVie",
+      "locale": "en",
+      "width": 390,
+      "height": 1200,
+      "file": "storyboard.html",
+      "fragment": "390-en-worksVie",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/worksVie.png"
+    },
+    {
+      "id": "finale0",
+      "title": "Finale · 1 / rút nội dung",
+      "chapter": "finale",
+      "progress": 0,
+      "note": "Khóa pha idle một lần; tên/preview rút. Tâm hợp nhất đã chốt.",
+      "key": "390-en-finale0",
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-en-finale0",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/finale0.png"
+    },
+    {
+      "id": "finale25",
+      "title": "Finale · 2 / co quỹ đạo",
+      "chapter": "finale",
+      "progress": 0.25,
+      "note": "Co/rate tăng theo progress; các vệt cong chỉ là minh họa pose.",
+      "key": "390-en-finale25",
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-en-finale25",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/finale25.png"
+    },
+    {
+      "id": "finale50",
+      "title": "Finale · 3 / nén và va chạm",
+      "chapter": "finale",
+      "progress": 0.5,
+      "note": "Nhịp nén p0,46–0,56 =10% quãng finale. Lóe cục bộ tại tâm chung.",
+      "key": "390-en-finale50",
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-en-finale50",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/finale50.png"
+    },
+    {
+      "id": "finale75",
+      "title": "Finale · 4 / tinh vân bung",
+      "chapter": "finale",
+      "progress": 0.75,
+      "note": "Trắng–xám nhiều lớp có khe tối. Không frame trắng phẳng; đảo chiều cùng seed.",
+      "key": "390-en-finale75",
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-en-finale75",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/finale75.png"
+    },
+    {
+      "id": "finale100",
+      "title": "Finale · 5 / khí trở thành hố đen",
+      "chapter": "finale",
+      "progress": 1,
+      "note": "Khí thu về đúng tâm va chạm. Đây cũng là pose Contact; không nối camera khác.",
+      "key": "390-en-finale100",
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-en-finale100",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/finale100.png"
+    },
+    {
+      "id": "contact",
+      "title": "Contact · khoảng nghỉ thao tác",
+      "chapter": "contact",
+      "progress": 1,
+      "note": "Hố đen lệch; email nằm trên vùng tối, copy/mail riêng, không terminal.",
+      "key": "390-en-contact",
+      "locale": "en",
+      "width": 390,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "390-en-contact",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          2,
+          3,
+          -389
+        ],
+        "target": [
+          -12,
+          0,
+          -420
+        ],
+        "reading": "Desktop trái, mobile dưới BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/contact.png"
+    },
+    {
+      "id": "edura",
+      "title": "EDURA · reader editorial",
+      "chapter": "edura",
+      "progress": null,
+      "note": "Concept/prototype và LeadUI có nguồn. Canvas nghỉ; không flow/outcome/lesson bịa.",
+      "key": "390-en-edura",
+      "locale": "en",
+      "width": 390,
+      "height": 2153.75,
+      "file": "storyboard.html",
+      "fragment": "390-en-edura",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": "Canvas paused",
+        "target": "N/A",
+        "reading": "Cột editorial + ảnh màu thật"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/edura.png"
+    },
+    {
+      "id": "reduced",
+      "title": "Reduced-motion · các pose đọc tĩnh",
+      "chapter": "reduced",
+      "progress": null,
+      "note": "Bỏ portal/glitch/orbit/meteor/explosion/lens; Nav đi thẳng pose nội dung, giữ chọn và hành động.",
+      "key": "390-en-reduced",
+      "locale": "en",
+      "width": 390,
+      "height": 980,
+      "file": "storyboard.html",
+      "fragment": "390-en-reduced",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": "Các pose endpoint tĩnh",
+        "target": "Không dolly/orbit",
+        "reading": "Nội dung và lựa chọn luôn sẵn"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/390/en/reduced.png"
+    },
+    {
+      "id": "hero",
+      "title": "Hero · idle",
+      "chapter": "hero",
+      "progress": 0,
+      "note": "Chữ là điểm đọc đầu. Không galaxy lớn; O cuối là neo cổng.",
+      "key": "320-vi-hero",
+      "locale": "vi",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-vi-hero",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          0,
+          8
+        ],
+        "target": "DOM O[8]",
+        "reading": "Tên/role bên trái"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/hero.png"
+    },
+    {
+      "id": "glitch",
+      "title": "Hero · số 6 lóe thành 7",
+      "chapter": "hero",
+      "progress": 0,
+      "note": "Chỉ glyph cuối đổi trong 80–120ms / mỗi1,5s; năm semantic vẫn2026. Đây là frame mô tả.",
+      "key": "320-vi-glitch",
+      "locale": "vi",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-vi-glitch",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          0,
+          8
+        ],
+        "target": "DOM O[8]",
+        "reading": "Tên/role bên trái"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/glitch.png"
+    },
+    {
+      "id": "portal25",
+      "title": "Portal · tiến về O",
+      "chapter": "portal",
+      "progress": 0.25,
+      "note": "Bụi/nét chữ gần O kéo cong; camera tiến về neo DOM.",
+      "key": "320-vi-portal25",
+      "locale": "vi",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-vi-portal25",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "R2: DOM-anchor dolly → exterior observer → retreat",
+        "target": "Cùng tâm O → BH; p0.5 chuyển scale trong tối",
+        "reading": "Không đặt copy dài trong portal"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.28
+        ],
+        "portal": [
+          0.9,
+          0.28
+        ],
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/portal25.png"
+    },
+    {
+      "id": "portal50",
+      "title": "Portal · khoảng tối",
+      "chapter": "portal",
+      "progress": 0.5,
+      "note": "O mở rộng nuốt khung. Khoảng tối ngắn nối hai thang; không giữ observer trong chân trời.",
+      "key": "320-vi-portal50",
+      "locale": "vi",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-vi-portal50",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "R2: DOM-anchor dolly → exterior observer → retreat",
+        "target": "Cùng tâm O → BH; p0.5 chuyển scale trong tối",
+        "reading": "Không đặt copy dài trong portal"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.28
+        ],
+        "portal": [
+          0.9,
+          0.28
+        ],
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/portal50.png"
+    },
+    {
+      "id": "portal75",
+      "title": "Portal · bật ra",
+      "chapter": "portal",
+      "progress": 0.75,
+      "note": "Camera lùi ra nhưng nhìn về hố đen. Đĩa và lõi cùng silhouette.",
+      "key": "320-vi-portal75",
+      "locale": "vi",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-vi-portal75",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "R2: DOM-anchor dolly → exterior observer → retreat",
+        "target": "Cùng tâm O → BH; p0.5 chuyển scale trong tối",
+        "reading": "Không đặt copy dài trong portal"
+      },
+      "anchor": {
+        "bh": [
+          0.78,
+          0.36999999999999994
+        ],
+        "portal": [
+          0.78,
+          0.37
+        ],
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/portal75.png"
+    },
+    {
+      "id": "about",
+      "title": "About · điểm nghỉ đọc",
+      "chapter": "about",
+      "progress": 1,
+      "note": "Chân dung đứng tự do, hai đoạn bio giữ chữ thật; tên/câu mở đầu giải mã một lần.",
+      "key": "320-vi-about",
+      "locale": "vi",
+      "width": 320,
+      "height": 1510,
+      "file": "storyboard.html",
+      "fragment": "320-vi-about",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          3,
+          -169
+        ],
+        "target": [
+          -12,
+          0,
+          -200
+        ],
+        "reading": "Trái/giữa; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.8800000000000001,
+          0.18364928909952608
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/about.png"
+    },
+    {
+      "id": "aboutColor",
+      "title": "About · trả màu chân dung",
+      "chapter": "about",
+      "progress": 1,
+      "note": "Hover/focus/tap đổi màu; ghế có sẵn trong ảnh được giữ. Không panel/planet/tools.",
+      "key": "320-vi-aboutColor",
+      "locale": "vi",
+      "width": 320,
+      "height": 1510,
+      "file": "storyboard.html",
+      "fragment": "320-vi-aboutColor",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          3,
+          -169
+        ],
+        "target": [
+          -12,
+          0,
+          -200
+        ],
+        "reading": "Trái/giữa; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.8800000000000001,
+          0.18364928909952608
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/aboutColor.png"
+    },
+    {
+      "id": "skills",
+      "title": "Skills · Figma active",
+      "chapter": "skills",
+      "progress": null,
+      "note": "Ba vùng: tools → logo → năng lực. Một lựa chọn, tối đa3 nhánh.",
+      "key": "320-vi-skills",
+      "locale": "vi",
+      "width": 320,
+      "height": 1060,
+      "file": "storyboard.html",
+      "fragment": "320-vi-skills",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          -2,
+          5,
+          -164
+        ],
+        "target": [
+          -13,
+          0,
+          -200
+        ],
+        "reading": "Ba vùng tối, BH phải trên dịu"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.2014218009478673
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/skills.png"
+    },
+    {
+      "id": "skillsAI",
+      "title": "Skills · nhóm AI active",
+      "chapter": "skills",
+      "progress": null,
+      "note": "Một AI Tools với ChatGPT/Claude/Antigravity; glyph giữ hướng đọc.",
+      "key": "320-vi-skillsAI",
+      "locale": "vi",
+      "width": 320,
+      "height": 1060,
+      "file": "storyboard.html",
+      "fragment": "320-vi-skillsAI",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          -2,
+          5,
+          -164
+        ],
+        "target": [
+          -13,
+          0,
+          -200
+        ],
+        "reading": "Ba vùng tối, BH phải trên dịu"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.2014218009478673
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/skillsAI.png"
+    },
+    {
+      "id": "educationCir",
+      "title": "Education · SGU / Circinus",
+      "chapter": "education",
+      "progress": null,
+      "note": "Bản đồ ba nhánh bất đối xứng; một vùng sáng. Thời gian học chồng nhau.",
+      "key": "320-vi-educationCir",
+      "locale": "vi",
+      "width": 320,
+      "height": 1477,
+      "file": "storyboard.html",
+      "fragment": "320-vi-educationCir",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          5,
+          -156
+        ],
+        "target": [
+          -10,
+          0,
+          -200
+        ],
+        "reading": "Ba nhánh riêng; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.9099999999999999,
+          0.15995260663507108
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/educationCir.png"
+    },
+    {
+      "id": "educationTel",
+      "title": "Education · Green / Telescopium",
+      "chapter": "education",
+      "progress": null,
+      "note": "Giữ mẫu Modern2sao/1cạnh; sao trường mờ không phải node thêm.",
+      "key": "320-vi-educationTel",
+      "locale": "vi",
+      "width": 320,
+      "height": 1477,
+      "file": "storyboard.html",
+      "fragment": "320-vi-educationTel",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          5,
+          -156
+        ],
+        "target": [
+          -10,
+          0,
+          -200
+        ],
+        "reading": "Ba nhánh riêng; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.9099999999999999,
+          0.15995260663507108
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/educationTel.png"
+    },
+    {
+      "id": "educationPic",
+      "title": "Education · Arena / Pictor",
+      "chapter": "education",
+      "progress": null,
+      "note": "Không minh họa giá vẽ: giữ vị trí sao theo projection R0.2.",
+      "key": "320-vi-educationPic",
+      "locale": "vi",
+      "width": 320,
+      "height": 1477,
+      "file": "storyboard.html",
+      "fragment": "320-vi-educationPic",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          5,
+          -156
+        ],
+        "target": [
+          -10,
+          0,
+          -200
+        ],
+        "reading": "Ba nhánh riêng; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.9099999999999999,
+          0.15995260663507108
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/educationPic.png"
+    },
+    {
+      "id": "experience",
+      "title": "Experience · cuối đường bay",
+      "chapter": "experience",
+      "progress": 1,
+      "note": "Một meteor qua3mốc rồi bẻ vào chiều sâu. Hố đen rời trái, camera theo đầu sao.",
+      "key": "320-vi-experience",
+      "locale": "vi",
+      "width": 320,
+      "height": 1120,
+      "file": "storyboard.html",
+      "fragment": "320-vi-experience",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          12,
+          4,
+          -164
+        ],
+        "target": [
+          18,
+          0,
+          -200
+        ],
+        "reading": "Ba mốc; BH rời bên trái"
+      },
+      "anchor": {
+        "bh": [
+          -0.08,
+          0.623696682464455
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/experience.png"
+    },
+    {
+      "id": "works",
+      "title": "Works · ba hệ sao",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Quỹ đạo ambient chậm đều; nhãn/đích chọn không chạy theo sao. Khoảng xem tách khỏi finale.",
+      "key": "320-vi-works",
+      "locale": "vi",
+      "width": 320,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "320-vi-works",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/works.png"
+    },
+    {
+      "id": "worksEdura",
+      "title": "Works · preview EDURA",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Chọn dừng quỹ đạo; preview cố định. Nút riêng mở /projects/edura.",
+      "key": "320-vi-worksEdura",
+      "locale": "vi",
+      "width": 320,
+      "height": 1200,
+      "file": "storyboard.html",
+      "fragment": "320-vi-worksEdura",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/worksEdura.png"
+    },
+    {
+      "id": "worksVeris",
+      "title": "Works · preview VERIS",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Ảnh/tên/lĩnh vực thật. Chưa link; không dùng mô tả privacy/feed đang lệch cover.",
+      "key": "320-vi-worksVeris",
+      "locale": "vi",
+      "width": 320,
+      "height": 1200,
+      "file": "storyboard.html",
+      "fragment": "320-vi-worksVeris",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/worksVeris.png"
+    },
+    {
+      "id": "worksVie",
+      "title": "Works · preview VIE",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Preview chất lượng tương đương EDURA, chưa có hành động mở.",
+      "key": "320-vi-worksVie",
+      "locale": "vi",
+      "width": 320,
+      "height": 1200,
+      "file": "storyboard.html",
+      "fragment": "320-vi-worksVie",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/worksVie.png"
+    },
+    {
+      "id": "finale0",
+      "title": "Finale · 1 / rút nội dung",
+      "chapter": "finale",
+      "progress": 0,
+      "note": "Khóa pha idle một lần; tên/preview rút. Tâm hợp nhất đã chốt.",
+      "key": "320-vi-finale0",
+      "locale": "vi",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-vi-finale0",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/finale0.png"
+    },
+    {
+      "id": "finale25",
+      "title": "Finale · 2 / co quỹ đạo",
+      "chapter": "finale",
+      "progress": 0.25,
+      "note": "Co/rate tăng theo progress; các vệt cong chỉ là minh họa pose.",
+      "key": "320-vi-finale25",
+      "locale": "vi",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-vi-finale25",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/finale25.png"
+    },
+    {
+      "id": "finale50",
+      "title": "Finale · 3 / nén và va chạm",
+      "chapter": "finale",
+      "progress": 0.5,
+      "note": "Nhịp nén p0,46–0,56 =10% quãng finale. Lóe cục bộ tại tâm chung.",
+      "key": "320-vi-finale50",
+      "locale": "vi",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-vi-finale50",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/finale50.png"
+    },
+    {
+      "id": "finale75",
+      "title": "Finale · 4 / tinh vân bung",
+      "chapter": "finale",
+      "progress": 0.75,
+      "note": "Trắng–xám nhiều lớp có khe tối. Không frame trắng phẳng; đảo chiều cùng seed.",
+      "key": "320-vi-finale75",
+      "locale": "vi",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-vi-finale75",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/finale75.png"
+    },
+    {
+      "id": "finale100",
+      "title": "Finale · 5 / khí trở thành hố đen",
+      "chapter": "finale",
+      "progress": 1,
+      "note": "Khí thu về đúng tâm va chạm. Đây cũng là pose Contact; không nối camera khác.",
+      "key": "320-vi-finale100",
+      "locale": "vi",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-vi-finale100",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/finale100.png"
+    },
+    {
+      "id": "contact",
+      "title": "Contact · khoảng nghỉ thao tác",
+      "chapter": "contact",
+      "progress": 1,
+      "note": "Hố đen lệch; email nằm trên vùng tối, copy/mail riêng, không terminal.",
+      "key": "320-vi-contact",
+      "locale": "vi",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-vi-contact",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          2,
+          3,
+          -389
+        ],
+        "target": [
+          -12,
+          0,
+          -420
+        ],
+        "reading": "Desktop trái, mobile dưới BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/contact.png"
+    },
+    {
+      "id": "edura",
+      "title": "EDURA · reader editorial",
+      "chapter": "edura",
+      "progress": null,
+      "note": "Concept/prototype và LeadUI có nguồn. Canvas nghỉ; không flow/outcome/lesson bịa.",
+      "key": "320-vi-edura",
+      "locale": "vi",
+      "width": 320,
+      "height": 2105.3999999999996,
+      "file": "storyboard.html",
+      "fragment": "320-vi-edura",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": "Canvas paused",
+        "target": "N/A",
+        "reading": "Cột editorial + ảnh màu thật"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/edura.png"
+    },
+    {
+      "id": "reduced",
+      "title": "Reduced-motion · các pose đọc tĩnh",
+      "chapter": "reduced",
+      "progress": null,
+      "note": "Bỏ portal/glitch/orbit/meteor/explosion/lens; Nav đi thẳng pose nội dung, giữ chọn và hành động.",
+      "key": "320-vi-reduced",
+      "locale": "vi",
+      "width": 320,
+      "height": 980,
+      "file": "storyboard.html",
+      "fragment": "320-vi-reduced",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": "Các pose endpoint tĩnh",
+        "target": "Không dolly/orbit",
+        "reading": "Nội dung và lựa chọn luôn sẵn"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/vi/reduced.png"
+    },
+    {
+      "id": "hero",
+      "title": "Hero · idle",
+      "chapter": "hero",
+      "progress": 0,
+      "note": "Chữ là điểm đọc đầu. Không galaxy lớn; O cuối là neo cổng.",
+      "key": "320-en-hero",
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-en-hero",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          0,
+          8
+        ],
+        "target": "DOM O[8]",
+        "reading": "Tên/role bên trái"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/hero.png"
+    },
+    {
+      "id": "glitch",
+      "title": "Hero · số 6 lóe thành 7",
+      "chapter": "hero",
+      "progress": 0,
+      "note": "Chỉ glyph cuối đổi trong 80–120ms / mỗi1,5s; năm semantic vẫn2026. Đây là frame mô tả.",
+      "key": "320-en-glitch",
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-en-glitch",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          0,
+          0,
+          8
+        ],
+        "target": "DOM O[8]",
+        "reading": "Tên/role bên trái"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/glitch.png"
+    },
+    {
+      "id": "portal25",
+      "title": "Portal · tiến về O",
+      "chapter": "portal",
+      "progress": 0.25,
+      "note": "Bụi/nét chữ gần O kéo cong; camera tiến về neo DOM.",
+      "key": "320-en-portal25",
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-en-portal25",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "R2: DOM-anchor dolly → exterior observer → retreat",
+        "target": "Cùng tâm O → BH; p0.5 chuyển scale trong tối",
+        "reading": "Không đặt copy dài trong portal"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.28
+        ],
+        "portal": [
+          0.9,
+          0.28
+        ],
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/portal25.png"
+    },
+    {
+      "id": "portal50",
+      "title": "Portal · khoảng tối",
+      "chapter": "portal",
+      "progress": 0.5,
+      "note": "O mở rộng nuốt khung. Khoảng tối ngắn nối hai thang; không giữ observer trong chân trời.",
+      "key": "320-en-portal50",
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-en-portal50",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "R2: DOM-anchor dolly → exterior observer → retreat",
+        "target": "Cùng tâm O → BH; p0.5 chuyển scale trong tối",
+        "reading": "Không đặt copy dài trong portal"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.28
+        ],
+        "portal": [
+          0.9,
+          0.28
+        ],
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/portal50.png"
+    },
+    {
+      "id": "portal75",
+      "title": "Portal · bật ra",
+      "chapter": "portal",
+      "progress": 0.75,
+      "note": "Camera lùi ra nhưng nhìn về hố đen. Đĩa và lõi cùng silhouette.",
+      "key": "320-en-portal75",
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-en-portal75",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "R2: DOM-anchor dolly → exterior observer → retreat",
+        "target": "Cùng tâm O → BH; p0.5 chuyển scale trong tối",
+        "reading": "Không đặt copy dài trong portal"
+      },
+      "anchor": {
+        "bh": [
+          0.78,
+          0.36999999999999994
+        ],
+        "portal": [
+          0.78,
+          0.37
+        ],
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/portal75.png"
+    },
+    {
+      "id": "about",
+      "title": "About · điểm nghỉ đọc",
+      "chapter": "about",
+      "progress": 1,
+      "note": "Chân dung đứng tự do, hai đoạn bio giữ chữ thật; tên/câu mở đầu giải mã một lần.",
+      "key": "320-en-about",
+      "locale": "en",
+      "width": 320,
+      "height": 1510,
+      "file": "storyboard.html",
+      "fragment": "320-en-about",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          3,
+          -169
+        ],
+        "target": [
+          -12,
+          0,
+          -200
+        ],
+        "reading": "Trái/giữa; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.8800000000000001,
+          0.18364928909952608
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/about.png"
+    },
+    {
+      "id": "aboutColor",
+      "title": "About · trả màu chân dung",
+      "chapter": "about",
+      "progress": 1,
+      "note": "Hover/focus/tap đổi màu; ghế có sẵn trong ảnh được giữ. Không panel/planet/tools.",
+      "key": "320-en-aboutColor",
+      "locale": "en",
+      "width": 320,
+      "height": 1510,
+      "file": "storyboard.html",
+      "fragment": "320-en-aboutColor",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          3,
+          -169
+        ],
+        "target": [
+          -12,
+          0,
+          -200
+        ],
+        "reading": "Trái/giữa; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.8800000000000001,
+          0.18364928909952608
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/aboutColor.png"
+    },
+    {
+      "id": "skills",
+      "title": "Skills · Figma active",
+      "chapter": "skills",
+      "progress": null,
+      "note": "Ba vùng: tools → logo → năng lực. Một lựa chọn, tối đa3 nhánh.",
+      "key": "320-en-skills",
+      "locale": "en",
+      "width": 320,
+      "height": 1060,
+      "file": "storyboard.html",
+      "fragment": "320-en-skills",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          -2,
+          5,
+          -164
+        ],
+        "target": [
+          -13,
+          0,
+          -200
+        ],
+        "reading": "Ba vùng tối, BH phải trên dịu"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.2014218009478673
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/skills.png"
+    },
+    {
+      "id": "skillsAI",
+      "title": "Skills · nhóm AI active",
+      "chapter": "skills",
+      "progress": null,
+      "note": "Một AI Tools với ChatGPT/Claude/Antigravity; glyph giữ hướng đọc.",
+      "key": "320-en-skillsAI",
+      "locale": "en",
+      "width": 320,
+      "height": 1060,
+      "file": "storyboard.html",
+      "fragment": "320-en-skillsAI",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          -2,
+          5,
+          -164
+        ],
+        "target": [
+          -13,
+          0,
+          -200
+        ],
+        "reading": "Ba vùng tối, BH phải trên dịu"
+      },
+      "anchor": {
+        "bh": [
+          0.9,
+          0.2014218009478673
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/skillsAI.png"
+    },
+    {
+      "id": "educationCir",
+      "title": "Education · SGU / Circinus",
+      "chapter": "education",
+      "progress": null,
+      "note": "Bản đồ ba nhánh bất đối xứng; một vùng sáng. Thời gian học chồng nhau.",
+      "key": "320-en-educationCir",
+      "locale": "en",
+      "width": 320,
+      "height": 1477,
+      "file": "storyboard.html",
+      "fragment": "320-en-educationCir",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          5,
+          -156
+        ],
+        "target": [
+          -10,
+          0,
+          -200
+        ],
+        "reading": "Ba nhánh riêng; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.9099999999999999,
+          0.15995260663507108
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/educationCir.png"
+    },
+    {
+      "id": "educationTel",
+      "title": "Education · Green / Telescopium",
+      "chapter": "education",
+      "progress": null,
+      "note": "Giữ mẫu Modern2sao/1cạnh; sao trường mờ không phải node thêm.",
+      "key": "320-en-educationTel",
+      "locale": "en",
+      "width": 320,
+      "height": 1477,
+      "file": "storyboard.html",
+      "fragment": "320-en-educationTel",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          5,
+          -156
+        ],
+        "target": [
+          -10,
+          0,
+          -200
+        ],
+        "reading": "Ba nhánh riêng; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.9099999999999999,
+          0.15995260663507108
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/educationTel.png"
+    },
+    {
+      "id": "educationPic",
+      "title": "Education · Arena / Pictor",
+      "chapter": "education",
+      "progress": null,
+      "note": "Không minh họa giá vẽ: giữ vị trí sao theo projection R0.2.",
+      "key": "320-en-educationPic",
+      "locale": "en",
+      "width": 320,
+      "height": 1477,
+      "file": "storyboard.html",
+      "fragment": "320-en-educationPic",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          2,
+          5,
+          -156
+        ],
+        "target": [
+          -10,
+          0,
+          -200
+        ],
+        "reading": "Ba nhánh riêng; BH góc phải trên"
+      },
+      "anchor": {
+        "bh": [
+          0.9099999999999999,
+          0.15995260663507108
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/educationPic.png"
+    },
+    {
+      "id": "experience",
+      "title": "Experience · cuối đường bay",
+      "chapter": "experience",
+      "progress": 1,
+      "note": "Một meteor qua3mốc rồi bẻ vào chiều sâu. Hố đen rời trái, camera theo đầu sao.",
+      "key": "320-en-experience",
+      "locale": "en",
+      "width": 320,
+      "height": 1120,
+      "file": "storyboard.html",
+      "fragment": "320-en-experience",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          12,
+          4,
+          -164
+        ],
+        "target": [
+          18,
+          0,
+          -200
+        ],
+        "reading": "Ba mốc; BH rời bên trái"
+      },
+      "anchor": {
+        "bh": [
+          -0.08,
+          0.623696682464455
+        ],
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/experience.png"
+    },
+    {
+      "id": "works",
+      "title": "Works · ba hệ sao",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Quỹ đạo ambient chậm đều; nhãn/đích chọn không chạy theo sao. Khoảng xem tách khỏi finale.",
+      "key": "320-en-works",
+      "locale": "en",
+      "width": 320,
+      "height": 900,
+      "file": "storyboard.html",
+      "fragment": "320-en-works",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/works.png"
+    },
+    {
+      "id": "worksEdura",
+      "title": "Works · preview EDURA",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Chọn dừng quỹ đạo; preview cố định. Nút riêng mở /projects/edura.",
+      "key": "320-en-worksEdura",
+      "locale": "en",
+      "width": 320,
+      "height": 1200,
+      "file": "storyboard.html",
+      "fragment": "320-en-worksEdura",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/worksEdura.png"
+    },
+    {
+      "id": "worksVeris",
+      "title": "Works · preview VERIS",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Ảnh/tên/lĩnh vực thật. Chưa link; không dùng mô tả privacy/feed đang lệch cover.",
+      "key": "320-en-worksVeris",
+      "locale": "en",
+      "width": 320,
+      "height": 1200,
+      "file": "storyboard.html",
+      "fragment": "320-en-worksVeris",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/worksVeris.png"
+    },
+    {
+      "id": "worksVie",
+      "title": "Works · preview VIE",
+      "chapter": "works",
+      "progress": 0,
+      "note": "Preview chất lượng tương đương EDURA, chưa có hành động mở.",
+      "key": "320-en-worksVie",
+      "locale": "en",
+      "width": 320,
+      "height": 1200,
+      "file": "storyboard.html",
+      "fragment": "320-en-worksVie",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": [
+          0,
+          4,
+          -340
+        ],
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Preview cố định dưới ba hệ"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/worksVie.png"
+    },
+    {
+      "id": "finale0",
+      "title": "Finale · 1 / rút nội dung",
+      "chapter": "finale",
+      "progress": 0,
+      "note": "Khóa pha idle một lần; tên/preview rút. Tâm hợp nhất đã chốt.",
+      "key": "320-en-finale0",
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-en-finale0",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/finale0.png"
+    },
+    {
+      "id": "finale25",
+      "title": "Finale · 2 / co quỹ đạo",
+      "chapter": "finale",
+      "progress": 0.25,
+      "note": "Co/rate tăng theo progress; các vệt cong chỉ là minh họa pose.",
+      "key": "320-en-finale25",
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-en-finale25",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/finale25.png"
+    },
+    {
+      "id": "finale50",
+      "title": "Finale · 3 / nén và va chạm",
+      "chapter": "finale",
+      "progress": 0.5,
+      "note": "Nhịp nén p0,46–0,56 =10% quãng finale. Lóe cục bộ tại tâm chung.",
+      "key": "320-en-finale50",
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-en-finale50",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/finale50.png"
+    },
+    {
+      "id": "finale75",
+      "title": "Finale · 4 / tinh vân bung",
+      "chapter": "finale",
+      "progress": 0.75,
+      "note": "Trắng–xám nhiều lớp có khe tối. Không frame trắng phẳng; đảo chiều cùng seed.",
+      "key": "320-en-finale75",
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-en-finale75",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/finale75.png"
+    },
+    {
+      "id": "finale100",
+      "title": "Finale · 5 / khí trở thành hố đen",
+      "chapter": "finale",
+      "progress": 1,
+      "note": "Khí thu về đúng tâm va chạm. Đây cũng là pose Contact; không nối camera khác.",
+      "key": "320-en-finale100",
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-en-finale100",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": "Khóa pha Works, camera/target cùng progress",
+        "target": [
+          0,
+          0,
+          -420
+        ],
+        "reading": "Copy rút; tâm collision = tâm BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/finale100.png"
+    },
+    {
+      "id": "contact",
+      "title": "Contact · khoảng nghỉ thao tác",
+      "chapter": "contact",
+      "progress": 1,
+      "note": "Hố đen lệch; email nằm trên vùng tối, copy/mail riêng, không terminal.",
+      "key": "320-en-contact",
+      "locale": "en",
+      "width": 320,
+      "height": 844,
+      "file": "storyboard.html",
+      "fragment": "320-en-contact",
+      "viewportHeight": 844,
+      "fullSection": false,
+      "pose": {
+        "camera": [
+          2,
+          3,
+          -389
+        ],
+        "target": [
+          -12,
+          0,
+          -420
+        ],
+        "reading": "Desktop trái, mobile dưới BH"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": [
+          0.5,
+          0.278436018957346
+        ]
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/contact.png"
+    },
+    {
+      "id": "edura",
+      "title": "EDURA · reader editorial",
+      "chapter": "edura",
+      "progress": null,
+      "note": "Concept/prototype và LeadUI có nguồn. Canvas nghỉ; không flow/outcome/lesson bịa.",
+      "key": "320-en-edura",
+      "locale": "en",
+      "width": 320,
+      "height": 2105.3999999999996,
+      "file": "storyboard.html",
+      "fragment": "320-en-edura",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": "Canvas paused",
+        "target": "N/A",
+        "reading": "Cột editorial + ảnh màu thật"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/edura.png"
+    },
+    {
+      "id": "reduced",
+      "title": "Reduced-motion · các pose đọc tĩnh",
+      "chapter": "reduced",
+      "progress": null,
+      "note": "Bỏ portal/glitch/orbit/meteor/explosion/lens; Nav đi thẳng pose nội dung, giữ chọn và hành động.",
+      "key": "320-en-reduced",
+      "locale": "en",
+      "width": 320,
+      "height": 980,
+      "file": "storyboard.html",
+      "fragment": "320-en-reduced",
+      "viewportHeight": 844,
+      "fullSection": true,
+      "pose": {
+        "camera": "Các pose endpoint tĩnh",
+        "target": "Không dolly/orbit",
+        "reading": "Nội dung và lựa chọn luôn sẵn"
+      },
+      "anchor": {
+        "bh": null,
+        "portal": null,
+        "collision": null
+      },
+      "illustrationOnly": true,
+      "screenshot": "frames/320/en/reduced.png"
+    }
+  ]
+}

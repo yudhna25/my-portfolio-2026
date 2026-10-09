@@ -1,0 +1,28 @@
+{
+  "enableBloom": true,
+  "liveComposers": 1,
+  "peak": 1,
+  "created": 3,
+  "disposed": 2,
+  "composerId": 3,
+  "selected": [
+    "event-horizon",
+    "photon-ring",
+    "accretion-disk",
+    "tilted-ring"
+  ],
+  "points": 10000,
+  "camera": [
+    -0.021534790917348456,
+    -0.07426471913978541,
+    -99.99999999999994
+  ],
+  "scrollProgress": 1,
+  "fps": 165,
+  "viewport": [
+    1091,
+    930
+  ],
+  "textures": 22,
+  "geometries": 8
+}

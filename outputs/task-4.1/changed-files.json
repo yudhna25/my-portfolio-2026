@@ -1,0 +1,13 @@
+[
+  "src/index.css",
+  "src/App.jsx",
+  "index.html",
+  "src/styles/menu.css",
+  "src/components/layout/Nav.jsx",
+  "src/components/layout/MenuOverlay.jsx",
+  "src/components/Hero.jsx",
+  "src/components/ui/ThemeToggle.jsx",
+  "src/components/Work.jsx",
+  "src/components/Marquee.jsx",
+  "src/components/Footer.jsx"
+]

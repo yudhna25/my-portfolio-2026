@@ -1,0 +1,62 @@
+[
+  {
+    "level": "warn",
+    "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "timestamp": "2026-10-05T01:05:15.106Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "timestamp": "2026-10-05T01:06:17.860Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "scale not eligible for reset. Try splitting into individual properties",
+    "timestamp": "2026-10-05T01:06:31.853Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "scale not eligible for reset. Try splitting into individual properties",
+    "timestamp": "2026-10-05T01:06:37.281Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "timestamp": "2026-10-05T01:08:20.400Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "scale not eligible for reset. Try splitting into individual properties",
+    "timestamp": "2026-10-05T01:08:31.401Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "scale not eligible for reset. Try splitting into individual properties",
+    "timestamp": "2026-10-05T01:08:31.969Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "scale not eligible for reset. Try splitting into individual properties",
+    "timestamp": "2026-10-05T01:09:09.000Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "scale not eligible for reset. Try splitting into individual properties",
+    "timestamp": "2026-10-05T01:10:47.346Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  },
+  {
+    "level": "warn",
+    "message": "scale not eligible for reset. Try splitting into individual properties",
+    "timestamp": "2026-10-05T01:14:29.157Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=7b016c04"
+  }
+]

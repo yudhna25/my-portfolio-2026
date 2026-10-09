@@ -1,0 +1,362 @@
+[
+  {
+    "label": "before-menu",
+    "locale": "vi",
+    "scroll": 7741,
+    "focus": "<button id=\"work-target-vie\" type=\"button\" data-work-target=\"vie\" aria-pressed=\"true\" aria-controls=\"work-preview\" aria-describedby=\"works-hint\" class=\"min-h-11 min-w-11 cursor-pointer border-b px-1 p",
+    "dialog": false,
+    "body": "dark",
+    "content": {
+      "x": 0,
+      "y": -7741,
+      "width": 1440,
+      "height": 10962.328125,
+      "top": -7741,
+      "right": 1440,
+      "bottom": 3221.328125,
+      "left": 0
+    },
+    "chapter": {
+      "x": 0,
+      "y": -0.09375,
+      "width": 1440,
+      "height": 1440,
+      "top": -0.09375,
+      "right": 1440,
+      "bottom": 1439.90625,
+      "left": 0
+    },
+    "stage": {
+      "x": 0,
+      "y": 0.00018709897994995117,
+      "width": 1440,
+      "height": 900,
+      "top": 0.00018709897994995117,
+      "right": 1440,
+      "bottom": 900.00018709898,
+      "left": 0
+    },
+    "stageTransform": "translate(0px, 0.0939371px)",
+    "preview": "vie"
+  },
+  {
+    "label": "language-close-0",
+    "locale": "en",
+    "scroll": 7746,
+    "focus": "<button type=\"button\" aria-label=\"Open navigation menu\" aria-expanded=\"false\" aria-controls=\"stellar-menu\" aria-haspopup=\"dialog\" class=\"border border-white/20 inline-flex min-h-11 min-w-11 items-cent",
+    "dialog": false,
+    "body": "dark",
+    "content": {
+      "x": 0,
+      "y": -7741.310546875,
+      "width": 1440,
+      "height": 10967.359375,
+      "top": -7741.310546875,
+      "right": 1440,
+      "bottom": 3226.048828125,
+      "left": 0
+    },
+    "chapter": {
+      "x": 0,
+      "y": 4.627118110656738,
+      "width": 1440,
+      "height": 1440,
+      "top": 4.627118110656738,
+      "right": 1440,
+      "bottom": 1444.6271181106567,
+      "left": 0
+    },
+    "stage": {
+      "x": 0,
+      "y": 4.627118110656738,
+      "width": 1440,
+      "height": 900,
+      "top": 4.627118110656738,
+      "right": 1440,
+      "bottom": 904.6271181106567,
+      "left": 0
+    },
+    "stageTransform": "translate(0px, 0px)",
+    "preview": "vie"
+  },
+  {
+    "label": "language-close-after-400",
+    "locale": "en",
+    "scroll": 7746,
+    "focus": "<button type=\"button\" aria-label=\"Open navigation menu\" aria-expanded=\"false\" aria-controls=\"stellar-menu\" aria-haspopup=\"dialog\" class=\"border border-white/20 inline-flex min-h-11 min-w-11 items-cent",
+    "dialog": false,
+    "body": "dark",
+    "content": {
+      "x": 0,
+      "y": -7745.0869140625,
+      "width": 1440,
+      "height": 10967.359375,
+      "top": -7745.0869140625,
+      "right": 1440,
+      "bottom": 3222.2724609375,
+      "left": 0
+    },
+    "chapter": {
+      "x": 0,
+      "y": 0.8507819771766663,
+      "width": 1440,
+      "height": 1440,
+      "top": 0.8507819771766663,
+      "right": 1440,
+      "bottom": 1440.8507819771767,
+      "left": 0
+    },
+    "stage": {
+      "x": 0,
+      "y": 0.8507819771766663,
+      "width": 1440,
+      "height": 900,
+      "top": 0.8507819771766663,
+      "right": 1440,
+      "bottom": 900.8507819771767,
+      "left": 0
+    },
+    "stageTransform": "translate(0px, 0px)",
+    "preview": "vie"
+  },
+  {
+    "label": "language-close-after-800",
+    "locale": "en",
+    "scroll": 7746,
+    "focus": "<button type=\"button\" aria-label=\"Open navigation menu\" aria-expanded=\"false\" aria-controls=\"stellar-menu\" aria-haspopup=\"dialog\" class=\"border border-white/20 inline-flex min-h-11 min-w-11 items-cent",
+    "dialog": false,
+    "body": "dark",
+    "content": {
+      "x": 0,
+      "y": -7746.0029296875,
+      "width": 1440,
+      "height": 10967.359375,
+      "top": -7746.0029296875,
+      "right": 1440,
+      "bottom": 3221.3564453125,
+      "left": 0
+    },
+    "chapter": {
+      "x": 0,
+      "y": -0.06531500071287155,
+      "width": 1440,
+      "height": 1440,
+      "top": -0.06531500071287155,
+      "right": 1440,
+      "bottom": 1439.9346849992871,
+      "left": 0
+    },
+    "stage": {
+      "x": 0,
+      "y": 0.00011468750017229468,
+      "width": 1440,
+      "height": 900,
+      "top": 0.00011468750017229468,
+      "right": 1440,
+      "bottom": 900.0001146875002,
+      "left": 0
+    },
+    "stageTransform": "translate(0px, 0.0653235px)",
+    "preview": "vie"
+  },
+  {
+    "label": "language-close-after-1200",
+    "locale": "en",
+    "scroll": 7746,
+    "focus": "<button type=\"button\" aria-label=\"Open navigation menu\" aria-expanded=\"false\" aria-controls=\"stellar-menu\" aria-haspopup=\"dialog\" class=\"border border-white/20 inline-flex min-h-11 min-w-11 items-cent",
+    "dialog": false,
+    "body": "dark",
+    "content": {
+      "x": 0,
+      "y": -7746.0029296875,
+      "width": 1440,
+      "height": 10967.359375,
+      "top": -7746.0029296875,
+      "right": 1440,
+      "bottom": 3221.3564453125,
+      "left": 0
+    },
+    "chapter": {
+      "x": 0,
+      "y": -0.06531500071287155,
+      "width": 1440,
+      "height": 1440,
+      "top": -0.06531500071287155,
+      "right": 1440,
+      "bottom": 1439.9346849992871,
+      "left": 0
+    },
+    "stage": {
+      "x": 0,
+      "y": 0.00011468750017229468,
+      "width": 1440,
+      "height": 900,
+      "top": 0.00011468750017229468,
+      "right": 1440,
+      "bottom": 900.0001146875002,
+      "left": 0
+    },
+    "stageTransform": "translate(0px, 0.0653235px)",
+    "preview": "vie"
+  },
+  {
+    "label": "edura-click-0",
+    "locale": "en",
+    "scroll": 7746,
+    "focus": "<button id=\"work-target-edura\" type=\"button\" data-work-target=\"edura\" aria-pressed=\"true\" aria-controls=\"work-preview\" aria-describedby=\"works-hint\" class=\"min-h-11 min-w-11 cursor-pointer border-b px",
+    "dialog": false,
+    "body": "dark",
+    "content": {
+      "x": 0,
+      "y": -7746.0029296875,
+      "width": 1440,
+      "height": 10967.359375,
+      "top": -7746.0029296875,
+      "right": 1440,
+      "bottom": 3221.3564453125,
+      "left": 0
+    },
+    "chapter": {
+      "x": 0,
+      "y": -0.06531500071287155,
+      "width": 1440,
+      "height": 1440,
+      "top": -0.06531500071287155,
+      "right": 1440,
+      "bottom": 1439.9346849992871,
+      "left": 0
+    },
+    "stage": {
+      "x": 0,
+      "y": 0.00011468750017229468,
+      "width": 1440,
+      "height": 900,
+      "top": 0.00011468750017229468,
+      "right": 1440,
+      "bottom": 900.0001146875002,
+      "left": 0
+    },
+    "stageTransform": "translate(0px, 0.0653235px)",
+    "preview": "edura"
+  },
+  {
+    "label": "edura-after-350",
+    "locale": "en",
+    "scroll": 7746,
+    "focus": "<button id=\"work-target-edura\" type=\"button\" data-work-target=\"edura\" aria-pressed=\"true\" aria-controls=\"work-preview\" aria-describedby=\"works-hint\" class=\"min-h-11 min-w-11 cursor-pointer border-b px",
+    "dialog": false,
+    "body": "dark",
+    "content": {
+      "x": 0,
+      "y": -7746.0029296875,
+      "width": 1440,
+      "height": 10967.359375,
+      "top": -7746.0029296875,
+      "right": 1440,
+      "bottom": 3221.3564453125,
+      "left": 0
+    },
+    "chapter": {
+      "x": 0,
+      "y": -0.06531500071287155,
+      "width": 1440,
+      "height": 1440,
+      "top": -0.06531500071287155,
+      "right": 1440,
+      "bottom": 1439.9346849992871,
+      "left": 0
+    },
+    "stage": {
+      "x": 0,
+      "y": 0.00011468750017229468,
+      "width": 1440,
+      "height": 900,
+      "top": 0.00011468750017229468,
+      "right": 1440,
+      "bottom": 900.0001146875002,
+      "left": 0
+    },
+    "stageTransform": "translate(0px, 0.0653235px)",
+    "preview": "edura"
+  },
+  {
+    "label": "edura-after-800",
+    "locale": "en",
+    "scroll": 7746,
+    "focus": "<button id=\"work-target-edura\" type=\"button\" data-work-target=\"edura\" aria-pressed=\"true\" aria-controls=\"work-preview\" aria-describedby=\"works-hint\" class=\"min-h-11 min-w-11 cursor-pointer border-b px",
+    "dialog": false,
+    "body": "dark",
+    "content": {
+      "x": 0,
+      "y": -7746.0029296875,
+      "width": 1440,
+      "height": 10967.359375,
+      "top": -7746.0029296875,
+      "right": 1440,
+      "bottom": 3221.3564453125,
+      "left": 0
+    },
+    "chapter": {
+      "x": 0,
+      "y": -0.06531500071287155,
+      "width": 1440,
+      "height": 1440,
+      "top": -0.06531500071287155,
+      "right": 1440,
+      "bottom": 1439.9346849992871,
+      "left": 0
+    },
+    "stage": {
+      "x": 0,
+      "y": 0.00011468750017229468,
+      "width": 1440,
+      "height": 900,
+      "top": 0.00011468750017229468,
+      "right": 1440,
+      "bottom": 900.0001146875002,
+      "left": 0
+    },
+    "stageTransform": "translate(0px, 0.0653235px)",
+    "preview": "edura"
+  },
+  {
+    "label": "edura-after-1200",
+    "locale": "en",
+    "scroll": 7746,
+    "focus": "<button id=\"work-target-edura\" type=\"button\" data-work-target=\"edura\" aria-pressed=\"true\" aria-controls=\"work-preview\" aria-describedby=\"works-hint\" class=\"min-h-11 min-w-11 cursor-pointer border-b px",
+    "dialog": false,
+    "body": "dark",
+    "content": {
+      "x": 0,
+      "y": -7746.0029296875,
+      "width": 1440,
+      "height": 10967.359375,
+      "top": -7746.0029296875,
+      "right": 1440,
+      "bottom": 3221.3564453125,
+      "left": 0
+    },
+    "chapter": {
+      "x": 0,
+      "y": -0.06531500071287155,
+      "width": 1440,
+      "height": 1440,
+      "top": -0.06531500071287155,
+      "right": 1440,
+      "bottom": 1439.9346849992871,
+      "left": 0
+    },
+    "stage": {
+      "x": 0,
+      "y": 0.00011468750017229468,
+      "width": 1440,
+      "height": 900,
+      "top": 0.00011468750017229468,
+      "right": 1440,
+      "bottom": 900.0001146875002,
+      "left": 0
+    },
+    "stageTransform": "translate(0px, 0.0653235px)",
+    "preview": "edura"
+  }
+]

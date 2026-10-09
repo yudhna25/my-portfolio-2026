@@ -1,0 +1,12 @@
+{
+  "hero": true,
+  "project": {
+    "filter": "url(\"#cursor-gravity\")",
+    "clip": "circle(50%)",
+    "width": 80,
+    "height": 80,
+    "canvas": 1
+  },
+  "reduced": true,
+  "errors": []
+}

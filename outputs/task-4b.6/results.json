@@ -1,0 +1,1114 @@
+{
+  "browser": "154.0.4258.53",
+  "assertions": 122,
+  "projects": [
+    {
+      "id": "01",
+      "before": {
+        "locked": "false",
+        "ariaHidden": "true",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "root": {
+          "left": 49,
+          "right": 935,
+          "top": 6470.90625,
+          "bottom": 7024.65625,
+          "width": 886,
+          "height": 553.75
+        },
+        "image": {
+          "left": 49,
+          "right": 935,
+          "top": 6470.90625,
+          "bottom": 7024.65625,
+          "width": 886,
+          "height": 553.75
+        },
+        "label": "[TARGET LOCKED // SPEC: 2026]",
+        "labelOpacity": 0,
+        "corners": [
+          {
+            "transform": "matrix(1, 0, 0, 1, -10, -10)",
+            "opacity": "0.35"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 10, -10)",
+            "opacity": "0.35"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 10, 10)",
+            "opacity": "0.35"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, -10, 10)",
+            "opacity": "0.35"
+          }
+        ],
+        "focus": "matrix(1, 0, 0, 1, -32, 0)",
+        "flareOpacity": 0,
+        "flareHeight": 2,
+        "focusable": 0,
+        "link": "https://www.behance.net/gallery/241524417/Edura-LMS",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      "flare": {
+        "locked": "true",
+        "ariaHidden": "true",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "root": {
+          "left": 49,
+          "right": 935,
+          "top": 171.90625,
+          "bottom": 725.65625,
+          "width": 886,
+          "height": 553.75
+        },
+        "image": {
+          "left": 49,
+          "right": 935,
+          "top": 171.90625,
+          "bottom": 725.65625,
+          "width": 886,
+          "height": 553.75
+        },
+        "label": "[TARGET LOCKED // SPEC: 2026]",
+        "labelOpacity": 0.55,
+        "corners": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          }
+        ],
+        "focus": "matrix(1, 0, 0, 1, 0, 0)",
+        "flareOpacity": 0.22,
+        "flareHeight": 2,
+        "focusable": 0,
+        "link": "https://www.behance.net/gallery/241524417/Edura-LMS",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      "final": {
+        "locked": "true",
+        "ariaHidden": "true",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "root": {
+          "left": 49,
+          "right": 935,
+          "top": 171.90625,
+          "bottom": 725.65625,
+          "width": 886,
+          "height": 553.75
+        },
+        "image": {
+          "left": 49,
+          "right": 935,
+          "top": 171.90625,
+          "bottom": 725.65625,
+          "width": 886,
+          "height": 553.75
+        },
+        "label": "[TARGET LOCKED // SPEC: 2026]",
+        "labelOpacity": 0.8,
+        "corners": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          }
+        ],
+        "focus": "matrix(1, 0, 0, 1, 0, 0)",
+        "flareOpacity": 0,
+        "flareHeight": 2,
+        "focusable": 0,
+        "link": "https://www.behance.net/gallery/241524417/Edura-LMS",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      "state": {
+        "reduced": false,
+        "reticles": 3,
+        "triggers": [
+          "works-target-lock-01",
+          "works-target-lock-02",
+          "works-target-lock-03"
+        ],
+        "allTriggers": 30,
+        "smoother": true,
+        "audioContext": "running",
+        "clicks": 2,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      "clicksBefore": 1,
+      "captureTime": 0.719
+    },
+    {
+      "id": "02",
+      "before": {
+        "locked": "false",
+        "ariaHidden": "true",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "root": {
+          "left": 619,
+          "right": 1391,
+          "top": 7525.25,
+          "bottom": 8007.75,
+          "width": 772,
+          "height": 482.5
+        },
+        "image": {
+          "left": 619,
+          "right": 1391,
+          "top": 7525.25,
+          "bottom": 8007.75,
+          "width": 772,
+          "height": 482.5
+        },
+        "label": "[TARGET LOCKED // SPEC: 2026]",
+        "labelOpacity": 0,
+        "corners": [
+          {
+            "transform": "matrix(1, 0, 0, 1, -10, -10)",
+            "opacity": "0.35"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 10, -10)",
+            "opacity": "0.35"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 10, 10)",
+            "opacity": "0.35"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, -10, 10)",
+            "opacity": "0.35"
+          }
+        ],
+        "focus": "matrix(1, 0, 0, 1, -32, 0)",
+        "flareOpacity": 0,
+        "flareHeight": 2,
+        "focusable": 0,
+        "link": null,
+        "target": null,
+        "rel": null
+      },
+      "flare": {
+        "locked": "true",
+        "ariaHidden": "true",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "root": {
+          "left": 619,
+          "right": 1391,
+          "top": 207.25,
+          "bottom": 689.75,
+          "width": 772,
+          "height": 482.5
+        },
+        "image": {
+          "left": 619,
+          "right": 1391,
+          "top": 207.25,
+          "bottom": 689.75,
+          "width": 772,
+          "height": 482.5
+        },
+        "label": "[TARGET LOCKED // SPEC: 2026]",
+        "labelOpacity": 0.55,
+        "corners": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          }
+        ],
+        "focus": "matrix(1, 0, 0, 1, 0, 0)",
+        "flareOpacity": 0.22,
+        "flareHeight": 2,
+        "focusable": 0,
+        "link": null,
+        "target": null,
+        "rel": null
+      },
+      "final": {
+        "locked": "true",
+        "ariaHidden": "true",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "root": {
+          "left": 619,
+          "right": 1391,
+          "top": 207.25,
+          "bottom": 689.75,
+          "width": 772,
+          "height": 482.5
+        },
+        "image": {
+          "left": 619,
+          "right": 1391,
+          "top": 207.25,
+          "bottom": 689.75,
+          "width": 772,
+          "height": 482.5
+        },
+        "label": "[TARGET LOCKED // SPEC: 2026]",
+        "labelOpacity": 0.8,
+        "corners": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          }
+        ],
+        "focus": "matrix(1, 0, 0, 1, 0, 0)",
+        "flareOpacity": 0,
+        "flareHeight": 2,
+        "focusable": 0,
+        "link": null,
+        "target": null,
+        "rel": null
+      },
+      "state": {
+        "reduced": false,
+        "reticles": 3,
+        "triggers": [
+          "works-target-lock-02",
+          "works-target-lock-03"
+        ],
+        "allTriggers": 28,
+        "smoother": true,
+        "audioContext": null,
+        "clicks": 0,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      "clicksBefore": 0,
+      "captureTime": 0.729
+    },
+    {
+      "id": "03",
+      "before": {
+        "locked": "false",
+        "ariaHidden": "true",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "root": {
+          "left": 49,
+          "right": 935,
+          "top": 8482.34375,
+          "bottom": 9036.09375,
+          "width": 886,
+          "height": 553.75
+        },
+        "image": {
+          "left": 49,
+          "right": 935,
+          "top": 8482.34375,
+          "bottom": 9036.09375,
+          "width": 886,
+          "height": 553.75
+        },
+        "label": "[TARGET LOCKED // SPEC: 2026]",
+        "labelOpacity": 0,
+        "corners": [
+          {
+            "transform": "matrix(1, 0, 0, 1, -10, -10)",
+            "opacity": "0.35"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 10, -10)",
+            "opacity": "0.35"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 10, 10)",
+            "opacity": "0.35"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, -10, 10)",
+            "opacity": "0.35"
+          }
+        ],
+        "focus": "matrix(1, 0, 0, 1, -32, 0)",
+        "flareOpacity": 0,
+        "flareHeight": 2,
+        "focusable": 0,
+        "link": null,
+        "target": null,
+        "rel": null
+      },
+      "flare": {
+        "locked": "true",
+        "ariaHidden": "true",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "root": {
+          "left": 49,
+          "right": 935,
+          "top": 172.34375,
+          "bottom": 726.09375,
+          "width": 886,
+          "height": 553.75
+        },
+        "image": {
+          "left": 49,
+          "right": 935,
+          "top": 172.34375,
+          "bottom": 726.09375,
+          "width": 886,
+          "height": 553.75
+        },
+        "label": "[TARGET LOCKED // SPEC: 2026]",
+        "labelOpacity": 0.5503,
+        "corners": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          }
+        ],
+        "focus": "matrix(1, 0, 0, 1, 0, 0)",
+        "flareOpacity": 0.22,
+        "flareHeight": 2,
+        "focusable": 0,
+        "link": null,
+        "target": null,
+        "rel": null
+      },
+      "final": {
+        "locked": "true",
+        "ariaHidden": "true",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "root": {
+          "left": 49,
+          "right": 935,
+          "top": 172.34375,
+          "bottom": 726.09375,
+          "width": 886,
+          "height": 553.75
+        },
+        "image": {
+          "left": 49,
+          "right": 935,
+          "top": 172.34375,
+          "bottom": 726.09375,
+          "width": 886,
+          "height": 553.75
+        },
+        "label": "[TARGET LOCKED // SPEC: 2026]",
+        "labelOpacity": 0.8,
+        "corners": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          }
+        ],
+        "focus": "matrix(1, 0, 0, 1, 0, 0)",
+        "flareOpacity": 0,
+        "flareHeight": 2,
+        "focusable": 0,
+        "link": null,
+        "target": null,
+        "rel": null
+      },
+      "state": {
+        "reduced": false,
+        "reticles": 3,
+        "triggers": [
+          "works-target-lock-03"
+        ],
+        "allTriggers": 26,
+        "smoother": true,
+        "audioContext": null,
+        "clicks": 0,
+        "width": 1440,
+        "scrollWidth": 1440
+      },
+      "clicksBefore": 0,
+      "captureTime": 0.709
+    }
+  ],
+  "layouts": [
+    {
+      "width": 320,
+      "geometry": {
+        "locked": "true",
+        "ariaHidden": "true",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "root": {
+          "left": 21,
+          "right": 299,
+          "top": 362.5625,
+          "bottom": 536.3125,
+          "width": 278,
+          "height": 173.75
+        },
+        "image": {
+          "left": 21,
+          "right": 299,
+          "top": 362.5625,
+          "bottom": 536.3125,
+          "width": 278,
+          "height": 173.75
+        },
+        "label": "[TARGET LOCKED // SPEC: 2026]",
+        "labelOpacity": 0.8,
+        "corners": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          }
+        ],
+        "focus": "matrix(1, 0, 0, 1, 0, 0)",
+        "flareOpacity": 0,
+        "flareHeight": 2,
+        "focusable": 0,
+        "link": "https://www.behance.net/gallery/241524417/Edura-LMS",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      "state": {
+        "reduced": false,
+        "reticles": 3,
+        "triggers": [
+          "works-target-lock-01",
+          "works-target-lock-02",
+          "works-target-lock-03"
+        ],
+        "allTriggers": 32,
+        "smoother": true,
+        "audioContext": null,
+        "clicks": 0,
+        "width": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "width": 390,
+      "geometry": {
+        "locked": "true",
+        "ariaHidden": "true",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "root": {
+          "left": 21,
+          "right": 369,
+          "top": 340.34375,
+          "bottom": 557.84375,
+          "width": 348,
+          "height": 217.5
+        },
+        "image": {
+          "left": 21,
+          "right": 369,
+          "top": 340.34375,
+          "bottom": 557.84375,
+          "width": 348,
+          "height": 217.5
+        },
+        "label": "[TARGET LOCKED // SPEC: 2026]",
+        "labelOpacity": 0.8,
+        "corners": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          }
+        ],
+        "focus": "matrix(1, 0, 0, 1, 0, 0)",
+        "flareOpacity": 0,
+        "flareHeight": 2,
+        "focusable": 0,
+        "link": "https://www.behance.net/gallery/241524417/Edura-LMS",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      "state": {
+        "reduced": false,
+        "reticles": 3,
+        "triggers": [
+          "works-target-lock-01",
+          "works-target-lock-02",
+          "works-target-lock-03"
+        ],
+        "allTriggers": 32,
+        "smoother": true,
+        "audioContext": null,
+        "clicks": 0,
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "width": 768,
+      "geometry": {
+        "locked": "true",
+        "ariaHidden": "true",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "root": {
+          "left": 49,
+          "right": 487,
+          "top": 311.640625,
+          "bottom": 585.390625,
+          "width": 438,
+          "height": 273.75
+        },
+        "image": {
+          "left": 49,
+          "right": 487,
+          "top": 311.640625,
+          "bottom": 585.390625,
+          "width": 438,
+          "height": 273.75
+        },
+        "label": "[TARGET LOCKED // SPEC: 2026]",
+        "labelOpacity": 0.8,
+        "corners": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          }
+        ],
+        "focus": "matrix(1, 0, 0, 1, 0, 0)",
+        "flareOpacity": 0,
+        "flareHeight": 2,
+        "focusable": 0,
+        "link": "https://www.behance.net/gallery/241524417/Edura-LMS",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      "state": {
+        "reduced": false,
+        "reticles": 3,
+        "triggers": [
+          "works-target-lock-01",
+          "works-target-lock-02",
+          "works-target-lock-03"
+        ],
+        "allTriggers": 32,
+        "smoother": true,
+        "audioContext": null,
+        "clicks": 0,
+        "width": 768,
+        "scrollWidth": 768
+      }
+    },
+    {
+      "width": 1024,
+      "geometry": {
+        "locked": "true",
+        "ariaHidden": "true",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "root": {
+          "left": 49,
+          "right": 657.65625,
+          "top": 259.234375,
+          "bottom": 639.640625,
+          "width": 608.65625,
+          "height": 380.40625
+        },
+        "image": {
+          "left": 49,
+          "right": 657.65625,
+          "top": 259.234375,
+          "bottom": 639.640625,
+          "width": 608.65625,
+          "height": 380.40625
+        },
+        "label": "[TARGET LOCKED // SPEC: 2026]",
+        "labelOpacity": 0.8,
+        "corners": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          }
+        ],
+        "focus": "matrix(1, 0, 0, 1, 0, 0)",
+        "flareOpacity": 0,
+        "flareHeight": 2,
+        "focusable": 0,
+        "link": "https://www.behance.net/gallery/241524417/Edura-LMS",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      "state": {
+        "reduced": false,
+        "reticles": 3,
+        "triggers": [
+          "works-target-lock-01",
+          "works-target-lock-02",
+          "works-target-lock-03"
+        ],
+        "allTriggers": 31,
+        "smoother": true,
+        "audioContext": null,
+        "clicks": 0,
+        "width": 1024,
+        "scrollWidth": 1024
+      }
+    },
+    {
+      "width": 1440,
+      "geometry": {
+        "locked": "true",
+        "ariaHidden": "true",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "root": {
+          "left": 49,
+          "right": 935,
+          "top": 171.90625,
+          "bottom": 725.65625,
+          "width": 886,
+          "height": 553.75
+        },
+        "image": {
+          "left": 49,
+          "right": 935,
+          "top": 171.90625,
+          "bottom": 725.65625,
+          "width": 886,
+          "height": 553.75
+        },
+        "label": "[TARGET LOCKED // SPEC: 2026]",
+        "labelOpacity": 0.8,
+        "corners": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          }
+        ],
+        "focus": "matrix(1, 0, 0, 1, 0, 0)",
+        "flareOpacity": 0,
+        "flareHeight": 2,
+        "focusable": 0,
+        "link": "https://www.behance.net/gallery/241524417/Edura-LMS",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      "state": {
+        "reduced": false,
+        "reticles": 3,
+        "triggers": [
+          "works-target-lock-01",
+          "works-target-lock-02",
+          "works-target-lock-03"
+        ],
+        "allTriggers": 30,
+        "smoother": true,
+        "audioContext": null,
+        "clicks": 0,
+        "width": 1440,
+        "scrollWidth": 1440
+      }
+    },
+    {
+      "width": 1920,
+      "geometry": {
+        "locked": "true",
+        "ariaHidden": "true",
+        "pointerEvents": "none",
+        "position": "absolute",
+        "root": {
+          "left": 161,
+          "right": 1217.65625,
+          "top": 118.75,
+          "bottom": 779.15625,
+          "width": 1056.65625,
+          "height": 660.40625
+        },
+        "image": {
+          "left": 161,
+          "right": 1217.65625,
+          "top": 118.75,
+          "bottom": 779.15625,
+          "width": 1056.65625,
+          "height": 660.40625
+        },
+        "label": "[TARGET LOCKED // SPEC: 2026]",
+        "labelOpacity": 0.8,
+        "corners": [
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          },
+          {
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "0.85"
+          }
+        ],
+        "focus": "matrix(1, 0, 0, 1, 0, 0)",
+        "flareOpacity": 0,
+        "flareHeight": 2,
+        "focusable": 0,
+        "link": "https://www.behance.net/gallery/241524417/Edura-LMS",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      "state": {
+        "reduced": false,
+        "reticles": 3,
+        "triggers": [
+          "works-target-lock-01",
+          "works-target-lock-02",
+          "works-target-lock-03"
+        ],
+        "allTriggers": 30,
+        "smoother": true,
+        "audioContext": null,
+        "clicks": 0,
+        "width": 1920,
+        "scrollWidth": 1920
+      }
+    }
+  ],
+  "lifecycle": [
+    {
+      "filter": 1,
+      "reduced": false,
+      "reticles": 1,
+      "triggers": [
+        "works-target-lock-01"
+      ],
+      "allTriggers": 22,
+      "smoother": true,
+      "audioContext": null,
+      "clicks": 0,
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "filter": 2,
+      "reduced": false,
+      "reticles": 1,
+      "triggers": [
+        "works-target-lock-02"
+      ],
+      "allTriggers": 22,
+      "smoother": true,
+      "audioContext": null,
+      "clicks": 0,
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "filter": 3,
+      "reduced": false,
+      "reticles": 1,
+      "triggers": [
+        "works-target-lock-03"
+      ],
+      "allTriggers": 22,
+      "smoother": true,
+      "audioContext": null,
+      "clicks": 0,
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "filter": 0,
+      "reduced": false,
+      "reticles": 3,
+      "triggers": [
+        "works-target-lock-01",
+        "works-target-lock-02",
+        "works-target-lock-03"
+      ],
+      "allTriggers": 30,
+      "smoother": true,
+      "audioContext": null,
+      "clicks": 0,
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "lang": "en",
+      "reduced": false,
+      "reticles": 3,
+      "triggers": [
+        "works-target-lock-01",
+        "works-target-lock-02",
+        "works-target-lock-03"
+      ],
+      "allTriggers": 30,
+      "smoother": true,
+      "audioContext": null,
+      "clicks": 0,
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "lang": "vi",
+      "reduced": false,
+      "reticles": 3,
+      "triggers": [
+        "works-target-lock-01",
+        "works-target-lock-02",
+        "works-target-lock-03"
+      ],
+      "allTriggers": 30,
+      "smoother": true,
+      "audioContext": null,
+      "clicks": 0,
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "cycle": 0,
+      "requested": "reduce",
+      "reduced": true,
+      "reticles": 0,
+      "triggers": [],
+      "allTriggers": 0,
+      "smoother": false,
+      "audioContext": null,
+      "clicks": 0,
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "cycle": 0,
+      "requested": "no-preference",
+      "reduced": false,
+      "reticles": 3,
+      "triggers": [
+        "works-target-lock-01",
+        "works-target-lock-02",
+        "works-target-lock-03"
+      ],
+      "allTriggers": 78,
+      "smoother": true,
+      "audioContext": null,
+      "clicks": 0,
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "cycle": 1,
+      "requested": "reduce",
+      "reduced": true,
+      "reticles": 0,
+      "triggers": [],
+      "allTriggers": 0,
+      "smoother": false,
+      "audioContext": null,
+      "clicks": 0,
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "cycle": 1,
+      "requested": "no-preference",
+      "reduced": false,
+      "reticles": 3,
+      "triggers": [
+        "works-target-lock-01",
+        "works-target-lock-02",
+        "works-target-lock-03"
+      ],
+      "allTriggers": 78,
+      "smoother": true,
+      "audioContext": null,
+      "clicks": 0,
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "cycle": 2,
+      "requested": "reduce",
+      "reduced": true,
+      "reticles": 0,
+      "triggers": [],
+      "allTriggers": 0,
+      "smoother": false,
+      "audioContext": null,
+      "clicks": 0,
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "cycle": 2,
+      "requested": "no-preference",
+      "reduced": false,
+      "reticles": 3,
+      "triggers": [
+        "works-target-lock-01",
+        "works-target-lock-02",
+        "works-target-lock-03"
+      ],
+      "allTriggers": 78,
+      "smoother": true,
+      "audioContext": null,
+      "clicks": 0,
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "freshReduced": true,
+      "reduced": true,
+      "reticles": 0,
+      "triggers": [],
+      "allTriggers": 0,
+      "smoother": false,
+      "audioContext": null,
+      "clicks": 0,
+      "width": 390,
+      "scrollWidth": 390
+    }
+  ],
+  "fps": {
+    "frames": 133,
+    "durationMs": 805.9000000000005,
+    "fps": 163.79203375108563,
+    "maximumFrameMs": 12.100000000000364,
+    "dpr": 1,
+    "canvas": 1,
+    "viewport": "1440x900"
+  },
+  "errors": [],
+  "notFound": [],
+  "failedRequests": []
+}

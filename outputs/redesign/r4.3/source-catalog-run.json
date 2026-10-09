@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "constellations": 6,
+  "starsCheckedIncludingSupporting": 117,
+  "edgesChecked": 46,
+  "sourceFilesHashed": 16,
+  "sourceEpoch": "J1991.25",
+  "checks": [
+    "source hashes",
+    "exact catalog rows",
+    "exact Modern edges",
+    "HIP membership and duplicates",
+    "projection recomputation",
+    "inverse projection and east-left orientation"
+  ]
+}

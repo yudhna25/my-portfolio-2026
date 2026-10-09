@@ -1,0 +1,38 @@
+[
+  {
+    "level": "warn",
+    "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "timestamp": "2026-10-04T13:49:18.865Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=4ea51728"
+  },
+  {
+    "level": "error",
+    "message": "You are calling ReactDOMClient.createRoot() on a container that has already been passed to createRoot() before. Instead, call root.render() on the existing root instead if you want to update it.",
+    "timestamp": "2026-10-04T16:41:37.431Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=4ea51728"
+  },
+  {
+    "level": "warn",
+    "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "timestamp": "2026-10-04T16:41:39.079Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=4ea51728"
+  },
+  {
+    "level": "warn",
+    "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "timestamp": "2026-10-04T16:41:46.045Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=4ea51728"
+  },
+  {
+    "level": "error",
+    "message": "You are calling ReactDOMClient.createRoot() on a container that has already been passed to createRoot() before. Instead, call root.render() on the existing root instead if you want to update it.",
+    "timestamp": "2026-10-04T16:43:31.775Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=4ea51728"
+  },
+  {
+    "level": "warn",
+    "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "timestamp": "2026-10-04T16:43:32.111Z",
+    "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=4ea51728"
+  }
+]

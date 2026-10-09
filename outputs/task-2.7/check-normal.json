@@ -1,0 +1,138 @@
+[
+  {
+    "pass": true,
+    "message": "All: 3 cards"
+  },
+  {
+    "pass": true,
+    "message": "Only EDURA uses view cursor"
+  },
+  {
+    "pass": true,
+    "message": "Cursor card 1: view"
+  },
+  {
+    "pass": true,
+    "message": "Cursor card 2: default"
+  },
+  {
+    "pass": true,
+    "message": "Cursor card 3: default"
+  },
+  {
+    "pass": true,
+    "message": "One link / two coming-soon buttons"
+  },
+  {
+    "pass": true,
+    "message": "Safe canonical EDURA link"
+  },
+  {
+    "pass": true,
+    "message": "Grid height preserves first Flip frame"
+  },
+  {
+    "pass": true,
+    "message": "Flip settles"
+  },
+  {
+    "pass": true,
+    "message": "Filter 2: correct results"
+  },
+  {
+    "pass": true,
+    "message": "Flip restores natural layout"
+  },
+  {
+    "pass": true,
+    "message": "Grid height preserves first Flip frame"
+  },
+  {
+    "pass": true,
+    "message": "Flip settles"
+  },
+  {
+    "pass": true,
+    "message": "Filter 3: correct results"
+  },
+  {
+    "pass": true,
+    "message": "Flip restores natural layout"
+  },
+  {
+    "pass": true,
+    "message": "Grid height preserves first Flip frame"
+  },
+  {
+    "pass": true,
+    "message": "Flip settles"
+  },
+  {
+    "pass": true,
+    "message": "Filter 4: correct results"
+  },
+  {
+    "pass": true,
+    "message": "Flip restores natural layout"
+  },
+  {
+    "pass": true,
+    "message": "Grid height preserves first Flip frame"
+  },
+  {
+    "pass": true,
+    "message": "Flip settles"
+  },
+  {
+    "pass": true,
+    "message": "Filter 1: correct results"
+  },
+  {
+    "pass": true,
+    "message": "Flip restores natural layout"
+  },
+  {
+    "pass": true,
+    "message": "Flip settles"
+  },
+  {
+    "pass": true,
+    "message": "Rapid interruption ends at All"
+  },
+  {
+    "pass": true,
+    "message": "Live reduced motion completes active Flip"
+  },
+  {
+    "pass": true,
+    "message": "Live reduced motion clears scroll animation"
+  },
+  {
+    "pass": true,
+    "message": "Flip settles"
+  },
+  {
+    "pass": true,
+    "message": "Stable reveal count"
+  },
+  {
+    "pass": true,
+    "message": "ScrollSmoother / reduced motion match"
+  },
+  {
+    "pass": true,
+    "message": "English translation"
+  },
+  {
+    "pass": true,
+    "message": "Vietnamese translation"
+  },
+  {
+    "pass": true,
+    "message": "Unmount cleans every trigger and smoother"
+  },
+  {
+    "pass": true,
+    "message": "StrictMode remount restores All"
+  }
+]

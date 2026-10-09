@@ -1,0 +1,507 @@
+{
+  "appMode": false,
+  "nativeReduced": false,
+  "motionSimulation": true,
+  "checks": [
+    {
+      "name": "StrictMode: one cursor and one listener per event",
+      "pass": true,
+      "details": {
+        "document:pointermove": 1,
+        "document:pointerover": 1,
+        "document:pointerout": 1,
+        "html:pointerleave": 1,
+        "document:keydown": 1,
+        "document:visibilitychange": 1,
+        "window:blur": 1
+      }
+    },
+    {
+      "name": "Mono default: 28px ring, 4px dot, difference blend",
+      "pass": true,
+      "details": {
+        "mode": "default",
+        "opacity": 1,
+        "blend": "difference",
+        "pointerEvents": "none",
+        "ariaHidden": "true",
+        "ring": {
+          "x": 88,
+          "y": 268,
+          "width": 64,
+          "height": 64,
+          "cx": 120,
+          "cy": 300
+        },
+        "shape": {
+          "x": 106,
+          "y": 286,
+          "width": 28,
+          "height": 28,
+          "cx": 120,
+          "cy": 300
+        },
+        "dot": {
+          "x": 118,
+          "y": 298,
+          "width": 4,
+          "height": 4,
+          "cx": 120,
+          "cy": 300
+        },
+        "label": "XEM",
+        "labelOpacity": 0,
+        "font": "\"Unbounded Variable\", Unbounded, sans-serif",
+        "fontSize": "12px",
+        "dotOpacity": 1,
+        "fill": "rgb(250, 250, 250)"
+      }
+    },
+    {
+      "name": "A11y: decorative, no focus targets, native cursor preserved",
+      "pass": true
+    },
+    {
+      "name": "Fast dot leads slower ring",
+      "pass": false,
+      "details": {
+        "mode": "default",
+        "opacity": 1,
+        "blend": "difference",
+        "pointerEvents": "none",
+        "ariaHidden": "true",
+        "ring": {
+          "x": 88,
+          "y": 268,
+          "width": 64,
+          "height": 64,
+          "cx": 120,
+          "cy": 300
+        },
+        "shape": {
+          "x": 106,
+          "y": 286,
+          "width": 28,
+          "height": 28,
+          "cx": 120,
+          "cy": 300
+        },
+        "dot": {
+          "x": 118,
+          "y": 298,
+          "width": 4,
+          "height": 4,
+          "cx": 120,
+          "cy": 300
+        },
+        "label": "XEM",
+        "labelOpacity": 0,
+        "font": "\"Unbounded Variable\", Unbounded, sans-serif",
+        "fontSize": "12px",
+        "dotOpacity": 1,
+        "fill": "rgb(250, 250, 250)"
+      }
+    },
+    {
+      "name": "Followers settle at pointer",
+      "pass": false,
+      "details": {
+        "mode": "default",
+        "opacity": 1,
+        "blend": "difference",
+        "pointerEvents": "none",
+        "ariaHidden": "true",
+        "ring": {
+          "x": 290.4200134277344,
+          "y": 287.09619140625,
+          "width": 64,
+          "height": 64,
+          "cx": 322.4200134277344,
+          "cy": 319.09619140625
+        },
+        "shape": {
+          "x": 308.4200134277344,
+          "y": 305.09619140625,
+          "width": 28,
+          "height": 28,
+          "cx": 322.4200134277344,
+          "cy": 319.09619140625
+        },
+        "dot": {
+          "x": 590.064208984375,
+          "y": 342.5343933105469,
+          "width": 4,
+          "height": 4,
+          "cx": 592.064208984375,
+          "cy": 344.5343933105469
+        },
+        "label": "XEM",
+        "labelOpacity": 0,
+        "font": "\"Unbounded Variable\", Unbounded, sans-serif",
+        "fontSize": "12px",
+        "dotOpacity": 1,
+        "fill": "rgb(250, 250, 250)"
+      }
+    },
+    {
+      "name": "Nested VIEW target: 64px fill, XEM, 12px Unbounded, no center dot",
+      "pass": false,
+      "details": {
+        "mode": "view",
+        "opacity": 1,
+        "blend": "difference",
+        "pointerEvents": "none",
+        "ariaHidden": "true",
+        "ring": {
+          "x": 290.4200134277344,
+          "y": 287.09619140625,
+          "width": 64,
+          "height": 64,
+          "cx": 322.4200134277344,
+          "cy": 319.09619140625
+        },
+        "shape": {
+          "x": 308.4200134277344,
+          "y": 305.09619140625,
+          "width": 28,
+          "height": 28,
+          "cx": 322.4200134277344,
+          "cy": 319.09619140625
+        },
+        "dot": {
+          "x": 590.064208984375,
+          "y": 342.5343933105469,
+          "width": 4,
+          "height": 4,
+          "cx": 592.064208984375,
+          "cy": 344.5343933105469
+        },
+        "label": "XEM",
+        "labelOpacity": 0,
+        "font": "\"Unbounded Variable\", Unbounded, sans-serif",
+        "fontSize": "12px",
+        "dotOpacity": 1,
+        "fill": "rgb(250, 250, 250)"
+      }
+    },
+    {
+      "name": "English label live sync",
+      "pass": true,
+      "details": "VIEW"
+    },
+    {
+      "name": "Vietnamese label live sync",
+      "pass": true,
+      "details": "XEM"
+    },
+    {
+      "name": "Ordinary link contracts to 18px",
+      "pass": false,
+      "details": {
+        "mode": "link",
+        "opacity": 1,
+        "blend": "difference",
+        "pointerEvents": "none",
+        "ariaHidden": "true",
+        "ring": {
+          "x": 290.4200134277344,
+          "y": 287.09619140625,
+          "width": 64,
+          "height": 64,
+          "cx": 322.4200134277344,
+          "cy": 319.09619140625
+        },
+        "shape": {
+          "x": 308.4200134277344,
+          "y": 305.09619140625,
+          "width": 28,
+          "height": 28,
+          "cx": 322.4200134277344,
+          "cy": 319.09619140625
+        },
+        "dot": {
+          "x": 590.064208984375,
+          "y": 342.5343933105469,
+          "width": 4,
+          "height": 4,
+          "cx": 592.064208984375,
+          "cy": 344.5343933105469
+        },
+        "label": "XEM",
+        "labelOpacity": 0,
+        "font": "\"Unbounded Variable\", Unbounded, sans-serif",
+        "fontSize": "12px",
+        "dotOpacity": 1,
+        "fill": "rgb(250, 250, 250)"
+      }
+    },
+    {
+      "name": "Existing work-card contract stays VIEW",
+      "pass": true
+    },
+    {
+      "name": "Magnetic: bounded radial 8px, section transform unchanged",
+      "pass": false,
+      "details": {
+        "offset": {
+          "x": 0,
+          "y": 0
+        },
+        "transform": "translate(17px, 9px) scale(0.9, 0.9)"
+      }
+    },
+    {
+      "name": "Magnetic resets on leave",
+      "pass": true,
+      "details": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "name": "Delegated hover handles newly mounted card",
+      "pass": true
+    },
+    {
+      "name": "Removed magnetic card styles restored",
+      "pass": true,
+      "details": ""
+    },
+    {
+      "name": "Disabled target has no VIEW or magnet",
+      "pass": true
+    },
+    {
+      "name": "Keyboard hides decorative cursor",
+      "pass": true
+    },
+    {
+      "name": "First movement starts at pointer with no fly-in",
+      "pass": true,
+      "details": {
+        "mode": "default",
+        "opacity": 1,
+        "blend": "difference",
+        "pointerEvents": "none",
+        "ariaHidden": "true",
+        "ring": {
+          "x": 178,
+          "y": 288,
+          "width": 64,
+          "height": 64,
+          "cx": 210,
+          "cy": 320
+        },
+        "shape": {
+          "x": 193.53919982910156,
+          "y": 303.5391845703125,
+          "width": 32.921600341796875,
+          "height": 32.921630859375,
+          "cx": 210,
+          "cy": 320
+        },
+        "dot": {
+          "x": 208,
+          "y": 318,
+          "width": 4,
+          "height": 4,
+          "cx": 210,
+          "cy": 320
+        },
+        "label": "XEM",
+        "labelOpacity": 0.1098,
+        "font": "\"Unbounded Variable\", Unbounded, sans-serif",
+        "fontSize": "12px",
+        "dotOpacity": 0.8902,
+        "fill": "rgb(250, 250, 250)"
+      }
+    },
+    {
+      "name": "Window blur hides and resets",
+      "pass": true
+    },
+    {
+      "name": "Touch events do not move cursor on hybrid device",
+      "pass": true
+    },
+    {
+      "name": "Live reduced motion: direct ring and dot, no lag",
+      "pass": true,
+      "details": {
+        "mode": "default",
+        "opacity": 1,
+        "blend": "difference",
+        "pointerEvents": "none",
+        "ariaHidden": "true",
+        "ring": {
+          "x": 698,
+          "y": 308,
+          "width": 64,
+          "height": 64,
+          "cx": 730,
+          "cy": 340
+        },
+        "shape": {
+          "x": 716,
+          "y": 326,
+          "width": 28,
+          "height": 28,
+          "cx": 730,
+          "cy": 340
+        },
+        "dot": {
+          "x": 728,
+          "y": 338,
+          "width": 4,
+          "height": 4,
+          "cx": 730,
+          "cy": 340
+        },
+        "label": "XEM",
+        "labelOpacity": 0,
+        "font": "\"Unbounded Variable\", Unbounded, sans-serif",
+        "fontSize": "12px",
+        "dotOpacity": 1,
+        "fill": "rgb(250, 250, 250)"
+      }
+    },
+    {
+      "name": "Reduced VIEW has immediate state",
+      "pass": true
+    },
+    {
+      "name": "Reduced magnet updates directly",
+      "pass": true,
+      "details": {
+        "x": 5.65685,
+        "y": 5.65685
+      }
+    },
+    {
+      "name": "Reduced magnet resets directly",
+      "pass": true
+    },
+    {
+      "name": "Coarse pointer: zero cursor DOM and zero listeners",
+      "pass": true
+    },
+    {
+      "name": "Coarse pointer cleans magnetic styles",
+      "pass": true,
+      "details": {
+        "magnet": "none",
+        "project": ""
+      }
+    },
+    {
+      "name": "Fine pointer re-mount stays single",
+      "pass": true
+    },
+    {
+      "name": "Unmount cleanup 1",
+      "pass": true
+    },
+    {
+      "name": "Remount listener count 1",
+      "pass": true
+    },
+    {
+      "name": "Unmount cleanup 2",
+      "pass": true
+    },
+    {
+      "name": "Remount listener count 2",
+      "pass": true
+    },
+    {
+      "name": "Unmount cleanup 3",
+      "pass": true
+    },
+    {
+      "name": "Remount listener count 3",
+      "pass": true
+    },
+    {
+      "name": "slow pointer: reuses quickTo and sustains 60fps",
+      "pass": false,
+      "details": {
+        "speed": "slow",
+        "frames": 2,
+        "events": 3,
+        "fps": 0.9939863823865616,
+        "p95FrameMs": 1006.0999999999995,
+        "quickToCreatedDuringMovement": 0
+      }
+    },
+    {
+      "name": "fast pointer: reuses quickTo and sustains 60fps",
+      "pass": false,
+      "details": {
+        "speed": "fast",
+        "frames": 2,
+        "events": 24,
+        "fps": 0.9939863823865611,
+        "p95FrameMs": 1006.1000000000004,
+        "quickToCreatedDuringMovement": 0
+      }
+    },
+    {
+      "name": "No listener double-registration after all transitions",
+      "pass": true,
+      "details": {
+        "document:pointermove": 1,
+        "document:pointerover": 1,
+        "document:pointerout": 1,
+        "html:pointerleave": 1,
+        "document:keydown": 1,
+        "document:visibilitychange": 1,
+        "window:blur": 1
+      }
+    }
+  ],
+  "performance": [
+    {
+      "speed": "slow",
+      "frames": 2,
+      "events": 3,
+      "fps": 0.9939863823865616,
+      "p95FrameMs": 1006.0999999999995,
+      "quickToCreatedDuringMovement": 0
+    },
+    {
+      "speed": "fast",
+      "frames": 2,
+      "events": 24,
+      "fps": 0.9939863823865611,
+      "p95FrameMs": 1006.1000000000004,
+      "quickToCreatedDuringMovement": 0
+    }
+  ],
+  "nativeEvents": 0,
+  "cursorCount": 1,
+  "listeners": {
+    "document:pointermove": 1,
+    "document:pointerover": 1,
+    "document:pointerout": 1,
+    "html:pointerleave": 1,
+    "document:keydown": 1,
+    "document:visibilitychange": 1,
+    "window:blur": 1
+  },
+  "peaks": {
+    "document:pointermove": 1,
+    "document:pointerover": 1,
+    "document:pointerout": 1,
+    "html:pointerleave": 1,
+    "document:keydown": 1,
+    "document:visibilitychange": 1,
+    "window:blur": 1
+  },
+  "quickToCalls": 104,
+  "reduced": false,
+  "coarse": false,
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}

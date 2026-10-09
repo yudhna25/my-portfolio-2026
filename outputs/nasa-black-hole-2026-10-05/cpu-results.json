@@ -1,0 +1,125 @@
+{
+  "status": "PASS",
+  "camera": {
+    "start": {
+      "x": 0,
+      "y": 2.2,
+      "z": -168,
+      "lookX": 0,
+      "lookY": 0,
+      "parallax": 0.35
+    },
+    "end": {
+      "x": -3.5000000000000004,
+      "y": 0.18,
+      "z": -191,
+      "lookX": -4.5,
+      "lookY": -0.45,
+      "parallax": 0
+    },
+    "startDistance": 32.07553584899245,
+    "endDistance": 9.658281420625514,
+    "endRadius": 9.656603957913983,
+    "samples": 1001,
+    "weave": [
+      -1,
+      1,
+      -1,
+      1,
+      -1
+    ]
+  },
+  "geometries": {
+    "high": {
+      "count": 24000,
+      "octants": [
+        2932,
+        2950,
+        2921,
+        3034,
+        3033,
+        3067,
+        3006,
+        3057
+      ],
+      "meanDirection": [
+        0.006657154907298467,
+        0.0016281465450937364,
+        0.0067941343700726525
+      ],
+      "maximumCssPixels": 3.236270227432251
+    },
+    "medium": {
+      "count": 12000,
+      "octants": [
+        1527,
+        1493,
+        1493,
+        1499,
+        1486,
+        1486,
+        1518,
+        1498
+      ],
+      "meanDirection": [
+        -0.0028414195972251387,
+        -0.004169055021270701,
+        0.001044916258065991
+      ],
+      "maximumCssPixels": 3.232999305725098
+    },
+    "low": {
+      "count": 6000,
+      "octants": [
+        714,
+        728,
+        788,
+        743,
+        781,
+        770,
+        737,
+        739
+      ],
+      "meanDirection": [
+        -0.006052344061126406,
+        -0.009759341604623275,
+        0.0026628564835126114
+      ],
+      "maximumCssPixels": 3.2368650341033938
+    }
+  },
+  "rayReference": {
+    "critical": 2.598076211353316,
+    "below": {
+      "captured": true,
+      "phi": 6.628999999999046,
+      "maxEnergyError": 1.532107773982716e-14
+    },
+    "above": {
+      "captured": false,
+      "phi": 7.970999999998302,
+      "maxEnergyError": 9.2148511043888e-15
+    },
+    "tiers": {
+      "high": {
+        "steps": 192,
+        "step": 0.09,
+        "resolution": 0.85,
+        "maxResolution": 1280
+      },
+      "medium": {
+        "steps": 160,
+        "step": 0.11,
+        "resolution": 0.8,
+        "maxResolution": 1024
+      },
+      "low": {
+        "steps": 128,
+        "step": 0.14,
+        "resolution": 0.75,
+        "maxResolution": 768
+      }
+    }
+  },
+  "localeKeys": 29
+}

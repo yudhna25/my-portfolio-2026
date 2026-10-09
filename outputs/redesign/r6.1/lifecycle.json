@@ -1,0 +1,465 @@
+{
+  "fixture": "outputs/redesign/r4.2/lifecycle.html (existing App fixture)",
+  "errors": [],
+  "cycles": [
+    {
+      "cycle": 1,
+      "unmounted": {
+        "reader": 0,
+        "canvas": 0,
+        "tweens": 0,
+        "allTweens": [
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          }
+        ],
+        "opacity": []
+      },
+      "active": {
+        "reader": 1,
+        "canvas": 0,
+        "tweens": 1,
+        "allTweens": [
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "H1",
+              "P"
+            ],
+            "duration": 0.66
+          }
+        ],
+        "opacity": [
+          "0.726",
+          "0.65"
+        ]
+      },
+      "cancelled": {
+        "reader": 0,
+        "canvas": 0,
+        "tweens": 0,
+        "allTweens": [
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          }
+        ],
+        "opacity": []
+      },
+      "mounted": {
+        "reader": 1,
+        "canvas": 0,
+        "tweens": 0,
+        "allTweens": [
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          }
+        ],
+        "opacity": [
+          "1",
+          "1"
+        ]
+      }
+    },
+    {
+      "cycle": 2,
+      "unmounted": {
+        "reader": 0,
+        "canvas": 0,
+        "tweens": 0,
+        "allTweens": [
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          }
+        ],
+        "opacity": []
+      },
+      "active": {
+        "reader": 1,
+        "canvas": 0,
+        "tweens": 1,
+        "allTweens": [
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "H1",
+              "P"
+            ],
+            "duration": 0.66
+          }
+        ],
+        "opacity": [
+          "0.7348",
+          "0.65"
+        ]
+      },
+      "cancelled": {
+        "reader": 0,
+        "canvas": 0,
+        "tweens": 0,
+        "allTweens": [
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          }
+        ],
+        "opacity": []
+      },
+      "mounted": {
+        "reader": 1,
+        "canvas": 0,
+        "tweens": 0,
+        "allTweens": [
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          }
+        ],
+        "opacity": [
+          "1",
+          "1"
+        ]
+      }
+    },
+    {
+      "cycle": 3,
+      "unmounted": {
+        "reader": 0,
+        "canvas": 0,
+        "tweens": 0,
+        "allTweens": [
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          }
+        ],
+        "opacity": []
+      },
+      "active": {
+        "reader": 1,
+        "canvas": 0,
+        "tweens": 1,
+        "allTweens": [
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "H1",
+              "P"
+            ],
+            "duration": 0.66
+          }
+        ],
+        "opacity": [
+          "0.7363",
+          "0.65"
+        ]
+      },
+      "cancelled": {
+        "reader": 0,
+        "canvas": 0,
+        "tweens": 0,
+        "allTweens": [
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          }
+        ],
+        "opacity": []
+      },
+      "mounted": {
+        "reader": 1,
+        "canvas": 0,
+        "tweens": 0,
+        "allTweens": [
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          }
+        ],
+        "opacity": [
+          "1",
+          "1"
+        ]
+      }
+    }
+  ],
+  "motionCycles": [
+    {
+      "cycle": 1,
+      "reduced": {
+        "reader": 1,
+        "canvas": 0,
+        "tweens": 0,
+        "allTweens": [
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          }
+        ],
+        "opacity": [
+          "1",
+          "1"
+        ]
+      },
+      "normal": {
+        "reader": 1,
+        "canvas": 0,
+        "tweens": 0,
+        "allTweens": [
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          }
+        ],
+        "opacity": [
+          "1",
+          "1"
+        ]
+      }
+    },
+    {
+      "cycle": 2,
+      "reduced": {
+        "reader": 1,
+        "canvas": 0,
+        "tweens": 0,
+        "allTweens": [
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          }
+        ],
+        "opacity": [
+          "1",
+          "1"
+        ]
+      },
+      "normal": {
+        "reader": 1,
+        "canvas": 0,
+        "tweens": 0,
+        "allTweens": [
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          }
+        ],
+        "opacity": [
+          "1",
+          "1"
+        ]
+      }
+    },
+    {
+      "cycle": 3,
+      "reduced": {
+        "reader": 1,
+        "canvas": 0,
+        "tweens": 0,
+        "allTweens": [
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          }
+        ],
+        "opacity": [
+          "1",
+          "1"
+        ]
+      },
+      "normal": {
+        "reader": 1,
+        "canvas": 0,
+        "tweens": 0,
+        "allTweens": [
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          },
+          {
+            "targets": [
+              "function"
+            ],
+            "duration": 0
+          }
+        ],
+        "opacity": [
+          "1",
+          "1"
+        ]
+      }
+    }
+  ],
+  "final": {
+    "reader": 0,
+    "canvas": 0,
+    "tweens": 0,
+    "allTweens": [
+      {
+        "targets": [
+          "function"
+        ],
+        "duration": 0
+      },
+      {
+        "targets": [
+          "function"
+        ],
+        "duration": 0
+      }
+    ],
+    "opacity": []
+  },
+  "browser": "154.0.4258.62",
+  "status": "pass"
+}

@@ -1,0 +1,11 @@
+{"kind":"workbook","id":"wb/z40thx","sheets":5,"tables":5}
+{"kind":"sheet","id":"ws/ixcbg0","name":"Concepts","index":0,"range":"A1:I34","address":"A1:I34","tables":1}
+{"kind":"table","sheet":"Concepts","address":"A1:I34","rows":34,"cols":9,"values":[[null,null,null],["Portfolio mới: cổ ngữ × công nghệ",null,null]],"valuesTruncated":true,"valuesPreviewRows":2,"valuesPreviewCols":3,"valuesPreviewAddress":"A1:C2"}
+{"kind":"sheet","id":"ws/92etqg","name":"Phoi style","index":1,"range":"A1:F44","address":"A1:F44","tables":1}
+{"kind":"table","sheet":"Phoi style","address":"A1:F44","rows":44,"cols":6,"values":[[null,null,null],["Phối style có vai trò, cùng một thế giới",null,null]],"valuesTruncated":true,"valuesPreviewRows":2,"valuesPreviewCols":3,"valuesPreviewAddress":"A1:C2"}
+{"kind":"sheet","id":"ws/okt1ft","name":"Tuong tac","index":2,"range":"A1:H26","address":"A1:H26","tables":1}
+{"kind":"table","sheet":"Tuong tac","address":"A1:H26","rows":26,"cols":8,"values":[[null,null,null],["20 ý tưởng tương tác và motion",null,null]],"valuesTruncated":true,"valuesPreviewRows":2,"valuesPreviewCols":3,"valuesPreviewAddress":"A1:C2"}
+{"kind":"sheet","id":"ws/o01cai","name":"Hanh trinh","index":3,"range":"A1:F32","address":"A1:F32","tables":1}
+{"kind":"table","sheet":"Hanh trinh","address":"A1:F32","rows":32,"cols":6,"values":[[null,null,null],["Hành trình đề xuất cho VEIL ARCHIVE",null,null]],"valuesTruncated":true,"valuesPreviewRows":2,"valuesPreviewCols":3,"valuesPreviewAddress":"A1:C2"}
+{"kind":"sheet","id":"ws/c8vr5y","name":"So thich","index":4,"range":"A1:F40","address":"A1:F40","tables":1}
+{"kind":"table","sheet":"So thich","address":"A1:F40","rows":40,"cols":6,"values":[[null,null,null],["Sở thích đã xác nhận và diễn giải thiết kế",null,null]],"valuesTruncated":true,"valuesPreviewRows":2,"valuesPreviewCols":3,"valuesPreviewAddress":"A1:C2"}

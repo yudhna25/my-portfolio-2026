@@ -1,0 +1,5 @@
+{
+  "changedFilesLintPass": true,
+  "navAutoHideUnchanged": true,
+  "repoLintBaseline": "1 error Work.jsx react-hooks/refs; 2 warnings SplashCursor.jsx"
+}

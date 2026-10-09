@@ -1,0 +1,1175 @@
+{
+  "status": "pass",
+  "base": "http://127.0.0.1:5173",
+  "checkedAt": "2026-10-09T01:23:32.416Z",
+  "configurations": [
+    {
+      "width": 1440,
+      "deviceScaleFactor": 1.75,
+      "poses": [
+        {
+          "label": "ambient-yields",
+          "chapter": "finale",
+          "p": 0.58,
+          "manual": true,
+          "phase": {
+            "progress": 0.58,
+            "label": 0,
+            "travel": 1,
+            "angle": 18,
+            "radius": 0,
+            "figure": 0,
+            "stars": 0,
+            "trails": 0,
+            "cloud": 1,
+            "collapse": 0,
+            "hole": 0,
+            "flare": 0,
+            "contact": 0,
+            "phase": "nebula"
+          },
+          "orbit": {
+            "phase": 0,
+            "origin": 0,
+            "velocity": 0,
+            "latched": true,
+            "visited": true,
+            "captures": 2,
+            "resumePending": false
+          },
+          "selected": "edura",
+          "reduced": false,
+          "language": "vi",
+          "visible": false,
+          "trailVisible": false,
+          "trailSum": -219165.56701385975,
+          "ambientVisible": false,
+          "groups": [
+            {
+              "name": "works-edura",
+              "position": [
+                7.75958761790857,
+                1.2316805742712016,
+                0
+              ],
+              "world": [
+                24.324292859456428,
+                4.1723616835967245,
+                -166.78434266340238
+              ],
+              "scale": [
+                4.002961866381406,
+                4.002961866381406,
+                4.002961866381406
+              ]
+            },
+            {
+              "name": "works-veris",
+              "position": [
+                -3.8797938089542834,
+                5.765013907604535,
+                0
+              ],
+              "world": [
+                18.070236029563155,
+                8.70128695951634,
+                -176.6027906122746
+              ],
+              "scale": [
+                4.002961866381406,
+                4.002961866381406,
+                4.002961866381406
+              ]
+            },
+            {
+              "name": "works-vie",
+              "position": [
+                -3.8797938089542887,
+                -3.30165275906213,
+                0
+              ],
+              "world": [
+                17.736824711388877,
+                -0.3565635923228889,
+                -176.38228048120695
+              ],
+              "scale": [
+                4.002961866381406,
+                4.002961866381406,
+                4.002961866381406
+              ]
+            }
+          ],
+          "camera": [
+            2,
+            4,
+            -160
+          ],
+          "cameraError": 0,
+          "hole": 0,
+          "gas": [
+            1,
+            0,
+            0,
+            0.58
+          ],
+          "enabled": 1,
+          "rayCenter": [
+            0.6949057007040207,
+            0.6906453063029134
+          ],
+          "visibility": 1,
+          "labels": {
+            "hidden": false,
+            "inert": true,
+            "opacity": 0,
+            "visibility": "hidden",
+            "ariaHidden": null,
+            "top": -16,
+            "height": 1000
+          },
+          "contactText": {
+            "hidden": false,
+            "inert": true,
+            "opacity": 0,
+            "visibility": "hidden",
+            "ariaHidden": null,
+            "top": 96,
+            "height": 830.421875
+          },
+          "contact": {
+            "hidden": false,
+            "inert": false,
+            "opacity": 1,
+            "visibility": "visible",
+            "ariaHidden": null,
+            "top": 945,
+            "height": 1022.421875
+          },
+          "domProgress": 0.58,
+          "finaleHeightVH": 2.25,
+          "y": 11724,
+          "dpr": 1.5,
+          "tier": "medium",
+          "glError": 0,
+          "memory": {
+            "geometries": 16,
+            "textures": 23
+          },
+          "copyOctaves": 3,
+          "compiledOctaves": 3,
+          "trailVertices": 1584,
+          "canvas": 1,
+          "cameraWriters": 1,
+          "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "viewport": [
+            900,
+            1000
+          ],
+          "focus": "transmission",
+          "triggers": [
+            "stellar-nav-auto-hide",
+            "anonymous",
+            "anonymous"
+          ],
+          "targets": 0
+        }
+      ],
+      "comparisons": [],
+      "native": [],
+      "benchmarks": [
+        {
+          "label": "maxDPR-0.4",
+          "p": 0.4,
+          "fps": 164.9072396776909,
+          "frames": 264,
+          "elapsed": 1600.8999999999069,
+          "cpuMs": {
+            "samples": 264,
+            "mean": 0.9954545454503122,
+            "p95": 1.400000000372529,
+            "max": 4.600000000093132
+          },
+          "gpuMs": {
+            "samples": 207,
+            "mean": 3.229788908212561,
+            "p95": 4.64384,
+            "max": 5.020672
+          },
+          "draws": {
+            "samples": 264,
+            "mean": 31,
+            "p95": 31,
+            "max": 31
+          },
+          "gpuTimer": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "targets": 21,
+          "rayDimensions": [
+            1280,
+            800
+          ],
+          "configuration": {
+            "chapter": "finale",
+            "p": 0.4,
+            "manual": true,
+            "phase": {
+              "progress": 0.4,
+              "label": 0,
+              "travel": 0.9570312500000001,
+              "angle": 14.876033057851242,
+              "radius": 0.08447999999999997,
+              "figure": 0.10559999999999997,
+              "stars": 1,
+              "trails": 1,
+              "cloud": 0,
+              "collapse": 0,
+              "hole": 0,
+              "flare": 0,
+              "contact": 0,
+              "phase": "compress"
+            },
+            "orbit": {
+              "phase": 0,
+              "origin": 0,
+              "velocity": 0,
+              "latched": true,
+              "visited": true,
+              "captures": 1,
+              "resumePending": false
+            },
+            "selected": "edura",
+            "reduced": false,
+            "language": "vi",
+            "visible": true,
+            "trailVisible": true,
+            "trailSum": -234546.8057602644,
+            "ambientVisible": false,
+            "groups": [
+              {
+                "name": "works-edura",
+                "position": [
+                  -36.084279745054346,
+                  -3.060996872397828,
+                  8.234823459701154
+                ],
+                "world": [
+                  0.6917570258227599,
+                  0.45886015818576054,
+                  -199.33150821869026
+                ],
+                "scale": [
+                  0.38044149578088865,
+                  0.38044149578088865,
+                  0.38044149578088865
+                ]
+              },
+              {
+                "name": "works-veris",
+                "position": [
+                  -35.69622597806456,
+                  -3.575984973370581,
+                  8.234823459701154
+                ],
+                "world": [
+                  0.8254593661921277,
+                  -0.055887621504556506,
+                  -198.96687569449347
+                ],
+                "scale": [
+                  0.38044149578088865,
+                  0.38044149578088865,
+                  0.38044149578088865
+                ]
+              },
+              {
+                "name": "works-vie",
+                "position": [
+                  -34.353293133990825,
+                  -3.2209722295088428,
+                  8.234823459701154
+                ],
+                "world": [
+                  1.348494899004379,
+                  0.2989594542228602,
+                  -197.72993589957224
+                ],
+                "scale": [
+                  0.38044149578088865,
+                  0.38044149578088865,
+                  0.38044149578088865
+                ]
+              }
+            ],
+            "camera": [
+              1.9140625000000002,
+              4,
+              -160
+            ],
+            "cameraError": 0,
+            "hole": 0,
+            "gas": [
+              0,
+              0,
+              0,
+              0.4
+            ],
+            "enabled": 1,
+            "rayCenter": [
+              0.6705408643947874,
+              0.5840649651502674
+            ],
+            "visibility": 1,
+            "labels": {
+              "hidden": false,
+              "inert": true,
+              "opacity": 0,
+              "visibility": "hidden",
+              "ariaHidden": null,
+              "top": -16.09375,
+              "height": 900
+            },
+            "contactText": {
+              "hidden": false,
+              "inert": true,
+              "opacity": 0,
+              "visibility": "hidden",
+              "ariaHidden": null,
+              "top": 143.90625,
+              "height": 975.421875
+            },
+            "contact": {
+              "hidden": false,
+              "inert": false,
+              "opacity": 1,
+              "visibility": "visible",
+              "ariaHidden": null,
+              "top": 1214.90625,
+              "height": 1263.421875
+            },
+            "domProgress": 0.4000462962962963,
+            "finaleHeightVH": 2.25,
+            "y": 9991,
+            "dpr": 1.75,
+            "tier": "high",
+            "glError": 0,
+            "memory": {
+              "geometries": 13,
+              "textures": 23
+            },
+            "copyOctaves": 4,
+            "compiledOctaves": 4,
+            "trailVertices": 2112,
+            "canvas": 1,
+            "cameraWriters": 1,
+            "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+            "viewport": [
+              1440,
+              900
+            ],
+            "focus": "",
+            "triggers": [
+              "stellar-nav-auto-hide",
+              "anonymous",
+              "anonymous"
+            ],
+            "targets": 21
+          }
+        },
+        {
+          "label": "maxDPR-0.58",
+          "p": 0.58,
+          "fps": 165.12961116647176,
+          "frames": 265,
+          "elapsed": 1604.8000000002794,
+          "cpuMs": {
+            "samples": 265,
+            "mean": 0.5449056603840359,
+            "p95": 1,
+            "max": 1.7999999998137355
+          },
+          "gpuMs": {
+            "samples": 234,
+            "mean": 3.0620850598290597,
+            "p95": 4.201472,
+            "max": 6.326272
+          },
+          "draws": {
+            "samples": 265,
+            "mean": 24,
+            "p95": 24,
+            "max": 24
+          },
+          "gpuTimer": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "targets": 21,
+          "rayDimensions": [
+            1280,
+            800
+          ],
+          "configuration": {
+            "chapter": "finale",
+            "p": 0.58,
+            "manual": true,
+            "phase": {
+              "progress": 0.58,
+              "label": 0,
+              "travel": 1,
+              "angle": 18,
+              "radius": 0,
+              "figure": 0,
+              "stars": 0,
+              "trails": 0,
+              "cloud": 1,
+              "collapse": 0,
+              "hole": 0,
+              "flare": 0,
+              "contact": 0,
+              "phase": "nebula"
+            },
+            "orbit": {
+              "phase": 0,
+              "origin": 0,
+              "velocity": 0,
+              "latched": true,
+              "visited": true,
+              "captures": 1,
+              "resumePending": false
+            },
+            "selected": "edura",
+            "reduced": false,
+            "language": "vi",
+            "visible": false,
+            "trailVisible": true,
+            "trailSum": -234546.8057602644,
+            "ambientVisible": false,
+            "groups": [
+              {
+                "name": "works-edura",
+                "position": [
+                  -36.084279745054346,
+                  -3.060996872397828,
+                  8.234823459701154
+                ],
+                "world": [
+                  0.6917570258227599,
+                  0.45886015818576054,
+                  -199.33150821869026
+                ],
+                "scale": [
+                  0.38044149578088865,
+                  0.38044149578088865,
+                  0.38044149578088865
+                ]
+              },
+              {
+                "name": "works-veris",
+                "position": [
+                  -35.69622597806456,
+                  -3.575984973370581,
+                  8.234823459701154
+                ],
+                "world": [
+                  0.8254593661921277,
+                  -0.055887621504556506,
+                  -198.96687569449347
+                ],
+                "scale": [
+                  0.38044149578088865,
+                  0.38044149578088865,
+                  0.38044149578088865
+                ]
+              },
+              {
+                "name": "works-vie",
+                "position": [
+                  -34.353293133990825,
+                  -3.2209722295088428,
+                  8.234823459701154
+                ],
+                "world": [
+                  1.348494899004379,
+                  0.2989594542228602,
+                  -197.72993589957224
+                ],
+                "scale": [
+                  0.38044149578088865,
+                  0.38044149578088865,
+                  0.38044149578088865
+                ]
+              }
+            ],
+            "camera": [
+              2,
+              4,
+              -160
+            ],
+            "cameraError": 0,
+            "hole": 0,
+            "gas": [
+              1,
+              0,
+              0,
+              0.58
+            ],
+            "enabled": 1,
+            "rayCenter": [
+              0.7500695363920289,
+              0.5755375076347615
+            ],
+            "visibility": 1,
+            "labels": {
+              "hidden": false,
+              "inert": true,
+              "opacity": 0,
+              "visibility": "hidden",
+              "ariaHidden": null,
+              "top": -16,
+              "height": 900
+            },
+            "contactText": {
+              "hidden": false,
+              "inert": true,
+              "opacity": 0,
+              "visibility": "hidden",
+              "ariaHidden": null,
+              "top": 144,
+              "height": 975.421875
+            },
+            "contact": {
+              "hidden": false,
+              "inert": false,
+              "opacity": 1,
+              "visibility": "visible",
+              "ariaHidden": null,
+              "top": 850.5,
+              "height": 1263.421875
+            },
+            "domProgress": 0.58,
+            "finaleHeightVH": 2.25,
+            "y": 10355.40625,
+            "dpr": 1.75,
+            "tier": "high",
+            "glError": 0,
+            "memory": {
+              "geometries": 13,
+              "textures": 23
+            },
+            "copyOctaves": 4,
+            "compiledOctaves": 4,
+            "trailVertices": 2112,
+            "canvas": 1,
+            "cameraWriters": 1,
+            "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+            "viewport": [
+              1440,
+              900
+            ],
+            "focus": "",
+            "triggers": [
+              "stellar-nav-auto-hide",
+              "anonymous",
+              "anonymous"
+            ],
+            "targets": 21
+          }
+        },
+        {
+          "label": "maxDPR-0.75",
+          "p": 0.75,
+          "fps": 164.95876030988413,
+          "frames": 264,
+          "elapsed": 1600.4000000003725,
+          "cpuMs": {
+            "samples": 264,
+            "mean": 0.4643939394048754,
+            "p95": 0.7000000001862645,
+            "max": 1.5
+          },
+          "gpuMs": {
+            "samples": 231,
+            "mean": 3.1570655584415577,
+            "p95": 4.189184,
+            "max": 8.262656
+          },
+          "draws": {
+            "samples": 264,
+            "mean": 24,
+            "p95": 24,
+            "max": 24
+          },
+          "gpuTimer": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "targets": 21,
+          "rayDimensions": [
+            1280,
+            800
+          ],
+          "configuration": {
+            "chapter": "finale",
+            "p": 0.75,
+            "manual": true,
+            "phase": {
+              "progress": 0.75,
+              "label": 0,
+              "travel": 1,
+              "angle": 18,
+              "radius": 0,
+              "figure": 0,
+              "stars": 0,
+              "trails": 0,
+              "cloud": 0.9259259259259258,
+              "collapse": 0.07407407407407418,
+              "hole": 0.09672280382339571,
+              "flare": 0,
+              "contact": 0,
+              "phase": "accrete"
+            },
+            "orbit": {
+              "phase": 0,
+              "origin": 0,
+              "velocity": 0,
+              "latched": true,
+              "visited": true,
+              "captures": 1,
+              "resumePending": false
+            },
+            "selected": "edura",
+            "reduced": false,
+            "language": "vi",
+            "visible": false,
+            "trailVisible": true,
+            "trailSum": -234546.8057602644,
+            "ambientVisible": false,
+            "groups": [
+              {
+                "name": "works-edura",
+                "position": [
+                  -36.084279745054346,
+                  -3.060996872397828,
+                  8.234823459701154
+                ],
+                "world": [
+                  0.6917570258227599,
+                  0.45886015818576054,
+                  -199.33150821869026
+                ],
+                "scale": [
+                  0.38044149578088865,
+                  0.38044149578088865,
+                  0.38044149578088865
+                ]
+              },
+              {
+                "name": "works-veris",
+                "position": [
+                  -35.69622597806456,
+                  -3.575984973370581,
+                  8.234823459701154
+                ],
+                "world": [
+                  0.8254593661921277,
+                  -0.055887621504556506,
+                  -198.96687569449347
+                ],
+                "scale": [
+                  0.38044149578088865,
+                  0.38044149578088865,
+                  0.38044149578088865
+                ]
+              },
+              {
+                "name": "works-vie",
+                "position": [
+                  -34.353293133990825,
+                  -3.2209722295088428,
+                  8.234823459701154
+                ],
+                "world": [
+                  1.348494899004379,
+                  0.2989594542228602,
+                  -197.72993589957224
+                ],
+                "scale": [
+                  0.38044149578088865,
+                  0.38044149578088865,
+                  0.38044149578088865
+                ]
+              }
+            ],
+            "camera": [
+              2,
+              4,
+              -160
+            ],
+            "cameraError": 0,
+            "hole": 0.09672280382339571,
+            "gas": [
+              0.9259259259259258,
+              0.07407407407407418,
+              0,
+              0.75
+            ],
+            "enabled": 1,
+            "rayCenter": [
+              0.7500695363920289,
+              0.5755375076347615
+            ],
+            "visibility": 1,
+            "labels": {
+              "hidden": false,
+              "inert": true,
+              "opacity": 0,
+              "visibility": "hidden",
+              "ariaHidden": null,
+              "top": -16,
+              "height": 900
+            },
+            "contactText": {
+              "hidden": false,
+              "inert": true,
+              "opacity": 0,
+              "visibility": "hidden",
+              "ariaHidden": null,
+              "top": 144,
+              "height": 975.421875
+            },
+            "contact": {
+              "hidden": false,
+              "inert": false,
+              "opacity": 1,
+              "visibility": "visible",
+              "ariaHidden": null,
+              "top": 506.25,
+              "height": 1263.421875
+            },
+            "domProgress": 0.75,
+            "finaleHeightVH": 2.25,
+            "y": 10699.65625,
+            "dpr": 1.75,
+            "tier": "high",
+            "glError": 0,
+            "memory": {
+              "geometries": 13,
+              "textures": 23
+            },
+            "copyOctaves": 4,
+            "compiledOctaves": 4,
+            "trailVertices": 2112,
+            "canvas": 1,
+            "cameraWriters": 1,
+            "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+            "viewport": [
+              1440,
+              900
+            ],
+            "focus": "",
+            "triggers": [
+              "stellar-nav-auto-hide",
+              "anonymous",
+              "anonymous"
+            ],
+            "targets": 21
+          }
+        },
+        {
+          "label": "medium-maxDPR",
+          "p": 0.58,
+          "fps": 165.13990153925727,
+          "frames": 265,
+          "elapsed": 1604.6999999997206,
+          "cpuMs": {
+            "samples": 265,
+            "mean": 0.559622641499945,
+            "p95": 0.8999999999068677,
+            "max": 2.7000000001862645
+          },
+          "gpuMs": {
+            "samples": 236,
+            "mean": 2.778057220338984,
+            "p95": 3.851264,
+            "max": 4.692992
+          },
+          "draws": {
+            "samples": 265,
+            "mean": 24,
+            "p95": 24,
+            "max": 24
+          },
+          "gpuTimer": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "targets": 0,
+          "rayDimensions": [
+            922,
+            1024
+          ],
+          "configuration": {
+            "chapter": "finale",
+            "p": 0.58,
+            "manual": true,
+            "phase": {
+              "progress": 0.58,
+              "label": 0,
+              "travel": 1,
+              "angle": 18,
+              "radius": 0,
+              "figure": 0,
+              "stars": 0,
+              "trails": 0,
+              "cloud": 1,
+              "collapse": 0,
+              "hole": 0,
+              "flare": 0,
+              "contact": 0,
+              "phase": "nebula"
+            },
+            "orbit": {
+              "phase": 0,
+              "origin": 0,
+              "velocity": 0,
+              "latched": true,
+              "visited": true,
+              "captures": 1,
+              "resumePending": false
+            },
+            "selected": "edura",
+            "reduced": false,
+            "language": "vi",
+            "visible": false,
+            "trailVisible": true,
+            "trailSum": 0,
+            "ambientVisible": false,
+            "groups": [
+              {
+                "name": "works-edura",
+                "position": [
+                  -36.084279745054346,
+                  -3.060996872397828,
+                  8.234823459701154
+                ],
+                "world": [
+                  -6.881482574428301,
+                  0.2469183582818446,
+                  -198.71104898717414
+                ],
+                "scale": [
+                  0.38044149578088865,
+                  0.38044149578088865,
+                  0.38044149578088865
+                ]
+              },
+              {
+                "name": "works-veris",
+                "position": [
+                  -35.69622597806456,
+                  -3.575984973370581,
+                  8.234823459701154
+                ],
+                "world": [
+                  -6.686353939310106,
+                  -0.26756898597404,
+                  -198.37485550333497
+                ],
+                "scale": [
+                  0.38044149578088865,
+                  0.38044149578088865,
+                  0.38044149578088865
+                ]
+              },
+              {
+                "name": "works-vie",
+                "position": [
+                  -34.353293133990825,
+                  -3.2209722295088428,
+                  8.234823459701154
+                ],
+                "world": [
+                  -5.93248184354389,
+                  0.0870985557058872,
+                  -197.26337429787083
+                ],
+                "scale": [
+                  0.38044149578088865,
+                  0.38044149578088865,
+                  0.38044149578088865
+                ]
+              }
+            ],
+            "camera": [
+              2,
+              4,
+              -160
+            ],
+            "cameraError": 0,
+            "hole": 0,
+            "gas": [
+              1,
+              0,
+              0,
+              0.58
+            ],
+            "enabled": 1,
+            "rayCenter": [
+              0.6949057007040207,
+              0.6906453063029134
+            ],
+            "visibility": 1,
+            "labels": {
+              "hidden": false,
+              "inert": true,
+              "opacity": 0,
+              "visibility": "hidden",
+              "ariaHidden": null,
+              "top": -16,
+              "height": 1000
+            },
+            "contactText": {
+              "hidden": false,
+              "inert": true,
+              "opacity": 0,
+              "visibility": "hidden",
+              "ariaHidden": null,
+              "top": 96,
+              "height": 830.421875
+            },
+            "contact": {
+              "hidden": false,
+              "inert": false,
+              "opacity": 1,
+              "visibility": "visible",
+              "ariaHidden": null,
+              "top": 945,
+              "height": 1022.421875
+            },
+            "domProgress": 0.58,
+            "finaleHeightVH": 2.25,
+            "y": 11724,
+            "dpr": 1.5,
+            "tier": "medium",
+            "glError": 0,
+            "memory": {
+              "geometries": 12,
+              "textures": 23
+            },
+            "copyOctaves": 3,
+            "compiledOctaves": 3,
+            "trailVertices": 1584,
+            "canvas": 1,
+            "cameraWriters": 1,
+            "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+            "viewport": [
+              900,
+              1000
+            ],
+            "focus": "",
+            "triggers": [
+              "stellar-nav-auto-hide",
+              "anonymous",
+              "anonymous"
+            ],
+            "targets": 0
+          }
+        }
+      ],
+      "lifecycle": [],
+      "errors": [],
+      "warnings": [
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+      ],
+      "keyboard": {
+        "focus": "",
+        "inertAncestor": false
+      },
+      "navContact": {
+        "chapter": "contact",
+        "p": 0.000007084665273020979,
+        "manual": false,
+        "phase": {
+          "progress": 1,
+          "label": 0,
+          "travel": 1,
+          "angle": 18,
+          "radius": 0,
+          "figure": 0,
+          "stars": 0,
+          "trails": 0,
+          "cloud": 0,
+          "collapse": 1,
+          "hole": 1,
+          "flare": 0,
+          "contact": 1,
+          "phase": "accrete"
+        },
+        "orbit": {
+          "phase": 0,
+          "origin": 0,
+          "velocity": 0,
+          "latched": true,
+          "visited": true,
+          "captures": 2,
+          "resumePending": false
+        },
+        "selected": "edura",
+        "reduced": false,
+        "language": "vi",
+        "visible": false,
+        "trailVisible": false,
+        "trailSum": -219165.56701385975,
+        "ambientVisible": true,
+        "groups": [
+          {
+            "name": "works-edura",
+            "position": [
+              7.75958761790857,
+              1.2316805742712016,
+              0
+            ],
+            "world": [
+              24.324292859456428,
+              4.1723616835967245,
+              -166.78434266340238
+            ],
+            "scale": [
+              4.002961866381406,
+              4.002961866381406,
+              4.002961866381406
+            ]
+          },
+          {
+            "name": "works-veris",
+            "position": [
+              -3.8797938089542834,
+              5.765013907604535,
+              0
+            ],
+            "world": [
+              18.070236029563155,
+              8.70128695951634,
+              -176.6027906122746
+            ],
+            "scale": [
+              4.002961866381406,
+              4.002961866381406,
+              4.002961866381406
+            ]
+          },
+          {
+            "name": "works-vie",
+            "position": [
+              -3.8797938089542887,
+              -3.30165275906213,
+              0
+            ],
+            "world": [
+              17.736824711388877,
+              -0.3565635923228889,
+              -176.38228048120695
+            ],
+            "scale": [
+              4.002961866381406,
+              4.002961866381406,
+              4.002961866381406
+            ]
+          }
+        ],
+        "camera": [
+          2,
+          4,
+          -160
+        ],
+        "cameraError": 0,
+        "hole": 1,
+        "gas": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "enabled": 1,
+        "rayCenter": [
+          0.6949057007040207,
+          0.6906453063029134
+        ],
+        "visibility": 1,
+        "labels": {
+          "hidden": false,
+          "inert": false,
+          "opacity": 1,
+          "visibility": "visible",
+          "ariaHidden": null,
+          "top": -3850.005126953125,
+          "height": 1000
+        },
+        "contactText": {
+          "hidden": false,
+          "inert": false,
+          "opacity": 1,
+          "visibility": "visible",
+          "ariaHidden": null,
+          "top": 95.99485778808594,
+          "height": 830.421875
+        },
+        "contact": {
+          "hidden": false,
+          "inert": false,
+          "opacity": 1,
+          "visibility": "visible",
+          "ariaHidden": null,
+          "top": -0.005144000053405762,
+          "height": 1022.421875
+        },
+        "domProgress": 1,
+        "finaleHeightVH": 2.2499999829530717,
+        "y": 12669.005144,
+        "dpr": 1.5,
+        "tier": "medium",
+        "glError": 0,
+        "memory": {
+          "geometries": 14,
+          "textures": 23
+        },
+        "copyOctaves": 3,
+        "compiledOctaves": 3,
+        "trailVertices": 1584,
+        "canvas": 1,
+        "cameraWriters": 1,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "viewport": [
+          900,
+          1000
+        ],
+        "focus": "transmission",
+        "triggers": [
+          "stellar-nav-auto-hide",
+          "anonymous",
+          "anonymous"
+        ],
+        "targets": 0
+      },
+      "quietAmbientSeen": true
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "limits": [
+    "Desktop Edge with emulated viewport/touch/reduced-motion; not a physical phone.",
+    "Precise held poses synchronize DOM scroll then hold the existing story store; native-wheel stream separately exercises the live producer.",
+    "Pixel equality covers the actual Canvas; DOM screenshots are separate.",
+    "Hidden state is simulated through visibilitychange."
+  ],
+  "browser": "154.0.4258.62"
+}

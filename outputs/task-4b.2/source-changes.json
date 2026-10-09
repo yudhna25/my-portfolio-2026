@@ -1,0 +1,198 @@
+[
+  {
+    "path": "src/App.jsx",
+    "before": "CD46F68875C909DC99C1CDAF57EF41B61410024E6DC2C95701545239D713E84D",
+    "after": "F68DDB67716E3D211638D64F28D56AF122CDF05B0A94DC80EEED6255453DE632",
+    "exists": true,
+    "changed": true
+  },
+  {
+    "path": "src/components/layout/Nav.jsx",
+    "before": "BDAFC56843BDC72C59C83B309EB9F46B4F7C36DD53CD8EBFB985147A1C45ACD3",
+    "after": "D6B8948020B0E2C17E3A548D602830DE6B9D2DBD9B5FEAE1669312527E347A6F",
+    "exists": true,
+    "changed": true
+  },
+  {
+    "path": "src/components/layout/MenuOverlay.jsx",
+    "before": "941A1ED2D46A450AD6227DA87C1E0C94BF320E5FFDBFF4CD003F59C598BF791C",
+    "after": "747FDDC1F9E234EB7436D4DF72216E19D3EEF6F895A1ACC30F00004330C6EBA7",
+    "exists": true,
+    "changed": true
+  },
+  {
+    "path": "src/components/sections/Skills.jsx",
+    "before": "A03FBDD0ADCC0DC06E50DB0DAAD100051AB86196CCA992BB3F6E8ACE926E4E35",
+    "after": "6D195A9183AB6E68E2911D58E67D852F72E3CCF3CD564C9014CEDCA3F6EF09E2",
+    "exists": true,
+    "changed": true
+  },
+  {
+    "path": "src/components/Work.jsx",
+    "before": "925365623575262CC7B85CF9B54BC16A7DB66BC30CC17A5D705D915CA38D251C",
+    "after": "66EEC5D1552654AFCE5356741F2BEC046A6DE4AD98503C81C00AE04E55E441CF",
+    "exists": true,
+    "changed": true
+  },
+  {
+    "path": "src/3d/hooks/useScrollProgress.js",
+    "before": "A23D8C4A8EB00CE0D6F138E3EE44FE5BBBFB5EE249549B5C05F85C8FAA9E9EC2",
+    "after": "CDF9B3051CBD5D2059C2FAA8090C07990C4DD8748EB82FD25A936241011D13D5",
+    "exists": true,
+    "changed": true
+  },
+  {
+    "path": "src/data/navigation.js",
+    "before": "7DB651A51AC6B80309D9BA32AF57EC94CB9BE7CA678426C16D2332A62491BD60",
+    "after": "0E09DFC2377250A6356B0C2F7E8321A4687C0153D48E2BBAE99B3AFDFEDD6374",
+    "exists": true,
+    "changed": true
+  },
+  {
+    "path": "src/i18n/locales/vi.json",
+    "before": "E61B0B500FF7A59E8E7178AB566F95D24528BB330BA394152B4581823D34FB4C",
+    "after": "5FF82CCD32DA1A68CB87467978B36706185074BA579F7C1C7B0FC406E2AC8FA3",
+    "exists": true,
+    "changed": true
+  },
+  {
+    "path": "src/i18n/locales/en.json",
+    "before": "3D41860998B97ED3779831E0140E875867FE9143043040F15B42593FE4C245D7",
+    "after": "E912013674C9EE3106EE9F219732AB1F56D9B21F10077AADD9D11E923DE7749C",
+    "exists": true,
+    "changed": true
+  },
+  {
+    "path": "src/components/Marquee.jsx",
+    "before": "A5630272BA3EB5C127BA3E3287A89B63B9605CCCD06AC1916037F3AB3A36E23B",
+    "after": null,
+    "exists": false,
+    "changed": true
+  },
+  {
+    "path": "src/components/sections/Playground.jsx",
+    "before": "2ED20104ED4B9E0CD5B4E10E9D6BB6814DE488A8F505F0C9B80DA514A7A9ED62",
+    "after": null,
+    "exists": false,
+    "changed": true
+  },
+  {
+    "path": "src/components/effects/LiveDemo.jsx",
+    "before": "6BB8CBEF9BD8252D5259F3F52610A89B40AD7273770A53C06B1BA480A3EB17E0",
+    "after": null,
+    "exists": false,
+    "changed": true
+  },
+  {
+    "path": "src/components/effects/ScrollOrbitDemo.jsx",
+    "before": "010B9FDD03BCF5C55387E93C67E9CD3B86EC36B5077101AC84A2485AEAF4EB46",
+    "after": null,
+    "exists": false,
+    "changed": true
+  },
+  {
+    "path": "src/3d/components/ParticleFieldDemo.jsx",
+    "before": "83EDBC9574FC026555DA8723DDF9C50C90319E6638F14D50D61614BB0080B924",
+    "after": null,
+    "exists": false,
+    "changed": true
+  },
+  {
+    "path": "src/3d/components/ShaderPlaygroundDemo.jsx",
+    "before": "97DFE331476645BC00BC543629FFE17592F4A851B41A32B86F17094A11C31BF3",
+    "after": null,
+    "exists": false,
+    "changed": true
+  },
+  {
+    "path": "src/data/playground.js",
+    "before": "D2BCF794D0784312481134CE13414F39A3A11A2EF4ED89D6C345726E51345E76",
+    "after": null,
+    "exists": false,
+    "changed": true
+  },
+  {
+    "path": "src/styles/globals.css",
+    "before": "855DE5CA5CC96C0BA0A01E41FC4701C8CB8154A010E0AA542317C8DA856836D3",
+    "after": "855DE5CA5CC96C0BA0A01E41FC4701C8CB8154A010E0AA542317C8DA856836D3",
+    "exists": true,
+    "changed": false
+  },
+  {
+    "path": "src/index.css",
+    "before": "7CF5317063D0C2BD1EAECB90BD31DB5EA49E65CB2D5ADF358CF4E855A2E842C2",
+    "after": "841725AE774B1FE5FA942329FFF94438C544A27217BEEF4D3980DD3E593CC952",
+    "exists": true,
+    "changed": true
+  },
+  {
+    "path": "src/components/ui/SoundToggle.jsx",
+    "before": "DDB1CD7FF9D1E3784174DB1177F19EA07B90FFB8392208EE7B0AE8FF541DC38A",
+    "after": "DDB1CD7FF9D1E3784174DB1177F19EA07B90FFB8392208EE7B0AE8FF541DC38A",
+    "exists": true,
+    "changed": false
+  },
+  {
+    "path": "src/components/ui/ThemeToggle.jsx",
+    "before": "EA49D135CF8982854DE199F219AF72FC01197B9BAD1CF260E69E533E17363AFE",
+    "after": "EA49D135CF8982854DE199F219AF72FC01197B9BAD1CF260E69E533E17363AFE",
+    "exists": true,
+    "changed": false
+  },
+  {
+    "path": "src/lib/audioEngine.js",
+    "before": "CED5514AFB6AF3322B8793004275726CBC2B78D40F404C577C8ADFAE07AA99B1",
+    "after": "CED5514AFB6AF3322B8793004275726CBC2B78D40F404C577C8ADFAE07AA99B1",
+    "exists": true,
+    "changed": false
+  },
+  {
+    "path": "src/stores/useAudioStore.js",
+    "before": "421D14EAE90CDF5562E004E5FA937987D172CCE58E4A7B95924FECC241F8C8F8",
+    "after": "421D14EAE90CDF5562E004E5FA937987D172CCE58E4A7B95924FECC241F8C8F8",
+    "exists": true,
+    "changed": false
+  },
+  {
+    "path": "src/3d/GalaxyScene.jsx",
+    "before": "E39C49A452674A3E76485B98758B40BA9E5D018799F04509CB34AFB79554A648",
+    "after": "E39C49A452674A3E76485B98758B40BA9E5D018799F04509CB34AFB79554A648",
+    "exists": true,
+    "changed": false
+  },
+  {
+    "path": "src/3d/components/CameraRig.jsx",
+    "before": "3BEDF87E13FA8A3193CEF828D79412C179CB088B45356E27325EB570DDB70853",
+    "after": "3BEDF87E13FA8A3193CEF828D79412C179CB088B45356E27325EB570DDB70853",
+    "exists": true,
+    "changed": false
+  },
+  {
+    "path": "src/3d/shaders/blackHole.js",
+    "before": "6CB9002D236F12D481FA9B44DF89ADFA3DA932EADE9BBECDE95FB7EB70EBC3AD",
+    "after": "6CB9002D236F12D481FA9B44DF89ADFA3DA932EADE9BBECDE95FB7EB70EBC3AD",
+    "exists": true,
+    "changed": false
+  },
+  {
+    "path": "src/3d/components/Constellations.jsx",
+    "before": "02F1502255101E29F1A45872479D165A03D366E7C9668FE8BB6168B89F0C0EB5",
+    "after": "02F1502255101E29F1A45872479D165A03D366E7C9668FE8BB6168B89F0C0EB5",
+    "exists": true,
+    "changed": false
+  },
+  {
+    "path": "src/3d/components/StardustWake.jsx",
+    "before": "B7D39EF17020F46CC84AD7083A739CE222FF07B4D026355DD478B21AEEC9B0CE",
+    "after": "B7D39EF17020F46CC84AD7083A739CE222FF07B4D026355DD478B21AEEC9B0CE",
+    "exists": true,
+    "changed": false
+  },
+  {
+    "path": "src/3d/components/ShootingStars.jsx",
+    "before": "C0AB81784CA2ED24EA76655ECA18EC3C36B23AFE984CC898733BE6601242B36C",
+    "after": "C0AB81784CA2ED24EA76655ECA18EC3C36B23AFE984CC898733BE6601242B36C",
+    "exists": true,
+    "changed": false
+  }
+]

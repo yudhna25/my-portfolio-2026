@@ -1,0 +1,6 @@
+{
+  "fallback": {
+    "title": "Chế độ xem tĩnh",
+    "description": "Trình duyệt chưa tạo được WebGL2. Các điều khiển và nội dung vẫn hiển thị."
+  }
+}

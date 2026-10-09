@@ -1,0 +1,362 @@
+[
+  {
+    "label": "before-menu",
+    "locale": "vi",
+    "scroll": 7741,
+    "focus": "<button id=\"work-target-vie\" type=\"button\" data-work-target=\"vie\" aria-pressed=\"true\" aria-controls=\"work-preview\" aria-describedby=\"works-hint\" class=\"min-h-11 min-w-11 cursor-pointer border-b px-1 p",
+    "dialog": false,
+    "body": "dark",
+    "content": {
+      "x": 0,
+      "y": -7740.99853515625,
+      "width": 1440,
+      "height": 10962.328125,
+      "top": -7740.99853515625,
+      "right": 1440,
+      "bottom": 3221.32958984375,
+      "left": 0
+    },
+    "chapter": {
+      "x": 0,
+      "y": -0.09221000224351883,
+      "width": 1440,
+      "height": 1440,
+      "top": -0.09221000224351883,
+      "right": 1440,
+      "bottom": 1439.9077899977565,
+      "left": 0
+    },
+    "stage": {
+      "x": 0,
+      "y": 0.00007515624747611582,
+      "width": 1440,
+      "height": 900.00048828125,
+      "top": 0.00007515624747611582,
+      "right": 1440,
+      "bottom": 900.0005634374975,
+      "left": 0
+    },
+    "stageTransform": "translate(0px, 0.0923971px)",
+    "preview": "vie"
+  },
+  {
+    "label": "language-close-0",
+    "locale": "en",
+    "scroll": 7259,
+    "focus": "<button type=\"button\" aria-label=\"Open navigation menu\" aria-expanded=\"false\" aria-controls=\"stellar-menu\" aria-haspopup=\"dialog\" class=\"border border-white/20 inline-flex min-h-11 min-w-11 items-cent",
+    "dialog": false,
+    "body": "dark",
+    "content": {
+      "x": 0,
+      "y": -7259.03125,
+      "width": 1440,
+      "height": 10967.359375,
+      "top": -7259.03125,
+      "right": 1440,
+      "bottom": 3708.328125,
+      "left": 0
+    },
+    "chapter": {
+      "x": 0,
+      "y": 486.90606689453125,
+      "width": 1440,
+      "height": 1440,
+      "top": 486.90606689453125,
+      "right": 1440,
+      "bottom": 1926.9060668945312,
+      "left": 0
+    },
+    "stage": {
+      "x": 0,
+      "y": 486.90606689453125,
+      "width": 1440,
+      "height": 899.9999389648438,
+      "top": 486.90606689453125,
+      "right": 1440,
+      "bottom": 1386.906005859375,
+      "left": 0
+    },
+    "stageTransform": "translate(0px, 0px)",
+    "preview": "vie"
+  },
+  {
+    "label": "language-close-after-400",
+    "locale": "en",
+    "scroll": 7259,
+    "focus": "<button type=\"button\" aria-label=\"Open navigation menu\" aria-expanded=\"false\" aria-controls=\"stellar-menu\" aria-haspopup=\"dialog\" class=\"border border-white/20 inline-flex min-h-11 min-w-11 items-cent",
+    "dialog": false,
+    "body": "dark",
+    "content": {
+      "x": 0,
+      "y": -7259.00146484375,
+      "width": 1440,
+      "height": 10967.359375,
+      "top": -7259.00146484375,
+      "right": 1440,
+      "bottom": 3708.35791015625,
+      "left": 0
+    },
+    "chapter": {
+      "x": 0,
+      "y": 486.9358825683594,
+      "width": 1440,
+      "height": 1440,
+      "top": 486.9358825683594,
+      "right": 1440,
+      "bottom": 1926.9358825683594,
+      "left": 0
+    },
+    "stage": {
+      "x": 0,
+      "y": 486.9358825683594,
+      "width": 1440,
+      "height": 900,
+      "top": 486.9358825683594,
+      "right": 1440,
+      "bottom": 1386.9358825683594,
+      "left": 0
+    },
+    "stageTransform": "translate(0px, 0px)",
+    "preview": "vie"
+  },
+  {
+    "label": "language-close-after-800",
+    "locale": "en",
+    "scroll": 7259,
+    "focus": "<button type=\"button\" aria-label=\"Open navigation menu\" aria-expanded=\"false\" aria-controls=\"stellar-menu\" aria-haspopup=\"dialog\" class=\"border border-white/20 inline-flex min-h-11 min-w-11 items-cent",
+    "dialog": false,
+    "body": "dark",
+    "content": {
+      "x": 0,
+      "y": -7259.00146484375,
+      "width": 1440,
+      "height": 10967.359375,
+      "top": -7259.00146484375,
+      "right": 1440,
+      "bottom": 3708.35791015625,
+      "left": 0
+    },
+    "chapter": {
+      "x": 0,
+      "y": 486.9358825683594,
+      "width": 1440,
+      "height": 1440,
+      "top": 486.9358825683594,
+      "right": 1440,
+      "bottom": 1926.9358825683594,
+      "left": 0
+    },
+    "stage": {
+      "x": 0,
+      "y": 486.9358825683594,
+      "width": 1440,
+      "height": 900,
+      "top": 486.9358825683594,
+      "right": 1440,
+      "bottom": 1386.9358825683594,
+      "left": 0
+    },
+    "stageTransform": "translate(0px, 0px)",
+    "preview": "vie"
+  },
+  {
+    "label": "language-close-after-1200",
+    "locale": "en",
+    "scroll": 7259,
+    "focus": "<button type=\"button\" aria-label=\"Open navigation menu\" aria-expanded=\"false\" aria-controls=\"stellar-menu\" aria-haspopup=\"dialog\" class=\"border border-white/20 inline-flex min-h-11 min-w-11 items-cent",
+    "dialog": false,
+    "body": "dark",
+    "content": {
+      "x": 0,
+      "y": -7259.00146484375,
+      "width": 1440,
+      "height": 10967.359375,
+      "top": -7259.00146484375,
+      "right": 1440,
+      "bottom": 3708.35791015625,
+      "left": 0
+    },
+    "chapter": {
+      "x": 0,
+      "y": 486.9358825683594,
+      "width": 1440,
+      "height": 1440,
+      "top": 486.9358825683594,
+      "right": 1440,
+      "bottom": 1926.9358825683594,
+      "left": 0
+    },
+    "stage": {
+      "x": 0,
+      "y": 486.9358825683594,
+      "width": 1440,
+      "height": 900,
+      "top": 486.9358825683594,
+      "right": 1440,
+      "bottom": 1386.9358825683594,
+      "left": 0
+    },
+    "stageTransform": "translate(0px, 0px)",
+    "preview": "vie"
+  },
+  {
+    "label": "edura-click-0",
+    "locale": "en",
+    "scroll": 7259,
+    "focus": "<button id=\"work-target-edura\" type=\"button\" data-work-target=\"edura\" aria-pressed=\"true\" aria-controls=\"work-preview\" aria-describedby=\"works-hint\" class=\"min-h-11 min-w-11 cursor-pointer border-b px",
+    "dialog": false,
+    "body": "dark",
+    "content": {
+      "x": 0,
+      "y": -7259.00146484375,
+      "width": 1440,
+      "height": 10967.359375,
+      "top": -7259.00146484375,
+      "right": 1440,
+      "bottom": 3708.35791015625,
+      "left": 0
+    },
+    "chapter": {
+      "x": 0,
+      "y": 486.9358825683594,
+      "width": 1440,
+      "height": 1440,
+      "top": 486.9358825683594,
+      "right": 1440,
+      "bottom": 1926.9358825683594,
+      "left": 0
+    },
+    "stage": {
+      "x": 0,
+      "y": 486.9358825683594,
+      "width": 1440,
+      "height": 900,
+      "top": 486.9358825683594,
+      "right": 1440,
+      "bottom": 1386.9358825683594,
+      "left": 0
+    },
+    "stageTransform": "translate(0px, 0px)",
+    "preview": "edura"
+  },
+  {
+    "label": "edura-after-350",
+    "locale": "en",
+    "scroll": 7259,
+    "focus": "<button id=\"work-target-edura\" type=\"button\" data-work-target=\"edura\" aria-pressed=\"true\" aria-controls=\"work-preview\" aria-describedby=\"works-hint\" class=\"min-h-11 min-w-11 cursor-pointer border-b px",
+    "dialog": false,
+    "body": "dark",
+    "content": {
+      "x": 0,
+      "y": -7259.00146484375,
+      "width": 1440,
+      "height": 10967.359375,
+      "top": -7259.00146484375,
+      "right": 1440,
+      "bottom": 3708.35791015625,
+      "left": 0
+    },
+    "chapter": {
+      "x": 0,
+      "y": 486.9358825683594,
+      "width": 1440,
+      "height": 1440,
+      "top": 486.9358825683594,
+      "right": 1440,
+      "bottom": 1926.9358825683594,
+      "left": 0
+    },
+    "stage": {
+      "x": 0,
+      "y": 486.9358825683594,
+      "width": 1440,
+      "height": 900,
+      "top": 486.9358825683594,
+      "right": 1440,
+      "bottom": 1386.9358825683594,
+      "left": 0
+    },
+    "stageTransform": "translate(0px, 0px)",
+    "preview": "edura"
+  },
+  {
+    "label": "edura-after-800",
+    "locale": "en",
+    "scroll": 7259,
+    "focus": "<button id=\"work-target-edura\" type=\"button\" data-work-target=\"edura\" aria-pressed=\"true\" aria-controls=\"work-preview\" aria-describedby=\"works-hint\" class=\"min-h-11 min-w-11 cursor-pointer border-b px",
+    "dialog": false,
+    "body": "dark",
+    "content": {
+      "x": 0,
+      "y": -7259.00146484375,
+      "width": 1440,
+      "height": 10967.359375,
+      "top": -7259.00146484375,
+      "right": 1440,
+      "bottom": 3708.35791015625,
+      "left": 0
+    },
+    "chapter": {
+      "x": 0,
+      "y": 486.9358825683594,
+      "width": 1440,
+      "height": 1440,
+      "top": 486.9358825683594,
+      "right": 1440,
+      "bottom": 1926.9358825683594,
+      "left": 0
+    },
+    "stage": {
+      "x": 0,
+      "y": 486.9358825683594,
+      "width": 1440,
+      "height": 900,
+      "top": 486.9358825683594,
+      "right": 1440,
+      "bottom": 1386.9358825683594,
+      "left": 0
+    },
+    "stageTransform": "translate(0px, 0px)",
+    "preview": "edura"
+  },
+  {
+    "label": "edura-after-1200",
+    "locale": "en",
+    "scroll": 7259,
+    "focus": "<button id=\"work-target-edura\" type=\"button\" data-work-target=\"edura\" aria-pressed=\"true\" aria-controls=\"work-preview\" aria-describedby=\"works-hint\" class=\"min-h-11 min-w-11 cursor-pointer border-b px",
+    "dialog": false,
+    "body": "dark",
+    "content": {
+      "x": 0,
+      "y": -7259.00146484375,
+      "width": 1440,
+      "height": 10967.359375,
+      "top": -7259.00146484375,
+      "right": 1440,
+      "bottom": 3708.35791015625,
+      "left": 0
+    },
+    "chapter": {
+      "x": 0,
+      "y": 486.9358825683594,
+      "width": 1440,
+      "height": 1440,
+      "top": 486.9358825683594,
+      "right": 1440,
+      "bottom": 1926.9358825683594,
+      "left": 0
+    },
+    "stage": {
+      "x": 0,
+      "y": 486.9358825683594,
+      "width": 1440,
+      "height": 900,
+      "top": 486.9358825683594,
+      "right": 1440,
+      "bottom": 1386.9358825683594,
+      "left": 0
+    },
+    "stageTransform": "translate(0px, 0px)",
+    "preview": "edura"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "id": "S-ONCOURSE",
+  "requestedUrl": "https://oncoursesystems.com/making-school-data-work-fixing-fragmentation/",
+  "checkedAt": "2026-10-07T17:24:29.003673+00:00",
+  "status": 200,
+  "finalUrl": "https://oncoursesystems.com/making-school-data-work-fixing-fragmentation/",
+  "contentType": "text/html; charset=UTF-8",
+  "bytes": 191133,
+  "sha256": "943ef74b7a914ad9b5433d19203a61cd8356b2551afba04b6f381d8d5a699ae4",
+  "path": "outputs/redesign/r0.3/sources/oncourse-fragmentation.html"
+}

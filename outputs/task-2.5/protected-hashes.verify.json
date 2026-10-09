@@ -1,0 +1,86 @@
+[
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\quality.js",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\GalaxyScene.jsx",
+    "Unchanged": false
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\utils\\cameraPath.js",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\utils\\buildStarGeometry.js",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\hooks\\useScrollProgress.js",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\hooks\\useMediaQuery.js",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\hooks\\useLabScroll.js",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\shaders\\blackHole.js",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\BlackHole.jsx",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\BlackHoleBloomMask.jsx",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\BlackHoleSystem.jsx",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\StarField.jsx",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\SceneFallback.jsx",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\SceneBoundary.jsx",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\Nebula.jsx",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\LabTelemetry.jsx",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\CameraRig.jsx",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\i18n\\locales\\vi.json",
+    "Unchanged": false
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\i18n\\locales\\en.json",
+    "Unchanged": false
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\index.css",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\styles\\globals.css",
+    "Unchanged": true
+  }
+]

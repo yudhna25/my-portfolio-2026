@@ -1,0 +1,134 @@
+[
+  {
+    "path": "src/3d/components/BlackHole.jsx",
+    "sha256": "1e62819c2f5e7b4fd2924358075e7501e6f72b6b34e183e6d3e4018eeaefb5b7"
+  },
+  {
+    "path": "src/3d/components/BlackHoleBloomMask.jsx",
+    "sha256": "17b3d5b7b151b3f4e4999c09c181757985813a749a2fcd0980ee3b32bac92860"
+  },
+  {
+    "path": "src/3d/components/BlackHoleSystem.jsx",
+    "sha256": "0a819d7f98b63584dd4bc714ff0a0b493ccffd56909c4cab28d3ef3620e12ea5"
+  },
+  {
+    "path": "src/3d/components/CameraRig.jsx",
+    "sha256": "d663f8599b74c9afe04ebb3c9e788d266a90112a5cfc717cf7b39b0bbc7cf1f5"
+  },
+  {
+    "path": "src/3d/components/FloatingObjects.jsx",
+    "sha256": "4ea3294bd7fd84bc2f1e8ffe4fea5311340c51c3f3eec546ec209b08a3676020"
+  },
+  {
+    "path": "src/3d/components/LabTelemetry.jsx",
+    "sha256": "1749da481cb264283090c6c9614a41b14aeb89665e9655d7320294ae398ac6d2"
+  },
+  {
+    "path": "src/3d/components/Nebula.jsx",
+    "sha256": "2a54f4d72c36b38d47067431276f83d943989ca025505ba3cb9cb69dbd059c5e"
+  },
+  {
+    "path": "src/3d/components/OrbitalSkills.jsx",
+    "sha256": "bd1bd309ed827b675f7c814a2f83b0fdf9ad8a911b6aa24ce09d457a8c06bf2c"
+  },
+  {
+    "path": "src/3d/components/Planet.jsx",
+    "sha256": "5bc89aecc4712e61158ddecfc6c89aa763efa59cba0f4e6aa3a8811fcf867292"
+  },
+  {
+    "path": "src/3d/components/SceneBoundary.jsx",
+    "sha256": "f973636c5119c7080585c7e12a8194aabbc4c830cafec7e4274647aec5ee5507"
+  },
+  {
+    "path": "src/3d/components/SceneFallback.jsx",
+    "sha256": "b27c56d3b0e58d07ad02520facfafd6791b063a03854bf1b0e1fa8bcc6be42ff"
+  },
+  {
+    "path": "src/3d/components/ShootingStars.jsx",
+    "sha256": "4ba014ef795f759abdbb2bed99ea95c4cd39358e7a1485132dad1b099dfdb999"
+  },
+  {
+    "path": "src/3d/components/StarField.jsx",
+    "sha256": "411f8f09e9b9778240ac0b2b158ba68210b1e6bd921301a068b0484dd7be7389"
+  },
+  {
+    "path": "src/3d/GalaxyScene.jsx",
+    "sha256": "be194affad92f97ba970519205a5f1848dc1e83163735cba9058357e753a7f53"
+  },
+  {
+    "path": "src/3d/hooks/useLabScroll.js",
+    "sha256": "8dc5d4636179f9a2a3daa0941cece1ef25feaac16a32198bd1fa6af0636b7b0b"
+  },
+  {
+    "path": "src/3d/hooks/useMediaQuery.js",
+    "sha256": "26a20531953a9de2f74b3c57abda7b115a7437ed74b37fb5b2cfcbe0499974df"
+  },
+  {
+    "path": "src/3d/hooks/useScrollProgress.js",
+    "sha256": "32167c19bb8b7eda250ce4539fc8f1313621645fee2a1d0a84549298deec6dbe"
+  },
+  {
+    "path": "src/3d/hooks/useSectionAnchor.js",
+    "sha256": "8005fa7aa882bee990eadf8d2caf2937aa71d617eae40f353771afca2ee0e1a1"
+  },
+  {
+    "path": "src/3d/quality.js",
+    "sha256": "29e6ef90bb64c6f4877bfcc94ca604f9767d3928259ab5438ab22f2ac86ab1ed"
+  },
+  {
+    "path": "src/3d/shaders/blackHole.js",
+    "sha256": "15e75f9a13eb524517111b4542238e2591d03092d0b7905fb731dcb8e3be5d56"
+  },
+  {
+    "path": "src/3d/utils/buildStarGeometry.js",
+    "sha256": "e031f0b9665ed22eee431a1be173251ab59baa941653dfef4a495cc7cf9bf8e6"
+  },
+  {
+    "path": "src/3d/utils/cameraPath.js",
+    "sha256": "85fc600e91bf6300c3bde5b73f2ce32f109f659d3414c1723e18a8bec52d6210"
+  },
+  {
+    "path": "src/3d/utils/shootingStars.js",
+    "sha256": "d05827d6e3ed89164693f9b0bbb92fa29b72abd9558f010f6a2969d47b4e1387"
+  },
+  {
+    "path": "src/i18n/config.js",
+    "sha256": "70310c86fff22859c162bf0029819b11c6156b8d17ba49d56a49161bb4bd5ce3"
+  },
+  {
+    "path": "src/stores/useLangStore.js",
+    "sha256": "4feb341440e9997aa4da41186138099408fd42d0797bc627671210491d533060"
+  },
+  {
+    "path": "src/stores/useLoadingStore.js",
+    "sha256": "28171bb7e08ba1157051f9b4e130ee726d57ec9419e761499fbdda6006995ca3"
+  },
+  {
+    "path": "src/stores/useScrollStore.js",
+    "sha256": "86f34e27b444fb2d42943a89e651ddd3bbf9591534df1b13edf83ffaa33e745a"
+  },
+  {
+    "path": "src/stores/useThemeStore.js",
+    "sha256": "cf91b8e98b0671edbf0161bc24475b4a524e77bd116b9ed9cd3a539ef7ef5b2c"
+  },
+  {
+    "path": "src/styles/globals.css",
+    "sha256": "bf872dcec8ef805654bc49a3936ba883d8b3b6ad47e732663d1e56f9939a87ee"
+  },
+  {
+    "path": "src/styles/menu.css",
+    "sha256": "81562573ff09db54eec42e0d2de2327e9d250d8dbb3b7432818e577c609b4dc4"
+  },
+  {
+    "path": "src/App.jsx",
+    "sha256": "3ed63e643be089b62faadc25358fa089ef507426d250f2bb5cecb7f53381debd"
+  },
+  {
+    "path": "src/hooks/useGSAPSetup.js",
+    "sha256": "d0d776b48f380b21f6091e9b139ba9d079cc4db4a1be8b5640a0ed09e29d592d"
+  },
+  {
+    "path": "src/components/Hero.jsx",
+    "sha256": "22f5427ab667c6e31ecfdb677317f688a0d7a9013c66d4afdf0aa51b6b4a8a65"
+  }
+]

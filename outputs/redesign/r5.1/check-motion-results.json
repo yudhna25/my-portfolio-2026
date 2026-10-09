@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "checks": 40227,
+  "viewports": 5,
+  "forwardReversePairs": 2005,
+  "trailSamples": 128,
+  "ambientSlots": 3
+}

@@ -1,0 +1,130 @@
+[
+  {
+    "name": "slow wheel",
+    "state": {
+      "camera": [
+        -0.3149470435796396,
+        -0.0089793406345487,
+        18.248055411037242
+      ],
+      "direction": [
+        0.0031494548031590014,
+        0.00008979296064904676,
+        -0.9999950364235152
+      ],
+      "scrollProgress": 0.16666666666666666,
+      "currentSection": "hero",
+      "scrollY": 360,
+      "maxScroll": 2160,
+      "lastPointer": [
+        500,
+        400
+      ],
+      "blackHoleZ": -200,
+      "nativeReduced": false,
+      "reduced": false,
+      "nativeMode": false,
+      "fps": 1,
+      "calls": 7,
+      "commits": 4,
+      "livePointers": 1,
+      "pointerPeak": 1
+    }
+  },
+  {
+    "name": "fast end",
+    "state": {
+      "camera": [
+        0.43083171328977093,
+        0.3972229803189406,
+        109.66905046217641
+      ],
+      "direction": [
+        -0.004308243160553671,
+        -0.003972161601350837,
+        -0.9999828303391425
+      ],
+      "scrollProgress": 1,
+      "currentSection": "contact",
+      "scrollY": 2160,
+      "maxScroll": 2160,
+      "lastPointer": [
+        969,
+        118
+      ],
+      "blackHoleZ": -200,
+      "nativeReduced": false,
+      "reduced": false,
+      "nativeMode": false,
+      "fps": 1,
+      "calls": 7,
+      "commits": 4,
+      "livePointers": 1,
+      "pointerPeak": 1
+    }
+  },
+  {
+    "name": "mouse at 100,500",
+    "state": {
+      "camera": [
+        -0.7841987500177221,
+        -0.20073409752046356,
+        109.99999950972206
+      ],
+      "direction": [
+        0.007841730585038386,
+        0.0020072752117377434,
+        -0.9999672385171706
+      ],
+      "scrollProgress": 1,
+      "currentSection": "contact",
+      "scrollY": 2160,
+      "maxScroll": 2160,
+      "lastPointer": [
+        100,
+        500
+      ],
+      "blackHoleZ": -200,
+      "nativeReduced": false,
+      "reduced": false,
+      "nativeMode": false,
+      "fps": 1,
+      "calls": 7,
+      "commits": 4,
+      "livePointers": 1,
+      "pointerPeak": 1
+    }
+  },
+  {
+    "name": "frozen with real pointer and scroll",
+    "state": {
+      "camera": [
+        0,
+        0,
+        0
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "scrollProgress": 1,
+      "currentSection": "contact",
+      "scrollY": 2160,
+      "maxScroll": 2160,
+      "lastPointer": [
+        500,
+        400
+      ],
+      "blackHoleZ": -200,
+      "nativeReduced": false,
+      "reduced": true,
+      "nativeMode": false,
+      "fps": 1,
+      "calls": 7,
+      "commits": 5,
+      "livePointers": 1,
+      "pointerPeak": 1
+    }
+  }
+]

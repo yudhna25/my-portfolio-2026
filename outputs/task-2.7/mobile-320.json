@@ -1,0 +1,25 @@
+{
+  "cards": [
+    {
+      "clientWidth": 268,
+      "scrollWidth": 268,
+      "width": 270,
+      "x": 20
+    },
+    {
+      "clientWidth": 268,
+      "scrollWidth": 268,
+      "width": 270,
+      "x": 20
+    },
+    {
+      "clientWidth": 268,
+      "scrollWidth": 268,
+      "width": 270,
+      "x": 20
+    }
+  ],
+  "headingSize": "25.6px",
+  "scrollWidth": 310,
+  "width": 310
+}

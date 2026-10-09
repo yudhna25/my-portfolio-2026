@@ -1,0 +1,38 @@
+[
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\utils\\cameraPath.js",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\shaders\\blackHole.js",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\BlackHole.jsx",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\BlackHoleBloomMask.jsx",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\BlackHoleSystem.jsx",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\StarField.jsx",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\CameraRig.jsx",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\index.css",
+    "Unchanged": true
+  },
+  {
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\styles\\globals.css",
+    "Unchanged": true
+  }
+]

@@ -1,0 +1,214 @@
+{
+  "status": "pass",
+  "count": 52,
+  "results": [
+    {
+      "pass": true,
+      "message": "Exactly one loop per strip"
+    },
+    {
+      "pass": true,
+      "message": "Three animated tracks"
+    },
+    {
+      "pass": true,
+      "message": "No scroll triggers or velocity boost"
+    },
+    {
+      "pass": true,
+      "message": "Mono #050505 / #FAFAFA"
+    },
+    {
+      "pass": true,
+      "message": "Unbounded 3rem / 600"
+    },
+    {
+      "pass": true,
+      "message": "Both borders white / 0.08"
+    },
+    {
+      "pass": true,
+      "message": "Every bullet is gray"
+    },
+    {
+      "pass": true,
+      "message": "Mono strip keeps contrast in light theme"
+    },
+    {
+      "pass": true,
+      "message": "Exactly one loop per strip"
+    },
+    {
+      "pass": true,
+      "message": "Three animated tracks"
+    },
+    {
+      "pass": true,
+      "message": "en: unchanged locale content, once for assistive tech"
+    },
+    {
+      "pass": true,
+      "message": "en: decorative copies hidden from screen readers"
+    },
+    {
+      "pass": true,
+      "message": "Exactly one loop per strip"
+    },
+    {
+      "pass": true,
+      "message": "Three animated tracks"
+    },
+    {
+      "pass": true,
+      "message": "vi: unchanged locale content, once for assistive tech"
+    },
+    {
+      "pass": true,
+      "message": "vi: decorative copies hidden from screen readers"
+    },
+    {
+      "pass": true,
+      "message": "design: speed API and linear infinite loop"
+    },
+    {
+      "pass": true,
+      "message": "design: identical halves"
+    },
+    {
+      "pass": true,
+      "message": "design: midpoint -25%"
+    },
+    {
+      "pass": true,
+      "message": "design: seamless repeat boundary"
+    },
+    {
+      "pass": true,
+      "message": "projects: speed API and linear infinite loop"
+    },
+    {
+      "pass": true,
+      "message": "projects: identical halves"
+    },
+    {
+      "pass": true,
+      "message": "projects: midpoint -25%"
+    },
+    {
+      "pass": true,
+      "message": "projects: seamless repeat boundary"
+    },
+    {
+      "pass": true,
+      "message": "collaboration: speed API and linear infinite loop"
+    },
+    {
+      "pass": true,
+      "message": "collaboration: identical halves"
+    },
+    {
+      "pass": true,
+      "message": "collaboration: midpoint -25%"
+    },
+    {
+      "pass": true,
+      "message": "collaboration: seamless repeat boundary"
+    },
+    {
+      "pass": true,
+      "message": "Live movement: left / right / left"
+    },
+    {
+      "pass": true,
+      "message": "Prop changes clean previous loops"
+    },
+    {
+      "pass": true,
+      "message": "Prop changes clean previous loops"
+    },
+    {
+      "pass": true,
+      "message": "Prop changes clean previous loops"
+    },
+    {
+      "pass": true,
+      "message": "Prop changes clean previous loops"
+    },
+    {
+      "pass": true,
+      "message": "320px: text stays within strip"
+    },
+    {
+      "pass": true,
+      "message": "320px: loop fills viewport"
+    },
+    {
+      "pass": true,
+      "message": "768px: text stays within strip"
+    },
+    {
+      "pass": true,
+      "message": "768px: loop fills viewport"
+    },
+    {
+      "pass": true,
+      "message": "1280px: text stays within strip"
+    },
+    {
+      "pass": true,
+      "message": "1280px: loop fills viewport"
+    },
+    {
+      "pass": true,
+      "message": "1920px: text stays within strip"
+    },
+    {
+      "pass": true,
+      "message": "1920px: loop fills viewport"
+    },
+    {
+      "pass": true,
+      "message": "Reduced motion: zero loops"
+    },
+    {
+      "pass": true,
+      "message": "Reduced motion: static, readable phrases"
+    },
+    {
+      "pass": true,
+      "message": "Exactly one loop per strip"
+    },
+    {
+      "pass": true,
+      "message": "Three animated tracks"
+    },
+    {
+      "pass": true,
+      "message": "Live reduced motion stays still and preserves the whole phrase"
+    },
+    {
+      "pass": true,
+      "message": "Exactly one loop per strip"
+    },
+    {
+      "pass": true,
+      "message": "Three animated tracks"
+    },
+    {
+      "pass": true,
+      "message": "Unmount: zero retained loops / triggers"
+    },
+    {
+      "pass": true,
+      "message": "Exactly one loop per strip"
+    },
+    {
+      "pass": true,
+      "message": "Three animated tracks"
+    },
+    {
+      "pass": true,
+      "message": "Zero runtime errors"
+    }
+  ]
+}

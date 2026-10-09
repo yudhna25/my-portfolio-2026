@@ -1,0 +1,1016 @@
+{
+  "projectId": "241524417",
+  "files": 26,
+  "uniqueContent": 24,
+  "totalBytes": 2878812,
+  "primaryAssetIds": [
+    "A02",
+    "A07",
+    "A09"
+  ],
+  "optionalAssetIds": [
+    "A10",
+    "A18",
+    "A19",
+    "A22"
+  ],
+  "newProductAssets": [],
+  "collectionCompleteness": "partial",
+  "licenseNote": "Owner authorized collection for this portfolio. Public visibility does not prove licenses for third-party classroom/persona photography; those decorative/persona images are not in the default selection.",
+  "assets": [
+    {
+      "id": "A01",
+      "cacheDiscoveryIndex": 1,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/5a7b7d241524417.695a8ca8f2616.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/5a7b7d241524417.695a8ca8f2616.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 114038,
+      "sha256": "b928d247ffddd2d40db8b30c6c031e5e010aee9aab27d56d11ae9cf7d6b55de4",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "cover-decoration",
+      "selection": "exclude",
+      "alt": {
+        "vi": "Bìa lớp học và biểu tượng EDURA.",
+        "en": "Classroom cover with the EDURA symbol."
+      },
+      "caption": {
+        "vi": "Ảnh trang trí, không bổ sung bằng chứng UI.",
+        "en": "Decorative cover; it adds no interface evidence."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Ảnh trang trí, không bổ sung bằng chứng UI.",
+      "recommendedDisplay": null
+    },
+    {
+      "id": "A02",
+      "cacheDiscoveryIndex": 2,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/b6e8ee241524417.695a8ca904163.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/b6e8ee241524417.695a8ca904163.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 92204,
+      "sha256": "cc792c5dfb8d3acaf30925372969711e6b18a19ca831e6cc9baa8e63900d9b23",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "edura-ui-overview",
+      "selection": "primary",
+      "alt": {
+        "vi": "Mockup trang tổng quan EDURA với bảng điểm, lịch học, học phí, khóa học, điểm danh, bài tập và tiến độ.",
+        "en": "EDURA overview mockup showing grades, schedules, tuition, courses, attendance, assignments and progress."
+      },
+      "caption": {
+        "vi": "Hình tổng quan UI EDURA. Các con số trên mockup là dữ liệu minh họa; hình này không mô tả một flow hoàn chỉnh.",
+        "en": "EDURA UI overview. Figures within the mockup are sample interface data; this image does not establish a complete flow."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Hình tổng quan UI EDURA. Các con số trên mockup là dữ liệu minh họa; hình này không mô tả một flow hoàn chỉnh.",
+      "recommendedDisplay": {
+        "intrinsic": [
+          1400,
+          989
+        ],
+        "desktopMaxCssWidth": 1280,
+        "mobileCssWidth": "viewport minus 32px; 288px at 320 / 358px at 390",
+        "fit": "contain; preserve full frame and original color",
+        "doNotUpscale": true,
+        "zoomOriginalForReading": true,
+        "bodyCopyRequired": true,
+        "legibility": "Embedded slide text is too small at mobile width. Provide the sourced Vi/En summary in DOM; an optional accessible original-image viewer may expose detail in R6. Do not claim every baked-in label is mobile-readable."
+      }
+    },
+    {
+      "id": "A03",
+      "cacheDiscoveryIndex": 3,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/771865241524417.695a8ca8f2f07.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/771865241524417.695a8ca8f2f07.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 44982,
+      "sha256": "8b0673e1181afa33e0ddfb5d0cc1140b9da190d042101367723c7b4f9d7813b7",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "gallery-contents",
+      "selection": "exclude",
+      "alt": {
+        "vi": "Mục lục tài liệu EDURA gồm giới thiệu, nhận diện, UX, UI và quảng cáo.",
+        "en": "EDURA contents page listing introduction, identity, UX, UI and advertising."
+      },
+      "caption": {
+        "vi": "Mục lục không chứng minh đã thu đủ các chương.",
+        "en": "A contents page does not establish that all chapters have been collected."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Mục lục không chứng minh đã thu đủ các chương.",
+      "recommendedDisplay": null
+    },
+    {
+      "id": "A04",
+      "cacheDiscoveryIndex": 4,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/0b4b55241524417.695a8ca8f38a8.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/0b4b55241524417.695a8ca8f38a8.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 30616,
+      "sha256": "d237d4b8c192cfb7f6825cf299fe10d1b24475b1e398717b2066aa6b6a40f63a",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "chapter-divider",
+      "selection": "exclude",
+      "alt": {
+        "vi": "Trang phân cách phần giới thiệu EDURA.",
+        "en": "EDURA introduction divider."
+      },
+      "caption": {
+        "vi": "Trang phân cách, không cần đưa vào reader.",
+        "en": "Chapter divider; omit it from the reader."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Trang phân cách, không cần đưa vào reader.",
+      "recommendedDisplay": null
+    },
+    {
+      "id": "A05",
+      "cacheDiscoveryIndex": 5,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/fcface241524417.695a8ca90580f.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/fcface241524417.695a8ca90580f.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 124238,
+      "sha256": "8204552a556ae90fcb70b4ce0c7e6ed20866bb70b1237c6ad11abb5c3f7d70e1",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "generic-lms-context",
+      "selection": "archive",
+      "alt": {
+        "vi": "Trang giải thích khái niệm LMS và các câu hỏi chung.",
+        "en": "Slide explaining LMS and general questions."
+      },
+      "caption": {
+        "vi": "Ngữ cảnh chung; không phải màn hình EDURA.",
+        "en": "General context, not an EDURA product screen."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Ngữ cảnh chung; không phải màn hình EDURA.",
+      "recommendedDisplay": null
+    },
+    {
+      "id": "A06",
+      "cacheDiscoveryIndex": 6,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/b87766241524417.695a8ca901f8c.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/b87766241524417.695a8ca901f8c.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 115284,
+      "sha256": "dd72c6daa130d014b357a71a2cef015917b73634e4ac2c614821c356d568846a",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "external-context",
+      "selection": "archive",
+      "alt": {
+        "vi": "Slide thực trạng với trích đoạn eLiterate.",
+        "en": "Situation slide containing an eLiterate excerpt."
+      },
+      "caption": {
+        "vi": "Chưa kiểm tra bài eLiterate gốc; không chuyển trích dẫn thành nghiên cứu EDURA.",
+        "en": "The original eLiterate article has not been verified; do not treat its excerpt as EDURA research."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Chưa kiểm tra bài eLiterate gốc; không chuyển trích dẫn thành nghiên cứu EDURA.",
+      "recommendedDisplay": null
+    },
+    {
+      "id": "A07",
+      "cacheDiscoveryIndex": 7,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/1457a2241524417.695a8ca903243.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/1457a2241524417.695a8ca903243.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 135960,
+      "sha256": "11e86ff9ffe00bf747a3b50db209e68658b08fcaa2989e4cb6300146b2fc1c4d",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "project-problem-framing",
+      "selection": "primary",
+      "alt": {
+        "vi": "Slide mô tả thông tin học tập phân tán và khó khăn theo dõi lịch học.",
+        "en": "Slide describing fragmented learning information and schedule tracking difficulties."
+      },
+      "caption": {
+        "vi": "Vấn đề được đặt ra trong tài liệu dự án; đây không phải kết quả thử nghiệm đã được xác minh.",
+        "en": "The problem as framed in the project materials, rather than a verified testing result."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Vấn đề được đặt ra trong tài liệu dự án; đây không phải kết quả thử nghiệm đã được xác minh.",
+      "recommendedDisplay": {
+        "intrinsic": [
+          1400,
+          989
+        ],
+        "desktopMaxCssWidth": 1280,
+        "mobileCssWidth": "viewport minus 32px; 288px at 320 / 358px at 390",
+        "fit": "contain; preserve full frame and original color",
+        "doNotUpscale": true,
+        "zoomOriginalForReading": true,
+        "bodyCopyRequired": true,
+        "legibility": "Embedded slide text is too small at mobile width. Provide the sourced Vi/En summary in DOM; an optional accessible original-image viewer may expose detail in R6. Do not claim every baked-in label is mobile-readable."
+      }
+    },
+    {
+      "id": "A08",
+      "cacheDiscoveryIndex": 8,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/2a4491241524417.695a8ca900c89.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/2a4491241524417.695a8ca900c89.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 173142,
+      "sha256": "800832981d065eacc93a343f8f802a14081d7ceffca177fffb9125ee846f8e8d",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "external-statistic",
+      "selection": "archive",
+      "alt": {
+        "vi": "Slide khó khăn dẫn số gần 60% từ OnCourse Systems, kèm ảnh lớp học.",
+        "en": "Challenges slide attributing a nearly 60% figure to OnCourse Systems, beside a classroom photo."
+      },
+      "caption": {
+        "vi": "Số liệu bên ngoài về giáo viên K–12; không phải học viên hoặc kết quả EDURA. Mốc 2024 trên slide khác kỳ khảo sát tháng 5/2023 trong bài gốc.",
+        "en": "External data about K–12 educators, not EDURA learners or an EDURA result. The slide’s 2024 label differs from the May 2023 survey described by the publisher."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Số liệu bên ngoài về giáo viên K–12; không phải học viên hoặc kết quả EDURA. Mốc 2024 trên slide khác kỳ khảo sát tháng 5/2023 trong bài gốc.",
+      "recommendedDisplay": null
+    },
+    {
+      "id": "A09",
+      "cacheDiscoveryIndex": 9,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/1463c6241524417.695a8ca906149.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/1463c6241524417.695a8ca906149.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 96112,
+      "sha256": "7714b0840765fecc8a397c5c3a03eb97da448d752090821752998948f8ba47a8",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "proposed-solution",
+      "selection": "primary",
+      "alt": {
+        "vi": "Slide định hướng EDURA: tập trung thông tin, hỗ trợ tự động, dashboard và tùy biến theo trung tâm.",
+        "en": "EDURA solution slide proposing centralized information, automated support, a dashboard and center-specific customization."
+      },
+      "caption": {
+        "vi": "Định hướng giải pháp trong concept. Chatbot và các lợi ích mô tả ở đây chưa được xác nhận là tính năng đã triển khai hoặc kết quả đo. Câu trong ngoặc kép ở đáy là thông điệp concept, không phải testimonial hay trích phỏng vấn đã xác minh.",
+        "en": "Proposed solution for the concept. The chatbot and stated benefits are not verified as implemented features or measured results. The quotation at the bottom is a concept statement, not a verified testimonial or interview excerpt."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Định hướng giải pháp trong concept. Chatbot và các lợi ích mô tả ở đây chưa được xác nhận là tính năng đã triển khai hoặc kết quả đo. Câu trong ngoặc kép ở đáy là thông điệp concept, không phải testimonial hay trích phỏng vấn đã xác minh.",
+      "recommendedDisplay": {
+        "intrinsic": [
+          1400,
+          989
+        ],
+        "desktopMaxCssWidth": 1280,
+        "mobileCssWidth": "viewport minus 32px; 288px at 320 / 358px at 390",
+        "fit": "contain; preserve full frame and original color",
+        "doNotUpscale": true,
+        "zoomOriginalForReading": true,
+        "bodyCopyRequired": true,
+        "legibility": "Embedded slide text is too small at mobile width. Provide the sourced Vi/En summary in DOM; an optional accessible original-image viewer may expose detail in R6. Do not claim every baked-in label is mobile-readable."
+      }
+    },
+    {
+      "id": "A10",
+      "cacheDiscoveryIndex": 10,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/3cbdcf241524417.695a8ca902a03.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/3cbdcf241524417.695a8ca902a03.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 112512,
+      "sha256": "ddbabdc1a2f1c0ea23e013794ae7d026eb58e899bbeb2b1b393455a4f07d4d25",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "segmentation-artifact",
+      "selection": "optional",
+      "alt": {
+        "vi": "Slide phân khúc học viên trong tài liệu EDURA.",
+        "en": "Learner segmentation slide in the EDURA materials."
+      },
+      "caption": {
+        "vi": "Artifact phân khúc; chưa có phương pháp nghiên cứu hoặc ownership cá nhân.",
+        "en": "A segmentation artifact; research methods and individual ownership are not documented."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Artifact phân khúc; chưa có phương pháp nghiên cứu hoặc ownership cá nhân.",
+      "recommendedDisplay": {
+        "intrinsic": [
+          1400,
+          989
+        ],
+        "desktopMaxCssWidth": 1280,
+        "mobileCssWidth": "viewport minus 32px; 288px at 320 / 358px at 390",
+        "fit": "contain; preserve full frame and original color",
+        "doNotUpscale": true,
+        "zoomOriginalForReading": true,
+        "bodyCopyRequired": true,
+        "legibility": "Embedded slide text is too small at mobile width. Provide the sourced Vi/En summary in DOM; an optional accessible original-image viewer may expose detail in R6. Do not claim every baked-in label is mobile-readable."
+      }
+    },
+    {
+      "id": "A11",
+      "cacheDiscoveryIndex": 11,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/c3b02a241524417.695a8ca90aa94.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/c3b02a241524417.695a8ca90aa94.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 142170,
+      "sha256": "c37e88cfe84f35818fe7e89af801da415db458c595abc9921f44bc5bf9981531",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "persona-artifact",
+      "selection": "archive",
+      "alt": {
+        "vi": "Persona học viên trẻ trong tài liệu EDURA.",
+        "en": "Young learner persona in the EDURA materials."
+      },
+      "caption": {
+        "vi": "Persona là artifact; không xác nhận đây là người tham gia nghiên cứu thật.",
+        "en": "A persona artifact; it is not verified as a real research participant."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Persona là artifact; không xác nhận đây là người tham gia nghiên cứu thật.",
+      "recommendedDisplay": null
+    },
+    {
+      "id": "A12",
+      "cacheDiscoveryIndex": 12,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/aac771241524417.695a8ca90a36a.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/aac771241524417.695a8ca90a36a.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 147304,
+      "sha256": "414853324fe035a8fac27418c9377e403e3767867eefbe29179c3f3295473827",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "persona-artifact",
+      "selection": "archive",
+      "alt": {
+        "vi": "Persona người đi làm trong tài liệu EDURA.",
+        "en": "Working learner persona in the EDURA materials."
+      },
+      "caption": {
+        "vi": "Persona là artifact; không xác nhận dữ liệu nghiên cứu gốc hoặc consent.",
+        "en": "A persona artifact; underlying research data and consent are not verified."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Persona là artifact; không xác nhận dữ liệu nghiên cứu gốc hoặc consent.",
+      "recommendedDisplay": null
+    },
+    {
+      "id": "A13",
+      "cacheDiscoveryIndex": 13,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/34630b241524417.695a8ca9038aa.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/34630b241524417.695a8ca9038aa.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 147086,
+      "sha256": "38013f9ec0d0c2bd5592ed05ab7061e359fa529e9b28313d3f93418760b093c1",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "persona-artifact",
+      "selection": "archive",
+      "alt": {
+        "vi": "Persona người đi làm thứ hai trong tài liệu EDURA.",
+        "en": "Second working learner persona in the EDURA materials."
+      },
+      "caption": {
+        "vi": "Persona là artifact; không xác nhận dữ liệu nghiên cứu gốc hoặc consent.",
+        "en": "A persona artifact; underlying research data and consent are not verified."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Persona là artifact; không xác nhận dữ liệu nghiên cứu gốc hoặc consent.",
+      "recommendedDisplay": null
+    },
+    {
+      "id": "A14",
+      "cacheDiscoveryIndex": 14,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/e996ad241524417.695a8ca8f4200.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/e996ad241524417.695a8ca8f4200.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 239922,
+      "sha256": "27cb6aeb18e35a858453448b3c625e9066a3a3dc16e84b4d90e8819e5389d1fb",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "classroom-decoration",
+      "selection": "exclude",
+      "alt": {
+        "vi": "Ảnh lớp học và hội trường.",
+        "en": "Classroom and lecture hall photographs."
+      },
+      "caption": {
+        "vi": "Ảnh bối cảnh trang trí, không phải bằng chứng UI.",
+        "en": "Decorative context photographs, not interface evidence."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Ảnh bối cảnh trang trí, không phải bằng chứng UI.",
+      "recommendedDisplay": null
+    },
+    {
+      "id": "A15",
+      "cacheDiscoveryIndex": 15,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/6f4a58241524417.695a8ca9069ed.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/6f4a58241524417.695a8ca9069ed.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 146686,
+      "sha256": "574f75f0a63e4cc30eb43297f2cd8217adfcdbfafd746d29db88d9ef3a3c36eb",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "competitor-apms",
+      "selection": "exclude",
+      "alt": {
+        "vi": "Phân tích trang chủ và tiện ích của APMS, không phải EDURA.",
+        "en": "Analysis of APMS home and utility screens, not EDURA."
+      },
+      "caption": {
+        "vi": "Chỉ dành cho phân tích đối chiếu APMS; tuyệt đối không đưa vào product gallery EDURA.",
+        "en": "APMS comparison analysis only; never include it in the EDURA product gallery."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Chỉ dành cho phân tích đối chiếu APMS; tuyệt đối không đưa vào product gallery EDURA.",
+      "recommendedDisplay": null
+    },
+    {
+      "id": "A16",
+      "cacheDiscoveryIndex": 16,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/be0e54241524417.695a8ca90b297.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/be0e54241524417.695a8ca90b297.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 180678,
+      "sha256": "4cac388c51cd41fb719f602d90e774733d2cb3c817cbc2b5fb4106f8af5ddacc",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "competitor-apms",
+      "selection": "exclude",
+      "alt": {
+        "vi": "Phân tích điểm danh và lịch học APMS, không phải EDURA.",
+        "en": "Analysis of APMS attendance and schedule screens, not EDURA."
+      },
+      "caption": {
+        "vi": "Màn hình đối thủ APMS; không dùng bổ sung flow EDURA.",
+        "en": "Competitor APMS screens; do not use them to fill an EDURA flow."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Màn hình đối thủ APMS; không dùng bổ sung flow EDURA.",
+      "recommendedDisplay": null
+    },
+    {
+      "id": "A17",
+      "cacheDiscoveryIndex": 17,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/d78a8f241524417.695a8ca905043.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/d78a8f241524417.695a8ca905043.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 134814,
+      "sha256": "69d301f2b6eafb084743c98d2b519f65f78090427e1681f612d52a470d9875e2",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "competitor-apms",
+      "selection": "exclude",
+      "alt": {
+        "vi": "Phân tích trang thêm và ngoại khóa APMS, không phải EDURA.",
+        "en": "Analysis of APMS more and extracurricular screens, not EDURA."
+      },
+      "caption": {
+        "vi": "Màn hình đối thủ APMS; không dùng bổ sung flow EDURA.",
+        "en": "Competitor APMS screens; do not use them to fill an EDURA flow."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Màn hình đối thủ APMS; không dùng bổ sung flow EDURA.",
+      "recommendedDisplay": null
+    },
+    {
+      "id": "A18",
+      "cacheDiscoveryIndex": 18,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/a81e82241524417.695a8ca9086ce.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/a81e82241524417.695a8ca9086ce.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 135324,
+      "sha256": "1b05999368e6be080421b9f96eb72a785cf9c9015d5b6e178c7c8117e63eade0",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "problem-solution-artifact",
+      "selection": "optional",
+      "alt": {
+        "vi": "Slide Problem/Solution của EDURA với hướng tập trung lịch học, bài tập và thông báo.",
+        "en": "EDURA Problem/Solution slide proposing centralized schedules, assignments and notifications."
+      },
+      "caption": {
+        "vi": "Chỉ dẫn định hướng concept. Quote trong slide chưa có phương pháp/consent; câu giảm căng thẳng không phải outcome đo được.",
+        "en": "Concept direction only. The quotation lacks documented methods or consent; reduced stress is not a measured outcome."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Chỉ dẫn định hướng concept. Quote trong slide chưa có phương pháp/consent; câu giảm căng thẳng không phải outcome đo được.",
+      "recommendedDisplay": {
+        "intrinsic": [
+          1400,
+          989
+        ],
+        "desktopMaxCssWidth": 1280,
+        "mobileCssWidth": "viewport minus 32px; 288px at 320 / 358px at 390",
+        "fit": "contain; preserve full frame and original color",
+        "doNotUpscale": true,
+        "zoomOriginalForReading": true,
+        "bodyCopyRequired": true,
+        "legibility": "Embedded slide text is too small at mobile width. Provide the sourced Vi/En summary in DOM; an optional accessible original-image viewer may expose detail in R6. Do not claim every baked-in label is mobile-readable."
+      }
+    },
+    {
+      "id": "A19",
+      "cacheDiscoveryIndex": 19,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/210b6c241524417.695a8ca909d49.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/210b6c241524417.695a8ca909d49.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 82744,
+      "sha256": "16f9a62018628bdae4de99d3bf265cd4d0301aef03934613cfbd3804412abd31",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "edura-splash-overview",
+      "selection": "optional",
+      "alt": {
+        "vi": "Mockup splash EDURA bên cạnh phần giới thiệu hệ sinh thái học tập.",
+        "en": "EDURA splash mockup beside its learning ecosystem introduction."
+      },
+      "caption": {
+        "vi": "Splash và mô tả concept. Kỳ vọng tăng hài lòng trên slide không phải kết quả đo.",
+        "en": "Splash and concept introduction. The stated expectation of greater satisfaction is not a measured result."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Splash và mô tả concept. Kỳ vọng tăng hài lòng trên slide không phải kết quả đo.",
+      "recommendedDisplay": {
+        "intrinsic": [
+          1400,
+          989
+        ],
+        "desktopMaxCssWidth": 1280,
+        "mobileCssWidth": "viewport minus 32px; 288px at 320 / 358px at 390",
+        "fit": "contain; preserve full frame and original color",
+        "doNotUpscale": true,
+        "zoomOriginalForReading": true,
+        "bodyCopyRequired": true,
+        "legibility": "Embedded slide text is too small at mobile width. Provide the sourced Vi/En summary in DOM; an optional accessible original-image viewer may expose detail in R6. Do not claim every baked-in label is mobile-readable."
+      }
+    },
+    {
+      "id": "A20",
+      "cacheDiscoveryIndex": 20,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/2b1abd241524417.695a8ca9016db.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/2b1abd241524417.695a8ca9016db.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 34270,
+      "sha256": "e037666df80e8e4fad80192bd35bb7d27958c7e2755f8fd915d9347000329a76",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "brand-message-decoration",
+      "selection": "exclude",
+      "alt": {
+        "vi": "Trang thông điệp thương hiệu EDURA trên nền xanh.",
+        "en": "EDURA brand message on a blue background."
+      },
+      "caption": {
+        "vi": "Lặp thông điệp, ưu tiên khoảng trống thay slide trang trí.",
+        "en": "Repeated brand messaging; prefer editorial space to a decorative slide."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Lặp thông điệp, ưu tiên khoảng trống thay slide trang trí.",
+      "recommendedDisplay": null
+    },
+    {
+      "id": "A21",
+      "cacheDiscoveryIndex": 21,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/5bea05241524417.695a8ca9049cf.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/5bea05241524417.695a8ca9049cf.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 63862,
+      "sha256": "f496d7198c97015962cf16517e1dedad22560b34af1f11eecc3aa0512f176744",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "chapter-divider",
+      "selection": "exclude",
+      "alt": {
+        "vi": "Trang phân cách Brand Identity của EDURA.",
+        "en": "EDURA Brand Identity divider."
+      },
+      "caption": {
+        "vi": "Trang phân cách; không chứng minh có đầy đủ brand system.",
+        "en": "Chapter divider; it does not prove a complete brand system."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Trang phân cách; không chứng minh có đầy đủ brand system.",
+      "recommendedDisplay": null
+    },
+    {
+      "id": "A22",
+      "cacheDiscoveryIndex": 22,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/ac4be7241524417.695a8ca90717b.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/ac4be7241524417.695a8ca90717b.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 62732,
+      "sha256": "702ecad3b50cf2b3e72b84a039fce06e28c675a98b965837ab656b8f7dcc13c8",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "identity-idea-artifact",
+      "selection": "optional",
+      "alt": {
+        "vi": "Trang ý tưởng logo ghi Education + App và Edu + A, kèm minh họa lưới với chữ Logo.",
+        "en": "Logo idea slide stating Education + App and Edu + A, with a grid illustration spelling Logo."
+      },
+      "caption": {
+        "vi": "Tài liệu giải thích ý tưởng nhận diện. Lưới có chữ Logo minh họa chung; không gọi đây là bản dựng hình hoàn chỉnh của logo EDURA.",
+        "en": "Identity idea artifact. The generic grid spells Logo; it is not evidence of a complete EDURA logo construction system."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Tài liệu giải thích ý tưởng nhận diện. Lưới có chữ Logo minh họa chung; không gọi đây là bản dựng hình hoàn chỉnh của logo EDURA.",
+      "recommendedDisplay": {
+        "intrinsic": [
+          1400,
+          989
+        ],
+        "desktopMaxCssWidth": 1280,
+        "mobileCssWidth": "viewport minus 32px; 288px at 320 / 358px at 390",
+        "fit": "contain; preserve full frame and original color",
+        "doNotUpscale": true,
+        "zoomOriginalForReading": true,
+        "bodyCopyRequired": true,
+        "legibility": "Embedded slide text is too small at mobile width. Provide the sourced Vi/En summary in DOM; an optional accessible original-image viewer may expose detail in R6. Do not claim every baked-in label is mobile-readable."
+      }
+    },
+    {
+      "id": "A23",
+      "cacheDiscoveryIndex": 23,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/7ff846241524417.695f893f238f0.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/7ff846241524417.695f893f238f0.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 104464,
+      "sha256": "b169ccddce693e5fe30d767b7738e518572f99dae32e0bf7329766c6ee17599d",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "brand-building-mockup",
+      "selection": "exclude",
+      "alt": {
+        "vi": "Mockup nhận diện EDURA trên mặt đứng công trình.",
+        "en": "EDURA identity mockup on a building facade."
+      },
+      "caption": {
+        "vi": "Ảnh trang trí thương hiệu, không hỗ trợ flow/UI.",
+        "en": "Decorative brand mockup, not evidence of a product flow or interface."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Ảnh trang trí thương hiệu, không hỗ trợ flow/UI.",
+      "recommendedDisplay": null
+    },
+    {
+      "id": "A24",
+      "cacheDiscoveryIndex": 24,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/0e07a1241524417.695f893f22f65.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/0e07a1241524417.695f893f22f65.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 56602,
+      "sha256": "35ea84aebe46219eed22ed881dee18dbe499cc498dd226ad5b42bcad07858482",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": null,
+      "classification": "brand-building-mockup",
+      "selection": "exclude",
+      "alt": {
+        "vi": "Bố cục khác của mockup công trình EDURA.",
+        "en": "Another composition of the EDURA building mockup."
+      },
+      "caption": {
+        "vi": "Không trùng byte với 23 nhưng cùng chủ đề trang trí; không cần dùng cả hai.",
+        "en": "Different bytes from A23, but the same decorative subject; no need to include both."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Không trùng byte với 23 nhưng cùng chủ đề trang trí; không cần dùng cả hai.",
+      "recommendedDisplay": null
+    },
+    {
+      "id": "A25",
+      "cacheDiscoveryIndex": 25,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/a594b3241524417.695f893fb8ca5.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/a594b3241524417.695f893fb8ca5.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 104464,
+      "sha256": "b169ccddce693e5fe30d767b7738e518572f99dae32e0bf7329766c6ee17599d",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": "A23",
+      "classification": "duplicate",
+      "selection": "exclude",
+      "alt": {
+        "vi": "Bản trùng byte của mockup công trình số 23.",
+        "en": "Byte-identical duplicate of building mockup 23."
+      },
+      "caption": {
+        "vi": "Trùng SHA-256 với A23; chỉ index, không nhân đôi gallery.",
+        "en": "Same SHA-256 as A23; index it without duplicating the gallery."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Trùng SHA-256 với A23; chỉ index, không nhân đôi gallery.",
+      "recommendedDisplay": null
+    },
+    {
+      "id": "A26",
+      "cacheDiscoveryIndex": 26,
+      "galleryOrderVerified": false,
+      "path": "outputs/visual-redesign-2026-10-07/edura/7e0667241524417.695f893fb8517.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/7e0667241524417.695f893fb8517.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "bytes": 56602,
+      "sha256": "35ea84aebe46219eed22ed881dee18dbe499cc498dd226ad5b42bcad07858482",
+      "format": "WebP",
+      "width": 1400,
+      "height": 989,
+      "mode": "RGB",
+      "decode": "pass",
+      "originalColorsPreserved": true,
+      "newDownload": false,
+      "duplicateOf": "A24",
+      "classification": "duplicate",
+      "selection": "exclude",
+      "alt": {
+        "vi": "Bản trùng byte của mockup công trình số 24.",
+        "en": "Byte-identical duplicate of building mockup 24."
+      },
+      "caption": {
+        "vi": "Trùng SHA-256 với A24; chỉ index, không nhân đôi gallery.",
+        "en": "Same SHA-256 as A24; index it without duplicating the gallery."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Trùng SHA-256 với A24; chỉ index, không nhân đôi gallery.",
+      "recommendedDisplay": null
+    }
+  ]
+}

@@ -1,0 +1,677 @@
+{
+  "baseURL": "http://127.0.0.1:4173",
+  "buildHash": "874f962d697c2e070df7a73678518e84618b5d318f91f2422da2bcbb93e3e9b7",
+  "testedUTC": "2026-10-08T17:52:18.726Z",
+  "results": [
+    {
+      "mobile": false,
+      "browser": "154.0.4258.62",
+      "buildHash": "874f962d697c2e070df7a73678518e84618b5d318f91f2422da2bcbb93e3e9b7",
+      "urls": [
+        "theme-init.js",
+        "pwa-maskable-512x512.png",
+        "pwa-maskable-192x192.png",
+        "pwa-512x512.png",
+        "pwa-192x192.png",
+        "project3.webp",
+        "project2.webp",
+        "project1.webp",
+        "index.html",
+        "favicon.svg",
+        "avatar.webp",
+        "avatar-cutout.webp",
+        "projects/edura/solution.webp",
+        "projects/edura/problem.webp",
+        "projects/edura/overview.webp",
+        "icons/ps.png",
+        "icons/pr.png",
+        "icons/figma.png",
+        "icons/ai.png",
+        "icons/ae.png",
+        "assets/WorksConstellations-DHp9z_8k.js",
+        "assets/workbox-window.prod.es5-BBnX5xw4.js",
+        "assets/unbounded-vietnamese-wght-normal-rat7GD3o.woff2",
+        "assets/unbounded-latin-wght-normal-D5afBTBx.woff2",
+        "assets/unbounded-latin-ext-wght-normal-D6H-S6MW.woff2",
+        "assets/unbounded-cyrillic-wght-normal-C627f1f8.woff2",
+        "assets/StoryMeteor-B-xOS4w7.js",
+        "assets/SkillsSymbols-CTNEZQio.js",
+        "assets/index-PBjIqXZT.js",
+        "assets/index-CMHWtCWO.css",
+        "assets/GalaxyScene-BbLHdmvp.js",
+        "assets/finale-lziJ5UqB.js",
+        "assets/events-9ce18a08.esm-BafMZYcI.js",
+        "assets/davinci-resolve-DTEn20Mv.webp",
+        "manifest.webmanifest"
+      ],
+      "online": {
+        "title": "EDURA LMS — UI/UX concept · Trần Vũ Anh Duy",
+        "canvas": 0,
+        "h1": "EDURA LMS",
+        "sw": "http://127.0.0.1:4173/sw.js",
+        "cacheNames": [
+          "workbox-precache-v2-http://127.0.0.1:4173/",
+          "stellar-fonts"
+        ],
+        "cacheURLs": [
+          "http://127.0.0.1:4173/theme-init.js?__WB_REVISION__=1570f92e7b57779254b474b4f0f569f4",
+          "http://127.0.0.1:4173/pwa-maskable-512x512.png?__WB_REVISION__=690135f20bf16acf08a197a564951296",
+          "http://127.0.0.1:4173/pwa-maskable-192x192.png?__WB_REVISION__=3d25cb23eee84a8adf44cae3c2f7dc51",
+          "http://127.0.0.1:4173/pwa-512x512.png?__WB_REVISION__=ac50f710678b8b86c2523eb644ac6c2c",
+          "http://127.0.0.1:4173/pwa-192x192.png?__WB_REVISION__=9563b5902f9a0db9fb6393a9c7c5fdf5",
+          "http://127.0.0.1:4173/project3.webp?__WB_REVISION__=094da48bfd78b9ee2f4a9e51c5003f10",
+          "http://127.0.0.1:4173/project2.webp?__WB_REVISION__=2787843b72f39deeb409fa0f660aad7e",
+          "http://127.0.0.1:4173/project1.webp?__WB_REVISION__=02d48c72691e7b34f5e78cce2c288548",
+          "http://127.0.0.1:4173/index.html?__WB_REVISION__=b64ec6667b9dee9b5c414af9196ac743",
+          "http://127.0.0.1:4173/favicon.svg?__WB_REVISION__=6ca2cd71334d81e8dadb0565d8cd8bc5",
+          "http://127.0.0.1:4173/avatar.webp?__WB_REVISION__=e9867eba7ff8c849c6347e075584e374",
+          "http://127.0.0.1:4173/avatar-cutout.webp?__WB_REVISION__=836afcc55be6a5f557c19e8d00c96516",
+          "http://127.0.0.1:4173/projects/edura/solution.webp?__WB_REVISION__=1bfe4c17c96999f20e1a06d26cb5e28b",
+          "http://127.0.0.1:4173/projects/edura/problem.webp?__WB_REVISION__=24d302ca79e7dddf07ba8c5a5b6bf80b",
+          "http://127.0.0.1:4173/projects/edura/overview.webp?__WB_REVISION__=84f990a81802ad7eb6fb256447f96cae",
+          "http://127.0.0.1:4173/icons/ps.png?__WB_REVISION__=845ff5a301d8d717e3855b3dae76052b",
+          "http://127.0.0.1:4173/icons/pr.png?__WB_REVISION__=6565cae8847f5e0aec86d6725c672738",
+          "http://127.0.0.1:4173/icons/figma.png?__WB_REVISION__=5eb1b232bddb97294a298d7150b0a859",
+          "http://127.0.0.1:4173/icons/ai.png?__WB_REVISION__=1ba39b2a3f523b28eb2315dfcd42aa72",
+          "http://127.0.0.1:4173/icons/ae.png?__WB_REVISION__=6814759441a9c9459e0f86aeb0e47030",
+          "http://127.0.0.1:4173/assets/WorksConstellations-DHp9z_8k.js",
+          "http://127.0.0.1:4173/assets/workbox-window.prod.es5-BBnX5xw4.js",
+          "http://127.0.0.1:4173/assets/unbounded-vietnamese-wght-normal-rat7GD3o.woff2",
+          "http://127.0.0.1:4173/assets/unbounded-latin-wght-normal-D5afBTBx.woff2",
+          "http://127.0.0.1:4173/assets/unbounded-latin-ext-wght-normal-D6H-S6MW.woff2",
+          "http://127.0.0.1:4173/assets/unbounded-cyrillic-wght-normal-C627f1f8.woff2",
+          "http://127.0.0.1:4173/assets/StoryMeteor-B-xOS4w7.js",
+          "http://127.0.0.1:4173/assets/SkillsSymbols-CTNEZQio.js",
+          "http://127.0.0.1:4173/assets/index-PBjIqXZT.js",
+          "http://127.0.0.1:4173/assets/index-CMHWtCWO.css",
+          "http://127.0.0.1:4173/assets/GalaxyScene-BbLHdmvp.js",
+          "http://127.0.0.1:4173/assets/finale-lziJ5UqB.js",
+          "http://127.0.0.1:4173/assets/events-9ce18a08.esm-BafMZYcI.js",
+          "http://127.0.0.1:4173/assets/davinci-resolve-DTEn20Mv.webp",
+          "http://127.0.0.1:4173/manifest.webmanifest?__WB_REVISION__=106bd21c09ba51da01fc4fd703c6f471",
+          "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2",
+          "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOlOV.woff2",
+          "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPb54C-s0.woff2",
+          "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTNVOVgaY.woff2",
+          "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPb94C-s0.woff2"
+        ]
+      },
+      "manifestErrors": [],
+      "uncachedBlocked": true,
+      "offlineReader": {
+        "online": false,
+        "canvas": 0,
+        "title": "EDURA LMS — UI/UX concept · Trần Vũ Anh Duy",
+        "lang": "vi",
+        "images": [
+          {
+            "url": "/projects/edura/overview.webp",
+            "width": 1400,
+            "height": 989,
+            "loaded": true
+          },
+          {
+            "url": "/projects/edura/problem.webp",
+            "width": 1400,
+            "height": 989,
+            "loaded": true
+          },
+          {
+            "url": "/projects/edura/solution.webp",
+            "width": 1400,
+            "height": 989,
+            "loaded": true
+          }
+        ],
+        "overflow": 0
+      },
+      "offlineMain": {
+        "sections": [
+          "hero",
+          "about",
+          "skills",
+          "education",
+          "experience",
+          "work",
+          "transmission"
+        ],
+        "canvas": 1,
+        "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+        "lock": false,
+        "focus": ""
+      },
+      "assets": [
+        {
+          "url": "/projects/edura/overview.webp",
+          "status": 200,
+          "bytes": 92204,
+          "hash": "cc792c5dfb8d3acaf30925372969711e6b18a19ca831e6cc9baa8e63900d9b23"
+        },
+        {
+          "url": "/projects/edura/problem.webp",
+          "status": 200,
+          "bytes": 135960,
+          "hash": "11e86ff9ffe00bf747a3b50db209e68658b08fcaa2989e4cb6300146b2fc1c4d"
+        },
+        {
+          "url": "/projects/edura/solution.webp",
+          "status": 200,
+          "bytes": 96112,
+          "hash": "7714b0840765fecc8a397c5c3a03eb97da448d752090821752998948f8ba47a8"
+        }
+      ],
+      "responses": [
+        {
+          "url": "http://127.0.0.1:4173/projects/edura",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/index-CMHWtCWO.css",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/theme-init.js",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/index-PBjIqXZT.js",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/unbounded-latin-wght-normal-D5afBTBx.woff2",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/unbounded-latin-ext-wght-normal-D6H-S6MW.woff2",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/unbounded-vietnamese-wght-normal-rat7GD3o.woff2",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/projects/edura/overview.webp",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/workbox-window.prod.es5-BBnX5xw4.js",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/projects/edura/problem.webp",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.svg",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/projects/edura/solution.webp",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/projects/edura/overview.webp",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/projects/edura/problem.webp",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/projects/edura/solution.webp",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/index-CMHWtCWO.css",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/theme-init.js",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/index-PBjIqXZT.js",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/unbounded-latin-wght-normal-D5afBTBx.woff2",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/unbounded-latin-ext-wght-normal-D6H-S6MW.woff2",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/unbounded-vietnamese-wght-normal-rat7GD3o.woff2",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/workbox-window.prod.es5-BBnX5xw4.js",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/project1.webp",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/finale-lziJ5UqB.js",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/GalaxyScene-BbLHdmvp.js",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/events-9ce18a08.esm-BafMZYcI.js",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.svg",
+          "status": 200,
+          "sw": true
+        }
+      ],
+      "errors": [],
+      "consoleErrors": [
+        {
+          "message": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+          "url": "http://127.0.0.1:4173/r62-uncached-network-probe.txt",
+          "phase": "intentional-offline-probe"
+        },
+        {
+          "message": "Failed to load resource: net::ERR_FAILED",
+          "url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap",
+          "phase": "offline-case"
+        },
+        {
+          "message": "Failed to load resource: net::ERR_FAILED",
+          "url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap",
+          "phase": "offline-main"
+        }
+      ],
+      "requestFailures": [
+        {
+          "url": "http://127.0.0.1:4173/r62-uncached-network-probe.txt",
+          "error": "net::ERR_INTERNET_DISCONNECTED",
+          "phase": "intentional-offline-probe"
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap",
+          "error": "net::ERR_FAILED",
+          "phase": "offline-case"
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap",
+          "error": "net::ERR_FAILED",
+          "phase": "offline-main"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "browser": "154.0.4258.62",
+      "buildHash": "874f962d697c2e070df7a73678518e84618b5d318f91f2422da2bcbb93e3e9b7",
+      "urls": [
+        "theme-init.js",
+        "pwa-maskable-512x512.png",
+        "pwa-maskable-192x192.png",
+        "pwa-512x512.png",
+        "pwa-192x192.png",
+        "project3.webp",
+        "project2.webp",
+        "project1.webp",
+        "index.html",
+        "favicon.svg",
+        "avatar.webp",
+        "avatar-cutout.webp",
+        "projects/edura/solution.webp",
+        "projects/edura/problem.webp",
+        "projects/edura/overview.webp",
+        "icons/ps.png",
+        "icons/pr.png",
+        "icons/figma.png",
+        "icons/ai.png",
+        "icons/ae.png",
+        "assets/WorksConstellations-DHp9z_8k.js",
+        "assets/workbox-window.prod.es5-BBnX5xw4.js",
+        "assets/unbounded-vietnamese-wght-normal-rat7GD3o.woff2",
+        "assets/unbounded-latin-wght-normal-D5afBTBx.woff2",
+        "assets/unbounded-latin-ext-wght-normal-D6H-S6MW.woff2",
+        "assets/unbounded-cyrillic-wght-normal-C627f1f8.woff2",
+        "assets/StoryMeteor-B-xOS4w7.js",
+        "assets/SkillsSymbols-CTNEZQio.js",
+        "assets/index-PBjIqXZT.js",
+        "assets/index-CMHWtCWO.css",
+        "assets/GalaxyScene-BbLHdmvp.js",
+        "assets/finale-lziJ5UqB.js",
+        "assets/events-9ce18a08.esm-BafMZYcI.js",
+        "assets/davinci-resolve-DTEn20Mv.webp",
+        "manifest.webmanifest"
+      ],
+      "online": {
+        "title": "EDURA LMS — UI/UX concept · Trần Vũ Anh Duy",
+        "canvas": 0,
+        "h1": "EDURA LMS",
+        "sw": "http://127.0.0.1:4173/sw.js",
+        "cacheNames": [
+          "workbox-precache-v2-http://127.0.0.1:4173/",
+          "stellar-fonts"
+        ],
+        "cacheURLs": [
+          "http://127.0.0.1:4173/theme-init.js?__WB_REVISION__=1570f92e7b57779254b474b4f0f569f4",
+          "http://127.0.0.1:4173/pwa-maskable-512x512.png?__WB_REVISION__=690135f20bf16acf08a197a564951296",
+          "http://127.0.0.1:4173/pwa-maskable-192x192.png?__WB_REVISION__=3d25cb23eee84a8adf44cae3c2f7dc51",
+          "http://127.0.0.1:4173/pwa-512x512.png?__WB_REVISION__=ac50f710678b8b86c2523eb644ac6c2c",
+          "http://127.0.0.1:4173/pwa-192x192.png?__WB_REVISION__=9563b5902f9a0db9fb6393a9c7c5fdf5",
+          "http://127.0.0.1:4173/project3.webp?__WB_REVISION__=094da48bfd78b9ee2f4a9e51c5003f10",
+          "http://127.0.0.1:4173/project2.webp?__WB_REVISION__=2787843b72f39deeb409fa0f660aad7e",
+          "http://127.0.0.1:4173/project1.webp?__WB_REVISION__=02d48c72691e7b34f5e78cce2c288548",
+          "http://127.0.0.1:4173/index.html?__WB_REVISION__=b64ec6667b9dee9b5c414af9196ac743",
+          "http://127.0.0.1:4173/favicon.svg?__WB_REVISION__=6ca2cd71334d81e8dadb0565d8cd8bc5",
+          "http://127.0.0.1:4173/avatar.webp?__WB_REVISION__=e9867eba7ff8c849c6347e075584e374",
+          "http://127.0.0.1:4173/avatar-cutout.webp?__WB_REVISION__=836afcc55be6a5f557c19e8d00c96516",
+          "http://127.0.0.1:4173/projects/edura/solution.webp?__WB_REVISION__=1bfe4c17c96999f20e1a06d26cb5e28b",
+          "http://127.0.0.1:4173/projects/edura/problem.webp?__WB_REVISION__=24d302ca79e7dddf07ba8c5a5b6bf80b",
+          "http://127.0.0.1:4173/projects/edura/overview.webp?__WB_REVISION__=84f990a81802ad7eb6fb256447f96cae",
+          "http://127.0.0.1:4173/icons/ps.png?__WB_REVISION__=845ff5a301d8d717e3855b3dae76052b",
+          "http://127.0.0.1:4173/icons/pr.png?__WB_REVISION__=6565cae8847f5e0aec86d6725c672738",
+          "http://127.0.0.1:4173/icons/figma.png?__WB_REVISION__=5eb1b232bddb97294a298d7150b0a859",
+          "http://127.0.0.1:4173/icons/ai.png?__WB_REVISION__=1ba39b2a3f523b28eb2315dfcd42aa72",
+          "http://127.0.0.1:4173/icons/ae.png?__WB_REVISION__=6814759441a9c9459e0f86aeb0e47030",
+          "http://127.0.0.1:4173/assets/WorksConstellations-DHp9z_8k.js",
+          "http://127.0.0.1:4173/assets/workbox-window.prod.es5-BBnX5xw4.js",
+          "http://127.0.0.1:4173/assets/unbounded-vietnamese-wght-normal-rat7GD3o.woff2",
+          "http://127.0.0.1:4173/assets/unbounded-latin-wght-normal-D5afBTBx.woff2",
+          "http://127.0.0.1:4173/assets/unbounded-latin-ext-wght-normal-D6H-S6MW.woff2",
+          "http://127.0.0.1:4173/assets/unbounded-cyrillic-wght-normal-C627f1f8.woff2",
+          "http://127.0.0.1:4173/assets/StoryMeteor-B-xOS4w7.js",
+          "http://127.0.0.1:4173/assets/SkillsSymbols-CTNEZQio.js",
+          "http://127.0.0.1:4173/assets/index-PBjIqXZT.js",
+          "http://127.0.0.1:4173/assets/index-CMHWtCWO.css",
+          "http://127.0.0.1:4173/assets/GalaxyScene-BbLHdmvp.js",
+          "http://127.0.0.1:4173/assets/finale-lziJ5UqB.js",
+          "http://127.0.0.1:4173/assets/events-9ce18a08.esm-BafMZYcI.js",
+          "http://127.0.0.1:4173/assets/davinci-resolve-DTEn20Mv.webp",
+          "http://127.0.0.1:4173/manifest.webmanifest?__WB_REVISION__=106bd21c09ba51da01fc4fd703c6f471",
+          "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2",
+          "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOlOV.woff2",
+          "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPb54C-s0.woff2",
+          "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTNVOVgaY.woff2",
+          "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPb94C-s0.woff2"
+        ]
+      },
+      "manifestErrors": [],
+      "uncachedBlocked": true,
+      "offlineReader": {
+        "online": false,
+        "canvas": 0,
+        "title": "EDURA LMS — UI/UX concept · Trần Vũ Anh Duy",
+        "lang": "vi",
+        "images": [
+          {
+            "url": "/projects/edura/overview.webp",
+            "width": 1400,
+            "height": 989,
+            "loaded": true
+          },
+          {
+            "url": "/projects/edura/problem.webp",
+            "width": 1400,
+            "height": 989,
+            "loaded": true
+          },
+          {
+            "url": "/projects/edura/solution.webp",
+            "width": 1400,
+            "height": 989,
+            "loaded": true
+          }
+        ],
+        "overflow": 0
+      },
+      "offlineMain": {
+        "sections": [
+          "hero",
+          "about",
+          "skills",
+          "education",
+          "experience",
+          "work",
+          "transmission"
+        ],
+        "canvas": 1,
+        "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+        "lock": false,
+        "focus": "work-target-edura"
+      },
+      "assets": [
+        {
+          "url": "/projects/edura/overview.webp",
+          "status": 200,
+          "bytes": 92204,
+          "hash": "cc792c5dfb8d3acaf30925372969711e6b18a19ca831e6cc9baa8e63900d9b23"
+        },
+        {
+          "url": "/projects/edura/problem.webp",
+          "status": 200,
+          "bytes": 135960,
+          "hash": "11e86ff9ffe00bf747a3b50db209e68658b08fcaa2989e4cb6300146b2fc1c4d"
+        },
+        {
+          "url": "/projects/edura/solution.webp",
+          "status": 200,
+          "bytes": 96112,
+          "hash": "7714b0840765fecc8a397c5c3a03eb97da448d752090821752998948f8ba47a8"
+        }
+      ],
+      "responses": [
+        {
+          "url": "http://127.0.0.1:4173/projects/edura",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/index-CMHWtCWO.css",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/theme-init.js",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/index-PBjIqXZT.js",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/unbounded-latin-wght-normal-D5afBTBx.woff2",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/unbounded-latin-ext-wght-normal-D6H-S6MW.woff2",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/unbounded-vietnamese-wght-normal-rat7GD3o.woff2",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/projects/edura/overview.webp",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/workbox-window.prod.es5-BBnX5xw4.js",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/projects/edura/problem.webp",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/projects/edura/solution.webp",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.svg",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/projects/edura/overview.webp",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/projects/edura/problem.webp",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/projects/edura/solution.webp",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/index-CMHWtCWO.css",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/theme-init.js",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/index-PBjIqXZT.js",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/unbounded-latin-wght-normal-D5afBTBx.woff2",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/unbounded-latin-ext-wght-normal-D6H-S6MW.woff2",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/unbounded-vietnamese-wght-normal-rat7GD3o.woff2",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/workbox-window.prod.es5-BBnX5xw4.js",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/GalaxyScene-BbLHdmvp.js",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/project1.webp",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/finale-lziJ5UqB.js",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/assets/events-9ce18a08.esm-BafMZYcI.js",
+          "status": 200,
+          "sw": true
+        },
+        {
+          "url": "http://127.0.0.1:4173/favicon.svg",
+          "status": 200,
+          "sw": true
+        }
+      ],
+      "errors": [],
+      "consoleErrors": [
+        {
+          "message": "Failed to load resource: net::ERR_INTERNET_DISCONNECTED",
+          "url": "http://127.0.0.1:4173/r62-uncached-network-probe.txt",
+          "phase": "intentional-offline-probe"
+        },
+        {
+          "message": "Failed to load resource: net::ERR_FAILED",
+          "url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap",
+          "phase": "offline-case"
+        },
+        {
+          "message": "Failed to load resource: net::ERR_FAILED",
+          "url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap",
+          "phase": "offline-main"
+        }
+      ],
+      "requestFailures": [
+        {
+          "url": "http://127.0.0.1:4173/r62-uncached-network-probe.txt",
+          "error": "net::ERR_INTERNET_DISCONNECTED",
+          "phase": "intentional-offline-probe"
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap",
+          "error": "net::ERR_FAILED",
+          "phase": "offline-case"
+        },
+        {
+          "url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap",
+          "error": "net::ERR_FAILED",
+          "phase": "offline-main"
+        }
+      ]
+    }
+  ]
+}

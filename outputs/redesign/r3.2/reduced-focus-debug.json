@@ -1,0 +1,122 @@
+[
+  {
+    "port": 5173,
+    "log": [
+      {
+        "event": "focusin",
+        "id": "",
+        "tag": "BUTTON",
+        "href": null
+      },
+      {
+        "event": "focusin",
+        "id": "",
+        "tag": "BUTTON",
+        "href": null
+      },
+      {
+        "event": "focusin",
+        "id": "about",
+        "tag": "SECTION",
+        "href": null
+      },
+      {
+        "time": 3683.300000011921,
+        "id": "about",
+        "tag": "SECTION",
+        "tabindex": "-1",
+        "visibility": "visible",
+        "opacity": "1",
+        "readingVis": "visible",
+        "style": "opacity: 1; visibility: visible;",
+        "inert": false,
+        "dialog": false,
+        "readingInert": false,
+        "scroll": 844,
+        "after": "about",
+        "href": null
+      },
+      {
+        "time": 4204.100000023842,
+        "id": "about",
+        "tag": "SECTION",
+        "tabindex": "-1",
+        "visibility": "visible",
+        "opacity": "1",
+        "readingVis": "visible",
+        "style": "opacity: 1; visibility: visible;",
+        "inert": false,
+        "dialog": false,
+        "readingInert": false,
+        "scroll": 844,
+        "after": "about",
+        "href": null
+      }
+    ],
+    "active": "<section id=\"about\" data-theme=\"dark\" aria-labelledby=\"about-heading\" class=\"relative border-y border-white/[0.06] bg-transparent px-6 py-24 text-(--text-primary) sm:px-8 lg:px-12 lg:py-32\" tabindex=\"-1\"><div class=\"mx-auto grid max-w-7xl grid-cols-1",
+    "inert": false,
+    "scroll": 844,
+    "hash": "#about",
+    "open": false
+  },
+  {
+    "port": 4173,
+    "log": [
+      {
+        "event": "focusin",
+        "id": "",
+        "tag": "BUTTON",
+        "href": null
+      },
+      {
+        "event": "focusin",
+        "id": "",
+        "tag": "BUTTON",
+        "href": null
+      },
+      {
+        "time": 2150.2999999821186,
+        "id": "about",
+        "tag": "SECTION",
+        "tabindex": "-1",
+        "visibility": "hidden",
+        "opacity": "0",
+        "readingVis": "hidden",
+        "style": "opacity: 1; visibility: inherit;",
+        "inert": false,
+        "dialog": false,
+        "readingInert": false,
+        "scroll": 844,
+        "after": "",
+        "href": null
+      },
+      {
+        "event": "focusin",
+        "id": "about",
+        "tag": "SECTION",
+        "href": null
+      },
+      {
+        "time": 2665.7999999821186,
+        "id": "about",
+        "tag": "SECTION",
+        "tabindex": "-1",
+        "visibility": "visible",
+        "opacity": "1",
+        "readingVis": "visible",
+        "style": "opacity: 1; visibility: inherit;",
+        "inert": false,
+        "dialog": false,
+        "readingInert": false,
+        "scroll": 844,
+        "after": "about",
+        "href": null
+      }
+    ],
+    "active": "<section id=\"about\" data-theme=\"dark\" aria-labelledby=\"about-heading\" class=\"relative border-y border-white/[0.06] bg-transparent px-6 py-24 text-(--text-primary) sm:px-8 lg:px-12 lg:py-32\" tabindex=\"-1\"><div class=\"mx-auto grid max-w-7xl grid-cols-1",
+    "inert": false,
+    "scroll": 844,
+    "hash": "#about",
+    "open": false
+  }
+]

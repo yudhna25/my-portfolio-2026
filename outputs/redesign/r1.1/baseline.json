@@ -1,0 +1,1406 @@
+{
+  "createdAt": "2026-10-07T18:01:55.533Z",
+  "files": [
+    {
+      "path": "src/3d/components/BlackHole.jsx",
+      "bytes": 3393,
+      "sha256": "c90474b8ce0dea45ee473f19edfe198b42c0d8a135ac84d78499e328981fc2c5"
+    },
+    {
+      "path": "src/3d/components/BlackHoleBloomMask.jsx",
+      "bytes": 1019,
+      "sha256": "17b3d5b7b151b3f4e4999c09c181757985813a749a2fcd0980ee3b32bac92860"
+    },
+    {
+      "path": "src/3d/components/BlackHoleSystem.jsx",
+      "bytes": 1807,
+      "sha256": "24fa7f288c381b461fbd4bce96840f81f23ff10b9db392e6644939d1c27a9767"
+    },
+    {
+      "path": "src/3d/components/CameraRig.jsx",
+      "bytes": 3265,
+      "sha256": "3bedf87e13fa8a3193cef828d79412c179cb088b45356e27325eb570ddb70853"
+    },
+    {
+      "path": "src/3d/components/Constellations.jsx",
+      "bytes": 15049,
+      "sha256": "02f1502255101e29f1a45872479d165a03d366e7c9668fe8bb6168b89f0c0eb5"
+    },
+    {
+      "path": "src/3d/components/LabTelemetry.jsx",
+      "bytes": 950,
+      "sha256": "63629736a4a170b47af6578e2ca425f154a469c536ef2b4cd28a7e5d8248ac53"
+    },
+    {
+      "path": "src/3d/components/Nebula.jsx",
+      "bytes": 2345,
+      "sha256": "83a8603a74885be2686e40227a71aae59af37cc9310806a9c9e52645d51a085c"
+    },
+    {
+      "path": "src/3d/components/OrbitalSkills.jsx",
+      "bytes": 2937,
+      "sha256": "d49e595e232fe4ab39a62c5f278df075bcffdb319173791206a4b9af26595db7"
+    },
+    {
+      "path": "src/3d/components/Planet.jsx",
+      "bytes": 1709,
+      "sha256": "366ced6a8fa155e5fbca32aef2eb1347b0b30f9a54bed321d141560710e81f4b"
+    },
+    {
+      "path": "src/3d/components/SceneBoundary.jsx",
+      "bytes": 415,
+      "sha256": "f973636c5119c7080585c7e12a8194aabbc4c830cafec7e4274647aec5ee5507"
+    },
+    {
+      "path": "src/3d/components/SceneFallback.jsx",
+      "bytes": 730,
+      "sha256": "66cc6c0cc4139e9d1f3447878bed1f27da1e19adfa7862f29615348c9cc17977"
+    },
+    {
+      "path": "src/3d/components/ShootingStars.jsx",
+      "bytes": 2928,
+      "sha256": "c0ab81784ca2ed24ea76655eca18ec3c36b23afe984cc898733be6601242b36c"
+    },
+    {
+      "path": "src/3d/components/StardustWake.jsx",
+      "bytes": 5985,
+      "sha256": "b7d39ef17020f46cc84ad7083a739ce222ff07b4d026355dd478b21aeec9b0ce"
+    },
+    {
+      "path": "src/3d/components/StarField.jsx",
+      "bytes": 3007,
+      "sha256": "411f8f09e9b9778240ac0b2b158ba68210b1e6bd921301a068b0484dd7be7389"
+    },
+    {
+      "path": "src/3d/GalaxyScene.jsx",
+      "bytes": 3704,
+      "sha256": "2760dfd24ca36a03b62da80a4863e9eed7ab9ff753853042a44098f27a685bf6"
+    },
+    {
+      "path": "src/3d/hooks/useLabScroll.js",
+      "bytes": 656,
+      "sha256": "8dc5d4636179f9a2a3daa0941cece1ef25feaac16a32198bd1fa6af0636b7b0b"
+    },
+    {
+      "path": "src/3d/hooks/useMediaQuery.js",
+      "bytes": 514,
+      "sha256": "26a20531953a9de2f74b3c57abda7b115a7437ed74b37fb5b2cfcbe0499974df"
+    },
+    {
+      "path": "src/3d/hooks/useScrollProgress.js",
+      "bytes": 2475,
+      "sha256": "cdf9b3051cbd5d2059c2faa8090c07990c4dd8748eb82fd25a936241011d13d5"
+    },
+    {
+      "path": "src/3d/hooks/useSectionAnchor.js",
+      "bytes": 2607,
+      "sha256": "fa71e9373a6afeff60b4d524fd91a75f20c315b28c3f77a224f5bcb3f9b710ed"
+    },
+    {
+      "path": "src/3d/quality.js",
+      "bytes": 354,
+      "sha256": "50c9d17825d7db83c252ae54e9d7e44ec3775946a29cfb94ae6fa5402d2771d1"
+    },
+    {
+      "path": "src/3d/shaders/blackHole.js",
+      "bytes": 5583,
+      "sha256": "6cb9002d236f12d481fa9b44df89adfa3da932eade9bbecde95fb7eb70ebc3ad"
+    },
+    {
+      "path": "src/3d/utils/buildStarGeometry.js",
+      "bytes": 1566,
+      "sha256": "e031f0b9665ed22eee431a1be173251ab59baa941653dfef4a495cc7cf9bf8e6"
+    },
+    {
+      "path": "src/3d/utils/cameraPath.js",
+      "bytes": 697,
+      "sha256": "75d604561f85e127dc9c0b990bb0cfcc5ae2a80a2a4f2696f15153909844bf37"
+    },
+    {
+      "path": "src/3d/utils/shootingStars.js",
+      "bytes": 2783,
+      "sha256": "81fc500abe958591e837aa2512d1237203ef94cb637e1f7d9d550c28f3ce2186"
+    },
+    {
+      "path": "src/3d-lab.jsx",
+      "bytes": 4605,
+      "sha256": "15dfc3331ef9bd9fc6554a8c69d88dd8f0a247daf76202030863c3a35ed6f783"
+    },
+    {
+      "path": "src/App.jsx",
+      "bytes": 3684,
+      "sha256": "f68ddb67716e3d211638d64f28d56af122cdf05b0a94dc80eeed6255453de632"
+    },
+    {
+      "path": "src/assets/react.svg",
+      "bytes": 4126,
+      "sha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5"
+    },
+    {
+      "path": "src/components/About.jsx",
+      "bytes": 8650,
+      "sha256": "a0cecd7cfc704015503451d1be0700f754f2fb23e67999ecdd7d839aadec49e1"
+    },
+    {
+      "path": "src/components/Aurora.jsx",
+      "bytes": 6452,
+      "sha256": "c03e2396d0f975a4371705ba60a0176896aa1f22396e7f8153981592f8d4589b"
+    },
+    {
+      "path": "src/components/Cursor.jsx",
+      "bytes": 13279,
+      "sha256": "c8e89de768fa139f78da74cbcefad1a94985256cb34a764868db3b816af461e4"
+    },
+    {
+      "path": "src/components/Education.jsx",
+      "bytes": 5716,
+      "sha256": "1d8feee7dcf0250c87f7282445f9f5cf11cc15d14913db1cd750a35143ffad94"
+    },
+    {
+      "path": "src/components/EvilEye.jsx",
+      "bytes": 8917,
+      "sha256": "c76bebce7c93608d982fc18579bd404cf204d0b1d068c1b3c14817406dd74f11"
+    },
+    {
+      "path": "src/components/Footer.jsx",
+      "bytes": 7361,
+      "sha256": "0cf5f646d7009ce970ce689bb0df63ed3c3aea71025bc3ff8eafedd8ae055134"
+    },
+    {
+      "path": "src/components/Hero.jsx",
+      "bytes": 5057,
+      "sha256": "7b9d7232ff5a0a73cde31c91cc3c0b93d37e877697fac6f29b44a24a7e550ad0"
+    },
+    {
+      "path": "src/components/layout/CockpitRails.jsx",
+      "bytes": 21034,
+      "sha256": "00aaf931a0181d1e73a0a0502c099466d07e84954adc61eeeb1633d790293d5d"
+    },
+    {
+      "path": "src/components/layout/MenuOverlay.jsx",
+      "bytes": 12681,
+      "sha256": "05e364a59dcc924ed48544b447f3adaa40661e5d1135d85f096f4f4b827305c0"
+    },
+    {
+      "path": "src/components/layout/Nav.jsx",
+      "bytes": 6766,
+      "sha256": "8d26abc0cfa5a48ac9c8094a16108c987e88a0394c53350472a8ec0ebf17eb64"
+    },
+    {
+      "path": "src/components/Preloader.jsx",
+      "bytes": 5539,
+      "sha256": "80d50c244b8c1749804c16f30ab6831b399fd3771ab3f1029d659588c5ed4fcd"
+    },
+    {
+      "path": "src/components/sections/Contact.jsx",
+      "bytes": 12569,
+      "sha256": "cc04897f11398e5366ccc422a3e495f9aa3ef0a7e0d6df8124bd979bd1ac1122"
+    },
+    {
+      "path": "src/components/sections/Experience.jsx",
+      "bytes": 4837,
+      "sha256": "af962d42f2b39e83e815cf6b250dc0da8d14b028e1b639ccb03ad711d432075b"
+    },
+    {
+      "path": "src/components/sections/Skills.jsx",
+      "bytes": 15233,
+      "sha256": "ff1f00b5a443255ed2e40aee760c15ebd00d39fd8245c8743849b51ea266fdfb"
+    },
+    {
+      "path": "src/components/SplashCursor.jsx",
+      "bytes": 36078,
+      "sha256": "95a4982d97e49e892788b9847cd41843f084fe9f2a39c10ae0ae88944280d8ec"
+    },
+    {
+      "path": "src/components/ui/KnurledSwitch.jsx",
+      "bytes": 5946,
+      "sha256": "f5f536030a61f18784543b9c1876e1bcabcf74059e5ea3959c251deca15828bd"
+    },
+    {
+      "path": "src/components/ui/MissionProgressOrbit.jsx",
+      "bytes": 2333,
+      "sha256": "dc91037c03205ccde92d00f496908641e52c2841a97f6bc77dbb6bb2a8e41534"
+    },
+    {
+      "path": "src/components/ui/SoundToggle.jsx",
+      "bytes": 2728,
+      "sha256": "ddb1cd7ff9d1e3784174db1177f19ea07b90ffb8392208ee7b0ae8ff541dc38a"
+    },
+    {
+      "path": "src/components/ui/TargetLockReticle.jsx",
+      "bytes": 4380,
+      "sha256": "cda01ac9fee3f3b704e82eb3d232deb3f47d3e5c2a56582e347c568de06c9773"
+    },
+    {
+      "path": "src/components/ui/ThemeToggle.jsx",
+      "bytes": 1197,
+      "sha256": "c53343323e60023a5a76c9994d392a6c194fa7f2abbf0d675078907a3b75caef"
+    },
+    {
+      "path": "src/components/Work.jsx",
+      "bytes": 10302,
+      "sha256": "9bb3072f4c78a5245d8726f0faae51c2d524eb4ac9d41698a028380a1c669e8a"
+    },
+    {
+      "path": "src/data/navigation.js",
+      "bytes": 297,
+      "sha256": "0e09dfc2377250a6356b0c2f7e8321a4687c0153d48e2bbae99b3afdfedd6374"
+    },
+    {
+      "path": "src/data/skills.js",
+      "bytes": 356,
+      "sha256": "c29b4879be9ac6142872b6ad9941ee3afd77c5ddfab45706c6573ea695324025"
+    },
+    {
+      "path": "src/data.js",
+      "bytes": 4012,
+      "sha256": "07471ebecad15aba95fb5c88a411188a8e29edd7b16468a3b41623b389d988c9"
+    },
+    {
+      "path": "src/hooks/useGSAPSetup.js",
+      "bytes": 2078,
+      "sha256": "d0d776b48f380b21f6091e9b139ba9d079cc4db4a1be8b5640a0ed09e29d592d"
+    },
+    {
+      "path": "src/hooks/useReducedMotion.js",
+      "bytes": 532,
+      "sha256": "cf30eaafdf14a457d04c12550e9e6e3ac837daff2c26b2fc37a2efb0cc784b73"
+    },
+    {
+      "path": "src/hooks/useSmoothScroll.js",
+      "bytes": 1217,
+      "sha256": "2dc0684b3f94d6ba7075d643b75caa3112bc5bd8a89d9d39ceb698b2129689cb"
+    },
+    {
+      "path": "src/i18n/config.js",
+      "bytes": 1898,
+      "sha256": "4a71342b0755f24f574ffe22166285ba15dd39555d120a08225bd96c2f45d6c6"
+    },
+    {
+      "path": "src/i18n/locales/en/lab.json",
+      "bytes": 1495,
+      "sha256": "e23aabd9513585f87bcb260a64c3eacbf9a294106ad37540bfab486977f09132"
+    },
+    {
+      "path": "src/i18n/locales/en/scene.json",
+      "bytes": 149,
+      "sha256": "5534d80716ad31a43574c3dbff7c9994374795d39a542069b0c46020abeea919"
+    },
+    {
+      "path": "src/i18n/locales/en.json",
+      "bytes": 8973,
+      "sha256": "7700eba3fee1dc56231de3e442d45a1d779a05b158c1d7320e92df322c1ac3f5"
+    },
+    {
+      "path": "src/i18n/locales/vi/lab.json",
+      "bytes": 1621,
+      "sha256": "43054c187a01483ad242e5d7a4f5450b168081147eb8dedcdeb7c1377c35359a"
+    },
+    {
+      "path": "src/i18n/locales/vi/scene.json",
+      "bytes": 183,
+      "sha256": "9f813ec2b2922b424bd5b5c41f66dd4212f865abf30df14cdb0f1d4e71944ffb"
+    },
+    {
+      "path": "src/i18n/locales/vi.json",
+      "bytes": 9895,
+      "sha256": "b9f0bfb04b9aaa1c589e623966419d11752d02336bbd21cb2aa6fefdf92a4c54"
+    },
+    {
+      "path": "src/index.css",
+      "bytes": 6345,
+      "sha256": "1fb7da4ffad2d5ec083123ca7ccef24fbc72631d779268acb87a00238de2f0c3"
+    },
+    {
+      "path": "src/lib/audioEngine.js",
+      "bytes": 4698,
+      "sha256": "ced5514afb6af3322b8793004275726cbc2b78d40f404c577c8adfae07aa99b1"
+    },
+    {
+      "path": "src/lib/utils.js",
+      "bytes": 25,
+      "sha256": "478739b1eed969267a388fc17db539b53aa66cf15a9467e475274b36de8783f2"
+    },
+    {
+      "path": "src/main.jsx",
+      "bytes": 354,
+      "sha256": "434f03cf6d9a4e72a1b312b2f5f613193c68b7deeef585148daa388e071d2f50"
+    },
+    {
+      "path": "src/stores/useAudioStore.js",
+      "bytes": 1707,
+      "sha256": "421d14eae90cdf5562e004e5fa937987d172cce58e4a7b95924fecc241f8c8f8"
+    },
+    {
+      "path": "src/stores/useLangStore.js",
+      "bytes": 184,
+      "sha256": "4feb341440e9997aa4da41186138099408fd42d0797bc627671210491d533060"
+    },
+    {
+      "path": "src/stores/useLoadingStore.js",
+      "bytes": 158,
+      "sha256": "28171bb7e08ba1157051f9b4e130ee726d57ec9419e761499fbdda6006995ca3"
+    },
+    {
+      "path": "src/stores/useScrollStore.js",
+      "bytes": 693,
+      "sha256": "86f34e27b444fb2d42943a89e651ddd3bbf9591534df1b13edf83ffaa33e745a"
+    },
+    {
+      "path": "src/stores/useThemeStore.js",
+      "bytes": 1171,
+      "sha256": "cf91b8e98b0671edbf0161bc24475b4a524e77bd116b9ed9cd3a539ef7ef5b2c"
+    },
+    {
+      "path": "src/styles/globals.css",
+      "bytes": 6215,
+      "sha256": "74807d5ca074ec48cb48bf55eb38ce4e7cce329e7047bc36f333a148d4a20cb0"
+    },
+    {
+      "path": "src/styles/menu.css",
+      "bytes": 138,
+      "sha256": "dd777575640babba2a136b5584153b688fe0b2cf0e0b13071029cfa0d7c7d947"
+    },
+    {
+      "path": "public/avatar.webp",
+      "bytes": 112382,
+      "sha256": "e6c0bac02737f8beb0bd25ca08793e552cc801b54d88464c9ae761a15dd90bd2"
+    },
+    {
+      "path": "public/favicon.svg",
+      "bytes": 1021,
+      "sha256": "f00dd37727ee48eb8dec38799622b07c50776fbf1cac271e239c0adf2b35957a"
+    },
+    {
+      "path": "public/icons/ae.png",
+      "bytes": 4553,
+      "sha256": "13df4673f9bd262a1376c488e1cbfc67bd1cd0500555c05677edfa15128069af"
+    },
+    {
+      "path": "public/icons/ai.png",
+      "bytes": 3381,
+      "sha256": "7a9e921269cb9257010d22f61694268d14c171b245413134e7cd3244fcc56331"
+    },
+    {
+      "path": "public/icons/figma.png",
+      "bytes": 2217,
+      "sha256": "79036c1f608b11eb14a711ec02bab4cc162a2406e7fb89ae5f02a456d4918f48"
+    },
+    {
+      "path": "public/icons/pr.png",
+      "bytes": 16211,
+      "sha256": "6af65c63d2f8a59fc54f49f5bc76b9938777789a04f36b625433409d9803efab"
+    },
+    {
+      "path": "public/icons/ps.png",
+      "bytes": 3871,
+      "sha256": "f3083bd3ed5ac24d94d45907a1fa4ab1713f1d8fc6361d2e9ebfc960c5b85862"
+    },
+    {
+      "path": "public/og-image.jpg",
+      "bytes": 62445,
+      "sha256": "bc898f6ebda22f5920af9bcf5bc01c7aa3ebb7a53e01434a787283c4598e9e2f"
+    },
+    {
+      "path": "public/project1.webp",
+      "bytes": 51014,
+      "sha256": "2e9d8cee3c4c3584bb74bdeffcf384dcfabeb7d74bb165fd48d5094e38ad359b"
+    },
+    {
+      "path": "public/project2.webp",
+      "bytes": 62292,
+      "sha256": "1032b163b247f7d528b313f093abf6bc29eade6b39d98b5acbbd5b068056de9b"
+    },
+    {
+      "path": "public/project3.webp",
+      "bytes": 43608,
+      "sha256": "03117079520095b5dab4cd53a4b8c2a8495fe174efc1aa4d9b9d998447dad6fc"
+    },
+    {
+      "path": "public/pwa-192x192.png",
+      "bytes": 5958,
+      "sha256": "6e838d4b2412cb88c71f6befcc441b984efc2c73e1974c4c1a244bd7d7e9f724"
+    },
+    {
+      "path": "public/pwa-512x512.png",
+      "bytes": 21440,
+      "sha256": "ac06e97bda0b1a82b5fe7f8cbcedbef0bb7a9ac1de1c1d988ad9833091470f97"
+    },
+    {
+      "path": "public/pwa-maskable-192x192.png",
+      "bytes": 4912,
+      "sha256": "d848d131a9c68bb1469c201ad41c923a4f10cc79890719b86e21cccdda13a3b6"
+    },
+    {
+      "path": "public/pwa-maskable-512x512.png",
+      "bytes": 18479,
+      "sha256": "9894d4a3820f39bb8456e5881ecb9c9aa3006a774beefb774e619e18bd97f834"
+    },
+    {
+      "path": "public/theme-init.js",
+      "bytes": 628,
+      "sha256": "3e4ce2b718f43399744c4b98b4e4c588e6823ebe8ee391240d89e3454f7daa17"
+    },
+    {
+      "path": "outputs/redesign/r0.1/additional-browser-observations.json",
+      "bytes": 2393,
+      "sha256": "49c92c16470ee85a593ff7d07ed7c3f704b51cd1bf6e1f398a4e08f8184f100c"
+    },
+    {
+      "path": "outputs/redesign/r0.1/asset-audit.json",
+      "bytes": 647,
+      "sha256": "af37e39a45132effd2c0b0c224d646376b8f253f604dee187d9ff41324bb794f"
+    },
+    {
+      "path": "outputs/redesign/r0.1/baseline.json",
+      "bytes": 19025,
+      "sha256": "56a584f2381ee0cd0ec3d53a3dc61885afdf2061240c093f3bd01289f68b79d1"
+    },
+    {
+      "path": "outputs/redesign/r0.1/browser-baseline.mjs",
+      "bytes": 8646,
+      "sha256": "ab019320bb45df4e583f8b26e10bdeca653f88b2e623fc3fa5c775fa047a13af"
+    },
+    {
+      "path": "outputs/redesign/r0.1/browser-results.json",
+      "bytes": 271856,
+      "sha256": "5623addaa6340e30f8f34325e342dfd033e82bff990ee5d000540a5c3508a29a"
+    },
+    {
+      "path": "outputs/redesign/r0.1/browser.log",
+      "bytes": 1309,
+      "sha256": "f9b65cf9ce886d54ed2d81b224044024e5b7d74225717f3b5411181640e97b77"
+    },
+    {
+      "path": "outputs/redesign/r0.1/build-result.json",
+      "bytes": 127,
+      "sha256": "de716574a6a493aac18ff0ba3cb2aa83a47a05c8ac94bd8409a8586de6302d00"
+    },
+    {
+      "path": "outputs/redesign/r0.1/build.log",
+      "bytes": 1874,
+      "sha256": "946f5b9eca119d6c0bed0d79ebcfeb368dfc969f7ed604aac274b20d7faf6203"
+    },
+    {
+      "path": "outputs/redesign/r0.1/caller-evidence.txt",
+      "bytes": 10173,
+      "sha256": "24c313da6f2cc6589e9d00f76f4fb944cb6628c0e9bebefbeba4f1c407cc2049"
+    },
+    {
+      "path": "outputs/redesign/r0.1/check-baseline.mjs",
+      "bytes": 2395,
+      "sha256": "e282892c9c752dac66758fea1213bb6375d701abdce6bcaa80ea387edcb19131"
+    },
+    {
+      "path": "outputs/redesign/r0.1/desktop-about.png",
+      "bytes": 1083488,
+      "sha256": "c7837ad25dcd5f33ba8ab297ee8eaf71dba6e38ecadc861fe3053d98ab0e931c"
+    },
+    {
+      "path": "outputs/redesign/r0.1/desktop-hero.png",
+      "bytes": 846704,
+      "sha256": "b8d4ba6d0593e1f71cc9de65b58c74663f804547b128f0a48df3917b9d14a699"
+    },
+    {
+      "path": "outputs/redesign/r0.1/desktop-saved-light-reduced.png",
+      "bytes": 846537,
+      "sha256": "80ed7b5b34e94d5d2d893ba8fccf1e0b2bf3cadbe62442cb2e629a47f666d35f"
+    },
+    {
+      "path": "outputs/redesign/r0.1/desktop-skills.png",
+      "bytes": 975312,
+      "sha256": "c0fc30de5acc208401e14461c5812858dbf0e38cf188a8a3538ed930ad90c65f"
+    },
+    {
+      "path": "outputs/redesign/r0.1/desktop-transmission.png",
+      "bytes": 1164220,
+      "sha256": "2436c8ab8ee917330c9ac702fc595d985f5224ff6bfc1a27320a27aa6cb79f55"
+    },
+    {
+      "path": "outputs/redesign/r0.1/desktop-work.png",
+      "bytes": 1149626,
+      "sha256": "0662f7bec0517a7a8112f9bc6867914d7ee2b6c24163c72e0cb4d3513bfb9bda"
+    },
+    {
+      "path": "outputs/redesign/r0.1/import-map.json",
+      "bytes": 30339,
+      "sha256": "88c6a8f81b2f8263dcc64838de7656b8994641cefde668daf51394c5e701f764"
+    },
+    {
+      "path": "outputs/redesign/r0.1/inventory.md",
+      "bytes": 19826,
+      "sha256": "3ab369444c5e09276655a9a6709f4bd591e6565dada8ba54f8b13e21f6af5155"
+    },
+    {
+      "path": "outputs/redesign/r0.1/lint-result.json",
+      "bytes": 126,
+      "sha256": "eb1dae90da94f8f0d354f015174af5befe01946467ae44d362f8b4fa694d66f4"
+    },
+    {
+      "path": "outputs/redesign/r0.1/lint.log",
+      "bytes": 2692,
+      "sha256": "d3e4c4f2efbb64ce13d0ef2fa40712f7daeee4f53485acb6580006a41087261c"
+    },
+    {
+      "path": "outputs/redesign/r0.1/mobile-viewport-about.png",
+      "bytes": 2152389,
+      "sha256": "03c877a3e300a23e68275cdcb06cc945539bfbacd9bce990d8a48630bcf8d651"
+    },
+    {
+      "path": "outputs/redesign/r0.1/mobile-viewport-hero.png",
+      "bytes": 1790413,
+      "sha256": "39db1b7110b6303e9a3dce2a972ef693ddeeccfbc0fa2ba3923bd7245afdc652"
+    },
+    {
+      "path": "outputs/redesign/r0.1/mobile-viewport-skills.png",
+      "bytes": 2048188,
+      "sha256": "35110512ce8a1a33eaf0bbbd089aaebea8977f96563b040fc8faf0d4c857ce98"
+    },
+    {
+      "path": "outputs/redesign/r0.1/mobile-viewport-transmission.png",
+      "bytes": 2298559,
+      "sha256": "e9eb7c818208e6b32edf670abe3bff9a493476b401ea224c3fc12ac05ca4f104"
+    },
+    {
+      "path": "outputs/redesign/r0.1/mobile-viewport-work.png",
+      "bytes": 2336564,
+      "sha256": "4e6445b874e225d49d61e47b5cea655187233c20b875f90fa94262e6e987143e"
+    },
+    {
+      "path": "outputs/redesign/r0.1/source-integrity.json",
+      "bytes": 248,
+      "sha256": "87489f90d7eb45040d4b58dd7b29c15928e9bef6f9331d0e015bfa8f32f29ce3"
+    },
+    {
+      "path": "outputs/redesign/r0.1/verification.json",
+      "bytes": 737,
+      "sha256": "0075679a7585bedb60b325498153b9ad62e9f92f0c204d32da23dd0a5e7b948e"
+    },
+    {
+      "path": "outputs/redesign/r0.1/verification.md",
+      "bytes": 9976,
+      "sha256": "eabc5ee6b2c07c2433e688149b34f4c1c7abee474e6d68371344cb4178812bd5"
+    },
+    {
+      "path": "outputs/redesign/r0.1/working-tree.txt",
+      "bytes": 3612,
+      "sha256": "8ead657784f7dcf9d39c908b4fa1fb6bc5552c43eb24745b9328ecb73caaa4e5"
+    },
+    {
+      "path": "outputs/redesign/r0.2/agents-before.txt",
+      "bytes": 40600,
+      "sha256": "0926a40fe4afdbf617d06b687cb531d75723a897872ecfc3c159a034f112a696"
+    },
+    {
+      "path": "outputs/redesign/r0.2/assets-manifest.json",
+      "bytes": 41554,
+      "sha256": "0576ca3699629dcc16c4e52d9dc4767b42d71260fe3cd042900a1c4643e899b5"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/build-constellations.mjs",
+      "bytes": 12952,
+      "sha256": "9c9c690b4a36eb021c94933ab0202f9be987f745ad26cf9a8beec925b8b1f50c"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/check-constellations.mjs",
+      "bytes": 4862,
+      "sha256": "6fb382aa0eb9746f3c6c4cee682ce05a98c6a827c70e7b6f34fe75c6afeb39a7"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/constellations-sheet.png",
+      "bytes": 67568,
+      "sha256": "27a9cb178dee9cdcd84ac2a83a0a69ac73dc6da70cf0842e8b063b17410ae05a"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/constellations-sheet.svg",
+      "bytes": 20694,
+      "sha256": "daa29da8f101983cd5a6ec750bf2ca96bb780bd998de97e97c0cbb706dbc59aa"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/source-receipts.json",
+      "bytes": 12801,
+      "sha256": "2dc953fc39660442c5197be3f14a583ea43196b2df82d12eff772af5599f5c8c"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/sources/hipparcos-Cen-field.tsv",
+      "bytes": 9986,
+      "sha256": "7fb7815033946c563af01066c12d60520c9e5d14843770579eb36a52d462edc9"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/sources/hipparcos-Cir-field.tsv",
+      "bytes": 2534,
+      "sha256": "1ba1d875936ba48f9f0f191332d52f07e9831210204ee0cae472c7b21ca8beda"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/sources/hipparcos-Cyg-field.tsv",
+      "bytes": 8422,
+      "sha256": "81055dfe58e8b48394ce9906d469847cf9a22a2912c3069fedae3066c2da5d00"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/sources/hipparcos-Gem-field.tsv",
+      "bytes": 4289,
+      "sha256": "9bf0724534e64d0ca6fd6ef867d8f395a7e1e49cc6cbb17e7d971df60485653c"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/sources/hipparcos-main-stars.tsv",
+      "bytes": 4282,
+      "sha256": "5bc05668bd3c5e352abfd9f8f72cb6c42e7cbd906f5b978110cb6ba5a9c41696"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/sources/hipparcos-Pic-field.tsv",
+      "bytes": 2883,
+      "sha256": "81d7ed8e50e3f9da3bb84fb8644bdde676e5ab9aff556d5c7ff59b0c4f54eb51"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/sources/hipparcos-ReadMe.txt",
+      "bytes": 69036,
+      "sha256": "7a7d54903d16460a76c240f07c41b019d57becfd27b5dfa2908e828f52f90c27"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/sources/hipparcos-Tel-field.tsv",
+      "bytes": 2278,
+      "sha256": "cc80acebc9efdb47a9a8f46c81cd414432b429235440c2ad220e3febbb78a2fa"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/sources/iau-CEN.gif",
+      "bytes": 181706,
+      "sha256": "08bdb438fe6c7418818e107e0d6017e20652bade135947b63a180d8f50c0aa53"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/sources/iau-CIR.gif",
+      "bytes": 133173,
+      "sha256": "61a576e55fe4f4ad671b9a5809957eafffe8d33b0d03f05b4a0cd0cc19830386"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/sources/iau-CYG.gif",
+      "bytes": 177773,
+      "sha256": "b762281779b637eaafb5d32b8c5585733ffd02770939d581480a543a1171d1d9"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/sources/iau-GEM.gif",
+      "bytes": 138509,
+      "sha256": "3cbc991d68ff17bd0f83a75334d5b110fdc76e9ce75b07d1b6196eb73cfacb0c"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/sources/iau-PIC.gif",
+      "bytes": 109964,
+      "sha256": "a71d569906cefdda31887920789bffccbace5acd16115079ac890cdd457adb74"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/sources/iau-TEL.gif",
+      "bytes": 151066,
+      "sha256": "62240b10a22851e932ee67d7727137ed2937ae99f6d14cec64ecca8e01840f5f"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/sources/stellarium-modern-description.md",
+      "bytes": 53269,
+      "sha256": "4b58344f63168d7c816fdfef405103b5770fda2e1f4a4bf5c8871041ce042586"
+    },
+    {
+      "path": "outputs/redesign/r0.2/astronomy/sources/stellarium-modern-index.json",
+      "bytes": 205767,
+      "sha256": "1f2f5ffd6c9e25a7d0dcfdbf1f756e2db03dd3b8ed4ec016a2839b09f6b0fe1e"
+    },
+    {
+      "path": "outputs/redesign/r0.2/browser-results.json",
+      "bytes": 8822,
+      "sha256": "799a6a00a353b531ef79c1d20444ada42fab44e74076653fdc4489fb86af84bb"
+    },
+    {
+      "path": "outputs/redesign/r0.2/browser-review.mjs",
+      "bytes": 2238,
+      "sha256": "f9b6ef0b1d7f3da73d183f9635bf7f99b25c88cb88f7880c4521569e774d3e98"
+    },
+    {
+      "path": "outputs/redesign/r0.2/build-review.mjs",
+      "bytes": 8215,
+      "sha256": "d9b0a187f484c48d7d04be96c25ec24d060fa4457767f8a58b3a4b0f8897ec2a"
+    },
+    {
+      "path": "outputs/redesign/r0.2/check-artifacts.mjs",
+      "bytes": 4523,
+      "sha256": "c55e448a255d5d8ee41bee58fb2e1f9862d791a711e65bc583a44170a58bba1d"
+    },
+    {
+      "path": "outputs/redesign/r0.2/constellation-data.json",
+      "bytes": 52090,
+      "sha256": "1047432e95bcea8105c521801fee19ff81f2dce92ccf1f1cdfd682f56cfe1c9f"
+    },
+    {
+      "path": "outputs/redesign/r0.2/contact-sheet-mobile.png",
+      "bytes": 859549,
+      "sha256": "c00cbaf66e7c0b180099696c787b9a085b8ef67707692e5cf0310702c5b2dcba"
+    },
+    {
+      "path": "outputs/redesign/r0.2/contact-sheet.html",
+      "bytes": 12652,
+      "sha256": "bfa06777290f98290601b5d09f379dd57ea960f316ece8c7f02a588a0a8ba616"
+    },
+    {
+      "path": "outputs/redesign/r0.2/contact-sheet.png",
+      "bytes": 1171260,
+      "sha256": "1beb38a5460672e9463478e5984a0e84d9836c853d8e1eecce321449a25e900f"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logo-assets.json",
+      "bytes": 27702,
+      "sha256": "9240de76798c998f71452a985f5d6122f3f672fc16a7c92061be963159856951"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/discover.mjs",
+      "bytes": 1094,
+      "sha256": "50cea93f32ef0069bc05149b34aef7fcc447f7a3470dc37d227fbcabac6709e7"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/download.mjs",
+      "bytes": 1284,
+      "sha256": "15b9d3ebc73389267afe66f166d28c1fc894c1257f2217b94d12b685d02984f6"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/inspect.mjs",
+      "bytes": 635,
+      "sha256": "ba06e5a7577cb411483d44d006626da58e2c3f6302b15100319831511e225499"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/logo-check.json",
+      "bytes": 225,
+      "sha256": "69becf76c444997f7de8a2792c8b91c38fc89558eb26436c694bafb57567c9e5"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/logo-proof.png",
+      "bytes": 28799,
+      "sha256": "7c356ca7ff395539a624fd4952a0739479bec1bdea33b69c7e0e17568b63016f"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/mono/after-effects.svg",
+      "bytes": 1248,
+      "sha256": "22ddf748011151ace0418f26ca4a061b5aafe2e3b1dbbbff1c2cbac16cfc4f98"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/mono/chatgpt.svg",
+      "bytes": 2988,
+      "sha256": "fc6ec9f1f85555cb530253b7753f5ecc44bee0952c29d105d18b35c0535f5d01"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/mono/claude.svg",
+      "bytes": 2598,
+      "sha256": "cef9c6658c9bf62ce26b2eec549d9faa4a3d548ef2c0d240ddfdce859c68ff63"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/mono/davinci-resolve.webp",
+      "bytes": 30488,
+      "sha256": "eafe92dded33f19395885cb80e1128ad0ec54e77ea792abfbe4077d3250e22b1"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/mono/figma.svg",
+      "bytes": 1627,
+      "sha256": "1fb4457376aa18c0801c415cfc242f6e1a457be43f34c08f11f4e243e43e8a19"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/mono/google-antigravity.svg",
+      "bytes": 458,
+      "sha256": "70b0196da133a4bd7f9b224acaa35f9aa97e0acaeeedd296ad9323de3919014e"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/mono/illustrator.svg",
+      "bytes": 1006,
+      "sha256": "3b8ecf9a2edc3bb532bbd2709e6042ac2c7a6144aee5534fb5de6d6a1df49654"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/mono/photoshop.svg",
+      "bytes": 1480,
+      "sha256": "8f2a154d340093c54ebb6d5ada6c7810c6d398f8dc7f91f4e42983e881d45dfb"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/mono/premiere-pro.svg",
+      "bytes": 1107,
+      "sha256": "4f246aee08da3112643f37898bbf0de1c546c654851c40365b36fa7f5a5d1626"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/prepare.mjs",
+      "bytes": 10388,
+      "sha256": "b9c721e917763a58026b0f397c63227cfce997a15e656115efd91d3ea7ac48df"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/after-effects-mono-full.png",
+      "bytes": 33339,
+      "sha256": "1361cf769fa8ffe2515929c320a8ec9b985a6a580e69b6a3b94da66527612de6"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/after-effects-mono.png",
+      "bytes": 12590,
+      "sha256": "6b41faddd4dfcb3381d5c2cf4d03120e04fbac4d787ad5158d922398cd75af21"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/after-effects-original.png",
+      "bytes": 34019,
+      "sha256": "1b25ef7c04820ff71a6465ed0e6d4c83ca5b1b4bbc08a89a187a69a705b98f48"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/after-effects-reference.png",
+      "bytes": 13438,
+      "sha256": "eda45f6a215b8e359f5a0bdbfc5c494ec2977a578098516eb4a899db8af6c28a"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/chatgpt-mono-full.png",
+      "bytes": 25723,
+      "sha256": "156659bd46b1e048884fb96043545dc250b3eb42c433f3c7a014fbcb7ee31754"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/chatgpt-mono.png",
+      "bytes": 11960,
+      "sha256": "d62c7185f4280282dc494c1c21801e5b22153f7aa4c4755fd7a57947975b313c"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/chatgpt-original.png",
+      "bytes": 19987,
+      "sha256": "340ee2b98619eb297bc12aed4889e3a840ef24653c4871cabb278a7fdbadaac6"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/chatgpt-reference.png",
+      "bytes": 14888,
+      "sha256": "9494e348d8bda6e1e89d14a201992b8401c6d5e9cf42c6d9e1500f5cb2dd9b8b"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/claude-mono-full.png",
+      "bytes": 55429,
+      "sha256": "4ee927adcd65d15bf57af92b7a1273f4f8fa6214e101f7337e0c8e8ee537eefa"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/claude-mono.png",
+      "bytes": 10252,
+      "sha256": "ba5d352d8ef8d54c7d031b628cb61ae37241b3d3c55be85605e4127d72732832"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/claude-original.png",
+      "bytes": 106532,
+      "sha256": "8d0420704ad8f30208b2e15867b8ed3951300e5955f5fbd133dd1e3a6e5418d2"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/claude-reference.png",
+      "bytes": 38406,
+      "sha256": "726e2de2200638783c46496bf841897931dfb41b86862ecc69fa976a53493440"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/davinci-resolve-mono.png",
+      "bytes": 34655,
+      "sha256": "1fecba8c09ba5aed57bd9913da0e6aa9497884bc7c71e0501751878871be362c"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/davinci-resolve-original.png",
+      "bytes": 175223,
+      "sha256": "599b17cb2fcdee80f1a09f39f4b11b10a2627da95e3d0ff82ae88c8ea0249750"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/davinci-resolve-reference.png",
+      "bytes": 53999,
+      "sha256": "accd37d492a972ee7dcb9b8e5dd2e324ca749ebb28c992fdccb79d098a21b8c2"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/figma-mono-full.png",
+      "bytes": 10398,
+      "sha256": "895bda30e11947fba3dec28ea0039ee8c7dd0531933f234e5fdfc60e5cc37961"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/figma-mono.png",
+      "bytes": 9458,
+      "sha256": "84fc3338b65ecadb7e743c5751681fa540b752155904f08986841e4e12a96523"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/figma-original.png",
+      "bytes": 9817,
+      "sha256": "9340b56d7ef0448346d2c8e9cb43d17fd8af7a3ba291c3cde3f0dcdbc0297c45"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/figma-reference.png",
+      "bytes": 9278,
+      "sha256": "4d8782225647332a4f2c4b4876e1d56abae3416906e4d88b19954ae3b837d3fd"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/google-antigravity-mono-full.png",
+      "bytes": 19640,
+      "sha256": "e68682b63c4d6317156b492d1cbd91af45e6f17b8c95c989ea648f06747d6164"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/google-antigravity-mono.png",
+      "bytes": 5521,
+      "sha256": "df1689e89cd1651d3d46694cb3d170065e9e58879b527b55177e657b7ede36a8"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/google-antigravity-original.png",
+      "bytes": 71935,
+      "sha256": "b41ee6c9ca105cee7550ca6b531ae20e4f23a4fc3c44cca869fec008d36084c0"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/google-antigravity-reference.png",
+      "bytes": 37502,
+      "sha256": "4df4f028913f02260e0ef338051a0030357e5428dea633db18ac8da14cb37bf2"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/illustrator-mono-full.png",
+      "bytes": 26729,
+      "sha256": "6c226363d09e094b900951f963dd72edc0f0e9d9f1521c10ed6c1db19eda6905"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/illustrator-mono.png",
+      "bytes": 9817,
+      "sha256": "647f673568ad280582672e992f81f13e80debe19b1f4ab26bb221986d63fe39a"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/illustrator-original.png",
+      "bytes": 24204,
+      "sha256": "de747f84bfc9c33826ddc6b49e7e1f445ad23ca1ec9e4ec87e845428ea9c2152"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/illustrator-reference.png",
+      "bytes": 9298,
+      "sha256": "05e020890ffecb3a9ba06837b21e990949072ccc7ba572b1dac937724f3bad59"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/photoshop-mono-full.png",
+      "bytes": 28548,
+      "sha256": "cabc23144ab3ddffb7e1b0e174ff2338a2fc3d898b1e1e9fa16dfdc7aed402b3"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/photoshop-mono.png",
+      "bytes": 10880,
+      "sha256": "9bac002163cefd8e3b0db85a021f3d595896f986f4b83c80aa676f76a0f61698"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/photoshop-original.png",
+      "bytes": 30175,
+      "sha256": "8d88c9649481a0b5f2529c7a858385a0ba8d00d1ebbc556037cba5e09d5ff808"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/photoshop-reference.png",
+      "bytes": 11885,
+      "sha256": "20882f9ea037fca6cc43f349cacf5be4029c4fc5981960ae9eafccf10995616a"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/premiere-pro-mono-full.png",
+      "bytes": 19737,
+      "sha256": "7db2b77bec785db2976e2ea17b4b88edbb94795bfd2fc0ae8218634975baab91"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/premiere-pro-mono.png",
+      "bytes": 7470,
+      "sha256": "e1196807cf18e5672feaf03bdb4c3ee050eb527dce630f1df462536538c35394"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/premiere-pro-original.png",
+      "bytes": 19183,
+      "sha256": "7b0dd12980cd63f169705f4c9e39f9f8b5b811e67fc3a7676865e03123b65572"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/preview/premiere-pro-reference.png",
+      "bytes": 7882,
+      "sha256": "ba4e4e76a3c41fe5e9bf18dddfbfb0b9680e9f7956068e601fbd3d1b237a37cf"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/adobe-page.html",
+      "bytes": 29914,
+      "sha256": "90c8bc0061a26a130f2814e1e59a394a791894dffa4665ddf774c7720973354a"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/adobe-source-receipts.json",
+      "bytes": 1846,
+      "sha256": "2db87d7a74883805a67e6ff25134fe1c75a9defc0d944f50be162ca9f5035208"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/after-effects-official.svg",
+      "bytes": 1248,
+      "sha256": "23653d88991cd3bf3da2b9ba3efc46ddef756f013c9337993c8d158fbfd5b675"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/after-effects.svg",
+      "bytes": 1248,
+      "sha256": "23653d88991cd3bf3da2b9ba3efc46ddef756f013c9337993c8d158fbfd5b675"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/antigravity-original.svg",
+      "bytes": 5301,
+      "sha256": "d775965ea1f8060538c15f758a3e22487317211fcb6051333b5e023f35aa726f"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/antigravity-page.html",
+      "bytes": 87062,
+      "sha256": "5c94e9429e4d3752305676c6032aee67bf61cc4ca3a1ac02889cebe21b2d342a"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/antigravity-white.svg",
+      "bytes": 433,
+      "sha256": "5b8121138dcb017642ccf15d9f5cda738e61d8d70a12277c9cf5aeec3e575e81"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/brand-source-receipts.json",
+      "bytes": 2755,
+      "sha256": "4ec2824c3b7cc7b8f34fc99688a3a01d8007c90e6ab0b58d474a5143aa69d128"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/chatgpt-original.svg",
+      "bytes": 2969,
+      "sha256": "7be72f1fea831d3ba81a545cee79b7e0ae69449d5d7837c9571ccbfb4aa1e00b"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/chatgpt-white.svg",
+      "bytes": 2961,
+      "sha256": "b94ea61d860fae6f82f43571f36f17111fcf5d348e8e9cc22ae4b441c7560011"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/claude-brand.zip",
+      "bytes": 26465941,
+      "sha256": "c68ac92df86c825f95177e24016fcc9a8863a3fd4ca344fe6f0700b2c1e07151"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/claude-original.svg",
+      "bytes": 2580,
+      "sha256": "6d53db4be375e899c937c26cf16684a80d6e869b1928d72b37748bef2560e219"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/claude-page.html",
+      "bytes": 428062,
+      "sha256": "58286ec3940d1470b057d59854c2513e71e5e128199ecca8f4d9bf9643d0de77"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/figma-brand.zip",
+      "bytes": 78237,
+      "sha256": "79615c11b3a407d978753ce79359a7f1f765cd3332066a61f49ea637031298a0"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/figma-original.svg",
+      "bytes": 646,
+      "sha256": "9798b710e015c7f3fa6101779e323568d6a5a022651d427021262ce850467b07"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/figma-page.html",
+      "bytes": 1556853,
+      "sha256": "3aaa08792021b51c8a3bebffd9c16b82732d4f5212e74b81f8e7567f6ec82d33"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/figma-white.svg",
+      "bytes": 1608,
+      "sha256": "07ba0f9df63b8f25af99e76cf339ff0cfffb0483feec6ffbfda1b6106400d7c5"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/illustrator-official.svg",
+      "bytes": 1006,
+      "sha256": "325b4dd225461135f9af1b40221ffb766bb7249abd9943ac115efa33c714acaf"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/illustrator.svg",
+      "bytes": 1006,
+      "sha256": "325b4dd225461135f9af1b40221ffb766bb7249abd9943ac115efa33c714acaf"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/openai-brand.zip",
+      "bytes": 76633,
+      "sha256": "b2c4cd1e86bbe76bdc4946a72d014efa455240c177f4878fd68cc9b88c71d2ec"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/openai-page.html",
+      "bytes": 9719,
+      "sha256": "ebd590d2cc4e104c1d18721fc9eb5a0fbf3366ad68a93c674dc3f7029adaf76a"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/photoshop-official.svg",
+      "bytes": 1480,
+      "sha256": "32d8d8a42e006e84e464986955c3035a2efa2970827a1ac1e38bef12fc223a33"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/photoshop.svg",
+      "bytes": 1480,
+      "sha256": "32d8d8a42e006e84e464986955c3035a2efa2970827a1ac1e38bef12fc223a33"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/premiere-pro-official.svg",
+      "bytes": 1107,
+      "sha256": "bb8a26c488d8ea444e88878b83faf35d7f7760ecff0a11410270e641b2b905ea"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/premiere-pro.svg",
+      "bytes": 1107,
+      "sha256": "bb8a26c488d8ea444e88878b83faf35d7f7760ecff0a11410270e641b2b905ea"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/resolve-brand.zip",
+      "bytes": 589221,
+      "sha256": "a7c6accc9a82a048ba8a13a8996a2bf6af0158cc146fc0f6bbb4875b0a67acd9"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/resolve-download-page.html",
+      "bytes": 1364,
+      "sha256": "0db9e38a21beb298a37ac2991e3ee78b8b3a662068ca8f7aaabb97b251297715"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/resolve-media.js",
+      "bytes": 26055,
+      "sha256": "cd9fd2ee8fa465621513ceb5675885148b9a21990aa35494ba4dffd5dcb6abc4"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/resolve-original.png",
+      "bytes": 175223,
+      "sha256": "626dad1b7efe031bab177b13d396f412a78b8cece14c258b647e6434a35947d3"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/resolve-original.tif",
+      "bytes": 605656,
+      "sha256": "349bb0f2ebf3486cd4bb1657bcca7bdd5009859ecf8bcab2af309dde0f9c9985"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/source/resolve-page.html",
+      "bytes": 69331,
+      "sha256": "d2bdf21b978fb0707e17e4585c679b8bce18180ce5a8b5d3526ada956ea0fa52"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/verify-adobe-source.mjs",
+      "bytes": 1360,
+      "sha256": "5fed10c2dc8d66b6157866fc5b5fb1f23584995efee4d642ab996da24bc98539"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos-inspection.png",
+      "bytes": 83075,
+      "sha256": "63ed75a2a66cab814ca264ca5a84be7688d94a34ee9a0e727724e73e127d0872"
+    },
+    {
+      "path": "outputs/redesign/r0.2/portrait/alpha-verification.json",
+      "bytes": 882,
+      "sha256": "d11934e1a28b7f9ea41ee7fdaf577f2462b1a0bbf9f5d8f2d7272a78cb56f1be"
+    },
+    {
+      "path": "outputs/redesign/r0.2/portrait/avatar-cutout-color.webp",
+      "bytes": 66084,
+      "sha256": "6b2fea6dcbd2bd204fc0aa6c545cbe7a696670fc4532c992378c3393d53b511f"
+    },
+    {
+      "path": "outputs/redesign/r0.2/portrait/avatar-cutout-v1.png",
+      "bytes": 922719,
+      "sha256": "69a3b7b79d99051e49ebe6d00c609d626dfa1b933f78718d4e0919575297a35f"
+    },
+    {
+      "path": "outputs/redesign/r0.2/portrait/avatar-cutout-v2.png",
+      "bytes": 830528,
+      "sha256": "8af059a58d5a4ab5f896ba8d3d1eeb5812322e2cd2d9836da4c8cbec2eb93cf0"
+    },
+    {
+      "path": "outputs/redesign/r0.2/portrait/avatar-original.webp",
+      "bytes": 112382,
+      "sha256": "e6c0bac02737f8beb0bd25ca08793e552cc801b54d88464c9ae761a15dd90bd2"
+    },
+    {
+      "path": "outputs/redesign/r0.2/portrait/cutout-head.png",
+      "bytes": 211057,
+      "sha256": "619e23327b3d6d980f2ce3c7e89188ffa38d0b666005260a61e948f45d625d25"
+    },
+    {
+      "path": "outputs/redesign/r0.2/portrait/cutout-on-dark.png",
+      "bytes": 244111,
+      "sha256": "f627c0fa1b1f2e072cc7aee5c508081e95e3c218bbe67e5bb0e15782134b52bb"
+    },
+    {
+      "path": "outputs/redesign/r0.2/portrait/cutout-on-white.png",
+      "bytes": 267532,
+      "sha256": "d0035710ceaf6446b9bfa74d138567f7d7f71486f6410726439ca207b07b60ed"
+    },
+    {
+      "path": "outputs/redesign/r0.2/portrait/edit-prompts.json",
+      "bytes": 1424,
+      "sha256": "b90c3774062dfa6f1de4325ad2eb74f9cfa0eabb6ac40df52b5e2b32a29bc8f5"
+    },
+    {
+      "path": "outputs/redesign/r0.2/portrait/face-and-edge-comparison.png",
+      "bytes": 489631,
+      "sha256": "698998d26cc56ba2fbdae0615120254cc573a9e2b46699c6a7a49ae513f170fd"
+    },
+    {
+      "path": "outputs/redesign/r0.2/portrait/original-head.png",
+      "bytes": 276904,
+      "sha256": "1f07aa95b7357e37ba75010b8d8542085169fa0b9c2d3e20c2ffe905e7dac962"
+    },
+    {
+      "path": "outputs/redesign/r0.2/portrait/v1-on-dark.png",
+      "bytes": 693393,
+      "sha256": "3bac7fec60841b3de4e5a550b342082edacef1d5ae0738cf32f8b2b060dd9186"
+    },
+    {
+      "path": "outputs/redesign/r0.2/portrait/verify-portrait.py",
+      "bytes": 2144,
+      "sha256": "9b4e65f8a09f07cba42c3a6d35a1d8811bd686936d2584e06ac959e74a133448"
+    },
+    {
+      "path": "outputs/redesign/r0.2/portrait-inspection.png",
+      "bytes": 218334,
+      "sha256": "d6313e6b2599a57a4717af449f5baefd004d66d905c1d3e96c70dcd9977a2042"
+    },
+    {
+      "path": "outputs/redesign/r0.2/r03-integration-check.json",
+      "bytes": 492,
+      "sha256": "b320625007f8e2c76f3e5e1e69cbbf1776f631d5d933db4bf580eb026421a45a"
+    },
+    {
+      "path": "outputs/redesign/r0.2/source-baseline.json",
+      "bytes": 16844,
+      "sha256": "66147185a7656b0cb3aa03070a009c4cdd5c2f6793afd135c81084f1018d405b"
+    },
+    {
+      "path": "outputs/redesign/r0.2/source-integrity.json",
+      "bytes": 413,
+      "sha256": "eab8d9171de6a837565dbf6c46fac4e7597e67692bbd9f0c1d4fd4a7d50b198e"
+    },
+    {
+      "path": "outputs/redesign/r0.2/verification.md",
+      "bytes": 12339,
+      "sha256": "1673dc148ab1e217a13454025aba74e2717679d6568da89f45f236d7b94035ff"
+    },
+    {
+      "path": "outputs/redesign/r0.3/asset-index.json",
+      "bytes": 49772,
+      "sha256": "9ef7b524be57ce1e333f5b89e6de4f5762a73618dec906b76b47aabbc8d1cb8e"
+    },
+    {
+      "path": "outputs/redesign/r0.3/baseline.json",
+      "bytes": 15872,
+      "sha256": "bc332139c69ba8598e4e977e388edf11754a7e17dce6d89f4d37fdc2d4988a48"
+    },
+    {
+      "path": "outputs/redesign/r0.3/behance-access.json",
+      "bytes": 4932,
+      "sha256": "28decfae1105e8a92e02a78269bdc918f0844f3cec9bd34517f98eb3f0b02c74"
+    },
+    {
+      "path": "outputs/redesign/r0.3/behance-access.png",
+      "bytes": 33752,
+      "sha256": "7ab7289337d88505b43a2fec51ababe66843ceb5d7c47641acffaff36e750399"
+    },
+    {
+      "path": "outputs/redesign/r0.3/behance-page.html",
+      "bytes": 315687,
+      "sha256": "4f4cabe8fa586a9a7fe9d2ddc277e7d0fb9ac26ec06524744da703b6b59b2973"
+    },
+    {
+      "path": "outputs/redesign/r0.3/build-pack.py",
+      "bytes": 39239,
+      "sha256": "5a2e3147531e75dcb441c6ec869c32fa4ff2d56667fb024bb14cda7c2e0f1c76"
+    },
+    {
+      "path": "outputs/redesign/r0.3/capture.py",
+      "bytes": 3472,
+      "sha256": "ec93b906aff67063766ba1ad70d6ce29e3bad36f52283b03e3cac472ba28ac28"
+    },
+    {
+      "path": "outputs/redesign/r0.3/check-pack.py",
+      "bytes": 6676,
+      "sha256": "cd043e98e37a84942fe59306b7aeb3db432653a7ae7e6dc69c434626a3c1f237"
+    },
+    {
+      "path": "outputs/redesign/r0.3/claim-register.md",
+      "bytes": 9020,
+      "sha256": "7c3e61c731ed301c0cbfde0ee378a41cccad4bb645a269dc35fd7fbed954018b"
+    },
+    {
+      "path": "outputs/redesign/r0.3/claims.json",
+      "bytes": 11576,
+      "sha256": "111203dc0a70512605fcc075457b691d2f382ac335224af429dfd552cf7e47f5"
+    },
+    {
+      "path": "outputs/redesign/r0.3/content-index.json",
+      "bytes": 12473,
+      "sha256": "7d35097395178d3c21dd66210a1d86b43b14c65637df87c206f5cb4ccc2f39f7"
+    },
+    {
+      "path": "outputs/redesign/r0.3/content.md",
+      "bytes": 10902,
+      "sha256": "bf3a1f102cbb206798ad90fad8afe9a4607620a2c5fe821f9d7b04fb1abc7244"
+    },
+    {
+      "path": "outputs/redesign/r0.3/gaps.md",
+      "bytes": 6162,
+      "sha256": "5a2e6a34a10b8c63eee1892e33df9776c4b083316fede3a7e9c20d824cde8f86"
+    },
+    {
+      "path": "outputs/redesign/r0.3/image-audit.json",
+      "bytes": 16345,
+      "sha256": "6567746215609b32842d7de80b8dcfe4884adb2ddcce220b512c96d0408ebeac"
+    },
+    {
+      "path": "outputs/redesign/r0.3/inspect-source.mjs",
+      "bytes": 1619,
+      "sha256": "b2b3868743604bfd9cbad552c2aff5853d6a93d00afd1c9a26827947091b30f4"
+    },
+    {
+      "path": "outputs/redesign/r0.3/integration-handoff.md",
+      "bytes": 2030,
+      "sha256": "688b78f9620ac8ab8efcc32eeaa85bd57bdfab72edae7c3e7efab744a64ebe0b"
+    },
+    {
+      "path": "outputs/redesign/r0.3/owner-confirmation.json",
+      "bytes": 864,
+      "sha256": "fa671785db420c9d1ce54e8217989c19a568a901a67fe9bb22c8797c8738cc7b"
+    },
+    {
+      "path": "outputs/redesign/r0.3/progress-row.txt",
+      "bytes": 572,
+      "sha256": "b4cdfc4ec442b3e53d4fae3ae6c18e7863136c4f92750dd93da82bed35daa50b"
+    },
+    {
+      "path": "outputs/redesign/r0.3/source-retrieval.json",
+      "bytes": 505,
+      "sha256": "3320358c4cc42da381759d87eed1ede468d4476638bb2888ac8631c98d2253fd"
+    },
+    {
+      "path": "outputs/redesign/r0.3/sources/oncourse-fragmentation.html",
+      "bytes": 191133,
+      "sha256": "943ef74b7a914ad9b5433d19203a61cd8356b2551afba04b6f381d8d5a699ae4"
+    },
+    {
+      "path": "outputs/redesign/r0.3/sources.json",
+      "bytes": 4046,
+      "sha256": "3cd03d27186484c30b069339bd35b267528c26bd48c6804c5c06e6a227fa91cd"
+    },
+    {
+      "path": "outputs/redesign/r0.3/verification.json",
+      "bytes": 492,
+      "sha256": "a7f899ad8fadf50f664ae2fe9d5fa5215759cb9f04e42aa5a49f826d2032bf6d"
+    },
+    {
+      "path": "outputs/redesign/r0.3/verification.md",
+      "bytes": 9600,
+      "sha256": "4de2740552b97a193313211b7850a85be9ba4e01bbe63a008094aeddfae39304"
+    },
+    {
+      "path": "index.html",
+      "bytes": 6634,
+      "sha256": "0e62bb95b46e71f19110ed4375763997e7e58102eda335b98f3a910dcf88395d"
+    },
+    {
+      "path": "vite.config.js",
+      "bytes": 2489,
+      "sha256": "b6176d337e6ce71c05e8308193aeaa308fcb53019ab221af516d15028c4a0635"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1456,
+      "sha256": "e21571db76af9cddd6d3296ac10464f7f6c8ba83eaff6234c0cfde9cce59b632"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 422076,
+      "sha256": "824609c3123813427ea27548c5622e471b9aa9e7d8d249cfc50cdad48b11996c"
+    },
+    {
+      "path": "docs/ke-hoach-nang-cap-thi-giac-2026-10-07.md",
+      "bytes": 32350,
+      "sha256": "442dbe98945170b95e16c69e53efd471b588027d71b5e2736188c547c183e41c"
+    },
+    {
+      "path": "outputs/prompts-redesign-r0-r8.md",
+      "bytes": 80672,
+      "sha256": "c7296955c3bbd848cf5d4b44f6592819185a892f349437cf9367bef9c5ab2f5a"
+    }
+  ],
+  "agentsBefore": {
+    "bytes": 41759,
+    "sha256": "dff3bd6c8b5bd1d444d2ded517fef65b5971230611c2cbed5856dc7f62982aca"
+  },
+  "head": "69ca97dcda6c9cbf3907ec5366b5b4e0247663bb",
+  "trackedStatus": " M eslint.config.js\n M index.html\n M package-lock.json\n M package.json\n M postcss.config.js\nD  public/avatar.png\nD  public/project1.jpg\nD  public/project2.jpg\nD  public/project3.jpg\nD  public/vite.svg\nD  src/App.css\n M src/App.jsx\n M src/index.css\n M src/main.jsx\n D tailwind.config.js\n M vite.config.js"
+}
