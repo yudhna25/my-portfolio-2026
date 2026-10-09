@@ -1,0 +1,134 @@
+{
+  "started": "2026-10-08T04:38:00.384Z",
+  "errors": [],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "portrait": [
+    {
+      "type": "hover",
+      "filter": "grayscale(0)"
+    },
+    {
+      "type": "nativeTab",
+      "filter": "grayscale(0)",
+      "focus": true
+    },
+    {
+      "type": "nativeEnterSpace",
+      "preservedFocus": true
+    },
+    {
+      "type": "localeFocus",
+      "lang": "en",
+      "preservedFocus": true
+    }
+  ],
+  "intro": {
+    "before": {
+      "paused": true,
+      "progress": 0,
+      "decodeDurations": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "fullDuration": 1.12
+    },
+    "after": {
+      "progress": 1,
+      "frames": 213,
+      "minBioOpacity": 0.8,
+      "names": [
+        "TRẦN VŨ ANH DUY"
+      ],
+      "layoutStart": [
+        [
+          411,
+          97,
+          646
+        ],
+        [
+          532,
+          130,
+          646
+        ],
+        [
+          686,
+          94,
+          646
+        ]
+      ],
+      "layoutEnd": [
+        [
+          411,
+          97,
+          646
+        ],
+        [
+          532,
+          130,
+          646
+        ],
+        [
+          686,
+          94,
+          646
+        ]
+      ],
+      "layoutShifts": [],
+      "visual": [
+        "TRẦN VŨ",
+        "ANH DUY",
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề."
+      ],
+      "semanticBios": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBios": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "ariaName": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY"
+    },
+    "hidden": {
+      "simulated": true,
+      "before": 0.10803571428571428,
+      "after": 0.10803571428571428,
+      "paused": true
+    },
+    "offscreen": {
+      "paused": true
+    }
+  },
+  "touch": [
+    {
+      "motion": "no-preference",
+      "firstTap": "color",
+      "secondTap": "grayscale",
+      "hover": false,
+      "focusVisible": false,
+      "canvas": 1
+    },
+    {
+      "motion": "reduce",
+      "firstTap": "color",
+      "secondTap": "grayscale",
+      "hover": false,
+      "focusVisible": false,
+      "canvas": 1
+    }
+  ],
+  "alpha": {
+    "rect": {
+      "x": 104,
+      "y": 162.125,
+      "width": 448,
+      "height": 560
+    },
+    "heldScene": true
+  },
+  "finished": "2026-10-08T04:38:21.016Z"
+}

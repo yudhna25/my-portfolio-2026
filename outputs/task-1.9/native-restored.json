@@ -1,0 +1,50 @@
+{
+  "os": "native",
+  "navigation": 1791145872943.4,
+  "paints": [
+    {
+      "name": "first-paint",
+      "startTime": 2412,
+      "attribute": "light",
+      "background": "rgb(250, 250, 250)"
+    },
+    {
+      "name": "first-contentful-paint",
+      "startTime": 2412,
+      "attribute": "light",
+      "background": "rgb(250, 250, 250)"
+    }
+  ],
+  "initial": {
+    "theme": "light",
+    "stored": null,
+    "attribute": "light",
+    "meta": "#FAFAFA"
+  },
+  "storeTheme": "light",
+  "stored": null,
+  "attribute": "light",
+  "meta": "#FAFAFA",
+  "body": {
+    "background": "rgb(250, 250, 250)",
+    "color": "rgb(17, 17, 17)",
+    "contrast": 18.09
+  },
+  "button": {
+    "label": "Chuyển chế độ tối",
+    "background": "rgb(250, 250, 250)",
+    "color": "rgb(17, 17, 17)",
+    "border": "rgb(102, 102, 102)",
+    "shadow": "none",
+    "textContrast": 18.09,
+    "borderContrast": 5.5,
+    "outsideWrapper": true
+  },
+  "tokens": {
+    "--surface-background": "#FAFAFA",
+    "--surface-nebula": "#F2F2F2",
+    "--surface-card": "#FFFFFF",
+    "--foreground-primary": "#111111",
+    "--glow-button": "0 0 20px rgba(0,0,0,0.25)"
+  }
+}

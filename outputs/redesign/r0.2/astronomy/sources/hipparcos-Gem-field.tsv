@@ -1,0 +1,97 @@
+#
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2026-10-07T17:27:29 [V7.6.1]
+#   In case of problem, please report to:	cds-question@unistra.fr
+#
+#
+#Coosys	J2000:	eq_FK5 J2000
+#INFO	service_protocol=ASU	  IVOID of the protocol through which the data was retrieved
+#INFO	request_date=2026-10-07T17:27:29	  Query execution date
+#INFO	request=https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=I%2F239%2Fhip_main&-c=105.02842905030263+24.0348985856947&-c.rd=15.408751370713073&Vmag=%3C%3D5.5&-out=HIP%2CRAICRS%2CDEICRS%2CVmag&-out.max=1000&-sort=Vmag	  Full request URL
+#INFO	contact=cds-question@unistra.fr	  Email or URL to contact publisher
+#INFO	server_software=VizieR/7.6.1	  Software version
+#INFO	publisher=CDS	  Data centre that produced the VOTable
+#INFO	-c=105.028429+24.034899,rd=15.408751	
+#Constraint -sort=Vmag
+
+#RESOURCE=yCat_1239
+#Name: I/239
+#Title: The Hipparcos and Tycho Catalogues (ESA 1997)
+#INFO	ivoid=ivo://cds.vizier/i/239	    IVOID of underlying data collection
+#INFO	data_ivoid=ivo://cds.vizier/i/239	    IVOID of underlying data collection
+#INFO	creator=ESA 1997	    First author or institution
+#INFO	cites=1997HIP...C......0E	    Article or Data origin sources
+#INFO	reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/I/239	    Dataset landing page
+#INFO	publication_date=2021-11-18	    Date of first publication in the data centre
+#INFO	rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html	    Licence URI
+#Coosys	H_1991.250:	ICRS
+#Table	I_239_hip_main:
+#Name: I/239/hip_main
+#Title: The Hipparcos Main Catalogue
+#Column	HIP	(I6)	Identifier (HIP number) (H1)	[ucd=meta.id;meta.main]
+#Column	RAICRS	(F12.8)	? alpha, degrees (ICRS, Epoch=J1991.25) (H8)	[ucd=pos.eq.ra;meta.main]
+#Column	DEICRS	(F12.8)	? delta, degrees (ICRS, Epoch=J1991.25) (H9)	[ucd=pos.eq.dec;meta.main]
+#Column	Vmag	(F5.2)	? Magnitude in Johnson V (H5)	[ucd=phot.mag;em.opt.V]
+HIP	RAICRS	DEICRS	Vmag
+ 	deg	deg	mag
+------	------------	------------	-----
+ 37826	116.33068263	+28.02631031	 1.16
+ 36850	113.65001898	+31.88863645	 1.58
+ 31681	099.42792641	+16.39941482	 1.93
+ 30343	095.73996302	+22.51385027	 2.87
+ 32246	100.98304088	+25.13115531	 3.06
+ 29655	093.71956952	+22.50682376	 3.31
+ 32362	101.32263980	+12.89605513	 3.35
+ 35550	110.03078890	+21.98233941	 3.50
+ 37740	116.11195237	+24.39812929	 3.57
+ 35350	109.52336162	+16.54047526	 3.58
+ 33018	103.19725030	+33.96136985	 3.60
+ 36046	111.43198371	+27.79828561	 3.78
+ 34088	106.02723079	+20.57029939	 4.01
+ 36962	113.98071783	+26.89600343	 4.06
+ 30883	097.24079361	+20.21216720	 4.13
+ 28734	091.03006890	+23.26363207	 4.16
+ 36366	112.27754045	+31.78407932	 4.16
+ 37629	115.82785545	+28.88407170	 4.23
+ 29696	093.84473576	+29.49871224	 4.32
+ 34693	107.78496505	+30.24528065	 4.41
+ 29426	092.98498656	+14.20881425	 4.45
+ 32249	100.99705857	+13.22814319	 4.49
+ 36425	112.44909205	+12.00661101	 4.55
+ 28716	090.97993150	+20.13845865	 4.64
+ 31978	100.24442101	+09.89576021	 4.66
+ 33202	103.66080771	+13.17801628	 4.73
+ 28237	089.49857371	+25.95391597	 4.81
+ 37265	114.79148501	+34.58463287	 4.89
+ 37908	116.53122379	+18.51016877	 4.89
+ 39424	120.87957982	+27.79441794	 4.94
+ 29434	093.01365054	+16.13044684	 4.95
+ 38538	118.37431874	+26.76585858	 4.97
+ 36429	112.45325480	+27.91619925	 5.01
+ 35846	110.86897550	+25.05060041	 5.04
+ 37300	114.86912974	+17.67451551	 5.04
+ 34909	108.34277923	+16.15906775	 5.07
+ 36393	112.33526392	+28.11840380	 5.07
+ 35699	110.48708081	+20.44371648	 5.09
+ 35710	110.51120175	+36.76063782	 5.12
+ 28691	090.86400112	+19.69061033	 5.14
+ 34033	105.90863811	+10.95184577	 5.14
+ 38016	116.87640290	+33.41576665	 5.14
+ 29650	093.71223277	+19.15688949	 5.20
+ 32104	100.60134402	+17.64551421	 5.20
+ 33927	105.60326930	+24.21544652	 5.20
+ 36238	111.93497685	+21.44554856	 5.20
+ 31119	097.95120180	+11.54434340	 5.22
+ 31434	098.80025751	+28.02234399	 5.26
+ 36760	113.40207910	+15.82669239	 5.27
+ 32921	102.88770733	+21.76123162	 5.28
+ 37704	116.02884762	+25.78421056	 5.30
+ 29704	093.85469568	+16.14320591	 5.34
+ 36896	113.78673794	+30.96091010	 5.34
+ 35987	111.24245464	+11.66955984	 5.37
+ 38722	118.91626746	+19.88406657	 5.38
+ 31579	099.13682373	+38.44555210	 5.40
+ 32311	101.18943633	+28.97098912	 5.42
+ 36616	112.95154548	+17.08622915	 5.45
+ 34440	107.09184320	+15.93092642	 5.47
+

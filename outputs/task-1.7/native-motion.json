@@ -1,0 +1,39 @@
+{
+  "cameraNativeState": {
+    "camera": [
+      0,
+      0,
+      0
+    ],
+    "direction": [
+      0,
+      0,
+      -1
+    ],
+    "scrollProgress": 0,
+    "currentSection": "hero",
+    "scrollY": 0,
+    "maxScroll": 2160,
+    "lastPointer": [
+      0,
+      0
+    ],
+    "blackHoleZ": -200,
+    "nativeReduced": false,
+    "reduced": false,
+    "nativeMode": true,
+    "fps": 165,
+    "calls": 7,
+    "commits": 2,
+    "livePointers": 1,
+    "pointerPeak": 1
+  },
+  "cameraNativeConsole": [
+    {
+      "level": "warn",
+      "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+      "timestamp": "2026-10-04T17:20:20.989Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=4ea51728"
+    }
+  ]
+}

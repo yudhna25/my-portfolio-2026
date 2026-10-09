@@ -1,0 +1,291 @@
+{
+  "status": "PASS",
+  "samples": [
+    {
+      "progress": 0,
+      "viewport": [
+        390,
+        844
+      ],
+      "camera": [
+        -0.014468520707036235,
+        -0.012240493601810395,
+        0
+      ],
+      "center": [
+        195,
+        422
+      ],
+      "radius": 3.715248965555271,
+      "corePixels": 21,
+      "darkFraction": 1,
+      "maxCore": 0,
+      "meanCore": 0,
+      "brightPixels": 192,
+      "tinted": 0,
+      "corePass": true,
+      "programsPass": true,
+      "stars": 1500,
+      "visibleStars": 207,
+      "quadrants": [
+        52,
+        59,
+        44,
+        52
+      ],
+      "centerToOuterDensity": 1.6,
+      "maxStarCssPixels": 2.9947774410247803,
+      "starCameraOffset": 0,
+      "selected": [
+        "accretion-disk"
+      ],
+      "liveComposers": 1
+    },
+    {
+      "progress": 0.1,
+      "viewport": [
+        390,
+        844
+      ],
+      "camera": [
+        -6.782016349219563,
+        1.5070530395276547,
+        -15.994853347004886
+      ],
+      "center": [
+        196.09992864989434,
+        421.99969751507035
+      ],
+      "radius": 4.035325854141571,
+      "corePixels": 21,
+      "darkFraction": 1,
+      "maxCore": 0,
+      "meanCore": 0,
+      "brightPixels": 231,
+      "tinted": 0,
+      "corePass": true,
+      "programsPass": true,
+      "stars": 1500,
+      "visibleStars": 207,
+      "quadrants": [
+        51,
+        60,
+        45,
+        51
+      ],
+      "centerToOuterDensity": 1.7045454545454546,
+      "maxStarCssPixels": 2.9947774410247803,
+      "starCameraOffset": 0,
+      "selected": [
+        "accretion-disk"
+      ],
+      "liveComposers": 1
+    },
+    {
+      "progress": 0.3,
+      "viewport": [
+        390,
+        844
+      ],
+      "camera": [
+        5.581668123607663,
+        1.1695197419081227,
+        -47.99532414812974
+      ],
+      "center": [
+        198.99230952796955,
+        422.0014898689465
+      ],
+      "radius": 4.884898386384734,
+      "corePixels": 37,
+      "darkFraction": 1,
+      "maxCore": 0,
+      "meanCore": 0,
+      "brightPixels": 340,
+      "tinted": 0,
+      "corePass": true,
+      "programsPass": true,
+      "stars": 1500,
+      "visibleStars": 209,
+      "quadrants": [
+        51,
+        60,
+        48,
+        50
+      ],
+      "centerToOuterDensity": 1.6444444444444444,
+      "maxStarCssPixels": 2.9947774410247803,
+      "starCameraOffset": 0,
+      "selected": [
+        "accretion-disk"
+      ],
+      "liveComposers": 1
+    },
+    {
+      "progress": 0.5,
+      "viewport": [
+        390,
+        844
+      ],
+      "camera": [
+        -7.981859808747346,
+        0.00156205494044513,
+        -79.99593341893853
+      ],
+      "center": [
+        203.42021135422712,
+        421.99999545383747
+      ],
+      "radius": 6.1782206267728785,
+      "corePixels": 50,
+      "darkFraction": 1,
+      "maxCore": 0,
+      "meanCore": 0,
+      "brightPixels": 535,
+      "tinted": 0,
+      "corePass": true,
+      "programsPass": true,
+      "stars": 1500,
+      "visibleStars": 206,
+      "quadrants": [
+        54,
+        56,
+        46,
+        50
+      ],
+      "centerToOuterDensity": 1.7538461538461538,
+      "maxStarCssPixels": 2.9947774410247803,
+      "starCameraOffset": 0,
+      "selected": [
+        "accretion-disk"
+      ],
+      "liveComposers": 1
+    },
+    {
+      "progress": 0.7,
+      "viewport": [
+        390,
+        844
+      ],
+      "camera": [
+        4.381689090073043,
+        -1.1672881608237051,
+        -111.99533147294332
+      ],
+      "center": [
+        211.03973405566123,
+        421.9793536320407
+      ],
+      "radius": 8.432113948960279,
+      "corePixels": 97,
+      "darkFraction": 1,
+      "maxCore": 0,
+      "meanCore": 0,
+      "brightPixels": 994,
+      "tinted": 0,
+      "corePass": true,
+      "programsPass": true,
+      "stars": 1500,
+      "visibleStars": 206,
+      "quadrants": [
+        49,
+        58,
+        51,
+        48
+      ],
+      "centerToOuterDensity": 1.6466165413533835,
+      "maxStarCssPixels": 2.9947774410247803,
+      "starCameraOffset": 0,
+      "selected": [
+        "accretion-disk"
+      ],
+      "liveComposers": 1
+    },
+    {
+      "progress": 0.9,
+      "viewport": [
+        390,
+        844
+      ],
+      "camera": [
+        -9.181243928523608,
+        -1.5106155287768441,
+        -143.99574516749453
+      ],
+      "center": [
+        227.19824104361257,
+        422.05848357323197
+      ],
+      "radius": 13.088327239560837,
+      "corePixels": 229,
+      "darkFraction": 1,
+      "maxCore": 0,
+      "meanCore": 0,
+      "brightPixels": 2358,
+      "tinted": 0,
+      "corePass": true,
+      "programsPass": true,
+      "stars": 1500,
+      "visibleStars": 205,
+      "quadrants": [
+        51,
+        55,
+        48,
+        51
+      ],
+      "centerToOuterDensity": 1.5555555555555556,
+      "maxStarCssPixels": 2.9947774410247803,
+      "starCameraOffset": 0,
+      "selected": [
+        "accretion-disk"
+      ],
+      "liveComposers": 1
+    },
+    {
+      "progress": 1,
+      "viewport": [
+        390,
+        844
+      ],
+      "camera": [
+        -3.0175629443708214,
+        -0.004292154913216807,
+        -159.99434266168424
+      ],
+      "center": [
+        245.94177811382895,
+        421.9995936741618
+      ],
+      "radius": 18.52100548645756,
+      "corePixels": 450,
+      "darkFraction": 1,
+      "maxCore": 0,
+      "meanCore": 0,
+      "brightPixels": 4786,
+      "tinted": 0,
+      "corePass": true,
+      "programsPass": true,
+      "stars": 1500,
+      "visibleStars": 207,
+      "quadrants": [
+        52,
+        58,
+        49,
+        48
+      ],
+      "centerToOuterDensity": 1.6,
+      "maxStarCssPixels": 2.9947774410247803,
+      "starCameraOffset": 0,
+      "selected": [
+        "accretion-disk"
+      ],
+      "liveComposers": 1
+    }
+  ],
+  "fps": 165.34431591045583,
+  "shaderMotionPass": true,
+  "shaderStart": 0,
+  "shaderEnd": 3.309100000001453,
+  "reducedMotion": false,
+  "peakComposers": 1
+}

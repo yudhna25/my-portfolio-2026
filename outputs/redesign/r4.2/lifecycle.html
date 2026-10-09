@@ -1,0 +1,12 @@
+<!doctype html><html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/pwa-192x192.png"><title>R4.2 lifecycle check</title></head><body><div id="root"></div><script type="module">
+import React from '/node_modules/.vite/deps/react.js';
+import ReactDOM from '/node_modules/.vite/deps/react-dom_client.js';
+import '/src/index.css';
+import '/node_modules/@fontsource-variable/unbounded/index.css';
+import '/src/i18n/config.js';
+import App from '/src/App.jsx';
+const root=ReactDOM.createRoot(document.getElementById('root'));
+window.mountApp=()=>root.render(React.createElement(React.StrictMode,null,React.createElement(App)));
+window.unmountApp=()=>root.render(null);
+window.mountApp();
+</script></body></html>

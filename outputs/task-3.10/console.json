@@ -1,0 +1,14 @@
+[
+  {
+    "level": "warn",
+    "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "timestamp": "2026-10-06T01:52:33.790Z",
+    "url": "http://127.0.0.1:5184/assets/events-9ce18a08.esm-D8CKIQ7D.js"
+  },
+  {
+    "level": "warn",
+    "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "timestamp": "2026-10-06T01:55:02.750Z",
+    "url": "http://127.0.0.1:5184/assets/events-9ce18a08.esm-D8CKIQ7D.js"
+  }
+]

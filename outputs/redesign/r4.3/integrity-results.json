@@ -1,0 +1,511 @@
+{
+  "checkedAt": "2026-10-08T13:31:29.313Z",
+  "baselineCapturedAt": "2026-10-08T12:51:57.632Z",
+  "changed": [
+    "src/3d/components/SkillsSymbols.jsx",
+    "src/3d/hooks/useScrollProgress.js",
+    "src/3d/utils/cameraPath.js",
+    "src/App.jsx",
+    "src/components/Education.jsx",
+    "src/i18n/locales/en.json",
+    "src/i18n/locales/vi.json"
+  ],
+  "preserved": [
+    "src/3d/components/BlackHole.jsx",
+    "src/3d/components/BlackHoleBloomMask.jsx",
+    "src/3d/components/BlackHoleSystem.jsx",
+    "src/3d/components/CameraRig.jsx",
+    "src/3d/components/LabTelemetry.jsx",
+    "src/3d/components/Nebula.jsx",
+    "src/3d/components/SceneBoundary.jsx",
+    "src/3d/components/SceneFallback.jsx",
+    "src/3d/components/ShootingStars.jsx",
+    "src/3d/components/StarField.jsx",
+    "src/3d/components/SymbolStars.jsx",
+    "src/3d/components/WorksConstellations.jsx",
+    "src/3d/data/symbolTargets.json",
+    "src/3d/data/worksConstellations.json",
+    "src/3d/GalaxyScene.jsx",
+    "src/3d/hooks/useLabScroll.js",
+    "src/3d/hooks/useMediaQuery.js",
+    "src/3d/hooks/useSectionAnchor.js",
+    "src/3d/quality.js",
+    "src/3d/shaders/blackHole.js",
+    "src/3d/utils/buildStarGeometry.js",
+    "src/3d/utils/finale.js",
+    "src/3d/utils/portal.js",
+    "src/3d/utils/shootingStars.js",
+    "src/3d/utils/symbolMorph.js",
+    "src/3d/utils/worksOrbit.js",
+    "src/3d-lab.jsx",
+    "src/assets/react.svg",
+    "src/components/About.jsx",
+    "src/components/Aurora.jsx",
+    "src/components/Cursor.jsx",
+    "src/components/effects/PortalHeading.jsx",
+    "src/components/EvilEye.jsx",
+    "src/components/Footer.jsx",
+    "src/components/Hero.jsx",
+    "src/components/layout/MenuOverlay.jsx",
+    "src/components/layout/Nav.jsx",
+    "src/components/Preloader.jsx",
+    "src/components/sections/Contact.jsx",
+    "src/components/sections/Experience.jsx",
+    "src/components/sections/Skills.jsx",
+    "src/components/SplashCursor.jsx",
+    "src/components/ui/SoundToggle.jsx",
+    "src/components/ui/TargetLockReticle.jsx",
+    "src/components/Work.jsx",
+    "src/data/navigation.js",
+    "src/data/skills.js",
+    "src/data.js",
+    "src/hooks/useGSAPSetup.js",
+    "src/hooks/useReducedMotion.js",
+    "src/hooks/useSmoothScroll.js",
+    "src/i18n/config.js",
+    "src/i18n/locales/en/lab.json",
+    "src/i18n/locales/en/scene.json",
+    "src/i18n/locales/vi/lab.json",
+    "src/i18n/locales/vi/scene.json",
+    "src/index.css",
+    "src/lib/audioEngine.js",
+    "src/lib/utils.js",
+    "src/main.jsx",
+    "src/stores/useAudioStore.js",
+    "src/stores/useLangStore.js",
+    "src/stores/useLoadingStore.js",
+    "src/stores/useScrollStore.js",
+    "src/stores/useSkillsStore.js",
+    "src/stores/useThemeStore.js",
+    "src/styles/globals.css",
+    "src/styles/menu.css",
+    "public/avatar-cutout.webp",
+    "public/avatar.webp",
+    "public/favicon.svg",
+    "public/icons/ae.png",
+    "public/icons/ai.png",
+    "public/icons/figma.png",
+    "public/icons/pr.png",
+    "public/icons/ps.png",
+    "public/og-image.jpg",
+    "public/project1.webp",
+    "public/project2.webp",
+    "public/project3.webp",
+    "public/pwa-192x192.png",
+    "public/pwa-512x512.png",
+    "public/pwa-maskable-192x192.png",
+    "public/pwa-maskable-512x512.png",
+    "public/theme-init.js",
+    "index.html",
+    "vite.config.js",
+    "package.json",
+    "package-lock.json"
+  ],
+  "added": [
+    {
+      "path": "src/data/education.js",
+      "sha256": "14b2039c2cf6ea417206b5451314dafc8d18fb2b2346d318899cbeb1ee0f0f89"
+    },
+    {
+      "path": "src/stores/useEducationStore.js",
+      "sha256": "4392d11dba01d215beeaf4a220e3395c6ac8cf560a82295c7016b6a98b35b1f7"
+    }
+  ],
+  "stagedDiffUnchanged": true,
+  "headUnchanged": true,
+  "agentsPrefixPreserved": true,
+  "agentsAddedBytes": 949,
+  "agentsAppendedRows": 1,
+  "localeNewKeysOnly": [
+    "education.mapNote",
+    "education.interactionHint",
+    "education.clearSelection",
+    "education.constellations"
+  ],
+  "after": {
+    "src/3d/components/BlackHole.jsx": {
+      "sha256": "bbb9146e438b8555578c96595f2d88396b6ac4fd86396baa60bd75224be195df",
+      "bytes": 6171
+    },
+    "src/3d/components/BlackHoleBloomMask.jsx": {
+      "sha256": "42cb5fa9c3b1ba63cb2fae5e71fcb49d2e293c1ac7fb3aabc81a5b7cb3266b48",
+      "bytes": 1286
+    },
+    "src/3d/components/BlackHoleSystem.jsx": {
+      "sha256": "10d7d0ac65e3ee948c8b0afee19ebfd50cd080b827009848ba622aa03299e010",
+      "bytes": 2473
+    },
+    "src/3d/components/CameraRig.jsx": {
+      "sha256": "0c7f8c1ad62ffd844bd9a7a4c79516b845d3fb24929d7d79c9ea14063d23fa01",
+      "bytes": 3639
+    },
+    "src/3d/components/LabTelemetry.jsx": {
+      "sha256": "41444ad64bd6ead021fe6b6468565ccf582d2938c9c89961d1e67ded32644716",
+      "bytes": 2578
+    },
+    "src/3d/components/Nebula.jsx": {
+      "sha256": "83a8603a74885be2686e40227a71aae59af37cc9310806a9c9e52645d51a085c",
+      "bytes": 2345
+    },
+    "src/3d/components/SceneBoundary.jsx": {
+      "sha256": "f973636c5119c7080585c7e12a8194aabbc4c830cafec7e4274647aec5ee5507",
+      "bytes": 415
+    },
+    "src/3d/components/SceneFallback.jsx": {
+      "sha256": "66cc6c0cc4139e9d1f3447878bed1f27da1e19adfa7862f29615348c9cc17977",
+      "bytes": 730
+    },
+    "src/3d/components/ShootingStars.jsx": {
+      "sha256": "eac0872b91308a8d3d15929ac3fa7af0b216cb1d68916a3cd37db42c04bd3e9b",
+      "bytes": 3476
+    },
+    "src/3d/components/SkillsSymbols.jsx": {
+      "sha256": "c89349e59fb8abee5d0a3935ba915ccc10421046ebc76f00e6fe40ab1b7c87be",
+      "bytes": 1316
+    },
+    "src/3d/components/StarField.jsx": {
+      "sha256": "411f8f09e9b9778240ac0b2b158ba68210b1e6bd921301a068b0484dd7be7389",
+      "bytes": 3007
+    },
+    "src/3d/components/SymbolStars.jsx": {
+      "sha256": "64e67e60e0a54e0567b2eef7cb4f61c383d253f01468b114ab5e2af5eb04faea",
+      "bytes": 6374
+    },
+    "src/3d/components/WorksConstellations.jsx": {
+      "sha256": "9fb209372b6aa12d790349c47046b6c7e5058bbcd67b01a82e2a2a9387a5a6ae",
+      "bytes": 8214
+    },
+    "src/3d/data/symbolTargets.json": {
+      "sha256": "0edfec1c16363c7e65b6061105d0c791515130d120f0172b55cdb4a93a9bb903",
+      "bytes": 66482
+    },
+    "src/3d/data/worksConstellations.json": {
+      "sha256": "0872071ea19c09d3a9d9af0a62072cb35f7a8133108f7fb526f907e302f3f9f8",
+      "bytes": 35433
+    },
+    "src/3d/GalaxyScene.jsx": {
+      "sha256": "fb0ae3c103227bc69061e7943c045b5a07b0cbda40b05e396e971d5e759442b1",
+      "bytes": 4288
+    },
+    "src/3d/hooks/useLabScroll.js": {
+      "sha256": "370ab1a99377d46413b8de803862e6cc3598f3423b6ff100119edbf301ef3b58",
+      "bytes": 228
+    },
+    "src/3d/hooks/useMediaQuery.js": {
+      "sha256": "26a20531953a9de2f74b3c57abda7b115a7437ed74b37fb5b2cfcbe0499974df",
+      "bytes": 514
+    },
+    "src/3d/hooks/useScrollProgress.js": {
+      "sha256": "a47220917a7972ed85bb7ceb34990ec4cd89451938905c39f3c460e5db832d70",
+      "bytes": 8298
+    },
+    "src/3d/hooks/useSectionAnchor.js": {
+      "sha256": "04920c04d5d3cf33244fd33c7448bc1d42e6ad689c4d673c4494d15f8f4d8a8d",
+      "bytes": 2674
+    },
+    "src/3d/quality.js": {
+      "sha256": "50c9d17825d7db83c252ae54e9d7e44ec3775946a29cfb94ae6fa5402d2771d1",
+      "bytes": 354
+    },
+    "src/3d/shaders/blackHole.js": {
+      "sha256": "b06509fb173860c82bcd3f45bdbac404e140ce379df3854643c0566488b74153",
+      "bytes": 9914
+    },
+    "src/3d/utils/buildStarGeometry.js": {
+      "sha256": "e031f0b9665ed22eee431a1be173251ab59baa941653dfef4a495cc7cf9bf8e6",
+      "bytes": 1566
+    },
+    "src/3d/utils/cameraPath.js": {
+      "sha256": "ffa226e61c1cbd0d3a021e363daa13db6fad50b37693ec6738b9f247cff9f99b",
+      "bytes": 3442
+    },
+    "src/3d/utils/finale.js": {
+      "sha256": "78db1b09f20c99071279dcfcca5b82e3a17462afedc0c830aacebc36e719c26d",
+      "bytes": 1878
+    },
+    "src/3d/utils/portal.js": {
+      "sha256": "f0f4fb99aeae78c54d79e044d59446247a73fef056f91f0d31f9a812f6a3db50",
+      "bytes": 747
+    },
+    "src/3d/utils/shootingStars.js": {
+      "sha256": "45693fb2d3a69212fd1df8ceeea1caee20f54add24e7e975726c73f1f65659e1",
+      "bytes": 2932
+    },
+    "src/3d/utils/symbolMorph.js": {
+      "sha256": "7ded606260e9ab4441eb982d1eae752d836a2bc2ff08dbedbaa7011bfec95c21",
+      "bytes": 5608
+    },
+    "src/3d/utils/worksOrbit.js": {
+      "sha256": "946204d592b108276c7a0497136754979ecd1a46af81ca1f57fa86396f88a20e",
+      "bytes": 1575
+    },
+    "src/3d-lab.jsx": {
+      "sha256": "088f5a535c70dfd9eb55f23c777c19d813f741659e8e2158361079639d081c1c",
+      "bytes": 16682
+    },
+    "src/App.jsx": {
+      "sha256": "9348b568b2730d032862be17300fba634458352b34b58692f293735afdb520cf",
+      "bytes": 5214
+    },
+    "src/assets/react.svg": {
+      "sha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
+      "bytes": 4126
+    },
+    "src/components/About.jsx": {
+      "sha256": "5ad9a3e003871a64f5490e5ad7be54ecbc2dbe51be42c018184f5299c00e497e",
+      "bytes": 5418
+    },
+    "src/components/Aurora.jsx": {
+      "sha256": "c03e2396d0f975a4371705ba60a0176896aa1f22396e7f8153981592f8d4589b",
+      "bytes": 6452
+    },
+    "src/components/Cursor.jsx": {
+      "sha256": "896f457780417fff90fc48e47c5315d2cac7ff5fda878dd7ab17cfdb16851f06",
+      "bytes": 13532
+    },
+    "src/components/Education.jsx": {
+      "sha256": "436e85baf736c0d3d4f9a1d0452145e28fc67f637ee38b7f078b2eef562395b4",
+      "bytes": 6083
+    },
+    "src/components/effects/PortalHeading.jsx": {
+      "sha256": "892ce3e60dde107ee286b3f47341c1e7076ee35c3735e94dfaa1888b06af0f7c",
+      "bytes": 3659
+    },
+    "src/components/EvilEye.jsx": {
+      "sha256": "c76bebce7c93608d982fc18579bd404cf204d0b1d068c1b3c14817406dd74f11",
+      "bytes": 8917
+    },
+    "src/components/Footer.jsx": {
+      "sha256": "545cf0e5ae2cdcf6ae761aaf3d2b7f20fa810ab93dd9571f9b0a3c2b9be2efdc",
+      "bytes": 7174
+    },
+    "src/components/Hero.jsx": {
+      "sha256": "d4a370e4575d65a1000365bdaf8e13805d15f59b1bbdf0e01b915930f3768f6a",
+      "bytes": 822
+    },
+    "src/components/layout/MenuOverlay.jsx": {
+      "sha256": "a8ff968911d05e454bcfe0c6618c5452ecab732776565c5beb77c314edd9e623",
+      "bytes": 13027
+    },
+    "src/components/layout/Nav.jsx": {
+      "sha256": "268118918d93afddb7d5630a124a92afdc448b24ba5a9c59d7b341d2b2cba3ef",
+      "bytes": 7238
+    },
+    "src/components/Preloader.jsx": {
+      "sha256": "80d50c244b8c1749804c16f30ab6831b399fd3771ab3f1029d659588c5ed4fcd",
+      "bytes": 5539
+    },
+    "src/components/sections/Contact.jsx": {
+      "sha256": "5c2a0abe31226d091906d0ce68a6459ad0d1ff424c4390a90ea3d23e53c4338a",
+      "bytes": 12222
+    },
+    "src/components/sections/Experience.jsx": {
+      "sha256": "44fae2f25b611f1b61fc424fbd5c3deff12cb25bf92241b2f43eed7a0fa963e0",
+      "bytes": 4660
+    },
+    "src/components/sections/Skills.jsx": {
+      "sha256": "f8b41129ea14d5e3ab51a7817a0228014918a3382149da5756ae72fb69a698f5",
+      "bytes": 11150
+    },
+    "src/components/SplashCursor.jsx": {
+      "sha256": "95a4982d97e49e892788b9847cd41843f084fe9f2a39c10ae0ae88944280d8ec",
+      "bytes": 36078
+    },
+    "src/components/ui/SoundToggle.jsx": {
+      "sha256": "5b9f1213d843bdfada8d4c64e907c5181b50ecb207a537a188c4849580f61dc3",
+      "bytes": 1959
+    },
+    "src/components/ui/TargetLockReticle.jsx": {
+      "sha256": "3e61bfd52cf8c7b447c780b3252bf66ce40da4f0f5fa2f067c1a9a4ce2455fd1",
+      "bytes": 4334
+    },
+    "src/components/Work.jsx": {
+      "sha256": "b84f1e329fc47db5a4b7f389c4c445a565ab90ab5cf5856ee779745b05771761",
+      "bytes": 10031
+    },
+    "src/data/navigation.js": {
+      "sha256": "0e09dfc2377250a6356b0c2f7e8321a4687c0153d48e2bbae99b3afdfedd6374",
+      "bytes": 297
+    },
+    "src/data/skills.js": {
+      "sha256": "8e3813e54bc939b48da5d55d35cf67fbd5b75ce6b8ef443cf5e94c438d889ea4",
+      "bytes": 886
+    },
+    "src/data.js": {
+      "sha256": "07471ebecad15aba95fb5c88a411188a8e29edd7b16468a3b41623b389d988c9",
+      "bytes": 4012
+    },
+    "src/hooks/useGSAPSetup.js": {
+      "sha256": "d0d776b48f380b21f6091e9b139ba9d079cc4db4a1be8b5640a0ed09e29d592d",
+      "bytes": 2078
+    },
+    "src/hooks/useReducedMotion.js": {
+      "sha256": "cf30eaafdf14a457d04c12550e9e6e3ac837daff2c26b2fc37a2efb0cc784b73",
+      "bytes": 532
+    },
+    "src/hooks/useSmoothScroll.js": {
+      "sha256": "2dc0684b3f94d6ba7075d643b75caa3112bc5bd8a89d9d39ceb698b2129689cb",
+      "bytes": 1217
+    },
+    "src/i18n/config.js": {
+      "sha256": "4a71342b0755f24f574ffe22166285ba15dd39555d120a08225bd96c2f45d6c6",
+      "bytes": 1898
+    },
+    "src/i18n/locales/en/lab.json": {
+      "sha256": "d29d3cbc6884bef092562b13382245926b8377ee423430c956a667704c9d2e6e",
+      "bytes": 5258
+    },
+    "src/i18n/locales/en/scene.json": {
+      "sha256": "5534d80716ad31a43574c3dbff7c9994374795d39a542069b0c46020abeea919",
+      "bytes": 149
+    },
+    "src/i18n/locales/en.json": {
+      "sha256": "3a745644db8fba2a9c4edf5c554dc8371a2e1b4928a484c57a20d2ebc958831e",
+      "bytes": 10135
+    },
+    "src/i18n/locales/vi/lab.json": {
+      "sha256": "1814d2cddcd8cc3fe9c82f93dabdccc688a3399d35a3b08d4a1000df1e9867c2",
+      "bytes": 5577
+    },
+    "src/i18n/locales/vi/scene.json": {
+      "sha256": "9f813ec2b2922b424bd5b5c41f66dd4212f865abf30df14cdb0f1d4e71944ffb",
+      "bytes": 183
+    },
+    "src/i18n/locales/vi.json": {
+      "sha256": "2e80794ac52a96031dadfc24e42d1b037b980f74ab7891708ca49872e94e04f2",
+      "bytes": 11174
+    },
+    "src/index.css": {
+      "sha256": "99edeb575835b31ff7f936e75248ab2d69a886e176706c0078e9b05e27e8410c",
+      "bytes": 4311
+    },
+    "src/lib/audioEngine.js": {
+      "sha256": "ced5514afb6af3322b8793004275726cbc2b78d40f404c577c8adfae07aa99b1",
+      "bytes": 4698
+    },
+    "src/lib/utils.js": {
+      "sha256": "478739b1eed969267a388fc17db539b53aa66cf15a9467e475274b36de8783f2",
+      "bytes": 25
+    },
+    "src/main.jsx": {
+      "sha256": "434f03cf6d9a4e72a1b312b2f5f613193c68b7deeef585148daa388e071d2f50",
+      "bytes": 354
+    },
+    "src/stores/useAudioStore.js": {
+      "sha256": "421d14eae90cdf5562e004e5fa937987d172cce58e4a7b95924fecc241f8c8f8",
+      "bytes": 1707
+    },
+    "src/stores/useLangStore.js": {
+      "sha256": "4feb341440e9997aa4da41186138099408fd42d0797bc627671210491d533060",
+      "bytes": 184
+    },
+    "src/stores/useLoadingStore.js": {
+      "sha256": "28171bb7e08ba1157051f9b4e130ee726d57ec9419e761499fbdda6006995ca3",
+      "bytes": 158
+    },
+    "src/stores/useScrollStore.js": {
+      "sha256": "11f911c5f94870e048964a29d79c68a81c4f7701d7f41a1568f5cb3c9dd4388c",
+      "bytes": 2617
+    },
+    "src/stores/useSkillsStore.js": {
+      "sha256": "2ccf6f0ba7d9dfa93eb36b48583848f87343a7dcccb9c20f3d9e6333afd57278",
+      "bytes": 671
+    },
+    "src/stores/useThemeStore.js": {
+      "sha256": "f5b4d697025581d154c14f46c2f6d05aac418006c2e6121270966b079d754bb9",
+      "bytes": 796
+    },
+    "src/styles/globals.css": {
+      "sha256": "6ae455eba38fb75448eae0c99b9efd59861ec12b1747ed145c19803ef4949971",
+      "bytes": 4134
+    },
+    "src/styles/menu.css": {
+      "sha256": "dd777575640babba2a136b5584153b688fe0b2cf0e0b13071029cfa0d7c7d947",
+      "bytes": 138
+    },
+    "public/avatar-cutout.webp": {
+      "sha256": "6b2fea6dcbd2bd204fc0aa6c545cbe7a696670fc4532c992378c3393d53b511f",
+      "bytes": 66084
+    },
+    "public/avatar.webp": {
+      "sha256": "e6c0bac02737f8beb0bd25ca08793e552cc801b54d88464c9ae761a15dd90bd2",
+      "bytes": 112382
+    },
+    "public/favicon.svg": {
+      "sha256": "f00dd37727ee48eb8dec38799622b07c50776fbf1cac271e239c0adf2b35957a",
+      "bytes": 1021
+    },
+    "public/icons/ae.png": {
+      "sha256": "13df4673f9bd262a1376c488e1cbfc67bd1cd0500555c05677edfa15128069af",
+      "bytes": 4553
+    },
+    "public/icons/ai.png": {
+      "sha256": "7a9e921269cb9257010d22f61694268d14c171b245413134e7cd3244fcc56331",
+      "bytes": 3381
+    },
+    "public/icons/figma.png": {
+      "sha256": "79036c1f608b11eb14a711ec02bab4cc162a2406e7fb89ae5f02a456d4918f48",
+      "bytes": 2217
+    },
+    "public/icons/pr.png": {
+      "sha256": "6af65c63d2f8a59fc54f49f5bc76b9938777789a04f36b625433409d9803efab",
+      "bytes": 16211
+    },
+    "public/icons/ps.png": {
+      "sha256": "f3083bd3ed5ac24d94d45907a1fa4ab1713f1d8fc6361d2e9ebfc960c5b85862",
+      "bytes": 3871
+    },
+    "public/og-image.jpg": {
+      "sha256": "bc898f6ebda22f5920af9bcf5bc01c7aa3ebb7a53e01434a787283c4598e9e2f",
+      "bytes": 62445
+    },
+    "public/project1.webp": {
+      "sha256": "2e9d8cee3c4c3584bb74bdeffcf384dcfabeb7d74bb165fd48d5094e38ad359b",
+      "bytes": 51014
+    },
+    "public/project2.webp": {
+      "sha256": "1032b163b247f7d528b313f093abf6bc29eade6b39d98b5acbbd5b068056de9b",
+      "bytes": 62292
+    },
+    "public/project3.webp": {
+      "sha256": "03117079520095b5dab4cd53a4b8c2a8495fe174efc1aa4d9b9d998447dad6fc",
+      "bytes": 43608
+    },
+    "public/pwa-192x192.png": {
+      "sha256": "6e838d4b2412cb88c71f6befcc441b984efc2c73e1974c4c1a244bd7d7e9f724",
+      "bytes": 5958
+    },
+    "public/pwa-512x512.png": {
+      "sha256": "ac06e97bda0b1a82b5fe7f8cbcedbef0bb7a9ac1de1c1d988ad9833091470f97",
+      "bytes": 21440
+    },
+    "public/pwa-maskable-192x192.png": {
+      "sha256": "d848d131a9c68bb1469c201ad41c923a4f10cc79890719b86e21cccdda13a3b6",
+      "bytes": 4912
+    },
+    "public/pwa-maskable-512x512.png": {
+      "sha256": "9894d4a3820f39bb8456e5881ecb9c9aa3006a774beefb774e619e18bd97f834",
+      "bytes": 18479
+    },
+    "public/theme-init.js": {
+      "sha256": "abe618a20b4f9c20d637e9e9102e9eb19ea3f7597615d6f51bdda079d200634b",
+      "bytes": 473
+    },
+    "index.html": {
+      "sha256": "b9adff9a7e5d7d8899499caa33f7debe7d5d6f5f2ca85d3bcca1330d530cdb7c",
+      "bytes": 6800
+    },
+    "vite.config.js": {
+      "sha256": "b6176d337e6ce71c05e8308193aeaa308fcb53019ab221af516d15028c4a0635",
+      "bytes": 2489
+    },
+    "package.json": {
+      "sha256": "e21571db76af9cddd6d3296ac10464f7f6c8ba83eaff6234c0cfde9cce59b632",
+      "bytes": 1456
+    },
+    "package-lock.json": {
+      "sha256": "824609c3123813427ea27548c5622e471b9aa9e7d8d249cfc50cdad48b11996c",
+      "bytes": 422076
+    }
+  }
+}

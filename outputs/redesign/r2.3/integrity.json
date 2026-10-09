@@ -1,0 +1,157 @@
+{
+  "checkedAt": "2026-10-07T21:31:56.187Z",
+  "kept": [
+    "src/3d/components/BlackHole.jsx",
+    "src/3d/components/BlackHoleBloomMask.jsx",
+    "src/3d/components/BlackHoleSystem.jsx",
+    "src/3d/components/CameraRig.jsx",
+    "src/3d/components/Constellations.jsx",
+    "src/3d/components/Nebula.jsx",
+    "src/3d/components/OrbitalSkills.jsx",
+    "src/3d/components/Planet.jsx",
+    "src/3d/components/SceneBoundary.jsx",
+    "src/3d/components/SceneFallback.jsx",
+    "src/3d/components/ShootingStars.jsx",
+    "src/3d/components/StardustWake.jsx",
+    "src/3d/components/StarField.jsx",
+    "src/3d/hooks/useLabScroll.js",
+    "src/3d/hooks/useMediaQuery.js",
+    "src/3d/hooks/useSectionAnchor.js",
+    "src/3d/quality.js",
+    "src/3d/shaders/blackHole.js",
+    "src/3d/utils/buildStarGeometry.js",
+    "src/3d/utils/cameraPath.js",
+    "src/3d/utils/portal.js",
+    "src/3d/utils/shootingStars.js",
+    "src/App.jsx",
+    "src/assets/react.svg",
+    "src/components/About.jsx",
+    "src/components/Aurora.jsx",
+    "src/components/Cursor.jsx",
+    "src/components/Education.jsx",
+    "src/components/effects/PortalHeading.jsx",
+    "src/components/EvilEye.jsx",
+    "src/components/Footer.jsx",
+    "src/components/Hero.jsx",
+    "src/components/layout/CockpitRails.jsx",
+    "src/components/layout/MenuOverlay.jsx",
+    "src/components/layout/Nav.jsx",
+    "src/components/Preloader.jsx",
+    "src/components/sections/Contact.jsx",
+    "src/components/sections/Experience.jsx",
+    "src/components/sections/Skills.jsx",
+    "src/components/SplashCursor.jsx",
+    "src/components/ui/KnurledSwitch.jsx",
+    "src/components/ui/MissionProgressOrbit.jsx",
+    "src/components/ui/SoundToggle.jsx",
+    "src/components/ui/TargetLockReticle.jsx",
+    "src/components/ui/ThemeToggle.jsx",
+    "src/components/Work.jsx",
+    "src/data/navigation.js",
+    "src/data/skills.js",
+    "src/data.js",
+    "src/hooks/useGSAPSetup.js",
+    "src/hooks/useReducedMotion.js",
+    "src/hooks/useSmoothScroll.js",
+    "src/i18n/config.js",
+    "src/i18n/locales/en/scene.json",
+    "src/i18n/locales/en.json",
+    "src/i18n/locales/vi/scene.json",
+    "src/i18n/locales/vi.json",
+    "src/index.css",
+    "src/lib/audioEngine.js",
+    "src/lib/utils.js",
+    "src/main.jsx",
+    "src/stores/useAudioStore.js",
+    "src/stores/useLangStore.js",
+    "src/stores/useLoadingStore.js",
+    "src/stores/useThemeStore.js",
+    "src/styles/globals.css",
+    "src/styles/menu.css",
+    "public/avatar.webp",
+    "public/favicon.svg",
+    "public/icons/ae.png",
+    "public/icons/ai.png",
+    "public/icons/figma.png",
+    "public/icons/pr.png",
+    "public/icons/ps.png",
+    "public/og-image.jpg",
+    "public/project1.webp",
+    "public/project2.webp",
+    "public/project3.webp",
+    "public/pwa-192x192.png",
+    "public/pwa-512x512.png",
+    "public/pwa-maskable-192x192.png",
+    "public/pwa-maskable-512x512.png",
+    "public/theme-init.js",
+    "package.json",
+    "package-lock.json",
+    "index.html",
+    "vite.config.js",
+    "3d-lab.html"
+  ],
+  "changed": [
+    {
+      "path": "src/3d/components/LabTelemetry.jsx",
+      "before": "6bb03215bc2e196d5c23ec707c60159d6cdcc98cdc45857a128a90b05e4a53c8",
+      "after": "41444ad64bd6ead021fe6b6468565ccf582d2938c9c89961d1e67ded32644716"
+    },
+    {
+      "path": "src/3d/GalaxyScene.jsx",
+      "before": "b413dd59cd5d43c5a6cd6a2e083ac42a07e5abb76e5faac7ef00e5831c1d9a2a",
+      "after": "180d20ebf4d707dc9b503b4b942195f8aa3fc3a1fdecf0f0175d7fc3cdb972b2"
+    },
+    {
+      "path": "src/3d/hooks/useScrollProgress.js",
+      "before": "90778ca77b7d28607aa84e0e531b7c3e683b5e234e8798cd1ef608d251e8a59b",
+      "after": "2b3ee01011ae916c53b0e110e7796157ec78adbefeac1e5ccea78283d4287e65"
+    },
+    {
+      "path": "src/3d-lab.jsx",
+      "before": "ae6b3d7d7fd2f32bc314815604569d63cc5bb85e7c7906383d93c7ffb72331e7",
+      "after": "4993ec659aba566be981ac766f0e69b8c53a31f693109039efef78592e9d1f30"
+    },
+    {
+      "path": "src/i18n/locales/en/lab.json",
+      "before": "a283ebe1e1f00bf9845d33e892ee5e7b2744c001be8f8f5697fb73feab27bf06",
+      "after": "103893807a2669d717c09a32fdb17c5a22c45e98bd93d19966adbbcea8eb884f"
+    },
+    {
+      "path": "src/i18n/locales/vi/lab.json",
+      "before": "71da4e8910e1b081deccf789618978fd0db66c71c01db2bce770b2097f1f1e2b",
+      "after": "edfac7641de2a57f9cfff618b3928d4185538876b971b5afc14ed6fe58f68f5d"
+    },
+    {
+      "path": "src/stores/useScrollStore.js",
+      "before": "2e25cbd9abb68364e6b1c260ffda8e61549eddf5ad90311e8b352b4eae0db080",
+      "after": "873fafca3911b3828c852c4644dc4f1a515ffd30a517dbadddb32a8fc93a3390"
+    },
+    {
+      "path": "AGENTS.md",
+      "before": "4145ede434cc257aa8a79c915cd5343f7a91a408a993b9d3a5c729487cd37bf8",
+      "after": "436863ddb0c95eae780ed98553f9eae52bdfff9073f144f29711fb4e4e77a2b9"
+    }
+  ],
+  "added": [
+    {
+      "path": "src/3d/data/worksConstellations.json",
+      "bytes": 35433,
+      "sha256": "0872071ea19c09d3a9d9af0a62072cb35f7a8133108f7fb526f907e302f3f9f8"
+    },
+    {
+      "path": "src/3d/components/WorksConstellations.jsx",
+      "bytes": 5242,
+      "sha256": "09dcd84fb368178db8663d90e27d12a987e778633919d41b1c484a39e3f1043d"
+    },
+    {
+      "path": "src/3d/utils/worksOrbit.js",
+      "bytes": 1575,
+      "sha256": "946204d592b108276c7a0497136754979ecd1a46af81ca1f57fa86396f88a20e"
+    }
+  ],
+  "localeKeys": 78,
+  "agentsAppend": {
+    "count": 1,
+    "prefixUnchanged": true
+  }
+}

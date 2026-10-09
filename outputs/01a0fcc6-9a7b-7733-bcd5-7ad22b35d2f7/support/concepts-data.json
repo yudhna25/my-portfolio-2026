@@ -1,0 +1,957 @@
+{
+  "concepts": [
+    [
+      "C01",
+      "VEIL ARCHIVE\nMật viện cổ ngữ",
+      "Một phòng lưu trữ bí mật trong sương. Bàn nghi lễ, cổ vật và ký hiệu hoạt động như một máy tính ma thuật. Quỷ Bí Chi Chủ dẫn mood; Berserk tạo sức nặng vật liệu. Tên Trần Vũ Anh Duy và UX/UI Designer hiện rõ ngay khi vào.",
+      "Spatial UI làm hub; Skeuomorphism cho bàn/cổ vật; Minimalism cho case reader; Glassmorphism nhẹ cho HUD. 3D là cảnh trung tâm, không là mọi thành phần.",
+      "P1 Occult Brass. Kim loại xỉn, đá khắc, sương mỏng, ánh đồng. Display có nét bản thảo; body sans rõ. Bộ glyph hư cấu có quy tắc riêng.",
+      "Chọn 4 hotspot có nhãn: Edura, Work, About, Contact. Hover đánh thức pháp trận; click mở hồ sơ. Trail vài glyph ở vùng cảnh; particles chỉ bùng lúc kích hoạt. Có một mật thất cho visual playground.",
+      "Edura là hồ sơ trung tâm. Mở là thấy Lead UI, scope, 3 quyết định và ảnh thật. Link View Edura, CV và Contact luôn ở ngoài cảnh. Recruiter có thể bỏ qua khám phá và đọc ngay.",
+      "Cao: cần concept art, 1 cảnh 3D có bake ánh sáng và sound riêng nếu dùng. Bản nhẹ dùng nền prerender + lớp 2.5D + hotspot DOM. Khi WebGL lỗi, giữ đầy đủ case reader.",
+      "Cân nhắc"
+    ],
+    [
+      "C02",
+      "ARCANA OS\nHệ điều hành ma thuật",
+      "Một hệ điều hành vận hành bằng cổ ngữ. Ký hiệu đóng vai trò mạch logic, pháp trận là sơ đồ trạng thái. Nghiêng mạnh về giao điểm ma thuật × sci-fi mà bạn đã chọn.",
+      "Minimalism giữ hierarchy; Spatial UI cho các module; Bento cho dashboard dự án; Liquid Glass mô phỏng trên web cho dock điều khiển.",
+      "P4 Spectral Silver. Obsidian, bạc lạnh, ánh băng nhạt. Sans hình học cho tên và body; mono chỉ cho thông tin hệ thống có ý nghĩa.",
+      "Mở module bằng click/Enter; dock phản hồi theo module đang chọn. Orb đi theo pointer trong vùng hero; velocity làm vòng năng lượng chuyển động khi cuộn. Module lên foreground có transition ngắn.",
+      "Edura là module đầu và lớn nhất. About là hồ sơ cá nhân, Contact là kênh tín hiệu. Case reader dùng HTML. Không giả terminal uptime, RAM hay chỉ số nghề nghiệp.",
+      "Trung bình đến cao. CSS Grid + GSAP đủ cho OS 2.5D; Three.js chỉ cần nếu orb là thể tích thật. Mobile thành dock + list; reduced motion mở thẳng trạng thái cuối.",
+      "Cân nhắc"
+    ],
+    [
+      "C03",
+      "SIGIL COMPILER\nBiên dịch ấn chú",
+      "Thiết kế được kể như một hệ phép thuật có quy tắc. Chọn input, liên kết quyết định, nhận output giao diện. Diễn giải cá nhân từ sở thích HunterXHunter/Naruto, gắn với tư duy system của Lead UI.",
+      "Brutalism cho lưới và kết nối; Skeuomorphism cho các phiến glyph; Minimalism cho nội dung; Bento chỉ cho board artifact.",
+      "P1 Occult Brass hoặc P4 Spectral Silver, chốt một palette khi chọn. Glyph là hình trang trí riêng; mọi control vẫn có nhãn đọc được.",
+      "Ghép ba phiến bằng button hoặc drag có phương án thay thế: vấn đề → quyết định → bằng chứng. Click Compile khiến đường nối hội tụ và mở màn hình UI thật. Có thể xem ngay kết quả.",
+      "Ba phiến là ba quyết định Edura do bạn thật sự sở hữu. Artifacts và feedback lấy từ case gốc. Đây là cách diễn giải quy trình, không giả bộ là app Edura có hệ phép thuật.",
+      "Trung bình. DOM/CSS + GSAP đủ cho bản đầu. Không cần physics engine hoặc AI compiler. Keyboard dùng chọn phiến/Compile; mobile dùng stepper và tap.",
+      "Cân nhắc"
+    ],
+    [
+      "C04",
+      "ASTROLABE ARCHIVE\nTinh đồ ký ức",
+      "Các dự án là điểm sáng trên tinh đồ cổ, được đọc qua thiết bị thiên văn sci-fi. Cảm giác bí ẩn và khám phá theo lớp nối Quỷ Bí Chi Chủ với nhịp hành trình bạn thích ở Frieren.",
+      "Spatial UI cho bản đồ; Glassmorphism cho panel ngắn; Skeuomorphism cho astrolabe; Minimalism cho case reader.",
+      "P4 Spectral Silver. Nền vũ trụ ít màu, kim loại bạc, sao thưa. Sans cho nội dung; chữ có chân chỉ dùng tên kho lưu trữ nếu cần.",
+      "Click điểm sáng để mở case; đường nối hiện vai trò và artifact. Kéo xoay tinh đồ là tùy chọn. Chuyển chapter theo camera rail ngắn; có map button cho mọi điểm.",
+      "Edura là điểm sáng chính, tránh biến ba project thành ba thành tích đồng hạng. Menu dự án và link Edura hoạt động độc lập với bản đồ.",
+      "Trung bình đến cao. Tinh đồ 2D/2.5D đã đủ rõ. 3D cần camera và hotspot đồng bộ; mobile dùng bản đồ tĩnh + danh sách. Không bắt tìm tọa độ để đọc case.",
+      "Cân nhắc"
+    ],
+    [
+      "C05",
+      "RELIC ENGINE\nCổ vật hắc thiết",
+      "Một cổ vật cơ khí khối lớn, tối và có sức nặng; vết khắc cổ ngữ lóe sáng khi kích hoạt. Đây là hướng mạnh nhất nếu bạn muốn chất Berserk dẫn vật liệu và cinematic.",
+      "3D hard-surface là hình chính; Skeuomorphism cho vật liệu; Brutalism tiết chế cho typography; Minimalism cho thông tin và reader.",
+      "P2 Iron Ember. Hắc thiết, bạc xước, đỏ tàn than. Sans condensed đậm cho tên; body sans thoáng. Texture có ý đồ, không phủ noise lên chữ.",
+      "Drag để xem cổ vật hoặc dùng nút xoay. Click Activate làm lõi mở và các mặt biến thành project thumbnails. Velocity chỉ tác động vòng/lớp cảnh, không làm lệch text.",
+      "Mặt Edura mở đầu. UI thật nằm trên panel phẳng đủ đọc. Role Lead UI được ghi bằng chữ; biểu tượng cổ vật không thay nhãn điều hướng.",
+      "Cao nhất về asset. Cần model nguyên bản, UV/texture và ánh sáng tốt. CSS 3D card không thay được cổ vật thể tích này. Bản nhẹ dùng poster + nút xem góc đã render.",
+      "Cân nhắc"
+    ],
+    [
+      "C06",
+      "JADE THRESHOLD\nCửa giới ngọc",
+      "Một cổng đá khắc cổ ngữ giữa vực mây. Dòng năng lượng phản hồi như hệ điều khiển khoa học viễn tưởng. Naraka và Kiếm Lai dẫn mood phương Đông, tốc độ và đường nét.",
+      "Spatial UI cho các cổng; Minimalism cho bố cục; Skeuomorphism cho đá/ngọc; Glassmorphism nhẹ cho bản đồ. Tranh mực làm ngôn ngữ cảnh.",
+      "P3 Ink Jade. Đen mực, đá xanh xám, điểm sáng ngọc. Display thiên về nét bút riêng; body sans có dấu tiếng Việt. Không lấy chữ cổ thật làm câu vô nghĩa.",
+      "Chọn một cổng để đi tới case. Một nét mực/kiếm quang ngắn phản hồi click; trail bị giới hạn trong scene. Dừng pointer thì motion lắng xuống. Các cổng mở bằng button trên mobile.",
+      "Cổng Edura đặt gần nhất và có label rõ. Hành trình học nghề là timeline thực; không gắn cấp tu vi hư cấu cho năng lực Junior.",
+      "Cao nếu landscape 3D đầy đủ; trung bình với matte painting + parallax layers. Mobile giữ tranh và 3 cổng dạng list; reduced motion dùng cảnh tĩnh.",
+      "Cân nhắc"
+    ],
+    [
+      "C07",
+      "GRIMOIRE PROTOCOL\nBản thảo giao diện",
+      "Một sách phép có mạch phát sáng chạy trong trang; bìa cũ, nội dung bên trong chính xác như tài liệu sản phẩm. Mushoku Tensei/Frieren là chất liệu cảm hứng phụ theo thứ tự bạn nêu.",
+      "Skeuomorphism cho bìa/trang; Minimalism cho đọc; Spatial UI cho mục lục; Glass chỉ cho toolbar.",
+      "P1 Occult Brass. Trang than xám, mực sáng, đồng. Serif cho tên sách hợp chủ đề bản thảo; body sans. Không ép cả case thành blackletter.",
+      "Mục lục chọn chapter, page turn ngắn và có nút Next/Previous. Hover soi lớp ký hiệu mờ. Chọn artifact mở ảnh gốc; một bookmark đưa về đúng vị trí.",
+      "Edura là chapter đầu, có summary và link Behance đầy đủ. Ngôn ngữ nghề nghiệp luôn rõ bên cạnh tên chapter hư cấu. CV là link tải trực tiếp.",
+      "Trung bình. CSS perspective + GSAP page turn; không cần simulation giấy. Mobile đọc dọc, dùng chapter links; giảm motion bỏ lật trang.",
+      "Cân nhắc"
+    ],
+    [
+      "C08",
+      "BLACKBOX RITUAL\nHồ sơ cấm",
+      "Một kho dữ liệu tối, thô, mang sức ép của bí mật đang được giải mã. Attack on Titan/Berserk/TobeHeroX được diễn giải thành tension, tương phản và nhịp motion graphic.",
+      "Brutalism làm layout; Maximalism ở một khu đồ họa; Minimalism ở case; Skeuomorphism cho các tấm hồ sơ.",
+      "P2 Iron Ember. Typography nặng, đường phân vùng và đỏ tàn than. Chữ thường dễ đọc; glyph lớn làm bố cục, không thay toàn bộ body.",
+      "Nhấn hồ sơ mở panel. Một glitch ngắn trên hình trang trí, seal bị tách để lộ UI. Search hoặc danh sách hồ sơ là đường điều hướng thật; không bắt gõ lệnh.",
+      "Edura hiển thị như hồ sơ kỹ thuật có Problem/Role/Decision/Evidence. Giữ contribution đọc được và tránh dùng chỉ số giả để giống terminal.",
+      "Trung bình. Chủ yếu CSS + GSAP và assets 2D. Flash/glitch không dùng trên nội dung; giảm motion bỏ hiệu ứng. Chất thô cần kiểm typography kỹ.",
+      "Cân nhắc"
+    ],
+    [
+      "C09",
+      "LUMEN CHAMBER\nBuồng phản quang",
+      "Một buồng quan trắc ma thuật hiện đại, lõi trong suốt và ký hiệu nổi trong kính. Tối, sạch, có cảm giác đồ vật sống; hợp nếu bạn muốn sci-fi nổi rõ hơn gothic.",
+      "Spatial UI cho chiều sâu; Glassmorphism cho vật liệu scene; Liquid Glass mô phỏng cho control; Minimalism cho case. Chọn một kiểu glass trên cùng control.",
+      "P4 Spectral Silver. Kính khói, bạc, sáng băng. Độ trong chỉ ở lớp điều khiển/cảnh; nội dung đọc trên nền đủ đặc.",
+      "Pointer di chuyển ánh sáng cạnh kính; chọn node làm panel morph. Orb đổi độ sáng theo trạng thái đã chọn. Refraction shader là nâng cấp sau khi visual direction được duyệt.",
+      "Edura mở thành reader với UI screenshots giữ đúng màu gốc. Dock cho phép quay về hub và tải CV. Thử phản quang không che CTA.",
+      "Trung bình với CSS frosted-glass; cao với refraction 3D. Đây là mô phỏng web, không phải API Liquid Glass native của Apple. Fallback nền đặc và scene tĩnh.",
+      "Cân nhắc"
+    ],
+    [
+      "C10",
+      "ECHO INK THEATER\nSân khấu ấn chú",
+      "Một sân khấu anime bằng các lớp tranh và cổ ngữ; chuyển cảnh như motion graphic do bạn đạo diễn. TobeHeroX/Naruto là cảm hứng phụ cho nhịp, silhouette và động tác.",
+      "Maximalism cho key visual; Minimalism cho reader; Brutalism tiết chế ở title; Spatial UI bằng layer depth.",
+      "P2 Iron Ember hoặc P3 Ink Jade; khóa một palette. Minh họa nguyên bản, nét mực có nhịp. Sans đậm; tránh phủ nhiều kiểu font lên một cảnh.",
+      "Click scene để phát đoạn motion 10-15 s, con số là đề xuất. Mask chuyển lớp, pháp trận phản hồi âm thanh khi sound bật. Trail trở thành nét mực ngắn trong sân khấu.",
+      "Case Edura tách bằng panel đọc rõ và luôn mở được từ menu. Multimedia trở thành playground hỗ trợ vị trí UX/UI, giữ UI product thật làm bằng chứng chính.",
+      "Cao về art/motion, trung bình về code. Layer 2D + GSAP, video chỉ tải khi người dùng chọn phát. Mobile dùng poster và nút Play; reduced motion giữ keyframe cuối.",
+      "Cân nhắc"
+    ],
+    [
+      "C11",
+      "FAMILIAR FOUNDRY\nXưởng linh vật",
+      "Một linh vật nguyên bản trong phòng luyện cổ vật; bí ẩn nhưng có nét gần gũi. Slime là cảm hứng phụ, dùng khi bạn muốn làm mềm những hướng tối ở trên.",
+      "Claymorphism cho mascot/vật thể; Neumorphism cho một bảng thao tác có viền rõ; Bento cho work; Minimalism cho text.",
+      "P5 Soft Relic. Xám lạnh, gốm nhạt, lilac tiết chế. Cùng một hướng ánh sáng cho clay và shadow; chữ không dựa vào shadow để tạo contrast.",
+      "Mascot chỉ dẫn hotspot khi được chọn, ngủ khi đọc case. Nút có feedback press; tile nâng nhẹ. Một easter egg đổi pose, không cần chatbot hoặc hệ pet phức tạp.",
+      "Edura là bản thiết kế trên bàn xưởng. Mascot không giải thích thay bạn và không đứng lên screenshots. Recruiter tìm role/case/contact bằng label thông thường.",
+      "Trung bình với sprite/illustration, cao nếu mascot 3D có rig. Hướng này ít lạnh/huyền bí hơn ưu tiên đầu của bạn; phù hợp làm chi tiết phụ. Mobile dùng pose tĩnh.",
+      "Cân nhắc"
+    ],
+    [
+      "C12",
+      "PALE OBSERVATORY\nĐài quan trắc lặng",
+      "Một đài quan trắc cổ trong màn sương; thời gian và những dấu vết đã đi qua là motif. Frieren là cảm hứng phụ, hợp cho cảm xúc lắng sau những cảnh tương tác.",
+      "Minimalism làm nền; Skeuomorphism cho astrolabe; Spatial UI cho các điểm nhớ; Glass rất ít ở navigation.",
+      "P4 Spectral Silver, giảm độ bóng. Nhiều khoảng trống, vật liệu mờ, ánh sáng tập trung. Chữ thanh nhưng đủ đậm; không làm body chìm vào sương.",
+      "Chọn dấu mốc mở artifact; vòng astrolabe xoay chậm khi tương tác rồi dừng. Bản đồ hành trình đổi chi tiết theo mốc. Ambient chỉ phát khi bật.",
+      "Experience là mốc thời gian thực, Edura là chương trọng tâm. Có đường đọc nhanh. Tối giản tương tác hơn hướng world/game bạn chọn, nên là variant phụ.",
+      "Trung bình với scene 2.5D. Không cần free-roam. Mobile thành timeline + ảnh; reduced motion đọc thẳng. Sức hấp dẫn phụ thuộc chất lượng art và typography.",
+      "Cân nhắc"
+    ]
+  ],
+  "combinations": [
+    [
+      "S01",
+      "Minimalism + Spatial UI + Skeuomorphism",
+      "Rất hợp",
+      "Reader rõ, thế giới có chiều sâu, cổ vật có vật liệu.",
+      "C01/C04/C07: cổ vật ở scene; native text/button ở lớp đọc.",
+      "Giữ một nguồn sáng và một system shape."
+    ],
+    [
+      "S02",
+      "Minimalism + Bento Grid + Glassmorphism",
+      "Rất hợp",
+      "Bento tổ chức work; glass làm dock/panel ngắn.",
+      "C02: Edura tile lớn, project phụ nhỏ; nội dung không tràn kính.",
+      "Không biến mọi case thành card kính giống nhau."
+    ],
+    [
+      "S03",
+      "Skeuomorphism + Spatial UI + 3D",
+      "Rất hợp",
+      "Cổ vật và không gian cùng có quy luật vật lý.",
+      "C01/C05: một artifact/hub có hotspot đúng vị trí.",
+      "Cần assets/model và fallback; 3D không phải style typography."
+    ],
+    [
+      "S04",
+      "Brutalism + Minimalism + Motion graphic",
+      "Rất hợp",
+      "Lưới/chữ mạnh, body gọn, chuyển cảnh có nhịp.",
+      "C03/C08: raw board + reader + nghi thức Compile.",
+      "Không dùng glitch lên chữ đang đọc hoặc nhãn button."
+    ],
+    [
+      "S05",
+      "Claymorphism + Neumorphism + Minimalism",
+      "Hợp có điều kiện",
+      "Cùng hướng ánh sáng và vật liệu mềm tạo consistency.",
+      "C11: clay mascot; neo ở bảng tương tác, reader phẳng.",
+      "Viền, contrast và active state phải rõ; không chỉ dựa vào bóng."
+    ],
+    [
+      "S06",
+      "Glassmorphism + Spatial UI + Particles",
+      "Rất hợp",
+      "Glass phân lớp; hạt chỉ phản hồi năng lượng của scene.",
+      "C01/C04/C09: một panel HUD và burst khi click.",
+      "Không dùng blur lớn toàn màn hình cộng nhiều hạt liên tục."
+    ],
+    [
+      "S07",
+      "Liquid Glass mô phỏng + Minimalism + Spatial UI",
+      "Rất hợp",
+      "Dock nằm trên cảnh, reader giữ bề mặt đọc rõ.",
+      "C02/C09: control nổi, highlight theo focus/selection.",
+      "Mô phỏng web. Chọn một hệ glass; nền đặc khi cần legibility."
+    ],
+    [
+      "S08",
+      "Glassmorphism + Liquid Glass cùng một control",
+      "Nên chọn một",
+      "Hai cách mô tả vật liệu kính trùng vai trò.",
+      "Một dock chỉ chọn frosted glass hoặc kiểu phản quang fluid.",
+      "Không xếp kính trên kính và không gọi CSS là Liquid Glass native."
+    ],
+    [
+      "S09",
+      "Maximalism hero + Minimalism reader",
+      "Rất hợp",
+      "Cảnh đầu nhiều năng lượng; case giữ thông tin dễ skim.",
+      "C08/C10: một sân khấu phong phú, case có hierarchy ổn định.",
+      "Dùng cùng palette/shape; không để mọi section đều là climax."
+    ],
+    [
+      "S10",
+      "Brutalism + Neumorphism trên cùng control",
+      "Nên chọn một",
+      "Hard border/raw type và soft recessed shadow dễ tranh hierarchy.",
+      "Nếu C08 làm thô, dùng pressed state rõ, bỏ neo softness.",
+      "Có thể chia layer có chủ đích, nhưng không là mix mặc định."
+    ],
+    [
+      "S11",
+      "Skeuomorphism + Claymorphism",
+      "Hợp có điều kiện",
+      "Cổ vật cứng và mascot mềm có thể cùng thế giới.",
+      "C11: đồ gốm/đá và companion, cùng ánh sáng.",
+      "Chọn vật liệu chính. Hắc thiết photoreal + mascot candy dễ lệch mood."
+    ],
+    [
+      "S12",
+      "Bento Grid + Spatial UI",
+      "Rất hợp",
+      "Bento là cấu trúc reader; spatial là hub khám phá.",
+      "C02/C04: click điểm trên map mở project grid/read panel.",
+      "Không bắt người dùng giải bento như mê cung để tìm nội dung."
+    ],
+    [
+      "S13",
+      "Velocity + 3D + Mouse trail",
+      "Hợp có điều kiện",
+      "Velocity điều khiển lớp phụ; 3D là vật thể; trail ghi dấu hành động.",
+      "C05/C06: vòng/lớp sáng đổi nhịp, trail chỉ quanh scene.",
+      "Clamp chuyển động; giữ cursor native; không làm text hoặc CTA lắc."
+    ],
+    [
+      "S14",
+      "Neumorphism + Glassmorphism",
+      "Hợp có điều kiện",
+      "Có thể tách dashboard nền đặc và overlay kính.",
+      "C11: neo control ở surface đặc, tooltip/panel có nền đủ contrast.",
+      "Không đặt shadow nổi/chìm trên nền kính thay đổi liên tục."
+    ],
+    [
+      "S15",
+      "Brutalism + Maximalism + Spatial UI",
+      "Hợp có điều kiện",
+      "Mạnh và nổi loạn, hợp sân khấu hồ sơ bí mật.",
+      "C08/C10: một cảnh nhiều lớp, text reader vẫn giới hạn.",
+      "Không nhồi lore, nhãn kỹ thuật và hiệu ứng vào mọi pixel."
+    ],
+    [
+      "S16",
+      "Minimalism + Particles + Motion graphic",
+      "Rất hợp",
+      "Khoảng trống giúp một hiệu ứng có ý nghĩa được nhận ra.",
+      "C12: một burst cho chọn mốc; C07: một page turn.",
+      "Đặt hiệu ứng vào hành động, không dùng toàn bộ như wallpaper."
+    ],
+    [
+      "S17",
+      "Liquid Glass + Bento + Claymorphism",
+      "Hợp có điều kiện",
+      "Dock kính điều khiển tile/mascot mềm, ba vai trò khác nhau.",
+      "C11 variant: dock nhỏ; mascot ở scene; work grid đọc được.",
+      "Ít hợp chất tối ưu tiên của bạn; tránh dùng như theme chính C01."
+    ],
+    [
+      "S18",
+      "Cổ ngữ + Sci-fi + Anime + Tu tiên",
+      "Rất hợp",
+      "Đây là thế giới/thẩm mỹ; có thể thống nhất bằng một hệ ký hiệu và vật liệu.",
+      "C01/C06: cổ ngữ biểu diễn trạng thái, sci-fi là logic; anime là nhịp chuyển cảnh.",
+      "Chọn một thế giới chính; glyph hư cấu, tên/nhãn nghề nghiệp đọc được."
+    ]
+  ],
+  "taxonomy": [
+    [
+      "D01",
+      "Minimalism",
+      "Ngôn ngữ / mật độ",
+      "Khoảng trống, hierarchy, ít yếu tố.",
+      "Reader, About, Contact trong mọi concept.",
+      "Tối giản nội dung nhưng có hình/UI thật."
+    ],
+    [
+      "D02",
+      "Maximalism",
+      "Ngôn ngữ / mật độ",
+      "Nhiều lớp và nhịp hình ảnh, có trọng tâm.",
+      "Hero/sân khấu C08/C10.",
+      "Có vùng yên để đọc; không tăng mật độ toàn trang."
+    ],
+    [
+      "D03",
+      "Brutalism",
+      "Ngôn ngữ thị giác",
+      "Typography mạnh, lưới/viền rõ, cảm giác thô.",
+      "Board C03, hồ sơ C08.",
+      "Độ thô có chủ đích; không là layout lỗi."
+    ],
+    [
+      "D04",
+      "Skeuomorphism",
+      "Vật liệu / ẩn dụ",
+      "Vật thể gợi giấy, đá, kim loại, cơ cấu thật.",
+      "Bàn nghi lễ, sách, astrolabe.",
+      "Chữ nội dung không cần mang mọi texture."
+    ],
+    [
+      "D05",
+      "Neumorphism",
+      "Vật liệu bề mặt",
+      "Bóng nổi/chìm gần cùng màu nền.",
+      "Một bảng thao tác C11.",
+      "Cần viền/label/state đủ contrast, không dùng bóng làm tín hiệu duy nhất."
+    ],
+    [
+      "D06",
+      "Glassmorphism",
+      "Vật liệu bề mặt",
+      "Kính mờ, lớp, blur và viền ánh sáng.",
+      "HUD/overlay ngắn của C01/C04.",
+      "Test nền phía sau; fallback nền đặc."
+    ],
+    [
+      "D07",
+      "Claymorphism",
+      "Vật liệu / hình khối",
+      "Hình mềm như đất sét, bo tròn, ánh sáng có trọng lượng.",
+      "Mascot C11, chi tiết phụ.",
+      "Ít hợp gothic nặng khi phủ toàn bộ portfolio."
+    ],
+    [
+      "D08",
+      "Liquid Glass",
+      "Vật liệu + hành vi",
+      "Vật liệu native Apple; trên website là mô phỏng bằng CSS/shader.",
+      "Dock/controls C02/C09.",
+      "Đề xuất giữ lớp điều khiển tách reader; xem nguồn Apple ở sheet So thich."
+    ],
+    [
+      "D09",
+      "Bento Grid",
+      "Cấu trúc layout",
+      "Grid khác kích thước theo hierarchy.",
+      "Work overview C02/C11.",
+      "Không là màu/theme; đúng số items, không ô rỗng vô cớ."
+    ],
+    [
+      "D10",
+      "Spatial UI",
+      "Mô hình không gian",
+      "Các vùng chức năng có chiều sâu/vị trí liên hệ nhau.",
+      "Hub/map của C01/C04/C06.",
+      "Có navigation list, label, keyboard và mobile path."
+    ],
+    [
+      "D11",
+      "3D concept",
+      "Cách dựng / asset",
+      "Vật thể hoặc scene thể tích, camera/lighting thật; 2.5D là phương án khác.",
+      "Cổ vật C05 hoặc hub C01.",
+      "Three.js chưa có trong project; chỉ thêm sau khi chọn 3D thật."
+    ],
+    [
+      "D12",
+      "Velocity",
+      "Điều khiển motion",
+      "Tốc độ đầu vào như tốc độ cuộn, không là một style màu.",
+      "Lớp sáng/vòng scene C05/C06.",
+      "Clamp phản hồi, không bẻ layout/reader. Không đồng nghĩa thư viện Velocity.js."
+    ],
+    [
+      "D13",
+      "Mouse trail",
+      "Tương tác / hiệu ứng",
+      "Vệt theo pointer mang dấu glyph/mực/năng lượng.",
+      "Vùng scene C01/C06/C10.",
+      "Pointer fine; mobile tắt hoặc phản hồi tap; cursor native vẫn thấy."
+    ],
+    [
+      "D14",
+      "Particles",
+      "Hiệu ứng / rendering",
+      "Hạt thưa hoặc burst; Canvas/3D tùy cảnh.",
+      "Kích hoạt seal/portal.",
+      "Có giới hạn số hạt, cleanup và pause khi hidden."
+    ],
+    [
+      "D15",
+      "Motion graphic",
+      "Nội dung / nhịp chuyển",
+      "Keyframes, masks, typography hoặc clip do bạn đạo diễn.",
+      "C10 và visual playground.",
+      "Play chủ động, dùng assets gốc; không chặn vào case."
+    ],
+    [
+      "D16",
+      "Anime / Tu tiên / Occult",
+      "Thế giới / cảm hứng",
+      "Ảnh, nhịp, lore và motif để cá nhân hóa.",
+      "Theo danh sách ưu tiên sheet So thich.",
+      "Diễn giải nguyên bản; không là một component library hoặc ngôn ngữ cổ có thật."
+    ]
+  ],
+  "effects": [
+    [
+      "M01",
+      "Hotspot trong hub",
+      "C01/C04/C06",
+      "Hover/focus: hiện nhãn và viền; click/Enter: mở case.",
+      "Button/link DOM đồng bộ với cảnh; raycast chỉ là enhancement nếu dùng 3D.",
+      "Mobile: list hoặc map tap; keyboard tới đủ destinations.",
+      "Cốt lõi",
+      "Case/role/contact vẫn mở được khi scene chưa tải."
+    ],
+    [
+      "M02",
+      "Ritual activation",
+      "C01/C05",
+      "Chọn Activate: glyph hội tụ, lõi sáng và mở panel.",
+      "GSAP timeline transform/opacity, 0,4-0,7 s là đề xuất.",
+      "Reduce: panel hiện ngay; có Cancel/Back nếu mở flow.",
+      "Cốt lõi",
+      "Hiệu ứng tạo phản hồi; không là intro khóa nội dung."
+    ],
+    [
+      "M03",
+      "Rune mouse trail",
+      "C01/C06",
+      "Di chuyển trong hero: vệt 6-10 glyph tan trong 0,2-0,4 s, ngân sách khởi đầu.",
+      "Pool nhỏ + gsap.quickTo hoặc Canvas; không setState mỗi mousemove.",
+      "Pointer coarse/reduce: tắt; native cursor giữ nguyên.",
+      "Signature",
+      "Không phủ body text; dừng khi pointer rời scene."
+    ],
+    [
+      "M04",
+      "Particles năng lượng",
+      "C01/C04/C09",
+      "Click seal: một burst; idle chỉ có vài hạt nền nếu cần.",
+      "Canvas 2D; dùng Points nếu đã có scene 3D. Số hạt điều chỉnh qua prototype.",
+      "Reduce: glow tĩnh; mobile ít hạt hoặc tắt.",
+      "Signature",
+      "Pause khi offscreen/hidden; không bảo đảm FPS trước khi profile."
+    ],
+    [
+      "M05",
+      "Scroll velocity response",
+      "C02/C05/C06",
+      "Cuộn nhanh: vòng/lớp sáng phản hồi mạnh hơn rồi trở về trung tính.",
+      "ScrollTrigger.getVelocity() làm input, clamp độ nghiêng/dịch chuyển lớp cảnh.",
+      "Reduce: giữ tĩnh; mobile cần test trước khi bật.",
+      "Tùy chọn",
+      "Không dùng velocity để lắc chữ, đổi tốc độ đọc hoặc khóa cuộn."
+    ],
+    [
+      "M06",
+      "Inspect cổ vật 3D",
+      "C01/C05",
+      "Drag xoay hoặc click nút góc nhìn; hover chỉ tilt nhỏ.",
+      "Three.js cho model thật; CSS perspective cho plane 2.5D. Chọn renderer theo độ 3D đã duyệt.",
+      "Mobile dùng nút góc/poster; fallback nếu WebGL context lost.",
+      "Signature",
+      "Cần model nguyên bản, texture tối ưu, dispose và scene tải sau nội dung."
+    ],
+    [
+      "M07",
+      "Compiler board",
+      "C03",
+      "Chọn Problem → Decision → Evidence rồi Compile; kết quả vẫn có nút mở trực tiếp.",
+      "DOM state đơn giản + GSAP path/reveal; drag chỉ tùy chọn.",
+      "Tap/keyboard thay drag; không bắt giải puzzle.",
+      "Cốt lõi C03",
+      "Chỉ dùng ba quyết định Edura có artifact thật."
+    ],
+    [
+      "M08",
+      "Glass navigation dock",
+      "C02/C09",
+      "Current section sáng rõ; menu mở từ control bằng morph/crossfade.",
+      "CSS backdrop-filter + border/highlight; shader chỉ khi đã chọn direction và profile.",
+      "Nền đặc khi blur không phù hợp; focus ring rõ trên mọi cảnh.",
+      "Cốt lõi",
+      "Web approximation; không cam kết có vật liệu native Apple."
+    ],
+    [
+      "M09",
+      "Glyph decode",
+      "C01/C02/C08",
+      "Biểu tượng phụ giải mã khi focus/hover; tên nghề nghiệp đã đọc được từ đầu.",
+      "Lớp trang trí aria-hidden; ScrambleText hoặc đổi glyph đơn giản.",
+      "Reduce: hiện trạng thái cuối ngay; assistive text ổn định.",
+      "Tùy chọn",
+      "Không scramble nội dung case, email hoặc nhãn control."
+    ],
+    [
+      "M10",
+      "Portal transition",
+      "C01/C06",
+      "Chọn case: mask cổng mở tới reader trong khoảng 0,4-0,6 s đề xuất.",
+      "CSS mask/clip + GSAP timeline; dùng một shared element nếu có đủ DOM/asset.",
+      "Reduce: navigation ngay; Back hoạt động; deep link mở trực tiếp case.",
+      "Signature",
+      "Không đợi tải model mới mới cho đọc case."
+    ],
+    [
+      "M11",
+      "Page turn",
+      "C07",
+      "Click Next/Previous hoặc mục lục, trang sách xoay rồi trả nội dung đọc rõ.",
+      "CSS perspective + GSAP; không simulation vật lý giấy.",
+      "Mobile reader dọc; reduce đổi chapter tức thời.",
+      "Cốt lõi C07",
+      "Không lật theo mọi wheel tick; focus chuyển đúng heading."
+    ],
+    [
+      "M12",
+      "Camera rail / parallax",
+      "C01/C04/C06",
+      "Chọn vùng hoặc cuộn chapter: cảnh dịch nhẹ giữa các điểm định sẵn.",
+      "GSAP/ScrollTrigger cho scene; cuộn trang dùng hành vi native.",
+      "Reduce: một keyframe; mobile layer depth thấp.",
+      "Tùy chọn",
+      "Tránh pin gallery dài và camera xoay chóng mặt; reader không bị transform."
+    ],
+    [
+      "M13",
+      "Bento module focus",
+      "C02/C11",
+      "Chọn module: tile nổi và mở case, active state vẫn có chữ/viền.",
+      "CSS Grid + transform; GSAP Flip nếu chuyển bố cục thực sự cần.",
+      "Keyboard Enter và native link; không phụ thuộc hover.",
+      "Cốt lõi C02",
+      "Giữ DOM order đọc hợp lý; không dùng grid dense đảo thứ tự nội dung."
+    ],
+    [
+      "M14",
+      "Ritual sound",
+      "C01/C05/C06",
+      "Người dùng bật Sound thì click portal có âm thanh ngắn và ambience nhẹ.",
+      "Web Audio/HTML audio; asset nguyên bản hoặc có quyền.",
+      "Mặc định tắt; có mute rõ; không cần microphone.",
+      "Sau bản đầu",
+      "Website đầy đủ khi tắt sound. Không sao chép OST để nhận diện tác phẩm."
+    ],
+    [
+      "M15",
+      "Familiar companion",
+      "C11",
+      "Người xem chọn Help: mascot chỉ hotspot; khi đọc case thì ở yên.",
+      "Sprite 2D/illustration trước; rig 3D chỉ khi cần nhiều pose.",
+      "Reduce/mobile: pose tĩnh; tooltip mở bằng click/focus.",
+      "Sau bản đầu",
+      "Không chatbot/AI backend; không để mascot che nội dung."
+    ],
+    [
+      "M16",
+      "Mật thất / easter egg",
+      "C01/C08/C10",
+      "Một glyph phụ mở visual playground hoặc thay ánh sáng scene.",
+      "State nhỏ + link/route; mở/đóng rõ và có Back.",
+      "Có nút có tên; keyboard mở được; không yêu cầu phản xạ nhanh.",
+      "Sau bản đầu",
+      "Bonus không chứa CV, Edura hoặc Contact bắt buộc."
+    ],
+    [
+      "M17",
+      "Low effects / reduced motion",
+      "Mọi concept",
+      "Người xem giảm hiệu ứng; nội dung và navigation vẫn đầy đủ.",
+      "gsap.matchMedia + một control Low effects; cleanup event/scene.",
+      "Tôn trọng prefers-reduced-motion; quality fallback tự giảm theo capability.",
+      "Cốt lõi",
+      "Giảm particles/camera/trail, không coi giảm motion là lỗi tải."
+    ],
+    [
+      "M18",
+      "Return waypoint / deep link",
+      "Mọi concept",
+      "Back hoặc URL case mở đúng điểm nội dung; quay về hub có focus rõ.",
+      "Native URL/history + React state vừa đủ; HTML case tồn tại ngoài canvas.",
+      "Cùng hành vi trên touch/keyboard; refresh URL case vẫn đọc được.",
+      "Cốt lõi",
+      "Không dùng memory session độc quyền để mở case; không cần đăng nhập."
+    ],
+    [
+      "M19",
+      "Motion graphic scene",
+      "C10",
+      "Click Play: một đoạn 10-15 s đề xuất, controls hiện rõ.",
+      "Clip tối ưu có poster, chỉ tải/phát khi được chọn; GSAP cho layer DOM.",
+      "Reduce: poster hoặc xem chủ động; mobile không auto-download reel.",
+      "Tùy chọn",
+      "Kỹ năng motion bổ trợ UX/UI; không mở bằng màn phim bắt buộc."
+    ],
+    [
+      "M20",
+      "Optional spell puzzle",
+      "C03/C06",
+      "Ghép glyph hoặc đổi góc cổ vật mở một effect thưởng.",
+      "Một puzzle nhỏ với reset và skip; state phía client.",
+      "Có giải pháp button/keyboard; giảm motion vẫn chơi hoặc skip được.",
+      "Sau bản đầu",
+      "Không khóa case study và không biến điểm game thành skill rating nghề nghiệp."
+    ]
+  ],
+  "journey": [
+    [
+      "F01",
+      "Arrival",
+      "Vào URL",
+      "Tên, UX/UI Designer, View Edura, Explore archive và Contact đã có. Poster scene hiện trước.",
+      "Hero gọn + scene tải độc lập; đúng danh tính, không loading % giả.",
+      "Truy cập trực tiếp bằng mobile/reduce/không WebGL vẫn thấy đường đi."
+    ],
+    [
+      "F02",
+      "Explore hub",
+      "Chọn Explore archive",
+      "Một phòng 4 hotspot, nhãn rõ và một câu hướng dẫn ngắn.",
+      "Poster/cảnh gốc, bộ glyph riêng, native buttons. Không cần WASD trong bản đầu.",
+      "Tab/Enter mở mọi hotspot; camera không chứa control duy nhất."
+    ],
+    [
+      "F03",
+      "Open Edura",
+      "Click Edura hoặc View Edura",
+      "Summary: app quản lý học tập tại trung tâm; bạn Lead UI. Scope/team/time chỉ ghi khi đối chiếu bằng chứng.",
+      "Lấy UI thật và dữ liệu case Behance. Cảnh chuyển bằng portal ngắn.",
+      "Role/decision/proof đọc được, copy không pha lore tới mức khó hiểu."
+    ],
+    [
+      "F04",
+      "Read decisions",
+      "Chọn một quyết định",
+      "Problem → UI decision → artifact → feedback/change. Mở ảnh hoặc prototype liên quan.",
+      "Ba quyết định có thật, phân biệt đóng góp UI cá nhân với research của nhóm.",
+      "Không chế metric/award hoặc thiết kế giả để minh họa thành quả."
+    ],
+    [
+      "F05",
+      "Prototype spotlight",
+      "Chọn một flow Edura",
+      "Một flow cụ thể của prototype thật; có trạng thái trước/sau và lý do.",
+      "Assets từ Figma/Behance. Buttons/tabs cho các bước.",
+      "Không trình bày scene magic như UI đã làm cho sản phẩm Edura."
+    ],
+    [
+      "F06",
+      "About / path",
+      "Chọn About",
+      "Tên, định vị Junior, experience liên quan, cách làm việc và CV.",
+      "Timeline thực; Designveloper và đóng góp cụ thể đọc nhanh.",
+      "Không dùng cấp tu vi hoặc progress bar hư cấu để chấm năng lực."
+    ],
+    [
+      "F07",
+      "Other work",
+      "Chọn Work",
+      "VERIS/VIE hoặc visual playground có label và đích thật.",
+      "Chốt nội dung/URL; chỉ gọi là case study khi có reasoning và contribution.",
+      "Không có card giả click hoặc liên kết #."
+    ],
+    [
+      "F08",
+      "Contact",
+      "Chọn Contact",
+      "Email/LinkedIn/CV rõ; một effect xác nhận nhỏ khi copy email nếu dùng.",
+      "Link native và thông tin đã xác nhận. Không cần backend form.",
+      "320 px, keyboard, zoom: đọc và dùng được mọi link."
+    ],
+    [
+      "F09",
+      "Exit / revisit",
+      "Back hoặc link case",
+      "Quay lại hub/đúng vị trí reader; có low effects và sound toggle.",
+      "URL/histories native + state nhỏ. Ambient pause khi page hidden.",
+      "Không cần replay nghi thức khi Back/refresh chỉ để đọc tiếp."
+    ]
+  ],
+  "phases": [
+    [
+      "P1",
+      "Chốt direction",
+      "C01 được đề xuất mạnh nhất; C05 nếu muốn gothic vật liệu, C06 nếu muốn phương Đông.",
+      "Chọn 1 world chính, 1 palette, hero storyboard và mức 3D.",
+      "Tạo moodboard nguyên bản + wireframe hub/reader.",
+      "Đầu ra để duyệt: visual direction và flow, chưa là site đã triển khai."
+    ],
+    [
+      "P2",
+      "Dựng thế giới lõi",
+      "Một room, một artifact trọng tâm, 4 hotspot, Edura reader, About/Contact.",
+      "Thêm M01/M02/M10/M17/M18 trước. M03/M04 chỉ khi scene thực sự cần.",
+      "Giữ React/Vite/Tailwind v3/GSAP hiện có; 3D thật cần Three.js chưa cài.",
+      "Full world/game feel đến từ art và phản hồi; không cần open-world/engine/game account."
+    ],
+    [
+      "P3",
+      "Nâng tầng trải nghiệm",
+      "Tinh chỉnh ánh sáng, camera, sound và một easter egg.",
+      "Chọn M05/M14/M16/M20 phù hợp, profile trước khi cộng hiệu ứng.",
+      "Test mobile, WebGL failure, keyboard, motion preference và navigation.",
+      "Mức tải/FPS/contrast cần đo trong prototype; chưa có kết quả đo cho concept này."
+    ]
+  ],
+  "assets": [
+    [
+      "A01",
+      "Bộ glyph hư cấu",
+      "Vẽ khoảng 8-12 ký hiệu cùng một grammar là đề xuất.",
+      "Biểu diễn Problem, Decision, Evidence, Work, About, Contact bằng motif; label thật đi kèm.",
+      "Nguyên bản",
+      "Không gọi đây là cổ ngữ có lịch sử/nghĩa thật."
+    ],
+    [
+      "A02",
+      "Hub / mật viện",
+      "Một concept art và scene/poster + model nếu chọn C01 3D thật.",
+      "Đá, kim loại, kính dùng cùng ánh sáng; scene không chứa text quan trọng bị raster hóa.",
+      "Cần tạo",
+      "Art mới chỉ trang trí trải nghiệm portfolio, không là screenshot sản phẩm."
+    ],
+    [
+      "A03",
+      "UI Edura",
+      "Màn overview, flow trọng tâm, states/components, feedback công khai được.",
+      "Lấy từ case gốc. Cắt/scale đủ đọc và export tối ưu.",
+      "Có nguồn Behance",
+      "Lead UI do bạn xác nhận; scope/kết quả cần đối chiếu artifact."
+    ],
+    [
+      "A04",
+      "Portrait / signature",
+      "Ảnh cá nhân thật và signature JUE hoặc tên đã duyệt.",
+      "Xử lý ánh sáng theo direction, không biến thành nhân vật của tác phẩm.",
+      "Cần chọn",
+      "JUE đang là signature hiện có; tên concept chưa phải quyết định đổi brand."
+    ],
+    [
+      "A05",
+      "Sound / motion art",
+      "Một âm kích hoạt và ambience hoặc clip gốc nếu chọn.",
+      "Mặc định mute, Play chủ động. Dùng tài sản có quyền.",
+      "Tùy chọn",
+      "Không cần nhạc để hiểu flow hoặc xác nhận button."
+    ],
+    [
+      "A06",
+      "CV / project links",
+      "PDF cập nhật, LinkedIn và URL case thứ hai.",
+      "Đặt native links ngoài canvas, public được và mở thẳng.",
+      "Cần xác nhận",
+      "Không khóa sau quest, login hoặc free-roam."
+    ]
+  ],
+  "prefs": [
+    [
+      1,
+      "Quỷ Bí Chi Chủ",
+      "Mật viện, bí mật có nhiều lớp, dấu khắc và cơ khí cổ.",
+      "C01/C02/C04/C07",
+      "Dẫn thế giới chính",
+      "Diễn giải thiết kế của tôi từ sở thích; bối cảnh occult/Victorian-steam đối chiếu R01."
+    ],
+    [
+      2,
+      "Berserk",
+      "Khối nặng, tương phản, hắc thiết và cảm giác tension.",
+      "C05/C08; vật liệu C01",
+      "Dẫn vật liệu",
+      "Không lấy nhân vật, biểu tượng nhận diện hoặc hình tác phẩm làm logo cá nhân."
+    ],
+    [
+      3,
+      "Naraka Bladepoints (NARAKA: BLADEPOINT)",
+      "Đường nét phương Đông, nhịp tương tác nhanh và cửa giới.",
+      "C06; motion C01",
+      "Dẫn nhịp / phương Đông",
+      "Tên được chuẩn hóa ở ngoặc; dùng cảm hứng, không sao chép UI game."
+    ],
+    [
+      4,
+      "Mushoku Tensei",
+      "Sách phép, học hỏi và hành trình thiết kế.",
+      "C07",
+      "Lớp cảm hứng phụ",
+      "Đây là motif tôi đề xuất; không tái hiện hệ phép hoặc chữ của tác phẩm."
+    ],
+    [
+      5,
+      "Attack on Titan",
+      "Kho hồ sơ bí mật, sức ép thị giác và bóc tách thông tin.",
+      "C08",
+      "Lớp cảm hứng phụ",
+      "Biến tension thành reveal có kiểm soát; case reader yên để đọc."
+    ],
+    [
+      6,
+      "Slime",
+      "Companion gần gũi, vật liệu mềm và feedback dễ hiểu.",
+      "C11",
+      "Chi tiết tùy chọn",
+      "Thấp hơn ba ưu tiên đầu, nên mascot chỉ là phụ nếu bạn muốn."
+    ],
+    [
+      7,
+      "HunterXHunter",
+      "Quy tắc rõ, điều kiện → phản hồi và giải thích quyết định.",
+      "C03",
+      "Logic tương tác",
+      "Tôi mượn ý niệm hệ thống, không mô tả portfolio là hệ Nen chính thống."
+    ],
+    [
+      8,
+      "Naruto",
+      "Động tác thi triển, trình tự glyph và đường năng lượng.",
+      "C03/C10; M02/M03",
+      "Nhịp / gesture tùy chọn",
+      "Một interaction có thể là dấu ấn; không cần thao tác nhanh hoặc biết lore mới dùng được."
+    ],
+    [
+      9,
+      "TobeHeroX",
+      "Sân khấu motion graphic, silhouette và typography có sức bật.",
+      "C10/C08",
+      "Visual playground",
+      "Minh họa/keyframes gốc. Không lấy footage của tác phẩm làm case năng lực cá nhân."
+    ],
+    [
+      10,
+      "Kiếm Lai",
+      "Tranh mực, vực mây, cổ vật và nhịp không gian phương Đông.",
+      "C06",
+      "Lớp cảnh phụ",
+      "Bộ chữ/glyph tự thiết kế; không giả nghĩa Hán/cổ ngữ để làm label."
+    ],
+    [
+      11,
+      "Frieren",
+      "Dấu vết hành trình, tĩnh lặng, ký ức và chiều thời gian.",
+      "C12/C04/C07",
+      "Vùng nghỉ / kể chuyện",
+      "Đưa vào reader/experience hoặc hậu cảnh; không thay ưu tiên world/game đã chốt."
+    ]
+  ],
+  "sources": [
+    [
+      "R01",
+      "Quỷ Bí Chi Chủ: nguồn phân phối chính thức",
+      "https://www.crunchyroll.com/series/GEXH3W2EZ/lord-of-mysteries",
+      "Đối chiếu bối cảnh Victorian, steam và occult. Concept C01 do tôi sáng tạo, không từ source này."
+    ],
+    [
+      "R02",
+      "NARAKA: BLADEPOINT: website chính thức",
+      "https://www.narakathegame.com/",
+      "Đối chiếu game và trọng tâm combat nhanh. Chỉ dùng nhịp làm cảm hứng, không copy assets."
+    ],
+    [
+      "R03",
+      "Apple: Meet Liquid Glass, WWDC25",
+      "https://developer.apple.com/videos/play/wwdc2025/219/",
+      "Nguồn về vật liệu native và phân lớp controls/navigation. Web approximation là đề xuất riêng."
+    ],
+    [
+      "R04",
+      "GSAP: getVelocity",
+      "https://gsap.com/docs/v3/Plugins/ScrollTrigger/getVelocity()/",
+      "Velocity là tốc độ cuộn dùng làm input cho hiệu ứng."
+    ],
+    [
+      "R05",
+      "GSAP: quickTo",
+      "https://gsap.com/docs/v3/GSAP/gsap.quickTo()/",
+      "Tái sử dụng tween cho phản hồi pointer thường xuyên."
+    ],
+    [
+      "R06",
+      "GSAP: matchMedia",
+      "https://gsap.com/docs/v3/GSAP/gsap.matchMedia()/",
+      "Responsive/reduced motion và cleanup."
+    ],
+    [
+      "R07",
+      "MDN: WebGL best practices",
+      "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/WebGL_best_practices",
+      "Capability, memory, buffer và fallback cần kiểm qua prototype; không bảo đảm performance cho concept."
+    ],
+    [
+      "R08",
+      "Người dùng: câu trả lời ngày 02/10/2026",
+      "Cuộc trò chuyện này",
+      "Nguồn thứ tự tác phẩm, thế giới cổ ngữ × công nghệ, world/game; Junior product team, Edura Lead UI từ lượt trước."
+    ],
+    [
+      "R09",
+      "Skills đã áp dụng",
+      "ui-ux-pro-max; design-taste-frontend; gpt-taste; ui-styling; gsap-core; gsap-scrolltrigger; gsap-performance; redesign-existing-projects; ponytail",
+      "Dataset trả Brutalism/Minimalism là gợi ý tham khảo. Direction cá nhân hóa ở đây do tôi tổng hợp từ brief, không lấy nguyên theme tự động."
+    ]
+  ],
+  "palette": [
+    [
+      "P1",
+      "Occult Brass",
+      "#111419",
+      "#24282D",
+      "#ECEEF0",
+      "#CFB58B",
+      "C01/C03/C07"
+    ],
+    [
+      "P2",
+      "Iron Ember",
+      "#151316",
+      "#29272D",
+      "#F0ECED",
+      "#D66B63",
+      "C05/C08/C10"
+    ],
+    [
+      "P3",
+      "Ink Jade",
+      "#0E1716",
+      "#20312E",
+      "#E7F0ED",
+      "#8CCBB0",
+      "C06"
+    ],
+    [
+      "P4",
+      "Spectral Silver",
+      "#0F141D",
+      "#252D3C",
+      "#EDF1F7",
+      "#A8D6EE",
+      "C02/C04/C09/C12"
+    ],
+    [
+      "P5",
+      "Soft Relic",
+      "#EEEFF4",
+      "#E0E2EA",
+      "#252838",
+      "#62558C",
+      "C11"
+    ]
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "React 3D UI"
+  short_description: "Build accessible 3D web UI with React and Three.js"
+  default_prompt: "Use $react-3d-ui to build an interactive 3D UI scene in this project."

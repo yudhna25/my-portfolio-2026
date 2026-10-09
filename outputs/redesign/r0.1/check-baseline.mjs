@@ -1,0 +1,25 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+
+const project = fileURLToPath(new URL('../../../', import.meta.url));
+const baseline = JSON.parse(fs.readFileSync(new URL('baseline.json', import.meta.url), 'utf8'));
+const hash = data => crypto.createHash('sha256').update(data).digest('hex');
+const walk = dir => fs.readdirSync(`${project}/${dir}`, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(`${dir}/${e.name}`) : [`${dir}/${e.name}`]);
+const changed = baseline.files.filter(f => !fs.existsSync(`${project}/${f.path}`) || hash(fs.readFileSync(`${project}/${f.path}`)) !== f.sha256).map(f => f.path);
+assert.deepEqual(changed, [], 'Source/assets/config/dependencies changed after baseline');
+const current = [...walk('src'), ...walk('public'), 'index.html', 'vite.config.js', ...fs.readdirSync(project).filter(n => /^package.*\.json$/.test(n))].sort();
+assert.deepEqual(current, baseline.files.map(f => f.path), 'Protected scope file set changed');
+const git = args => { const r = spawnSync('git', args, { cwd: project, encoding: 'utf8' }); assert.equal(r.status, 0, r.stderr); return r.stdout.trimEnd(); };
+assert.equal(git(['rev-parse', 'HEAD']), baseline.git.head.stdout, 'HEAD changed');
+assert.equal(git(['status', '--porcelain=v1', '--untracked-files=no']), baseline.git.statusTracked.stdout, 'Tracked working tree/index status changed');
+const agents = fs.readFileSync(`${project}/AGENTS.md`);
+assert(agents.length >= baseline.agentsBefore.bytes, 'AGENTS was truncated');
+assert.equal(hash(agents.subarray(0, baseline.agentsBefore.bytes)), baseline.agentsBefore.sha256, 'AGENTS original bytes changed');
+const rowsAddedForTask = agents.subarray(baseline.agentsBefore.bytes).toString('utf8').split('\n').filter(l => /^\|.*\| R0\.1 —/.test(l)).length;
+assert(rowsAddedForTask <= 1, 'Duplicate R0.1 progress row');
+const result = { checkedAt: new Date().toISOString(), filesUnchanged: baseline.files.length, addedOrRemovedProtectedFiles: 0, headUnchanged: true, trackedStatusUnchanged: true, agentsOriginalBytesPreserved: baseline.agentsBefore.bytes, rowsAddedForTask, errors: [] };
+fs.writeFileSync(new URL('source-integrity.json', import.meta.url), JSON.stringify(result, null, 2) + '\n');
+console.log(JSON.stringify(result));

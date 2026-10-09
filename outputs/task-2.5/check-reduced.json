@@ -1,0 +1,107 @@
+{
+  "status": "pass",
+  "count": 25,
+  "scene": false,
+  "results": [
+    {
+      "pass": true,
+      "message": "Inactive: hidden until preloader completes"
+    },
+    {
+      "pass": true,
+      "message": "Transparent Hero surface"
+    },
+    {
+      "pass": true,
+      "message": "DOM overlay lets pointer events through"
+    },
+    {
+      "pass": true,
+      "message": "Hero never creates a Canvas"
+    },
+    {
+      "pass": true,
+      "message": "One accessible translated h1"
+    },
+    {
+      "pass": true,
+      "message": "Unbounded / #FAFAFA"
+    },
+    {
+      "pass": true,
+      "message": "Font clamp 44px / 12vw / 200px"
+    },
+    {
+      "pass": true,
+      "message": "Tracking -0.02em"
+    },
+    {
+      "pass": true,
+      "message": "Hero covers at least the viewport"
+    },
+    {
+      "pass": true,
+      "message": "No horizontal overflow"
+    },
+    {
+      "pass": true,
+      "message": "Reduced: no split, scramble, pulse or scroll animation"
+    },
+    {
+      "pass": true,
+      "message": "Reduced: text appears immediately"
+    },
+    {
+      "pass": true,
+      "message": "en: exact name after SplitText cleanup"
+    },
+    {
+      "pass": true,
+      "message": "en: exact sub-tagline / indicator"
+    },
+    {
+      "pass": true,
+      "message": "en: no duplicate intro timeline"
+    },
+    {
+      "pass": true,
+      "message": "vi: exact name after SplitText cleanup"
+    },
+    {
+      "pass": true,
+      "message": "vi: exact sub-tagline / indicator"
+    },
+    {
+      "pass": true,
+      "message": "vi: no duplicate intro timeline"
+    },
+    {
+      "pass": true,
+      "message": "Native scroll bridge updates progress"
+    },
+    {
+      "pass": true,
+      "message": "Reduced: scrolling leaves text static"
+    },
+    {
+      "pass": true,
+      "message": "Return to top: content returns"
+    },
+    {
+      "pass": true,
+      "message": "Live reduced motion reverts all effects"
+    },
+    {
+      "pass": true,
+      "message": "Live motion re-enable recreates one intro / exit"
+    },
+    {
+      "pass": true,
+      "message": "Deactivation cancels every Hero animation"
+    },
+    {
+      "pass": true,
+      "message": "Unmount cancels async font callback and cleans smoother / split / tweens"
+    }
+  ]
+}

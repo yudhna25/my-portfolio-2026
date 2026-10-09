@@ -1,0 +1,115 @@
+{
+  "title": "3D Lab · Stellar Odyssey",
+  "back": "← Back to portfolio",
+  "scene": "Monochrome black hole with bent light and a camera approaching the accretion disk",
+  "fps": "FPS",
+  "fpsValue": "{{value}} FPS",
+  "waiting": "—",
+  "scroll": "Scroll",
+  "controls": "Scene controls",
+  "quality": {
+    "high": "High — {{count}}k stars",
+    "medium": "Medium — {{count}}k",
+    "low": "Low — {{count}}k"
+  },
+  "bloomOff": "Disable bloom",
+  "bloomOn": "Enable bloom",
+  "contentOn": "Show content",
+  "contentOff": "Hide content",
+  "frozen": "Automatic motion is reduced according to your system preference.",
+  "running": "Scroll to weave through the stars and fly just above the accretion disk.",
+  "start": {
+    "code": "T-0 · Departure",
+    "line1": "STELLAR",
+    "line2": "ODYSSEY",
+    "description": "The camera starts close to the black hole amid {{count}} stars. Scroll down to observe bent light from changing viewpoints."
+  },
+  "travel": {
+    "code": "T-1 · Voyage",
+    "line1": "FLY THROUGH",
+    "line2": "THE STARS",
+    "description": "The camera weaves left–right–left–right–left. Stars grow very slightly on approach; hot gas lanes rotate faster near the center."
+  },
+  "end": {
+    "code": "T-2 · Singularity",
+    "line1": "BLACK HOLE",
+    "line2": "",
+    "description": "Foreground light crosses the shadow while the rear disk bends into two arcs. The camera stops just above the emitting disk, with the black hole on the right."
+  },
+  "story": {
+    "enable": "Story lab",
+    "legacy": "Current lab",
+    "language": "VI / EN",
+    "prototype": "R2.4 · Finale / handoff prototype",
+    "portfolioPrefix": "PORTFOLI",
+    "portalGlyph": "O",
+    "chapter": "Chapter",
+    "progress": "Progress",
+    "poses": "Five pose stops",
+    "percent": "{{value}}%",
+    "hold": "Hold pose",
+    "resume": "Resume scroll",
+    "manual": "Held",
+    "scroll": "Scroll",
+    "state": "{{chapter}} · {{value}}% · {{mode}}",
+    "camera": "Camera: {{x}}, {{y}}, {{z}}",
+    "running": "Scrub Portal / Works / Finale. Seed and Works origin persist through holds and reversals. Production typography is not integrated.",
+    "end": "Contact rest point. Seed {{seed}}, default phase {{phase}} without a Works visit. This space provides the final chapter’s full scroll range.",
+    "chapters": {
+      "hero": "Hero",
+      "portal": "Portal / Ejection",
+      "about": "About",
+      "skills": "Skills",
+      "education": "Education",
+      "experience": "Experience",
+      "departure": "Departure",
+      "works": "Works",
+      "finale": "Finale",
+      "contact": "Contact"
+    },
+    "notes": {
+      "hero": "The last O is a real DOM anchor for R2.2. The current scene only checks camera poses; this is not the redesigned Hero.",
+      "portal": "1.75 viewports: approach O → expanding core / blackout → ejection. One shared HDR image; observer stays outside the horizon.",
+      "about": "Parked camera, black hole to the right with a reading area to the left.",
+      "skills": "Reframe during the first 25%, then park for reading. New logos and skill connections are not implemented.",
+      "education": "1.75 viewports; reframe during the first 25%, then park for the star map. The map is not integrated.",
+      "experience": "Keep the black hole in the background while reading. The main page uses the DOM-guided meteor.",
+      "departure": "Camera handoff from Experience to Works; the DOM-guided meteor is integrated on the main page.",
+      "works": "Three R0.2 figures: Centaurus / Gemini / Cygnus. Slow orbit with preserved orientation and stable selection controls.",
+      "finale": "2.25 viewports: retract labels → orbit / curved trails → 10% compression → collision / nebula → gas infall / black hole. Every layer uses the same progress; stop or reverse at any point.",
+      "contact": "Independent pose: jump directly here without passing through Works. Parked camera with a reading area on the left."
+    },
+    "backShort": "← Portfolio",
+    "year": "2026",
+    "works": {
+      "help": "Hover / Tab / tap to pause the system. Tap again, background or Esc to clear. No preview / route yet.",
+      "edura": "EDURA LMS",
+      "eduraFigure": "CENTAURUS",
+      "veris": "VERIS APP",
+      "verisFigure": "GEMINI",
+      "vie": "VIE PERFUME",
+      "vieFigure": "CYGNUS",
+      "state": "{{mode}} · phase {{phase}} · origin {{origin}} · speed {{velocity}} · captures {{captures}}",
+      "latched": "Latched",
+      "idle": "Orbit",
+      "controls": "Choose a project constellation"
+    }
+  },
+  "symbols": {
+    "controls": "Choose a sample logo or constellation",
+    "help": "R4.1 · Hover / Tab / tap to select. Tap again, background or Esc returns stars to their origins. Skills/Education layouts are not integrated.",
+    "targets": {
+      "saigonUniversity": "Saigon University · Circinus",
+      "after-effects": "After Effects",
+      "premiere-pro": "Premiere Pro",
+      "illustrator": "Illustrator",
+      "greenAcademy": "Green Academy · Telescopium",
+      "arenaMultimedia": "Arena Multimedia · Pictor",
+      "davinci-resolve": "DaVinci Resolve",
+      "figma": "Figma",
+      "photoshop": "Photoshop",
+      "ai": "AI · ChatGPT / Claude / Antigravity"
+    },
+    "reset": "Return to origins"
+  }
+}

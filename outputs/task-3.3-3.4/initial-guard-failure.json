@@ -1,0 +1,5 @@
+{
+  "code": 1,
+  "stdout": "",
+  "stderr": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: src/3d/components/CameraRig.jsx: unchanged\r\n+ actual - expected\r\n\r\n+ 'd663f8599b74c9afe04ebb3c9e788d266a90112a5cfc717cf7b39b0bbc7cf1f5'\r\n- '825fe59fd665a74adffe6864606d6e0827577ea0372ba4be667e140d45311c07'\r\n\r\n    at file:///D:/Projects/my-portfolio-2026/outputs/task-3.3-3.4/check.mjs:37:10\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:413:25)\r\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:660:26)\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: false,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 'd663f8599b74c9afe04ebb3c9e788d266a90112a5cfc717cf7b39b0bbc7cf1f5',\r\n  expected: '825fe59fd665a74adffe6864606d6e0827577ea0372ba4be667e140d45311c07',\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.12.0\r\n"
+}

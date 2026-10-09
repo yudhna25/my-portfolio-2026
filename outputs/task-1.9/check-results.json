@@ -1,0 +1,58 @@
+[
+  {
+    "name": "OS light on first visit",
+    "passed": true
+  },
+  {
+    "name": "OS dark on first visit",
+    "passed": true
+  },
+  {
+    "name": "No OS preference defaults dark",
+    "passed": true
+  },
+  {
+    "name": "Saved dark overrides light OS",
+    "passed": true
+  },
+  {
+    "name": "Saved light overrides dark OS",
+    "passed": true
+  },
+  {
+    "name": "Invalid preference follows OS",
+    "passed": true
+  },
+  {
+    "name": "Blocked storage still follows OS",
+    "passed": true
+  },
+  {
+    "name": "Store starts with bootstrap, toggle applies DOM/meta/storage",
+    "passed": true
+  },
+  {
+    "name": "setTheme validates values and applies immediately",
+    "passed": true
+  },
+  {
+    "name": "applyTheme recreates missing meta",
+    "passed": true
+  },
+  {
+    "name": "Blocked persistence does not break toggle",
+    "passed": true
+  },
+  {
+    "name": "SSR has dark default and actions do not throw",
+    "passed": true
+  },
+  {
+    "name": "Theme bootstrap and blocking CSS precede React module",
+    "passed": true
+  },
+  {
+    "name": "Toggle labels have Vi/En key parity",
+    "passed": true
+  }
+]

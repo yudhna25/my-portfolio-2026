@@ -1,0 +1,40 @@
+{
+  "capturedUTC": "2026-10-08T17:22:27.506Z",
+  "note": "Source/config and current dist baseline, before R6.2 final build. Dist is R6.1 build, not route verification.",
+  "files": {
+    "vite.config.js": {
+      "bytes": 2489,
+      "sha256": "b6176d337e6ce71c05e8308193aeaa308fcb53019ab221af516d15028c4a0635"
+    },
+    "main.jsx": {
+      "exists": false
+    },
+    "src/main.jsx": {
+      "bytes": 354,
+      "sha256": "434f03cf6d9a4e72a1b312b2f5f613193c68b7deeef585148daa388e071d2f50"
+    },
+    "src/i18n/config.js": {
+      "bytes": 1898,
+      "sha256": "4a71342b0755f24f574ffe22166285ba15dd39555d120a08225bd96c2f45d6c6"
+    },
+    "index.html": {
+      "bytes": 6800,
+      "sha256": "b9adff9a7e5d7d8899499caa33f7debe7d5d6f5f2ca85d3bcca1330d530cdb7c"
+    },
+    "package.json": {
+      "bytes": 1456,
+      "sha256": "e21571db76af9cddd6d3296ac10464f7f6c8ba83eaff6234c0cfde9cce59b632"
+    },
+    "vercel.json": {
+      "exists": false
+    },
+    "dist/sw.js": {
+      "bytes": 3840,
+      "sha256": "a34d65d26b6ff4835dec453c56ab594e27640f42e7c0c8f430f190cdadfbf91e"
+    },
+    "dist/manifest.webmanifest": {
+      "bytes": 673,
+      "sha256": "b859feed1968ceb37e959eeaf4ea1a27e3b2d7d13804a564b37fd7c659a83f1c"
+    }
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "version": 1,
+  "dateLocal": "2026-10-08",
+  "projectId": "241524417",
+  "targetRouteProposed": "/projects/edura",
+  "readiness": "verified-partial-reader-handoff; detailed-flow-outcome-author-reflection-missing",
+  "uiImplementation": false,
+  "sourcesFile": "sources.json",
+  "claimsFile": "claims.json",
+  "assetsFile": "asset-index.json",
+  "secondaryLink": {
+    "url": "https://www.behance.net/gallery/241524417/Edura-LMS",
+    "label": {
+      "vi": "Xem hồ sơ nguồn trên Behance",
+      "en": "View the source project on Behance"
+    }
+  },
+  "readerPolicy": "Only ready blocks are default copy; qualified-owner-report is optional with attribution. Empty/gap sections are editor metadata, never publishing placeholders.",
+  "sections": [
+    {
+      "id": "overview",
+      "outlineLabel": {
+        "vi": "Tổng quan và vai trò",
+        "en": "Overview and role"
+      },
+      "status": "ready",
+      "blocks": [
+        {
+          "id": "overview.intro",
+          "i18nNamespaceProposed": "edura.overview.intro",
+          "status": "ready",
+          "heading": {
+            "vi": "EDURA LMS",
+            "en": "EDURA LMS"
+          },
+          "body": {
+            "vi": "EDURA là concept và prototype UI/UX trên Figma cho một nền tảng quản lý học tập dành cho học viên tại các trung tâm đào tạo. Thiết kế hướng tới việc đưa lịch học, điểm số, học phí và bài tập về cùng một nơi.",
+            "en": "EDURA is a Figma UI/UX concept and prototype for a learning-management platform serving learners at training centers. The design aims to bring schedules, grades, tuition and assignments into one place."
+          },
+          "claimIds": [
+            "C01",
+            "C04",
+            "C05"
+          ],
+          "assetIds": [
+            "A02"
+          ],
+          "editorialNote": ""
+        },
+        {
+          "id": "overview.role",
+          "i18nNamespaceProposed": "edura.overview.role",
+          "status": "ready",
+          "heading": {
+            "vi": "Vai trò: Lead UI",
+            "en": "Role: Lead UI"
+          },
+          "body": {
+            "vi": "Trong vai trò Lead UI, tôi đưa ra các quyết định về quy tắc bố cục, màu chủ đạo và thiết kế hệ thống giao diện của EDURA.",
+            "en": "As Lead UI, I made decisions about EDURA’s layout rules, primary color direction and interface system design."
+          },
+          "claimIds": [
+            "C02",
+            "C03",
+            "C08"
+          ],
+          "assetIds": [],
+          "editorialNote": "Confirmed directly by the owner. Do not expand this into personal ownership of UX research or all project work."
+        }
+      ]
+    },
+    {
+      "id": "problem",
+      "outlineLabel": {
+        "vi": "Vấn đề",
+        "en": "Problem"
+      },
+      "status": "ready",
+      "blocks": [
+        {
+          "id": "problem.framing",
+          "i18nNamespaceProposed": "edura.problem.framing",
+          "status": "ready",
+          "heading": {
+            "vi": "Thông tin học tập nằm ở nhiều nơi",
+            "en": "Learning information across multiple channels"
+          },
+          "body": {
+            "vi": "Tài liệu dự án đặt vấn đề về lịch học, tài liệu và hạn nộp bài nằm trên nhiều kênh thông tin. Hướng giải pháp của EDURA là tập trung các thông tin này trong một giao diện dành cho học viên.",
+            "en": "The project materials frame a problem of schedules, materials and submission deadlines spread across multiple channels. EDURA’s proposed direction is to bring this information together in a learner interface."
+          },
+          "claimIds": [
+            "C05"
+          ],
+          "assetIds": [
+            "A07"
+          ],
+          "editorialNote": ""
+        }
+      ]
+    },
+    {
+      "id": "decisions",
+      "outlineLabel": {
+        "vi": "Quyết định UI",
+        "en": "UI decisions"
+      },
+      "status": "ready-with-limited-rationale",
+      "blocks": [
+        {
+          "id": "decisions.layout",
+          "i18nNamespaceProposed": "edura.decisions.layout",
+          "status": "ready",
+          "heading": {
+            "vi": "Quy tắc bố cục",
+            "en": "Layout rules"
+          },
+          "body": {
+            "vi": "Tôi phụ trách các quyết định về quy tắc bố cục. Ở hình tổng quan, các lối vào bảng điểm, lịch học, học phí và khóa học được đặt cạnh nhau; khu vực điểm danh và tiến độ học tập xuất hiện bên dưới.",
+            "en": "I was responsible for decisions about layout rules. In the overview, entry points for grades, schedules, tuition and courses appear together, with attendance and learning progress below."
+          },
+          "claimIds": [
+            "C03",
+            "C06"
+          ],
+          "assetIds": [
+            "A02"
+          ],
+          "editorialNote": ""
+        },
+        {
+          "id": "decisions.color",
+          "i18nNamespaceProposed": "edura.decisions.color",
+          "status": "ready",
+          "heading": {
+            "vi": "Màu chủ đạo",
+            "en": "Primary color direction"
+          },
+          "body": {
+            "vi": "Tôi phụ trách quyết định về màu chủ đạo. Tư liệu EDURA thể hiện xanh lam ở nhận diện và giao diện, kết hợp các bề mặt sáng và những nhóm chức năng có màu riêng trong hình tổng quan.",
+            "en": "I was responsible for the primary color direction. The EDURA materials show blue in the identity and interface, alongside light surfaces and distinct colors for function groups in the overview."
+          },
+          "claimIds": [
+            "C03",
+            "C07"
+          ],
+          "assetIds": [
+            "A02"
+          ],
+          "editorialNote": ""
+        },
+        {
+          "id": "decisions.system",
+          "i18nNamespaceProposed": "edura.decisions.system",
+          "status": "ready",
+          "heading": {
+            "vi": "Thiết kế hệ thống giao diện",
+            "en": "Interface system design"
+          },
+          "body": {
+            "vi": "Thiết kế hệ thống giao diện là một phần phạm vi Lead UI tôi phụ trách cho concept và prototype EDURA trên Figma.",
+            "en": "Interface system design was part of my Lead UI scope for the EDURA concept and Figma prototype."
+          },
+          "claimIds": [
+            "C02",
+            "C04",
+            "C08"
+          ],
+          "assetIds": [],
+          "editorialNote": "Ownership confirmed; no tokens/components/state library supplied. Do not invent system artifacts, completeness or performance benefits."
+        }
+      ]
+    },
+    {
+      "id": "artifacts",
+      "outlineLabel": {
+        "vi": "Flow và artifact",
+        "en": "Flow and artifacts"
+      },
+      "status": "artifacts-ready-flow-missing",
+      "blocks": [
+        {
+          "id": "artifacts.overview",
+          "i18nNamespaceProposed": "edura.artifacts.overview",
+          "status": "ready",
+          "heading": {
+            "vi": "Tổng quan giao diện",
+            "en": "Interface overview"
+          },
+          "body": {
+            "vi": "Mockup EDURA giới thiệu các nhóm thông tin và thao tác như bảng điểm, lịch học, học phí, khóa học, điểm danh, bài tập, nộp bài và tiến độ. Đây là hình tổng quan thiết kế, chưa phải chuỗi màn hình mô tả đầy đủ một luồng thao tác.",
+            "en": "The EDURA mockup presents information and actions for grades, schedules, tuition, courses, attendance, assignments, submission and progress. It is a design overview rather than a screen sequence documenting a complete interaction flow."
+          },
+          "claimIds": [
+            "C06",
+            "C15"
+          ],
+          "assetIds": [
+            "A02"
+          ],
+          "editorialNote": ""
+        },
+        {
+          "id": "artifacts.direction",
+          "i18nNamespaceProposed": "edura.artifacts.direction",
+          "status": "ready",
+          "heading": {
+            "vi": "Định hướng giải pháp",
+            "en": "Proposed solution"
+          },
+          "body": {
+            "vi": "Tài liệu concept đề xuất tập trung thông tin học tập, dashboard theo dõi tiến trình và hỗ trợ theo nhu cầu trung tâm. Những mô tả này thể hiện định hướng thiết kế; chưa chứng minh các tính năng đã vận hành hoặc tạo ra tác động đo được.",
+            "en": "The concept materials propose centralized learning information, a progress dashboard and support tailored to training centers. These descriptions document design intent, without establishing operational features or measured impact."
+          },
+          "claimIds": [
+            "C05",
+            "C09",
+            "C19"
+          ],
+          "assetIds": [
+            "A09"
+          ],
+          "editorialNote": ""
+        }
+      ]
+    },
+    {
+      "id": "results",
+      "outlineLabel": {
+        "vi": "Kết quả có căn cứ",
+        "en": "Documented results"
+      },
+      "status": "deliverables-ready-outcomes-missing",
+      "blocks": [
+        {
+          "id": "results.deliverables",
+          "i18nNamespaceProposed": "edura.results.deliverables",
+          "status": "ready",
+          "heading": {
+            "vi": "Kết quả ở cấp concept và prototype",
+            "en": "Concept and prototype deliverables"
+          },
+          "body": {
+            "vi": "Theo xác nhận của tác giả, dự án được thực hiện ở mức concept và prototype UI/UX trên Figma. Bộ tư liệu công khai đã thu thập cho thấy một phần giao diện EDURA, cách đặt vấn đề, hướng giải pháp và tài liệu nhận diện. Đây là bằng chứng về thiết kế, không phải số liệu hiệu quả sau triển khai.",
+            "en": "The author confirms that the project was developed as a UI/UX concept and Figma prototype. The collected public materials document part of the EDURA interface, the problem framing, proposed solution and identity artifacts. They provide evidence of design work, rather than post-launch performance data."
+          },
+          "claimIds": [
+            "C04",
+            "C06",
+            "C13",
+            "C16",
+            "C18"
+          ],
+          "assetIds": [
+            "A02"
+          ],
+          "editorialNote": ""
+        },
+        {
+          "id": "results.evaluation",
+          "i18nNamespaceProposed": "edura.results.evaluation",
+          "status": "qualified-owner-report",
+          "heading": {
+            "vi": "Đánh giá từ hội đồng",
+            "en": "Jury evaluation"
+          },
+          "body": {
+            "vi": "Theo tác giả, dự án được hội đồng giám khảo UX/UI của Arena Multimedia đánh giá “Excellent”.",
+            "en": "According to the author, the project received an “Excellent” evaluation from Arena Multimedia’s UX/UI design jury."
+          },
+          "claimIds": [
+            "C14"
+          ],
+          "assetIds": [],
+          "editorialNote": "Optional, with attribution as written. Owner reports a Lead UX/UI Designer title; the exact panel composition is not documented. No public assessment record or criterion-specific rubric supplied. Never describe this as an innovation award, measured usability result or independent validation."
+        }
+      ]
+    },
+    {
+      "id": "lessons",
+      "outlineLabel": {
+        "vi": "Bài học",
+        "en": "Lessons"
+      },
+      "status": "missing-author-reflection",
+      "blocks": [],
+      "gapId": "G05",
+      "editorialNote": "No first-person lesson copy until the author supplies a reflection tied to a real constraint, iteration or feedback. Omit the whole section in the limited reader; do not show a coming-soon placeholder."
+    }
+  ]
+}

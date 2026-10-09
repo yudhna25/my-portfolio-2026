@@ -1,0 +1,39 @@
+{
+  "first": {
+    "camera": [
+      2,
+      3,
+      -169
+    ],
+    "hole": 1,
+    "gas": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "orbitVisible": false,
+    "labelsHidden": true
+  },
+  "second": {
+    "camera": [
+      2,
+      3,
+      -169
+    ],
+    "hole": 1,
+    "gas": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "orbitVisible": false,
+    "labelsHidden": true
+  },
+  "language": {
+    "lang": "en",
+    "text": "EDURA LMSCENTAURUS"
+  },
+  "errors": []
+}

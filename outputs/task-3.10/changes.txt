@@ -1,0 +1,5 @@
+src/components/About.jsx
+src/components/Marquee.jsx
+src/components/sections/Experience.jsx
+src/components/sections/Playground.jsx
+src/hooks/useSmoothScroll.js

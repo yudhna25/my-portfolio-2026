@@ -1,0 +1,235 @@
+{
+  "tabCycle": [
+    {
+      "backgroundY": 0,
+      "focus": "01Về tôiVề tôi",
+      "inside": true,
+      "windowY": 0
+    },
+    {
+      "backgroundY": 0,
+      "focus": "02Dự ánDự án",
+      "inside": true,
+      "windowY": 0
+    },
+    {
+      "backgroundY": 0,
+      "focus": "04Học vấnHọc vấn",
+      "inside": true,
+      "windowY": 0
+    },
+    {
+      "backgroundY": 0,
+      "focus": "07Liên hệLiên hệ",
+      "inside": true,
+      "windowY": 0
+    },
+    {
+      "backgroundY": 0,
+      "focus": "anhduy25work@gmail.com",
+      "inside": true,
+      "windowY": 0
+    },
+    {
+      "backgroundY": 0,
+      "focus": "Facebook",
+      "inside": true,
+      "windowY": 0
+    },
+    {
+      "backgroundY": 0,
+      "focus": "Vi",
+      "inside": true,
+      "windowY": 0
+    },
+    {
+      "backgroundY": 0,
+      "focus": "En",
+      "inside": true,
+      "windowY": 0
+    },
+    {
+      "backgroundY": 0,
+      "focus": "Đóng menu điều hướng",
+      "inside": true,
+      "windowY": 0
+    }
+  ],
+  "responsive": [
+    {
+      "clientWidth": 380,
+      "fontFamily": "\"Unbounded Variable\", Unbounded, sans-serif",
+      "fontSize": "31.2px",
+      "footer": {
+        "bottom": 844,
+        "height": 197,
+        "left": 0,
+        "right": 380,
+        "top": 647,
+        "width": 380,
+        "x": 0,
+        "y": 647
+      },
+      "headerClientWidth": 380,
+      "headerScrollWidth": 380,
+      "menu": {
+        "bottom": 844,
+        "height": 844,
+        "left": 0,
+        "right": 380,
+        "top": 0,
+        "width": 380,
+        "x": 0,
+        "y": 0
+      },
+      "navLinks": "none",
+      "scrollWidth": 380,
+      "trigger": {
+        "bottom": 57.5,
+        "height": 44,
+        "left": 312,
+        "right": 356,
+        "top": 13.5,
+        "width": 44,
+        "x": 312,
+        "y": 13.5
+      },
+      "viewport": 390
+    },
+    {
+      "clientWidth": 295,
+      "fontFamily": "\"Unbounded Variable\", Unbounded, sans-serif",
+      "fontSize": "25.6px",
+      "footer": {
+        "bottom": 568,
+        "height": 197,
+        "left": 0,
+        "right": 310,
+        "top": 371,
+        "width": 310,
+        "x": 0,
+        "y": 371
+      },
+      "headerClientWidth": 310,
+      "headerScrollWidth": 310,
+      "menu": {
+        "bottom": 568,
+        "height": 568,
+        "left": 0,
+        "right": 310,
+        "top": 0,
+        "width": 310,
+        "x": 0,
+        "y": 0
+      },
+      "navLinks": "none",
+      "scrollWidth": 295,
+      "trigger": {
+        "bottom": 57.5,
+        "height": 44,
+        "left": 242,
+        "right": 286,
+        "top": 13.5,
+        "width": 44,
+        "x": 242,
+        "y": 13.5
+      },
+      "viewport": 320
+    },
+    {
+      "clientWidth": 758,
+      "fontFamily": "\"Unbounded Variable\", Unbounded, sans-serif",
+      "fontSize": "61.44px",
+      "footer": {
+        "bottom": 1024,
+        "height": 197,
+        "left": 0,
+        "right": 758,
+        "top": 827,
+        "width": 758,
+        "x": 0,
+        "y": 827
+      },
+      "headerClientWidth": 758,
+      "headerScrollWidth": 758,
+      "menu": {
+        "bottom": 1024,
+        "height": 1024,
+        "left": 0,
+        "right": 758,
+        "top": 0,
+        "width": 758,
+        "x": 0,
+        "y": 0
+      },
+      "navLinks": "none",
+      "scrollWidth": 758,
+      "trigger": {
+        "bottom": 57.5,
+        "height": 44,
+        "left": 690,
+        "right": 734,
+        "top": 13.5,
+        "width": 44,
+        "x": 690,
+        "y": 13.5
+      },
+      "viewport": 768
+    },
+    {
+      "clientWidth": 999,
+      "fontFamily": "\"Unbounded Variable\", Unbounded, sans-serif",
+      "fontSize": "81.92px",
+      "footer": {
+        "bottom": 768,
+        "height": 77,
+        "left": 0,
+        "right": 1014,
+        "top": 691,
+        "width": 1014,
+        "x": 0,
+        "y": 691
+      },
+      "headerClientWidth": 1014,
+      "headerScrollWidth": 1014,
+      "menu": {
+        "bottom": 768,
+        "height": 768,
+        "left": 0,
+        "right": 1014,
+        "top": 0,
+        "width": 1014,
+        "x": 0,
+        "y": 0
+      },
+      "navLinks": "flex",
+      "scrollWidth": 999,
+      "trigger": {
+        "bottom": 57.5,
+        "height": 44,
+        "left": 888.90625,
+        "right": 982,
+        "top": 13.5,
+        "width": 93.09375,
+        "x": 888.90625,
+        "y": 13.5
+      },
+      "viewport": 1024
+    }
+  ],
+  "mobileNavigation": {
+    "aboutTop": 79.59040832519531,
+    "focus": "Mở menu điều hướng",
+    "locked": false,
+    "open": false
+  },
+  "console": {
+    "desktop": [],
+    "mobile": []
+  },
+  "footerFocus": {
+    "dialogScroll": 0,
+    "footerBottom": 720,
+    "headerTop": 0
+  }
+}

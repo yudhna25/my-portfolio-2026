@@ -1,0 +1,56 @@
+[
+  {
+    "zip": "figma-brand.zip",
+    "zipSha256": "79615c11b3a407d978753ce79359a7f1f765cd3332066a61f49ea637031298a0",
+    "entry": "Figma Brand Assets/Figma Icon (Full-color)/Figma Icon (Full-color).svg",
+    "file": "figma-original.svg",
+    "entrySha256": "9798b710e015c7f3fa6101779e323568d6a5a022651d427021262ce850467b07",
+    "localSha256": "9798b710e015c7f3fa6101779e323568d6a5a022651d427021262ce850467b07",
+    "exactExtractedBytesMatch": true
+  },
+  {
+    "zip": "figma-brand.zip",
+    "zipSha256": "79615c11b3a407d978753ce79359a7f1f765cd3332066a61f49ea637031298a0",
+    "entry": "Figma Brand Assets/Figma Icon (Mono-line)/Figma Icon (Mono-line white).svg",
+    "file": "figma-white.svg",
+    "entrySha256": "07ba0f9df63b8f25af99e76cf339ff0cfffb0483feec6ffbfda1b6106400d7c5",
+    "localSha256": "07ba0f9df63b8f25af99e76cf339ff0cfffb0483feec6ffbfda1b6106400d7c5",
+    "exactExtractedBytesMatch": true
+  },
+  {
+    "zip": "openai-brand.zip",
+    "zipSha256": "b2c4cd1e86bbe76bdc4946a72d014efa455240c177f4878fd68cc9b88c71d2ec",
+    "entry": "OpenAI-logos(new)/SVGs/OpenAI-black-monoblossom.svg",
+    "file": "chatgpt-original.svg",
+    "entrySha256": "7be72f1fea831d3ba81a545cee79b7e0ae69449d5d7837c9571ccbfb4aa1e00b",
+    "localSha256": "7be72f1fea831d3ba81a545cee79b7e0ae69449d5d7837c9571ccbfb4aa1e00b",
+    "exactExtractedBytesMatch": true
+  },
+  {
+    "zip": "openai-brand.zip",
+    "zipSha256": "b2c4cd1e86bbe76bdc4946a72d014efa455240c177f4878fd68cc9b88c71d2ec",
+    "entry": "OpenAI-logos(new)/SVGs/OpenAI-white-monoblossom.svg",
+    "file": "chatgpt-white.svg",
+    "entrySha256": "b94ea61d860fae6f82f43571f36f17111fcf5d348e8e9cc22ae4b441c7560011",
+    "localSha256": "b94ea61d860fae6f82f43571f36f17111fcf5d348e8e9cc22ae4b441c7560011",
+    "exactExtractedBytesMatch": true
+  },
+  {
+    "zip": "claude-brand.zip",
+    "zipSha256": "c68ac92df86c825f95177e24016fcc9a8863a3fd4ca344fe6f0700b2c1e07151",
+    "entry": "Anthropic media resources/Anthropic logos/Claude logos/3 Claude Spark/SVG/Claude Spark - Clay.svg",
+    "file": "claude-original.svg",
+    "entrySha256": "6d53db4be375e899c937c26cf16684a80d6e869b1928d72b37748bef2560e219",
+    "localSha256": "6d53db4be375e899c937c26cf16684a80d6e869b1928d72b37748bef2560e219",
+    "exactExtractedBytesMatch": true
+  },
+  {
+    "zip": "resolve-brand.zip",
+    "zipSha256": "a7c6accc9a82a048ba8a13a8996a2bf6af0158cc146fc0f6bbb4875b0a67acd9",
+    "entry": "DaVinci-Resolve-Logo-Square.tif",
+    "file": "resolve-original.tif",
+    "entrySha256": "349bb0f2ebf3486cd4bb1657bcca7bdd5009859ecf8bcab2af309dde0f9c9985",
+    "localSha256": "349bb0f2ebf3486cd4bb1657bcca7bdd5009859ecf8bcab2af309dde0f9c9985",
+    "exactExtractedBytesMatch": true
+  }
+]

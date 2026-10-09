@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-08T13:30:22.985Z",
+  "swaps": 30,
+  "cameraAspects": 5,
+  "oneActive": true,
+  "anchorPriority": true,
+  "baseReturnAnchor": true,
+  "outsideHorizon": true
+}

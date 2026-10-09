@@ -1,0 +1,138 @@
+[
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\components\\Hero.jsx",
+    "hash": "22F5427AB667C6E31ECFDB677317F688A0D7A9013C66D4AFDF0AA51B6B4A8A65"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\App.jsx",
+    "hash": "3ED63E643BE089B62FAADC25358FA089EF507426D250F2BB5CECB7F53381DEBD"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\styles\\globals.css",
+    "hash": "BF872DCEC8EF805654BC49A3936BA883D8B3B6AD47E732663D1E56F9939A87EE"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\i18n\\locales\\vi.json",
+    "hash": "A127DC64FB538D25FCC117EC786D2FB5009C919B3A278FAF1036F3828B7993B8"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\i18n\\locales\\en.json",
+    "hash": "821467769EF3C604A95599FB00990DE078838A085FE3402EBCB8C77EF051C78D"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\outputs\\content-vi.md",
+    "hash": "93621A2DE2F723B1A42A216328F88024CDC0A001699D5DBA020C1AD74859D307"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\outputs\\content-en.md",
+    "hash": "BDB3F3C80FE2C00A69AAFB133FF6ADE7BF2EAA51D58424854181E07A7FC237A8"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\GalaxyScene.jsx",
+    "hash": "BE194AFFAD92F97BA970519205A5F1848DC1E83163735CBA9058357E753A7F53"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\quality.js",
+    "hash": "29E6EF90BB64C6F4877BFCC94CA604F9767D3928259AB5438AB22F2AC86AB1ED"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\BlackHole.jsx",
+    "hash": "1E62819C2F5E7B4FD2924358075E7501E6F72B6B34E183E6D3E4018EEAEFB5B7"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\BlackHoleBloomMask.jsx",
+    "hash": "17B3D5B7B151B3F4E4999C09C181757985813A749A2FCD0980EE3B32BAC92860"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\BlackHoleSystem.jsx",
+    "hash": "0A819D7F98B63584DD4BC714FF0A0B493CCFFD56909C4CAB28D3EF3620E12EA5"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\CameraRig.jsx",
+    "hash": "D663F8599B74C9AFE04EBB3C9E788D266A90112A5CFC717CF7B39B0BBC7CF1F5"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\FloatingObjects.jsx",
+    "hash": "4EA3294BD7FD84BC2F1E8FFE4FEA5311340C51C3F3EEC546EC209B08A3676020"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\LabTelemetry.jsx",
+    "hash": "1749DA481CB264283090C6C9614A41B14AEB89665E9655D7320294AE398AC6D2"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\Nebula.jsx",
+    "hash": "2A54F4D72C36B38D47067431276F83D943989CA025505BA3CB9CB69DBD059C5E"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\OrbitalSkills.jsx",
+    "hash": "BD1BD309ED827B675F7C814A2F83B0FDF9AD8A911B6AA24CE09D457A8C06BF2C"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\Planet.jsx",
+    "hash": "5BC89AECC4712E61158DDECFC6C89AA763EFA59CBA0F4E6AA3A8811FCF867292"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\SceneBoundary.jsx",
+    "hash": "F973636C5119C7080585C7E12A8194AABBC4C830CAFEC7E4274647AEC5EE5507"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\SceneFallback.jsx",
+    "hash": "B27C56D3B0E58D07AD02520FACFAFD6791B063A03854BF1B0E1FA8BCC6BE42FF"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\ShootingStars.jsx",
+    "hash": "4BA014EF795F759ABDBB2BED99EA95C4CD39358E7A1485132DAD1B099DFDB999"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\StarField.jsx",
+    "hash": "411F8F09E9B9778240AC0B2B158BA68210B1E6BD921301A068B0484DD7BE7389"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\hooks\\useLabScroll.js",
+    "hash": "8DC5D4636179F9A2A3DAA0941CECE1EF25FEAAC16A32198BD1FA6AF0636B7B0B"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\hooks\\useMediaQuery.js",
+    "hash": "26A20531953A9DE2F74B3C57ABDA7B115A7437ED74B37FB5B2CFCBE0499974DF"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\hooks\\useScrollProgress.js",
+    "hash": "32167C19BB8B7EDA250CE4539FC8F1313621645FEE2A1D0A84549298DEEC6DBE"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\hooks\\useSectionAnchor.js",
+    "hash": "8005FA7AA882BEE990EADF8D2CAF2937AA71D617EAE40F353771AFCA2EE0E1A1"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\shaders\\blackHole.js",
+    "hash": "15E75F9A13EB524517111B4542238E2591D03092D0B7905FB731DCB8E3BE5D56"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\utils\\buildStarGeometry.js",
+    "hash": "E031F0B9665ED22EEE431A1BE173251AB59BAA941653DFEF4A495CC7CF9BF8E6"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\utils\\cameraPath.js",
+    "hash": "85FC600E91BF6300C3BDE5B73F2CE32F109F659D3414C1723E18A8BEC52D6210"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\utils\\shootingStars.js",
+    "hash": "D05827D6E3ED89164693F9B0BBB92FA29B72ABD9558F010F6A2969D47B4E1387"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\stores\\useLangStore.js",
+    "hash": "4FEB341440E9997AA4DA41186138099408FD42D0797BC627671210491D533060"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\stores\\useLoadingStore.js",
+    "hash": "28171BB7E08BA1157051F9B4E130EE726D57EC9419E761499FBDDA6006995CA3"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\stores\\useScrollStore.js",
+    "hash": "86F34E27B444FB2D42943A89E651DDD3BBF9591534DF1B13EDF83FFAA33E745A"
+  },
+  {
+    "path": "D:\\Projects\\my-portfolio-2026\\src\\stores\\useThemeStore.js",
+    "hash": "CF91B8E98B0671EDBF0161BC24475B4A524E77BD116B9ED9CD3A539EF7EF5B2C"
+  }
+]

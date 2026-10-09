@@ -1,0 +1,62 @@
+{
+  "layout": {
+    "canvases": 1,
+    "insideContent": false,
+    "locked": false,
+    "scene": {
+      "height": 720,
+      "pointerEvents": "none",
+      "position": "fixed",
+      "width": 1270,
+      "zIndex": "0"
+    },
+    "wrapper": {
+      "position": "fixed",
+      "zIndex": "10"
+    }
+  },
+  "logs": [
+    {
+      "level": "warn",
+      "message": "GSAP target .welcome-word not found. https://gsap.com",
+      "timestamp": "2026-10-04T13:10:16.782Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=e0ec25ce"
+    },
+    {
+      "level": "warn",
+      "message": "GSAP target  not found. https://gsap.com",
+      "timestamp": "2026-10-04T13:10:16.783Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=e0ec25ce"
+    },
+    {
+      "level": "warn",
+      "message": "GSAP target  not found. https://gsap.com",
+      "timestamp": "2026-10-04T13:10:16.880Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=e0ec25ce"
+    },
+    {
+      "level": "warn",
+      "message": "GSAP target .welcome-word not found. https://gsap.com",
+      "timestamp": "2026-10-04T13:10:16.898Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=e0ec25ce"
+    },
+    {
+      "level": "warn",
+      "message": "GSAP target  not found. https://gsap.com",
+      "timestamp": "2026-10-04T13:10:16.898Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=e0ec25ce"
+    },
+    {
+      "level": "warn",
+      "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+      "timestamp": "2026-10-04T13:10:17.127Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=e0ec25ce"
+    },
+    {
+      "level": "warn",
+      "message": "GSAP target  not found. https://gsap.com",
+      "timestamp": "2026-10-04T13:10:19.149Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-YNVTO5JC.js?v=e0ec25ce"
+    }
+  ]
+}

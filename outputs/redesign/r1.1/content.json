@@ -1,0 +1,1225 @@
+{
+  "meta": {
+    "task": "R1.1",
+    "dateLocal": "2026-10-08",
+    "artifactOnly": true,
+    "sourcePolicy": "Copy from current locale and verified R0.3 ready blocks; approved plan additions are explicitly marked proposed keys, not installed source keys.",
+    "sources": [
+      "src/i18n/locales/vi.json",
+      "src/i18n/locales/en.json",
+      "src/data.js",
+      "docs/ke-hoach-nang-cap-thi-giac-2026-10-07.md",
+      "outputs/redesign/r0.2/assets-manifest.json",
+      "outputs/redesign/r0.3/content-index.json",
+      "outputs/redesign/r0.3/asset-index.json"
+    ]
+  },
+  "locales": {
+    "vi": {
+      "hero": {
+        "name": "TRẦN VŨ ANH DUY",
+        "tagline": "Creative Designer",
+        "subTagline": "Nối nhịp giữa UI chức năng và cách kể chuyện điện ảnh.",
+        "scrollIndicator": "CUỘN ĐỂ BẮT ĐẦU HÀNH TRÌNH"
+      },
+      "about": {
+        "sectionLabel": "The Navigator",
+        "heading": "TRẦN VŨ / ANH DUY",
+        "subLabel": "Creative Designer — UX/UI & Motion",
+        "bioFirst": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "bioSecond": "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế.",
+        "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+        "avatarAlt": "Chân dung Trần Vũ Anh Duy — Creative Designer"
+      },
+      "skills": {
+        "heading": "Tinh Vân Kỹ Năng",
+        "toolsLabel": "Công cụ thiết kế",
+        "competenciesLabel": "Năng lực cốt lõi",
+        "competencies": [
+          "Design Thinking",
+          "AI-Assisted Design",
+          "Motion Graphics",
+          "Project Management",
+          "Time Management",
+          "Adaptability",
+          "Teamwork",
+          "Attention to Detail"
+        ],
+        "technicalLabel": "Kỹ thuật",
+        "technicalLevel": "Nền tảng & Ứng dụng",
+        "technical": [
+          "HTML/CSS/JS cơ bản",
+          "React (đang học)",
+          "Prototyping (Figma)",
+          "Wireframing"
+        ]
+      },
+      "education": {
+        "heading": "Bản Đồ Sao",
+        "institutions": {
+          "saigonUniversity": {
+            "name": "Saigon University",
+            "period": "2021–2026",
+            "degree": "Cử nhân Công nghệ Thông tin",
+            "description": "Tốt nghiệp loại Giỏi. Trọng tâm: Phân tích & Thiết kế Hệ thống, HCI, Usability Testing, Prototyping Web/App."
+          },
+          "arenaMultimedia": {
+            "name": "Arena Multimedia",
+            "period": "2024–nay",
+            "degree": "Advanced Diploma in Multimedia",
+            "description": "Loại Distinction kỳ 2 (UX/UI). Trọng tâm: Thiết kế lấy người dùng làm trung tâm, prototyping mobile, wireframing, web responsive."
+          },
+          "greenAcademy": {
+            "name": "Green Academy",
+            "period": "2022–2023",
+            "degree": "Chứng chỉ Dựng phim Chuyên nghiệp",
+            "description": "Loại Distinction. Trọng tâm: VFX compositing, motion graphics. Học viên xuất sắc — Premiere & After Effects."
+          }
+        }
+      },
+      "experience": {
+        "sectionLabel": "Voyage Log",
+        "heading": "Nhật Ký Hành Trình",
+        "positions": {
+          "hosanaMedia": {
+            "company": "HOSANA MEDIA",
+            "role": "Multimedia Executive",
+            "period": "Sep 2024 – Feb 2025",
+            "type": "Full-time",
+            "description": "Sản xuất ấn phẩm marketing có sức ảnh hưởng cao (bao bì, banner). Quản lý trọn vẹn quy trình quay dựng TVC & MV."
+          },
+          "upwork": {
+            "company": "UPWORK",
+            "role": "Multimedia Creator",
+            "period": "2024 – nay",
+            "type": "Freelance",
+            "description": "Sáng tạo và tối ưu nội dung video cho tăng trưởng đa nền tảng. Quay dựng video quảng bá. Dịch vụ thiết kế UI/Visual."
+          },
+          "designveloper": {
+            "company": "DESIGNVELOPER",
+            "role": "UX/UI Designer Intern",
+            "period": "Sep 2025 – Dec 2025",
+            "type": "Internship",
+            "description": "Nghiên cứu UX qua khảo sát. Thiết kế UI nhất quán thương hiệu, tối ưu layout và typography. Bàn giao thiết kế cho đội ngũ phát triển."
+          }
+        }
+      },
+      "works": {
+        "sectionLabel": "Chòm Sao Dự Án",
+        "heading": "CHÒM SAO DỰ ÁN",
+        "cursorCta": "XEM",
+        "viewCaseStudy": "Xem case study",
+        "projects": {
+          "eduraLms": {
+            "title": "EDURA LMS",
+            "category": "Product Design",
+            "tags": [
+              "UX Research",
+              "UI Design",
+              "Prototyping"
+            ],
+            "description": "EDURA là concept và prototype UI/UX trên Figma cho một nền tảng quản lý học tập dành cho học viên tại các trung tâm đào tạo. Thiết kế hướng tới việc đưa lịch học, điểm số, học phí và bài tập về cùng một nơi."
+          },
+          "verisApp": {
+            "title": "VERIS APP",
+            "category": "UX/UI Design",
+            "tags": [
+              "Mobile App",
+              "User Interface",
+              "Interaction"
+            ],
+            "caseStudyLabel": "Case study coming soon"
+          },
+          "viePerfume": {
+            "title": "VIE PERFUME",
+            "category": "Graphic Design",
+            "tags": [
+              "Branding",
+              "Packaging",
+              "Visual Identity"
+            ],
+            "caseStudyLabel": "Case study coming soon"
+          }
+        }
+      },
+      "contact": {
+        "sectionLabel": "Transmission",
+        "heading": "HÃY KẾT NỐI",
+        "alternateHeading": "LET'S CONNECT",
+        "subHeading": "Gửi một tín hiệu — tôi luôn mở tần số.",
+        "emailCta": "GỬI TÍN HIỆU",
+        "email": "anhduy25work@gmail.com",
+        "emailUrl": "mailto:anhduy25work@gmail.com",
+        "phone": "0822 021 418",
+        "facebookUrl": "https://www.facebook.com/tvad.25",
+        "facebookLabel": "Facebook"
+      },
+      "nav": {
+        "menuLabel": "Menu",
+        "menuTitle": "Khám phá hành trình",
+        "closeMenu": "Đóng menu điều hướng",
+        "closeLabel": "Đóng",
+        "languageLabel": "Ngôn ngữ",
+        "langVi": "Vi",
+        "langEn": "En",
+        "langViFull": "Tiếng Việt",
+        "langEnFull": "English",
+        "logo": "ANH DUY",
+        "label": "Điều hướng chính",
+        "homeLabel": "ANH DUY — Về đầu trang",
+        "skip": "Chuyển đến nội dung chính",
+        "openMenu": "Mở menu điều hướng",
+        "about": "Về tôi",
+        "works": "Dự án",
+        "skills": "Kỹ năng",
+        "education": "Học vấn",
+        "experience": "Kinh nghiệm",
+        "contact": "Liên hệ",
+        "hero": "Khởi đầu"
+      },
+      "profile": {
+        "displayName": "TRẦN VŨ ANH DUY",
+        "englishName": "Tran Vu Anh Duy",
+        "role": "Creative Designer",
+        "disciplines": "UX/UI + Đồ họa + Motion"
+      },
+      "audio": {
+        "label": "Âm thanh không gian",
+        "prefix": "SOUND:",
+        "on": "ON",
+        "off": "OFF",
+        "turnOn": "Bật âm thanh không gian",
+        "turnOff": "Tắt âm thanh không gian",
+        "unavailable": "Không thể bật âm thanh trong trình duyệt này. Bạn có thể thử lại."
+      },
+      "footer": {
+        "label": "Chân trang",
+        "copyright": "© 2026 Trần Vũ Anh Duy — Được xây dựng giữa các vì sao.",
+        "disciplines": "Đồ họa / Đa phương tiện / UX/UI",
+        "buildCredit": "Xây dựng với GSAP {{version}}",
+        "websiteLabel": "Trang web",
+        "websiteUrl": ""
+      }
+    },
+    "en": {
+      "hero": {
+        "name": "TRAN VU ANH DUY",
+        "tagline": "Creative Designer",
+        "subTagline": "Bridging the gap between functional UI and cinematic storytelling.",
+        "scrollIndicator": "SCROLL TO BEGIN THE JOURNEY"
+      },
+      "about": {
+        "sectionLabel": "The Navigator",
+        "heading": "TRAN VU / ANH DUY",
+        "subLabel": "Creative Designer — UX/UI & Motion",
+        "bioFirst": "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
+        "bioSecond": "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design.",
+        "quote": "I design small universes — where every touch means something.",
+        "avatarAlt": "Portrait of Tran Vu Anh Duy — Creative Designer"
+      },
+      "skills": {
+        "heading": "Arsenal Nebula",
+        "toolsLabel": "Design Tools",
+        "competenciesLabel": "Core Competencies",
+        "competencies": [
+          "Design Thinking",
+          "AI-Assisted Design",
+          "Motion Graphics",
+          "Project Management",
+          "Time Management",
+          "Adaptability",
+          "Teamwork",
+          "Attention to Detail"
+        ],
+        "technicalLabel": "Technical",
+        "technicalLevel": "Foundational & Applied",
+        "technical": [
+          "Basic HTML/CSS/JS",
+          "React (learning)",
+          "Prototyping (Figma)",
+          "Wireframing"
+        ]
+      },
+      "education": {
+        "heading": "Star Map",
+        "institutions": {
+          "saigonUniversity": {
+            "name": "Saigon University",
+            "period": "2021–2026",
+            "degree": "Bachelor's Degree in Information Technology",
+            "description": "Graduated with High Honors in Information Technology. Focus: System Analysis and Design, HCI, Usability Testing, Web/App Prototyping."
+          },
+          "arenaMultimedia": {
+            "name": "Arena Multimedia",
+            "period": "2024–Present",
+            "degree": "Advanced Diploma in Multimedia",
+            "description": "Awarded Distinction in Semester 2 (UX/UI). Focus: user-centric design, mobile prototyping, wireframing, responsive web."
+          },
+          "greenAcademy": {
+            "name": "Green Academy",
+            "period": "2022–2023",
+            "degree": "Certificate in Professional Video Editing",
+            "description": "Distinction. Focus: VFX compositing, motion graphics. Top-performing student — Premiere & After Effects."
+          }
+        }
+      },
+      "experience": {
+        "sectionLabel": "Voyage Log",
+        "heading": "Voyage Log",
+        "positions": {
+          "hosanaMedia": {
+            "company": "HOSANA MEDIA",
+            "role": "Multimedia Executive",
+            "period": "Sep 2024 – Feb 2025",
+            "type": "Full-time",
+            "description": "Produced high-impact marketing assets (packaging, banners). Managed end-to-end filming and editing for TVCs & MVs."
+          },
+          "upwork": {
+            "company": "UPWORK",
+            "role": "Multimedia Creator",
+            "period": "2024 – Present",
+            "type": "Freelance",
+            "description": "Created and optimized video content for cross-platform growth. Filmed and edited promotional videos. UI/Visual design services."
+          },
+          "designveloper": {
+            "company": "DESIGNVELOPER",
+            "role": "UX/UI Designer Intern",
+            "period": "Sep 2025 – Dec 2025",
+            "type": "Internship",
+            "description": "Conducted UX research via surveys. Designed brand-consistent UI, optimizing layout and typography. Handed off designs to development teams."
+          }
+        }
+      },
+      "works": {
+        "sectionLabel": "Constellation of Projects",
+        "heading": "CONSTELLATION OF PROJECTS",
+        "cursorCta": "VIEW",
+        "viewCaseStudy": "View case study",
+        "projects": {
+          "eduraLms": {
+            "title": "EDURA LMS",
+            "category": "Product Design",
+            "tags": [
+              "UX Research",
+              "UI Design",
+              "Prototyping"
+            ],
+            "description": "EDURA is a Figma UI/UX concept and prototype for a learning-management platform serving learners at training centers. The design aims to bring schedules, grades, tuition and assignments into one place."
+          },
+          "verisApp": {
+            "title": "VERIS APP",
+            "category": "UX/UI Design",
+            "tags": [
+              "Mobile App",
+              "User Interface",
+              "Interaction"
+            ],
+            "caseStudyLabel": "Case study coming soon"
+          },
+          "viePerfume": {
+            "title": "VIE PERFUME",
+            "category": "Graphic Design",
+            "tags": [
+              "Branding",
+              "Packaging",
+              "Visual Identity"
+            ],
+            "caseStudyLabel": "Case study coming soon"
+          }
+        }
+      },
+      "contact": {
+        "sectionLabel": "Transmission",
+        "heading": "LET'S CONNECT",
+        "alternateHeading": "HÃY KẾT NỐI",
+        "subHeading": "Send a transmission — my frequency is always open.",
+        "emailCta": "SEND A SIGNAL",
+        "email": "anhduy25work@gmail.com",
+        "emailUrl": "mailto:anhduy25work@gmail.com",
+        "phone": "0822 021 418",
+        "facebookUrl": "https://www.facebook.com/tvad.25",
+        "facebookLabel": "Facebook"
+      },
+      "nav": {
+        "menuLabel": "Menu",
+        "menuTitle": "Explore the odyssey",
+        "closeMenu": "Close navigation menu",
+        "closeLabel": "Close",
+        "languageLabel": "Language",
+        "langVi": "Vi",
+        "langEn": "En",
+        "langViFull": "Vietnamese",
+        "langEnFull": "English",
+        "logo": "ANH DUY",
+        "label": "Main navigation",
+        "homeLabel": "ANH DUY — Back to top",
+        "skip": "Skip to main content",
+        "openMenu": "Open navigation menu",
+        "about": "About",
+        "works": "Works",
+        "skills": "Skills",
+        "education": "Education",
+        "experience": "Experience",
+        "contact": "Contact",
+        "hero": "Home"
+      },
+      "profile": {
+        "displayName": "TRAN VU ANH DUY",
+        "englishName": "",
+        "role": "Creative Designer",
+        "disciplines": "UX/UI + Graphic + Motion"
+      },
+      "audio": {
+        "label": "Space audio",
+        "prefix": "SOUND:",
+        "on": "ON",
+        "off": "OFF",
+        "turnOn": "Turn space audio on",
+        "turnOff": "Turn space audio off",
+        "unavailable": "Audio could not start in this browser. You can try again."
+      },
+      "footer": {
+        "label": "Site footer",
+        "copyright": "© 2026 Tran Vu Anh Duy — Built among the stars.",
+        "disciplines": "Graphic / Multimedia / UX/UI",
+        "buildCredit": "Built with GSAP {{version}}",
+        "websiteLabel": "Website",
+        "websiteUrl": ""
+      }
+    }
+  },
+  "storyboard": {
+    "hero": {
+      "title": {
+        "key": "hero.portfolio",
+        "vi": "PORTFOLIO",
+        "en": "PORTFOLIO"
+      },
+      "year": {
+        "key": "hero.year",
+        "vi": "2026",
+        "en": "2026"
+      },
+      "name": {
+        "vi": "TRẦN VŨ ANH DUY",
+        "en": "TRAN VU ANH DUY"
+      },
+      "portalOIndexZeroBased": 8,
+      "portalOOrdinal": 3,
+      "yearAccessible": "2026"
+    },
+    "about": {
+      "openingSourceKey": "about.bioFirst",
+      "opening": {
+        "vi": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+        "en": "Design is not just about visuals — it's about solving problems."
+      },
+      "nameSourceKey": "hero.name",
+      "bioSourceKeys": [
+        "about.bioFirst",
+        "about.bioSecond"
+      ],
+      "quoteSourceKey": "about.quote",
+      "openingExtraction": "First sentence, included in the unchanged first bio paragraph"
+    },
+    "tools": [
+      {
+        "id": "figma",
+        "label": {
+          "key": "skills.toolsById.figma",
+          "vi": "Figma",
+          "en": "Figma"
+        },
+        "capabilityIds": [
+          "wireframing",
+          "prototyping",
+          "designThinking"
+        ],
+        "logoPaths": [
+          "outputs/redesign/r0.2/logos/mono/figma.svg"
+        ]
+      },
+      {
+        "id": "photoshop",
+        "label": {
+          "key": "skills.toolsById.photoshop",
+          "vi": "Photoshop",
+          "en": "Photoshop"
+        },
+        "capabilityIds": [
+          "imageEditing",
+          "compositing"
+        ],
+        "logoPaths": [
+          "outputs/redesign/r0.2/logos/mono/photoshop.svg"
+        ]
+      },
+      {
+        "id": "illustrator",
+        "label": {
+          "key": "skills.toolsById.illustrator",
+          "vi": "Illustrator",
+          "en": "Illustrator"
+        },
+        "capabilityIds": [
+          "vectorDesign",
+          "brandingPackaging"
+        ],
+        "logoPaths": [
+          "outputs/redesign/r0.2/logos/mono/illustrator.svg"
+        ]
+      },
+      {
+        "id": "after-effects",
+        "label": {
+          "key": "skills.toolsById.after-effects",
+          "vi": "After Effects",
+          "en": "After Effects"
+        },
+        "capabilityIds": [
+          "motionGraphics",
+          "vfx"
+        ],
+        "logoPaths": [
+          "outputs/redesign/r0.2/logos/mono/after-effects.svg"
+        ]
+      },
+      {
+        "id": "premiere-pro",
+        "label": {
+          "key": "skills.toolsById.premiere-pro",
+          "vi": "Premiere",
+          "en": "Premiere"
+        },
+        "capabilityIds": [
+          "videoEditing"
+        ],
+        "logoPaths": [
+          "outputs/redesign/r0.2/logos/mono/premiere-pro.svg"
+        ]
+      },
+      {
+        "id": "davinci-resolve",
+        "label": {
+          "key": "skills.toolsById.davinci-resolve",
+          "vi": "DaVinci Resolve",
+          "en": "DaVinci Resolve"
+        },
+        "capabilityIds": [
+          "videoEditing"
+        ],
+        "logoPaths": [
+          "outputs/redesign/r0.2/logos/mono/davinci-resolve.webp"
+        ]
+      },
+      {
+        "id": "ai-tools",
+        "label": {
+          "key": "skills.toolsById.ai-tools",
+          "vi": "AI Tools",
+          "en": "AI Tools"
+        },
+        "capabilityIds": [
+          "aiAssistedDesign"
+        ],
+        "logoPaths": [
+          "outputs/redesign/r0.2/logos/mono/chatgpt.svg",
+          "outputs/redesign/r0.2/logos/mono/claude.svg",
+          "outputs/redesign/r0.2/logos/mono/google-antigravity.svg"
+        ]
+      }
+    ],
+    "capabilities": {
+      "wireframing": {
+        "vi": "Wireframing",
+        "en": "Wireframing",
+        "sourceKey": "skills.technical.3"
+      },
+      "prototyping": {
+        "vi": "Prototyping",
+        "en": "Prototyping",
+        "sourceKey": "works.projects.eduraLms.tags.2"
+      },
+      "designThinking": {
+        "vi": "Design Thinking",
+        "en": "Design Thinking",
+        "sourceKey": "skills.competencies.0"
+      },
+      "imageEditing": {
+        "key": "skills.capabilities.imageEditing",
+        "vi": "Xử lý ảnh",
+        "en": "Image editing"
+      },
+      "compositing": {
+        "key": "skills.capabilities.compositing",
+        "vi": "Compositing",
+        "en": "Compositing"
+      },
+      "vectorDesign": {
+        "key": "skills.capabilities.vectorDesign",
+        "vi": "Thiết kế vector",
+        "en": "Vector design"
+      },
+      "brandingPackaging": {
+        "key": "skills.capabilities.brandingPackaging",
+        "vi": "Branding/Packaging",
+        "en": "Branding/Packaging"
+      },
+      "motionGraphics": {
+        "vi": "Motion Graphics",
+        "en": "Motion Graphics",
+        "sourceKey": "skills.competencies.2"
+      },
+      "vfx": {
+        "key": "skills.capabilities.vfx",
+        "vi": "VFX",
+        "en": "VFX"
+      },
+      "videoEditing": {
+        "key": "skills.capabilities.videoEditing",
+        "vi": "Dựng phim",
+        "en": "Video editing"
+      },
+      "aiAssistedDesign": {
+        "vi": "AI-Assisted Design",
+        "en": "AI-Assisted Design",
+        "sourceKey": "skills.competencies.1"
+      }
+    },
+    "generalCompetencySourceIndices": [
+      6,
+      3,
+      4,
+      5,
+      7
+    ],
+    "technicalSourceIndices": [
+      0,
+      1
+    ],
+    "education": [
+      {
+        "id": "saigonUniversity",
+        "constellationId": "Cir"
+      },
+      {
+        "id": "greenAcademy",
+        "constellationId": "Tel"
+      },
+      {
+        "id": "arenaMultimedia",
+        "constellationId": "Pic"
+      }
+    ],
+    "experienceOrder": [
+      "hosanaMedia",
+      "upwork",
+      "designveloper"
+    ],
+    "projects": [
+      {
+        "id": "eduraLms",
+        "constellationId": "Cen",
+        "imagePath": "public/project1.webp",
+        "title": {
+          "vi": "EDURA LMS",
+          "en": "EDURA LMS"
+        },
+        "category": {
+          "vi": "Product Design",
+          "en": "Product Design"
+        },
+        "action": {
+          "type": "internal-reader",
+          "routeProposed": "/projects/edura"
+        }
+      },
+      {
+        "id": "verisApp",
+        "constellationId": "Gem",
+        "imagePath": "public/project2.webp",
+        "title": {
+          "vi": "VERIS APP",
+          "en": "VERIS APP"
+        },
+        "category": {
+          "vi": "UX/UI Design",
+          "en": "UX/UI Design"
+        },
+        "action": {
+          "type": "preview-only",
+          "statusLabel": {
+            "vi": "Case study coming soon",
+            "en": "Case study coming soon"
+          }
+        }
+      },
+      {
+        "id": "viePerfume",
+        "constellationId": "Cyg",
+        "imagePath": "public/project3.webp",
+        "title": {
+          "vi": "VIE PERFUME",
+          "en": "VIE PERFUME"
+        },
+        "category": {
+          "vi": "Graphic Design",
+          "en": "Graphic Design"
+        },
+        "action": {
+          "type": "preview-only",
+          "statusLabel": {
+            "vi": "Case study coming soon",
+            "en": "Case study coming soon"
+          }
+        }
+      }
+    ],
+    "contact": {
+      "emailSourceKey": "contact.email",
+      "copyLabel": {
+        "key": "contact.copyEmail",
+        "vi": "Sao chép email",
+        "en": "Copy email"
+      },
+      "sendLabel": {
+        "key": "contact.sendEmail",
+        "vi": "Gửi email",
+        "en": "Send email"
+      }
+    },
+    "edura": {
+      "routeProposed": "/projects/edura",
+      "secondaryLink": {
+        "url": "https://www.behance.net/gallery/241524417/Edura-LMS",
+        "label": {
+          "vi": "Xem hồ sơ nguồn trên Behance",
+          "en": "View the source project on Behance"
+        }
+      },
+      "blocks": [
+        {
+          "id": "overview.intro",
+          "i18nNamespaceProposed": "edura.overview.intro",
+          "status": "ready",
+          "heading": {
+            "vi": "EDURA LMS",
+            "en": "EDURA LMS"
+          },
+          "body": {
+            "vi": "EDURA là concept và prototype UI/UX trên Figma cho một nền tảng quản lý học tập dành cho học viên tại các trung tâm đào tạo. Thiết kế hướng tới việc đưa lịch học, điểm số, học phí và bài tập về cùng một nơi.",
+            "en": "EDURA is a Figma UI/UX concept and prototype for a learning-management platform serving learners at training centers. The design aims to bring schedules, grades, tuition and assignments into one place."
+          },
+          "claimIds": [
+            "C01",
+            "C04",
+            "C05"
+          ],
+          "assetIds": [
+            "A02"
+          ],
+          "editorialNote": ""
+        },
+        {
+          "id": "overview.role",
+          "i18nNamespaceProposed": "edura.overview.role",
+          "status": "ready",
+          "heading": {
+            "vi": "Vai trò: Lead UI",
+            "en": "Role: Lead UI"
+          },
+          "body": {
+            "vi": "Trong vai trò Lead UI, tôi đưa ra các quyết định về quy tắc bố cục, màu chủ đạo và thiết kế hệ thống giao diện của EDURA.",
+            "en": "As Lead UI, I made decisions about EDURA’s layout rules, primary color direction and interface system design."
+          },
+          "claimIds": [
+            "C02",
+            "C03",
+            "C08"
+          ],
+          "assetIds": [],
+          "editorialNote": "Confirmed directly by the owner. Do not expand this into personal ownership of UX research or all project work."
+        },
+        {
+          "id": "problem.framing",
+          "i18nNamespaceProposed": "edura.problem.framing",
+          "status": "ready",
+          "heading": {
+            "vi": "Thông tin học tập nằm ở nhiều nơi",
+            "en": "Learning information across multiple channels"
+          },
+          "body": {
+            "vi": "Tài liệu dự án đặt vấn đề về lịch học, tài liệu và hạn nộp bài nằm trên nhiều kênh thông tin. Hướng giải pháp của EDURA là tập trung các thông tin này trong một giao diện dành cho học viên.",
+            "en": "The project materials frame a problem of schedules, materials and submission deadlines spread across multiple channels. EDURA’s proposed direction is to bring this information together in a learner interface."
+          },
+          "claimIds": [
+            "C05"
+          ],
+          "assetIds": [
+            "A07"
+          ],
+          "editorialNote": ""
+        },
+        {
+          "id": "decisions.layout",
+          "i18nNamespaceProposed": "edura.decisions.layout",
+          "status": "ready",
+          "heading": {
+            "vi": "Quy tắc bố cục",
+            "en": "Layout rules"
+          },
+          "body": {
+            "vi": "Tôi phụ trách các quyết định về quy tắc bố cục. Ở hình tổng quan, các lối vào bảng điểm, lịch học, học phí và khóa học được đặt cạnh nhau; khu vực điểm danh và tiến độ học tập xuất hiện bên dưới.",
+            "en": "I was responsible for decisions about layout rules. In the overview, entry points for grades, schedules, tuition and courses appear together, with attendance and learning progress below."
+          },
+          "claimIds": [
+            "C03",
+            "C06"
+          ],
+          "assetIds": [
+            "A02"
+          ],
+          "editorialNote": ""
+        },
+        {
+          "id": "decisions.color",
+          "i18nNamespaceProposed": "edura.decisions.color",
+          "status": "ready",
+          "heading": {
+            "vi": "Màu chủ đạo",
+            "en": "Primary color direction"
+          },
+          "body": {
+            "vi": "Tôi phụ trách quyết định về màu chủ đạo. Tư liệu EDURA thể hiện xanh lam ở nhận diện và giao diện, kết hợp các bề mặt sáng và những nhóm chức năng có màu riêng trong hình tổng quan.",
+            "en": "I was responsible for the primary color direction. The EDURA materials show blue in the identity and interface, alongside light surfaces and distinct colors for function groups in the overview."
+          },
+          "claimIds": [
+            "C03",
+            "C07"
+          ],
+          "assetIds": [
+            "A02"
+          ],
+          "editorialNote": ""
+        },
+        {
+          "id": "decisions.system",
+          "i18nNamespaceProposed": "edura.decisions.system",
+          "status": "ready",
+          "heading": {
+            "vi": "Thiết kế hệ thống giao diện",
+            "en": "Interface system design"
+          },
+          "body": {
+            "vi": "Thiết kế hệ thống giao diện là một phần phạm vi Lead UI tôi phụ trách cho concept và prototype EDURA trên Figma.",
+            "en": "Interface system design was part of my Lead UI scope for the EDURA concept and Figma prototype."
+          },
+          "claimIds": [
+            "C02",
+            "C04",
+            "C08"
+          ],
+          "assetIds": [],
+          "editorialNote": "Ownership confirmed; no tokens/components/state library supplied. Do not invent system artifacts, completeness or performance benefits."
+        },
+        {
+          "id": "artifacts.overview",
+          "i18nNamespaceProposed": "edura.artifacts.overview",
+          "status": "ready",
+          "heading": {
+            "vi": "Tổng quan giao diện",
+            "en": "Interface overview"
+          },
+          "body": {
+            "vi": "Mockup EDURA giới thiệu các nhóm thông tin và thao tác như bảng điểm, lịch học, học phí, khóa học, điểm danh, bài tập, nộp bài và tiến độ. Đây là hình tổng quan thiết kế, chưa phải chuỗi màn hình mô tả đầy đủ một luồng thao tác.",
+            "en": "The EDURA mockup presents information and actions for grades, schedules, tuition, courses, attendance, assignments, submission and progress. It is a design overview rather than a screen sequence documenting a complete interaction flow."
+          },
+          "claimIds": [
+            "C06",
+            "C15"
+          ],
+          "assetIds": [
+            "A02"
+          ],
+          "editorialNote": ""
+        },
+        {
+          "id": "artifacts.direction",
+          "i18nNamespaceProposed": "edura.artifacts.direction",
+          "status": "ready",
+          "heading": {
+            "vi": "Định hướng giải pháp",
+            "en": "Proposed solution"
+          },
+          "body": {
+            "vi": "Tài liệu concept đề xuất tập trung thông tin học tập, dashboard theo dõi tiến trình và hỗ trợ theo nhu cầu trung tâm. Những mô tả này thể hiện định hướng thiết kế; chưa chứng minh các tính năng đã vận hành hoặc tạo ra tác động đo được.",
+            "en": "The concept materials propose centralized learning information, a progress dashboard and support tailored to training centers. These descriptions document design intent, without establishing operational features or measured impact."
+          },
+          "claimIds": [
+            "C05",
+            "C09",
+            "C19"
+          ],
+          "assetIds": [
+            "A09"
+          ],
+          "editorialNote": ""
+        },
+        {
+          "id": "results.deliverables",
+          "i18nNamespaceProposed": "edura.results.deliverables",
+          "status": "ready",
+          "heading": {
+            "vi": "Kết quả ở cấp concept và prototype",
+            "en": "Concept and prototype deliverables"
+          },
+          "body": {
+            "vi": "Theo xác nhận của tác giả, dự án được thực hiện ở mức concept và prototype UI/UX trên Figma. Bộ tư liệu công khai đã thu thập cho thấy một phần giao diện EDURA, cách đặt vấn đề, hướng giải pháp và tài liệu nhận diện. Đây là bằng chứng về thiết kế, không phải số liệu hiệu quả sau triển khai.",
+            "en": "The author confirms that the project was developed as a UI/UX concept and Figma prototype. The collected public materials document part of the EDURA interface, the problem framing, proposed solution and identity artifacts. They provide evidence of design work, rather than post-launch performance data."
+          },
+          "claimIds": [
+            "C04",
+            "C06",
+            "C13",
+            "C16",
+            "C18"
+          ],
+          "assetIds": [
+            "A02"
+          ],
+          "editorialNote": ""
+        }
+      ],
+      "assets": [
+        {
+          "id": "A02",
+          "cacheDiscoveryIndex": 2,
+          "galleryOrderVerified": false,
+          "path": "outputs/visual-redesign-2026-10-07/edura/b6e8ee241524417.695a8ca904163.webp",
+          "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/b6e8ee241524417.695a8ca904163.jpg",
+          "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+          "sourceId": "S-PROJECT",
+          "bytes": 92204,
+          "sha256": "cc792c5dfb8d3acaf30925372969711e6b18a19ca831e6cc9baa8e63900d9b23",
+          "format": "WebP",
+          "width": 1400,
+          "height": 989,
+          "mode": "RGB",
+          "decode": "pass",
+          "originalColorsPreserved": true,
+          "newDownload": false,
+          "duplicateOf": null,
+          "classification": "edura-ui-overview",
+          "selection": "primary",
+          "alt": {
+            "vi": "Mockup trang tổng quan EDURA với bảng điểm, lịch học, học phí, khóa học, điểm danh, bài tập và tiến độ.",
+            "en": "EDURA overview mockup showing grades, schedules, tuition, courses, attendance, assignments and progress."
+          },
+          "caption": {
+            "vi": "Hình tổng quan UI EDURA. Các con số trên mockup là dữ liệu minh họa; hình này không mô tả một flow hoàn chỉnh.",
+            "en": "EDURA UI overview. Figures within the mockup are sample interface data; this image does not establish a complete flow."
+          },
+          "attribution": {
+            "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+            "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+          },
+          "restriction": "Hình tổng quan UI EDURA. Các con số trên mockup là dữ liệu minh họa; hình này không mô tả một flow hoàn chỉnh.",
+          "recommendedDisplay": {
+            "intrinsic": [
+              1400,
+              989
+            ],
+            "desktopMaxCssWidth": 1280,
+            "mobileCssWidth": "viewport minus 32px; 288px at 320 / 358px at 390",
+            "fit": "contain; preserve full frame and original color",
+            "doNotUpscale": true,
+            "zoomOriginalForReading": true,
+            "bodyCopyRequired": true,
+            "legibility": "Embedded slide text is too small at mobile width. Provide the sourced Vi/En summary in DOM; an optional accessible original-image viewer may expose detail in R6. Do not claim every baked-in label is mobile-readable."
+          }
+        },
+        {
+          "id": "A07",
+          "cacheDiscoveryIndex": 7,
+          "galleryOrderVerified": false,
+          "path": "outputs/visual-redesign-2026-10-07/edura/1457a2241524417.695a8ca903243.webp",
+          "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/1457a2241524417.695a8ca903243.jpg",
+          "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+          "sourceId": "S-PROJECT",
+          "bytes": 135960,
+          "sha256": "11e86ff9ffe00bf747a3b50db209e68658b08fcaa2989e4cb6300146b2fc1c4d",
+          "format": "WebP",
+          "width": 1400,
+          "height": 989,
+          "mode": "RGB",
+          "decode": "pass",
+          "originalColorsPreserved": true,
+          "newDownload": false,
+          "duplicateOf": null,
+          "classification": "project-problem-framing",
+          "selection": "primary",
+          "alt": {
+            "vi": "Slide mô tả thông tin học tập phân tán và khó khăn theo dõi lịch học.",
+            "en": "Slide describing fragmented learning information and schedule tracking difficulties."
+          },
+          "caption": {
+            "vi": "Vấn đề được đặt ra trong tài liệu dự án; đây không phải kết quả thử nghiệm đã được xác minh.",
+            "en": "The problem as framed in the project materials, rather than a verified testing result."
+          },
+          "attribution": {
+            "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+            "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+          },
+          "restriction": "Vấn đề được đặt ra trong tài liệu dự án; đây không phải kết quả thử nghiệm đã được xác minh.",
+          "recommendedDisplay": {
+            "intrinsic": [
+              1400,
+              989
+            ],
+            "desktopMaxCssWidth": 1280,
+            "mobileCssWidth": "viewport minus 32px; 288px at 320 / 358px at 390",
+            "fit": "contain; preserve full frame and original color",
+            "doNotUpscale": true,
+            "zoomOriginalForReading": true,
+            "bodyCopyRequired": true,
+            "legibility": "Embedded slide text is too small at mobile width. Provide the sourced Vi/En summary in DOM; an optional accessible original-image viewer may expose detail in R6. Do not claim every baked-in label is mobile-readable."
+          }
+        },
+        {
+          "id": "A09",
+          "cacheDiscoveryIndex": 9,
+          "galleryOrderVerified": false,
+          "path": "outputs/visual-redesign-2026-10-07/edura/1463c6241524417.695a8ca906149.webp",
+          "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/1463c6241524417.695a8ca906149.jpg",
+          "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+          "sourceId": "S-PROJECT",
+          "bytes": 96112,
+          "sha256": "7714b0840765fecc8a397c5c3a03eb97da448d752090821752998948f8ba47a8",
+          "format": "WebP",
+          "width": 1400,
+          "height": 989,
+          "mode": "RGB",
+          "decode": "pass",
+          "originalColorsPreserved": true,
+          "newDownload": false,
+          "duplicateOf": null,
+          "classification": "proposed-solution",
+          "selection": "primary",
+          "alt": {
+            "vi": "Slide định hướng EDURA: tập trung thông tin, hỗ trợ tự động, dashboard và tùy biến theo trung tâm.",
+            "en": "EDURA solution slide proposing centralized information, automated support, a dashboard and center-specific customization."
+          },
+          "caption": {
+            "vi": "Định hướng giải pháp trong concept. Chatbot và các lợi ích mô tả ở đây chưa được xác nhận là tính năng đã triển khai hoặc kết quả đo. Câu trong ngoặc kép ở đáy là thông điệp concept, không phải testimonial hay trích phỏng vấn đã xác minh.",
+            "en": "Proposed solution for the concept. The chatbot and stated benefits are not verified as implemented features or measured results. The quotation at the bottom is a concept statement, not a verified testimonial or interview excerpt."
+          },
+          "attribution": {
+            "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+            "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+          },
+          "restriction": "Định hướng giải pháp trong concept. Chatbot và các lợi ích mô tả ở đây chưa được xác nhận là tính năng đã triển khai hoặc kết quả đo. Câu trong ngoặc kép ở đáy là thông điệp concept, không phải testimonial hay trích phỏng vấn đã xác minh.",
+          "recommendedDisplay": {
+            "intrinsic": [
+              1400,
+              989
+            ],
+            "desktopMaxCssWidth": 1280,
+            "mobileCssWidth": "viewport minus 32px; 288px at 320 / 358px at 390",
+            "fit": "contain; preserve full frame and original color",
+            "doNotUpscale": true,
+            "zoomOriginalForReading": true,
+            "bodyCopyRequired": true,
+            "legibility": "Embedded slide text is too small at mobile width. Provide the sourced Vi/En summary in DOM; an optional accessible original-image viewer may expose detail in R6. Do not claim every baked-in label is mobile-readable."
+          }
+        }
+      ],
+      "readerPolicy": "Only ready blocks are default copy; qualified-owner-report is optional with attribution. Empty/gap sections are editor metadata, never publishing placeholders.",
+      "frameLeadBlockIds": [
+        "overview.intro",
+        "overview.role",
+        "problem.framing",
+        "decisions.layout"
+      ],
+      "frameLeadAssetId": "A02",
+      "backLabel": {
+        "key": "edura.backToWorks",
+        "vi": "Trở lại dự án",
+        "en": "Back to Works"
+      },
+      "statusLabel": {
+        "key": "edura.status",
+        "vi": "Concept / Prototype trên Figma",
+        "en": "Figma concept / prototype"
+      }
+    }
+  },
+  "assets": {
+    "portraitColor": "outputs/redesign/r0.2/portrait/avatar-cutout-color.webp",
+    "logos": {
+      "figma": "outputs/redesign/r0.2/logos/mono/figma.svg",
+      "photoshop": "outputs/redesign/r0.2/logos/mono/photoshop.svg",
+      "illustrator": "outputs/redesign/r0.2/logos/mono/illustrator.svg",
+      "after-effects": "outputs/redesign/r0.2/logos/mono/after-effects.svg",
+      "premiere-pro": "outputs/redesign/r0.2/logos/mono/premiere-pro.svg",
+      "davinci-resolve": "outputs/redesign/r0.2/logos/mono/davinci-resolve.webp",
+      "chatgpt": "outputs/redesign/r0.2/logos/mono/chatgpt.svg",
+      "claude": "outputs/redesign/r0.2/logos/mono/claude.svg",
+      "google-antigravity": "outputs/redesign/r0.2/logos/mono/google-antigravity.svg"
+    },
+    "constellationData": "outputs/redesign/r0.2/constellation-data.json",
+    "eduraPrimary": {
+      "A02": "outputs/visual-redesign-2026-10-07/edura/b6e8ee241524417.695a8ca904163.webp",
+      "A07": "outputs/visual-redesign-2026-10-07/edura/1457a2241524417.695a8ca903243.webp",
+      "A09": "outputs/visual-redesign-2026-10-07/edura/1463c6241524417.695a8ca906149.webp"
+    },
+    "projectCovers": {
+      "eduraLms": "public/project1.webp",
+      "verisApp": "public/project2.webp",
+      "viePerfume": "public/project3.webp"
+    }
+  },
+  "proposedKeys": [
+    {
+      "key": "hero.portfolio",
+      "vi": "PORTFOLIO",
+      "en": "PORTFOLIO",
+      "status": "proposed-namespace; approved-content",
+      "source": "plan section 3, Q2"
+    },
+    {
+      "key": "hero.year",
+      "vi": "2026",
+      "en": "2026",
+      "status": "proposed-namespace; approved-content",
+      "source": "plan section 3, Q2/Q3"
+    },
+    {
+      "key": "skills.capabilities.imageEditing",
+      "vi": "Xử lý ảnh",
+      "en": "Image editing",
+      "status": "proposed-namespace; approved-content",
+      "source": "plan section 5 approved mapping"
+    },
+    {
+      "key": "skills.capabilities.compositing",
+      "vi": "Compositing",
+      "en": "Compositing",
+      "status": "proposed-namespace; approved-content",
+      "source": "plan section 5 approved mapping"
+    },
+    {
+      "key": "skills.capabilities.vectorDesign",
+      "vi": "Thiết kế vector",
+      "en": "Vector design",
+      "status": "proposed-namespace; approved-content",
+      "source": "plan section 5 approved mapping"
+    },
+    {
+      "key": "skills.capabilities.brandingPackaging",
+      "vi": "Branding/Packaging",
+      "en": "Branding/Packaging",
+      "status": "proposed-namespace; approved-content",
+      "source": "plan section 5 approved mapping"
+    },
+    {
+      "key": "skills.capabilities.vfx",
+      "vi": "VFX",
+      "en": "VFX",
+      "status": "proposed-namespace; approved-content",
+      "source": "plan section 5 approved mapping"
+    },
+    {
+      "key": "skills.capabilities.videoEditing",
+      "vi": "Dựng phim",
+      "en": "Video editing",
+      "status": "proposed-namespace; approved-content",
+      "source": "plan section 5 approved mapping"
+    },
+    {
+      "key": "skills.toolsById.figma",
+      "vi": "Figma",
+      "en": "Figma",
+      "status": "proposed-namespace; approved-content",
+      "source": "plan section 5 approved mapping"
+    },
+    {
+      "key": "skills.toolsById.photoshop",
+      "vi": "Photoshop",
+      "en": "Photoshop",
+      "status": "proposed-namespace; approved-content",
+      "source": "plan section 5 approved mapping"
+    },
+    {
+      "key": "skills.toolsById.illustrator",
+      "vi": "Illustrator",
+      "en": "Illustrator",
+      "status": "proposed-namespace; approved-content",
+      "source": "plan section 5 approved mapping"
+    },
+    {
+      "key": "skills.toolsById.after-effects",
+      "vi": "After Effects",
+      "en": "After Effects",
+      "status": "proposed-namespace; approved-content",
+      "source": "plan section 5 approved mapping"
+    },
+    {
+      "key": "skills.toolsById.premiere-pro",
+      "vi": "Premiere",
+      "en": "Premiere",
+      "status": "proposed-namespace; approved-content",
+      "source": "plan section 5 approved mapping"
+    },
+    {
+      "key": "skills.toolsById.davinci-resolve",
+      "vi": "DaVinci Resolve",
+      "en": "DaVinci Resolve",
+      "status": "proposed-namespace; approved-content",
+      "source": "plan section 5 approved mapping"
+    },
+    {
+      "key": "skills.toolsById.ai-tools",
+      "vi": "AI Tools",
+      "en": "AI Tools",
+      "status": "proposed-namespace; approved-content",
+      "source": "plan section 5 approved mapping"
+    },
+    {
+      "key": "contact.copyEmail",
+      "vi": "Sao chép email",
+      "en": "Copy email",
+      "status": "proposed-namespace; approved-content",
+      "source": "plan section 10"
+    },
+    {
+      "key": "contact.sendEmail",
+      "vi": "Gửi email",
+      "en": "Send email",
+      "status": "proposed-namespace; approved-content",
+      "source": "plan section 10"
+    },
+    {
+      "key": "edura.backToWorks",
+      "vi": "Trở lại dự án",
+      "en": "Back to Works",
+      "status": "proposed-namespace; approved-content",
+      "source": "plan section 11"
+    },
+    {
+      "key": "edura.status",
+      "vi": "Concept / Prototype trên Figma",
+      "en": "Figma concept / prototype",
+      "status": "proposed-namespace; approved-content",
+      "source": "R0.3 overview.intro and results.deliverables ready"
+    }
+  ],
+  "exclusions": [
+    "Legacy EDURA Excellent UX innovation description is excluded; optional owner-attributed jury evaluation not shown in storyboard.",
+    "VERIS long description excluded because R0.1 identified cover/copy mismatch; title/category are unchanged.",
+    "Contact telemetry/radio/equalizer/copyDispatch/signalTransmitted legacy labels excluded.",
+    "About photoCaption/toolsLabel/skillsLabel panels excluded.",
+    "Premiere/DaVinci merged videoEditing icon is excluded; use separate official R0.2 logos.",
+    "No color grading, proficiency percentages, research ownership or outcome numbers added.",
+    "No APMS competitor screens, full interaction flow, system detail or author reflection invented."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "started": "2026-10-08T04:42:57.439Z",
+  "samples": [
+    {
+      "mode": "idle",
+      "frames": 496,
+      "ms": 3005.0999999940395,
+      "fps": 165.05274366942325,
+      "rayCalls": 496,
+      "dpr": 1,
+      "size": [
+        1440,
+        900
+      ],
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "drawCalls": 1,
+      "geometries": 6,
+      "textures": 23,
+      "glError": 0,
+      "lens": "false"
+    },
+    {
+      "mode": "portrait hover / lens",
+      "frames": 495,
+      "ms": 3002.9000000059605,
+      "fps": 164.8406540341062,
+      "rayCalls": 495,
+      "dpr": 1,
+      "size": [
+        1440,
+        900
+      ],
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "drawCalls": 1,
+      "geometries": 6,
+      "textures": 23,
+      "glError": 0,
+      "lens": "true"
+    }
+  ],
+  "errors": [],
+  "finished": "2026-10-08T04:43:09.058Z"
+}

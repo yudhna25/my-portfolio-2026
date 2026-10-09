@@ -1,0 +1,117 @@
+{
+  "blocks": [
+    {
+      "id": "overview.intro",
+      "claims": [
+        "C01",
+        "C04",
+        "C05"
+      ],
+      "assets": [
+        "A02"
+      ],
+      "status": "ready"
+    },
+    {
+      "id": "overview.role",
+      "claims": [
+        "C02",
+        "C03",
+        "C08"
+      ],
+      "assets": [],
+      "status": "ready"
+    },
+    {
+      "id": "problem.framing",
+      "claims": [
+        "C05"
+      ],
+      "assets": [
+        "A07"
+      ],
+      "status": "ready"
+    },
+    {
+      "id": "decisions.layout",
+      "claims": [
+        "C03",
+        "C06"
+      ],
+      "assets": [
+        "A02"
+      ],
+      "status": "ready"
+    },
+    {
+      "id": "decisions.color",
+      "claims": [
+        "C03",
+        "C07"
+      ],
+      "assets": [
+        "A02"
+      ],
+      "status": "ready"
+    },
+    {
+      "id": "decisions.system",
+      "claims": [
+        "C02",
+        "C04",
+        "C08"
+      ],
+      "assets": [],
+      "status": "ready"
+    },
+    {
+      "id": "artifacts.overview",
+      "claims": [
+        "C06",
+        "C15"
+      ],
+      "assets": [
+        "A02"
+      ],
+      "status": "ready"
+    },
+    {
+      "id": "artifacts.direction",
+      "claims": [
+        "C05",
+        "C09",
+        "C19"
+      ],
+      "assets": [
+        "A09"
+      ],
+      "status": "ready"
+    },
+    {
+      "id": "results.deliverables",
+      "claims": [
+        "C04",
+        "C06",
+        "C13",
+        "C16",
+        "C18"
+      ],
+      "assets": [
+        "A02"
+      ],
+      "status": "ready"
+    }
+  ],
+  "ownerAddendum": "owner-addendum.json",
+  "overrides": {
+    "results.deliverables.body": "C04 owner-confirmed concept/Figma prototype; remove audit-process prose",
+    "figures.*.caption": "Concise factual captions preserving original restrictions"
+  },
+  "omitted": [
+    "results.evaluation",
+    "Complete walkthrough",
+    "Design-system tokens/components",
+    "Measured outcomes",
+    "Invented lesson or recovery"
+  ]
+}

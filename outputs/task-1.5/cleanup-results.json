@@ -1,0 +1,61 @@
+{
+  "results": [
+    {
+      "name": "Canvas initializes and accepts an R3F child",
+      "passed": true
+    },
+    {
+      "name": "Prototype camera and renderer configuration",
+      "passed": true
+    },
+    {
+      "name": "Exact mono scene background",
+      "passed": true
+    },
+    {
+      "name": "One canvas, full viewport, fixed outside smoother",
+      "passed": true
+    },
+    {
+      "name": "One live smoother in StrictMode",
+      "passed": true
+    },
+    {
+      "name": "Bridge measurements create no extra ScrollTriggers",
+      "passed": true
+    },
+    {
+      "name": "Initial progress and section",
+      "passed": true
+    },
+    {
+      "name": "Middle progress comes from actual scrollY",
+      "passed": true
+    },
+    {
+      "name": "Bottom progress is 1 and section is contact",
+      "passed": true
+    },
+    {
+      "name": "Hidden document stops renderer",
+      "passed": true
+    },
+    {
+      "name": "Visible document resumes same renderer",
+      "passed": true
+    },
+    {
+      "name": "Continuous render samples collected",
+      "passed": true
+    },
+    {
+      "name": "Unmount removes renderer and smoother",
+      "passed": true
+    },
+    {
+      "name": "Unmount removes bridge listeners and queued updates",
+      "passed": true
+    }
+  ],
+  "failures": 0
+}

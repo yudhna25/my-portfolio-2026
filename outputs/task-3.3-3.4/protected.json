@@ -1,0 +1,30 @@
+[
+  {
+    "path": "src/3d/components/CameraRig.jsx",
+    "sha256": "825fe59fd665a74adffe6864606d6e0827577ea0372ba4be667e140d45311c07"
+  },
+  {
+    "path": "src/3d/utils/cameraPath.js",
+    "sha256": "85fc600e91bf6300c3bde5b73f2ce32f109f659d3414c1723e18a8bec52d6210"
+  },
+  {
+    "path": "src/3d-lab.jsx",
+    "sha256": "a76b439bd765dc1db0f33fd43d32dbc26ac9a0818c02bbc65d3883c56eb5a3a3"
+  },
+  {
+    "path": "src/3d/components/BlackHole.jsx",
+    "sha256": "dfbbeec22d47ca4c7a9805f5672b9ee9d7d91bd6d1a1c1f5a99e0801f18c18ab"
+  },
+  {
+    "path": "src/3d/components/BlackHoleSystem.jsx",
+    "sha256": "0a819d7f98b63584dd4bc714ff0a0b493ccffd56909c4cab28d3ef3620e12ea5"
+  },
+  {
+    "path": "src/3d/shaders/blackHole.js",
+    "sha256": "00efc9eb980f1a0cb18029fde7d98bc6ccaba4fca58df3cd3549eaf8b1c24100"
+  },
+  {
+    "path": "src/3d/components/StarField.jsx",
+    "sha256": "411f8f09e9b9778240ac0b2b158ba68210b1e6bd921301a068b0484dd7be7389"
+  }
+]

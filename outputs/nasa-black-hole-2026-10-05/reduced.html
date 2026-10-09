@@ -1,0 +1,4 @@
+<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Reduced motion QA</title><script>
+const originalMatchMedia=window.matchMedia.bind(window);
+window.matchMedia=query=>{if(query!=='(prefers-reduced-motion: reduce)')return originalMatchMedia(query);const target=new EventTarget();target.matches=true;target.media=query;target.addListener=listener=>target.addEventListener('change',listener);target.removeListener=listener=>target.removeEventListener('change',listener);return target;};
+</script></head><body><div id="root"></div><script type="module" src="./qa.jsx"></script></body></html>

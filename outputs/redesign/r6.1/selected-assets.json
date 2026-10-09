@@ -1,0 +1,168 @@
+{
+  "task": "R6.1",
+  "checkedLocalDate": "2026-10-08",
+  "status": "selected-originals-verified",
+  "sourcePack": "outputs/redesign/r0.3/asset-index.json",
+  "pillowVersion": "12.3.0",
+  "totalBytes": 324276,
+  "assets": [
+    {
+      "id": "A02",
+      "sourcePath": "outputs/visual-redesign-2026-10-07/edura/b6e8ee241524417.695a8ca904163.webp",
+      "sourceAbsolutePath": "D:/Projects/my-portfolio-2026/outputs/visual-redesign-2026-10-07/edura/b6e8ee241524417.695a8ca904163.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/b6e8ee241524417.695a8ca904163.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "classification": "edura-ui-overview",
+      "recommendedPublicPath": "public/projects/edura/overview.webp",
+      "alt": {
+        "vi": "Mockup trang tổng quan EDURA với bảng điểm, lịch học, học phí, khóa học, điểm danh, bài tập và tiến độ.",
+        "en": "EDURA overview mockup showing grades, schedules, tuition, courses, attendance, assignments and progress."
+      },
+      "caption": {
+        "vi": "Hình tổng quan UI EDURA. Các con số trên mockup là dữ liệu minh họa; hình này không mô tả một flow hoàn chỉnh.",
+        "en": "EDURA UI overview. Figures within the mockup are sample interface data; this image does not establish a complete flow."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Hình tổng quan UI EDURA. Các con số trên mockup là dữ liệu minh họa; hình này không mô tả một flow hoàn chỉnh.",
+      "recommendedDisplay": {
+        "intrinsic": [
+          1400,
+          989
+        ],
+        "desktopMaxCssWidth": 1280,
+        "mobileCssWidth": "viewport minus 32px; 288px at 320 / 358px at 390",
+        "fit": "contain; preserve full frame and original color",
+        "doNotUpscale": true,
+        "zoomOriginalForReading": true,
+        "bodyCopyRequired": true,
+        "legibility": "Embedded slide text is too small at mobile width. Provide the sourced Vi/En summary in DOM; an optional accessible original-image viewer may expose detail in R6. Do not claim every baked-in label is mobile-readable."
+      },
+      "actual": {
+        "format": "WEBP",
+        "mode": "RGB",
+        "width": 1400,
+        "height": 989,
+        "alpha": false,
+        "decode": "pass",
+        "bytes": 92204,
+        "sha256": "cc792c5dfb8d3acaf30925372969711e6b18a19ca831e6cc9baa8e63900d9b23",
+        "chromaticPixelThreshold": "max(R,G,B)-min(R,G,B)>8",
+        "chromaticPixelCount": 1246694,
+        "pixelCount": 1384600
+      }
+    },
+    {
+      "id": "A07",
+      "sourcePath": "outputs/visual-redesign-2026-10-07/edura/1457a2241524417.695a8ca903243.webp",
+      "sourceAbsolutePath": "D:/Projects/my-portfolio-2026/outputs/visual-redesign-2026-10-07/edura/1457a2241524417.695a8ca903243.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/1457a2241524417.695a8ca903243.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "classification": "project-problem-framing",
+      "recommendedPublicPath": "public/projects/edura/problem.webp",
+      "alt": {
+        "vi": "Slide mô tả thông tin học tập phân tán và khó khăn theo dõi lịch học.",
+        "en": "Slide describing fragmented learning information and schedule tracking difficulties."
+      },
+      "caption": {
+        "vi": "Vấn đề được đặt ra trong tài liệu dự án; đây không phải kết quả thử nghiệm đã được xác minh.",
+        "en": "The problem as framed in the project materials, rather than a verified testing result."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Vấn đề được đặt ra trong tài liệu dự án; đây không phải kết quả thử nghiệm đã được xác minh.",
+      "recommendedDisplay": {
+        "intrinsic": [
+          1400,
+          989
+        ],
+        "desktopMaxCssWidth": 1280,
+        "mobileCssWidth": "viewport minus 32px; 288px at 320 / 358px at 390",
+        "fit": "contain; preserve full frame and original color",
+        "doNotUpscale": true,
+        "zoomOriginalForReading": true,
+        "bodyCopyRequired": true,
+        "legibility": "Embedded slide text is too small at mobile width. Provide the sourced Vi/En summary in DOM; an optional accessible original-image viewer may expose detail in R6. Do not claim every baked-in label is mobile-readable."
+      },
+      "actual": {
+        "format": "WEBP",
+        "mode": "RGB",
+        "width": 1400,
+        "height": 989,
+        "alpha": false,
+        "decode": "pass",
+        "bytes": 135960,
+        "sha256": "11e86ff9ffe00bf747a3b50db209e68658b08fcaa2989e4cb6300146b2fc1c4d",
+        "chromaticPixelThreshold": "max(R,G,B)-min(R,G,B)>8",
+        "chromaticPixelCount": 1266406,
+        "pixelCount": 1384600
+      }
+    },
+    {
+      "id": "A09",
+      "sourcePath": "outputs/visual-redesign-2026-10-07/edura/1463c6241524417.695a8ca906149.webp",
+      "sourceAbsolutePath": "D:/Projects/my-portfolio-2026/outputs/visual-redesign-2026-10-07/edura/1463c6241524417.695a8ca906149.webp",
+      "sourceUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/1463c6241524417.695a8ca906149.jpg",
+      "sourcePage": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "sourceId": "S-PROJECT",
+      "classification": "proposed-solution",
+      "recommendedPublicPath": "public/projects/edura/solution.webp",
+      "alt": {
+        "vi": "Slide định hướng EDURA: tập trung thông tin, hỗ trợ tự động, dashboard và tùy biến theo trung tâm.",
+        "en": "EDURA solution slide proposing centralized information, automated support, a dashboard and center-specific customization."
+      },
+      "caption": {
+        "vi": "Định hướng giải pháp trong concept. Chatbot và các lợi ích mô tả ở đây chưa được xác nhận là tính năng đã triển khai hoặc kết quả đo. Câu trong ngoặc kép ở đáy là thông điệp concept, không phải testimonial hay trích phỏng vấn đã xác minh.",
+        "en": "Proposed solution for the concept. The chatbot and stated benefits are not verified as implemented features or measured results. The quotation at the bottom is a concept statement, not a verified testimonial or interview excerpt."
+      },
+      "attribution": {
+        "vi": "EDURA LMS — Anh Duy Trần Vũ / Behance. Ghi nguồn hồ sơ; không suy ra tác giả riêng của mọi slide.",
+        "en": "EDURA LMS — Anh Duy Trần Vũ / Behance. Project attribution does not establish individual authorship of each slide."
+      },
+      "restriction": "Định hướng giải pháp trong concept. Chatbot và các lợi ích mô tả ở đây chưa được xác nhận là tính năng đã triển khai hoặc kết quả đo. Câu trong ngoặc kép ở đáy là thông điệp concept, không phải testimonial hay trích phỏng vấn đã xác minh.",
+      "recommendedDisplay": {
+        "intrinsic": [
+          1400,
+          989
+        ],
+        "desktopMaxCssWidth": 1280,
+        "mobileCssWidth": "viewport minus 32px; 288px at 320 / 358px at 390",
+        "fit": "contain; preserve full frame and original color",
+        "doNotUpscale": true,
+        "zoomOriginalForReading": true,
+        "bodyCopyRequired": true,
+        "legibility": "Embedded slide text is too small at mobile width. Provide the sourced Vi/En summary in DOM; an optional accessible original-image viewer may expose detail in R6. Do not claim every baked-in label is mobile-readable."
+      },
+      "actual": {
+        "format": "WEBP",
+        "mode": "RGB",
+        "width": 1400,
+        "height": 989,
+        "alpha": false,
+        "decode": "pass",
+        "bytes": 96112,
+        "sha256": "7714b0840765fecc8a397c5c3a03eb97da448d752090821752998948f8ba47a8",
+        "chromaticPixelThreshold": "max(R,G,B)-min(R,G,B)>8",
+        "chromaticPixelCount": 1226255,
+        "pixelCount": 1384600
+      }
+    }
+  ],
+  "originalsUnchanged": true,
+  "publicCopiedByThisAudit": false,
+  "derivativesRecommended": false,
+  "reason": "1400px original WebP files are already 92-136 KB, sufficient at max CSS width 1280px on DPR1; no re-encoding or semantic edits needed.",
+  "limits": [
+    "Embedded slide text is not legible at 320/390px; sourced DOM copy and captions remain primary.",
+    "Only 1400px sources available; high-DPR display cannot claim native 2x detail at 1280px CSS width.",
+    "A02 is an EDURA UI overview, A07/A09 are concept slides, not a tested flow or outcome.",
+    "No live CDN GET or gallery completeness test in this read-only local audit.",
+    "APMS A15-A17 excluded; no replacement product screens inferred."
+  ]
+}

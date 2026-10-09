@@ -1,0 +1,94 @@
+{
+  "status": "pass",
+  "checkedAt": "2026-10-09T01:29:43.866Z",
+  "base": "http://127.0.0.1:5173",
+  "configurations": [],
+  "errors": [],
+  "limits": [
+    "Compiled DOM/native scroll verification; no dev imports or source probes.",
+    "Phone viewport/reduced-motion emulated on desktop Edge; not physical phone.",
+    "Exact geometry/phase and GPU timing are in the dev matrix."
+  ],
+  "browser": "154.0.4258.62",
+  "lab": [
+    {
+      "p": 0.25,
+      "position": [
+        0.7220458984375,
+        4,
+        -160
+      ],
+      "target": [
+        70.42833984375001,
+        -1.80511474609375,
+        -206.3897705078125
+      ]
+    },
+    {
+      "p": 0.5,
+      "position": [
+        2,
+        4,
+        -160
+      ],
+      "target": [
+        -19.008000000000003,
+        -5,
+        -200
+      ]
+    },
+    {
+      "p": 0.75,
+      "position": [
+        2,
+        4,
+        -160
+      ],
+      "target": [
+        -19.008000000000003,
+        -5,
+        -200
+      ]
+    },
+    {
+      "p": 1,
+      "position": [
+        2,
+        4,
+        -160
+      ],
+      "target": [
+        -19.008000000000003,
+        -5,
+        -200
+      ]
+    },
+    {
+      "p": 0.5,
+      "position": [
+        2,
+        4,
+        -160
+      ],
+      "target": [
+        -19.008000000000003,
+        -5,
+        -200
+      ]
+    },
+    {
+      "p": 0,
+      "position": [
+        0,
+        4,
+        -160
+      ],
+      "target": [
+        120.96000000000001,
+        0,
+        -210
+      ]
+    }
+  ],
+  "legacyFPS": "165 FPS"
+}

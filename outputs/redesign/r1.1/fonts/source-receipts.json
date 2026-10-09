@@ -1,0 +1,38 @@
+{
+  "cssUrl": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400&display=swap",
+  "status": 200,
+  "fonts": [
+    {
+      "url": "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjPQ.ttf",
+      "file": "google-0.ttf",
+      "bytes": 112172,
+      "status": 200,
+      "format": "TrueType, magic 00010000"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7oUUsj.ttf",
+      "file": "google-1.ttf",
+      "bytes": 69360,
+      "status": 200,
+      "format": "TrueType, magic 00010000"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/spacegrotesk/v22/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7aUUsj.ttf",
+      "file": "google-2.ttf",
+      "bytes": 69416,
+      "status": 200,
+      "format": "TrueType, magic 00010000"
+    }
+  ],
+  "unbounded": {
+    "source": "node_modules/@fontsource-variable/unbounded/files",
+    "format": "WOFF2 variable",
+    "subsets": [
+      "latin",
+      "latin-ext",
+      "vietnamese"
+    ],
+    "license": "OFL-1.1",
+    "upstream": "https://fonts.google.com/specimen/Unbounded"
+  }
+}

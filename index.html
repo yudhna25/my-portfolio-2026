@@ -1,12 +1,129 @@
 <!doctype html>
-<html lang="en">
+<html class="dark" data-theme="dark" lang="vi" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Primary Metadata -->
+    <title>Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio</title>
+    <meta name="title" content="Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio" />
+    <meta name="description" content="Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Trải nghiệm không gian vũ trụ điện ảnh, tối giản và hướng tới người dùng." />
+    <meta name="keywords" content="Trần Vũ Anh Duy, Tran Vu Anh Duy, Creative Designer, UX/UI Designer, Multimedia Designer, Motion Graphics, 3D Web, Three.js, React 19, GSAP, Portfolio, Stellar Odyssey, Product Design, Graphic Design, EDURA LMS" />
+    <meta name="author" content="Trần Vũ Anh Duy" />
+    <meta name="creator" content="Trần Vũ Anh Duy" />
+    <meta name="publisher" content="Trần Vũ Anh Duy" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- Canonical & Alternates -->
+    <link rel="canonical" href="https://stellar-odyssey.vercel.app/" />
+    <link rel="alternate" hreflang="vi" href="https://stellar-odyssey.vercel.app/" />
+    <link rel="alternate" hreflang="en" href="https://stellar-odyssey.vercel.app/" />
+    <link rel="alternate" hreflang="x-default" href="https://stellar-odyssey.vercel.app/" />
+
+    <!-- Open Graph / Facebook / LinkedIn / Zalo / Discord -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Trần Vũ Anh Duy Portfolio" />
+    <meta property="og:url" content="https://stellar-odyssey.vercel.app/" />
+    <meta property="og:title" content="Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio" />
+    <meta property="og:description" content="Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Khám phá vũ trình thiết kế điện ảnh Stellar Odyssey." />
+    <meta property="og:image" content="https://stellar-odyssey.vercel.app/og-image.jpg" />
+    <meta property="og:image:secure_url" content="https://stellar-odyssey.vercel.app/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Trần Vũ Anh Duy — Creative Designer Portfolio Stellar Odyssey" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://stellar-odyssey.vercel.app/" />
+    <meta name="twitter:title" content="Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio" />
+    <meta name="twitter:description" content="Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Khám phá vũ trình thiết kế điện ảnh Stellar Odyssey." />
+    <meta name="twitter:image" content="https://stellar-odyssey.vercel.app/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Trần Vũ Anh Duy — Creative Designer Portfolio Stellar Odyssey" />
+
+    <!-- Icons & Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/pwa-192x192.png" />
+
+    <!-- Color Scheme & PWA Metadata -->
+    <meta name="theme-color" content="#050505" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Anh Duy Portfolio" />
+
+    <style>html, body { background: #050505; color: #FAFAFA; color-scheme: dark; }</style>
+    <!-- Fixed dark bootstrap; runs before the stylesheet and React. -->
+    <script src="/theme-init.js"></script>
+    <link rel="stylesheet" href="/src/index.css" />
+
+    <!-- Structured Data: JSON-LD (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://stellar-odyssey.vercel.app/#website",
+          "url": "https://stellar-odyssey.vercel.app/",
+          "name": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey",
+          "description": "Portfolio cá nhân của Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác.",
+          "inLanguage": ["vi-VN", "en-US"],
+          "publisher": {
+            "@id": "https://stellar-odyssey.vercel.app/#person"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://stellar-odyssey.vercel.app/#person",
+          "name": "Trần Vũ Anh Duy",
+          "alternateName": "Tran Vu Anh Duy",
+          "url": "https://stellar-odyssey.vercel.app/",
+          "image": "https://stellar-odyssey.vercel.app/avatar.webp",
+          "jobTitle": "Creative Designer",
+          "description": "Creative Designer chuyên về UX/UI, Motion Graphics và trải nghiệm Web 3D điện ảnh tương tác.",
+          "email": "mailto:anhduy25work@gmail.com",
+          "telephone": "+84822021418",
+          "sameAs": [
+            "https://www.facebook.com/tvad.25",
+            "https://www.behance.net/gallery/241524417/Edura-LMS"
+          ],
+          "knowsAbout": [
+            "User Experience (UX) Design",
+            "User Interface (UI) Design",
+            "Motion Graphics",
+            "3D Web Interaction",
+            "Design Systems",
+            "Brand Identity",
+            "Figma",
+            "Adobe Creative Suite",
+            "WebGL & Three.js"
+          ],
+          "alumniOf": [
+            {
+              "@type": "EducationalOrganization",
+              "name": "Saigon University"
+            },
+            {
+              "@type": "EducationalOrganization",
+              "name": "Arena Multimedia"
+            },
+            {
+              "@type": "EducationalOrganization",
+              "name": "Green Academy"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
-  <body>
+  <body class="dark">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

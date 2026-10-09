@@ -1,0 +1,47 @@
+{
+  "status": "pass",
+  "checkedAt": "2026-10-08T17:04:41.097Z",
+  "exactReadyBodies": 16,
+  "eduraKeysPerLocale": 36,
+  "ownerFacts": [
+    "R61-CONTEXT",
+    "R61-PROTOTYPE-CONSTRAINT",
+    "R61-REFERENCE-CONSTRAINT"
+  ],
+  "assets": [
+    {
+      "id": "A02",
+      "path": "public/projects/edura/overview.webp",
+      "sha256": "cc792c5dfb8d3acaf30925372969711e6b18a19ca831e6cc9baa8e63900d9b23",
+      "bytes": 92204
+    },
+    {
+      "id": "A07",
+      "path": "public/projects/edura/problem.webp",
+      "sha256": "11e86ff9ffe00bf747a3b50db209e68658b08fcaa2989e4cb6300146b2fc1c4d",
+      "bytes": 135960
+    },
+    {
+      "id": "A09",
+      "path": "public/projects/edura/solution.webp",
+      "sha256": "7714b0840765fecc8a397c5c3a03eb97da448d752090821752998948f8ba47a8",
+      "bytes": 96112
+    }
+  ],
+  "totalAssetBytes": 324276,
+  "baselineFiles": 99,
+  "preserved": 97,
+  "changed": [
+    "src/i18n/locales/en.json",
+    "src/i18n/locales/vi.json"
+  ],
+  "added": [
+    "public/projects/edura/overview.webp",
+    "public/projects/edura/problem.webp",
+    "public/projects/edura/solution.webp",
+    "src/components/pages/Edura.jsx"
+  ],
+  "agentsRowsAdded": 1,
+  "head": "69ca97dcda6c9cbf3907ec5366b5b4e0247663bb",
+  "appExactBaseline": true
+}

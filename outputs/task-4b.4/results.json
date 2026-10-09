@@ -1,0 +1,86 @@
+{
+  "timestamp": "2026-10-06T18:55:42.519Z",
+  "browser": "154.0.4258.53",
+  "checks": 12,
+  "tests": [
+    {
+      "name": "Hero FPS Benchmark",
+      "status": "PASS",
+      "details": {
+        "fps": 165,
+        "target": ">= 140 FPS"
+      }
+    },
+    {
+      "name": "Hero Screenshot Captured (Taurus Constellation)",
+      "status": "PASS",
+      "details": {}
+    },
+    {
+      "name": "Stardust Wake Pointer Interaction",
+      "status": "PASS",
+      "details": {}
+    },
+    {
+      "name": "Skills Section FPS Benchmark",
+      "status": "PASS",
+      "details": {
+        "fps": 165
+      }
+    },
+    {
+      "name": "Skills Screenshot Captured (Cygnus Constellation)",
+      "status": "PASS",
+      "details": {}
+    },
+    {
+      "name": "Reactive Meteor Triggered on Work Filter Click",
+      "status": "PASS",
+      "details": {}
+    },
+    {
+      "name": "Work Screenshot Captured (Orion Constellation)",
+      "status": "PASS",
+      "details": {}
+    },
+    {
+      "name": "Contact Section FPS Benchmark (Einstein Ring + Sagittarius)",
+      "status": "PASS",
+      "details": {
+        "fps": 165
+      }
+    },
+    {
+      "name": "Reactive Meteor Triggered on Contact CTA Click",
+      "status": "PASS",
+      "details": {}
+    },
+    {
+      "name": "Contact Screenshot Captured (Sagittarius + Einstein Ring)",
+      "status": "PASS",
+      "details": {}
+    },
+    {
+      "name": "Full Scroll Continuous FPS Benchmark",
+      "status": "PASS",
+      "details": {
+        "fps": 147,
+        "target": ">= 140 FPS"
+      }
+    },
+    {
+      "name": "Reduced Motion Compliance",
+      "status": "PASS",
+      "details": {
+        "hasCanvas": true
+      }
+    }
+  ],
+  "fps": {
+    "hero": 165,
+    "scrolling": 147,
+    "skills": 165,
+    "contact": 165
+  },
+  "errors": []
+}

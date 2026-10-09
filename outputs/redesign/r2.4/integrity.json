@@ -1,0 +1,193 @@
+{
+  "status": "pass",
+  "changed": [
+    "src/3d/components/BlackHole.jsx",
+    "src/3d/components/BlackHoleBloomMask.jsx",
+    "src/3d/components/BlackHoleSystem.jsx",
+    "src/3d/components/WorksConstellations.jsx",
+    "src/3d/GalaxyScene.jsx",
+    "src/3d/shaders/blackHole.js",
+    "src/3d/utils/cameraPath.js",
+    "src/3d-lab.jsx",
+    "src/i18n/locales/en/lab.json",
+    "src/i18n/locales/vi/lab.json",
+    "AGENTS.md"
+  ],
+  "preserved": 88,
+  "images": [
+    {
+      "file": "desktop-0-25.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.9840054012345679,
+      "whiteFraction": 0.000027006172839506174,
+      "blackPixels": 0,
+      "max": 255
+    },
+    {
+      "file": "desktop-0-4.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.9888348765432099,
+      "whiteFraction": 0.000038580246913580246,
+      "blackPixels": 0,
+      "max": 255
+    },
+    {
+      "file": "desktop-0-44.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.9854837962962963,
+      "whiteFraction": 0.0009012345679012346,
+      "blackPixels": 0,
+      "max": 255
+    },
+    {
+      "file": "desktop-0-58.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.11941512345679012,
+      "whiteFraction": 7.716049382716049e-7,
+      "blackPixels": 0,
+      "max": 255
+    },
+    {
+      "file": "desktop-0-75.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.14539891975308641,
+      "whiteFraction": 7.716049382716049e-7,
+      "blackPixels": 0,
+      "max": 255
+    },
+    {
+      "file": "desktop-0.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.9966875,
+      "whiteFraction": 0.000023148148148148147,
+      "blackPixels": 0,
+      "max": 255
+    },
+    {
+      "file": "desktop-1.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.9312083333333333,
+      "whiteFraction": 0.0021697530864197533,
+      "blackPixels": 8687,
+      "max": 255
+    },
+    {
+      "file": "desktop-start.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.9966875,
+      "whiteFraction": 0.000023148148148148147,
+      "blackPixels": 0,
+      "max": 255
+    },
+    {
+      "file": "direct-contact.png",
+      "width": 1440,
+      "height": 900,
+      "colored": 0,
+      "darkFraction": 0.9311782407407407,
+      "whiteFraction": 0.0021689814814814814,
+      "blackPixels": 8686,
+      "max": 255
+    },
+    {
+      "file": "mobile-0-25.png",
+      "width": 390,
+      "height": 844,
+      "colored": 0,
+      "darkFraction": 0.9904939846882975,
+      "whiteFraction": 0.00005772268805444161,
+      "blackPixels": 0,
+      "max": 255
+    },
+    {
+      "file": "mobile-0-44.png",
+      "width": 390,
+      "height": 844,
+      "colored": 0,
+      "darkFraction": 0.9910681735326285,
+      "whiteFraction": 0.00005468465184104995,
+      "blackPixels": 0,
+      "max": 255
+    },
+    {
+      "file": "mobile-0-58.png",
+      "width": 390,
+      "height": 844,
+      "colored": 0,
+      "darkFraction": 0.7506531777858793,
+      "whiteFraction": 0,
+      "blackPixels": 0,
+      "max": 207
+    },
+    {
+      "file": "mobile-0-75.png",
+      "width": 390,
+      "height": 844,
+      "colored": 0,
+      "darkFraction": 0.7639263580021873,
+      "whiteFraction": 0,
+      "blackPixels": 0,
+      "max": 208
+    },
+    {
+      "file": "mobile-0.png",
+      "width": 390,
+      "height": 844,
+      "colored": 0,
+      "darkFraction": 0.9961629602624863,
+      "whiteFraction": 0.00007291286912139993,
+      "blackPixels": 0,
+      "max": 255
+    },
+    {
+      "file": "mobile-1.png",
+      "width": 390,
+      "height": 844,
+      "colored": 0,
+      "darkFraction": 0.974355936322761,
+      "whiteFraction": 0.0013701543322396403,
+      "blackPixels": 1429,
+      "max": 255
+    },
+    {
+      "file": "mobile-reduced.png",
+      "width": 390,
+      "height": 844,
+      "colored": 0,
+      "darkFraction": 0.9743103657795601,
+      "whiteFraction": 0.0013701543322396403,
+      "blackPixels": 1429,
+      "max": 255
+    },
+    {
+      "file": "tablet-nebula.png",
+      "width": 900,
+      "height": 1000,
+      "colored": 0,
+      "darkFraction": 0.23222,
+      "whiteFraction": 0,
+      "blackPixels": 0,
+      "max": 231
+    }
+  ],
+  "localeKeys": 78,
+  "newSource": [
+    "src/3d/utils/finale.js"
+  ]
+}

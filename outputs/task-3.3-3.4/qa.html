@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.svg" />
+  <title>Task 3.3 + 3.4 — scene checks</title>
+</head>
+<body>
+  <div id="root"></div>
+  <aside class="fixed bottom-2 right-2 z-50 max-w-sm border border-white/30 bg-black/90 p-3 font-mono text-xs text-white">
+    <div id="controls" class="flex flex-wrap gap-2">
+      <button id="checks">Run checks</button><button id="capture">Capture + FPS</button>
+      <button id="motion">Reduced motion</button>
+      <button id="streak">Pause next streak for screenshot</button>
+    </div>
+    <p id="status" class="my-2">Loading shared GalaxyScene…</p>
+    <details><summary>JSON evidence</summary><pre id="results" class="max-h-24 overflow-auto whitespace-pre-wrap"></pre></details>
+  </aside>
+  <script type="module" src="./qa.jsx"></script>
+</body>
+</html>

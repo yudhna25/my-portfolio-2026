@@ -1,0 +1,851 @@
+{
+  "parity": "100%",
+  "namespaces": {
+    "translation": 184,
+    "lab": 29,
+    "scene": 2
+  },
+  "approvedLeavesPerLocale": 142,
+  "approvedDraftsAndProtectedSourceUnchanged": true,
+  "interpolationParity": true,
+  "filesScanned": 51,
+  "hardcodedVisibleCopy": [],
+  "originalDetectorFindings": 8,
+  "browserSavedSnapshots": 2,
+  "browserCopyChecks": 280,
+  "literalCalls": [
+    {
+      "file": "src/3d/components/LabTelemetry.jsx",
+      "line": 18,
+      "ns": "lab",
+      "expression": "'fpsValue'"
+    },
+    {
+      "file": "src/3d/components/SceneFallback.jsx",
+      "line": 14,
+      "ns": "scene",
+      "expression": "'fallback.title'"
+    },
+    {
+      "file": "src/3d/components/SceneFallback.jsx",
+      "line": 15,
+      "ns": "scene",
+      "expression": "'fallback.description'"
+    },
+    {
+      "file": "src/3d-lab.jsx",
+      "line": 28,
+      "ns": "lab",
+      "expression": "'title'"
+    },
+    {
+      "file": "src/3d-lab.jsx",
+      "line": 33,
+      "ns": "lab",
+      "expression": "'back'"
+    },
+    {
+      "file": "src/3d-lab.jsx",
+      "line": 48,
+      "ns": "lab",
+      "expression": "'fps'"
+    },
+    {
+      "file": "src/3d-lab.jsx",
+      "line": 48,
+      "ns": "lab",
+      "expression": "'waiting'"
+    },
+    {
+      "file": "src/3d-lab.jsx",
+      "line": 49,
+      "ns": "lab",
+      "expression": "'scroll'"
+    },
+    {
+      "file": "src/3d-lab.jsx",
+      "line": 53,
+      "ns": "lab",
+      "expression": "'controls'"
+    },
+    {
+      "file": "src/App.jsx",
+      "line": 80,
+      "ns": "translation",
+      "expression": "'common.marquees.design'"
+    },
+    {
+      "file": "src/App.jsx",
+      "line": 85,
+      "ns": "translation",
+      "expression": "'common.marquees.projects'"
+    },
+    {
+      "file": "src/App.jsx",
+      "line": 88,
+      "ns": "translation",
+      "expression": "'common.marquees.collaboration'"
+    },
+    {
+      "file": "src/components/About.jsx",
+      "line": 12,
+      "ns": "translation",
+      "expression": "'about.heading'"
+    },
+    {
+      "file": "src/components/About.jsx",
+      "line": 84,
+      "ns": "translation",
+      "expression": "'about.heading'"
+    },
+    {
+      "file": "src/components/About.jsx",
+      "line": 93,
+      "ns": "translation",
+      "expression": "'about.photoCaption'"
+    },
+    {
+      "file": "src/components/About.jsx",
+      "line": 100,
+      "ns": "translation",
+      "expression": "'about.sectionLabel'"
+    },
+    {
+      "file": "src/components/About.jsx",
+      "line": 106,
+      "ns": "translation",
+      "expression": "'about.heading'"
+    },
+    {
+      "file": "src/components/About.jsx",
+      "line": 113,
+      "ns": "translation",
+      "expression": "'about.subLabel'"
+    },
+    {
+      "file": "src/components/About.jsx",
+      "line": 117,
+      "ns": "translation",
+      "expression": "'about.bioFirst'"
+    },
+    {
+      "file": "src/components/About.jsx",
+      "line": 118,
+      "ns": "translation",
+      "expression": "'about.bioSecond'"
+    },
+    {
+      "file": "src/components/About.jsx",
+      "line": 122,
+      "ns": "translation",
+      "expression": "'about.quote'"
+    },
+    {
+      "file": "src/components/About.jsx",
+      "line": 127,
+      "ns": "translation",
+      "expression": "'about.toolsLabel'"
+    },
+    {
+      "file": "src/components/About.jsx",
+      "line": 156,
+      "ns": "translation",
+      "expression": "'about.skillsLabel'"
+    },
+    {
+      "file": "src/components/Cursor.jsx",
+      "line": 202,
+      "ns": "translation",
+      "expression": "'works.cursorCta'"
+    },
+    {
+      "file": "src/components/Education.jsx",
+      "line": 59,
+      "ns": "translation",
+      "expression": "'education.heading'"
+    },
+    {
+      "file": "src/components/effects/LiveDemo.jsx",
+      "line": 10,
+      "ns": "translation",
+      "expression": "'playground.liveLabel'"
+    },
+    {
+      "file": "src/components/effects/LiveDemo.jsx",
+      "line": 15,
+      "ns": "translation",
+      "expression": "'playground.comingSoon'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 12,
+      "ns": "translation",
+      "expression": "'contact.heading'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 14,
+      "ns": "translation",
+      "expression": "'contact.email'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 78,
+      "ns": "translation",
+      "expression": "'contact.emailUrl'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 87,
+      "ns": "translation",
+      "expression": "'contact.phone'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 88,
+      "ns": "translation",
+      "expression": "'contact.phone'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 91,
+      "ns": "translation",
+      "expression": "'contact.facebookUrl'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 91,
+      "ns": "translation",
+      "expression": "'contact.facebookLabel'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 94,
+      "ns": "translation",
+      "expression": "'contact.linkedinUrl'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 94,
+      "ns": "translation",
+      "expression": "'contact.linkedinLabel'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 94,
+      "ns": "translation",
+      "expression": "'contact.linkedinUrl'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 94,
+      "ns": "translation",
+      "expression": "'contact.linkedinUrl'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 94,
+      "ns": "translation",
+      "expression": "'nav.socialPending'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 97,
+      "ns": "translation",
+      "expression": "'footer.websiteUrl'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 97,
+      "ns": "translation",
+      "expression": "'footer.websiteLabel'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 97,
+      "ns": "translation",
+      "expression": "'footer.websiteUrl'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 97,
+      "ns": "translation",
+      "expression": "'footer.websiteUrl'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 97,
+      "ns": "translation",
+      "expression": "'nav.socialPending'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 104,
+      "ns": "translation",
+      "expression": "'footer.copyright'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 105,
+      "ns": "translation",
+      "expression": "'footer.disciplines'"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 106,
+      "ns": "translation",
+      "expression": "'footer.buildCredit'"
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 11,
+      "ns": "translation",
+      "expression": "'hero.name'"
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 13,
+      "ns": "translation",
+      "expression": "'hero.tagline'"
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 14,
+      "ns": "translation",
+      "expression": "'hero.subTagline'"
+    },
+    {
+      "file": "src/components/Hero.jsx",
+      "line": 15,
+      "ns": "translation",
+      "expression": "'hero.scrollIndicator'"
+    },
+    {
+      "file": "src/components/layout/MenuOverlay.jsx",
+      "line": 161,
+      "ns": "translation",
+      "expression": "'nav.logo'"
+    },
+    {
+      "file": "src/components/layout/MenuOverlay.jsx",
+      "line": 165,
+      "ns": "translation",
+      "expression": "'nav.closeMenu'"
+    },
+    {
+      "file": "src/components/layout/MenuOverlay.jsx",
+      "line": 168,
+      "ns": "translation",
+      "expression": "'nav.closeLabel'"
+    },
+    {
+      "file": "src/components/layout/MenuOverlay.jsx",
+      "line": 178,
+      "ns": "translation",
+      "expression": "'nav.menuTitle'"
+    },
+    {
+      "file": "src/components/layout/MenuOverlay.jsx",
+      "line": 191,
+      "ns": "translation",
+      "expression": "'nav.sectionPending'"
+    },
+    {
+      "file": "src/components/layout/MenuOverlay.jsx",
+      "line": 210,
+      "ns": "translation",
+      "expression": "'nav.sectionPending'"
+    },
+    {
+      "file": "src/components/layout/MenuOverlay.jsx",
+      "line": 216,
+      "ns": "translation",
+      "expression": "'contact.emailUrl'"
+    },
+    {
+      "file": "src/components/layout/MenuOverlay.jsx",
+      "line": 216,
+      "ns": "translation",
+      "expression": "'contact.email'"
+    },
+    {
+      "file": "src/components/layout/MenuOverlay.jsx",
+      "line": 223,
+      "ns": "translation",
+      "expression": "'nav.socialPending'"
+    },
+    {
+      "file": "src/components/layout/MenuOverlay.jsx",
+      "line": 226,
+      "ns": "translation",
+      "expression": "'nav.languageLabel'"
+    },
+    {
+      "file": "src/components/layout/Nav.jsx",
+      "line": 91,
+      "ns": "translation",
+      "expression": "'nav.skip'"
+    },
+    {
+      "file": "src/components/layout/Nav.jsx",
+      "line": 94,
+      "ns": "translation",
+      "expression": "'nav.label'"
+    },
+    {
+      "file": "src/components/layout/Nav.jsx",
+      "line": 99,
+      "ns": "translation",
+      "expression": "'nav.homeLabel'"
+    },
+    {
+      "file": "src/components/layout/Nav.jsx",
+      "line": 103,
+      "ns": "translation",
+      "expression": "'nav.logo'"
+    },
+    {
+      "file": "src/components/layout/Nav.jsx",
+      "line": 117,
+      "ns": "translation",
+      "expression": "'nav.sectionPending'"
+    },
+    {
+      "file": "src/components/layout/Nav.jsx",
+      "line": 127,
+      "ns": "translation",
+      "expression": "'nav.sectionPending'"
+    },
+    {
+      "file": "src/components/layout/Nav.jsx",
+      "line": 131,
+      "ns": "translation",
+      "expression": "'nav.openMenu'"
+    },
+    {
+      "file": "src/components/layout/Nav.jsx",
+      "line": 136,
+      "ns": "translation",
+      "expression": "'nav.menuPending'"
+    },
+    {
+      "file": "src/components/layout/Nav.jsx",
+      "line": 139,
+      "ns": "translation",
+      "expression": "'nav.menuLabel'"
+    },
+    {
+      "file": "src/components/Preloader.jsx",
+      "line": 94,
+      "ns": "translation",
+      "expression": "'preloader.counterLabel'"
+    },
+    {
+      "file": "src/components/Preloader.jsx",
+      "line": 119,
+      "ns": "translation",
+      "expression": "'preloader.counterLabel'"
+    },
+    {
+      "file": "src/components/sections/Contact.jsx",
+      "line": 46,
+      "ns": "translation",
+      "expression": "'contact.sectionLabel'"
+    },
+    {
+      "file": "src/components/sections/Contact.jsx",
+      "line": 50,
+      "ns": "translation",
+      "expression": "'contact.heading'"
+    },
+    {
+      "file": "src/components/sections/Contact.jsx",
+      "line": 53,
+      "ns": "translation",
+      "expression": "'contact.alternateHeading'"
+    },
+    {
+      "file": "src/components/sections/Contact.jsx",
+      "line": 57,
+      "ns": "translation",
+      "expression": "'contact.subHeading'"
+    },
+    {
+      "file": "src/components/sections/Contact.jsx",
+      "line": 64,
+      "ns": "translation",
+      "expression": "'contact.emailUrl'"
+    },
+    {
+      "file": "src/components/sections/Contact.jsx",
+      "line": 68,
+      "ns": "translation",
+      "expression": "'contact.emailCta'"
+    },
+    {
+      "file": "src/components/sections/Contact.jsx",
+      "line": 76,
+      "ns": "translation",
+      "expression": "'contact.emailUrl'"
+    },
+    {
+      "file": "src/components/sections/Contact.jsx",
+      "line": 76,
+      "ns": "translation",
+      "expression": "'contact.email'"
+    },
+    {
+      "file": "src/components/sections/Contact.jsx",
+      "line": 82,
+      "ns": "translation",
+      "expression": "'contact.phone'"
+    },
+    {
+      "file": "src/components/sections/Contact.jsx",
+      "line": 82,
+      "ns": "translation",
+      "expression": "'contact.phone'"
+    },
+    {
+      "file": "src/components/sections/Experience.jsx",
+      "line": 42,
+      "ns": "translation",
+      "expression": "'experience.sectionLabel'"
+    },
+    {
+      "file": "src/components/sections/Experience.jsx",
+      "line": 45,
+      "ns": "translation",
+      "expression": "'experience.heading'"
+    },
+    {
+      "file": "src/components/sections/Playground.jsx",
+      "line": 43,
+      "ns": "translation",
+      "expression": "'playground.heading'"
+    },
+    {
+      "file": "src/components/sections/Playground.jsx",
+      "line": 65,
+      "ns": "translation",
+      "expression": "'playground.comingSoon'"
+    },
+    {
+      "file": "src/components/sections/Skills.jsx",
+      "line": 34,
+      "ns": "translation",
+      "expression": "'skills.heading'"
+    },
+    {
+      "file": "src/components/sections/Skills.jsx",
+      "line": 42,
+      "ns": "translation",
+      "expression": "'skills.pauseOrbit'"
+    },
+    {
+      "file": "src/components/Work.jsx",
+      "line": 82,
+      "ns": "translation",
+      "expression": "'works.sectionLabel'"
+    },
+    {
+      "file": "src/components/Work.jsx",
+      "line": 83,
+      "ns": "translation",
+      "expression": "'works.heading'"
+    },
+    {
+      "file": "src/components/Work.jsx",
+      "line": 84,
+      "ns": "translation",
+      "expression": "'works.filterLabel'"
+    },
+    {
+      "file": "src/components/Work.jsx",
+      "line": 134,
+      "ns": "translation",
+      "expression": "'works.tagsLabel'"
+    },
+    {
+      "file": "src/components/Work.jsx",
+      "line": 141,
+      "ns": "translation",
+      "expression": "'works.viewCaseStudy'"
+    }
+  ],
+  "dynamicCalls": [
+    {
+      "file": "src/3d-lab.jsx",
+      "line": 38,
+      "ns": "lab",
+      "expression": "`${key}.code`"
+    },
+    {
+      "file": "src/3d-lab.jsx",
+      "line": 40,
+      "ns": "lab",
+      "expression": "`${key}.line1`"
+    },
+    {
+      "file": "src/3d-lab.jsx",
+      "line": 40,
+      "ns": "lab",
+      "expression": "`${key}.line2`"
+    },
+    {
+      "file": "src/3d-lab.jsx",
+      "line": 40,
+      "ns": "lab",
+      "expression": "`${key}.line2`"
+    },
+    {
+      "file": "src/3d-lab.jsx",
+      "line": 42,
+      "ns": "lab",
+      "expression": "`${key}.description`"
+    },
+    {
+      "file": "src/3d-lab.jsx",
+      "line": 52,
+      "ns": "lab",
+      "expression": "frozen ? 'frozen' : 'running'"
+    },
+    {
+      "file": "src/3d-lab.jsx",
+      "line": 54,
+      "ns": "lab",
+      "expression": "`quality.${key}`"
+    },
+    {
+      "file": "src/3d-lab.jsx",
+      "line": 55,
+      "ns": "lab",
+      "expression": "bloom ? 'bloomOff' : 'bloomOn'"
+    },
+    {
+      "file": "src/3d-lab.jsx",
+      "line": 56,
+      "ns": "lab",
+      "expression": "showContent ? 'contentOff' : 'contentOn'"
+    },
+    {
+      "file": "src/components/About.jsx",
+      "line": 134,
+      "ns": "translation",
+      "expression": "`about.tools.${tool.id}`"
+    },
+    {
+      "file": "src/components/About.jsx",
+      "line": 140,
+      "ns": "translation",
+      "expression": "`about.tools.${tool.id}`"
+    },
+    {
+      "file": "src/components/About.jsx",
+      "line": 147,
+      "ns": "translation",
+      "expression": "`about.tools.${tool.id}`"
+    },
+    {
+      "file": "src/components/About.jsx",
+      "line": 161,
+      "ns": "translation",
+      "expression": "`about.coreSkills.${index}`"
+    },
+    {
+      "file": "src/components/Education.jsx",
+      "line": 75,
+      "ns": "translation",
+      "expression": "`${path}.period`"
+    },
+    {
+      "file": "src/components/Education.jsx",
+      "line": 76,
+      "ns": "translation",
+      "expression": "`${path}.name`"
+    },
+    {
+      "file": "src/components/Education.jsx",
+      "line": 77,
+      "ns": "translation",
+      "expression": "`${path}.degree`"
+    },
+    {
+      "file": "src/components/Education.jsx",
+      "line": 78,
+      "ns": "translation",
+      "expression": "`${path}.description`"
+    },
+    {
+      "file": "src/components/layout/MenuOverlay.jsx",
+      "line": 199,
+      "ns": "translation",
+      "expression": "`nav.${key}`"
+    },
+    {
+      "file": "src/components/layout/MenuOverlay.jsx",
+      "line": 202,
+      "ns": "translation",
+      "expression": "`nav.${key}`"
+    },
+    {
+      "file": "src/components/layout/MenuOverlay.jsx",
+      "line": 218,
+      "ns": "translation",
+      "expression": "`contact.${social}Url`"
+    },
+    {
+      "file": "src/components/layout/MenuOverlay.jsx",
+      "line": 219,
+      "ns": "translation",
+      "expression": "`contact.${social}Url`"
+    },
+    {
+      "file": "src/components/layout/MenuOverlay.jsx",
+      "line": 220,
+      "ns": "translation",
+      "expression": "`contact.${social}Label`"
+    },
+    {
+      "file": "src/components/layout/MenuOverlay.jsx",
+      "line": 223,
+      "ns": "translation",
+      "expression": "`contact.${social}Label`"
+    },
+    {
+      "file": "src/components/layout/MenuOverlay.jsx",
+      "line": 229,
+      "ns": "translation",
+      "expression": "language === 'vi' ? 'nav.langVi' : 'nav.langEn'"
+    },
+    {
+      "file": "src/components/layout/Nav.jsx",
+      "line": 121,
+      "ns": "translation",
+      "expression": "`nav.${key}`"
+    },
+    {
+      "file": "src/components/sections/Contact.jsx",
+      "line": 77,
+      "ns": "translation",
+      "expression": "`contact.${social}Url`"
+    },
+    {
+      "file": "src/components/sections/Contact.jsx",
+      "line": 78,
+      "ns": "translation",
+      "expression": "`contact.${social}Url`"
+    },
+    {
+      "file": "src/components/sections/Contact.jsx",
+      "line": 79,
+      "ns": "translation",
+      "expression": "`contact.${social}Label`"
+    },
+    {
+      "file": "src/components/sections/Experience.jsx",
+      "line": 51,
+      "ns": "translation",
+      "expression": "`experience.positions.${id}`"
+    },
+    {
+      "file": "src/components/sections/Playground.jsx",
+      "line": 47,
+      "ns": "translation",
+      "expression": "`${path}.title`"
+    },
+    {
+      "file": "src/components/sections/Playground.jsx",
+      "line": 63,
+      "ns": "translation",
+      "expression": "`${path}.type`"
+    },
+    {
+      "file": "src/components/sections/Skills.jsx",
+      "line": 50,
+      "ns": "translation",
+      "expression": "key"
+    },
+    {
+      "file": "src/components/sections/Skills.jsx",
+      "line": 64,
+      "ns": "translation",
+      "expression": "`skills.${key}Label`"
+    },
+    {
+      "file": "src/components/sections/Skills.jsx",
+      "line": 66,
+      "ns": "translation",
+      "expression": "`skills.${key}`"
+    },
+    {
+      "file": "src/components/ui/ThemeToggle.jsx",
+      "line": 9,
+      "ns": "translation",
+      "expression": "theme === 'dark' ? 'common.theme.toLight' : 'common.theme.toDark'"
+    },
+    {
+      "file": "src/components/Work.jsx",
+      "line": 94,
+      "ns": "translation",
+      "expression": "`works.filters.${key}`"
+    },
+    {
+      "file": "src/components/Work.jsx",
+      "line": 129,
+      "ns": "translation",
+      "expression": "`${path}.category`"
+    },
+    {
+      "file": "src/components/Work.jsx",
+      "line": 132,
+      "ns": "translation",
+      "expression": "`${path}.title`"
+    },
+    {
+      "file": "src/components/Work.jsx",
+      "line": 133,
+      "ns": "translation",
+      "expression": "`${path}.description`"
+    },
+    {
+      "file": "src/components/Work.jsx",
+      "line": 135,
+      "ns": "translation",
+      "expression": "`${path}.tags`"
+    },
+    {
+      "file": "src/components/Work.jsx",
+      "line": 143,
+      "ns": "translation",
+      "expression": "`${path}.caseStudyLabel`"
+    }
+  ],
+  "emptyValues": {
+    "vi": {
+      "translation": [
+        "skills.technicalLevel",
+        "contact.linkedinUrl",
+        "contact.behanceUrl",
+        "footer.websiteUrl"
+      ],
+      "lab": [
+        "end.line2"
+      ],
+      "scene": []
+    },
+    "en": {
+      "translation": [
+        "skills.technicalLevel",
+        "contact.linkedinUrl",
+        "contact.behanceUrl",
+        "footer.websiteUrl",
+        "common.profile.englishName"
+      ],
+      "lab": [
+        "end.line2"
+      ],
+      "scene": []
+    }
+  }
+}

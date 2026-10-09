@@ -1,0 +1,62 @@
+[
+  {
+    "path": "src/components/About.jsx",
+    "before": "2ba1f5a3121422cb888df85680a5ec737a95393ffe28c45675cd3e54a3f899ed",
+    "after": "e93ff9b70b8c30e1014d5410b97f0e3d24800f5704f33f671c71f0ed21d36824",
+    "owned": true
+  },
+  {
+    "path": "src/components/Cursor.jsx",
+    "before": "f2f52e5a979d80a2c9d6f26b3ed40d378e79b62577a256fd7d04e95edac1a7fd",
+    "after": "a9982c10714347b0267980890c32cff5e607412388cf404df03545de5e590eda",
+    "owned": false
+  },
+  {
+    "path": "src/components/Marquee.jsx",
+    "before": "e3f9c4554f46cc29863658164727e8a96886c4a9bb62fa97e8eb1fea1229a7b5",
+    "after": "3c5a13958c1a2939c4e603ad3920b40eac1648ec6e9bc47e4bce6389805bedba",
+    "owned": true
+  },
+  {
+    "path": "src/components/sections/Contact.jsx",
+    "before": "271768ab8b36cdb57a352a1cc5c686aecc1740be1a2fc29ef0a4ddc626ad8b8c",
+    "after": "6759af14864e40c2e112aedefae83df6f59e595e335b368280a7d9970a22c9c4",
+    "owned": false
+  },
+  {
+    "path": "src/components/sections/Experience.jsx",
+    "before": "629caefa3ee5a713e6fe581d844c46957a1d6190f3bedc3b5ed35c7afe055ea8",
+    "after": "212f17b0cb1cf0e83e3239cd7d221f650fa5c46aa0db50429a723c4e030d1d63",
+    "owned": true
+  },
+  {
+    "path": "src/components/sections/Playground.jsx",
+    "before": "82a3129a6318fb93d643919c23aeb39519501ee3ddaafa370b3be5e222851582",
+    "after": "5974e3344483c93fc7664548bac297396eae3f750c64b38abcba3dc89041b9be",
+    "owned": true
+  },
+  {
+    "path": "src/components/sections/Skills.jsx",
+    "before": "23cb44b0aa9aeb571233ff1a6bbed1b7843ad7d1fa748283de00806f12bac63a",
+    "after": "310635fde52732a976ce7d5cf22c499592767a4130373fc12edc127e0e24e824",
+    "owned": false
+  },
+  {
+    "path": "src/components/Work.jsx",
+    "before": "c60efa849f011a6defb6a4cc4ed44490022dd45201ccc8b9d0ee4a28cb4201af",
+    "after": "fbd52490aa4658ca21c8cc70b71bcb6b70a38ac778ec9b6588027a3e3b33cf53",
+    "owned": false
+  },
+  {
+    "path": "src/hooks/useSmoothScroll.js",
+    "before": "f436446ba8825fce2349d281ef53edc39c26da3fd0445e4cc116606247641369",
+    "after": "2dc0684b3f94d6ba7075d643b75caa3112bc5bd8a89d9d39ceb698b2129689cb",
+    "owned": true
+  },
+  {
+    "path": "src/index.css",
+    "before": "89c1934f1f8438031c79c0b1131519c28303536e9b09f548e63f05159f3bb6fe",
+    "after": "ca28e4691568621beb1a38b49a6373403c6b63e8eb86e6b4dd21fb0abb1b1ad5",
+    "owned": false
+  }
+]

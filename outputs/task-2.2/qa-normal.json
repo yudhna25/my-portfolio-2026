@@ -1,0 +1,727 @@
+{
+  "passed": 36,
+  "total": 36,
+  "results": [
+    {
+      "name": "initial: closed, unlocked, one owned Nav trigger",
+      "pass": true,
+      "actual": {
+        "open": false,
+        "modal": false,
+        "clip": "inset(0% 0% 100% 100%)",
+        "depth": "none",
+        "opacity": "0",
+        "locked": false,
+        "paused": false,
+        "scrollY": 0,
+        "focus": "Run checks",
+        "inside": false,
+        "expanded": "false",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "open: modal, expanded, focused, scroll locked",
+      "pass": true,
+      "actual": {
+        "open": true,
+        "modal": true,
+        "clip": "inset(0%)",
+        "depth": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "locked": true,
+        "paused": true,
+        "scrollY": 0,
+        "focus": "Đóng menu điều hướng",
+        "inside": true,
+        "expanded": "true",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "transition reaches clip/depth/opacity endpoint",
+      "pass": true,
+      "actual": {
+        "open": true,
+        "modal": true,
+        "clip": "inset(0%)",
+        "depth": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "locked": true,
+        "paused": true,
+        "scrollY": 0,
+        "focus": "Đóng menu điều hướng",
+        "inside": true,
+        "expanded": "true",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "Shift+Tab wraps first to last control",
+      "pass": true,
+      "actual": {
+        "open": true,
+        "modal": true,
+        "clip": "inset(0%)",
+        "depth": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "locked": true,
+        "paused": true,
+        "scrollY": 0,
+        "focus": "En",
+        "inside": true,
+        "expanded": "true",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "Tab wraps last to first control",
+      "pass": true,
+      "actual": {
+        "open": true,
+        "modal": true,
+        "clip": "inset(0%)",
+        "depth": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "locked": true,
+        "paused": true,
+        "scrollY": 0,
+        "focus": "Đóng menu điều hướng",
+        "inside": true,
+        "expanded": "true",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "24 spatial grid columns",
+      "pass": true,
+      "actual": {
+        "open": true,
+        "modal": true,
+        "clip": "inset(0%)",
+        "depth": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "locked": true,
+        "paused": true,
+        "scrollY": 0,
+        "focus": "Đóng menu điều hướng",
+        "inside": true,
+        "expanded": "true",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "seven links share exact Nav order",
+      "pass": true,
+      "actual": {
+        "open": true,
+        "modal": true,
+        "clip": "inset(0%)",
+        "depth": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "locked": true,
+        "paused": true,
+        "scrollY": 0,
+        "focus": "Đóng menu điều hướng",
+        "inside": true,
+        "expanded": "true",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "two text spans per link; duplicate hidden to AT",
+      "pass": true,
+      "actual": {
+        "open": true,
+        "modal": true,
+        "clip": "inset(0%)",
+        "depth": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "locked": true,
+        "paused": true,
+        "scrollY": 0,
+        "focus": "Đóng menu điều hướng",
+        "inside": true,
+        "expanded": "true",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "three unavailable links excluded from keyboard",
+      "pass": true,
+      "actual": {
+        "open": true,
+        "modal": true,
+        "clip": "inset(0%)",
+        "depth": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "locked": true,
+        "paused": true,
+        "scrollY": 0,
+        "focus": "Đóng menu điều hướng",
+        "inside": true,
+        "expanded": "true",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "unavailable link keeps menu open",
+      "pass": true,
+      "actual": {
+        "open": true,
+        "modal": true,
+        "clip": "inset(0%)",
+        "depth": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "locked": true,
+        "paused": true,
+        "scrollY": 0,
+        "focus": "Đóng menu điều hướng",
+        "inside": true,
+        "expanded": "true",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "native modal blocks outside focus",
+      "pass": true,
+      "actual": {
+        "open": true,
+        "modal": true,
+        "clip": "inset(0%)",
+        "depth": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "locked": true,
+        "paused": true,
+        "scrollY": 0,
+        "focus": "Đóng menu điều hướng",
+        "inside": true,
+        "expanded": "true",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "background is locked by CSS and smoother",
+      "pass": true,
+      "actual": {
+        "open": true,
+        "modal": true,
+        "clip": "inset(0%)",
+        "depth": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "locked": true,
+        "paused": true,
+        "scrollY": 0,
+        "focus": "Đóng menu điều hướng",
+        "inside": true,
+        "expanded": "true",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "inline En toggle uses language store and translations",
+      "pass": true,
+      "actual": {
+        "open": true,
+        "modal": true,
+        "clip": "inset(0%)",
+        "depth": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "locked": true,
+        "paused": true,
+        "scrollY": 0,
+        "focus": "Close navigation menu",
+        "inside": true,
+        "expanded": "true",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "inline Vi toggle restores default labels",
+      "pass": true,
+      "actual": {
+        "open": true,
+        "modal": true,
+        "clip": "inset(0%)",
+        "depth": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "locked": true,
+        "paused": true,
+        "scrollY": 0,
+        "focus": "Đóng menu điều hướng",
+        "inside": true,
+        "expanded": "true",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "footer focus cannot scroll the outer dialog",
+      "pass": true,
+      "actual": {
+        "open": true,
+        "modal": true,
+        "clip": "inset(0%)",
+        "depth": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "locked": true,
+        "paused": true,
+        "scrollY": 0,
+        "focus": "Vi",
+        "inside": true,
+        "expanded": "true",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "Esc/cancel closes, restores scroll and trigger focus",
+      "pass": true,
+      "actual": {
+        "open": false,
+        "modal": false,
+        "clip": "inset(0% 0% 100% 100%)",
+        "depth": "none",
+        "opacity": "0",
+        "locked": false,
+        "paused": false,
+        "scrollY": 0,
+        "focus": "Mở menu điều hướng",
+        "inside": false,
+        "expanded": "false",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "non-interactive overlay space closes",
+      "pass": true,
+      "actual": {
+        "open": false,
+        "modal": false,
+        "clip": "inset(0% 0% 100% 100%)",
+        "depth": "none",
+        "opacity": "0",
+        "locked": false,
+        "paused": false,
+        "scrollY": 0,
+        "focus": "Mở menu điều hướng",
+        "inside": false,
+        "expanded": "false",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "close then scroll to about with 80px offset",
+      "pass": true,
+      "actual": {
+        "top": 82.74816131591797,
+        "open": false,
+        "modal": false,
+        "clip": "inset(0% 0% 100% 100%)",
+        "depth": "none",
+        "opacity": "0",
+        "locked": false,
+        "paused": false,
+        "scrollY": 640,
+        "focus": "Mở menu điều hướng",
+        "inside": false,
+        "expanded": "false",
+        "navY": -72,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "close then scroll to work with 80px offset",
+      "pass": true,
+      "actual": {
+        "top": 81.36576080322266,
+        "open": false,
+        "modal": false,
+        "clip": "inset(0% 0% 100% 100%)",
+        "depth": "none",
+        "opacity": "0",
+        "locked": false,
+        "paused": false,
+        "scrollY": 1360,
+        "focus": "Mở menu điều hướng",
+        "inside": false,
+        "expanded": "false",
+        "navY": -72,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "close then scroll to education with 80px offset",
+      "pass": true,
+      "actual": {
+        "top": 82.88639831542969,
+        "open": false,
+        "modal": false,
+        "clip": "inset(0% 0% 100% 100%)",
+        "depth": "none",
+        "opacity": "0",
+        "locked": false,
+        "paused": false,
+        "scrollY": 2800,
+        "focus": "Mở menu điều hướng",
+        "inside": false,
+        "expanded": "false",
+        "navY": -72,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "close then scroll to contact with 80px offset",
+      "pass": true,
+      "actual": {
+        "top": 82.0742416381836,
+        "open": false,
+        "modal": false,
+        "clip": "inset(0% 0% 100% 100%)",
+        "depth": "none",
+        "opacity": "0",
+        "locked": false,
+        "paused": false,
+        "scrollY": 4960,
+        "focus": "Mở menu điều hướng",
+        "inside": false,
+        "expanded": "false",
+        "navY": -72,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "original Nav auto-hide still works",
+      "pass": true,
+      "actual": {
+        "open": false,
+        "modal": false,
+        "clip": "inset(0% 0% 100% 100%)",
+        "depth": "none",
+        "opacity": "0",
+        "locked": false,
+        "paused": false,
+        "scrollY": 200,
+        "focus": "Chuyển đến nội dung chínhANH DUYVề tôiDự",
+        "inside": false,
+        "expanded": "false",
+        "navY": -72,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "original Nav reveals on upward scroll",
+      "pass": true,
+      "actual": {
+        "open": false,
+        "modal": false,
+        "clip": "inset(0% 0% 100% 100%)",
+        "depth": "none",
+        "opacity": "0",
+        "locked": false,
+        "paused": false,
+        "scrollY": 100,
+        "focus": "Chuyển đến nội dung chínhANH DUYVề tôiDự",
+        "inside": false,
+        "expanded": "false",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "live motion change keeps modal/scroll lock",
+      "pass": true,
+      "actual": {
+        "open": true,
+        "modal": true,
+        "clip": "inset(0%)",
+        "depth": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "locked": true,
+        "paused": null,
+        "scrollY": 0,
+        "focus": "Đóng menu điều hướng",
+        "inside": true,
+        "expanded": "true",
+        "navY": 0,
+        "triggers": 0,
+        "reduced": true
+      }
+    },
+    {
+      "name": "live motion restore re-locks replacement smoother",
+      "pass": true,
+      "actual": {
+        "open": true,
+        "modal": true,
+        "clip": "inset(0%)",
+        "depth": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "locked": true,
+        "paused": true,
+        "scrollY": 0,
+        "focus": "Đóng menu điều hướng",
+        "inside": true,
+        "expanded": "true",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "motion lifecycle close restores lock/smoother",
+      "pass": true,
+      "actual": {
+        "open": false,
+        "modal": false,
+        "clip": "inset(0% 0% 100% 100%)",
+        "depth": "none",
+        "opacity": "0",
+        "locked": false,
+        "paused": false,
+        "scrollY": 0,
+        "focus": "Mở menu điều hướng",
+        "inside": false,
+        "expanded": "false",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "previously paused smoother remains paused",
+      "pass": true,
+      "actual": {
+        "open": false,
+        "modal": false,
+        "clip": "inset(0% 0% 100% 100%)",
+        "depth": "none",
+        "opacity": "0",
+        "locked": false,
+        "paused": true,
+        "scrollY": 0,
+        "focus": "Mở menu điều hướng",
+        "inside": false,
+        "expanded": "false",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "unmount 1: scroll and modal released",
+      "pass": true,
+      "actual": {
+        "open": false,
+        "modal": false,
+        "clip": null,
+        "depth": null,
+        "opacity": null,
+        "locked": false,
+        "paused": false,
+        "scrollY": 0,
+        "focus": "MenuOverlay 2.2aboutworkskillseducatione",
+        "inside": false,
+        "navY": 0,
+        "triggers": 0,
+        "reduced": false
+      }
+    },
+    {
+      "name": "remount 1: closed, no duplicate trigger",
+      "pass": true,
+      "actual": {
+        "open": false,
+        "modal": false,
+        "clip": "inset(0% 0% 100% 100%)",
+        "depth": "none",
+        "opacity": "0",
+        "locked": false,
+        "paused": false,
+        "scrollY": 0,
+        "focus": "Chuyển đến nội dung chínhANH DUYVề tôiDự",
+        "inside": false,
+        "expanded": "false",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "unmount 2: scroll and modal released",
+      "pass": true,
+      "actual": {
+        "open": false,
+        "modal": false,
+        "clip": null,
+        "depth": null,
+        "opacity": null,
+        "locked": false,
+        "paused": false,
+        "scrollY": 0,
+        "focus": "MenuOverlay 2.2aboutworkskillseducatione",
+        "inside": false,
+        "navY": 0,
+        "triggers": 0,
+        "reduced": false
+      }
+    },
+    {
+      "name": "remount 2: closed, no duplicate trigger",
+      "pass": true,
+      "actual": {
+        "open": false,
+        "modal": false,
+        "clip": "inset(0% 0% 100% 100%)",
+        "depth": "none",
+        "opacity": "0",
+        "locked": false,
+        "paused": false,
+        "scrollY": 0,
+        "focus": "Chuyển đến nội dung chínhANH DUYVề tôiDự",
+        "inside": false,
+        "expanded": "false",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "unmount 3: scroll and modal released",
+      "pass": true,
+      "actual": {
+        "open": false,
+        "modal": false,
+        "clip": null,
+        "depth": null,
+        "opacity": null,
+        "locked": false,
+        "paused": false,
+        "scrollY": 0,
+        "focus": "MenuOverlay 2.2aboutworkskillseducatione",
+        "inside": false,
+        "navY": 0,
+        "triggers": 0,
+        "reduced": false
+      }
+    },
+    {
+      "name": "remount 3: closed, no duplicate trigger",
+      "pass": true,
+      "actual": {
+        "open": false,
+        "modal": false,
+        "clip": "inset(0% 0% 100% 100%)",
+        "depth": "none",
+        "opacity": "0",
+        "locked": false,
+        "paused": false,
+        "scrollY": 0,
+        "focus": "Chuyển đến nội dung chínhANH DUYVề tôiDự",
+        "inside": false,
+        "expanded": "false",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "rapid open/close releases lock",
+      "pass": true,
+      "actual": {
+        "open": false,
+        "modal": false,
+        "clip": "inset(0% 0% 100% 100%)",
+        "depth": "none",
+        "opacity": "0",
+        "locked": false,
+        "paused": false,
+        "scrollY": 0,
+        "focus": "Chuyển đến nội dung chínhANH DUYVề tôiDự",
+        "inside": false,
+        "expanded": "false",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "reopen during reverse keeps modal/lock",
+      "pass": true,
+      "actual": {
+        "open": true,
+        "modal": true,
+        "clip": "inset(0%)",
+        "depth": "matrix(1, 0, 0, 1, 0, 0)",
+        "opacity": "1",
+        "locked": true,
+        "paused": true,
+        "scrollY": 0,
+        "focus": "Đóng menu điều hướng",
+        "inside": true,
+        "expanded": "true",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "final state has no scroll tween or lock leak",
+      "pass": true,
+      "actual": {
+        "open": false,
+        "modal": false,
+        "clip": "inset(0% 0% 100% 100%)",
+        "depth": "none",
+        "opacity": "0",
+        "locked": false,
+        "paused": false,
+        "scrollY": 0,
+        "focus": "Mở menu điều hướng",
+        "inside": false,
+        "expanded": "false",
+        "navY": 0,
+        "triggers": 1,
+        "reduced": false
+      }
+    }
+  ]
+}

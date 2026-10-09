@@ -1,0 +1,5524 @@
+{
+  "status": "fail",
+  "base": "http://127.0.0.1:4173",
+  "browser": "154.0.4258.62",
+  "checkedAt": "2026-10-08T17:52:16.116Z",
+  "configurations": [
+    {
+      "width": 390,
+      "lang": "vi",
+      "reduced": false,
+      "status": "pass",
+      "errors": [],
+      "warnings": [
+        "Service Worker registration blocked by Playwright",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+      ],
+      "states": [
+        {
+          "url": "/#work",
+          "documentID": "50s9ecvsl3g",
+          "lang": "vi",
+          "reduced": false,
+          "scrollY": 9315,
+          "visibleScroll": 9315,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Trải nghiệm không gian vũ trụ điện ảnh, tối giản và hướng tới người dùng.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": null,
+          "historyLength": 2,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "focusin",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchmove",
+              "touchmove",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "gesturestart",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchcancel",
+              "touchcancel",
+              "touchend",
+              "touchend",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 29,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 29
+            },
+            "Texture": {
+              "created": 5,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 5
+            },
+            "Framebuffer": {
+              "created": 4,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 4
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 7,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 7
+            },
+            "Shader": {
+              "created": 14,
+              "deleted": 14,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 112.796875
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "works-selected"
+        },
+        {
+          "url": "/projects/edura",
+          "documentID": "50s9ecvsl3g",
+          "lang": "vi",
+          "reduced": false,
+          "scrollY": 0,
+          "visibleScroll": 0,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 0,
+          "reader": 1,
+          "main": 1,
+          "focus": "edura-title",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "EDURA LMS — UI/UX concept · Trần Vũ Anh Duy",
+          "meta": "Đồ án cuối kỳ UX/UI tại Arena Multimedia: concept và prototype EDURA LMS trên Figma. Vai trò Lead UI, quyết định giao diện và những giới hạn thực tế của dự án.",
+          "canonical": "https://stellar-odyssey.vercel.app/projects/edura",
+          "history": {
+            "stellar": {
+              "id": "04b7896f-1d2c-477b-b986-67d6a4c9250e",
+              "from": "4e97e6b5-0bf6-4aba-9efc-2a3f3860c95d"
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "touchcancel",
+              "touchend",
+              "touchmove",
+              "touchmove",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 29,
+              "deleted": 29,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Texture": {
+              "created": 5,
+              "deleted": 1,
+              "contextLost": 4,
+              "live": 0
+            },
+            "Framebuffer": {
+              "created": 4,
+              "deleted": 1,
+              "contextLost": 3,
+              "live": 0
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 7,
+              "deleted": 1,
+              "contextLost": 6,
+              "live": 0
+            },
+            "Shader": {
+              "created": 14,
+              "deleted": 14,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {},
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "native-enter-reader"
+        },
+        {
+          "url": "/#work",
+          "documentID": "50s9ecvsl3g",
+          "lang": "vi",
+          "reduced": false,
+          "scrollY": 9315,
+          "visibleScroll": 9315,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Trải nghiệm không gian vũ trụ điện ảnh, tối giản và hướng tới người dùng.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": {
+            "stellar": {
+              "id": "4e97e6b5-0bf6-4aba-9efc-2a3f3860c95d",
+              "snapshot": {
+                "y": 9315,
+                "width": 390,
+                "height": 900,
+                "chapter": "works",
+                "p": 0.12498914930555556,
+                "scrollProgress": 0.8185413005272407,
+                "selection": "edura",
+                "orbit": {
+                  "phase": 0.05436115859231995,
+                  "origin": 0,
+                  "velocity": 0.014483048446080293,
+                  "latched": false,
+                  "visited": true,
+                  "captures": 0,
+                  "resumePending": false
+                },
+                "pose": [
+                  0,
+                  4,
+                  -160,
+                  75.60000000000001,
+                  0,
+                  -210
+                ],
+                "focus": "work-case-edura"
+              }
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "focusin",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchmove",
+              "touchmove",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "gesturestart",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchcancel",
+              "touchcancel",
+              "touchend",
+              "touchend",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 58,
+              "deleted": 29,
+              "contextLost": 0,
+              "live": 29
+            },
+            "Texture": {
+              "created": 10,
+              "deleted": 1,
+              "contextLost": 4,
+              "live": 5
+            },
+            "Framebuffer": {
+              "created": 8,
+              "deleted": 1,
+              "contextLost": 3,
+              "live": 4
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 14,
+              "deleted": 1,
+              "contextLost": 6,
+              "live": 7
+            },
+            "Shader": {
+              "created": 28,
+              "deleted": 28,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 112.796875
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "native-back"
+        },
+        {
+          "url": "/projects/edura",
+          "documentID": "50s9ecvsl3g",
+          "lang": "vi",
+          "reduced": false,
+          "scrollY": 0,
+          "visibleScroll": 0,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 0,
+          "reader": 1,
+          "main": 1,
+          "focus": "edura-title",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "EDURA LMS — UI/UX concept · Trần Vũ Anh Duy",
+          "meta": "Đồ án cuối kỳ UX/UI tại Arena Multimedia: concept và prototype EDURA LMS trên Figma. Vai trò Lead UI, quyết định giao diện và những giới hạn thực tế của dự án.",
+          "canonical": "https://stellar-odyssey.vercel.app/projects/edura",
+          "history": {
+            "stellar": {
+              "id": "04b7896f-1d2c-477b-b986-67d6a4c9250e",
+              "from": "4e97e6b5-0bf6-4aba-9efc-2a3f3860c95d"
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "touchcancel",
+              "touchend",
+              "touchmove",
+              "touchmove",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 58,
+              "deleted": 58,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Texture": {
+              "created": 10,
+              "deleted": 2,
+              "contextLost": 8,
+              "live": 0
+            },
+            "Framebuffer": {
+              "created": 8,
+              "deleted": 2,
+              "contextLost": 6,
+              "live": 0
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 14,
+              "deleted": 2,
+              "contextLost": 12,
+              "live": 0
+            },
+            "Shader": {
+              "created": 28,
+              "deleted": 28,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {},
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "native-forward"
+        },
+        {
+          "url": "/#work",
+          "documentID": "50s9ecvsl3g",
+          "lang": "vi",
+          "reduced": false,
+          "scrollY": 9315,
+          "visibleScroll": 9315,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Trải nghiệm không gian vũ trụ điện ảnh, tối giản và hướng tới người dùng.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": {
+            "stellar": {
+              "id": "4e97e6b5-0bf6-4aba-9efc-2a3f3860c95d",
+              "snapshot": {
+                "y": 9315,
+                "width": 390,
+                "height": 900,
+                "chapter": "works",
+                "p": 0.12498914930555556,
+                "scrollProgress": 0.8185413005272407,
+                "selection": "edura",
+                "orbit": {
+                  "phase": 0.05436115859231995,
+                  "origin": 0,
+                  "velocity": 0.014483048446080293,
+                  "latched": false,
+                  "visited": true,
+                  "captures": 0,
+                  "resumePending": false
+                },
+                "pose": [
+                  0,
+                  4,
+                  -160,
+                  75.60000000000001,
+                  0,
+                  -210
+                ],
+                "focus": "work-case-edura"
+              }
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "focusin",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchmove",
+              "touchmove",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "gesturestart",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchcancel",
+              "touchcancel",
+              "touchend",
+              "touchend",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 87,
+              "deleted": 58,
+              "contextLost": 0,
+              "live": 29
+            },
+            "Texture": {
+              "created": 15,
+              "deleted": 2,
+              "contextLost": 8,
+              "live": 5
+            },
+            "Framebuffer": {
+              "created": 12,
+              "deleted": 2,
+              "contextLost": 6,
+              "live": 4
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 21,
+              "deleted": 2,
+              "contextLost": 12,
+              "live": 7
+            },
+            "Shader": {
+              "created": 42,
+              "deleted": 42,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 112.796875
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "return"
+        }
+      ],
+      "failedResources": [],
+      "tabPath": [
+        {
+          "id": "work-target-veris",
+          "tag": "BUTTON",
+          "action": false,
+          "outline": "2px"
+        },
+        {
+          "id": "work-target-vie",
+          "tag": "BUTTON",
+          "action": false,
+          "outline": "2px"
+        },
+        {
+          "id": "work-case-edura",
+          "tag": "A",
+          "action": true,
+          "outline": "2px"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "lang": "vi",
+      "reduced": true,
+      "status": "pass",
+      "errors": [],
+      "warnings": [
+        "Service Worker registration blocked by Playwright",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+      ],
+      "states": [
+        {
+          "url": "/#work",
+          "documentID": "gc0rakocspl",
+          "lang": "vi",
+          "reduced": true,
+          "scrollY": 7830,
+          "visibleScroll": 7830,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Trải nghiệm không gian vũ trụ điện ảnh, tối giản và hướng tới người dùng.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": null,
+          "historyLength": 2,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 27,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 27
+            },
+            "Texture": {
+              "created": 5,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 5
+            },
+            "Framebuffer": {
+              "created": 4,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 4
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 6,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 6
+            },
+            "Shader": {
+              "created": 12,
+              "deleted": 12,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 112.796875
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "works-selected"
+        },
+        {
+          "url": "/projects/edura",
+          "documentID": "gc0rakocspl",
+          "lang": "vi",
+          "reduced": true,
+          "scrollY": 0,
+          "visibleScroll": 0,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 0,
+          "reader": 1,
+          "main": 1,
+          "focus": "edura-title",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "EDURA LMS — UI/UX concept · Trần Vũ Anh Duy",
+          "meta": "Đồ án cuối kỳ UX/UI tại Arena Multimedia: concept và prototype EDURA LMS trên Figma. Vai trò Lead UI, quyết định giao diện và những giới hạn thực tế của dự án.",
+          "canonical": "https://stellar-odyssey.vercel.app/projects/edura",
+          "history": {
+            "stellar": {
+              "id": "8925eb86-d2f7-400f-bd1e-d5ba231a4cad",
+              "from": "24a8de81-cbed-4e74-b9f6-e12ec7581205"
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 27,
+              "deleted": 27,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Texture": {
+              "created": 5,
+              "deleted": 1,
+              "contextLost": 4,
+              "live": 0
+            },
+            "Framebuffer": {
+              "created": 4,
+              "deleted": 1,
+              "contextLost": 3,
+              "live": 0
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 6,
+              "deleted": 1,
+              "contextLost": 5,
+              "live": 0
+            },
+            "Shader": {
+              "created": 12,
+              "deleted": 12,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {},
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "native-enter-reader"
+        },
+        {
+          "url": "/#work",
+          "documentID": "gc0rakocspl",
+          "lang": "vi",
+          "reduced": true,
+          "scrollY": 7830,
+          "visibleScroll": 7830,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Trải nghiệm không gian vũ trụ điện ảnh, tối giản và hướng tới người dùng.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": {
+            "stellar": {
+              "id": "24a8de81-cbed-4e74-b9f6-e12ec7581205",
+              "snapshot": {
+                "y": 7830,
+                "width": 390,
+                "height": 900,
+                "chapter": "works",
+                "p": 0.12498914930555556,
+                "scrollProgress": 0.7913087417887822,
+                "selection": "edura",
+                "orbit": {
+                  "phase": 0,
+                  "origin": 0,
+                  "velocity": 0,
+                  "latched": false,
+                  "visited": true,
+                  "captures": 0,
+                  "resumePending": false
+                },
+                "pose": [
+                  0,
+                  4,
+                  -160,
+                  75.60000000000001,
+                  0,
+                  -210
+                ],
+                "focus": "work-case-edura"
+              }
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 54,
+              "deleted": 27,
+              "contextLost": 0,
+              "live": 27
+            },
+            "Texture": {
+              "created": 10,
+              "deleted": 1,
+              "contextLost": 4,
+              "live": 5
+            },
+            "Framebuffer": {
+              "created": 8,
+              "deleted": 1,
+              "contextLost": 3,
+              "live": 4
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 12,
+              "deleted": 1,
+              "contextLost": 5,
+              "live": 6
+            },
+            "Shader": {
+              "created": 24,
+              "deleted": 24,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 112.796875
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "native-back"
+        },
+        {
+          "url": "/projects/edura",
+          "documentID": "gc0rakocspl",
+          "lang": "vi",
+          "reduced": true,
+          "scrollY": 0,
+          "visibleScroll": 0,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 0,
+          "reader": 1,
+          "main": 1,
+          "focus": "edura-title",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "EDURA LMS — UI/UX concept · Trần Vũ Anh Duy",
+          "meta": "Đồ án cuối kỳ UX/UI tại Arena Multimedia: concept và prototype EDURA LMS trên Figma. Vai trò Lead UI, quyết định giao diện và những giới hạn thực tế của dự án.",
+          "canonical": "https://stellar-odyssey.vercel.app/projects/edura",
+          "history": {
+            "stellar": {
+              "id": "8925eb86-d2f7-400f-bd1e-d5ba231a4cad",
+              "from": "24a8de81-cbed-4e74-b9f6-e12ec7581205"
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 54,
+              "deleted": 54,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Texture": {
+              "created": 10,
+              "deleted": 2,
+              "contextLost": 8,
+              "live": 0
+            },
+            "Framebuffer": {
+              "created": 8,
+              "deleted": 2,
+              "contextLost": 6,
+              "live": 0
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 12,
+              "deleted": 2,
+              "contextLost": 10,
+              "live": 0
+            },
+            "Shader": {
+              "created": 24,
+              "deleted": 24,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {},
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "native-forward"
+        },
+        {
+          "url": "/#work",
+          "documentID": "gc0rakocspl",
+          "lang": "vi",
+          "reduced": true,
+          "scrollY": 7830,
+          "visibleScroll": 7830,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Trải nghiệm không gian vũ trụ điện ảnh, tối giản và hướng tới người dùng.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": {
+            "stellar": {
+              "id": "24a8de81-cbed-4e74-b9f6-e12ec7581205",
+              "snapshot": {
+                "y": 7830,
+                "width": 390,
+                "height": 900,
+                "chapter": "works",
+                "p": 0.12498914930555556,
+                "scrollProgress": 0.7913087417887822,
+                "selection": "edura",
+                "orbit": {
+                  "phase": 0,
+                  "origin": 0,
+                  "velocity": 0,
+                  "latched": false,
+                  "visited": true,
+                  "captures": 0,
+                  "resumePending": false
+                },
+                "pose": [
+                  0,
+                  4,
+                  -160,
+                  75.60000000000001,
+                  0,
+                  -210
+                ],
+                "focus": "work-case-edura"
+              }
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 81,
+              "deleted": 54,
+              "contextLost": 0,
+              "live": 27
+            },
+            "Texture": {
+              "created": 15,
+              "deleted": 2,
+              "contextLost": 8,
+              "live": 5
+            },
+            "Framebuffer": {
+              "created": 12,
+              "deleted": 2,
+              "contextLost": 6,
+              "live": 4
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 18,
+              "deleted": 2,
+              "contextLost": 10,
+              "live": 6
+            },
+            "Shader": {
+              "created": 36,
+              "deleted": 36,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 112.796875
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "return"
+        }
+      ],
+      "failedResources": [],
+      "tabPath": [
+        {
+          "id": "work-target-veris",
+          "tag": "BUTTON",
+          "action": false,
+          "outline": "2px"
+        },
+        {
+          "id": "work-target-vie",
+          "tag": "BUTTON",
+          "action": false,
+          "outline": "2px"
+        },
+        {
+          "id": "work-case-edura",
+          "tag": "A",
+          "action": true,
+          "outline": "2px"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "reduced": false,
+      "status": "pass",
+      "errors": [],
+      "warnings": [
+        "Service Worker registration blocked by Playwright",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+      ],
+      "states": [
+        {
+          "url": "/#work",
+          "documentID": "t1mgumcefe8",
+          "lang": "en",
+          "reduced": false,
+          "scrollY": 9336,
+          "visibleScroll": 9336,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Tran Vu Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Portfolio of Tran Vu Anh Duy — Creative Designer specializing in UX/UI, Motion Graphics, and interactive 3D Web. Minimalist, cinematic, user-centric portfolio experience.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": null,
+          "historyLength": 2,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "focusin",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchmove",
+              "touchmove",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "gesturestart",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchcancel",
+              "touchcancel",
+              "touchend",
+              "touchend",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 29,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 29
+            },
+            "Texture": {
+              "created": 5,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 5
+            },
+            "Framebuffer": {
+              "created": 4,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 4
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 7,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 7
+            },
+            "Shader": {
+              "created": 14,
+              "deleted": 14,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 112.796875
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "works-selected"
+        },
+        {
+          "url": "/projects/edura",
+          "documentID": "t1mgumcefe8",
+          "lang": "en",
+          "reduced": false,
+          "scrollY": 0,
+          "visibleScroll": 0,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 0,
+          "reader": 1,
+          "main": 1,
+          "focus": "edura-title",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "EDURA LMS — UI/UX concept · Tran Vu Anh Duy",
+          "meta": "The final UX/UI semester project at Arena Multimedia: an EDURA LMS concept and Figma prototype. Lead UI scope, interface decisions and the project's constraints.",
+          "canonical": "https://stellar-odyssey.vercel.app/projects/edura",
+          "history": {
+            "stellar": {
+              "id": "09b01a3b-df2a-4ba3-a1ec-4c6f9c7c6779",
+              "from": "81992d40-eefb-4270-8dce-d2f9983a0ef4"
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "touchcancel",
+              "touchend",
+              "touchmove",
+              "touchmove",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 29,
+              "deleted": 29,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Texture": {
+              "created": 5,
+              "deleted": 1,
+              "contextLost": 4,
+              "live": 0
+            },
+            "Framebuffer": {
+              "created": 4,
+              "deleted": 1,
+              "contextLost": 3,
+              "live": 0
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 7,
+              "deleted": 1,
+              "contextLost": 6,
+              "live": 0
+            },
+            "Shader": {
+              "created": 14,
+              "deleted": 14,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {},
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "native-enter-reader"
+        },
+        {
+          "url": "/#work",
+          "documentID": "t1mgumcefe8",
+          "lang": "en",
+          "reduced": false,
+          "scrollY": 9336,
+          "visibleScroll": 9336,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Tran Vu Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Portfolio of Tran Vu Anh Duy — Creative Designer specializing in UX/UI, Motion Graphics, and interactive 3D Web. Minimalist, cinematic, user-centric portfolio experience.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": {
+            "stellar": {
+              "id": "81992d40-eefb-4270-8dce-d2f9983a0ef4",
+              "snapshot": {
+                "y": 9336,
+                "width": 390,
+                "height": 900,
+                "chapter": "works",
+                "p": 0.12484809027777778,
+                "scrollProgress": 0.8157273918741809,
+                "selection": "edura",
+                "orbit": {
+                  "phase": 0.05193812656785726,
+                  "origin": 0,
+                  "velocity": 0.018671240592856443,
+                  "latched": false,
+                  "visited": true,
+                  "captures": 0,
+                  "resumePending": false
+                },
+                "pose": [
+                  0,
+                  4,
+                  -160,
+                  75.60000000000001,
+                  0,
+                  -210
+                ],
+                "focus": "work-case-edura"
+              }
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "focusin",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchmove",
+              "touchmove",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "gesturestart",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchcancel",
+              "touchcancel",
+              "touchend",
+              "touchend",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 58,
+              "deleted": 29,
+              "contextLost": 0,
+              "live": 29
+            },
+            "Texture": {
+              "created": 10,
+              "deleted": 1,
+              "contextLost": 4,
+              "live": 5
+            },
+            "Framebuffer": {
+              "created": 8,
+              "deleted": 1,
+              "contextLost": 3,
+              "live": 4
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 14,
+              "deleted": 1,
+              "contextLost": 6,
+              "live": 7
+            },
+            "Shader": {
+              "created": 28,
+              "deleted": 28,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 112.796875
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "native-back"
+        },
+        {
+          "url": "/projects/edura",
+          "documentID": "t1mgumcefe8",
+          "lang": "en",
+          "reduced": false,
+          "scrollY": 0,
+          "visibleScroll": 0,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 0,
+          "reader": 1,
+          "main": 1,
+          "focus": "edura-title",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "EDURA LMS — UI/UX concept · Tran Vu Anh Duy",
+          "meta": "The final UX/UI semester project at Arena Multimedia: an EDURA LMS concept and Figma prototype. Lead UI scope, interface decisions and the project's constraints.",
+          "canonical": "https://stellar-odyssey.vercel.app/projects/edura",
+          "history": {
+            "stellar": {
+              "id": "09b01a3b-df2a-4ba3-a1ec-4c6f9c7c6779",
+              "from": "81992d40-eefb-4270-8dce-d2f9983a0ef4"
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "touchcancel",
+              "touchend",
+              "touchmove",
+              "touchmove",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 58,
+              "deleted": 58,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Texture": {
+              "created": 10,
+              "deleted": 2,
+              "contextLost": 8,
+              "live": 0
+            },
+            "Framebuffer": {
+              "created": 8,
+              "deleted": 2,
+              "contextLost": 6,
+              "live": 0
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 14,
+              "deleted": 2,
+              "contextLost": 12,
+              "live": 0
+            },
+            "Shader": {
+              "created": 28,
+              "deleted": 28,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {},
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "native-forward"
+        },
+        {
+          "url": "/#work",
+          "documentID": "t1mgumcefe8",
+          "lang": "en",
+          "reduced": false,
+          "scrollY": 9336,
+          "visibleScroll": 9336,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Tran Vu Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Portfolio of Tran Vu Anh Duy — Creative Designer specializing in UX/UI, Motion Graphics, and interactive 3D Web. Minimalist, cinematic, user-centric portfolio experience.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": {
+            "stellar": {
+              "id": "81992d40-eefb-4270-8dce-d2f9983a0ef4",
+              "snapshot": {
+                "y": 9336,
+                "width": 390,
+                "height": 900,
+                "chapter": "works",
+                "p": 0.12484809027777778,
+                "scrollProgress": 0.8157273918741809,
+                "selection": "edura",
+                "orbit": {
+                  "phase": 0.05193812656785726,
+                  "origin": 0,
+                  "velocity": 0.018671240592856443,
+                  "latched": false,
+                  "visited": true,
+                  "captures": 0,
+                  "resumePending": false
+                },
+                "pose": [
+                  0,
+                  4,
+                  -160,
+                  75.60000000000001,
+                  0,
+                  -210
+                ],
+                "focus": "work-case-edura"
+              }
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "focusin",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchmove",
+              "touchmove",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "gesturestart",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchcancel",
+              "touchcancel",
+              "touchend",
+              "touchend",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 87,
+              "deleted": 58,
+              "contextLost": 0,
+              "live": 29
+            },
+            "Texture": {
+              "created": 15,
+              "deleted": 2,
+              "contextLost": 8,
+              "live": 5
+            },
+            "Framebuffer": {
+              "created": 12,
+              "deleted": 2,
+              "contextLost": 6,
+              "live": 4
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 21,
+              "deleted": 2,
+              "contextLost": 12,
+              "live": 7
+            },
+            "Shader": {
+              "created": 42,
+              "deleted": 42,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 112.796875
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "return"
+        }
+      ],
+      "failedResources": [],
+      "tabPath": [
+        {
+          "id": "work-target-veris",
+          "tag": "BUTTON",
+          "action": false,
+          "outline": "2px"
+        },
+        {
+          "id": "work-target-vie",
+          "tag": "BUTTON",
+          "action": false,
+          "outline": "2px"
+        },
+        {
+          "id": "work-case-edura",
+          "tag": "A",
+          "action": true,
+          "outline": "2px"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "reduced": true,
+      "status": "pass",
+      "errors": [],
+      "warnings": [
+        "Service Worker registration blocked by Playwright",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+      ],
+      "states": [
+        {
+          "url": "/#work",
+          "documentID": "qxe5aok5znd",
+          "lang": "en",
+          "reduced": true,
+          "scrollY": 7851,
+          "visibleScroll": 7851,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Tran Vu Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Portfolio of Tran Vu Anh Duy — Creative Designer specializing in UX/UI, Motion Graphics, and interactive 3D Web. Minimalist, cinematic, user-centric portfolio experience.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": null,
+          "historyLength": 2,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 27,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 27
+            },
+            "Texture": {
+              "created": 5,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 5
+            },
+            "Framebuffer": {
+              "created": 4,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 4
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 6,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 6
+            },
+            "Shader": {
+              "created": 12,
+              "deleted": 12,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 112.796875
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "works-selected"
+        },
+        {
+          "url": "/projects/edura",
+          "documentID": "qxe5aok5znd",
+          "lang": "en",
+          "reduced": true,
+          "scrollY": 0,
+          "visibleScroll": 0,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 0,
+          "reader": 1,
+          "main": 1,
+          "focus": "edura-title",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "EDURA LMS — UI/UX concept · Tran Vu Anh Duy",
+          "meta": "The final UX/UI semester project at Arena Multimedia: an EDURA LMS concept and Figma prototype. Lead UI scope, interface decisions and the project's constraints.",
+          "canonical": "https://stellar-odyssey.vercel.app/projects/edura",
+          "history": {
+            "stellar": {
+              "id": "4c1e7116-1d5b-4c55-b55a-1b56182cb793",
+              "from": "2d4e6611-4fd1-4dbf-8e2a-78feed98b9ac"
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 27,
+              "deleted": 27,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Texture": {
+              "created": 5,
+              "deleted": 1,
+              "contextLost": 4,
+              "live": 0
+            },
+            "Framebuffer": {
+              "created": 4,
+              "deleted": 1,
+              "contextLost": 3,
+              "live": 0
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 6,
+              "deleted": 1,
+              "contextLost": 5,
+              "live": 0
+            },
+            "Shader": {
+              "created": 12,
+              "deleted": 12,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {},
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "native-enter-reader"
+        },
+        {
+          "url": "/#work",
+          "documentID": "qxe5aok5znd",
+          "lang": "en",
+          "reduced": true,
+          "scrollY": 7851,
+          "visibleScroll": 7851,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Tran Vu Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Portfolio of Tran Vu Anh Duy — Creative Designer specializing in UX/UI, Motion Graphics, and interactive 3D Web. Minimalist, cinematic, user-centric portfolio experience.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": {
+            "stellar": {
+              "id": "2d4e6611-4fd1-4dbf-8e2a-78feed98b9ac",
+              "snapshot": {
+                "y": 7851,
+                "width": 390,
+                "height": 900,
+                "chapter": "works",
+                "p": 0.12484809027777778,
+                "scrollProgress": 0.7882530120481928,
+                "selection": "edura",
+                "orbit": {
+                  "phase": 0,
+                  "origin": 0,
+                  "velocity": 0,
+                  "latched": false,
+                  "visited": true,
+                  "captures": 0,
+                  "resumePending": false
+                },
+                "pose": [
+                  0,
+                  4,
+                  -160,
+                  75.60000000000001,
+                  0,
+                  -210
+                ],
+                "focus": "work-case-edura"
+              }
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 54,
+              "deleted": 27,
+              "contextLost": 0,
+              "live": 27
+            },
+            "Texture": {
+              "created": 10,
+              "deleted": 1,
+              "contextLost": 4,
+              "live": 5
+            },
+            "Framebuffer": {
+              "created": 8,
+              "deleted": 1,
+              "contextLost": 3,
+              "live": 4
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 12,
+              "deleted": 1,
+              "contextLost": 5,
+              "live": 6
+            },
+            "Shader": {
+              "created": 24,
+              "deleted": 24,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 112.796875
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "native-back"
+        },
+        {
+          "url": "/projects/edura",
+          "documentID": "qxe5aok5znd",
+          "lang": "en",
+          "reduced": true,
+          "scrollY": 0,
+          "visibleScroll": 0,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 0,
+          "reader": 1,
+          "main": 1,
+          "focus": "edura-title",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "EDURA LMS — UI/UX concept · Tran Vu Anh Duy",
+          "meta": "The final UX/UI semester project at Arena Multimedia: an EDURA LMS concept and Figma prototype. Lead UI scope, interface decisions and the project's constraints.",
+          "canonical": "https://stellar-odyssey.vercel.app/projects/edura",
+          "history": {
+            "stellar": {
+              "id": "4c1e7116-1d5b-4c55-b55a-1b56182cb793",
+              "from": "2d4e6611-4fd1-4dbf-8e2a-78feed98b9ac"
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 54,
+              "deleted": 54,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Texture": {
+              "created": 10,
+              "deleted": 2,
+              "contextLost": 8,
+              "live": 0
+            },
+            "Framebuffer": {
+              "created": 8,
+              "deleted": 2,
+              "contextLost": 6,
+              "live": 0
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 12,
+              "deleted": 2,
+              "contextLost": 10,
+              "live": 0
+            },
+            "Shader": {
+              "created": 24,
+              "deleted": 24,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {},
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "native-forward"
+        },
+        {
+          "url": "/#work",
+          "documentID": "qxe5aok5znd",
+          "lang": "en",
+          "reduced": true,
+          "scrollY": 7851,
+          "visibleScroll": 7851,
+          "viewport": [
+            390,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Tran Vu Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Portfolio of Tran Vu Anh Duy — Creative Designer specializing in UX/UI, Motion Graphics, and interactive 3D Web. Minimalist, cinematic, user-centric portfolio experience.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": {
+            "stellar": {
+              "id": "2d4e6611-4fd1-4dbf-8e2a-78feed98b9ac",
+              "snapshot": {
+                "y": 7851,
+                "width": 390,
+                "height": 900,
+                "chapter": "works",
+                "p": 0.12484809027777778,
+                "scrollProgress": 0.7882530120481928,
+                "selection": "edura",
+                "orbit": {
+                  "phase": 0,
+                  "origin": 0,
+                  "velocity": 0,
+                  "latched": false,
+                  "visited": true,
+                  "captures": 0,
+                  "resumePending": false
+                },
+                "pose": [
+                  0,
+                  4,
+                  -160,
+                  75.60000000000001,
+                  0,
+                  -210
+                ],
+                "focus": "work-case-edura"
+              }
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 81,
+              "deleted": 54,
+              "contextLost": 0,
+              "live": 27
+            },
+            "Texture": {
+              "created": 15,
+              "deleted": 2,
+              "contextLost": 8,
+              "live": 5
+            },
+            "Framebuffer": {
+              "created": 12,
+              "deleted": 2,
+              "contextLost": 6,
+              "live": 4
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 18,
+              "deleted": 2,
+              "contextLost": 10,
+              "live": 6
+            },
+            "Shader": {
+              "created": 36,
+              "deleted": 36,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 112.796875
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "return"
+        }
+      ],
+      "failedResources": [],
+      "tabPath": [
+        {
+          "id": "work-target-veris",
+          "tag": "BUTTON",
+          "action": false,
+          "outline": "2px"
+        },
+        {
+          "id": "work-target-vie",
+          "tag": "BUTTON",
+          "action": false,
+          "outline": "2px"
+        },
+        {
+          "id": "work-case-edura",
+          "tag": "A",
+          "action": true,
+          "outline": "2px"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "lang": "vi",
+      "reduced": false,
+      "status": "pass",
+      "errors": [],
+      "warnings": [
+        "Service Worker registration blocked by Playwright",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "Service Worker registration blocked by Playwright",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+      ],
+      "states": [
+        {
+          "url": "/#work",
+          "documentID": "bpvwd8zmesm",
+          "lang": "vi",
+          "reduced": false,
+          "scrollY": 7921,
+          "visibleScroll": 7921,
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Trải nghiệm không gian vũ trụ điện ảnh, tối giản và hướng tới người dùng.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": null,
+          "historyLength": 2,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "blur",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "focusin",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "keydown",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointermove",
+              "pointerout",
+              "pointerover",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 35,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 35
+            },
+            "Texture": {
+              "created": 27,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 27
+            },
+            "Framebuffer": {
+              "created": 24,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 24
+            },
+            "Renderbuffer": {
+              "created": 1,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 1
+            },
+            "Program": {
+              "created": 15,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 15
+            },
+            "Shader": {
+              "created": 30,
+              "deleted": 30,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": -0.000019406250430620275,
+            "targetTop": 140.65623474121094
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "works-selected"
+        },
+        {
+          "url": "/projects/edura",
+          "documentID": "bpvwd8zmesm",
+          "lang": "vi",
+          "reduced": false,
+          "scrollY": 0,
+          "visibleScroll": 0,
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 0,
+          "reader": 1,
+          "main": 1,
+          "focus": "edura-title",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "EDURA LMS — UI/UX concept · Trần Vũ Anh Duy",
+          "meta": "Đồ án cuối kỳ UX/UI tại Arena Multimedia: concept và prototype EDURA LMS trên Figma. Vai trò Lead UI, quyết định giao diện và những giới hạn thực tế của dự án.",
+          "canonical": "https://stellar-odyssey.vercel.app/projects/edura",
+          "history": {
+            "stellar": {
+              "id": "558d18e6-723a-4f1a-83c4-6a1d916d2333",
+              "from": "c208247d-6cbe-41e5-bd1e-eeb06b744e5f"
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 35,
+              "deleted": 35,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Texture": {
+              "created": 27,
+              "deleted": 23,
+              "contextLost": 4,
+              "live": 0
+            },
+            "Framebuffer": {
+              "created": 24,
+              "deleted": 21,
+              "contextLost": 3,
+              "live": 0
+            },
+            "Renderbuffer": {
+              "created": 1,
+              "deleted": 1,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 15,
+              "deleted": 6,
+              "contextLost": 9,
+              "live": 0
+            },
+            "Shader": {
+              "created": 30,
+              "deleted": 30,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {},
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "native-enter-reader"
+        },
+        {
+          "url": "/#work",
+          "documentID": "bpvwd8zmesm",
+          "lang": "vi",
+          "reduced": false,
+          "scrollY": 7921,
+          "visibleScroll": 7921,
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Trải nghiệm không gian vũ trụ điện ảnh, tối giản và hướng tới người dùng.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": {
+            "stellar": {
+              "id": "c208247d-6cbe-41e5-bd1e-eeb06b744e5f",
+              "snapshot": {
+                "y": 7920.997578,
+                "width": 1440,
+                "height": 900,
+                "chapter": "works",
+                "p": 0.12506343680449908,
+                "scrollProgress": 0.787219,
+                "selection": "edura",
+                "orbit": {
+                  "phase": 0.05300758296238803,
+                  "origin": 0,
+                  "velocity": 0.017294502220307425,
+                  "latched": false,
+                  "visited": true,
+                  "captures": 0,
+                  "resumePending": false
+                },
+                "pose": [
+                  0,
+                  4,
+                  -160,
+                  120.96000000000001,
+                  0,
+                  -210
+                ],
+                "focus": "work-case-edura"
+              }
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "blur",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "focusin",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "keydown",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointermove",
+              "pointerout",
+              "pointerover",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 66,
+              "deleted": 35,
+              "contextLost": 0,
+              "live": 31
+            },
+            "Texture": {
+              "created": 54,
+              "deleted": 23,
+              "contextLost": 4,
+              "live": 27
+            },
+            "Framebuffer": {
+              "created": 48,
+              "deleted": 21,
+              "contextLost": 3,
+              "live": 24
+            },
+            "Renderbuffer": {
+              "created": 2,
+              "deleted": 1,
+              "contextLost": 0,
+              "live": 1
+            },
+            "Program": {
+              "created": 28,
+              "deleted": 6,
+              "contextLost": 9,
+              "live": 13
+            },
+            "Shader": {
+              "created": 56,
+              "deleted": 56,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 140.65625
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "native-back"
+        },
+        {
+          "url": "/projects/edura",
+          "documentID": "bpvwd8zmesm",
+          "lang": "vi",
+          "reduced": false,
+          "scrollY": 0,
+          "visibleScroll": 0,
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 0,
+          "reader": 1,
+          "main": 1,
+          "focus": "edura-title",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "EDURA LMS — UI/UX concept · Trần Vũ Anh Duy",
+          "meta": "Đồ án cuối kỳ UX/UI tại Arena Multimedia: concept và prototype EDURA LMS trên Figma. Vai trò Lead UI, quyết định giao diện và những giới hạn thực tế của dự án.",
+          "canonical": "https://stellar-odyssey.vercel.app/projects/edura",
+          "history": {
+            "stellar": {
+              "id": "558d18e6-723a-4f1a-83c4-6a1d916d2333",
+              "from": "c208247d-6cbe-41e5-bd1e-eeb06b744e5f"
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 66,
+              "deleted": 66,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Texture": {
+              "created": 54,
+              "deleted": 46,
+              "contextLost": 8,
+              "live": 0
+            },
+            "Framebuffer": {
+              "created": 48,
+              "deleted": 42,
+              "contextLost": 6,
+              "live": 0
+            },
+            "Renderbuffer": {
+              "created": 2,
+              "deleted": 2,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 28,
+              "deleted": 12,
+              "contextLost": 16,
+              "live": 0
+            },
+            "Shader": {
+              "created": 56,
+              "deleted": 56,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {},
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "native-forward"
+        },
+        {
+          "url": "/#work",
+          "documentID": "bpvwd8zmesm",
+          "lang": "vi",
+          "reduced": false,
+          "scrollY": 7921,
+          "visibleScroll": 7921,
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Trải nghiệm không gian vũ trụ điện ảnh, tối giản và hướng tới người dùng.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": {
+            "stellar": {
+              "id": "c208247d-6cbe-41e5-bd1e-eeb06b744e5f",
+              "snapshot": {
+                "y": 7920.997578,
+                "width": 1440,
+                "height": 900,
+                "chapter": "works",
+                "p": 0.12506343680449908,
+                "scrollProgress": 0.787219,
+                "selection": "edura",
+                "orbit": {
+                  "phase": 0.05300758296238803,
+                  "origin": 0,
+                  "velocity": 0.017294502220307425,
+                  "latched": false,
+                  "visited": true,
+                  "captures": 0,
+                  "resumePending": false
+                },
+                "pose": [
+                  0,
+                  4,
+                  -160,
+                  120.96000000000001,
+                  0,
+                  -210
+                ],
+                "focus": "work-case-edura"
+              }
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "blur",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "focusin",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "keydown",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointermove",
+              "pointerout",
+              "pointerover",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 97,
+              "deleted": 66,
+              "contextLost": 0,
+              "live": 31
+            },
+            "Texture": {
+              "created": 81,
+              "deleted": 46,
+              "contextLost": 8,
+              "live": 27
+            },
+            "Framebuffer": {
+              "created": 72,
+              "deleted": 42,
+              "contextLost": 6,
+              "live": 24
+            },
+            "Renderbuffer": {
+              "created": 3,
+              "deleted": 2,
+              "contextLost": 0,
+              "live": 1
+            },
+            "Program": {
+              "created": 41,
+              "deleted": 12,
+              "contextLost": 16,
+              "live": 13
+            },
+            "Shader": {
+              "created": 82,
+              "deleted": 82,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 140.65625
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "return"
+        },
+        {
+          "url": "/projects/edura",
+          "documentID": "bpvwd8zmesm",
+          "lang": "vi",
+          "reduced": false,
+          "scrollY": 0,
+          "visibleScroll": 0,
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 0,
+          "reader": 1,
+          "main": 1,
+          "focus": "edura-title",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "EDURA LMS — UI/UX concept · Trần Vũ Anh Duy",
+          "meta": "Đồ án cuối kỳ UX/UI tại Arena Multimedia: concept và prototype EDURA LMS trên Figma. Vai trò Lead UI, quyết định giao diện và những giới hạn thực tế của dự án.",
+          "canonical": "https://stellar-odyssey.vercel.app/projects/edura",
+          "history": {
+            "stellar": {
+              "id": "ea91cb9b-ccde-4770-bf76-50b0cdddb15d",
+              "from": "51f194bf-4d8e-4845-ae1e-0b64218d17ca"
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 97,
+              "deleted": 97,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Texture": {
+              "created": 81,
+              "deleted": 69,
+              "contextLost": 12,
+              "live": 0
+            },
+            "Framebuffer": {
+              "created": 72,
+              "deleted": 63,
+              "contextLost": 9,
+              "live": 0
+            },
+            "Renderbuffer": {
+              "created": 3,
+              "deleted": 3,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 41,
+              "deleted": 18,
+              "contextLost": 23,
+              "live": 0
+            },
+            "Shader": {
+              "created": 82,
+              "deleted": 82,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {},
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "cycle1-reader"
+        },
+        {
+          "url": "/#work",
+          "documentID": "bpvwd8zmesm",
+          "lang": "vi",
+          "reduced": false,
+          "scrollY": 7921,
+          "visibleScroll": 7921,
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Trải nghiệm không gian vũ trụ điện ảnh, tối giản và hướng tới người dùng.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": {
+            "stellar": {
+              "id": "51f194bf-4d8e-4845-ae1e-0b64218d17ca",
+              "snapshot": {
+                "y": 7921,
+                "width": 1440,
+                "height": 900,
+                "chapter": "works",
+                "p": 0.12506510416666666,
+                "scrollProgress": 0.7872192407076128,
+                "selection": "edura",
+                "orbit": {
+                  "phase": 0.05300758296238803,
+                  "origin": 0,
+                  "velocity": 0,
+                  "latched": false,
+                  "visited": true,
+                  "captures": 0,
+                  "resumePending": false
+                },
+                "pose": [
+                  0,
+                  4,
+                  -160,
+                  120.96000000000001,
+                  0,
+                  -210
+                ],
+                "focus": "work-case-edura"
+              }
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "blur",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "focusin",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "keydown",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointermove",
+              "pointerout",
+              "pointerover",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 128,
+              "deleted": 97,
+              "contextLost": 0,
+              "live": 31
+            },
+            "Texture": {
+              "created": 108,
+              "deleted": 69,
+              "contextLost": 12,
+              "live": 27
+            },
+            "Framebuffer": {
+              "created": 96,
+              "deleted": 63,
+              "contextLost": 9,
+              "live": 24
+            },
+            "Renderbuffer": {
+              "created": 4,
+              "deleted": 3,
+              "contextLost": 0,
+              "live": 1
+            },
+            "Program": {
+              "created": 54,
+              "deleted": 18,
+              "contextLost": 23,
+              "live": 13
+            },
+            "Shader": {
+              "created": 108,
+              "deleted": 108,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 140.65625
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "cycle1-restore"
+        },
+        {
+          "url": "/projects/edura",
+          "documentID": "bpvwd8zmesm",
+          "lang": "vi",
+          "reduced": false,
+          "scrollY": 0,
+          "visibleScroll": 0,
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 0,
+          "reader": 1,
+          "main": 1,
+          "focus": "edura-title",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "EDURA LMS — UI/UX concept · Trần Vũ Anh Duy",
+          "meta": "Đồ án cuối kỳ UX/UI tại Arena Multimedia: concept và prototype EDURA LMS trên Figma. Vai trò Lead UI, quyết định giao diện và những giới hạn thực tế của dự án.",
+          "canonical": "https://stellar-odyssey.vercel.app/projects/edura",
+          "history": {
+            "stellar": {
+              "id": "36f80de7-085a-4687-b2fb-489416d89e21",
+              "from": "c8791d85-c9d3-43e2-9f32-47d4b7d65b45"
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 128,
+              "deleted": 128,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Texture": {
+              "created": 108,
+              "deleted": 92,
+              "contextLost": 16,
+              "live": 0
+            },
+            "Framebuffer": {
+              "created": 96,
+              "deleted": 84,
+              "contextLost": 12,
+              "live": 0
+            },
+            "Renderbuffer": {
+              "created": 4,
+              "deleted": 4,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 54,
+              "deleted": 24,
+              "contextLost": 30,
+              "live": 0
+            },
+            "Shader": {
+              "created": 108,
+              "deleted": 108,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {},
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "cycle2-reader"
+        },
+        {
+          "url": "/#work",
+          "documentID": "bpvwd8zmesm",
+          "lang": "vi",
+          "reduced": false,
+          "scrollY": 7921,
+          "visibleScroll": 7921,
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Trải nghiệm không gian vũ trụ điện ảnh, tối giản và hướng tới người dùng.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": {
+            "stellar": {
+              "id": "c8791d85-c9d3-43e2-9f32-47d4b7d65b45",
+              "snapshot": {
+                "y": 7921,
+                "width": 1440,
+                "height": 900,
+                "chapter": "works",
+                "p": 0.12506510416666666,
+                "scrollProgress": 0.7872192407076128,
+                "selection": "edura",
+                "orbit": {
+                  "phase": 0.05300758296238803,
+                  "origin": 0,
+                  "velocity": 0,
+                  "latched": false,
+                  "visited": true,
+                  "captures": 0,
+                  "resumePending": false
+                },
+                "pose": [
+                  0,
+                  4,
+                  -160,
+                  120.96000000000001,
+                  0,
+                  -210
+                ],
+                "focus": "work-case-edura"
+              }
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "blur",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "focusin",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "keydown",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointermove",
+              "pointerout",
+              "pointerover",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 159,
+              "deleted": 128,
+              "contextLost": 0,
+              "live": 31
+            },
+            "Texture": {
+              "created": 135,
+              "deleted": 92,
+              "contextLost": 16,
+              "live": 27
+            },
+            "Framebuffer": {
+              "created": 120,
+              "deleted": 84,
+              "contextLost": 12,
+              "live": 24
+            },
+            "Renderbuffer": {
+              "created": 5,
+              "deleted": 4,
+              "contextLost": 0,
+              "live": 1
+            },
+            "Program": {
+              "created": 67,
+              "deleted": 24,
+              "contextLost": 30,
+              "live": 13
+            },
+            "Shader": {
+              "created": 134,
+              "deleted": 134,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 140.65625
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "cycle2-restore"
+        },
+        {
+          "url": "/projects/edura",
+          "documentID": "bpvwd8zmesm",
+          "lang": "vi",
+          "reduced": false,
+          "scrollY": 0,
+          "visibleScroll": 0,
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 0,
+          "reader": 1,
+          "main": 1,
+          "focus": "edura-title",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "EDURA LMS — UI/UX concept · Trần Vũ Anh Duy",
+          "meta": "Đồ án cuối kỳ UX/UI tại Arena Multimedia: concept và prototype EDURA LMS trên Figma. Vai trò Lead UI, quyết định giao diện và những giới hạn thực tế của dự án.",
+          "canonical": "https://stellar-odyssey.vercel.app/projects/edura",
+          "history": {
+            "stellar": {
+              "id": "5be3168f-f49c-45b0-a0fe-c8ebb5fd97f7",
+              "from": "54709c8b-e7c3-4af3-8422-8a64c26c3edd"
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 159,
+              "deleted": 159,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Texture": {
+              "created": 135,
+              "deleted": 115,
+              "contextLost": 20,
+              "live": 0
+            },
+            "Framebuffer": {
+              "created": 120,
+              "deleted": 105,
+              "contextLost": 15,
+              "live": 0
+            },
+            "Renderbuffer": {
+              "created": 5,
+              "deleted": 5,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 67,
+              "deleted": 30,
+              "contextLost": 37,
+              "live": 0
+            },
+            "Shader": {
+              "created": 134,
+              "deleted": 134,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {},
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "cycle3-reader"
+        },
+        {
+          "url": "/#work",
+          "documentID": "bpvwd8zmesm",
+          "lang": "vi",
+          "reduced": false,
+          "scrollY": 7921,
+          "visibleScroll": 7921,
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Trải nghiệm không gian vũ trụ điện ảnh, tối giản và hướng tới người dùng.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": {
+            "stellar": {
+              "id": "54709c8b-e7c3-4af3-8422-8a64c26c3edd",
+              "snapshot": {
+                "y": 7921,
+                "width": 1440,
+                "height": 900,
+                "chapter": "works",
+                "p": 0.12506510416666666,
+                "scrollProgress": 0.7872192407076128,
+                "selection": "edura",
+                "orbit": {
+                  "phase": 0.05300758296238803,
+                  "origin": 0,
+                  "velocity": 0,
+                  "latched": false,
+                  "visited": true,
+                  "captures": 0,
+                  "resumePending": false
+                },
+                "pose": [
+                  0,
+                  4,
+                  -160,
+                  120.96000000000001,
+                  0,
+                  -210
+                ],
+                "focus": "work-case-edura"
+              }
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "blur",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "focusin",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "keydown",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointermove",
+              "pointerout",
+              "pointerover",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 190,
+              "deleted": 159,
+              "contextLost": 0,
+              "live": 31
+            },
+            "Texture": {
+              "created": 162,
+              "deleted": 115,
+              "contextLost": 20,
+              "live": 27
+            },
+            "Framebuffer": {
+              "created": 144,
+              "deleted": 105,
+              "contextLost": 15,
+              "live": 24
+            },
+            "Renderbuffer": {
+              "created": 6,
+              "deleted": 5,
+              "contextLost": 0,
+              "live": 1
+            },
+            "Program": {
+              "created": 80,
+              "deleted": 30,
+              "contextLost": 37,
+              "live": 13
+            },
+            "Shader": {
+              "created": 160,
+              "deleted": 160,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 140.65625
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "cycle3-restore"
+        },
+        {
+          "url": "/projects/edura",
+          "documentID": "ikyzmrjlem",
+          "lang": "vi",
+          "reduced": false,
+          "scrollY": 0,
+          "visibleScroll": 0,
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 0,
+          "reader": 1,
+          "main": 1,
+          "focus": "edura-title",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "EDURA LMS — UI/UX concept · Trần Vũ Anh Duy",
+          "meta": "Đồ án cuối kỳ UX/UI tại Arena Multimedia: concept và prototype EDURA LMS trên Figma. Vai trò Lead UI, quyết định giao diện và những giới hạn thực tế của dự án.",
+          "canonical": "https://stellar-odyssey.vercel.app/projects/edura",
+          "history": {
+            "stellar": {
+              "id": "23139231-0690-4f72-8eb1-e65b397e5d24",
+              "from": "04881712-016a-4693-b278-f91da9ad878f"
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "hashchange",
+              "load",
+              "popstate",
+              "resize",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Texture": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Framebuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Renderbuffer": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Shader": {
+              "created": 0,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {},
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "entered-case-reload"
+        },
+        {
+          "url": "/#work",
+          "documentID": "ikyzmrjlem",
+          "lang": "vi",
+          "reduced": false,
+          "scrollY": 7921,
+          "visibleScroll": 7921,
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Trải nghiệm không gian vũ trụ điện ảnh, tối giản và hướng tới người dùng.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": {
+            "stellar": {
+              "id": "04881712-016a-4693-b278-f91da9ad878f",
+              "snapshot": {
+                "y": 7921,
+                "width": 1440,
+                "height": 900,
+                "chapter": "works",
+                "p": 0.12506510416666666,
+                "scrollProgress": 0.7872192407076128,
+                "selection": "edura",
+                "orbit": {
+                  "phase": 0.05300758296238803,
+                  "origin": 0,
+                  "velocity": 0,
+                  "latched": false,
+                  "visited": true,
+                  "captures": 0,
+                  "resumePending": false
+                },
+                "pose": [
+                  0,
+                  4,
+                  -160,
+                  120.96000000000001,
+                  0,
+                  -210
+                ],
+                "focus": "work-case-edura"
+              }
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "blur",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "focusin",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "keydown",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointermove",
+              "pointerout",
+              "pointerover",
+              "pointerup",
+              "scroll",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 31,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 31
+            },
+            "Texture": {
+              "created": 27,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 27
+            },
+            "Framebuffer": {
+              "created": 24,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 24
+            },
+            "Renderbuffer": {
+              "created": 1,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 1
+            },
+            "Program": {
+              "created": 13,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 13
+            },
+            "Shader": {
+              "created": 26,
+              "deleted": 26,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 140.65625
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "case-reload-return"
+        }
+      ],
+      "failedResources": [],
+      "tabPath": [
+        {
+          "id": "work-target-veris",
+          "tag": "BUTTON",
+          "action": false,
+          "outline": "2px"
+        },
+        {
+          "id": "work-target-vie",
+          "tag": "BUTTON",
+          "action": false,
+          "outline": "2px"
+        },
+        {
+          "id": "work-case-edura",
+          "tag": "A",
+          "action": true,
+          "outline": "2px"
+        }
+      ],
+      "modifiedClick": {
+        "openerURL": "http://127.0.0.1:4173/#work",
+        "popupURL": "http://127.0.0.1:4173/projects/edura",
+        "popupCanvas": 0
+      }
+    },
+    {
+      "width": 1440,
+      "lang": "vi",
+      "reduced": true,
+      "status": "pass",
+      "errors": [],
+      "warnings": [
+        "Service Worker registration blocked by Playwright",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+      ],
+      "states": [
+        {
+          "url": "/#work",
+          "documentID": "avjokuc06hd",
+          "lang": "vi",
+          "reduced": true,
+          "scrollY": 6436,
+          "visibleScroll": 6436,
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Trải nghiệm không gian vũ trụ điện ảnh, tối giản và hướng tới người dùng.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": null,
+          "historyLength": 2,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "blur",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "keydown",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointermove",
+              "pointerout",
+              "pointerover",
+              "pointerup",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 29,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 29
+            },
+            "Texture": {
+              "created": 27,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 27
+            },
+            "Framebuffer": {
+              "created": 24,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 24
+            },
+            "Renderbuffer": {
+              "created": 1,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 1
+            },
+            "Program": {
+              "created": 12,
+              "deleted": 0,
+              "contextLost": 0,
+              "live": 12
+            },
+            "Shader": {
+              "created": 24,
+              "deleted": 24,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 140.65625
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "works-selected"
+        },
+        {
+          "url": "/projects/edura",
+          "documentID": "avjokuc06hd",
+          "lang": "vi",
+          "reduced": true,
+          "scrollY": 0,
+          "visibleScroll": 0,
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 0,
+          "reader": 1,
+          "main": 1,
+          "focus": "edura-title",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "EDURA LMS — UI/UX concept · Trần Vũ Anh Duy",
+          "meta": "Đồ án cuối kỳ UX/UI tại Arena Multimedia: concept và prototype EDURA LMS trên Figma. Vai trò Lead UI, quyết định giao diện và những giới hạn thực tế của dự án.",
+          "canonical": "https://stellar-odyssey.vercel.app/projects/edura",
+          "history": {
+            "stellar": {
+              "id": "ca46cc82-28e2-4964-92a4-5ef5a6963951",
+              "from": "3992820e-79d3-42ea-baa9-a2b9b3e4a3a4"
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 29,
+              "deleted": 29,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Texture": {
+              "created": 27,
+              "deleted": 23,
+              "contextLost": 4,
+              "live": 0
+            },
+            "Framebuffer": {
+              "created": 24,
+              "deleted": 21,
+              "contextLost": 3,
+              "live": 0
+            },
+            "Renderbuffer": {
+              "created": 1,
+              "deleted": 1,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 12,
+              "deleted": 6,
+              "contextLost": 6,
+              "live": 0
+            },
+            "Shader": {
+              "created": 24,
+              "deleted": 24,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {},
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "native-enter-reader"
+        },
+        {
+          "url": "/#work",
+          "documentID": "avjokuc06hd",
+          "lang": "vi",
+          "reduced": true,
+          "scrollY": 6436,
+          "visibleScroll": 6436,
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Trải nghiệm không gian vũ trụ điện ảnh, tối giản và hướng tới người dùng.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": {
+            "stellar": {
+              "id": "3992820e-79d3-42ea-baa9-a2b9b3e4a3a4",
+              "snapshot": {
+                "y": 6436,
+                "width": 1440,
+                "height": 900,
+                "chapter": "works",
+                "p": 0.12506510416666666,
+                "scrollProgress": 0.7503789203684272,
+                "selection": "edura",
+                "orbit": {
+                  "phase": 0,
+                  "origin": 0,
+                  "velocity": 0,
+                  "latched": false,
+                  "visited": true,
+                  "captures": 0,
+                  "resumePending": false
+                },
+                "pose": [
+                  0,
+                  4,
+                  -160,
+                  120.96000000000001,
+                  0,
+                  -210
+                ],
+                "focus": "work-case-edura"
+              }
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "blur",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "keydown",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointermove",
+              "pointerout",
+              "pointerover",
+              "pointerup",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 58,
+              "deleted": 29,
+              "contextLost": 0,
+              "live": 29
+            },
+            "Texture": {
+              "created": 54,
+              "deleted": 23,
+              "contextLost": 4,
+              "live": 27
+            },
+            "Framebuffer": {
+              "created": 48,
+              "deleted": 21,
+              "contextLost": 3,
+              "live": 24
+            },
+            "Renderbuffer": {
+              "created": 2,
+              "deleted": 1,
+              "contextLost": 0,
+              "live": 1
+            },
+            "Program": {
+              "created": 24,
+              "deleted": 6,
+              "contextLost": 6,
+              "live": 12
+            },
+            "Shader": {
+              "created": 48,
+              "deleted": 48,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 140.65625
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "native-back"
+        },
+        {
+          "url": "/projects/edura",
+          "documentID": "avjokuc06hd",
+          "lang": "vi",
+          "reduced": true,
+          "scrollY": 0,
+          "visibleScroll": 0,
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 0,
+          "reader": 1,
+          "main": 1,
+          "focus": "edura-title",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "EDURA LMS — UI/UX concept · Trần Vũ Anh Duy",
+          "meta": "Đồ án cuối kỳ UX/UI tại Arena Multimedia: concept và prototype EDURA LMS trên Figma. Vai trò Lead UI, quyết định giao diện và những giới hạn thực tế của dự án.",
+          "canonical": "https://stellar-odyssey.vercel.app/projects/edura",
+          "history": {
+            "stellar": {
+              "id": "ca46cc82-28e2-4964-92a4-5ef5a6963951",
+              "from": "3992820e-79d3-42ea-baa9-a2b9b3e4a3a4"
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointerup",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 58,
+              "deleted": 58,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Texture": {
+              "created": 54,
+              "deleted": 46,
+              "contextLost": 8,
+              "live": 0
+            },
+            "Framebuffer": {
+              "created": 48,
+              "deleted": 42,
+              "contextLost": 6,
+              "live": 0
+            },
+            "Renderbuffer": {
+              "created": 2,
+              "deleted": 2,
+              "contextLost": 0,
+              "live": 0
+            },
+            "Program": {
+              "created": 24,
+              "deleted": 12,
+              "contextLost": 12,
+              "live": 0
+            },
+            "Shader": {
+              "created": 48,
+              "deleted": 48,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {},
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "native-forward"
+        },
+        {
+          "url": "/#work",
+          "documentID": "avjokuc06hd",
+          "lang": "vi",
+          "reduced": true,
+          "scrollY": 6436,
+          "visibleScroll": 6436,
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": 0,
+          "canvas": 1,
+          "reader": 0,
+          "main": 1,
+          "focus": "work-target-edura",
+          "loadingLock": false,
+          "menuLock": false,
+          "menu": false,
+          "title": "Trần Vũ Anh Duy — Creative Designer · Stellar Odyssey Portfolio",
+          "meta": "Trần Vũ Anh Duy — Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Trải nghiệm không gian vũ trụ điện ảnh, tối giản và hướng tới người dùng.",
+          "canonical": "https://stellar-odyssey.vercel.app/",
+          "history": {
+            "stellar": {
+              "id": "3992820e-79d3-42ea-baa9-a2b9b3e4a3a4",
+              "snapshot": {
+                "y": 6436,
+                "width": 1440,
+                "height": 900,
+                "chapter": "works",
+                "p": 0.12506510416666666,
+                "scrollProgress": 0.7503789203684272,
+                "selection": "edura",
+                "orbit": {
+                  "phase": 0,
+                  "origin": 0,
+                  "velocity": 0,
+                  "latched": false,
+                  "visited": true,
+                  "captures": 0,
+                  "resumePending": false
+                },
+                "pose": [
+                  0,
+                  4,
+                  -160,
+                  120.96000000000001,
+                  0,
+                  -210
+                ],
+                "focus": "work-case-edura"
+              }
+            }
+          },
+          "historyLength": 3,
+          "preloaderMounts": 0,
+          "listeners": {
+            "window": [
+              "__playwright_global_listeners_check__",
+              "auxclick",
+              "blur",
+              "click",
+              "contextmenu",
+              "dblclick",
+              "hashchange",
+              "keydown",
+              "load",
+              "load",
+              "load",
+              "mousedown",
+              "mousemove",
+              "mouseup",
+              "pointerdown",
+              "pointerdown",
+              "pointerup",
+              "popstate",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "resize",
+              "scroll",
+              "scroll",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "touchstart",
+              "wheel",
+              "wheel"
+            ],
+            "document": [
+              "DOMContentLoaded",
+              "keydown",
+              "mousedown",
+              "mouseup",
+              "pointerdown",
+              "pointermove",
+              "pointerout",
+              "pointerover",
+              "pointerup",
+              "scroll",
+              "selectionchange",
+              "touchcancel",
+              "touchend",
+              "touchstart",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange",
+              "visibilitychange"
+            ]
+          },
+          "gl": {
+            "Buffer": {
+              "created": 87,
+              "deleted": 58,
+              "contextLost": 0,
+              "live": 29
+            },
+            "Texture": {
+              "created": 81,
+              "deleted": 46,
+              "contextLost": 8,
+              "live": 27
+            },
+            "Framebuffer": {
+              "created": 72,
+              "deleted": 42,
+              "contextLost": 6,
+              "live": 24
+            },
+            "Renderbuffer": {
+              "created": 3,
+              "deleted": 2,
+              "contextLost": 0,
+              "live": 1
+            },
+            "Program": {
+              "created": 36,
+              "deleted": 12,
+              "contextLost": 12,
+              "live": 12
+            },
+            "Shader": {
+              "created": 72,
+              "deleted": 72,
+              "contextLost": 0,
+              "live": 0
+            }
+          },
+          "work": {
+            "selected": "true",
+            "preview": "edura",
+            "frameTop": 0,
+            "targetTop": 140.65625
+          },
+          "store": null,
+          "smoother": null,
+          "triggers": null,
+          "camera": null,
+          "disposed": null,
+          "label": "return"
+        }
+      ],
+      "failedResources": [],
+      "tabPath": [
+        {
+          "id": "work-target-veris",
+          "tag": "BUTTON",
+          "action": false,
+          "outline": "2px"
+        },
+        {
+          "id": "work-target-vie",
+          "tag": "BUTTON",
+          "action": false,
+          "outline": "2px"
+        },
+        {
+          "id": "work-case-edura",
+          "tag": "A",
+          "action": true,
+          "outline": "2px"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "reduced": false,
+      "status": "fail",
+      "errors": [],
+      "warnings": [
+        "Service Worker registration blocked by Playwright",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+      ],
+      "states": [],
+      "failedResources": [],
+      "failure": "TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[aria-controls=\"stellar-menu\"]')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" aria-expanded=\"false\" aria-haspopup=\"dialog\" aria-controls=\"stellar-menu\" aria-label=\"Mở menu điều hướng\" class=\"border border-white/20 inline-flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-lg px-3 text-sm uppercase tracking-[0.08em] text-white hover:border-[#FAFAFA]/60 hover:text-[#FAFAFA] focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - element is outside of the viewport\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+    }
+  ],
+  "extra": [],
+  "errors": [
+    "TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[aria-controls=\"stellar-menu\"]')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" aria-expanded=\"false\" aria-haspopup=\"dialog\" aria-controls=\"stellar-menu\" aria-label=\"Mở menu điều hướng\" class=\"border border-white/20 inline-flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-lg px-3 text-sm uppercase tracking-[0.08em] text-white hover:border-[#FAFAFA]/60 hover:text-[#FAFAFA] focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - element is outside of the viewport\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+  ],
+  "warnings": [
+    "Service Worker registration blocked by Playwright",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "Service Worker registration blocked by Playwright",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "Service Worker registration blocked by Playwright",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "Service Worker registration blocked by Playwright",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "Service Worker registration blocked by Playwright",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "Service Worker registration blocked by Playwright",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "Service Worker registration blocked by Playwright",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "Service Worker registration blocked by Playwright",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "limits": [
+    "Desktop Edge emulates phone viewport/touch and reduced-motion; no physical phone or OS toggle.",
+    "Compiled checks inspect real DOM/history and WebGL resource calls; exact store/camera checks use dev modules only.",
+    "Actual installed PWA/deployment HTTPS behavior is checked separately by integration owner."
+  ]
+}

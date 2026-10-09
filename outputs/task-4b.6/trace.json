@@ -1,0 +1,351 @@
+{
+  "tracks": [
+    {
+      "start": 0,
+      "duration": 0.35,
+      "vars": 0.85,
+      "targets": [
+        "other"
+      ]
+    },
+    {
+      "start": 0,
+      "duration": 0.35,
+      "vars": 0.85,
+      "targets": [
+        "other"
+      ]
+    },
+    {
+      "start": 0,
+      "duration": 0.35,
+      "vars": 0.85,
+      "targets": [
+        "other"
+      ]
+    },
+    {
+      "start": 0,
+      "duration": 0.35,
+      "vars": 0.85,
+      "targets": [
+        "other"
+      ]
+    },
+    {
+      "start": 0,
+      "duration": 0.35,
+      "vars": 0.8,
+      "targets": [
+        "other"
+      ]
+    },
+    {
+      "start": 0.35,
+      "duration": 0,
+      "targets": [
+        "flare"
+      ]
+    },
+    {
+      "start": 0.35,
+      "duration": 0.18,
+      "vars": 0.8,
+      "targets": [
+        "label"
+      ]
+    },
+    {
+      "start": 0.35,
+      "duration": 0.8,
+      "vars": 100,
+      "targets": [
+        "flare"
+      ]
+    },
+    {
+      "start": 0.35,
+      "duration": 0.15,
+      "vars": 0.22,
+      "targets": [
+        "flare"
+      ]
+    },
+    {
+      "start": 0.53,
+      "duration": 0.2,
+      "vars": 0.55,
+      "targets": [
+        "label"
+      ]
+    },
+    {
+      "start": 0.73,
+      "duration": 0.25,
+      "vars": 0.8,
+      "targets": [
+        "label"
+      ]
+    },
+    {
+      "start": 0.9,
+      "duration": 0.25,
+      "vars": 0,
+      "targets": [
+        "flare"
+      ]
+    }
+  ],
+  "trace": [
+    {
+      "wall": 7615.10000000149,
+      "time": 0,
+      "progress": 0,
+      "paused": false,
+      "opacity": 0,
+      "style": "opacity: 0;",
+      "locked": "false",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 7670.29999999702,
+      "time": 0.039,
+      "progress": 0.03391304347826087,
+      "paused": false,
+      "opacity": 0,
+      "style": "opacity: 0;",
+      "locked": "false",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 7721.19999999553,
+      "time": 0.094,
+      "progress": 0.08173913043478262,
+      "paused": false,
+      "opacity": 0,
+      "style": "opacity: 0;",
+      "locked": "false",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 7772.39999999851,
+      "time": 0.143,
+      "progress": 0.12434782608695652,
+      "paused": false,
+      "opacity": 0,
+      "style": "opacity: 0;",
+      "locked": "false",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 7827.79999999702,
+      "time": 0.202,
+      "progress": 0.1756521739130435,
+      "paused": false,
+      "opacity": 0,
+      "style": "opacity: 0;",
+      "locked": "false",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 7880.60000000149,
+      "time": 0.257,
+      "progress": 0.22347826086956524,
+      "paused": false,
+      "opacity": 0,
+      "style": "opacity: 0;",
+      "locked": "false",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 7942.89999999851,
+      "time": 0.319,
+      "progress": 0.2773913043478261,
+      "paused": false,
+      "opacity": 0,
+      "style": "opacity: 0;",
+      "locked": "false",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 7998.69999999553,
+      "time": 0.374,
+      "progress": 0.32521739130434785,
+      "paused": false,
+      "opacity": 0.0896,
+      "style": "translate: none; rotate: none; scale: none; transform: translate(-99.64%, 0%) translate3d(0px, 0px, 0px); opacity: 0.0896;",
+      "locked": "true",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 8050.39999999851,
+      "time": 0.427,
+      "progress": 0.37130434782608696,
+      "paused": false,
+      "opacity": 0.1946,
+      "style": "translate: none; rotate: none; scale: none; transform: translate(-96.2944%, 0%) translate3d(0px, 0px, 0px); opacity: 0.1946;",
+      "locked": "true",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 8104.39999999851,
+      "time": 0.481,
+      "progress": 0.4182608695652174,
+      "paused": false,
+      "opacity": 0.2196,
+      "style": "translate: none; rotate: none; scale: none; transform: translate(-89.2744%, 0%) translate3d(0px, 0px, 0px); opacity: 0.2196;",
+      "locked": "true",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 8159,
+      "time": 0.536,
+      "progress": 0.4660869565217392,
+      "paused": false,
+      "opacity": 0.22,
+      "style": "translate: none; rotate: none; scale: none; transform: translate(-78.3775%, 0%) translate3d(0px, 0px, 0px); opacity: 0.22;",
+      "locked": "true",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 8213.5,
+      "time": 0.59,
+      "progress": 0.5130434782608696,
+      "paused": false,
+      "opacity": 0.22,
+      "style": "translate: none; rotate: none; scale: none; transform: translate(-64%, 0%) translate3d(0px, 0px, 0px); opacity: 0.22;",
+      "locked": "true",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 8268.89999999851,
+      "time": 0.645,
+      "progress": 0.5608695652173914,
+      "paused": false,
+      "opacity": 0.22,
+      "style": "translate: none; rotate: none; scale: none; transform: translate(-45.6094%, 0%) translate3d(0px, 0px, 0px); opacity: 0.22;",
+      "locked": "true",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 8322.5,
+      "time": 0.699,
+      "progress": 0.6078260869565217,
+      "paused": false,
+      "opacity": 0.22,
+      "style": "translate: none; rotate: none; scale: none; transform: translate(-23.8744%, 0%) translate3d(0px, 0px, 0px); opacity: 0.22;",
+      "locked": "true",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 8377.10000000149,
+      "time": 0.754,
+      "progress": 0.6556521739130435,
+      "paused": false,
+      "opacity": 0.22,
+      "style": "translate: none; rotate: none; scale: none; transform: translate(1.99%, 0%) translate3d(0px, 0px, 0px); opacity: 0.22;",
+      "locked": "true",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 8431.5,
+      "time": 0.808,
+      "progress": 0.702608695652174,
+      "paused": false,
+      "opacity": 0.22,
+      "style": "translate: none; rotate: none; scale: none; transform: translate(26.8975%, 0%) translate3d(0px, 0px, 0px); opacity: 0.22;",
+      "locked": "true",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 8486.29999999702,
+      "time": 0.863,
+      "progress": 0.7504347826086957,
+      "paused": false,
+      "opacity": 0.22,
+      "style": "translate: none; rotate: none; scale: none; transform: translate(48.5194%, 0%) translate3d(0px, 0px, 0px); opacity: 0.22;",
+      "locked": "true",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 8541.29999999702,
+      "time": 0.918,
+      "progress": 0.7982608695652175,
+      "paused": false,
+      "opacity": 0,
+      "style": "translate: none; rotate: none; scale: none; transform: translate(66.36%, 0%) translate3d(0px, 0px, 0px); opacity: 0;",
+      "locked": "true",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 8595.79999999702,
+      "time": 0.972,
+      "progress": 0.8452173913043479,
+      "paused": false,
+      "opacity": 0,
+      "style": "translate: none; rotate: none; scale: none; transform: translate(80.1975%, 0%) translate3d(0px, 0px, 0px); opacity: 0;",
+      "locked": "true",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 8649.89999999851,
+      "time": 1.027,
+      "progress": 0.8930434782608696,
+      "paused": false,
+      "opacity": 0,
+      "style": "translate: none; rotate: none; scale: none; transform: translate(90.5444%, 0%) translate3d(0px, 0px, 0px); opacity: 0;",
+      "locked": "true",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 8703.79999999702,
+      "time": 1.081,
+      "progress": 0.9400000000000001,
+      "paused": false,
+      "opacity": 0,
+      "style": "translate: none; rotate: none; scale: none; transform: translate(97.0244%, 0%) translate3d(0px, 0px, 0px); opacity: 0;",
+      "locked": "true",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 8758.39999999851,
+      "time": 1.136,
+      "progress": 0.9878260869565217,
+      "paused": false,
+      "opacity": 0,
+      "style": "translate: none; rotate: none; scale: none; transform: translate(99.8775%, 0%) translate3d(0px, 0px, 0px); opacity: 0;",
+      "locked": "true",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 8812.5,
+      "time": 1.15,
+      "progress": 1,
+      "paused": false,
+      "opacity": 0,
+      "style": "translate: none; rotate: none; scale: none; transform: translate(100%, 0%); opacity: 0;",
+      "locked": "true",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 8866.60000000149,
+      "time": 1.15,
+      "progress": 1,
+      "paused": false,
+      "opacity": 0,
+      "style": "translate: none; rotate: none; scale: none; transform: translate(100%, 0%); opacity: 0;",
+      "locked": "true",
+      "trProgress": 0.001375515818431912
+    },
+    {
+      "wall": 8921.5,
+      "time": 1.15,
+      "progress": 1,
+      "paused": false,
+      "opacity": 0,
+      "style": "translate: none; rotate: none; scale: none; transform: translate(100%, 0%); opacity: 0;",
+      "locked": "true",
+      "trProgress": 0.001375515818431912
+    }
+  ]
+}

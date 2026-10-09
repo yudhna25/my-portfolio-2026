@@ -1,0 +1,270 @@
+{
+  "started": "2026-10-08T13:19:01.696Z",
+  "records": [
+    {
+      "width": 1440,
+      "motion": "no-preference",
+      "locale": "vi",
+      "hash": "#education",
+      "inner": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "visible": "visible",
+      "inert": false,
+      "schools": [
+        {
+          "id": "saigonUniversity",
+          "text": "2021–2026\nCircinus\n\nSaigon University\n\nCử nhân Công nghệ Thông tin\n\nTốt nghiệp loại Giỏi. Trọng tâm: Phân tích & Thiết kế Hệ thống, HCI, Usability Testing, Prototyping Web/App."
+        },
+        {
+          "id": "greenAcademy",
+          "text": "2022–2023\nTelescopium\n\nGreen Academy\n\nChứng chỉ Dựng phim Chuyên nghiệp\n\nLoại Distinction. Trọng tâm: VFX compositing, motion graphics. Học viên xuất sắc — Premiere & After Effects."
+        },
+        {
+          "id": "arenaMultimedia",
+          "text": "2024–nay\nPictor\n\nArena Multimedia\n\nAdvanced Diploma in Multimedia\n\nLoại Distinction kỳ 2 (UX/UI). Trọng tâm: Thiết kế lấy người dùng làm trung tâm, prototyping mobile, wireframing, web responsive."
+        }
+      ],
+      "theme": "dark",
+      "sw": true,
+      "registrations": 1,
+      "nativeInteractions": 3
+    },
+    {
+      "width": 1440,
+      "motion": "no-preference",
+      "locale": "en",
+      "hash": "#education",
+      "inner": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "visible": "visible",
+      "inert": false,
+      "schools": [
+        {
+          "id": "saigonUniversity",
+          "text": "2021–2026\nCircinus\n\nSaigon University\n\nBachelor's Degree in Information Technology\n\nGraduated with High Honors in Information Technology. Focus: System Analysis and Design, HCI, Usability Testing, Web/App Prototyping."
+        },
+        {
+          "id": "greenAcademy",
+          "text": "2022–2023\nTelescopium\n\nGreen Academy\n\nCertificate in Professional Video Editing\n\nDistinction. Focus: VFX compositing, motion graphics. Top-performing student — Premiere & After Effects."
+        },
+        {
+          "id": "arenaMultimedia",
+          "text": "2024–Present\nPictor\n\nArena Multimedia\n\nAdvanced Diploma in Multimedia\n\nAwarded Distinction in Semester 2 (UX/UI). Focus: user-centric design, mobile prototyping, wireframing, responsive web."
+        }
+      ],
+      "theme": "dark",
+      "sw": true,
+      "registrations": 1,
+      "nativeInteractions": 3
+    },
+    {
+      "width": 1440,
+      "motion": "reduce",
+      "locale": "vi",
+      "hash": "#education",
+      "inner": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "visible": "visible",
+      "inert": false,
+      "schools": [
+        {
+          "id": "saigonUniversity",
+          "text": "2021–2026\nCircinus\n\nSaigon University\n\nCử nhân Công nghệ Thông tin\n\nTốt nghiệp loại Giỏi. Trọng tâm: Phân tích & Thiết kế Hệ thống, HCI, Usability Testing, Prototyping Web/App."
+        },
+        {
+          "id": "greenAcademy",
+          "text": "2022–2023\nTelescopium\n\nGreen Academy\n\nChứng chỉ Dựng phim Chuyên nghiệp\n\nLoại Distinction. Trọng tâm: VFX compositing, motion graphics. Học viên xuất sắc — Premiere & After Effects."
+        },
+        {
+          "id": "arenaMultimedia",
+          "text": "2024–nay\nPictor\n\nArena Multimedia\n\nAdvanced Diploma in Multimedia\n\nLoại Distinction kỳ 2 (UX/UI). Trọng tâm: Thiết kế lấy người dùng làm trung tâm, prototyping mobile, wireframing, web responsive."
+        }
+      ],
+      "theme": "dark",
+      "sw": true,
+      "registrations": 1,
+      "nativeInteractions": 3
+    },
+    {
+      "width": 1440,
+      "motion": "reduce",
+      "locale": "en",
+      "hash": "#education",
+      "inner": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "visible": "visible",
+      "inert": false,
+      "schools": [
+        {
+          "id": "saigonUniversity",
+          "text": "2021–2026\nCircinus\n\nSaigon University\n\nBachelor's Degree in Information Technology\n\nGraduated with High Honors in Information Technology. Focus: System Analysis and Design, HCI, Usability Testing, Web/App Prototyping."
+        },
+        {
+          "id": "greenAcademy",
+          "text": "2022–2023\nTelescopium\n\nGreen Academy\n\nCertificate in Professional Video Editing\n\nDistinction. Focus: VFX compositing, motion graphics. Top-performing student — Premiere & After Effects."
+        },
+        {
+          "id": "arenaMultimedia",
+          "text": "2024–Present\nPictor\n\nArena Multimedia\n\nAdvanced Diploma in Multimedia\n\nAwarded Distinction in Semester 2 (UX/UI). Focus: user-centric design, mobile prototyping, wireframing, responsive web."
+        }
+      ],
+      "theme": "dark",
+      "sw": true,
+      "registrations": 1,
+      "nativeInteractions": 3
+    },
+    {
+      "width": 390,
+      "motion": "no-preference",
+      "locale": "vi",
+      "hash": "#education",
+      "inner": [
+        390,
+        844
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "visible": "visible",
+      "inert": false,
+      "schools": [
+        {
+          "id": "saigonUniversity",
+          "text": "2021–2026\nCircinus\n\nSaigon University\n\nCử nhân Công nghệ Thông tin\n\nTốt nghiệp loại Giỏi. Trọng tâm: Phân tích & Thiết kế Hệ thống, HCI, Usability Testing, Prototyping Web/App."
+        },
+        {
+          "id": "greenAcademy",
+          "text": "2022–2023\nTelescopium\n\nGreen Academy\n\nChứng chỉ Dựng phim Chuyên nghiệp\n\nLoại Distinction. Trọng tâm: VFX compositing, motion graphics. Học viên xuất sắc — Premiere & After Effects."
+        },
+        {
+          "id": "arenaMultimedia",
+          "text": "2024–nay\nPictor\n\nArena Multimedia\n\nAdvanced Diploma in Multimedia\n\nLoại Distinction kỳ 2 (UX/UI). Trọng tâm: Thiết kế lấy người dùng làm trung tâm, prototyping mobile, wireframing, web responsive."
+        }
+      ],
+      "theme": "dark",
+      "sw": true,
+      "registrations": 1,
+      "nativeInteractions": 3
+    },
+    {
+      "width": 390,
+      "motion": "no-preference",
+      "locale": "en",
+      "hash": "#education",
+      "inner": [
+        390,
+        844
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "visible": "visible",
+      "inert": false,
+      "schools": [
+        {
+          "id": "saigonUniversity",
+          "text": "2021–2026\nCircinus\n\nSaigon University\n\nBachelor's Degree in Information Technology\n\nGraduated with High Honors in Information Technology. Focus: System Analysis and Design, HCI, Usability Testing, Web/App Prototyping."
+        },
+        {
+          "id": "greenAcademy",
+          "text": "2022–2023\nTelescopium\n\nGreen Academy\n\nCertificate in Professional Video Editing\n\nDistinction. Focus: VFX compositing, motion graphics. Top-performing student — Premiere & After Effects."
+        },
+        {
+          "id": "arenaMultimedia",
+          "text": "2024–Present\nPictor\n\nArena Multimedia\n\nAdvanced Diploma in Multimedia\n\nAwarded Distinction in Semester 2 (UX/UI). Focus: user-centric design, mobile prototyping, wireframing, responsive web."
+        }
+      ],
+      "theme": "dark",
+      "sw": true,
+      "registrations": 1,
+      "nativeInteractions": 3
+    },
+    {
+      "width": 390,
+      "motion": "reduce",
+      "locale": "vi",
+      "hash": "#education",
+      "inner": [
+        390,
+        844
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "visible": "visible",
+      "inert": false,
+      "schools": [
+        {
+          "id": "saigonUniversity",
+          "text": "2021–2026\nCircinus\n\nSaigon University\n\nCử nhân Công nghệ Thông tin\n\nTốt nghiệp loại Giỏi. Trọng tâm: Phân tích & Thiết kế Hệ thống, HCI, Usability Testing, Prototyping Web/App."
+        },
+        {
+          "id": "greenAcademy",
+          "text": "2022–2023\nTelescopium\n\nGreen Academy\n\nChứng chỉ Dựng phim Chuyên nghiệp\n\nLoại Distinction. Trọng tâm: VFX compositing, motion graphics. Học viên xuất sắc — Premiere & After Effects."
+        },
+        {
+          "id": "arenaMultimedia",
+          "text": "2024–nay\nPictor\n\nArena Multimedia\n\nAdvanced Diploma in Multimedia\n\nLoại Distinction kỳ 2 (UX/UI). Trọng tâm: Thiết kế lấy người dùng làm trung tâm, prototyping mobile, wireframing, web responsive."
+        }
+      ],
+      "theme": "dark",
+      "sw": true,
+      "registrations": 1,
+      "nativeInteractions": 3
+    },
+    {
+      "width": 390,
+      "motion": "reduce",
+      "locale": "en",
+      "hash": "#education",
+      "inner": [
+        390,
+        844
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "visible": "visible",
+      "inert": false,
+      "schools": [
+        {
+          "id": "saigonUniversity",
+          "text": "2021–2026\nCircinus\n\nSaigon University\n\nBachelor's Degree in Information Technology\n\nGraduated with High Honors in Information Technology. Focus: System Analysis and Design, HCI, Usability Testing, Web/App Prototyping."
+        },
+        {
+          "id": "greenAcademy",
+          "text": "2022–2023\nTelescopium\n\nGreen Academy\n\nCertificate in Professional Video Editing\n\nDistinction. Focus: VFX compositing, motion graphics. Top-performing student — Premiere & After Effects."
+        },
+        {
+          "id": "arenaMultimedia",
+          "text": "2024–Present\nPictor\n\nArena Multimedia\n\nAdvanced Diploma in Multimedia\n\nAwarded Distinction in Semester 2 (UX/UI). Focus: user-centric design, mobile prototyping, wireframing, responsive web."
+        }
+      ],
+      "theme": "dark",
+      "sw": true,
+      "registrations": 1,
+      "nativeInteractions": 3
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "finished": "2026-10-08T13:19:42.146Z",
+  "status": "PASS"
+}

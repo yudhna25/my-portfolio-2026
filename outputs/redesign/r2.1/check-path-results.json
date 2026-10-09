@@ -1,0 +1,56 @@
+{
+  "status": "pass",
+  "checks": 181030,
+  "sampledPoses": 18018,
+  "minimumObserverRadius": 8.182909018191513,
+  "aspects": [
+    0.46208530805687204,
+    1.6
+  ],
+  "worksProjection": [
+    {
+      "width": 320,
+      "height": 844,
+      "fov": 113.41404957801036,
+      "centerNDC": [
+        -2.6006049501615616,
+        -0.08934918831140393,
+        0.9914971954520929
+      ],
+      "diskMaxNDCX": -1.2539883010174409
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "fov": 102.655566772743,
+      "centerNDC": [
+        -2.6006049501615625,
+        -0.10889432325452358,
+        0.9914971954520929
+      ],
+      "diskMaxNDCX": -1.2539883010174413
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "fov": 59.99999999999999,
+      "centerNDC": [
+        -2.5992891801734177,
+        -0.3972935539626741,
+        0.9875060251214522
+      ],
+      "diskMaxNDCX": -1.1581973402077654
+    }
+  ],
+  "legacySamples": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "limits": [
+    "Numeric pose contract only; no portal/finale effect implementation.",
+    "Black-hole center remains [0,0,-200]; projection checks use the physical radius-14 disk, while ray-traced appearance and browser sync require separate verification."
+  ]
+}

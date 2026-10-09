@@ -1,0 +1,83 @@
+{
+  "sources": [
+    {
+      "id": "S-PROJECT",
+      "kind": "public-project-and-cached-artifacts",
+      "url": "https://www.behance.net/gallery/241524417/Edura-LMS",
+      "title": "Edura LMS",
+      "attribution": "EDURA LMS — Anh Duy Trần Vũ / Behance; individual slide contributions are not established by the cache.",
+      "manifestPath": "outputs/visual-redesign-2026-10-07/edura/manifest.json",
+      "inventoryPath": "outputs/visual-redesign-2026-10-07/edura/inventory.md",
+      "status": "cached-image-bytes-verified; live-gallery-unavailable",
+      "liveAccessPath": "outputs/redesign/r0.3/behance-access.json",
+      "completeness": "26 files, 24 distinct SHA-256 values; partial cache collection, not all 119 modules"
+    },
+    {
+      "id": "S-OLD-AUDIT",
+      "kind": "prior-owner-confirmation",
+      "path": "outputs/01a0fcc6-9a7b-7733-bcd5-7ad22b35d2f7/support/audit-data.json",
+      "locator": "Q04 lines 843–849; A26 lines 358–361",
+      "status": "Lead UI user-confirmed; original public role proof not newly fetched"
+    },
+    {
+      "id": "S-USER-20261008",
+      "kind": "direct-owner-confirmation",
+      "dateLocal": "2026-10-08",
+      "location": "User reply in this R0.3 conversation",
+      "verbatim": "1.Quyết định về quy tắc bố cục, màu chủ đạo, system design 2. chỉ có video 3. dự án là concept và prototype ui/ux trên figma, đánh giá excellent bởi hội đồng giám khảo Lead UX/UI Designer của Arena Multimedia",
+      "confirmed": [
+        "layout rules",
+        "primary color direction",
+        "interface system design",
+        "concept and Figma UI/UX prototype",
+        "Excellent evaluation attributed to Arena Multimedia jury"
+      ],
+      "stillMissing": [
+        "video URL/file",
+        "assessment record/rubric/date/scope",
+        "specific layout rules and rationale",
+        "system library artifacts",
+        "testing outcomes",
+        "author reflection"
+      ],
+      "path": "outputs/redesign/r0.3/owner-confirmation.json"
+    },
+    {
+      "id": "S-ONCOURSE",
+      "requestedUrl": "https://oncoursesystems.com/making-school-data-work-fixing-fragmentation/",
+      "checkedAt": "2026-10-07T17:24:29.003673+00:00",
+      "status": "publisher-page-verified; survey-raw-data-not-audited",
+      "finalUrl": "https://oncoursesystems.com/making-school-data-work-fixing-fragmentation/",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 191133,
+      "sha256": "943ef74b7a914ad9b5433d19203a61cd8356b2551afba04b6f381d8d5a699ae4",
+      "path": "outputs/redesign/r0.3/sources/oncourse-fragmentation.html",
+      "kind": "external-context-primary-publisher",
+      "title": "Making School Data Work: Fixing Fragmentation",
+      "attribution": "Morgan Paese, OnCourse Communications / OnCourse Systems for Education",
+      "publishedAtInHtml": "2023-08-04T19:28:50+00:00",
+      "surveyContext": {
+        "when": "May 2023",
+        "respondents": 300,
+        "population": "educators",
+        "districts": 18,
+        "schoolLevel": "K–12",
+        "finding": "nearly 60% reported insufficient integration of technology tools"
+      },
+      "restriction": "External cohort, not EDURA learners or an EDURA outcome. Slide A08 says 2024; do not present that as the survey year."
+    },
+    {
+      "id": "S-LEGACY",
+      "kind": "legacy-copy-to-review",
+      "paths": [
+        "src/data.js:26–33",
+        "src/i18n/locales/vi.json:49–58",
+        "src/i18n/locales/en.json:49–58"
+      ],
+      "status": "not-independent-proof",
+      "restriction": "Excellent for UX innovation, fatigue reduction and seamless journeys are not substantiated by their presence in code."
+    }
+  ],
+  "newProductAssetsDownloaded": 0,
+  "retrievalNotes": "Web reader cache miss; Browser plugin kernel exited; normal Edge navigation HTTP 403 and browser error document. No alternate identity, login bypass or guessed module URLs."
+}

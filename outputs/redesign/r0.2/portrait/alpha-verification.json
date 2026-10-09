@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "format": "WEBP",
+  "mode": "RGBA",
+  "size": [
+    800,
+    1000
+  ],
+  "bytes": 66084,
+  "sha256": "6b2fea6dcbd2bd204fc0aa6c545cbe7a696670fc4532c992378c3393d53b511f",
+  "originalHashUnchanged": true,
+  "alphaZero": 541430,
+  "alphaFull": 10,
+  "alphaPartial": 258560,
+  "backgroundProbesTransparent": 11,
+  "shirtAndWatchColorsRetained": true,
+  "visualEvidence": [
+    "portrait-inspection.png",
+    "portrait/face-and-edge-comparison.png",
+    "portrait/cutout-on-white.png"
+  ],
+  "visualVerdict": "V2 identity, pose, glasses, raised hand and clothing recognizable; baked circle/halo/triangles removed. Fine hair edges inspected on dark/light. Original visible seating support retained.",
+  "limit": "AI texture is not pixel-identical. This check tests decode/alpha/color/source bytes; facial identity requires visual review."
+}

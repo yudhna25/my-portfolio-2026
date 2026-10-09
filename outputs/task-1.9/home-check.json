@@ -1,0 +1,21 @@
+{
+  "attribute": null,
+  "bodyBackground": "rgb(5, 5, 5)",
+  "bodyColor": "rgb(250, 250, 250)",
+  "button": {
+    "background": "rgb(5, 5, 5)",
+    "color": "rgb(250, 250, 250)",
+    "focusVisible": true,
+    "label": "Chuyển chế độ sáng",
+    "outline": "rgb(250, 250, 250) solid 2px",
+    "outsideWrapper": true,
+    "pointerEvents": "auto",
+    "position": "fixed",
+    "ring": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(5, 5, 5) 0px 0px 0px 2px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+    "top": "80px",
+    "zIndex": "50"
+  },
+  "meta": "#050505",
+  "wipRootBackground": "rgb(245, 245, 240)",
+  "wipRootColor": "rgb(26, 26, 26)"
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "path": "src/3d/components/CameraRig.jsx",
+    "sha256": "825fe59fd665a74adffe6864606d6e0827577ea0372ba4be667e140d45311c07"
+  },
+  {
+    "path": "src/3d/utils/cameraPath.js",
+    "sha256": "85fc600e91bf6300c3bde5b73f2ce32f109f659d3414c1723e18a8bec52d6210"
+  },
+  {
+    "path": "src/3d/components/BlackHole.jsx",
+    "sha256": "dfbbeec22d47ca4c7a9805f5672b9ee9d7d91bd6d1a1c1f5a99e0801f18c18ab"
+  },
+  {
+    "path": "src/3d/components/BlackHoleSystem.jsx",
+    "sha256": "0a819d7f98b63584dd4bc714ff0a0b493ccffd56909c4cab28d3ef3620e12ea5"
+  },
+  {
+    "path": "src/3d/components/BlackHoleBloomMask.jsx",
+    "sha256": "17b3d5b7b151b3f4e4999c09c181757985813a749a2fcd0980ee3b32bac92860"
+  },
+  {
+    "path": "src/3d/shaders/blackHole.js",
+    "sha256": "00efc9eb980f1a0cb18029fde7d98bc6ccaba4fca58df3cd3549eaf8b1c24100"
+  },
+  {
+    "path": "src/3d-lab.jsx",
+    "sha256": "a76b439bd765dc1db0f33fd43d32dbc26ac9a0818c02bbc65d3883c56eb5a3a3"
+  },
+  {
+    "path": "src/styles/globals.css",
+    "sha256": "bf872dcec8ef805654bc49a3936ba883d8b3b6ad47e732663d1e56f9939a87ee"
+  },
+  {
+    "path": "src/i18n/locales/vi.json",
+    "sha256": "a127dc64fb538d25fcc117ec786d2fb5009c919b3a278faf1036f3828b7993b8"
+  },
+  {
+    "path": "src/i18n/locales/en.json",
+    "sha256": "821467769ef3c604a95599fb00990de078838a085fe3402ebcb8c77ef051c78d"
+  },
+  {
+    "path": "outputs/content-vi.md",
+    "sha256": "93621a2de2f723b1a42a216328f88024cdc0a001699d5dba020c1ad74859d307"
+  },
+  {
+    "path": "outputs/content-en.md",
+    "sha256": "bdb3f3c80fe2c00a69aafb133ff6ade7bf2eaa51d58424854181e07a7fc237a8"
+  }
+]

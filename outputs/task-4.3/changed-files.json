@@ -1,0 +1,6 @@
+[
+  "src/3d/components/CameraRig.jsx",
+  "src/3d/components/BlackHole.jsx",
+  "src/components/layout/MenuOverlay.jsx",
+  "src/components/Preloader.jsx"
+]

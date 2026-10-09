@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stellar Odyssey — Task 2.4 Cursor QA</title>
+  <link rel="stylesheet" href="./qa.css" />
+</head>
+<body>
+  <main id="fixture">
+    <header><p>STELLAR ODYSSEY / INTERACTION STUDY 2.4</p><h1>One orbit.<br />Two languages.</h1></header>
+    <section class="panels">
+      <a id="project" data-cursor="view" data-magnetic href="#" class="project dark"><span class="eyebrow">01 / PROJECT HOVER</span><strong>VOID<br />STUDIES</strong><span class="caption">SVG ring · 64px · XEM / VIEW</span></a>
+      <a id="light-project" data-cursor="view" href="#" class="project light"><span class="eyebrow">02 / DIFFERENCE BLEND</span><strong>LIGHT<br />STUDIES</strong><span class="caption">Native cursor remains available</span></a>
+    </section>
+    <nav><a id="plain-link" href="#">Normal link</a><button id="magnet" data-magnetic>Magnetic / max 8px</button><button id="disabled" data-magnetic data-cursor="view" disabled>Disabled</button><a id="legacy" class="work-card" href="#">Legacy Work card</a><div id="dynamic"></div></nav>
+    <div id="blank">Move across the canvas. The dot arrives first.</div>
+  </main>
+  <div id="root"></div>
+  <aside id="qa-panel">
+    <div class="controls"><button id="run">Run checks</button><button id="slow">Slow pointer</button><button id="fast">Fast pointer</button><button id="reduce">Toggle reduced motion</button><button id="coarse">Toggle coarse pointer</button><button id="mount">Toggle mount</button><button id="vi">VI</button><button id="en">EN</button><button id="show-work">Inspect Work</button><button id="show-email">Inspect Email</button></div>
+    <p id="qa-status">Starting</p><pre id="qa-results"></pre>
+  </aside>
+  <script type="module" src="./cursor-qa.js"></script>
+</body>
+</html>

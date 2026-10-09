@@ -1,0 +1,96 @@
+{
+  "mode": "normal",
+  "nativeReduced": false,
+  "mounts": 1,
+  "completions": 1,
+  "samples": [
+    0
+  ],
+  "checks": [
+    {
+      "name": "One DOM mount and one completion in StrictMode",
+      "passed": true
+    },
+    {
+      "name": "At most one intro timeline",
+      "passed": true
+    },
+    {
+      "name": "Completion within 2.5 seconds",
+      "passed": true
+    },
+    {
+      "name": "Counter starts at zero and reaches 100",
+      "passed": true
+    },
+    {
+      "name": "Counter monotonic",
+      "passed": true
+    },
+    {
+      "name": "Status and i18n label",
+      "passed": true
+    },
+    {
+      "name": "Background #050505, mono single SVG ring",
+      "passed": true
+    },
+    {
+      "name": "JetBrains Mono",
+      "passed": true
+    },
+    {
+      "name": "Fade finished before callback",
+      "passed": true
+    },
+    {
+      "name": "Preloader and timeline cleaned up",
+      "passed": true
+    },
+    {
+      "name": "App unlocked and store completed",
+      "passed": true
+    },
+    {
+      "name": "Expected spinner behavior",
+      "passed": true
+    },
+    {
+      "name": "Expected curtain behavior",
+      "passed": true
+    },
+    {
+      "name": "No console error",
+      "passed": true
+    },
+    {
+      "name": "Smoother resumed",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "initial": {
+    "label": "ĐANG KẾT NỐI VỚI VŨ TRỤ...",
+    "role": "status",
+    "background": "rgb(5, 5, 5)",
+    "clip": "inset(0%)",
+    "font": "\"JetBrains Mono\", monospace",
+    "circles": 1,
+    "stops": [
+      "rgb(255, 255, 255)",
+      "rgb(153, 153, 153)",
+      "rgb(51, 51, 51)"
+    ],
+    "duration": 2.32,
+    "locked": false
+  },
+  "elapsedMs": 2331.7000000029802,
+  "finalPercent": 100,
+  "endpointWasPaused": true,
+  "finalOpacity": "0",
+  "finalClip": "inset(0% 0% 100%)",
+  "finalTransform": "matrix(0.860742, 0.509041, -0.509041, 0.860742, 0, 0)",
+  "rotationSamples": 2,
+  "peakTimelines": 1,
+  "smootherResumed": true
+}

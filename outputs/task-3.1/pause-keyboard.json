@@ -1,0 +1,126 @@
+{
+  "checked": true,
+  "pose": {
+    "blackHole": false,
+    "calls": 8,
+    "camera": [
+      -0.32157145636164186,
+      1.859899372050845,
+      -170.50639123672008
+    ],
+    "canvas": 1,
+    "dpr": 1,
+    "frameloop": "always",
+    "geometries": 8,
+    "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "label": "Capture",
+    "orbit": {
+      "bounds": {
+        "bottom": 568.84375,
+        "height": 288,
+        "left": 24,
+        "right": 286,
+        "top": 280.84375,
+        "width": 262,
+        "x": 24,
+        "y": 280.84375
+      },
+      "center": [
+        155,
+        424.84374999999994
+      ],
+      "materials": [
+        {
+          "color": "ffffff",
+          "map": false,
+          "name": "skills-core",
+          "segments": {
+            "detail": 1,
+            "radius": 0.28
+          },
+          "shadow": false,
+          "side": 0,
+          "type": "MeshBasicMaterial"
+        },
+        {
+          "color": "bbbbbb",
+          "map": false,
+          "name": "",
+          "segments": {
+            "arc": 6.283185307179586,
+            "radialSegments": 4,
+            "radius": 1.65,
+            "thetaLength": 6.283185307179586,
+            "thetaStart": 0,
+            "tube": 0.009,
+            "tubularSegments": 64
+          },
+          "shadow": false,
+          "side": 0,
+          "type": "MeshBasicMaterial"
+        },
+        {
+          "color": "bbbbbb",
+          "map": false,
+          "name": "skills-tools",
+          "segments": {
+            "detail": 0,
+            "radius": 0.14
+          },
+          "shadow": false,
+          "side": 0,
+          "type": "MeshBasicMaterial"
+        },
+        {
+          "color": "bbbbbb",
+          "map": false,
+          "name": "",
+          "segments": {
+            "arc": 6.283185307179586,
+            "radialSegments": 4,
+            "radius": 2.55,
+            "thetaLength": 6.283185307179586,
+            "thetaStart": 0,
+            "tube": 0.009,
+            "tubularSegments": 64
+          },
+          "shadow": false,
+          "side": 0,
+          "type": "MeshBasicMaterial"
+        },
+        {
+          "color": "bbbbbb",
+          "map": false,
+          "name": "skills-technical",
+          "segments": {
+            "detail": 0,
+            "radius": 0.14
+          },
+          "shadow": false,
+          "side": 0,
+          "type": "MeshBasicMaterial"
+        }
+      ],
+      "rotations": [
+        11.916143999994922,
+        -7.447589999998136
+      ],
+      "scale": 1.1566319371292275,
+      "visible": true
+    },
+    "planet": null,
+    "progress": 0.2051316677920324,
+    "reduced": false,
+    "section": "skills",
+    "size": {
+      "height": 850,
+      "left": 0,
+      "top": 0,
+      "width": 310
+    },
+    "starCount": 6000,
+    "subscribers": 6,
+    "textures": 1,
+    "triangles": 1188
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "base": "http://127.0.0.1:4173",
+  "browser": "154.0.4258.62",
+  "testedUTC": "2026-10-08T17:58:53.030Z",
+  "records": [
+    {
+      "label": "direct-case-no-consent",
+      "url": "/projects/edura",
+      "doc": 0.17004529830557635,
+      "active": "false",
+      "contextStates": [],
+      "preference": null,
+      "canvas": 0
+    },
+    {
+      "label": "trusted-sound-click-direct-case",
+      "url": "/projects/edura",
+      "doc": 0.17004529830557635,
+      "active": "true",
+      "contextStates": [
+        "running"
+      ],
+      "preference": {
+        "state": {
+          "isMuted": false
+        },
+        "version": 0
+      },
+      "canvas": 0
+    },
+    {
+      "label": "first-return-main",
+      "url": "/#work",
+      "doc": 0.17004529830557635,
+      "active": "true",
+      "contextStates": [
+        "running"
+      ],
+      "preference": {
+        "state": {
+          "isMuted": false
+        },
+        "version": 0
+      },
+      "canvas": 1
+    },
+    {
+      "label": "case-1",
+      "url": "/projects/edura",
+      "doc": 0.17004529830557635,
+      "active": "true",
+      "contextStates": [
+        "running"
+      ],
+      "preference": {
+        "state": {
+          "isMuted": false
+        },
+        "version": 0
+      },
+      "canvas": 0
+    },
+    {
+      "label": "return-1",
+      "url": "/#work",
+      "doc": 0.17004529830557635,
+      "active": "true",
+      "contextStates": [
+        "running"
+      ],
+      "preference": {
+        "state": {
+          "isMuted": false
+        },
+        "version": 0
+      },
+      "canvas": 1
+    },
+    {
+      "label": "case-2",
+      "url": "/projects/edura",
+      "doc": 0.17004529830557635,
+      "active": "true",
+      "contextStates": [
+        "running"
+      ],
+      "preference": {
+        "state": {
+          "isMuted": false
+        },
+        "version": 0
+      },
+      "canvas": 0
+    },
+    {
+      "label": "return-2",
+      "url": "/#work",
+      "doc": 0.17004529830557635,
+      "active": "true",
+      "contextStates": [
+        "running"
+      ],
+      "preference": {
+        "state": {
+          "isMuted": false
+        },
+        "version": 0
+      },
+      "canvas": 1
+    },
+    {
+      "label": "case-3",
+      "url": "/projects/edura",
+      "doc": 0.17004529830557635,
+      "active": "true",
+      "contextStates": [
+        "running"
+      ],
+      "preference": {
+        "state": {
+          "isMuted": false
+        },
+        "version": 0
+      },
+      "canvas": 0
+    },
+    {
+      "label": "return-3",
+      "url": "/#work",
+      "doc": 0.17004529830557635,
+      "active": "true",
+      "contextStates": [
+        "running"
+      ],
+      "preference": {
+        "state": {
+          "isMuted": false
+        },
+        "version": 0
+      },
+      "canvas": 1
+    },
+    {
+      "label": "reload-case-saved-on-no-autoplay",
+      "url": "/projects/edura",
+      "doc": 0.068558175393034,
+      "active": "false",
+      "contextStates": [],
+      "preference": {
+        "state": {
+          "isMuted": false
+        },
+        "version": 0
+      },
+      "canvas": 0
+    },
+    {
+      "label": "trusted-sound-click-case",
+      "url": "/projects/edura",
+      "doc": 0.068558175393034,
+      "active": "true",
+      "contextStates": [
+        "running"
+      ],
+      "preference": {
+        "state": {
+          "isMuted": false
+        },
+        "version": 0
+      },
+      "canvas": 0
+    },
+    {
+      "label": "mute-case",
+      "url": "/projects/edura",
+      "doc": 0.068558175393034,
+      "active": "false",
+      "contextStates": [
+        "suspended"
+      ],
+      "preference": {
+        "state": {
+          "isMuted": true
+        },
+        "version": 0
+      },
+      "canvas": 0
+    },
+    {
+      "label": "muted-return-main",
+      "url": "/#work",
+      "doc": 0.068558175393034,
+      "active": "false",
+      "contextStates": [
+        "suspended"
+      ],
+      "preference": {
+        "state": {
+          "isMuted": true
+        },
+        "version": 0
+      },
+      "canvas": 1
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "Service Worker registration blocked by Playwright",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "Service Worker registration blocked by Playwright",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "status": "pass"
+}

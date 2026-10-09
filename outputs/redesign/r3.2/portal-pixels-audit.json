@@ -1,0 +1,190 @@
+{
+  "generatedAt": "2026-10-08T04:04:28.483361+00:00",
+  "browserRun": {
+    "started": "2026-10-08T03:59:18.606Z",
+    "finished": "2026-10-08T04:00:16.887Z"
+  },
+  "note": "Final passing capture files. Only five sampled poses per direction; full PNG diff includes time-dependent ambient/year/Nav/old section entrance DOM. Shared camera/portal fields exact independently in frames-manifest.json; no pixel regions excluded or screenshots altered.",
+  "results": [
+    {
+      "width": 1440,
+      "p": "0",
+      "files": [
+        "portal-1440-forward-0.png",
+        "portal-1440-reverse-0.png"
+      ],
+      "sha256": [
+        "0b1b7a50fbde0017aea8e3095cbc983926012d45ecaccb2425ec331c13748383",
+        "b2f14f7d97bd265f0e7efbbad899ab26e26904c6cf046c9c37e8d9ce09673e46"
+      ],
+      "changedPixels": 28115,
+      "maxDifference": 63,
+      "whitePixelsAtLeast245": 110324,
+      "whiteFraction": 0.0851265,
+      "forwardMtime": 1791431971.9344158,
+      "reverseMtime": 1791431976.6364996
+    },
+    {
+      "width": 1440,
+      "p": "0.25",
+      "files": [
+        "portal-1440-forward-0.25.png",
+        "portal-1440-reverse-0.25.png"
+      ],
+      "sha256": [
+        "03e0cfe2b73a8df80176b589b80cf4a6d5e7cd096450d9fd27030a3cd58912af",
+        "6979519bb660cea5a2433b1c3fe4ceb9a3418ca73679bf0662282e045a6c3850"
+      ],
+      "changedPixels": 68,
+      "maxDifference": 1,
+      "whitePixelsAtLeast245": 109120,
+      "whiteFraction": 0.0841975,
+      "forwardMtime": 1791431972.4425058,
+      "reverseMtime": 1791431976.1403875
+    },
+    {
+      "width": 1440,
+      "p": "0.5",
+      "files": [
+        "portal-1440-forward-0.5.png",
+        "portal-1440-reverse-0.5.png"
+      ],
+      "sha256": [
+        "c668c73dee4baf63a130f79938d640dbe7b26293719f773cca60e1becbcc72e8",
+        "c668c73dee4baf63a130f79938d640dbe7b26293719f773cca60e1becbcc72e8"
+      ],
+      "changedPixels": 0,
+      "maxDifference": 0,
+      "whitePixelsAtLeast245": 527,
+      "whiteFraction": 0.0004066,
+      "forwardMtime": 1791431972.9312332,
+      "reverseMtime": 1791431975.6320622
+    },
+    {
+      "width": 1440,
+      "p": "0.75",
+      "files": [
+        "portal-1440-forward-0.75.png",
+        "portal-1440-reverse-0.75.png"
+      ],
+      "sha256": [
+        "0620b11fac0d16b8fc15ab115dee047dad9bbcd52dd98068241159f95ce98793",
+        "ef13f4cc64e5ef6ac2f9ee327bf6cb99ee8287e660340e7c00d6d193552642d5"
+      ],
+      "changedPixels": 65137,
+      "maxDifference": 10,
+      "whitePixelsAtLeast245": 9214,
+      "whiteFraction": 0.0071096,
+      "forwardMtime": 1791431973.5041242,
+      "reverseMtime": 1791431975.1347456
+    },
+    {
+      "width": 1440,
+      "p": "1",
+      "files": [
+        "portal-1440-forward-1.png",
+        "portal-1440-reverse-1.png"
+      ],
+      "sha256": [
+        "045bf22b099b08c3505f4a5da3b76b8595fa0fb1ac727b5ab04f284f52611df5",
+        "ae91673bd7fe1b858219f3dca4ac8e883adb09621cf04290ae3277c759b97827"
+      ],
+      "changedPixels": 155127,
+      "maxDifference": 250,
+      "whitePixelsAtLeast245": 16950,
+      "whiteFraction": 0.0130787,
+      "forwardMtime": 1791431974.0271873,
+      "reverseMtime": 1791431974.5398471
+    },
+    {
+      "width": 390,
+      "p": "0",
+      "files": [
+        "portal-390-forward-0.png",
+        "portal-390-reverse-0.png"
+      ],
+      "sha256": [
+        "d0d53bf8f4514da0c3b8435b5ac15b948927ad797c1174894da374ef9d29401a",
+        "d0d53bf8f4514da0c3b8435b5ac15b948927ad797c1174894da374ef9d29401a"
+      ],
+      "changedPixels": 0,
+      "maxDifference": 0,
+      "whitePixelsAtLeast245": 8080,
+      "whiteFraction": 0.0245473,
+      "forwardMtime": 1791431978.62667,
+      "reverseMtime": 1791431983.03463
+    },
+    {
+      "width": 390,
+      "p": "0.25",
+      "files": [
+        "portal-390-forward-0.25.png",
+        "portal-390-reverse-0.25.png"
+      ],
+      "sha256": [
+        "d26dba94a8ae78508499680c6731e6d090c96b7b869730d3a7168730bc099215",
+        "f690f50a8f4b6c6264799a85bcff387185053f31b55b168e8f8cd1e23225e004"
+      ],
+      "changedPixels": 2242,
+      "maxDifference": 250,
+      "whitePixelsAtLeast245": 7438,
+      "whiteFraction": 0.0225969,
+      "forwardMtime": 1791431979.1060889,
+      "reverseMtime": 1791431982.5543685
+    },
+    {
+      "width": 390,
+      "p": "0.5",
+      "files": [
+        "portal-390-forward-0.5.png",
+        "portal-390-reverse-0.5.png"
+      ],
+      "sha256": [
+        "78933dcc8969e740fb37a45cb03fbe0127722f619625d2bb2104414168b2edcf",
+        "78933dcc8969e740fb37a45cb03fbe0127722f619625d2bb2104414168b2edcf"
+      ],
+      "changedPixels": 0,
+      "maxDifference": 0,
+      "whitePixelsAtLeast245": 515,
+      "whiteFraction": 0.0015646,
+      "forwardMtime": 1791431979.5896783,
+      "reverseMtime": 1791431982.0664573
+    },
+    {
+      "width": 390,
+      "p": "0.75",
+      "files": [
+        "portal-390-forward-0.75.png",
+        "portal-390-reverse-0.75.png"
+      ],
+      "sha256": [
+        "2d9c6420d71718d98082f2848fc93f2ec91872e129fbfa6d49797271f9a44aff",
+        "5016301086517c852da364f1588e3efcfc5d70bb27cdfd7529ce88bd8539c8d3"
+      ],
+      "changedPixels": 534,
+      "maxDifference": 17,
+      "whitePixelsAtLeast245": 1539,
+      "whiteFraction": 0.0046755,
+      "forwardMtime": 1791431980.085074,
+      "reverseMtime": 1791431981.5840368
+    },
+    {
+      "width": 390,
+      "p": "1",
+      "files": [
+        "portal-390-forward-1.png",
+        "portal-390-reverse-1.png"
+      ],
+      "sha256": [
+        "465d17ddf5e71ba2be9ed2b7d4dc656c38099af9821c73f4008f80d84f6c9a9e",
+        "e133f433f4783e87a2fb7b2085ae6c1534f51cf11fe753b8e3ae25ac93ee0b5a"
+      ],
+      "changedPixels": 47064,
+      "maxDifference": 250,
+      "whitePixelsAtLeast245": 2928,
+      "whiteFraction": 0.0088954,
+      "forwardMtime": 1791431980.5900629,
+      "reverseMtime": 1791431981.0802364
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "startedAt": "2026-10-07T17:04:37.343Z",
+  "browser": "154.0.4258.62",
+  "errors": [],
+  "scope": "Additional baseline observations only; isolated browser contexts",
+  "state": {
+    "url": "http://127.0.0.1:5191/",
+    "theme": "light",
+    "themeColor": "#FAFAFA",
+    "bodyBg": "rgb(250, 250, 250)",
+    "reduced": true,
+    "canvasCount": 1,
+    "lens": 0,
+    "images": [
+      {
+        "src": "/project1.webp",
+        "widthAttribute": "1600",
+        "heightAttribute": "1000",
+        "natural": [
+          0,
+          0
+        ],
+        "complete": false
+      },
+      {
+        "src": "/project2.webp",
+        "widthAttribute": "1600",
+        "heightAttribute": "1000",
+        "natural": [
+          0,
+          0
+        ],
+        "complete": false
+      },
+      {
+        "src": "/project3.webp",
+        "widthAttribute": "1600",
+        "heightAttribute": "1000",
+        "natural": [
+          0,
+          0
+        ],
+        "complete": false
+      }
+    ],
+    "serviceWorkers": [
+      {
+        "scope": "http://127.0.0.1:5191/",
+        "active": "http://127.0.0.1:5191/sw.js"
+      }
+    ],
+    "controlled": true,
+    "projectActions": [
+      {
+        "title": "EDURA LMS",
+        "href": "https://www.behance.net/gallery/241524417/Edura-LMS",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "actionTag": "A",
+        "ariaDisabled": null,
+        "disabledButton": false
+      },
+      {
+        "title": "VERIS APP",
+        "href": null,
+        "target": null,
+        "rel": null,
+        "disabledButton": true
+      },
+      {
+        "title": "VIE PERFUME",
+        "href": null,
+        "target": null,
+        "rel": null,
+        "disabledButton": true
+      }
+    ]
+  },
+  "reducedMotionDrawObservation": {
+    "durationRequestedMs": 2200,
+    "starFieldSubmissions": 363,
+    "method": "POINTS count24000 while media reduced; static appearance is distinct from paused rendering"
+  },
+  "indexFallback": {
+    "status": 200,
+    "sameHTML": true,
+    "meaning": "HTTP200 SPA shell alone does not mean a case route exists"
+  },
+  "transmitCodeObservation": "Source Contact.jsx handleTransmit catches clipboard failure then sets transmitted=true regardless; not executed as a clipboard test in this baseline.",
+  "finishedAt": "2026-10-07T17:04:41.458Z",
+  "projectActionsCheckedAt": "2026-10-07T17:05:58.524Z"
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "pass": true,
+    "message": "Exactly eight experiments"
+  },
+  {
+    "pass": true,
+    "message": "Three LiveDemo slots"
+  },
+  {
+    "pass": true,
+    "message": "Five text thumbnails"
+  },
+  {
+    "pass": true,
+    "message": "Every pending demo is disabled"
+  },
+  {
+    "pass": true,
+    "message": "No real demo, image, or dead link"
+  },
+  {
+    "pass": true,
+    "message": "Named semantic section"
+  },
+  {
+    "pass": true,
+    "message": "Frames stay 16:9"
+  },
+  {
+    "pass": true,
+    "message": "Mono background #050505"
+  },
+  {
+    "pass": true,
+    "message": "No section horizontal overflow"
+  },
+  {
+    "pass": true,
+    "message": "en: exact experiment names"
+  },
+  {
+    "pass": true,
+    "message": "en: exact types / descriptions"
+  },
+  {
+    "pass": true,
+    "message": "en: coming soon labels"
+  },
+  {
+    "pass": true,
+    "message": "vi: exact experiment names"
+  },
+  {
+    "pass": true,
+    "message": "vi: exact types / descriptions"
+  },
+  {
+    "pass": true,
+    "message": "vi: coming soon labels"
+  },
+  {
+    "pass": true,
+    "message": "LiveDemo renders children in place of its placeholder"
+  },
+  {
+    "pass": true,
+    "message": "Every card reveals when scrolled into view"
+  },
+  {
+    "pass": true,
+    "message": "Reduced-motion restores static cards"
+  },
+  {
+    "pass": true,
+    "message": "Unmount cleans up triggers and smoother"
+  },
+  {
+    "pass": true,
+    "message": "StrictMode remount keeps eight experiments"
+  }
+]

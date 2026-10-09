@@ -1,0 +1,36 @@
+{
+  "noWebGL": {
+    "results": [
+      {
+        "name": "Static fallback replaces failed WebGL scene",
+        "passed": true
+      },
+      {
+        "name": "DOM and smoother survive scene failure",
+        "passed": true
+      },
+      {
+        "name": "Scroll bridge still updates without WebGL",
+        "passed": true
+      }
+    ],
+    "failures": 0
+  },
+  "sceneError": {
+    "results": [
+      {
+        "name": "Static fallback replaces failed WebGL scene",
+        "passed": true
+      },
+      {
+        "name": "DOM and smoother survive scene failure",
+        "passed": true
+      },
+      {
+        "name": "Scroll bridge still updates without WebGL",
+        "passed": true
+      }
+    ],
+    "failures": 0
+  }
+}

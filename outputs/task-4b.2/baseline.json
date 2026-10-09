@@ -1,0 +1,114 @@
+[
+  {
+    "path": "src/App.jsx",
+    "hash": "CD46F68875C909DC99C1CDAF57EF41B61410024E6DC2C95701545239D713E84D"
+  },
+  {
+    "path": "src/components/layout/Nav.jsx",
+    "hash": "BDAFC56843BDC72C59C83B309EB9F46B4F7C36DD53CD8EBFB985147A1C45ACD3"
+  },
+  {
+    "path": "src/components/layout/MenuOverlay.jsx",
+    "hash": "941A1ED2D46A450AD6227DA87C1E0C94BF320E5FFDBFF4CD003F59C598BF791C"
+  },
+  {
+    "path": "src/components/sections/Skills.jsx",
+    "hash": "A03FBDD0ADCC0DC06E50DB0DAAD100051AB86196CCA992BB3F6E8ACE926E4E35"
+  },
+  {
+    "path": "src/components/Work.jsx",
+    "hash": "925365623575262CC7B85CF9B54BC16A7DB66BC30CC17A5D705D915CA38D251C"
+  },
+  {
+    "path": "src/3d/hooks/useScrollProgress.js",
+    "hash": "A23D8C4A8EB00CE0D6F138E3EE44FE5BBBFB5EE249549B5C05F85C8FAA9E9EC2"
+  },
+  {
+    "path": "src/data/navigation.js",
+    "hash": "7DB651A51AC6B80309D9BA32AF57EC94CB9BE7CA678426C16D2332A62491BD60"
+  },
+  {
+    "path": "src/i18n/locales/vi.json",
+    "hash": "E61B0B500FF7A59E8E7178AB566F95D24528BB330BA394152B4581823D34FB4C"
+  },
+  {
+    "path": "src/i18n/locales/en.json",
+    "hash": "3D41860998B97ED3779831E0140E875867FE9143043040F15B42593FE4C245D7"
+  },
+  {
+    "path": "src/components/Marquee.jsx",
+    "hash": "A5630272BA3EB5C127BA3E3287A89B63B9605CCCD06AC1916037F3AB3A36E23B"
+  },
+  {
+    "path": "src/components/sections/Playground.jsx",
+    "hash": "2ED20104ED4B9E0CD5B4E10E9D6BB6814DE488A8F505F0C9B80DA514A7A9ED62"
+  },
+  {
+    "path": "src/components/effects/LiveDemo.jsx",
+    "hash": "6BB8CBEF9BD8252D5259F3F52610A89B40AD7273770A53C06B1BA480A3EB17E0"
+  },
+  {
+    "path": "src/components/effects/ScrollOrbitDemo.jsx",
+    "hash": "010B9FDD03BCF5C55387E93C67E9CD3B86EC36B5077101AC84A2485AEAF4EB46"
+  },
+  {
+    "path": "src/3d/components/ParticleFieldDemo.jsx",
+    "hash": "83EDBC9574FC026555DA8723DDF9C50C90319E6638F14D50D61614BB0080B924"
+  },
+  {
+    "path": "src/3d/components/ShaderPlaygroundDemo.jsx",
+    "hash": "97DFE331476645BC00BC543629FFE17592F4A851B41A32B86F17094A11C31BF3"
+  },
+  {
+    "path": "src/data/playground.js",
+    "hash": "D2BCF794D0784312481134CE13414F39A3A11A2EF4ED89D6C345726E51345E76"
+  },
+  {
+    "path": "src/styles/globals.css",
+    "hash": "855DE5CA5CC96C0BA0A01E41FC4701C8CB8154A010E0AA542317C8DA856836D3"
+  },
+  {
+    "path": "src/index.css",
+    "hash": "7CF5317063D0C2BD1EAECB90BD31DB5EA49E65CB2D5ADF358CF4E855A2E842C2"
+  },
+  {
+    "path": "src/components/ui/SoundToggle.jsx",
+    "hash": "DDB1CD7FF9D1E3784174DB1177F19EA07B90FFB8392208EE7B0AE8FF541DC38A"
+  },
+  {
+    "path": "src/components/ui/ThemeToggle.jsx",
+    "hash": "EA49D135CF8982854DE199F219AF72FC01197B9BAD1CF260E69E533E17363AFE"
+  },
+  {
+    "path": "src/lib/audioEngine.js",
+    "hash": "CED5514AFB6AF3322B8793004275726CBC2B78D40F404C577C8ADFAE07AA99B1"
+  },
+  {
+    "path": "src/stores/useAudioStore.js",
+    "hash": "421D14EAE90CDF5562E004E5FA937987D172CCE58E4A7B95924FECC241F8C8F8"
+  },
+  {
+    "path": "src/3d/GalaxyScene.jsx",
+    "hash": "E39C49A452674A3E76485B98758B40BA9E5D018799F04509CB34AFB79554A648"
+  },
+  {
+    "path": "src/3d/components/CameraRig.jsx",
+    "hash": "3BEDF87E13FA8A3193CEF828D79412C179CB088B45356E27325EB570DDB70853"
+  },
+  {
+    "path": "src/3d/shaders/blackHole.js",
+    "hash": "6CB9002D236F12D481FA9B44DF89ADFA3DA932EADE9BBECDE95FB7EB70EBC3AD"
+  },
+  {
+    "path": "src/3d/components/Constellations.jsx",
+    "hash": "02F1502255101E29F1A45872479D165A03D366E7C9668FE8BB6168B89F0C0EB5"
+  },
+  {
+    "path": "src/3d/components/StardustWake.jsx",
+    "hash": "B7D39EF17020F46CC84AD7083A739CE222FF07B4D026355DD478B21AEEC9B0CE"
+  },
+  {
+    "path": "src/3d/components/ShootingStars.jsx",
+    "hash": "C0AB81784CA2ED24EA76655ECA18EC3C36B23AFE984CC898733BE6601242B36C"
+  }
+]

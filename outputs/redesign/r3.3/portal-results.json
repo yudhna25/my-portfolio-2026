@@ -1,0 +1,3347 @@
+{
+  "started": "2026-10-08T04:28:18.115Z",
+  "browser": "Edge 154 / bundled Playwright fallback; Chrome plugin unavailable",
+  "layouts": [],
+  "portal": [
+    {
+      "requested": 0,
+      "direction": "forward",
+      "width": 1440,
+      "height": 900,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "hero",
+      "progress": 0,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        0,
+        2.2,
+        -168
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 32.07553584899245,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 5.684341886080802e-14,
+      "mini": 1,
+      "visibility": 1,
+      "pull": 0,
+      "center": [
+        0.8960015190972223,
+        0.6555989583333333
+      ],
+      "scale": 0.29223378115384674,
+      "aperture": [
+        44.804296875,
+        35.70515625
+      ],
+      "backdrop": false,
+      "contentVisible": "hidden",
+      "inert": true,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 104,
+          "top": 1737.125,
+          "right": 552,
+          "bottom": 2297.125,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 104,
+          "top": 1737.125,
+          "right": 552,
+          "bottom": 2297.125,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 1575,
+        "right": 1440,
+        "bottom": 2498.765625,
+        "width": 1440,
+        "height": 923.765625
+      },
+      "paragraphRects": [
+        {
+          "left": 640,
+          "top": 1986.03125,
+          "right": 1286.125,
+          "bottom": 2083.203125,
+          "width": 646.125,
+          "height": 97.171875
+        },
+        {
+          "left": 640,
+          "top": 2107.203125,
+          "right": 1286.125,
+          "bottom": 2236.765625,
+          "width": 646.125,
+          "height": 129.5625
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 640,
+            "top": 1759,
+            "right": 1360,
+            "bottom": 1834.515625,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 640,
+            "top": 1834.515625,
+            "right": 1360,
+            "bottom": 1910.03125,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 640,
+            "top": 1986.03125,
+            "right": 1286.125,
+            "bottom": 2018.421875,
+            "width": 646.125,
+            "height": 32.390625
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 1
+    },
+    {
+      "requested": 0.25,
+      "direction": "forward",
+      "width": 1440,
+      "height": 900,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "portal",
+      "progress": 0.25,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        0.5829903978052127,
+        1.73360768175583,
+        -181.9917695473251
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 18.100873941189228,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 5.684341886080802e-14,
+      "mini": 1,
+      "visibility": 1,
+      "pull": 0.25,
+      "center": [
+        0.8960015190972223,
+        0.6555989583333333
+      ],
+      "scale": 0.34528643829851424,
+      "aperture": [
+        93.80870623536673,
+        74.75743951721414
+      ],
+      "backdrop": false,
+      "contentVisible": "hidden",
+      "inert": true,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 104,
+          "top": 1343.1279296875,
+          "right": 552,
+          "bottom": 1903.1279296875,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 104,
+          "top": 1343.1279296875,
+          "right": 552,
+          "bottom": 1903.1279296875,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 1181.0029296875,
+        "right": 1440,
+        "bottom": 2104.7685546875,
+        "width": 1440,
+        "height": 923.765625
+      },
+      "paragraphRects": [
+        {
+          "left": 640,
+          "top": 1592.0341796875,
+          "right": 1286.125,
+          "bottom": 1689.2060546875,
+          "width": 646.125,
+          "height": 97.171875
+        },
+        {
+          "left": 640,
+          "top": 1713.2060546875,
+          "right": 1286.125,
+          "bottom": 1842.7685546875,
+          "width": 646.125,
+          "height": 129.5625
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 640,
+            "top": 1365.0029296875,
+            "right": 1360,
+            "bottom": 1440.5185546875,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 640,
+            "top": 1440.5185546875,
+            "right": 1360,
+            "bottom": 1516.0341796875,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 640,
+            "top": 1592.0341796875,
+            "right": 1286.125,
+            "bottom": 1624.4248046875,
+            "width": 646.125,
+            "height": 32.390625
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 1
+    },
+    {
+      "requested": 0.5,
+      "direction": "forward",
+      "width": 1440,
+      "height": 900,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "portal",
+      "progress": 0.5,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        1,
+        1.4,
+        -192
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 8.182909018191513,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 5.684341886080802e-14,
+      "mini": 1,
+      "visibility": 0,
+      "pull": 0.5,
+      "center": [
+        0.8960015190972223,
+        0.6555989583333333
+      ],
+      "scale": 44.73170682757215,
+      "aperture": [
+        26882.578125,
+        21423.09375
+      ],
+      "backdrop": false,
+      "contentVisible": "hidden",
+      "inert": true,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 104,
+          "top": 949.6250610351562,
+          "right": 552,
+          "bottom": 1509.625,
+          "width": 448,
+          "height": 559.9999389648438
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 104,
+          "top": 949.6250610351562,
+          "right": 552,
+          "bottom": 1509.625,
+          "width": 448,
+          "height": 559.9999389648438
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 787.5000610351562,
+        "right": 1440,
+        "bottom": 1711.265625,
+        "width": 1440,
+        "height": 923.7655639648438
+      },
+      "paragraphRects": [
+        {
+          "left": 640,
+          "top": 1198.53125,
+          "right": 1286.125,
+          "bottom": 1295.703125,
+          "width": 646.125,
+          "height": 97.171875
+        },
+        {
+          "left": 640,
+          "top": 1319.703125,
+          "right": 1286.125,
+          "bottom": 1449.265625,
+          "width": 646.125,
+          "height": 129.5625
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 640,
+            "top": 971.5000610351562,
+            "right": 1360,
+            "bottom": 1047.015625,
+            "width": 720,
+            "height": 75.51556396484375
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 640,
+            "top": 1047.015625,
+            "right": 1360,
+            "bottom": 1122.53125,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 640,
+            "top": 1198.53125,
+            "right": 1286.125,
+            "bottom": 1230.921875,
+            "width": 646.125,
+            "height": 32.390625
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 1
+    },
+    {
+      "requested": 0.75,
+      "direction": "forward",
+      "width": 1440,
+      "height": 900,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "portal",
+      "progress": 0.75,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        1.31640625,
+        2.5390625000000004,
+        -179.9765625
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 20.22666094812368,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 5.684341886080802e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 0.75,
+      "center": [
+        0.8960015190972223,
+        0.6555989583333333
+      ],
+      "scale": 110.56863343106468,
+      "aperture": [
+        26882.578125,
+        21423.09375
+      ],
+      "backdrop": true,
+      "contentVisible": "hidden",
+      "inert": true,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 104,
+          "top": 556.123046875,
+          "right": 552,
+          "bottom": 1116.123046875,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 104,
+          "top": 556.123046875,
+          "right": 552,
+          "bottom": 1116.123046875,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 393.9980163574219,
+        "right": 1440,
+        "bottom": 1317.7636413574219,
+        "width": 1440,
+        "height": 923.765625
+      },
+      "paragraphRects": [
+        {
+          "left": 640,
+          "top": 805.029296875,
+          "right": 1286.125,
+          "bottom": 902.201171875,
+          "width": 646.125,
+          "height": 97.171875
+        },
+        {
+          "left": 640,
+          "top": 926.201171875,
+          "right": 1286.125,
+          "bottom": 1055.763671875,
+          "width": 646.125,
+          "height": 129.5625
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 640,
+            "top": 577.998046875,
+            "right": 1360,
+            "bottom": 653.513671875,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 640,
+            "top": 653.513671875,
+            "right": 1360,
+            "bottom": 729.029296875,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 640,
+            "top": 805.029296875,
+            "right": 1286.125,
+            "bottom": 837.419921875,
+            "width": 646.125,
+            "height": 32.390625
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 1
+    },
+    {
+      "requested": 1,
+      "direction": "forward",
+      "width": 1440,
+      "height": 900,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 5.684341886080802e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8960015190972223,
+        0.6555989583333333
+      ],
+      "scale": 253.17533635363128,
+      "aperture": [
+        26882.578125,
+        21423.09375
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 104,
+          "top": 162.12503051757812,
+          "right": 552,
+          "bottom": 722.1250305175781,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 104,
+          "top": 162.12503051757812,
+          "right": 552,
+          "bottom": 722.1250305175781,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 0.00003060000017285347,
+        "right": 1440,
+        "bottom": 923.7656556000002,
+        "width": 1440,
+        "height": 923.765625
+      },
+      "paragraphRects": [
+        {
+          "left": 640,
+          "top": 411.0312805175781,
+          "right": 1286.125,
+          "bottom": 508.2031555175781,
+          "width": 646.125,
+          "height": 97.171875
+        },
+        {
+          "left": 640,
+          "top": 532.2031860351562,
+          "right": 1286.125,
+          "bottom": 661.7656860351562,
+          "width": 646.125,
+          "height": 129.5625
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 640,
+            "top": 184.00003051757812,
+            "right": 1360,
+            "bottom": 259.5156555175781,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 640,
+            "top": 259.5156555175781,
+            "right": 1360,
+            "bottom": 335.0312805175781,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 640,
+            "top": 411.0312805175781,
+            "right": 1286.125,
+            "bottom": 443.4219055175781,
+            "width": 646.125,
+            "height": 32.390625
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0
+    },
+    {
+      "requested": 1,
+      "direction": "reverse",
+      "width": 1440,
+      "height": 900,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 5.684341886080802e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8960015190972223,
+        0.6555989583333333
+      ],
+      "scale": 253.17533635363128,
+      "aperture": [
+        26882.578125,
+        21423.09375
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 104,
+          "top": 162.12496948242188,
+          "right": 552,
+          "bottom": 722.1249694824219,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 104,
+          "top": 162.12496948242188,
+          "right": 552,
+          "bottom": 722.1249694824219,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": -0.00003060000017285347,
+        "right": 1440,
+        "bottom": 923.7655943999998,
+        "width": 1440,
+        "height": 923.765625
+      },
+      "paragraphRects": [
+        {
+          "left": 640,
+          "top": 411.0312194824219,
+          "right": 1286.125,
+          "bottom": 508.2030944824219,
+          "width": 646.125,
+          "height": 97.171875
+        },
+        {
+          "left": 640,
+          "top": 532.2030639648438,
+          "right": 1286.125,
+          "bottom": 661.7655639648438,
+          "width": 646.125,
+          "height": 129.5625
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 640,
+            "top": 183.99996948242188,
+            "right": 1360,
+            "bottom": 259.5155944824219,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 640,
+            "top": 259.5155944824219,
+            "right": 1360,
+            "bottom": 335.0312194824219,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 640,
+            "top": 411.0312194824219,
+            "right": 1286.125,
+            "bottom": 443.4218444824219,
+            "width": 646.125,
+            "height": 32.390625
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0,
+      "reverseError": 0
+    },
+    {
+      "requested": 0.75,
+      "direction": "reverse",
+      "width": 1440,
+      "height": 900,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "portal",
+      "progress": 0.75,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        1.31640625,
+        2.5390625000000004,
+        -179.9765625
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 20.22666094812368,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 5.684341886080802e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 0.75,
+      "center": [
+        0.8960015190972223,
+        0.6555989583333333
+      ],
+      "scale": 110.56863343106468,
+      "aperture": [
+        26882.578125,
+        21423.09375
+      ],
+      "backdrop": true,
+      "contentVisible": "hidden",
+      "inert": true,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 104,
+          "top": 556.125,
+          "right": 552,
+          "bottom": 1116.125,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 104,
+          "top": 556.125,
+          "right": 552,
+          "bottom": 1116.125,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 394,
+        "right": 1440,
+        "bottom": 1317.765625,
+        "width": 1440,
+        "height": 923.765625
+      },
+      "paragraphRects": [
+        {
+          "left": 640,
+          "top": 805.03125,
+          "right": 1286.125,
+          "bottom": 902.203125,
+          "width": 646.125,
+          "height": 97.171875
+        },
+        {
+          "left": 640,
+          "top": 926.203125,
+          "right": 1286.125,
+          "bottom": 1055.765625,
+          "width": 646.125,
+          "height": 129.5625
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 640,
+            "top": 578,
+            "right": 1360,
+            "bottom": 653.515625,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 640,
+            "top": 653.515625,
+            "right": 1360,
+            "bottom": 729.03125,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 640,
+            "top": 805.03125,
+            "right": 1286.125,
+            "bottom": 837.421875,
+            "width": 646.125,
+            "height": 32.390625
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0,
+      "reverseError": 0
+    },
+    {
+      "requested": 0.5,
+      "direction": "reverse",
+      "width": 1440,
+      "height": 900,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "portal",
+      "progress": 0.5,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        1,
+        1.4,
+        -192
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 8.182909018191513,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 5.684341886080802e-14,
+      "mini": 1,
+      "visibility": 0,
+      "pull": 0.5,
+      "center": [
+        0.8960015190972223,
+        0.6555989583333333
+      ],
+      "scale": 44.73170682757215,
+      "aperture": [
+        26882.578125,
+        21423.09375
+      ],
+      "backdrop": false,
+      "contentVisible": "hidden",
+      "inert": true,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 104,
+          "top": 949.1206665039062,
+          "right": 552,
+          "bottom": 1509.12060546875,
+          "width": 448,
+          "height": 559.9999389648438
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 104,
+          "top": 949.1206665039062,
+          "right": 552,
+          "bottom": 1509.12060546875,
+          "width": 448,
+          "height": 559.9999389648438
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 786.9956665039062,
+        "right": 1440,
+        "bottom": 1710.76123046875,
+        "width": 1440,
+        "height": 923.7655639648438
+      },
+      "paragraphRects": [
+        {
+          "left": 640,
+          "top": 1198.02685546875,
+          "right": 1286.125,
+          "bottom": 1295.19873046875,
+          "width": 646.125,
+          "height": 97.171875
+        },
+        {
+          "left": 640,
+          "top": 1319.19873046875,
+          "right": 1286.125,
+          "bottom": 1448.76123046875,
+          "width": 646.125,
+          "height": 129.5625
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 640,
+            "top": 970.9956665039062,
+            "right": 1360,
+            "bottom": 1046.51123046875,
+            "width": 720,
+            "height": 75.51556396484375
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 640,
+            "top": 1046.51123046875,
+            "right": 1360,
+            "bottom": 1122.02685546875,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 640,
+            "top": 1198.02685546875,
+            "right": 1286.125,
+            "bottom": 1230.41748046875,
+            "width": 646.125,
+            "height": 32.390625
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0,
+      "reverseError": 0
+    },
+    {
+      "requested": 0.25,
+      "direction": "reverse",
+      "width": 1440,
+      "height": 900,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "portal",
+      "progress": 0.25,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        0.5829903978052127,
+        1.73360768175583,
+        -181.9917695473251
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 18.100873941189228,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 5.684341886080802e-14,
+      "mini": 1,
+      "visibility": 1,
+      "pull": 0.25,
+      "center": [
+        0.8960015190972223,
+        0.6555989583333333
+      ],
+      "scale": 0.34528643829851424,
+      "aperture": [
+        93.80870623536673,
+        74.75743951721414
+      ],
+      "backdrop": false,
+      "contentVisible": "hidden",
+      "inert": true,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 104,
+          "top": 1343.375,
+          "right": 552,
+          "bottom": 1903.375,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 104,
+          "top": 1343.375,
+          "right": 552,
+          "bottom": 1903.375,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 1181.25,
+        "right": 1440,
+        "bottom": 2105.015625,
+        "width": 1440,
+        "height": 923.765625
+      },
+      "paragraphRects": [
+        {
+          "left": 640,
+          "top": 1592.28125,
+          "right": 1286.125,
+          "bottom": 1689.453125,
+          "width": 646.125,
+          "height": 97.171875
+        },
+        {
+          "left": 640,
+          "top": 1713.453125,
+          "right": 1286.125,
+          "bottom": 1843.015625,
+          "width": 646.125,
+          "height": 129.5625
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 640,
+            "top": 1365.25,
+            "right": 1360,
+            "bottom": 1440.765625,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 640,
+            "top": 1440.765625,
+            "right": 1360,
+            "bottom": 1516.28125,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 640,
+            "top": 1592.28125,
+            "right": 1286.125,
+            "bottom": 1624.671875,
+            "width": 646.125,
+            "height": 32.390625
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0,
+      "reverseError": 0
+    },
+    {
+      "requested": 0,
+      "direction": "reverse",
+      "width": 1440,
+      "height": 900,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "hero",
+      "progress": 0,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        0,
+        2.2,
+        -168
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 32.07553584899245,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 5.684341886080802e-14,
+      "mini": 1,
+      "visibility": 1,
+      "pull": 0,
+      "center": [
+        0.8960015190972223,
+        0.6555989583333333
+      ],
+      "scale": 0.29223378115384674,
+      "aperture": [
+        44.804296875,
+        35.70515625
+      ],
+      "backdrop": false,
+      "contentVisible": "hidden",
+      "inert": true,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 104,
+          "top": 1737.125,
+          "right": 552,
+          "bottom": 2297.125,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 104,
+          "top": 1737.125,
+          "right": 552,
+          "bottom": 2297.125,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 1575,
+        "right": 1440,
+        "bottom": 2498.765625,
+        "width": 1440,
+        "height": 923.765625
+      },
+      "paragraphRects": [
+        {
+          "left": 640,
+          "top": 1986.03125,
+          "right": 1286.125,
+          "bottom": 2083.203125,
+          "width": 646.125,
+          "height": 97.171875
+        },
+        {
+          "left": 640,
+          "top": 2107.203125,
+          "right": 1286.125,
+          "bottom": 2236.765625,
+          "width": 646.125,
+          "height": 129.5625
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 640,
+            "top": 1759,
+            "right": 1360,
+            "bottom": 1834.515625,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 640,
+            "top": 1834.515625,
+            "right": 1360,
+            "bottom": 1910.03125,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 640,
+            "top": 1986.03125,
+            "right": 1286.125,
+            "bottom": 2018.421875,
+            "width": 646.125,
+            "height": 32.390625
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0,
+      "reverseError": 0
+    },
+    {
+      "requested": 0,
+      "direction": "forward",
+      "width": 390,
+      "height": 844,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "hero",
+      "progress": 0,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        0,
+        2.2,
+        -168
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 32.07553584899245,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 2.842170943040401e-14,
+      "mini": 1,
+      "visibility": 1,
+      "pull": 0,
+      "center": [
+        0.8952524038461539,
+        0.7299318720379147
+      ],
+      "scale": 0.18225504550943128,
+      "aperture": [
+        12.108515625,
+        9.6484375
+      ],
+      "backdrop": false,
+      "contentVisible": "hidden",
+      "inert": true,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 24,
+          "top": 1775.0625,
+          "right": 366,
+          "bottom": 2202.5625,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 24,
+          "top": 1775.0625,
+          "right": 366,
+          "bottom": 2202.5625,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 1477,
+        "right": 390,
+        "bottom": 2859.328125,
+        "width": 390,
+        "height": 1382.328125
+      },
+      "paragraphRects": [
+        {
+          "left": 24,
+          "top": 2301.5625,
+          "right": 366,
+          "bottom": 2445.546875,
+          "width": 342,
+          "height": 143.984375
+        },
+        {
+          "left": 24,
+          "top": 2469.546875,
+          "right": 366,
+          "bottom": 2642.328125,
+          "width": 342,
+          "height": 172.78125
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 24,
+            "top": 1629,
+            "right": 366,
+            "bottom": 1662.03125,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 24,
+            "top": 1662.03125,
+            "right": 366,
+            "bottom": 1695.0625,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 24,
+            "top": 2301.5625,
+            "right": 366,
+            "bottom": 2359.15625,
+            "width": 342,
+            "height": 57.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 1
+    },
+    {
+      "requested": 0.25,
+      "direction": "forward",
+      "width": 390,
+      "height": 844,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "portal",
+      "progress": 0.25,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        0.5829903978052127,
+        1.73360768175583,
+        -181.9917695473251
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 18.100873941189228,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 2.842170943040401e-14,
+      "mini": 1,
+      "visibility": 1,
+      "pull": 0.25,
+      "center": [
+        0.8952524038461539,
+        0.7299318720379147
+      ],
+      "scale": 0.21534196107449835,
+      "aperture": [
+        25.35212612265714,
+        20.201353490558404
+      ],
+      "backdrop": false,
+      "contentVisible": "hidden",
+      "inert": true,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 24,
+          "top": 1406.06494140625,
+          "right": 366,
+          "bottom": 1833.56494140625,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 24,
+          "top": 1406.06494140625,
+          "right": 366,
+          "bottom": 1833.56494140625,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 1108.00244140625,
+        "right": 390,
+        "bottom": 2490.33056640625,
+        "width": 390,
+        "height": 1382.328125
+      },
+      "paragraphRects": [
+        {
+          "left": 24,
+          "top": 1932.56494140625,
+          "right": 366,
+          "bottom": 2076.54931640625,
+          "width": 342,
+          "height": 143.984375
+        },
+        {
+          "left": 24,
+          "top": 2100.54931640625,
+          "right": 366,
+          "bottom": 2273.33056640625,
+          "width": 342,
+          "height": 172.78125
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 24,
+            "top": 1260.00244140625,
+            "right": 366,
+            "bottom": 1293.03369140625,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 24,
+            "top": 1293.03369140625,
+            "right": 366,
+            "bottom": 1326.06494140625,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 24,
+            "top": 1932.56494140625,
+            "right": 366,
+            "bottom": 1990.15869140625,
+            "width": 342,
+            "height": 57.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 1
+    },
+    {
+      "requested": 0.5,
+      "direction": "forward",
+      "width": 390,
+      "height": 844,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "portal",
+      "progress": 0.5,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        1,
+        1.4,
+        -192
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 8.182909018191513,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 2.842170943040401e-14,
+      "mini": 1,
+      "visibility": 0,
+      "pull": 0.5,
+      "center": [
+        0.8952524038461539,
+        0.7299318720379147
+      ],
+      "scale": 27.89745672585937,
+      "aperture": [
+        7265.109375000001,
+        5789.0625
+      ],
+      "backdrop": false,
+      "contentVisible": "hidden",
+      "inert": true,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 24,
+          "top": 1036.5625,
+          "right": 366,
+          "bottom": 1464.0625,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 24,
+          "top": 1036.5625,
+          "right": 366,
+          "bottom": 1464.0625,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 738.5,
+        "right": 390,
+        "bottom": 2120.828125,
+        "width": 390,
+        "height": 1382.328125
+      },
+      "paragraphRects": [
+        {
+          "left": 24,
+          "top": 1563.0625,
+          "right": 366,
+          "bottom": 1707.046875,
+          "width": 342,
+          "height": 143.984375
+        },
+        {
+          "left": 24,
+          "top": 1731.046875,
+          "right": 366,
+          "bottom": 1903.828125,
+          "width": 342,
+          "height": 172.78125
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 24,
+            "top": 890.5,
+            "right": 366,
+            "bottom": 923.53125,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 24,
+            "top": 923.53125,
+            "right": 366,
+            "bottom": 956.5625,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 24,
+            "top": 1563.0625,
+            "right": 366,
+            "bottom": 1620.65625,
+            "width": 342,
+            "height": 57.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 1
+    },
+    {
+      "requested": 0.75,
+      "direction": "forward",
+      "width": 390,
+      "height": 844,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "portal",
+      "progress": 0.75,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        1.31640625,
+        2.5390625000000004,
+        -179.9765625
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 20.22666094812368,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 2.842170943040401e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 0.75,
+      "center": [
+        0.8952524038461539,
+        0.7299318720379147
+      ],
+      "scale": 68.95743277292587,
+      "aperture": [
+        7265.109375000001,
+        5789.0625
+      ],
+      "backdrop": true,
+      "contentVisible": "hidden",
+      "inert": true,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 24,
+          "top": 667.0607299804688,
+          "right": 366,
+          "bottom": 1094.5606689453125,
+          "width": 342,
+          "height": 427.49993896484375
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 24,
+          "top": 667.0607299804688,
+          "right": 366,
+          "bottom": 1094.5606689453125,
+          "width": 342,
+          "height": 427.49993896484375
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 368.9981994628906,
+        "right": 390,
+        "bottom": 1751.3263244628906,
+        "width": 390,
+        "height": 1382.328125
+      },
+      "paragraphRects": [
+        {
+          "left": 24,
+          "top": 1193.5606689453125,
+          "right": 366,
+          "bottom": 1337.5450439453125,
+          "width": 342,
+          "height": 143.984375
+        },
+        {
+          "left": 24,
+          "top": 1361.5450439453125,
+          "right": 366,
+          "bottom": 1534.3262939453125,
+          "width": 342,
+          "height": 172.78125
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 24,
+            "top": 520.9982299804688,
+            "right": 366,
+            "bottom": 554.0294799804688,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 24,
+            "top": 554.0294799804688,
+            "right": 366,
+            "bottom": 587.0607299804688,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 24,
+            "top": 1193.5606689453125,
+            "right": 366,
+            "bottom": 1251.1544189453125,
+            "width": 342,
+            "height": 57.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 1
+    },
+    {
+      "requested": 1,
+      "direction": "forward",
+      "width": 390,
+      "height": 844,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 2.842170943040401e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8952524038461539,
+        0.7299318720379147
+      ],
+      "scale": 157.89578558238233,
+      "aperture": [
+        7265.109375000001,
+        5789.0625
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 24,
+          "top": 298.0624694824219,
+          "right": 366,
+          "bottom": 725.5625,
+          "width": 342,
+          "height": 427.5000305175781
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 24,
+          "top": 298.0624694824219,
+          "right": 366,
+          "bottom": 725.5625,
+          "width": 342,
+          "height": 427.5000305175781
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": -0.000030499999411404133,
+        "right": 390,
+        "bottom": 1382.3280945000006,
+        "width": 390,
+        "height": 1382.328125
+      },
+      "paragraphRects": [
+        {
+          "left": 24,
+          "top": 824.5625,
+          "right": 366,
+          "bottom": 968.546875,
+          "width": 342,
+          "height": 143.984375
+        },
+        {
+          "left": 24,
+          "top": 992.546875,
+          "right": 366,
+          "bottom": 1165.328125,
+          "width": 342,
+          "height": 172.78125
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 24,
+            "top": 151.99996948242188,
+            "right": 366,
+            "bottom": 185.03121948242188,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 24,
+            "top": 185.03121948242188,
+            "right": 366,
+            "bottom": 218.06246948242188,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 24,
+            "top": 824.5625,
+            "right": 366,
+            "bottom": 882.15625,
+            "width": 342,
+            "height": 57.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0
+    },
+    {
+      "requested": 1,
+      "direction": "reverse",
+      "width": 390,
+      "height": 844,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 2.842170943040401e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8952524038461539,
+        0.7299318720379147
+      ],
+      "scale": 157.89578558238233,
+      "aperture": [
+        7265.109375000001,
+        5789.0625
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 24,
+          "top": 298.0625305175781,
+          "right": 366,
+          "bottom": 725.5625,
+          "width": 342,
+          "height": 427.4999694824219
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 24,
+          "top": 298.0625305175781,
+          "right": 366,
+          "bottom": 725.5625,
+          "width": 342,
+          "height": 427.4999694824219
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 0.000030499999411404133,
+        "right": 390,
+        "bottom": 1382.3281554999994,
+        "width": 390,
+        "height": 1382.328125
+      },
+      "paragraphRects": [
+        {
+          "left": 24,
+          "top": 824.5625,
+          "right": 366,
+          "bottom": 968.546875,
+          "width": 342,
+          "height": 143.984375
+        },
+        {
+          "left": 24,
+          "top": 992.546875,
+          "right": 366,
+          "bottom": 1165.328125,
+          "width": 342,
+          "height": 172.78125
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 24,
+            "top": 152.00003051757812,
+            "right": 366,
+            "bottom": 185.03128051757812,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 24,
+            "top": 185.03128051757812,
+            "right": 366,
+            "bottom": 218.06253051757812,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 24,
+            "top": 824.5625,
+            "right": 366,
+            "bottom": 882.15625,
+            "width": 342,
+            "height": 57.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0,
+      "reverseError": 0
+    },
+    {
+      "requested": 0.75,
+      "direction": "reverse",
+      "width": 390,
+      "height": 844,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "portal",
+      "progress": 0.75,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        1.31640625,
+        2.5390625000000004,
+        -179.9765625
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 20.22666094812368,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 2.842170943040401e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 0.75,
+      "center": [
+        0.8952524038461539,
+        0.7299318720379147
+      ],
+      "scale": 68.95743277292587,
+      "aperture": [
+        7265.109375000001,
+        5789.0625
+      ],
+      "backdrop": true,
+      "contentVisible": "hidden",
+      "inert": true,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 24,
+          "top": 667.0625,
+          "right": 366,
+          "bottom": 1094.5625,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 24,
+          "top": 667.0625,
+          "right": 366,
+          "bottom": 1094.5625,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 369,
+        "right": 390,
+        "bottom": 1751.328125,
+        "width": 390,
+        "height": 1382.328125
+      },
+      "paragraphRects": [
+        {
+          "left": 24,
+          "top": 1193.5625,
+          "right": 366,
+          "bottom": 1337.546875,
+          "width": 342,
+          "height": 143.984375
+        },
+        {
+          "left": 24,
+          "top": 1361.546875,
+          "right": 366,
+          "bottom": 1534.328125,
+          "width": 342,
+          "height": 172.78125
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 24,
+            "top": 521,
+            "right": 366,
+            "bottom": 554.03125,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 24,
+            "top": 554.03125,
+            "right": 366,
+            "bottom": 587.0625,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 24,
+            "top": 1193.5625,
+            "right": 366,
+            "bottom": 1251.15625,
+            "width": 342,
+            "height": 57.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0,
+      "reverseError": 0
+    },
+    {
+      "requested": 0.5,
+      "direction": "reverse",
+      "width": 390,
+      "height": 844,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "portal",
+      "progress": 0.5,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        1,
+        1.4,
+        -192
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 8.182909018191513,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 2.842170943040401e-14,
+      "mini": 1,
+      "visibility": 0,
+      "pull": 0.5,
+      "center": [
+        0.8952524038461539,
+        0.7299318720379147
+      ],
+      "scale": 27.89745672585937,
+      "aperture": [
+        7265.109375000001,
+        5789.0625
+      ],
+      "backdrop": false,
+      "contentVisible": "hidden",
+      "inert": true,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 24,
+          "top": 1036.0582275390625,
+          "right": 366,
+          "bottom": 1463.5582275390625,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 24,
+          "top": 1036.0582275390625,
+          "right": 366,
+          "bottom": 1463.5582275390625,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 737.9957885742188,
+        "right": 390,
+        "bottom": 2120.3239135742188,
+        "width": 390,
+        "height": 1382.328125
+      },
+      "paragraphRects": [
+        {
+          "left": 24,
+          "top": 1562.5582275390625,
+          "right": 366,
+          "bottom": 1706.5426025390625,
+          "width": 342,
+          "height": 143.984375
+        },
+        {
+          "left": 24,
+          "top": 1730.5426025390625,
+          "right": 366,
+          "bottom": 1903.3238525390625,
+          "width": 342,
+          "height": 172.78125
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 24,
+            "top": 889.9957885742188,
+            "right": 366,
+            "bottom": 923.0270385742188,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 24,
+            "top": 923.0270385742188,
+            "right": 366,
+            "bottom": 956.0582885742188,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 24,
+            "top": 1562.5582275390625,
+            "right": 366,
+            "bottom": 1620.1519775390625,
+            "width": 342,
+            "height": 57.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0,
+      "reverseError": 0
+    },
+    {
+      "requested": 0.25,
+      "direction": "reverse",
+      "width": 390,
+      "height": 844,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "portal",
+      "progress": 0.25,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        0.5829903978052127,
+        1.73360768175583,
+        -181.9917695473251
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 18.100873941189228,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 2.842170943040401e-14,
+      "mini": 1,
+      "visibility": 1,
+      "pull": 0.25,
+      "center": [
+        0.8952524038461539,
+        0.7299318720379147
+      ],
+      "scale": 0.21534196107449835,
+      "aperture": [
+        25.35212612265714,
+        20.201353490558404
+      ],
+      "backdrop": false,
+      "contentVisible": "hidden",
+      "inert": true,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 24,
+          "top": 1405.8125,
+          "right": 366,
+          "bottom": 1833.3125,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 24,
+          "top": 1405.8125,
+          "right": 366,
+          "bottom": 1833.3125,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 1107.75,
+        "right": 390,
+        "bottom": 2490.078125,
+        "width": 390,
+        "height": 1382.328125
+      },
+      "paragraphRects": [
+        {
+          "left": 24,
+          "top": 1932.3125,
+          "right": 366,
+          "bottom": 2076.296875,
+          "width": 342,
+          "height": 143.984375
+        },
+        {
+          "left": 24,
+          "top": 2100.296875,
+          "right": 366,
+          "bottom": 2273.078125,
+          "width": 342,
+          "height": 172.78125
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 24,
+            "top": 1259.75,
+            "right": 366,
+            "bottom": 1292.78125,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 24,
+            "top": 1292.78125,
+            "right": 366,
+            "bottom": 1325.8125,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 24,
+            "top": 1932.3125,
+            "right": 366,
+            "bottom": 1989.90625,
+            "width": 342,
+            "height": 57.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0,
+      "reverseError": 0
+    },
+    {
+      "requested": 0,
+      "direction": "reverse",
+      "width": 390,
+      "height": 844,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "hero",
+      "progress": 0,
+      "hash": "#about",
+      "manual": true,
+      "camera": [
+        0,
+        2.2,
+        -168
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 32.07553584899245,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 2.842170943040401e-14,
+      "mini": 1,
+      "visibility": 1,
+      "pull": 0,
+      "center": [
+        0.8952524038461539,
+        0.7299318720379147
+      ],
+      "scale": 0.18225504550943128,
+      "aperture": [
+        12.108515625,
+        9.6484375
+      ],
+      "backdrop": false,
+      "contentVisible": "hidden",
+      "inert": true,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 24,
+          "top": 1775.0625,
+          "right": 366,
+          "bottom": 2202.5625,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 24,
+          "top": 1775.0625,
+          "right": 366,
+          "bottom": 2202.5625,
+          "width": 342,
+          "height": 427.5
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 1477,
+        "right": 390,
+        "bottom": 2859.328125,
+        "width": 390,
+        "height": 1382.328125
+      },
+      "paragraphRects": [
+        {
+          "left": 24,
+          "top": 2301.5625,
+          "right": 366,
+          "bottom": 2445.546875,
+          "width": 342,
+          "height": 143.984375
+        },
+        {
+          "left": 24,
+          "top": 2469.546875,
+          "right": 366,
+          "bottom": 2642.328125,
+          "width": 342,
+          "height": 172.78125
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 24,
+            "top": 1629,
+            "right": 366,
+            "bottom": 1662.03125,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 24,
+            "top": 1662.03125,
+            "right": 366,
+            "bottom": 1695.0625,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 24,
+            "top": 2301.5625,
+            "right": 366,
+            "bottom": 2359.15625,
+            "width": 342,
+            "height": 57.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 0,
+      "reverseError": 0
+    }
+  ],
+  "cycles": [],
+  "jumps": [
+    {
+      "width": 1440,
+      "height": 900,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": false,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 5.684341886080802e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8960015190972223,
+        0.6555989583333333
+      ],
+      "scale": 253.17533635363128,
+      "aperture": [
+        26882.578125,
+        21423.09375
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 104,
+          "top": 162.12599182128906,
+          "right": 552,
+          "bottom": 722.1259918212891,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 104,
+          "top": 162.12599182128906,
+          "right": 552,
+          "bottom": 722.1259918212891,
+          "width": 448,
+          "height": 560
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 0.0009960000170394778,
+        "right": 1440,
+        "bottom": 923.766621000017,
+        "width": 1440,
+        "height": 923.765625
+      },
+      "paragraphRects": [
+        {
+          "left": 640,
+          "top": 411.0322570800781,
+          "right": 1286.125,
+          "bottom": 508.2041320800781,
+          "width": 646.125,
+          "height": 97.171875
+        },
+        {
+          "left": 640,
+          "top": 532.2041015625,
+          "right": 1286.125,
+          "bottom": 661.7666015625,
+          "width": 646.125,
+          "height": 129.5625
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 640,
+            "top": 184.00099182128906,
+            "right": 1360,
+            "bottom": 259.5166320800781,
+            "width": 720,
+            "height": 75.51564025878906
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 640,
+            "top": 259.5166320800781,
+            "right": 1360,
+            "bottom": 335.0322570800781,
+            "width": 720,
+            "height": 75.515625
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 640,
+            "top": 411.0322570800781,
+            "right": 1286.125,
+            "bottom": 443.4228820800781,
+            "width": 646.125,
+            "height": 32.390625
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 1
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "locale": "vi",
+      "reduced": false,
+      "chapter": "about",
+      "progress": 0,
+      "hash": "#about",
+      "manual": false,
+      "camera": [
+        2,
+        5,
+        -154
+      ],
+      "cameraFinite": true,
+      "poseError": 0,
+      "observerR": 46.314144707637645,
+      "canvas": 1,
+      "writers": 1,
+      "glError": 0,
+      "overflow": 0,
+      "anchorError": 2.842170943040401e-14,
+      "mini": 0,
+      "visibility": 1,
+      "pull": 1,
+      "center": [
+        0.8952524038461539,
+        0.7299318720379147
+      ],
+      "scale": 157.89578558238233,
+      "aperture": [
+        7265.109375000001,
+        5789.0625
+      ],
+      "backdrop": true,
+      "contentVisible": "visible",
+      "inert": false,
+      "semanticBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "expectedBio": [
+        "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+        "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế."
+      ],
+      "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "expectedQuote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+      "headingLabel": "TRẦN VŨ ANH DUY",
+      "expectedName": "TRẦN VŨ ANH DUY",
+      "image": {
+        "src": "/avatar-cutout.webp",
+        "width": 800,
+        "height": 1000,
+        "decoded": true,
+        "alt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+        "aspect": "4 / 5",
+        "rect": {
+          "left": 24,
+          "top": 298.0631408691406,
+          "right": 366,
+          "bottom": 725.5631713867188,
+          "width": 342,
+          "height": 427.5000305175781
+        }
+      },
+      "portrait": {
+        "name": "Giữ màu chân dung",
+        "pressed": "false",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "rect": {
+          "left": 24,
+          "top": 298.0631408691406,
+          "right": 366,
+          "bottom": 725.5631713867188,
+          "width": 342,
+          "height": 427.5000305175781
+        }
+      },
+      "aboutRect": {
+        "left": 0,
+        "top": 0.000645000021904707,
+        "right": 390,
+        "bottom": 1382.328770000022,
+        "width": 390,
+        "height": 1382.328125
+      },
+      "paragraphRects": [
+        {
+          "left": 24,
+          "top": 824.5631713867188,
+          "right": 366,
+          "bottom": 968.5475463867188,
+          "width": 342,
+          "height": 143.984375
+        },
+        {
+          "left": 24,
+          "top": 992.5475463867188,
+          "right": 366,
+          "bottom": 1165.3287353515625,
+          "width": 342,
+          "height": 172.78118896484375
+        }
+      ],
+      "display": [
+        {
+          "text": "TRẦN VŨ",
+          "rect": {
+            "left": 24,
+            "top": 152.00064086914062,
+            "right": 366,
+            "bottom": 185.03189086914062,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "ANH DUY",
+          "rect": {
+            "left": 24,
+            "top": 185.03189086914062,
+            "right": 366,
+            "bottom": 218.06314086914062,
+            "width": 342,
+            "height": 33.03125
+          },
+          "opacity": 1
+        },
+        {
+          "text": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề.",
+          "rect": {
+            "left": 24,
+            "top": 824.5631713867188,
+            "right": 366,
+            "bottom": 882.1569213867188,
+            "width": 342,
+            "height": 57.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "obsoleteDOM": 0,
+      "obsoleteScene": [],
+      "activePortrait": false,
+      "activeId": "",
+      "aboutIntroCount": 1
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "measurements": "No FPS measurement; other browser verification may run concurrently",
+  "finished": "2026-10-08T04:28:42.800Z"
+}

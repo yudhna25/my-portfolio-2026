@@ -1,0 +1,749 @@
+{
+  "captures": [
+    {
+      "label": "Measure Fiber FPS",
+      "section": "hero",
+      "progress": 0,
+      "canvas": 1,
+      "size": {
+        "width": 1430,
+        "height": 900,
+        "top": 0,
+        "left": 0
+      },
+      "dpr": 1,
+      "planet": null,
+      "orbit": null,
+      "blackHole": true,
+      "camera": [
+        0.2309023952065546,
+        2.0631111736190872,
+        -168
+      ],
+      "calls": 1,
+      "triangles": 1,
+      "geometries": 11,
+      "textures": 23,
+      "subscribers": 8,
+      "frameloop": "always",
+      "reduced": false,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "starCount": 24000
+    },
+    {
+      "label": "About",
+      "section": "about",
+      "progress": 0.12044254463163188,
+      "canvas": 1,
+      "size": {
+        "width": 1430,
+        "height": 900,
+        "top": 0,
+        "left": 0
+      },
+      "dpr": 1,
+      "planet": {
+        "visible": true,
+        "center": [
+          318.3281250000027,
+          449.5
+        ],
+        "bounds": {
+          "x": 94.328125,
+          "y": 305.5,
+          "width": 448,
+          "height": 288,
+          "top": 305.5,
+          "right": 542.328125,
+          "bottom": 593.5,
+          "left": 94.328125
+        },
+        "scale": 0.6568874342302348,
+        "materials": [
+          {
+            "name": "planet-surface",
+            "type": "MeshStandardMaterial",
+            "color": "111111",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 1,
+              "widthSegments": 40,
+              "heightSegments": 20,
+              "phiStart": 0,
+              "phiLength": 6.283185307179586,
+              "thetaStart": 0,
+              "thetaLength": 3.141592653589793
+            }
+          },
+          {
+            "name": "planet-rim",
+            "type": "MeshBasicMaterial",
+            "color": "ffffff",
+            "map": false,
+            "side": 1,
+            "shadow": false,
+            "segments": {
+              "radius": 1,
+              "widthSegments": 40,
+              "heightSegments": 20,
+              "phiStart": 0,
+              "phiLength": 6.283185307179586,
+              "thetaStart": 0,
+              "thetaLength": 3.141592653589793
+            }
+          },
+          {
+            "name": "planet-ring",
+            "type": "MeshBasicMaterial",
+            "color": "ffffff",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 1.65,
+              "tube": 0.012,
+              "radialSegments": 6,
+              "tubularSegments": 96,
+              "arc": 6.283185307179586,
+              "thetaStart": 0,
+              "thetaLength": 6.283185307179586
+            }
+          }
+        ],
+        "rotations": []
+      },
+      "orbit": null,
+      "blackHole": false,
+      "camera": [
+        -2.076532487635278,
+        2.119159342539196,
+        -168.92056702821682
+      ],
+      "calls": 19,
+      "triangles": 4688,
+      "geometries": 11,
+      "textures": 1,
+      "subscribers": 7,
+      "frameloop": "always",
+      "reduced": false,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "starCount": 24000
+    },
+    {
+      "label": "Measure Fiber FPS",
+      "section": "about",
+      "progress": 0.12044254463163188,
+      "canvas": 1,
+      "size": {
+        "width": 1430,
+        "height": 900,
+        "top": 0,
+        "left": 0
+      },
+      "dpr": 1,
+      "planet": {
+        "visible": true,
+        "center": [
+          318.32812500000153,
+          449.49999999999983
+        ],
+        "bounds": {
+          "x": 94.328125,
+          "y": 305.5,
+          "width": 448,
+          "height": 288,
+          "top": 305.5,
+          "right": 542.328125,
+          "bottom": 593.5,
+          "left": 94.328125
+        },
+        "scale": 0.6568963062779735,
+        "materials": [
+          {
+            "name": "planet-surface",
+            "type": "MeshStandardMaterial",
+            "color": "111111",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 1,
+              "widthSegments": 40,
+              "heightSegments": 20,
+              "phiStart": 0,
+              "phiLength": 6.283185307179586,
+              "thetaStart": 0,
+              "thetaLength": 3.141592653589793
+            }
+          },
+          {
+            "name": "planet-rim",
+            "type": "MeshBasicMaterial",
+            "color": "ffffff",
+            "map": false,
+            "side": 1,
+            "shadow": false,
+            "segments": {
+              "radius": 1,
+              "widthSegments": 40,
+              "heightSegments": 20,
+              "phiStart": 0,
+              "phiLength": 6.283185307179586,
+              "thetaStart": 0,
+              "thetaLength": 3.141592653589793
+            }
+          },
+          {
+            "name": "planet-ring",
+            "type": "MeshBasicMaterial",
+            "color": "ffffff",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 1.65,
+              "tube": 0.012,
+              "radialSegments": 6,
+              "tubularSegments": 96,
+              "arc": 6.283185307179586,
+              "thetaStart": 0,
+              "thetaLength": 6.283185307179586
+            }
+          }
+        ],
+        "rotations": []
+      },
+      "orbit": null,
+      "blackHole": false,
+      "camera": [
+        -2.0767771450205026,
+        2.1191498178801855,
+        -168.92057138057206
+      ],
+      "calls": 19,
+      "triangles": 4688,
+      "geometries": 11,
+      "textures": 1,
+      "subscribers": 7,
+      "frameloop": "always",
+      "reduced": false,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "starCount": 24000
+    },
+    {
+      "label": "Skills",
+      "section": "skills",
+      "progress": 0.1832201827172911,
+      "canvas": 1,
+      "size": {
+        "width": 1430,
+        "height": 900,
+        "top": 0,
+        "left": 0
+      },
+      "dpr": 1,
+      "planet": null,
+      "orbit": {
+        "visible": true,
+        "center": [
+          714.9999999999999,
+          450.46875
+        ],
+        "bounds": {
+          "x": 75,
+          "y": 258.46875,
+          "width": 1280,
+          "height": 384,
+          "top": 258.46875,
+          "right": 1355,
+          "bottom": 642.46875,
+          "left": 75
+        },
+        "scale": 0.5838999847933807,
+        "materials": [
+          {
+            "name": "skills-core",
+            "type": "MeshBasicMaterial",
+            "color": "ffffff",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 0.28,
+              "detail": 1
+            }
+          },
+          {
+            "name": "",
+            "type": "MeshBasicMaterial",
+            "color": "bbbbbb",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 1.65,
+              "tube": 0.009,
+              "radialSegments": 4,
+              "tubularSegments": 64,
+              "arc": 6.283185307179586,
+              "thetaStart": 0,
+              "thetaLength": 6.283185307179586
+            }
+          },
+          {
+            "name": "skills-tools",
+            "type": "MeshBasicMaterial",
+            "color": "bbbbbb",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 0.14,
+              "detail": 0
+            }
+          },
+          {
+            "name": "",
+            "type": "MeshBasicMaterial",
+            "color": "bbbbbb",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 2.55,
+              "tube": 0.009,
+              "radialSegments": 4,
+              "tubularSegments": 64,
+              "arc": 6.283185307179586,
+              "thetaStart": 0,
+              "thetaLength": 6.283185307179586
+            }
+          },
+          {
+            "name": "skills-technical",
+            "type": "MeshBasicMaterial",
+            "color": "bbbbbb",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 0.14,
+              "detail": 0
+            }
+          }
+        ],
+        "rotations": [
+          0.255968000001907,
+          -0.15998000000119175
+        ]
+      },
+      "blackHole": false,
+      "camera": [
+        -0.8197412157321365,
+        2.0214280161777105,
+        -170.03337042520343
+      ],
+      "calls": 21,
+      "triangles": 1680,
+      "geometries": 13,
+      "textures": 1,
+      "subscribers": 8,
+      "frameloop": "always",
+      "reduced": false,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "starCount": 24000
+    },
+    {
+      "label": "Measure Fiber FPS",
+      "section": "skills",
+      "progress": 0.1832201827172911,
+      "canvas": 1,
+      "size": {
+        "width": 1430,
+        "height": 900,
+        "top": 0,
+        "left": 0
+      },
+      "dpr": 1,
+      "planet": null,
+      "orbit": {
+        "visible": true,
+        "center": [
+          715,
+          450.46875000000017
+        ],
+        "bounds": {
+          "x": 75,
+          "y": 258.46875,
+          "width": 1280,
+          "height": 384,
+          "top": 258.46875,
+          "right": 1355,
+          "bottom": 642.46875,
+          "left": 75
+        },
+        "scale": 0.5839078278026433,
+        "materials": [
+          {
+            "name": "skills-core",
+            "type": "MeshBasicMaterial",
+            "color": "ffffff",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 0.28,
+              "detail": 1
+            }
+          },
+          {
+            "name": "",
+            "type": "MeshBasicMaterial",
+            "color": "bbbbbb",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 1.65,
+              "tube": 0.009,
+              "radialSegments": 4,
+              "tubularSegments": 64,
+              "arc": 6.283185307179586,
+              "thetaStart": 0,
+              "thetaLength": 6.283185307179586
+            }
+          },
+          {
+            "name": "skills-tools",
+            "type": "MeshBasicMaterial",
+            "color": "bbbbbb",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 0.14,
+              "detail": 0
+            }
+          },
+          {
+            "name": "",
+            "type": "MeshBasicMaterial",
+            "color": "bbbbbb",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 2.55,
+              "tube": 0.009,
+              "radialSegments": 4,
+              "tubularSegments": 64,
+              "arc": 6.283185307179586,
+              "thetaStart": 0,
+              "thetaLength": 6.283185307179586
+            }
+          },
+          {
+            "name": "skills-technical",
+            "type": "MeshBasicMaterial",
+            "color": "bbbbbb",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 0.14,
+              "detail": 0
+            }
+          }
+        ],
+        "rotations": [
+          6.648064000001019,
+          -4.155040000000532
+        ]
+      },
+      "blackHole": false,
+      "camera": [
+        -0.8195940306802443,
+        2.021416574031853,
+        -170.03337564221147
+      ],
+      "calls": 21,
+      "triangles": 1680,
+      "geometries": 13,
+      "textures": 1,
+      "subscribers": 8,
+      "frameloop": "always",
+      "reduced": false,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "starCount": 24000
+    }
+  ],
+  "fps": [
+    {
+      "section": "hero",
+      "frames": 413,
+      "fps": 165.00460571068785,
+      "hidden": false,
+      "label": "fps",
+      "progress": 0,
+      "canvas": 1,
+      "size": {
+        "width": 1430,
+        "height": 900,
+        "top": 0,
+        "left": 0
+      },
+      "dpr": 1,
+      "planet": null,
+      "orbit": null,
+      "blackHole": true,
+      "camera": [
+        0.2309023952065546,
+        2.0631111736190872,
+        -168
+      ],
+      "calls": 1,
+      "triangles": 1,
+      "geometries": 11,
+      "textures": 23,
+      "subscribers": 8,
+      "frameloop": "always",
+      "reduced": false,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "starCount": 24000
+    },
+    {
+      "section": "about",
+      "frames": 413,
+      "fps": 165.00460571068785,
+      "hidden": false,
+      "label": "fps",
+      "progress": 0.12044254463163188,
+      "canvas": 1,
+      "size": {
+        "width": 1430,
+        "height": 900,
+        "top": 0,
+        "left": 0
+      },
+      "dpr": 1,
+      "planet": {
+        "visible": true,
+        "center": [
+          318.32812500000153,
+          449.49999999999983
+        ],
+        "bounds": {
+          "x": 94.328125,
+          "y": 305.5,
+          "width": 448,
+          "height": 288,
+          "top": 305.5,
+          "right": 542.328125,
+          "bottom": 593.5,
+          "left": 94.328125
+        },
+        "scale": 0.6568963062779735,
+        "materials": [
+          {
+            "name": "planet-surface",
+            "type": "MeshStandardMaterial",
+            "color": "111111",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 1,
+              "widthSegments": 40,
+              "heightSegments": 20,
+              "phiStart": 0,
+              "phiLength": 6.283185307179586,
+              "thetaStart": 0,
+              "thetaLength": 3.141592653589793
+            }
+          },
+          {
+            "name": "planet-rim",
+            "type": "MeshBasicMaterial",
+            "color": "ffffff",
+            "map": false,
+            "side": 1,
+            "shadow": false,
+            "segments": {
+              "radius": 1,
+              "widthSegments": 40,
+              "heightSegments": 20,
+              "phiStart": 0,
+              "phiLength": 6.283185307179586,
+              "thetaStart": 0,
+              "thetaLength": 3.141592653589793
+            }
+          },
+          {
+            "name": "planet-ring",
+            "type": "MeshBasicMaterial",
+            "color": "ffffff",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 1.65,
+              "tube": 0.012,
+              "radialSegments": 6,
+              "tubularSegments": 96,
+              "arc": 6.283185307179586,
+              "thetaStart": 0,
+              "thetaLength": 6.283185307179586
+            }
+          }
+        ],
+        "rotations": []
+      },
+      "orbit": null,
+      "blackHole": false,
+      "camera": [
+        -2.0767771450205026,
+        2.1191498178801855,
+        -168.92057138057206
+      ],
+      "calls": 19,
+      "triangles": 4688,
+      "geometries": 11,
+      "textures": 1,
+      "subscribers": 7,
+      "frameloop": "always",
+      "reduced": false,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "starCount": 24000
+    },
+    {
+      "section": "skills",
+      "frames": 413,
+      "fps": 165.01782352784363,
+      "hidden": false,
+      "label": "fps",
+      "progress": 0.1832201827172911,
+      "canvas": 1,
+      "size": {
+        "width": 1430,
+        "height": 900,
+        "top": 0,
+        "left": 0
+      },
+      "dpr": 1,
+      "planet": null,
+      "orbit": {
+        "visible": true,
+        "center": [
+          715,
+          450.46875000000017
+        ],
+        "bounds": {
+          "x": 75,
+          "y": 258.46875,
+          "width": 1280,
+          "height": 384,
+          "top": 258.46875,
+          "right": 1355,
+          "bottom": 642.46875,
+          "left": 75
+        },
+        "scale": 0.5839078278026433,
+        "materials": [
+          {
+            "name": "skills-core",
+            "type": "MeshBasicMaterial",
+            "color": "ffffff",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 0.28,
+              "detail": 1
+            }
+          },
+          {
+            "name": "",
+            "type": "MeshBasicMaterial",
+            "color": "bbbbbb",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 1.65,
+              "tube": 0.009,
+              "radialSegments": 4,
+              "tubularSegments": 64,
+              "arc": 6.283185307179586,
+              "thetaStart": 0,
+              "thetaLength": 6.283185307179586
+            }
+          },
+          {
+            "name": "skills-tools",
+            "type": "MeshBasicMaterial",
+            "color": "bbbbbb",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 0.14,
+              "detail": 0
+            }
+          },
+          {
+            "name": "",
+            "type": "MeshBasicMaterial",
+            "color": "bbbbbb",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 2.55,
+              "tube": 0.009,
+              "radialSegments": 4,
+              "tubularSegments": 64,
+              "arc": 6.283185307179586,
+              "thetaStart": 0,
+              "thetaLength": 6.283185307179586
+            }
+          },
+          {
+            "name": "skills-technical",
+            "type": "MeshBasicMaterial",
+            "color": "bbbbbb",
+            "map": false,
+            "side": 0,
+            "shadow": false,
+            "segments": {
+              "radius": 0.14,
+              "detail": 0
+            }
+          }
+        ],
+        "rotations": [
+          6.648064000001019,
+          -4.155040000000532
+        ]
+      },
+      "blackHole": false,
+      "camera": [
+        -0.8195940306802443,
+        2.021416574031853,
+        -170.03337564221147
+      ],
+      "calls": 21,
+      "triangles": 1680,
+      "geometries": 13,
+      "textures": 1,
+      "subscribers": 8,
+      "frameloop": "always",
+      "reduced": false,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "starCount": 24000
+    }
+  ],
+  "checks": [],
+  "errors": []
+}

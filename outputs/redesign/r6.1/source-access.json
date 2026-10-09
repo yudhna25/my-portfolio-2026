@@ -1,0 +1,24 @@
+{
+  "requestedUrl": "https://www.behance.net/gallery/241524417/Edura-LMS",
+  "projectId": "241524417",
+  "checkedAt": "2026-10-08T16:34:35.700Z",
+  "webReader": {
+    "status": "cache-miss",
+    "ref": "turn56view0"
+  },
+  "errors": [],
+  "galleryVerified": false,
+  "usableModuleUrls": [],
+  "usableWalkthroughUrls": [],
+  "browser": "154.0.4258.62",
+  "httpStatus": 403,
+  "finalUrl": "chrome-error://chromewebdata/",
+  "title": "www.behance.net",
+  "bodyText": "This page isn’t working right now\n\nIf the problem continues, contact the site owner.\n\nHTTP ERROR 400\nRefresh\nMicrosoft Edge",
+  "observedRequests": [
+    "https://www.behance.net/gallery/241524417/Edura-LMS"
+  ],
+  "observedPageLinks": [],
+  "htmlBytes": 315687,
+  "htmlSha256": "b156abe57cddb767b099d8f841f71f1fb17ebe4f6e686f494f04fc61f29736ff"
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "level": "warn",
+    "message": "GSAP target .welcome-word not found. https://gsap.com",
+    "timestamp": "2026-10-02T13:30:45.631Z",
+    "url": "http://127.0.0.1:4173/assets/index-Ca5rCiJk.js"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-02T13:30:45.632Z",
+    "url": "http://127.0.0.1:4173/assets/index-Ca5rCiJk.js"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target  not found. https://gsap.com",
+    "timestamp": "2026-10-02T13:30:47.779Z",
+    "url": "http://127.0.0.1:4173/assets/index-Ca5rCiJk.js"
+  },
+  {
+    "level": "error",
+    "message": "TypeError: Cannot read properties of undefined (reading 'style')\n    at h.offset (http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:9:163585)\n    at h.scrollTo (http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:9:163426)\n    at h.<anonymous> (http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:18:2794)\n    at d (http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:9:82862)\n    at onClick (http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:18:3710)\n    at O_ (http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:8:127556)\n    at http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:8:132682\n    at Fp (http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:8:15120)\n    at md (http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:8:128790)\n    at Md (http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:9:28574)",
+    "timestamp": "2026-10-02T13:31:17.903Z",
+    "url": "http://127.0.0.1:4173/assets/index-Ca5rCiJk.js"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target .hero-title not found. https://gsap.com",
+    "timestamp": "2026-10-02T13:33:49.733Z",
+    "url": "http://127.0.0.1:4173/assets/index-Ca5rCiJk.js"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target .hero-title not found. https://gsap.com",
+    "timestamp": "2026-10-02T13:34:21.626Z",
+    "url": "http://127.0.0.1:4173/assets/index-Ca5rCiJk.js"
+  },
+  {
+    "level": "warn",
+    "message": "GSAP target .hero-title not found. https://gsap.com",
+    "timestamp": "2026-10-02T13:35:15.163Z",
+    "url": "http://127.0.0.1:4173/assets/index-Ca5rCiJk.js"
+  },
+  {
+    "level": "error",
+    "message": "TypeError: Cannot read properties of undefined (reading 'style')\n    at h.offset (http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:9:163585)\n    at h.scrollTo (http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:9:163426)\n    at h.<anonymous> (http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:18:2794)\n    at d (http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:9:82862)\n    at onClick (http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:18:3710)\n    at O_ (http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:8:127556)\n    at http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:8:132682\n    at Fp (http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:8:15120)\n    at md (http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:8:128790)\n    at Md (http://127.0.0.1:4173/assets/index-Ca5rCiJk.js:9:28574)",
+    "timestamp": "2026-10-02T13:37:53.663Z",
+    "url": "http://127.0.0.1:4173/assets/index-Ca5rCiJk.js"
+  }
+]

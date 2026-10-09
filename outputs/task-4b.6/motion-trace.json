@@ -1,0 +1,126 @@
+{
+  "trace": {
+    "samples": [
+      {
+        "at": 6225.5,
+        "reduce": true,
+        "dom": 3,
+        "triggers": 3,
+        "smoother": true
+      },
+      {
+        "at": 6588.10000000149,
+        "reduce": true,
+        "dom": 0,
+        "triggers": 0,
+        "smoother": false
+      },
+      {
+        "at": 6688.20000000298,
+        "reduce": true,
+        "dom": 0,
+        "triggers": 0,
+        "smoother": false
+      },
+      {
+        "at": 6791.70000000298,
+        "reduce": true,
+        "dom": 0,
+        "triggers": 0,
+        "smoother": false
+      },
+      {
+        "at": 6894.9000000059605,
+        "reduce": true,
+        "dom": 0,
+        "triggers": 0,
+        "smoother": false
+      },
+      {
+        "at": 6997.9000000059605,
+        "reduce": true,
+        "dom": 0,
+        "triggers": 0,
+        "smoother": false
+      },
+      {
+        "at": 7100.70000000298,
+        "reduce": true,
+        "dom": 0,
+        "triggers": 0,
+        "smoother": false
+      },
+      {
+        "at": 7203.9000000059605,
+        "reduce": true,
+        "dom": 0,
+        "triggers": 0,
+        "smoother": false
+      },
+      {
+        "at": 7306.80000000447,
+        "reduce": true,
+        "dom": 0,
+        "triggers": 0,
+        "smoother": false
+      },
+      {
+        "at": 7410.10000000149,
+        "reduce": true,
+        "dom": 0,
+        "triggers": 0,
+        "smoother": false
+      },
+      {
+        "at": 7512.20000000298,
+        "reduce": true,
+        "dom": 0,
+        "triggers": 0,
+        "smoother": false
+      },
+      {
+        "at": 7616,
+        "reduce": true,
+        "dom": 0,
+        "triggers": 0,
+        "smoother": false
+      },
+      {
+        "at": 7719,
+        "reduce": true,
+        "dom": 0,
+        "triggers": 0,
+        "smoother": false
+      },
+      {
+        "at": 7822.10000000149,
+        "reduce": true,
+        "dom": 0,
+        "triggers": 0,
+        "smoother": false
+      },
+      {
+        "at": 7925,
+        "reduce": true,
+        "dom": 0,
+        "triggers": 0,
+        "smoother": false
+      }
+    ],
+    "events": [
+      {
+        "matches": true,
+        "at": 6254.10000000149
+      },
+      {
+        "matches": false,
+        "at": 6537.30000000447
+      },
+      {
+        "matches": false,
+        "at": 6568.70000000298
+      }
+    ]
+  },
+  "errs": []
+}

@@ -1,0 +1,935 @@
+{
+  "checkedAt": "2026-10-07T18:46:30.550Z",
+  "sourceAndHandoffFilesPreserved": 279,
+  "productionFilesPreserved": 92,
+  "differences": [],
+  "headUnchanged": true,
+  "trackedStatusUnchanged": true,
+  "agentsPrefixUnchanged": true,
+  "agentsRowsAppended": 1,
+  "frames": 150,
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "dpr": 1
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "dpr": 1
+    },
+    {
+      "width": 320,
+      "height": 844,
+      "dpr": 1
+    }
+  ],
+  "consoleErrors": 0,
+  "clippedText": 0,
+  "geometryGroupsChecked": 162,
+  "edgesChecked": 1566,
+  "storyboardSha256": "29bac919ae9c33e5ea8d7686a1d854dc6bee552e10ec446db677a754d7afc7b5",
+  "images": [
+    {
+      "key": "1440-vi-hero",
+      "path": "frames/1440/vi/hero.png",
+      "bytes": 60117,
+      "sha256": "bd55742adcd84fbe11fa440094dcd308ef402560cc5bc91fac3c5c66d98a524b"
+    },
+    {
+      "key": "1440-vi-glitch",
+      "path": "frames/1440/vi/glitch.png",
+      "bytes": 58359,
+      "sha256": "c63101092bc0ec19dbd113bf96b337cebe303612fc4d49e4c745a83ab34f9548"
+    },
+    {
+      "key": "1440-vi-portal25",
+      "path": "frames/1440/vi/portal25.png",
+      "bytes": 59842,
+      "sha256": "601e260906b90c985393a1d2e70708fb5a476fe1b25f96adf941fe21affaae26"
+    },
+    {
+      "key": "1440-vi-portal50",
+      "path": "frames/1440/vi/portal50.png",
+      "bytes": 12065,
+      "sha256": "f1836f461df9e61ae1f162e7ea0ba5ff011914ba5fdcffb6e492c33690f242c3"
+    },
+    {
+      "key": "1440-vi-portal75",
+      "path": "frames/1440/vi/portal75.png",
+      "bytes": 303690,
+      "sha256": "fe4988c04cff0160a6d24505d64ded5e79241a20e9821a70fbfbcff094f0fb33"
+    },
+    {
+      "key": "1440-vi-about",
+      "path": "frames/1440/vi/about.png",
+      "bytes": 250887,
+      "sha256": "18b36f4445cae6f7f2b03ab1f9964d47c790471c44a8d5e4a58ed43b735027cb"
+    },
+    {
+      "key": "1440-vi-aboutColor",
+      "path": "frames/1440/vi/aboutColor.png",
+      "bytes": 308576,
+      "sha256": "aa8e673a4e2f72027295a45bf6fab6481c0ffb7046402f13893d52b38dfc1512"
+    },
+    {
+      "key": "1440-vi-skills",
+      "path": "frames/1440/vi/skills.png",
+      "bytes": 116559,
+      "sha256": "11fd1c6c87be7574e35eff625aeda5379653a0f0c07a5e0998aaca0b78fb93e3"
+    },
+    {
+      "key": "1440-vi-skillsAI",
+      "path": "frames/1440/vi/skillsAI.png",
+      "bytes": 118269,
+      "sha256": "f1aa5caefa03f73ae977174643f04af4e09146b43f27607c8a6445916646d996"
+    },
+    {
+      "key": "1440-vi-educationCir",
+      "path": "frames/1440/vi/educationCir.png",
+      "bytes": 114348,
+      "sha256": "70dd48cbaaaa7df4bc7e01c6db45cc7e34e98e0b2b1db0635e5925fcac2da715"
+    },
+    {
+      "key": "1440-vi-educationTel",
+      "path": "frames/1440/vi/educationTel.png",
+      "bytes": 112373,
+      "sha256": "7731ad43c61520024db156e38149baf0673eaec2b4babe94a1509995b687bdce"
+    },
+    {
+      "key": "1440-vi-educationPic",
+      "path": "frames/1440/vi/educationPic.png",
+      "bytes": 113339,
+      "sha256": "6047c558cd51202d3369e801854b622f37709f9fbf3a10b47a56b9d5ef88696c"
+    },
+    {
+      "key": "1440-vi-experience",
+      "path": "frames/1440/vi/experience.png",
+      "bytes": 110023,
+      "sha256": "c6370cefd60b96980d1509173e681348b3616d7d94fea63398917a81bddb8ba1"
+    },
+    {
+      "key": "1440-vi-works",
+      "path": "frames/1440/vi/works.png",
+      "bytes": 68074,
+      "sha256": "7c833a0c6427f6aefa775aff2840ca52ecbf134822ce227135b96c7f15bc4933"
+    },
+    {
+      "key": "1440-vi-worksEdura",
+      "path": "frames/1440/vi/worksEdura.png",
+      "bytes": 142047,
+      "sha256": "44512e1a979ef2a19e0100ecfcdabf61adb5d5cdb7d135bf0dd7a7d99e481ff9"
+    },
+    {
+      "key": "1440-vi-worksVeris",
+      "path": "frames/1440/vi/worksVeris.png",
+      "bytes": 136650,
+      "sha256": "ed689c7db844c13e52c4883a1e45a69988c19de241039940ea62a3c6fce633da"
+    },
+    {
+      "key": "1440-vi-worksVie",
+      "path": "frames/1440/vi/worksVie.png",
+      "bytes": 158339,
+      "sha256": "24aac9a22837d4a054b457bb0e8f379395ff348f54bd2b9b10051a84077a9356"
+    },
+    {
+      "key": "1440-vi-finale0",
+      "path": "frames/1440/vi/finale0.png",
+      "bytes": 40043,
+      "sha256": "9e2b29abb6d5a77791edf076f010e21c50b7b9d8ea75c2f591d62b6d2830b4da"
+    },
+    {
+      "key": "1440-vi-finale25",
+      "path": "frames/1440/vi/finale25.png",
+      "bytes": 40710,
+      "sha256": "75b612b6e5e6d3d9be48122615184a6199a650696b231b119a16a05e9658225c"
+    },
+    {
+      "key": "1440-vi-finale50",
+      "path": "frames/1440/vi/finale50.png",
+      "bytes": 21884,
+      "sha256": "c40f107f553572aad8bcbab65fc823ddaf5ef9f022b5d08d0a933e294be77fb1"
+    },
+    {
+      "key": "1440-vi-finale75",
+      "path": "frames/1440/vi/finale75.png",
+      "bytes": 212980,
+      "sha256": "13e03a0fccee860936bb6077bba4632c2db5a138cbe492dcd6cee0e24c35e0f9"
+    },
+    {
+      "key": "1440-vi-finale100",
+      "path": "frames/1440/vi/finale100.png",
+      "bytes": 146915,
+      "sha256": "16566460ed4ffc3208cfece21b2f3b691ab99a96e82f81f8325ff54cdf624386"
+    },
+    {
+      "key": "1440-vi-contact",
+      "path": "frames/1440/vi/contact.png",
+      "bytes": 206308,
+      "sha256": "16ab77a456aca86584c3dfc5577dbdfec0d85579a592518fc70f5656fae39222"
+    },
+    {
+      "key": "1440-vi-edura",
+      "path": "frames/1440/vi/edura.png",
+      "bytes": 1516956,
+      "sha256": "025c7bc36544496e130166a22a282cbf26eac99d6a65e0217bfbfdc2dcbed76e"
+    },
+    {
+      "key": "1440-vi-reduced",
+      "path": "frames/1440/vi/reduced.png",
+      "bytes": 48257,
+      "sha256": "be7a0a936c927fb8d9816e58271007f757e0d5e93528791e26ac18889a504b5c"
+    },
+    {
+      "key": "1440-en-hero",
+      "path": "frames/1440/en/hero.png",
+      "bytes": 61174,
+      "sha256": "faf4afe40511d37dc658f92ec5583dde7bcff80e965332b4d0d6f6b51ece4d44"
+    },
+    {
+      "key": "1440-en-glitch",
+      "path": "frames/1440/en/glitch.png",
+      "bytes": 59285,
+      "sha256": "f34e256992ddd89c548ba1d065c791bb48230bbd26e23c2640b3fd64ce650884"
+    },
+    {
+      "key": "1440-en-portal25",
+      "path": "frames/1440/en/portal25.png",
+      "bytes": 59830,
+      "sha256": "627880cd36d21c7aba7eef3fdc0b1b78787fa1f67a15697f6fd17acd42414326"
+    },
+    {
+      "key": "1440-en-portal50",
+      "path": "frames/1440/en/portal50.png",
+      "bytes": 12065,
+      "sha256": "f1836f461df9e61ae1f162e7ea0ba5ff011914ba5fdcffb6e492c33690f242c3"
+    },
+    {
+      "key": "1440-en-portal75",
+      "path": "frames/1440/en/portal75.png",
+      "bytes": 303690,
+      "sha256": "fe4988c04cff0160a6d24505d64ded5e79241a20e9821a70fbfbcff094f0fb33"
+    },
+    {
+      "key": "1440-en-about",
+      "path": "frames/1440/en/about.png",
+      "bytes": 242156,
+      "sha256": "382e8aed653322f131ba7f8c366185e986ba9f35597ff6dfaddb87c6ef7a0457"
+    },
+    {
+      "key": "1440-en-aboutColor",
+      "path": "frames/1440/en/aboutColor.png",
+      "bytes": 299621,
+      "sha256": "7b73285a99753278b76d067e67a36f27deade3af6ba61ba298c20521af436146"
+    },
+    {
+      "key": "1440-en-skills",
+      "path": "frames/1440/en/skills.png",
+      "bytes": 115037,
+      "sha256": "a2209b6ca55fe856e4d9f7042d5fad0880190d5247757568c9f065a1f15abbc0"
+    },
+    {
+      "key": "1440-en-skillsAI",
+      "path": "frames/1440/en/skillsAI.png",
+      "bytes": 116570,
+      "sha256": "5b48a74320a4e0d6638abce6f54e4cff2697cdefec4478b78b13890eac256ff4"
+    },
+    {
+      "key": "1440-en-educationCir",
+      "path": "frames/1440/en/educationCir.png",
+      "bytes": 112283,
+      "sha256": "2db445502fce7b31c8cca86e61d004186f279bc9f9a40c1b5aba987a5cebb48d"
+    },
+    {
+      "key": "1440-en-educationTel",
+      "path": "frames/1440/en/educationTel.png",
+      "bytes": 110075,
+      "sha256": "71c8c4b32c33261d0aa34206bff388285a391de68b329a1989472807dddc8a52"
+    },
+    {
+      "key": "1440-en-educationPic",
+      "path": "frames/1440/en/educationPic.png",
+      "bytes": 111179,
+      "sha256": "f786f5df53402e7e3a0e5b186a78d75551146bc7e295782f9cdd3c1dba60ba23"
+    },
+    {
+      "key": "1440-en-experience",
+      "path": "frames/1440/en/experience.png",
+      "bytes": 111136,
+      "sha256": "7679e8c7e983c3ff64f28e9b709e5560d720aa911079d871a4c9ceae89df343f"
+    },
+    {
+      "key": "1440-en-works",
+      "path": "frames/1440/en/works.png",
+      "bytes": 69140,
+      "sha256": "778564fd3ddecab40394a272abf973e9eecfcf9a9baa20a98b1948593b7ab7c1"
+    },
+    {
+      "key": "1440-en-worksEdura",
+      "path": "frames/1440/en/worksEdura.png",
+      "bytes": 143357,
+      "sha256": "a4ed380201d3490e444b3009558d681f16500c4507c61ddfa4017e77fbc27b57"
+    },
+    {
+      "key": "1440-en-worksVeris",
+      "path": "frames/1440/en/worksVeris.png",
+      "bytes": 137578,
+      "sha256": "b324ed953297599a6658163029773c8c1fba98de810d38a4ca4687eb88294411"
+    },
+    {
+      "key": "1440-en-worksVie",
+      "path": "frames/1440/en/worksVie.png",
+      "bytes": 159389,
+      "sha256": "dd83e02874a3d672b2f31bde2228e5788cdf5ba4e9d388302d85b2007a309580"
+    },
+    {
+      "key": "1440-en-finale0",
+      "path": "frames/1440/en/finale0.png",
+      "bytes": 40043,
+      "sha256": "9e2b29abb6d5a77791edf076f010e21c50b7b9d8ea75c2f591d62b6d2830b4da"
+    },
+    {
+      "key": "1440-en-finale25",
+      "path": "frames/1440/en/finale25.png",
+      "bytes": 40714,
+      "sha256": "1c11a15c122a3887dd7b0570d1c9a810d00d853d630c36f5657e41f5f6516590"
+    },
+    {
+      "key": "1440-en-finale50",
+      "path": "frames/1440/en/finale50.png",
+      "bytes": 21884,
+      "sha256": "c40f107f553572aad8bcbab65fc823ddaf5ef9f022b5d08d0a933e294be77fb1"
+    },
+    {
+      "key": "1440-en-finale75",
+      "path": "frames/1440/en/finale75.png",
+      "bytes": 212980,
+      "sha256": "13e03a0fccee860936bb6077bba4632c2db5a138cbe492dcd6cee0e24c35e0f9"
+    },
+    {
+      "key": "1440-en-finale100",
+      "path": "frames/1440/en/finale100.png",
+      "bytes": 146952,
+      "sha256": "d1700a478d0f6d03c52d377af40b33d7f9110c6c1ccce8a6e23783d96a6a5b20"
+    },
+    {
+      "key": "1440-en-contact",
+      "path": "frames/1440/en/contact.png",
+      "bytes": 207355,
+      "sha256": "e8965e4ca65c598e36d6c09a5d527fe18e1f4655f0fb938cdc621aa4b31bcc45"
+    },
+    {
+      "key": "1440-en-edura",
+      "path": "frames/1440/en/edura.png",
+      "bytes": 1518273,
+      "sha256": "9d5225f6b666ca7763b8c0bd3ce2aff6b610a0801a670054dc78189004350fc7"
+    },
+    {
+      "key": "1440-en-reduced",
+      "path": "frames/1440/en/reduced.png",
+      "bytes": 48124,
+      "sha256": "c576025bb3e8c143723e62b63d57a3eeb6a3094c2fe9dd7bb0888cb937e5dd7c"
+    },
+    {
+      "key": "390-vi-hero",
+      "path": "frames/390/vi/hero.png",
+      "bytes": 25906,
+      "sha256": "2e756613d889e0d5ee55aeb74289e567ce13accbcf4c2cb3a132749499343c69"
+    },
+    {
+      "key": "390-vi-glitch",
+      "path": "frames/390/vi/glitch.png",
+      "bytes": 25012,
+      "sha256": "3f32c665b1f12f0831de49e948a43ee43bc50175fc3f6ce1e4cf383c25452f6b"
+    },
+    {
+      "key": "390-vi-portal25",
+      "path": "frames/390/vi/portal25.png",
+      "bytes": 16811,
+      "sha256": "ad55ddb1624749d173dabc7bf735cf0a1095e2d7e497035b430ee578ea25d5b2"
+    },
+    {
+      "key": "390-vi-portal50",
+      "path": "frames/390/vi/portal50.png",
+      "bytes": 5444,
+      "sha256": "a002e1077f2c365bae7fd447ed47eb40cfbd2364100e6669b02c826851d2a18f"
+    },
+    {
+      "key": "390-vi-portal75",
+      "path": "frames/390/vi/portal75.png",
+      "bytes": 48817,
+      "sha256": "88ccf6b3499ee4c6613063253a5a845104dbee731b0e9c95475d2a2cacccac80"
+    },
+    {
+      "key": "390-vi-about",
+      "path": "frames/390/vi/about.png",
+      "bytes": 108598,
+      "sha256": "b4446824260c1f767add0a0dfd99ffaf3ee435e3afa7e3b15afe82e04eeb2b1b"
+    },
+    {
+      "key": "390-vi-aboutColor",
+      "path": "frames/390/vi/aboutColor.png",
+      "bytes": 137981,
+      "sha256": "0b21844b43e311fda9c77530de914edd07231a53f038c3783d539527f05a6a70"
+    },
+    {
+      "key": "390-vi-skills",
+      "path": "frames/390/vi/skills.png",
+      "bytes": 49991,
+      "sha256": "932b633b6d319d46bd61a59565cc9aebb58070f962c833c2fdfe5f931441d263"
+    },
+    {
+      "key": "390-vi-skillsAI",
+      "path": "frames/390/vi/skillsAI.png",
+      "bytes": 51493,
+      "sha256": "e27dd5f1877228823c6b0b0d1285d0d27c6081d92cddf585536c2e36c59ca6c1"
+    },
+    {
+      "key": "390-vi-educationCir",
+      "path": "frames/390/vi/educationCir.png",
+      "bytes": 51792,
+      "sha256": "59a5abf8b84d19e28a1e4d73c359e434d3cacc19906edb50ca95beafd218cc11"
+    },
+    {
+      "key": "390-vi-educationTel",
+      "path": "frames/390/vi/educationTel.png",
+      "bytes": 50832,
+      "sha256": "066a274feed191064ad66d8850cf8162b0e0d861e0ecaae7fcb95821ddcfe9d5"
+    },
+    {
+      "key": "390-vi-educationPic",
+      "path": "frames/390/vi/educationPic.png",
+      "bytes": 51375,
+      "sha256": "379d74ef1a52182413695c64e3f9a03cb39c411d82c5085e34c3d4867ecc3878"
+    },
+    {
+      "key": "390-vi-experience",
+      "path": "frames/390/vi/experience.png",
+      "bytes": 66071,
+      "sha256": "c7da6c09d7aa65ebcccae4b35e74db699e7f438125deb4bb1131d2ed3fd892f7"
+    },
+    {
+      "key": "390-vi-works",
+      "path": "frames/390/vi/works.png",
+      "bytes": 38088,
+      "sha256": "10e6d57adc5b236c23f300706b42bf32d93327a6efadee04992449775988e93b"
+    },
+    {
+      "key": "390-vi-worksEdura",
+      "path": "frames/390/vi/worksEdura.png",
+      "bytes": 110635,
+      "sha256": "86c64f9a4358685f8a7aa4fef81118fbac85b8c12c2da7d045399a48e3ccccb3"
+    },
+    {
+      "key": "390-vi-worksVeris",
+      "path": "frames/390/vi/worksVeris.png",
+      "bytes": 103174,
+      "sha256": "6eda262183d32619da4a3112e04b7a91f194e41d577ae7430da90f14042ffcfa"
+    },
+    {
+      "key": "390-vi-worksVie",
+      "path": "frames/390/vi/worksVie.png",
+      "bytes": 123376,
+      "sha256": "d6b994dbb405d9076adc8677a749e5c061e20f5416cc32ad89b04d88713654da"
+    },
+    {
+      "key": "390-vi-finale0",
+      "path": "frames/390/vi/finale0.png",
+      "bytes": 24275,
+      "sha256": "a323f5db7ab143664da0a836e530449b311f1066ef0661388e33c87870e967d8"
+    },
+    {
+      "key": "390-vi-finale25",
+      "path": "frames/390/vi/finale25.png",
+      "bytes": 25433,
+      "sha256": "6304333bf8da3fc81875e24798c7eced667e427c6dbb0b13b1d498d2d7492b59"
+    },
+    {
+      "key": "390-vi-finale50",
+      "path": "frames/390/vi/finale50.png",
+      "bytes": 11418,
+      "sha256": "9c299fe69e2f6bd81cfa483eb7c379fe704eb27903775f50ebb6fd194cc33a3e"
+    },
+    {
+      "key": "390-vi-finale75",
+      "path": "frames/390/vi/finale75.png",
+      "bytes": 71868,
+      "sha256": "c7c18036a13c347e901aec84c40cf13cc03c8ae941eaf29d48169d223f6dabb7"
+    },
+    {
+      "key": "390-vi-finale100",
+      "path": "frames/390/vi/finale100.png",
+      "bytes": 49528,
+      "sha256": "1fd8cd5bcd7249471fd8b6794571a9b330f4cd7f22a71abcd003be1de2be85df"
+    },
+    {
+      "key": "390-vi-contact",
+      "path": "frames/390/vi/contact.png",
+      "bytes": 69529,
+      "sha256": "c75e778012aa3bebb4d3079054deeb03b851800fc51f842c351bf750175be891"
+    },
+    {
+      "key": "390-vi-edura",
+      "path": "frames/390/vi/edura.png",
+      "bytes": 240604,
+      "sha256": "bd78d05a2ffb67f3e8d25f506ba45ee043dac56cb7e6eba275a424a3c65bc11a"
+    },
+    {
+      "key": "390-vi-reduced",
+      "path": "frames/390/vi/reduced.png",
+      "bytes": 36788,
+      "sha256": "1b959d03e8031915be0b566f9988425186c98dbfe5e38450425061d3e8fbaf65"
+    },
+    {
+      "key": "390-en-hero",
+      "path": "frames/390/en/hero.png",
+      "bytes": 25617,
+      "sha256": "3a1bff5c16052630651093a6434b00ade318debdad288e3538de26321b3cdf32"
+    },
+    {
+      "key": "390-en-glitch",
+      "path": "frames/390/en/glitch.png",
+      "bytes": 24711,
+      "sha256": "256c0ad4e75dacddc5a5f1a87137d84af1c2d3587bfe1e518f28c4d000bdfa4c"
+    },
+    {
+      "key": "390-en-portal25",
+      "path": "frames/390/en/portal25.png",
+      "bytes": 16811,
+      "sha256": "ad55ddb1624749d173dabc7bf735cf0a1095e2d7e497035b430ee578ea25d5b2"
+    },
+    {
+      "key": "390-en-portal50",
+      "path": "frames/390/en/portal50.png",
+      "bytes": 5444,
+      "sha256": "a002e1077f2c365bae7fd447ed47eb40cfbd2364100e6669b02c826851d2a18f"
+    },
+    {
+      "key": "390-en-portal75",
+      "path": "frames/390/en/portal75.png",
+      "bytes": 48817,
+      "sha256": "88ccf6b3499ee4c6613063253a5a845104dbee731b0e9c95475d2a2cacccac80"
+    },
+    {
+      "key": "390-en-about",
+      "path": "frames/390/en/about.png",
+      "bytes": 104177,
+      "sha256": "e13d9917894ecb7b78edad8cadc91e1820115534678562a3d47886d44e97f6a4"
+    },
+    {
+      "key": "390-en-aboutColor",
+      "path": "frames/390/en/aboutColor.png",
+      "bytes": 133575,
+      "sha256": "5d1f85f95fbdde3e2c325cbf824741f62aa3aa203bb00a693c52a415ef011bc7"
+    },
+    {
+      "key": "390-en-skills",
+      "path": "frames/390/en/skills.png",
+      "bytes": 48766,
+      "sha256": "7cb19a6a75e4f6368e34a4e9aabaf4ab1a2ef4716d1e273ce35c151d561ecd0e"
+    },
+    {
+      "key": "390-en-skillsAI",
+      "path": "frames/390/en/skillsAI.png",
+      "bytes": 50345,
+      "sha256": "f362c712ce56c41aacd99ba60da3694cbabcbbff610e815ce30dcdad8b241d17"
+    },
+    {
+      "key": "390-en-educationCir",
+      "path": "frames/390/en/educationCir.png",
+      "bytes": 51618,
+      "sha256": "33403985da643f0f478f64cf74f118494bf6301eceef9d212c31171d9ccd01a3"
+    },
+    {
+      "key": "390-en-educationTel",
+      "path": "frames/390/en/educationTel.png",
+      "bytes": 50669,
+      "sha256": "6dbf13202a1948bc8f3c07d70cb08bd83e46adf4887e20b6b08a08f2164da26d"
+    },
+    {
+      "key": "390-en-educationPic",
+      "path": "frames/390/en/educationPic.png",
+      "bytes": 51214,
+      "sha256": "0f459f64ef680d37d2941d8cf1fdbf50d7aa172c22dfe8a04309c5034e8f5f30"
+    },
+    {
+      "key": "390-en-experience",
+      "path": "frames/390/en/experience.png",
+      "bytes": 67154,
+      "sha256": "71edcf1747cd8c1ffc9712f9cf46e817147a9170cd0b2b47e63bd0d38628e755"
+    },
+    {
+      "key": "390-en-works",
+      "path": "frames/390/en/works.png",
+      "bytes": 39413,
+      "sha256": "f8ed24d28ac2b5b4ffab49c128b97e5e9996dc06568e68172c91514fb0cc2077"
+    },
+    {
+      "key": "390-en-worksEdura",
+      "path": "frames/390/en/worksEdura.png",
+      "bytes": 112251,
+      "sha256": "771d7addf1d7e26c70775d862e69c486aac12c4253d6dccddbbf3c8ada1269e4"
+    },
+    {
+      "key": "390-en-worksVeris",
+      "path": "frames/390/en/worksVeris.png",
+      "bytes": 104477,
+      "sha256": "001031f32f695ec1212cffcf10bc408f9b67fb98d87d0261c5307e5a589abddd"
+    },
+    {
+      "key": "390-en-worksVie",
+      "path": "frames/390/en/worksVie.png",
+      "bytes": 124832,
+      "sha256": "e2a06a3c2617f30b87cd59c572a8d1081f7b05c109fdda1311a815c0765d33ec"
+    },
+    {
+      "key": "390-en-finale0",
+      "path": "frames/390/en/finale0.png",
+      "bytes": 24275,
+      "sha256": "a323f5db7ab143664da0a836e530449b311f1066ef0661388e33c87870e967d8"
+    },
+    {
+      "key": "390-en-finale25",
+      "path": "frames/390/en/finale25.png",
+      "bytes": 25433,
+      "sha256": "6304333bf8da3fc81875e24798c7eced667e427c6dbb0b13b1d498d2d7492b59"
+    },
+    {
+      "key": "390-en-finale50",
+      "path": "frames/390/en/finale50.png",
+      "bytes": 11418,
+      "sha256": "9c299fe69e2f6bd81cfa483eb7c379fe704eb27903775f50ebb6fd194cc33a3e"
+    },
+    {
+      "key": "390-en-finale75",
+      "path": "frames/390/en/finale75.png",
+      "bytes": 71868,
+      "sha256": "c7c18036a13c347e901aec84c40cf13cc03c8ae941eaf29d48169d223f6dabb7"
+    },
+    {
+      "key": "390-en-finale100",
+      "path": "frames/390/en/finale100.png",
+      "bytes": 49528,
+      "sha256": "1fd8cd5bcd7249471fd8b6794571a9b330f4cd7f22a71abcd003be1de2be85df"
+    },
+    {
+      "key": "390-en-contact",
+      "path": "frames/390/en/contact.png",
+      "bytes": 71357,
+      "sha256": "327b82b52c58270dd8b5167bc56bbc39fcf3a48a404e49b861cd25d9ee955ae8"
+    },
+    {
+      "key": "390-en-edura",
+      "path": "frames/390/en/edura.png",
+      "bytes": 240148,
+      "sha256": "1356066b9263b103e900466a7f48b40ed9a65ffb2d0a81f5e95284e9b2e72e82"
+    },
+    {
+      "key": "390-en-reduced",
+      "path": "frames/390/en/reduced.png",
+      "bytes": 36682,
+      "sha256": "43bede979d60172b23187a3382a036b64a03679b0e7dc7722fb61ae24ce0475a"
+    },
+    {
+      "key": "320-vi-hero",
+      "path": "frames/320/vi/hero.png",
+      "bytes": 25015,
+      "sha256": "8775e6e147c8e71c584e1c9b5f41686ca1a6e82235e2da04f01df69d0dec3c87"
+    },
+    {
+      "key": "320-vi-glitch",
+      "path": "frames/320/vi/glitch.png",
+      "bytes": 24220,
+      "sha256": "1393224fb1ad1725c94e47256092cb5de3bcad13d576150be09718eaa39b0f86"
+    },
+    {
+      "key": "320-vi-portal25",
+      "path": "frames/320/vi/portal25.png",
+      "bytes": 16184,
+      "sha256": "dd98764443e2a08bbe6556aeb56604ff74b00f7e016d743581913bd1c98f6684"
+    },
+    {
+      "key": "320-vi-portal50",
+      "path": "frames/320/vi/portal50.png",
+      "bytes": 4878,
+      "sha256": "721e551f303aa71f04fcbde3d1bbc5ccbcce7cce70ec46893dc6a03d399e955e"
+    },
+    {
+      "key": "320-vi-portal75",
+      "path": "frames/320/vi/portal75.png",
+      "bytes": 36410,
+      "sha256": "bf850ed3f70c68aeecd246e3e4ec0ec825cef471adb37288b32e9dc2e42ee1fb"
+    },
+    {
+      "key": "320-vi-about",
+      "path": "frames/320/vi/about.png",
+      "bytes": 97022,
+      "sha256": "6e9bdba9d6890d96073bc0f29cc1e0e74bc6193c999aa4308c4ca531abe050cb"
+    },
+    {
+      "key": "320-vi-aboutColor",
+      "path": "frames/320/vi/aboutColor.png",
+      "bytes": 119306,
+      "sha256": "ca82b21e6f8c2ae6b47c9ccba888ecf233eb30f78abace4f7f0b62edae8fa9ff"
+    },
+    {
+      "key": "320-vi-skills",
+      "path": "frames/320/vi/skills.png",
+      "bytes": 47730,
+      "sha256": "614782e53ce4dbbb842b4c6b018c8578239dfb6fe8f5f9982dc9d813aa3b8906"
+    },
+    {
+      "key": "320-vi-skillsAI",
+      "path": "frames/320/vi/skillsAI.png",
+      "bytes": 48964,
+      "sha256": "cd4d9a5205f98dc608e9c657508e4fd8ea58d24e9007f22eed57166480b375b7"
+    },
+    {
+      "key": "320-vi-educationCir",
+      "path": "frames/320/vi/educationCir.png",
+      "bytes": 48931,
+      "sha256": "c9a54d84ddaecc034d8cab390b2df6be1d2aab2e15e1e7b66b38886d4cfb1365"
+    },
+    {
+      "key": "320-vi-educationTel",
+      "path": "frames/320/vi/educationTel.png",
+      "bytes": 48081,
+      "sha256": "83021421e93250509decdcb4e6630646fd8eee64f1555069715acf999660ca1a"
+    },
+    {
+      "key": "320-vi-educationPic",
+      "path": "frames/320/vi/educationPic.png",
+      "bytes": 48647,
+      "sha256": "a5253dc561c4ab89927b5b58ecf43189057fe42c8150fe078478244edbfd448f"
+    },
+    {
+      "key": "320-vi-experience",
+      "path": "frames/320/vi/experience.png",
+      "bytes": 66603,
+      "sha256": "fbf99f733e02e4cd07ae320f997dd2ec0d25778d9b7adc416f83bf538e3966c3"
+    },
+    {
+      "key": "320-vi-works",
+      "path": "frames/320/vi/works.png",
+      "bytes": 36128,
+      "sha256": "9ca8b43806f7ee75f6e0ae29545f5e463c8ea55ed36846a681171f1625d016bc"
+    },
+    {
+      "key": "320-vi-worksEdura",
+      "path": "frames/320/vi/worksEdura.png",
+      "bytes": 100142,
+      "sha256": "efb3e07713f16a6d6c4aabff838678d7cfe4df6bff35e0ea2fc8d3fc69192f1b"
+    },
+    {
+      "key": "320-vi-worksVeris",
+      "path": "frames/320/vi/worksVeris.png",
+      "bytes": 82036,
+      "sha256": "9c117ba366319908f5f62c0410c9a32439ac498e3b02ab52d34dc64bf5c7408f"
+    },
+    {
+      "key": "320-vi-worksVie",
+      "path": "frames/320/vi/worksVie.png",
+      "bytes": 96535,
+      "sha256": "a81ce6ac7b15e45f120a5145dace77d10e48a92bf2ee2adeb20de77e8585c6c0"
+    },
+    {
+      "key": "320-vi-finale0",
+      "path": "frames/320/vi/finale0.png",
+      "bytes": 23032,
+      "sha256": "d0b9cf92907148f1c322d0f0c08b8f5238d8f07b0f8690733474a58edb527f58"
+    },
+    {
+      "key": "320-vi-finale25",
+      "path": "frames/320/vi/finale25.png",
+      "bytes": 24947,
+      "sha256": "5603838d1cf30a7ce45e590c2cb1068f87f7bb9f4f0feaf2490975e22ef26953"
+    },
+    {
+      "key": "320-vi-finale50",
+      "path": "frames/320/vi/finale50.png",
+      "bytes": 10836,
+      "sha256": "458c5da8f4d588df08cdc08280972560fd6b9ddbc18a3d966b7ae3a5ee81c6ab"
+    },
+    {
+      "key": "320-vi-finale75",
+      "path": "frames/320/vi/finale75.png",
+      "bytes": 56085,
+      "sha256": "7326c1eaeb5b87557e94e880c49ea6ffeeb9bca2c49d434b843a1e1133a29dc3"
+    },
+    {
+      "key": "320-vi-finale100",
+      "path": "frames/320/vi/finale100.png",
+      "bytes": 46135,
+      "sha256": "5747331b8c8d9721aace81e157ffb58a7de434fee56ebab39e2a88db2ad07148"
+    },
+    {
+      "key": "320-vi-contact",
+      "path": "frames/320/vi/contact.png",
+      "bytes": 65238,
+      "sha256": "64086c5c9d59d598b8919dc4b3f46b364c378f64b86fda8d218d0f6f1da52aa1"
+    },
+    {
+      "key": "320-vi-edura",
+      "path": "frames/320/vi/edura.png",
+      "bytes": 191932,
+      "sha256": "aef0641528909903b7c17bbef12d2553fc6bbaf411699a1740d15c9e9babb057"
+    },
+    {
+      "key": "320-vi-reduced",
+      "path": "frames/320/vi/reduced.png",
+      "bytes": 36201,
+      "sha256": "9dd53dfd37cb64dc3f498eb9b210c0520554b0603fe6bd8b5d29db67036fcbb2"
+    },
+    {
+      "key": "320-en-hero",
+      "path": "frames/320/en/hero.png",
+      "bytes": 25482,
+      "sha256": "1c727fd51e417a0c76c918fe00451f9c20ed553b56e6b04fbef496a2a1a99c47"
+    },
+    {
+      "key": "320-en-glitch",
+      "path": "frames/320/en/glitch.png",
+      "bytes": 24693,
+      "sha256": "a3d3a76ae09748a9fa6849ebd3008122ff35604ae5d537fb839ad0542aded1fd"
+    },
+    {
+      "key": "320-en-portal25",
+      "path": "frames/320/en/portal25.png",
+      "bytes": 16184,
+      "sha256": "dd98764443e2a08bbe6556aeb56604ff74b00f7e016d743581913bd1c98f6684"
+    },
+    {
+      "key": "320-en-portal50",
+      "path": "frames/320/en/portal50.png",
+      "bytes": 4878,
+      "sha256": "721e551f303aa71f04fcbde3d1bbc5ccbcce7cce70ec46893dc6a03d399e955e"
+    },
+    {
+      "key": "320-en-portal75",
+      "path": "frames/320/en/portal75.png",
+      "bytes": 36410,
+      "sha256": "bf850ed3f70c68aeecd246e3e4ec0ec825cef471adb37288b32e9dc2e42ee1fb"
+    },
+    {
+      "key": "320-en-about",
+      "path": "frames/320/en/about.png",
+      "bytes": 92349,
+      "sha256": "be46005c784d0599f3f6a43803c0b92c5f9f5be61456ac93032ee09e657b6079"
+    },
+    {
+      "key": "320-en-aboutColor",
+      "path": "frames/320/en/aboutColor.png",
+      "bytes": 114520,
+      "sha256": "3d786d13e62c960a616c53001dc818c724d197f2fc12669e63a976d1f363c297"
+    },
+    {
+      "key": "320-en-skills",
+      "path": "frames/320/en/skills.png",
+      "bytes": 47100,
+      "sha256": "8ceb5f4c1afda8e3ef8eb5de33a3299d9bb568d6dbde1f28d5b8a0c8bd547236"
+    },
+    {
+      "key": "320-en-skillsAI",
+      "path": "frames/320/en/skillsAI.png",
+      "bytes": 48438,
+      "sha256": "83ce95da68abb1881f165200303e50f5ed40bb03a81469844190f76d70055245"
+    },
+    {
+      "key": "320-en-educationCir",
+      "path": "frames/320/en/educationCir.png",
+      "bytes": 49491,
+      "sha256": "af07a851e8093f5ec143b45748ba7fc3085d4d5ebf6baf1c7e737bdcfde0f721"
+    },
+    {
+      "key": "320-en-educationTel",
+      "path": "frames/320/en/educationTel.png",
+      "bytes": 48608,
+      "sha256": "1e4516f73191b67d645f561eda9612fd0572fe9b249d95ad888915bbc1617e90"
+    },
+    {
+      "key": "320-en-educationPic",
+      "path": "frames/320/en/educationPic.png",
+      "bytes": 49165,
+      "sha256": "41f9e74fc4c9db805719b00db0bafefe84c67526df3bd6cac0075aa6b0dc9d79"
+    },
+    {
+      "key": "320-en-experience",
+      "path": "frames/320/en/experience.png",
+      "bytes": 67747,
+      "sha256": "f20a036e0379011d6475028cce667bae055d0b5dcd5fb8a0dc6571672ebe3ca6"
+    },
+    {
+      "key": "320-en-works",
+      "path": "frames/320/en/works.png",
+      "bytes": 37385,
+      "sha256": "29c638ae2340995453e9e1c72890e18d28e723bf63591b860a2dc52fb67b3801"
+    },
+    {
+      "key": "320-en-worksEdura",
+      "path": "frames/320/en/worksEdura.png",
+      "bytes": 101253,
+      "sha256": "9c4a5b0ce9f21646e52c57d5f29fed565b5cee26816ac96d7eadb8e7d2878eb7"
+    },
+    {
+      "key": "320-en-worksVeris",
+      "path": "frames/320/en/worksVeris.png",
+      "bytes": 83259,
+      "sha256": "e8d4fe4ab925db22dcf19a62a9a18168981e977302e718727e44b73712c54083"
+    },
+    {
+      "key": "320-en-worksVie",
+      "path": "frames/320/en/worksVie.png",
+      "bytes": 97747,
+      "sha256": "2974eb1cf425312ba3af14a4d2f65828bb24da4bf00a05da1ef91760959522c4"
+    },
+    {
+      "key": "320-en-finale0",
+      "path": "frames/320/en/finale0.png",
+      "bytes": 23032,
+      "sha256": "d0b9cf92907148f1c322d0f0c08b8f5238d8f07b0f8690733474a58edb527f58"
+    },
+    {
+      "key": "320-en-finale25",
+      "path": "frames/320/en/finale25.png",
+      "bytes": 24947,
+      "sha256": "5603838d1cf30a7ce45e590c2cb1068f87f7bb9f4f0feaf2490975e22ef26953"
+    },
+    {
+      "key": "320-en-finale50",
+      "path": "frames/320/en/finale50.png",
+      "bytes": 10836,
+      "sha256": "458c5da8f4d588df08cdc08280972560fd6b9ddbc18a3d966b7ae3a5ee81c6ab"
+    },
+    {
+      "key": "320-en-finale75",
+      "path": "frames/320/en/finale75.png",
+      "bytes": 56083,
+      "sha256": "0953565b7de065e15162335abd281cbdf6c13f2708c6a7781095032241dc5dbe"
+    },
+    {
+      "key": "320-en-finale100",
+      "path": "frames/320/en/finale100.png",
+      "bytes": 46135,
+      "sha256": "5747331b8c8d9721aace81e157ffb58a7de434fee56ebab39e2a88db2ad07148"
+    },
+    {
+      "key": "320-en-contact",
+      "path": "frames/320/en/contact.png",
+      "bytes": 66422,
+      "sha256": "6999f19056daf09564d781c38131c590010b414fa311dd7a805481f0b3a68440"
+    },
+    {
+      "key": "320-en-edura",
+      "path": "frames/320/en/edura.png",
+      "bytes": 190365,
+      "sha256": "20df4cc5443173d549c4cfc9562b54ea96dcd20048f937e218650177eefaf32c"
+    },
+    {
+      "key": "320-en-reduced",
+      "path": "frames/320/en/reduced.png",
+      "bytes": 36095,
+      "sha256": "06b4a8fc77b834a57a58182c95434e40f5de4c478ceb657e24488992ff49f7a6"
+    }
+  ]
+}

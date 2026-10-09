@@ -1,0 +1,23 @@
+{
+  "enableBloom": false,
+  "liveComposers": 0,
+  "peak": 1,
+  "created": 3,
+  "disposed": 3,
+  "composerId": null,
+  "selected": [],
+  "points": 10000,
+  "camera": [
+    -0.021534790917348456,
+    -0.07426471913978541,
+    -99.99999999999994
+  ],
+  "scrollProgress": 1,
+  "fps": 165,
+  "viewport": [
+    1091,
+    930
+  ],
+  "textures": 0,
+  "geometries": 7
+}

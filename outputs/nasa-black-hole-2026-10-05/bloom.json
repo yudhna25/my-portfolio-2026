@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "raised": 4,
+  "farChanged": 0,
+  "selected": [
+    "accretion-disk"
+  ],
+  "bloomOn": {
+    "viewport": [
+      1280,
+      720
+    ],
+    "rayResolution": [
+      1088,
+      612
+    ],
+    "camera": [
+      2.1346064508242144e-8,
+      2.1999996510840814,
+      -168
+    ],
+    "distance": 32.075535825060975,
+    "heightAboveDisk": 2.1999996510840814,
+    "center": [
+      0.5,
+      0.49999999999999994
+    ],
+    "emitting": 16768,
+    "captured": 3736,
+    "shadowLeaks": 0,
+    "insideEmission": 791,
+    "upper": 3696,
+    "lower": 2862,
+    "leftMean": 0.3839802256490757,
+    "rightMean": 0.16667065285539834,
+    "tinted": 0,
+    "programsPass": true,
+    "stars": 24000,
+    "visibleStars": 2748,
+    "quadrants": [
+      680,
+      712,
+      663,
+      693
+    ],
+    "starGrowth": 1,
+    "maxStarCssPixels": 2.9980318546295166,
+    "starCameraOffset": 0,
+    "time": 0,
+    "uniformsObserver": [
+      2.1346064508242144e-8,
+      2.1999996510840814,
+      32
+    ],
+    "raySteps": 192,
+    "liveRays": 1,
+    "liveComposers": 1
+  },
+  "bloomEmpty": {
+    "viewport": [
+      1280,
+      720
+    ],
+    "rayResolution": [
+      1088,
+      612
+    ],
+    "camera": [
+      2.1346064508242144e-8,
+      2.1999996510840814,
+      -168
+    ],
+    "distance": 32.075535825060975,
+    "heightAboveDisk": 2.1999996510840814,
+    "center": [
+      0.5,
+      0.49999999999999994
+    ],
+    "emitting": 16768,
+    "captured": 3736,
+    "shadowLeaks": 0,
+    "insideEmission": 791,
+    "upper": 3696,
+    "lower": 2862,
+    "leftMean": 0.3839746667948334,
+    "rightMean": 0.16667080458978306,
+    "tinted": 0,
+    "programsPass": true,
+    "stars": 24000,
+    "visibleStars": 2748,
+    "quadrants": [
+      680,
+      712,
+      663,
+      693
+    ],
+    "starGrowth": 1,
+    "maxStarCssPixels": 2.9980318546295166,
+    "starCameraOffset": 0,
+    "time": 0,
+    "uniformsObserver": [
+      2.1346064508242144e-8,
+      2.1999996510840814,
+      32
+    ],
+    "raySteps": 192,
+    "liveRays": 1,
+    "liveComposers": 1
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-10-07T21:28:29.641Z",
+  "records": [
+    {
+      "mode": "refresh",
+      "chapter": "finale",
+      "p": 0.11111198266034875,
+      "manual": false,
+      "native": 7875,
+      "visible": 7875.001575,
+      "origin": 0.20077750048650836,
+      "captures": 1
+    },
+    {
+      "mode": "resize",
+      "chapter": "finale",
+      "p": 0.111111888888889,
+      "manual": false,
+      "native": 7875,
+      "visible": 7875.001575,
+      "origin": 0.25355779517989774,
+      "captures": 2
+    },
+    {
+      "mode": "locale",
+      "chapter": "finale",
+      "p": 0.111111888888889,
+      "manual": false,
+      "native": 7875,
+      "visible": 7875.001575,
+      "origin": 0.30555499834791483,
+      "captures": 3
+    },
+    {
+      "mode": "production App smoke",
+      "canvas": 1,
+      "worksPrototype": false,
+      "cameraWriters": 1,
+      "sections": [
+        "hero",
+        "about",
+        "skills",
+        "education",
+        "experience",
+        "work",
+        "transmission"
+      ],
+      "overflow": 0,
+      "glError": 0
+    }
+  ],
+  "errors": []
+}

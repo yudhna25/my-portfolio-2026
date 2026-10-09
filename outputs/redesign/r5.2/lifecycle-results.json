@@ -1,0 +1,391 @@
+{
+  "fixture": "outputs/redesign/r4.2/lifecycle.html",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "cycles": [
+    {
+      "cycle": 1,
+      "mounted": {
+        "counts": {
+          "meteor": {
+            "geometries": 2,
+            "materials": 2
+          },
+          "works": {
+            "geometries": 7,
+            "materials": 7
+          }
+        },
+        "canvas": 1,
+        "frameSubscribers": 12,
+        "storeSubscribers": {
+          "useLangStore": 3,
+          "useLoadingStore": 2,
+          "useScrollStore": 16,
+          "useEducationStore": 5,
+          "useSkillsStore": 4,
+          "useAudioStore": 4
+        },
+        "appStoreSubscribers": {
+          "useLangStore": 2,
+          "useLoadingStore": 2,
+          "useScrollStore": 16,
+          "useEducationStore": 5,
+          "useSkillsStore": 4,
+          "useAudioStore": 4
+        },
+        "triggers": 8,
+        "smoother": true,
+        "memory": {
+          "geometries": 15,
+          "textures": 23
+        },
+        "story": {
+          "chapter": "works",
+          "progress": 0.5
+        },
+        "works": {
+          "visible": true,
+          "groups": 4,
+          "phase": 0.2437975000142267
+        },
+        "meteor": {
+          "visible": false,
+          "finite": true,
+          "uniforms": {
+            "trailOpacity": 0,
+            "headOpacity": 0,
+            "trailDpr": 1,
+            "headDpr": 1
+          },
+          "headMatchesTrail": true
+        }
+      },
+      "departure": {
+        "chapter": "departure",
+        "progress": 0.6,
+        "meteorVisible": true,
+        "worksVisible": true,
+        "strengths": [
+          0.39358600583090386,
+          0.39358600583090386,
+          0.39358600583090386
+        ]
+      },
+      "unmounted": {
+        "disposed": {
+          "meteor": {
+            "events": {
+              "geometries": 2,
+              "materials": 2
+            },
+            "unique": {
+              "geometries": 2,
+              "materials": 2
+            },
+            "all": true
+          },
+          "works": {
+            "events": {
+              "geometries": 7,
+              "materials": 7
+            },
+            "unique": {
+              "geometries": 7,
+              "materials": 7
+            },
+            "all": true
+          }
+        },
+        "canvas": 0,
+        "frameSubscribers": 0,
+        "storeSubscribers": {
+          "useLangStore": 1,
+          "useLoadingStore": 0,
+          "useScrollStore": 0,
+          "useEducationStore": 0,
+          "useSkillsStore": 0,
+          "useAudioStore": 0
+        },
+        "appStoreSubscribers": {
+          "useLangStore": 0,
+          "useLoadingStore": 0,
+          "useScrollStore": 0,
+          "useEducationStore": 0,
+          "useSkillsStore": 0,
+          "useAudioStore": 0
+        },
+        "triggers": 0,
+        "smoother": false,
+        "memory": {
+          "geometries": 0,
+          "textures": 0
+        }
+      }
+    },
+    {
+      "cycle": 2,
+      "mounted": {
+        "counts": {
+          "meteor": {
+            "geometries": 2,
+            "materials": 2
+          },
+          "works": {
+            "geometries": 7,
+            "materials": 7
+          }
+        },
+        "canvas": 1,
+        "frameSubscribers": 12,
+        "storeSubscribers": {
+          "useLangStore": 3,
+          "useLoadingStore": 2,
+          "useScrollStore": 16,
+          "useEducationStore": 5,
+          "useSkillsStore": 4,
+          "useAudioStore": 4
+        },
+        "appStoreSubscribers": {
+          "useLangStore": 2,
+          "useLoadingStore": 2,
+          "useScrollStore": 16,
+          "useEducationStore": 5,
+          "useSkillsStore": 4,
+          "useAudioStore": 4
+        },
+        "triggers": 8,
+        "smoother": true,
+        "memory": {
+          "geometries": 15,
+          "textures": 23
+        },
+        "story": {
+          "chapter": "works",
+          "progress": 0.5
+        },
+        "works": {
+          "visible": true,
+          "groups": 4,
+          "phase": 0.3746575000017887
+        },
+        "meteor": {
+          "visible": false,
+          "finite": true,
+          "uniforms": {
+            "trailOpacity": 0,
+            "headOpacity": 0,
+            "trailDpr": 1,
+            "headDpr": 1
+          },
+          "headMatchesTrail": true
+        }
+      },
+      "departure": {
+        "chapter": "departure",
+        "progress": 0.6,
+        "meteorVisible": true,
+        "worksVisible": true,
+        "strengths": [
+          0.39358600583090386,
+          0.39358600583090386,
+          0.39358600583090386
+        ]
+      },
+      "unmounted": {
+        "disposed": {
+          "meteor": {
+            "events": {
+              "geometries": 2,
+              "materials": 2
+            },
+            "unique": {
+              "geometries": 2,
+              "materials": 2
+            },
+            "all": true
+          },
+          "works": {
+            "events": {
+              "geometries": 7,
+              "materials": 7
+            },
+            "unique": {
+              "geometries": 7,
+              "materials": 7
+            },
+            "all": true
+          }
+        },
+        "canvas": 0,
+        "frameSubscribers": 0,
+        "storeSubscribers": {
+          "useLangStore": 1,
+          "useLoadingStore": 0,
+          "useScrollStore": 0,
+          "useEducationStore": 0,
+          "useSkillsStore": 0,
+          "useAudioStore": 0
+        },
+        "appStoreSubscribers": {
+          "useLangStore": 0,
+          "useLoadingStore": 0,
+          "useScrollStore": 0,
+          "useEducationStore": 0,
+          "useSkillsStore": 0,
+          "useAudioStore": 0
+        },
+        "triggers": 0,
+        "smoother": false,
+        "memory": {
+          "geometries": 0,
+          "textures": 0
+        }
+      }
+    },
+    {
+      "cycle": 3,
+      "mounted": {
+        "counts": {
+          "meteor": {
+            "geometries": 2,
+            "materials": 2
+          },
+          "works": {
+            "geometries": 7,
+            "materials": 7
+          }
+        },
+        "canvas": 1,
+        "frameSubscribers": 12,
+        "storeSubscribers": {
+          "useLangStore": 3,
+          "useLoadingStore": 2,
+          "useScrollStore": 16,
+          "useEducationStore": 5,
+          "useSkillsStore": 4,
+          "useAudioStore": 4
+        },
+        "appStoreSubscribers": {
+          "useLangStore": 2,
+          "useLoadingStore": 2,
+          "useScrollStore": 16,
+          "useEducationStore": 5,
+          "useSkillsStore": 4,
+          "useAudioStore": 4
+        },
+        "triggers": 8,
+        "smoother": true,
+        "memory": {
+          "geometries": 15,
+          "textures": 23
+        },
+        "story": {
+          "chapter": "works",
+          "progress": 0.5
+        },
+        "works": {
+          "visible": true,
+          "groups": 4,
+          "phase": 0.5066350000008938
+        },
+        "meteor": {
+          "visible": false,
+          "finite": true,
+          "uniforms": {
+            "trailOpacity": 0,
+            "headOpacity": 0,
+            "trailDpr": 1,
+            "headDpr": 1
+          },
+          "headMatchesTrail": true
+        }
+      },
+      "departure": {
+        "chapter": "departure",
+        "progress": 0.6,
+        "meteorVisible": true,
+        "worksVisible": true,
+        "strengths": [
+          0.39358600583090386,
+          0.39358600583090386,
+          0.39358600583090386
+        ]
+      },
+      "unmounted": {
+        "disposed": {
+          "meteor": {
+            "events": {
+              "geometries": 2,
+              "materials": 2
+            },
+            "unique": {
+              "geometries": 2,
+              "materials": 2
+            },
+            "all": true
+          },
+          "works": {
+            "events": {
+              "geometries": 7,
+              "materials": 7
+            },
+            "unique": {
+              "geometries": 7,
+              "materials": 7
+            },
+            "all": true
+          }
+        },
+        "canvas": 0,
+        "frameSubscribers": 0,
+        "storeSubscribers": {
+          "useLangStore": 1,
+          "useLoadingStore": 0,
+          "useScrollStore": 0,
+          "useEducationStore": 0,
+          "useSkillsStore": 0,
+          "useAudioStore": 0
+        },
+        "appStoreSubscribers": {
+          "useLangStore": 0,
+          "useLoadingStore": 0,
+          "useScrollStore": 0,
+          "useEducationStore": 0,
+          "useSkillsStore": 0,
+          "useAudioStore": 0
+        },
+        "triggers": 0,
+        "smoother": false,
+        "memory": {
+          "geometries": 0,
+          "textures": 0
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "status": "pass",
+  "instrumentedStores": [
+    "useLangStore",
+    "useLoadingStore",
+    "useScrollStore",
+    "useEducationStore",
+    "useSkillsStore",
+    "useAudioStore"
+  ],
+  "moduleStoreSubscribers": {
+    "useLangStore": 1,
+    "useLoadingStore": 0,
+    "useScrollStore": 0,
+    "useEducationStore": 0,
+    "useSkillsStore": 0,
+    "useAudioStore": 0
+  },
+  "baselineNote": "useLangStore has one module-lifetime store→i18n sync listener from src/i18n/config.js:19, retained until HMR module disposal. App-owned subscriptions must return to zero; total subscriptions must return exactly to this pre-mount baseline."
+}

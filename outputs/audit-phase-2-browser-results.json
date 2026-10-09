@@ -1,0 +1,225 @@
+{
+  "timestamp": "2026-10-05T18:23:20.609Z",
+  "environment": {
+    "browser": "Microsoft Edge (Headless)",
+    "devServer": "http://127.0.0.1:5173/"
+  },
+  "tests": {
+    "preloader": {
+      "loadDurationMs": 2869,
+      "under2500msTarget": true,
+      "loadingLockRemoved": true
+    },
+    "sections": [
+      {
+        "id": "hero",
+        "found": true,
+        "tagName": "SECTION",
+        "ariaLabelledby": "hero-heading",
+        "height": 900
+      },
+      {
+        "id": "about",
+        "found": true,
+        "tagName": "SECTION",
+        "ariaLabelledby": "about-heading",
+        "height": 1182
+      },
+      {
+        "id": "skills",
+        "found": true,
+        "tagName": "SECTION",
+        "ariaLabelledby": "skills-heading",
+        "height": 1600
+      },
+      {
+        "id": "education",
+        "found": true,
+        "tagName": "SECTION",
+        "ariaLabelledby": "education-heading",
+        "height": 1164
+      },
+      {
+        "id": "experience",
+        "found": true,
+        "tagName": "SECTION",
+        "ariaLabelledby": "experience-heading",
+        "height": 770
+      },
+      {
+        "id": "work",
+        "found": true,
+        "tagName": "SECTION",
+        "ariaLabelledby": "works-heading",
+        "height": 3621
+      },
+      {
+        "id": "playground",
+        "found": true,
+        "tagName": "SECTION",
+        "ariaLabelledby": "playground-heading",
+        "height": 1922
+      },
+      {
+        "id": "transmission",
+        "found": true,
+        "tagName": "SECTION",
+        "ariaLabelledby": "transmission-heading",
+        "height": 963
+      }
+    ],
+    "scrollPerformance": {
+      "frames": 468,
+      "durationSec": "2.92",
+      "fps": 160,
+      "maxScroll": 11949
+    },
+    "orbitalSkills": {
+      "orbitalInHero": false,
+      "orbitalInSkills": true,
+      "isVisibleInSkills": true,
+      "currentSection": "skills"
+    },
+    "menuOverlay": {
+      "openedSuccessfully": true,
+      "scrollLocked": true,
+      "closedOnEscape": true
+    },
+    "contrast": [
+      {
+        "name": "Body Background/Text",
+        "found": true,
+        "color": "rgb(17, 17, 17)",
+        "backgroundColor": "rgb(250, 250, 250)",
+        "fontFamily": "\"Space Grotesk\", sans-serif"
+      },
+      {
+        "name": "Hero Heading",
+        "found": true,
+        "color": "rgb(250, 250, 250)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Unbounded Variable\", Unbounded, sans-serif"
+      },
+      {
+        "name": "About Heading",
+        "found": true,
+        "color": "rgb(250, 250, 250)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Unbounded Variable\", Unbounded, sans-serif"
+      },
+      {
+        "name": "Works Heading",
+        "found": true,
+        "color": "rgb(250, 250, 250)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Unbounded Variable\", Unbounded, sans-serif"
+      },
+      {
+        "name": "Skills Heading",
+        "found": true,
+        "color": "rgb(250, 250, 250)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Unbounded Variable\", Unbounded, sans-serif"
+      },
+      {
+        "name": "Education Heading",
+        "found": true,
+        "color": "rgb(250, 250, 250)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Unbounded Variable\", Unbounded, sans-serif"
+      },
+      {
+        "name": "Experience Heading",
+        "found": true,
+        "color": "rgb(250, 250, 250)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Unbounded Variable\", Unbounded, sans-serif"
+      },
+      {
+        "name": "Playground Heading",
+        "found": true,
+        "color": "rgb(250, 250, 250)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Unbounded Variable\", Unbounded, sans-serif"
+      },
+      {
+        "name": "Contact Heading",
+        "found": true,
+        "color": "rgb(250, 250, 250)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Unbounded Variable\", Unbounded, sans-serif"
+      },
+      {
+        "name": "Footer Container",
+        "found": true,
+        "color": "rgb(250, 250, 250)",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "fontFamily": "\"Space Grotesk\", sans-serif"
+      }
+    ],
+    "i18nSwitch": {
+      "lang": "en",
+      "heroTagline": "Creative Designer",
+      "aboutTitle": "TRAN VUANH DUY",
+      "worksTitle": "CONSTELLATION OF PROJECTS"
+    },
+    "reducedMotion": {
+      "smootherActive": false
+    },
+    "responsive": {
+      "width_320": {
+        "viewportWidth": 320,
+        "overflowCount": 0,
+        "overflowingElements": []
+      },
+      "width_768": {
+        "viewportWidth": 768,
+        "overflowCount": 0,
+        "overflowingElements": []
+      },
+      "width_1440": {
+        "viewportWidth": 1440,
+        "overflowCount": 7,
+        "overflowingElements": [
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "gsap-cursor-ring fixed top-0 left-0 z-[9",
+            "width": 64
+          },
+          {
+            "tag": "svg",
+            "id": "",
+            "className": "[object SVGAnimatedString]",
+            "width": 64
+          },
+          {
+            "tag": "g",
+            "id": "",
+            "className": "[object SVGAnimatedString]",
+            "width": 28
+          },
+          {
+            "tag": "circle",
+            "id": "",
+            "className": "[object SVGAnimatedString]",
+            "width": 28
+          },
+          {
+            "tag": "circle",
+            "id": "",
+            "className": "[object SVGAnimatedString]",
+            "width": 28
+          }
+        ]
+      }
+    }
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "type": "console-warning",
+      "text": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    }
+  ]
+}

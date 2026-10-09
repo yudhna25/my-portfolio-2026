@@ -1,0 +1,43 @@
+{
+  "status": "pass",
+  "checkedAt": "2026-10-08T18:03:05.019Z",
+  "validation": {
+    "results": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "cases": 13
+  },
+  "baselineFiles": 103,
+  "preserved": 93,
+  "changed": [
+    "src/3d/hooks/useScrollProgress.js",
+    "src/App.jsx",
+    "src/components/Work.jsx",
+    "src/components/layout/MenuOverlay.jsx",
+    "src/components/layout/Nav.jsx",
+    "src/components/pages/Edura.jsx",
+    "src/i18n/config.js",
+    "src/i18n/locales/en.json",
+    "src/i18n/locales/vi.json",
+    "vite.config.js"
+  ],
+  "added": [
+    "src/stores/useRouteStore.js",
+    "vercel.json"
+  ],
+  "agentsRowsAdded": 1,
+  "head": "69ca97dcda6c9cbf3907ec5366b5b4e0247663bb",
+  "stagedDiffPreserved": true
+}

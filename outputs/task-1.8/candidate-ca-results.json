@@ -1,0 +1,109 @@
+{
+  "results": [
+    {
+      "name": "One composer in StrictMode",
+      "passed": true
+    },
+    {
+      "name": "Selection contains only the four black-hole meshes",
+      "passed": true
+    },
+    {
+      "name": "Stars and nebula are excluded from bloom",
+      "passed": true
+    },
+    {
+      "name": "Prototype bloom settings exact",
+      "passed": true
+    },
+    {
+      "name": "Composer uses multisampling zero",
+      "passed": true
+    },
+    {
+      "name": "Unrelated rerender preserves composer and bloom effect",
+      "passed": true
+    },
+    {
+      "name": "enableBloom=true has expected composer count",
+      "passed": true
+    },
+    {
+      "name": "enableBloom=false has expected composer count",
+      "passed": true
+    },
+    {
+      "name": "enableBloom=true has expected composer count",
+      "passed": true
+    },
+    {
+      "name": "Bloom toggle never overlaps composers",
+      "passed": true
+    },
+    {
+      "name": "No WebGL error",
+      "passed": true
+    },
+    {
+      "name": "Shader programs runnable",
+      "passed": true
+    }
+  ],
+  "measurements": {
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "bloomOn": {
+      "fpsSamples": [
+        166.02047917189626,
+        165,
+        165,
+        164.98350165081828,
+        165
+      ],
+      "medianFps": 165,
+      "pixels": {
+        "width": 1091,
+        "height": 930,
+        "tinted": 83731,
+        "edgeTinted": 54915,
+        "blackFraction": 0.7645210569370116
+      },
+      "textures": 22
+    },
+    "bloomOff": {
+      "fpsSamples": [
+        166,
+        165,
+        165,
+        165.02634456729885,
+        165
+      ],
+      "medianFps": 165,
+      "pixels": {
+        "width": 1091,
+        "height": 930,
+        "tinted": 0,
+        "edgeTinted": 0,
+        "blackFraction": 0.8277027093620335
+      },
+      "textures": 0
+    },
+    "bloomOnAgain": {
+      "fpsSamples": [
+        166,
+        165.00994035785288,
+        165,
+        165.00994035785288,
+        165
+      ],
+      "medianFps": 165.00994035785288,
+      "pixels": {
+        "width": 1091,
+        "height": 930,
+        "tinted": 83731,
+        "edgeTinted": 54915,
+        "blackFraction": 0.7645210569370116
+      },
+      "textures": 22
+    }
+  }
+}

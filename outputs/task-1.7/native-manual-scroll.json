@@ -1,0 +1,130 @@
+[
+  {
+    "name": "native slow wheel",
+    "state": {
+      "camera": [
+        -0.2406249999999997,
+        -0.07777777777777764,
+        18.333333333333318
+      ],
+      "direction": [
+        0.002406242306079794,
+        0.0007777752908540743,
+        -0.9999968025266688
+      ],
+      "scrollProgress": 0.16666666666666666,
+      "currentSection": "hero",
+      "scrollY": 360,
+      "maxScroll": 2160,
+      "lastPointer": [
+        500,
+        400
+      ],
+      "blackHoleZ": -200,
+      "nativeReduced": false,
+      "reduced": false,
+      "nativeMode": true,
+      "fps": 165,
+      "calls": 7,
+      "commits": 2,
+      "livePointers": 1,
+      "pointerPeak": 1
+    }
+  },
+  {
+    "name": "native fast end",
+    "state": {
+      "camera": [
+        0.5654687499999989,
+        0.4705555555555549,
+        109.99999999999994
+      ],
+      "direction": [
+        -0.005654534496745382,
+        -0.004705428233698287,
+        -0.9999729422263199
+      ],
+      "scrollProgress": 1,
+      "currentSection": "contact",
+      "scrollY": 2160,
+      "maxScroll": 2160,
+      "lastPointer": [
+        969,
+        118
+      ],
+      "blackHoleZ": -200,
+      "nativeReduced": false,
+      "reduced": false,
+      "nativeMode": true,
+      "fps": 165,
+      "calls": 7,
+      "commits": 2,
+      "livePointers": 1,
+      "pointerPeak": 1
+    }
+  },
+  {
+    "name": "native pointer at 100,500",
+    "state": {
+      "camera": [
+        -0.9281249999999988,
+        -0.2722222222222215,
+        109.99999999999994
+      ],
+      "direction": [
+        0.009280815890265989,
+        0.0027220948963593435,
+        -0.9999532272340473
+      ],
+      "scrollProgress": 1,
+      "currentSection": "contact",
+      "scrollY": 2160,
+      "maxScroll": 2160,
+      "lastPointer": [
+        100,
+        500
+      ],
+      "blackHoleZ": -200,
+      "nativeReduced": false,
+      "reduced": false,
+      "nativeMode": true,
+      "fps": 165,
+      "calls": 7,
+      "commits": 2,
+      "livePointers": 1,
+      "pointerPeak": 1
+    }
+  },
+  {
+    "name": "native reverse to start",
+    "state": {
+      "camera": [
+        0.47093749999999945,
+        0.4705555555555549,
+        5.91008597578228e-91
+      ],
+      "direction": [
+        -0.004709270642621626,
+        -0.0047054512828141465,
+        -0.9999778405035982
+      ],
+      "scrollProgress": 0,
+      "currentSection": "hero",
+      "scrollY": 0,
+      "maxScroll": 2160,
+      "lastPointer": [
+        914,
+        118
+      ],
+      "blackHoleZ": -200,
+      "nativeReduced": false,
+      "reduced": false,
+      "nativeMode": true,
+      "fps": 165,
+      "calls": 7,
+      "commits": 2,
+      "livePointers": 1,
+      "pointerPeak": 1
+    }
+  }
+]

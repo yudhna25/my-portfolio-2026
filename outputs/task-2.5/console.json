@@ -1,0 +1,70 @@
+{
+  "app": [
+    {
+      "level": "warn",
+      "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+      "timestamp": "2026-10-05T17:05:21.040Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7c99fbd2"
+    },
+    {
+      "level": "warn",
+      "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+      "timestamp": "2026-10-05T17:07:50.504Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7c99fbd2"
+    },
+    {
+      "level": "warn",
+      "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+      "timestamp": "2026-10-05T17:07:53.365Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7c99fbd2"
+    },
+    {
+      "level": "warn",
+      "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+      "timestamp": "2026-10-05T17:07:55.952Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7c99fbd2"
+    }
+  ],
+  "normal": [
+    {
+      "level": "warn",
+      "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+      "timestamp": "2026-10-05T17:11:11.904Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7c99fbd2"
+    },
+    {
+      "level": "warn",
+      "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+      "timestamp": "2026-10-05T17:11:29.389Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7c99fbd2"
+    },
+    {
+      "level": "warn",
+      "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+      "timestamp": "2026-10-05T17:16:32.221Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7c99fbd2"
+    },
+    {
+      "level": "warn",
+      "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+      "timestamp": "2026-10-05T17:17:10.954Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7c99fbd2"
+    }
+  ],
+  "reduced": [
+    {
+      "level": "warn",
+      "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+      "timestamp": "2026-10-05T17:16:26.936Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7c99fbd2"
+    }
+  ],
+  "responsive": [
+    {
+      "level": "warn",
+      "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+      "timestamp": "2026-10-05T17:11:23.783Z",
+      "url": "http://localhost:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7c99fbd2"
+    }
+  ]
+}

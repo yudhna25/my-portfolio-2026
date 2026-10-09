@@ -1,0 +1,195 @@
+{
+  "mode": "normal",
+  "nativeReduced": false,
+  "mounts": 1,
+  "completions": 1,
+  "samples": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100
+  ],
+  "checks": [
+    {
+      "name": "One DOM mount and one completion in StrictMode",
+      "passed": true
+    },
+    {
+      "name": "At most one intro timeline",
+      "passed": true
+    },
+    {
+      "name": "Completion within 2.5 seconds",
+      "passed": true
+    },
+    {
+      "name": "Counter starts at zero and reaches 100",
+      "passed": true
+    },
+    {
+      "name": "Counter monotonic",
+      "passed": true
+    },
+    {
+      "name": "Status and i18n label",
+      "passed": true
+    },
+    {
+      "name": "Background #050505, mono single SVG ring",
+      "passed": true
+    },
+    {
+      "name": "JetBrains Mono",
+      "passed": true
+    },
+    {
+      "name": "Fade finished before callback",
+      "passed": true
+    },
+    {
+      "name": "Preloader and timeline cleaned up",
+      "passed": true
+    },
+    {
+      "name": "App unlocked and store completed",
+      "passed": true
+    },
+    {
+      "name": "Expected spinner behavior",
+      "passed": true
+    },
+    {
+      "name": "Expected curtain behavior",
+      "passed": true
+    },
+    {
+      "name": "No console error",
+      "passed": true
+    },
+    {
+      "name": "Smoother resumed",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "initial": {
+    "label": "ĐANG KẾT NỐI VỚI VŨ TRỤ...",
+    "role": "status",
+    "background": "rgb(5, 5, 5)",
+    "clip": "inset(0%)",
+    "font": "\"JetBrains Mono\", monospace",
+    "circles": 1,
+    "stops": [
+      "rgb(255, 255, 255)",
+      "rgb(153, 153, 153)",
+      "rgb(51, 51, 51)"
+    ],
+    "duration": 2.32,
+    "locked": false
+  },
+  "elapsedMs": 2322.2999999970198,
+  "finalPercent": 100,
+  "finalOpacity": "0",
+  "finalClip": "inset(0% 0% 100%)",
+  "finalTransform": "matrix(-0.477159, -0.878817, 0.878817, -0.477159, 0, 0)",
+  "rotationSamples": 235,
+  "peakTimelines": 1,
+  "smootherResumed": true
+}

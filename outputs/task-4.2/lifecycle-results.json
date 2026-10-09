@@ -1,0 +1,806 @@
+{
+  "results": [
+    {
+      "label": "resize-767",
+      "pose": {
+        "width": 767,
+        "dpr": 1,
+        "buffer": [
+          767,
+          844
+        ],
+        "quality": "low",
+        "count": 1500,
+        "tree": [
+          {
+            "name": "StarField",
+            "count": 1500
+          },
+          {
+            "name": "PlanetModel",
+            "quality": "low"
+          }
+        ],
+        "nebulaOctaves": [
+          3,
+          3
+        ],
+        "composers": 0,
+        "glError": 0,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "resources": [
+          11,
+          1,
+          7
+        ],
+        "section": "about",
+        "progressError": 0,
+        "anchorErrors": [
+          0.000006660156259385987
+        ],
+        "frameloop": "always",
+        "canvasCount": 1,
+        "camera": [
+          -2.1393076097721186,
+          2.1301728783754252,
+          -168.79565223882616
+        ],
+        "times": [
+          5.4458999999966435,
+          5.4458999999966435,
+          5.4458999999966435
+        ]
+      }
+    },
+    {
+      "label": "resize-768",
+      "pose": {
+        "width": 768,
+        "dpr": 1.5,
+        "buffer": [
+          1152,
+          1266
+        ],
+        "quality": "medium",
+        "count": 12000,
+        "tree": [
+          {
+            "name": "StarField",
+            "count": 12000
+          },
+          {
+            "name": "PlanetModel",
+            "quality": "medium"
+          }
+        ],
+        "nebulaOctaves": [
+          4,
+          4
+        ],
+        "composers": 0,
+        "glError": 0,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "resources": [
+          11,
+          1,
+          7
+        ],
+        "section": "about",
+        "progressError": 0,
+        "anchorErrors": [
+          0.00006777343753583409
+        ],
+        "frameloop": "always",
+        "canvasCount": 1,
+        "camera": [
+          -2.1471521284507893,
+          2.1320284073730607,
+          -168.77393085709923
+        ],
+        "times": [
+          7.263699999995525,
+          7.263699999995525,
+          7.263699999995525
+        ]
+      }
+    },
+    {
+      "label": "resize-1023",
+      "pose": {
+        "width": 1023,
+        "dpr": 1.5,
+        "buffer": [
+          1534,
+          1266
+        ],
+        "quality": "medium",
+        "count": 12000,
+        "tree": [
+          {
+            "name": "StarField",
+            "count": 12000
+          },
+          {
+            "name": "PlanetModel",
+            "quality": "medium"
+          }
+        ],
+        "nebulaOctaves": [
+          4,
+          4
+        ],
+        "composers": 0,
+        "glError": 0,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "resources": [
+          11,
+          1,
+          7
+        ],
+        "section": "about",
+        "progressError": 0,
+        "anchorErrors": [
+          0.00005429687496416591
+        ],
+        "frameloop": "always",
+        "canvasCount": 1,
+        "camera": [
+          -2.150575325933228,
+          2.133065351066347,
+          -168.75957490848478
+        ],
+        "times": [
+          7.860699999997388,
+          7.860699999997388,
+          7.860699999997388
+        ]
+      }
+    },
+    {
+      "label": "resize-1024",
+      "pose": {
+        "width": 1024,
+        "dpr": 1.75,
+        "buffer": [
+          1792,
+          1477
+        ],
+        "quality": "high",
+        "count": 24000,
+        "tree": [
+          {
+            "name": "StarField",
+            "count": 24000
+          },
+          {
+            "name": "PlanetModel",
+            "quality": "high"
+          }
+        ],
+        "nebulaOctaves": [
+          5,
+          5
+        ],
+        "composers": 0,
+        "glError": 0,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "resources": [
+          11,
+          1,
+          7
+        ],
+        "section": "about",
+        "progressError": 0,
+        "anchorErrors": [
+          0.00004895263674598027
+        ],
+        "frameloop": "always",
+        "canvasCount": 1,
+        "camera": [
+          -2.0942809945221215,
+          2.121717356589358,
+          -168.8912301001213
+        ],
+        "times": [
+          9.865699999995522,
+          9.865699999995522,
+          9.865699999995522
+        ]
+      }
+    },
+    {
+      "label": "resize-1440",
+      "pose": {
+        "width": 1440,
+        "dpr": 1.75,
+        "buffer": [
+          2520,
+          1477
+        ],
+        "quality": "high",
+        "count": 24000,
+        "tree": [
+          {
+            "name": "StarField",
+            "count": 24000
+          },
+          {
+            "name": "PlanetModel",
+            "quality": "high"
+          }
+        ],
+        "nebulaOctaves": [
+          5,
+          5
+        ],
+        "composers": 0,
+        "glError": 0,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "resources": [
+          11,
+          1,
+          7
+        ],
+        "section": "about",
+        "progressError": 0,
+        "anchorErrors": [
+          7.91991624283948e-7
+        ],
+        "frameloop": "always",
+        "canvasCount": 1,
+        "camera": [
+          -2.0452700234103456,
+          2.1150002688836276,
+          -168.96794674729705
+        ],
+        "times": [
+          12.957999999994405,
+          12.957999999994405,
+          12.957999999994405
+        ]
+      }
+    },
+    {
+      "label": "resize-390",
+      "pose": {
+        "width": 390,
+        "dpr": 1,
+        "buffer": [
+          390,
+          844
+        ],
+        "quality": "low",
+        "count": 1500,
+        "tree": [
+          {
+            "name": "StarField",
+            "count": 1500
+          },
+          {
+            "name": "PlanetModel",
+            "quality": "low"
+          }
+        ],
+        "nebulaOctaves": [
+          3,
+          3
+        ],
+        "composers": 0,
+        "glError": 0,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "resources": [
+          11,
+          1,
+          7
+        ],
+        "section": "about",
+        "progressError": 0,
+        "anchorErrors": [
+          0.00003698339799029782
+        ],
+        "frameloop": "always",
+        "canvasCount": 1,
+        "camera": [
+          -2.1371610934271694,
+          2.1535555643272586,
+          -168.52865695320912
+        ],
+        "times": [
+          14.870699999993656,
+          14.870699999993656,
+          14.870699999993656
+        ]
+      }
+    },
+    {
+      "label": "resize-834",
+      "pose": {
+        "width": 834,
+        "dpr": 1.5,
+        "buffer": [
+          1251,
+          1266
+        ],
+        "quality": "medium",
+        "count": 12000,
+        "tree": [
+          {
+            "name": "StarField",
+            "count": 12000
+          },
+          {
+            "name": "PlanetModel",
+            "quality": "medium"
+          }
+        ],
+        "nebulaOctaves": [
+          4,
+          4
+        ],
+        "composers": 0,
+        "glError": 0,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "resources": [
+          11,
+          1,
+          7
+        ],
+        "section": "about",
+        "progressError": 0,
+        "anchorErrors": [
+          0.00005901367154592663
+        ],
+        "frameloop": "always",
+        "canvasCount": 1,
+        "camera": [
+          -2.145776407989903,
+          2.131664410513917,
+          -168.77837131142516
+        ],
+        "times": [
+          16.621299999993276,
+          16.621299999993276,
+          16.621299999993276
+        ]
+      }
+    },
+    {
+      "label": "resize-1440",
+      "pose": {
+        "width": 1440,
+        "dpr": 1.75,
+        "buffer": [
+          2520,
+          1477
+        ],
+        "quality": "high",
+        "count": 24000,
+        "tree": [
+          {
+            "name": "StarField",
+            "count": 24000
+          },
+          {
+            "name": "PlanetModel",
+            "quality": "high"
+          }
+        ],
+        "nebulaOctaves": [
+          5,
+          5
+        ],
+        "composers": 0,
+        "glError": 0,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "resources": [
+          11,
+          1,
+          7
+        ],
+        "section": "about",
+        "progressError": 0,
+        "anchorErrors": [
+          0.00004300976593185626
+        ],
+        "frameloop": "always",
+        "canvasCount": 1,
+        "camera": [
+          -2.044313120291935,
+          2.114880756327214,
+          -168.96920659373117
+        ],
+        "times": [
+          18.611899999992893,
+          18.611899999992893,
+          18.611899999992893
+        ]
+      }
+    },
+    {
+      "label": "anchor-fast-scroll-resize",
+      "samples": 255,
+      "maxError": 0.00007152246200803353,
+      "worst": {
+        "selector": "[data-planet-window]",
+        "width": 1440,
+        "rootWidth": 1440,
+        "cameraAspect": 1.7061611374407584,
+        "rect": {
+          "left": 99.328125,
+          "top": 456.1332092285156,
+          "width": 448,
+          "height": 288.0000305175781
+        },
+        "projected": [
+          323.3281250000026,
+          600.1331529648427
+        ],
+        "progress": 0.10237700000000001,
+        "visual": 1230.366786,
+        "contentTop": -1230.3668212890625
+      }
+    },
+    {
+      "label": "tier-geometry-disposal",
+      "cycles": [
+        {
+          "width": 834,
+          "resources": [
+            11,
+            24,
+            8
+          ]
+        },
+        {
+          "width": 390,
+          "resources": [
+            10,
+            2,
+            7
+          ]
+        },
+        {
+          "width": 1440,
+          "resources": [
+            11,
+            24,
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "label": "hidden",
+      "frames": 0,
+      "frameloop": "never",
+      "framesDuringWindow": 0
+    },
+    {
+      "label": "reduced-skills",
+      "pose": {
+        "width": 1440,
+        "dpr": 1.75,
+        "buffer": [
+          2520,
+          1477
+        ],
+        "quality": "high",
+        "count": 24000,
+        "tree": [
+          {
+            "name": "StarField",
+            "count": 24000
+          },
+          {
+            "name": "Orbit",
+            "quality": "high"
+          }
+        ],
+        "nebulaOctaves": [
+          5,
+          5
+        ],
+        "composers": 0,
+        "glError": 0,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "resources": [
+          12,
+          1,
+          7
+        ],
+        "section": "skills",
+        "progressError": 0,
+        "anchorErrors": [
+          1.1368683772161603e-13
+        ],
+        "frameloop": "always",
+        "canvasCount": 1,
+        "camera": [
+          0,
+          2.2,
+          -168
+        ],
+        "times": [
+          30.66269999999375,
+          30.66269999999375,
+          30.66269999999375
+        ]
+      }
+    },
+    {
+      "label": "context-lost-disposal",
+      "canvasCount": 0,
+      "bg": "rgb(5, 5, 5)",
+      "domAlive": true,
+      "tracked": [
+        {
+          "kind": "geometry",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "geometry",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "geometry",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "geometry",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "geometry",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "geometry",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "geometry",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "geometry",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "geometry",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "geometry",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "geometry",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "renderTarget",
+          "disposed": true
+        },
+        {
+          "kind": "material",
+          "disposed": true
+        }
+      ],
+      "before": {
+        "geometries": 11,
+        "textures": 24
+      },
+      "after": {
+        "geometries": 0,
+        "textures": 1
+      }
+    },
+    {
+      "label": "fallback-light-theme",
+      "bg": "rgb(5, 5, 5)"
+    },
+    {
+      "label": "lab-manual-low",
+      "tier": "low",
+      "dpr": 1,
+      "count": 1500
+    },
+    {
+      "label": "lab-manual-medium",
+      "tier": "medium",
+      "dpr": 1.5,
+      "count": 12000
+    },
+    {
+      "label": "lab-manual-high",
+      "tier": "high",
+      "dpr": 1.75,
+      "count": 24000
+    },
+    {
+      "label": "no-webgl2",
+      "canvasCount": 0,
+      "bg": "rgb(5, 5, 5)",
+      "domAlive": true,
+      "loading": false
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.WebGLRenderer: WEBGL_lose_context extension not supported."
+  ],
+  "expectedFallbackErrors": [
+    "THREE.WebGLRenderer: THREE.WebGLRenderer: Error creating WebGL context.",
+    "%o\n\n%s\n\n%s\n Error: THREE.WebGLRenderer: Error creating WebGL context.\n    at new WebGLRenderer (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7c99fbd2:42411:19)\n    at createRenderer (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-I2V4PUVU.js?v=7c99fbd2:1666:10)\n    at run2 (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-I2V4PUVU.js?v=7c99fbd2:10728:96)\n    at Object.configure (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-I2V4PUVU.js?v=7c99fbd2:10736:12)\n    at http://127.0.0.1:5173/node_modules/.vite/deps/chunk-I2V4PUVU.js?v=7c99fbd2:11246:20\n    at Object.react_stack_bottom_frame (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=7c99fbd2:18567:20)\n    at runWithFiberInDEV (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=7c99fbd2:997:72)\n    at commitHookEffectListMount (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=7c99fbd2:9411:163)\n    at commitHookLayoutEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=7c99fbd2:9391:60)\n    at commitLayoutEffectOnFiber (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=7c99fbd2:9904:26) The above error occurred in the <CanvasImpl> component. React will try to recreate this component tree from scratch using the error boundary you provided, SceneBoundary.",
+    "GalaxyScene: Error: THREE.WebGLRenderer: Error creating WebGL context.\n    at new WebGLRenderer (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-ZQRH5FLW.js?v=7c99fbd2:42411:19)\n    at createRenderer (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-I2V4PUVU.js?v=7c99fbd2:1666:10)\n    at run2 (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-I2V4PUVU.js?v=7c99fbd2:10728:96)\n    at Object.configure (http://127.0.0.1:5173/node_modules/.vite/deps/chunk-I2V4PUVU.js?v=7c99fbd2:10736:12)\n    at http://127.0.0.1:5173/node_modules/.vite/deps/chunk-I2V4PUVU.js?v=7c99fbd2:11246:20\n    at Object.react_stack_bottom_frame (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=7c99fbd2:18567:20)\n    at runWithFiberInDEV (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=7c99fbd2:997:72)\n    at commitHookEffectListMount (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=7c99fbd2:9411:163)\n    at commitHookLayoutEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=7c99fbd2:9391:60)\n    at commitLayoutEffectOnFiber (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=7c99fbd2:9904:26)"
+  ]
+}

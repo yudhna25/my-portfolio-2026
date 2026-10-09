@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Reduced motion QA</title></head>
+<body><div id="root"></div>
+<script>
+// Browser media API simulation before the production reduced-motion hook loads.
+const nativeMatchMedia = window.matchMedia.bind(window);
+const simulatedMotion = new EventTarget();
+Object.assign(simulatedMotion, { matches: true, media: '(prefers-reduced-motion: reduce)' });
+window.matchMedia = query => query === simulatedMotion.media ? simulatedMotion : nativeMatchMedia(query);
+</script>
+<script type="module" src="./qa.jsx"></script></body></html>

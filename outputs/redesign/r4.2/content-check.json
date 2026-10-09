@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "checkedAt": "2026-10-08T07:11:13.444Z",
+  "tools": 7,
+  "appliedSkills": 11,
+  "commonSkills": 5,
+  "technicalSkills": 2,
+  "maxBranches": 3,
+  "skillsLeavesPerLocale": 36,
+  "allLocaleLeaves": 195,
+  "mapping": {
+    "figma": [
+      "wireframing",
+      "prototyping",
+      "designThinking"
+    ],
+    "photoshop": [
+      "imageEditing",
+      "compositing"
+    ],
+    "illustrator": [
+      "vectorDesign",
+      "brandingPackaging"
+    ],
+    "after-effects": [
+      "motionGraphics",
+      "vfx"
+    ],
+    "premiere-pro": [
+      "videoEditing"
+    ],
+    "davinci-resolve": [
+      "videoEditing"
+    ],
+    "ai": [
+      "aiAssistedDesign"
+    ]
+  },
+  "localeParity": true,
+  "reactLearning": true,
+  "noGradingOrProficiency": true
+}

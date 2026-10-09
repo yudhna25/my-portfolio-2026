@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="UTF-8"><title>Education — runnable check</title><style>.qa-spacer{height:100vh}</style></head>
+<body>
+<button id="run" class="fixed top-4 right-4 z-50 border border-white bg-black p-3 text-white">Run check</button>
+<pre id="results" class="fixed top-20 right-4 z-50 max-h-52 overflow-auto bg-black p-3 text-xs text-white">Ready</pre>
+<div id="root"></div>
+<script type="module">
+  import '/src/index.css';
+  import '@fontsource-variable/unbounded';
+  let reduced = new URLSearchParams(location.search).has('reduced');
+  const queries = [];
+  const originalMatchMedia = window.matchMedia.bind(window);
+  window.matchMedia = query => {
+    const result = originalMatchMedia(query);
+    if(query.includes('prefers-reduced-motion')) {
+      Object.defineProperty(result,'matches',{get:()=>query.includes('no-preference') ? !reduced : reduced});
+      queries.push(result);
+    }
+    return result;
+  };
+  const React = await import('react');
+  const {createRoot} = await import('react-dom/client');
+  const {flushSync} = await import('react-dom');
+  await import('/src/i18n/config.js');
+  const {default:Education} = await import('/src/components/Education.jsx');
+  const {gsap,ScrollTrigger,ScrollSmoother,DrawSVGPlugin} = await import('/src/hooks/useGSAPSetup.js');
+  const {useSmoothScroll} = await import('/src/hooks/useSmoothScroll.js');
+  const {useLangStore} = await import('/src/stores/useLangStore.js');
+  gsap.ticker.lagSmoothing(0); // Check-only: background Browser timing.
+  function Demo() {
+    const scope=React.useRef(null);
+    useSmoothScroll({scope});
+    return React.createElement('div',{ref:scope},React.createElement('div',{id:'smooth-wrapper'},
+      React.createElement('div',{id:'smooth-content'},React.createElement('div',{className:'qa-spacer'}),
+        React.createElement(Education),React.createElement('div',{className:'qa-spacer'}))));
+  }
+  const root=createRoot(document.getElementById('root'));
+  const mount=()=>flushSync(()=>root.render(React.createElement(React.StrictMode,null,React.createElement(Demo))));
+  mount();
+  const output=document.getElementById('results');
+  const results=[];
+  const assert=(condition,message)=>{
+    results.push({pass:Boolean(condition),message});
+    output.textContent=JSON.stringify(results,null,2);
+    if(!condition) throw new Error(message);
+  };
+  const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+  const nodes=()=>[...document.querySelectorAll('[data-education-node]')];
+  const lines=()=>[...document.querySelectorAll('[data-education-line]')];
+  const move=async y=>{
+    const smoother=ScrollSmoother.get();
+    if(smoother) smoother.scrollTo(y,false); else window.scrollTo(0,y);
+    ScrollTrigger.update();
+    await wait(500);
+  };
+  const aligned=()=>lines().every((line,index)=>{
+    const matrix=line.getScreenCTM();
+    const first=nodes()[index].getBoundingClientRect();
+    const last=nodes()[index+1].getBoundingClientRect();
+    return Math.abs(matrix.e+matrix.a-(first.x+first.width/2))<1 &&
+      Math.abs(matrix.f-(first.y+first.height/2))<1 &&
+      Math.abs(matrix.f+matrix.d*100-(last.y+last.height/2))<1;
+  });
+  document.getElementById('run').onclick=async()=>{
+    try {
+      results.length=0;
+      await document.fonts.ready; ScrollTrigger.refresh();
+      assert(nodes().length===3 && lines().length===2,'3 schools / 2 connected SVG segments');
+      assert(aligned(),'SVG endpoints align with nodes');
+      assert([...document.querySelectorAll('#education h3')].map(e=>e.textContent).join('|')==='Saigon University|Arena Multimedia|Green Academy','Approved institution order');
+      assert(document.querySelectorAll('#education svg[aria-hidden="true"][focusable="false"]').length===2,'Decorative SVG stays out of focus/AT');
+      assert(ScrollTrigger.getAll().filter(t=>t.vars.id?.startsWith('education-')).length===(reduced?3:8),'Owned trigger count');
+      if(!reduced) {
+        for(const progress of [0,.25,.5,.75,1]) {
+          const draw=ScrollTrigger.getById('education-draw-0');
+          await move(draw.start+(draw.end-draw.start)*progress);
+          const position=DrawSVGPlugin.getPosition(lines()[0]);
+          const ratio=(position[1]-position[0])/DrawSVGPlugin.getLength(lines()[0]);
+          assert(Math.abs(ratio-progress)<.06,`DrawSVG progress ${progress}`);
+        }
+      }
+      for(let index=0;index<3;index++) {
+        const trigger=ScrollTrigger.getById(`education-active-${['saigonUniversity','arenaMultimedia','greenAcademy'][index]}`);
+        await move((trigger.start+trigger.end)/2);
+        assert(nodes()[index].classList.contains('is-active') && nodes().filter(n=>n.classList.contains('is-active')).length===1,`Active node ${index+1}`);
+      }
+      useLangStore.getState().setLang('en'); await wait(50);
+      assert(document.getElementById('education-heading').textContent==='Star Map','English heading');
+      assert(document.querySelector('[data-education-content]').textContent.includes("Bachelor's Degree in Information Technology"),'English degree');
+      assert(aligned(),'English geometry remains connected');
+      useLangStore.getState().setLang('vi'); await wait(50);
+      assert(document.querySelector('[data-education-content]').textContent.includes('Cử nhân Công nghệ Thông tin'),'Vietnamese degree');
+      if(!reduced) {
+        reduced=true; queries.forEach(q=>q.dispatchEvent(new Event('change'))); await wait(50);
+        assert(lines().every(l=>!l.style.strokeDasharray),'Live reduced motion restores full SVG');
+        assert([...document.querySelectorAll('[data-education-content]')].every(c=>!c.style.opacity && !c.style.transform),'Reduced motion keeps all text visible');
+        assert(ScrollTrigger.getAll().length===3 && !ScrollSmoother.get(),'Reduced motion keeps only active-node triggers');
+      }
+      const previousNodes=nodes();
+      flushSync(()=>root.render(null));
+      assert(ScrollTrigger.getAll().length===0 && !ScrollSmoother.get(),'Unmount cleans every trigger/smoother');
+      assert(previousNodes.every(n=>!n.classList.contains('is-active')),'Unmount clears active classes');
+      mount(); assert(nodes().length===3,'StrictMode remount');
+      output.dataset.done='true'; output.dataset.passed=String(results.length);
+    } catch(error) {output.dataset.done='failed';console.error(error);}
+  };
+</script>
+</body>
+</html>

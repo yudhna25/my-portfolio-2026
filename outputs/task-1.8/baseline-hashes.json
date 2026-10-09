@@ -1,0 +1,27 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "66B12080764B8B359532E26D0E1606F11223F9EBBE1BA96EAE22CBB94798B299",
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\BlackHole.jsx"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "B9F071CF04F4ABF4DFCD1EE28FB7D57CBEE5A962C6874BD94E72CABF09376E11",
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\StarField.jsx"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "6465AB14DC8428F1AACD4514FA8B903EEC8A0F654A5F23020ADD85310CB4C3BD",
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\Nebula.jsx"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "C32EC68F6D3EE2779B2CD16B5BABF964560CE5296DA3A3619239D2ABB624C738",
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d\\components\\CameraRig.jsx"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "921D1B75102661595AF7176DE57B14AFC45397426E2823E808F0606CCB03E036",
+    "Path": "D:\\Projects\\my-portfolio-2026\\src\\3d-lab.jsx"
+  }
+]

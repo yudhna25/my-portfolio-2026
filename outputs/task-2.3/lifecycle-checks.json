@@ -1,0 +1,78 @@
+{
+  "passed": 6,
+  "total": 6,
+  "results": [
+    {
+      "name": "unmount 1: no owned trigger/tween",
+      "pass": true,
+      "actual": {
+        "scrollY": 0,
+        "visualScroll": 0,
+        "navY": -999,
+        "currentSection": "hero",
+        "triggers": 0,
+        "reduced": false
+      }
+    },
+    {
+      "name": "remount 1: no duplicate trigger",
+      "pass": true,
+      "actual": {
+        "scrollY": 0,
+        "visualScroll": 0,
+        "navY": 0,
+        "currentSection": "hero",
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "unmount 2: no owned trigger/tween",
+      "pass": true,
+      "actual": {
+        "scrollY": 0,
+        "visualScroll": 0,
+        "navY": -999,
+        "currentSection": "hero",
+        "triggers": 0,
+        "reduced": false
+      }
+    },
+    {
+      "name": "remount 2: no duplicate trigger",
+      "pass": true,
+      "actual": {
+        "scrollY": 0,
+        "visualScroll": 0,
+        "navY": 0,
+        "currentSection": "hero",
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "unmount 3: no owned trigger/tween",
+      "pass": true,
+      "actual": {
+        "scrollY": 0,
+        "visualScroll": 0,
+        "navY": -999,
+        "currentSection": "hero",
+        "triggers": 0,
+        "reduced": false
+      }
+    },
+    {
+      "name": "remount 3: no duplicate trigger",
+      "pass": true,
+      "actual": {
+        "scrollY": 0,
+        "visualScroll": 0,
+        "navY": 0,
+        "currentSection": "hero",
+        "triggers": 1,
+        "reduced": false
+      }
+    }
+  ]
+}

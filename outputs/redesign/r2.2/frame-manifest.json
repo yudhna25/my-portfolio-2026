@@ -1,0 +1,141 @@
+{
+  "frames": [
+    {
+      "path": "screenshots/desktop-forward-0.25.png",
+      "sha256": "13457ebe45c4be651e35dff1ffd0bc21af806fa7a6254f1ad1f21ec23ee15d86",
+      "bytes": 83578,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    },
+    {
+      "path": "screenshots/desktop-forward-0.5.png",
+      "sha256": "2b268b517759594de54f662ef2bf903882763489f0d7be03e58a708579cf305e",
+      "bytes": 5848,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    },
+    {
+      "path": "screenshots/desktop-forward-0.75.png",
+      "sha256": "58ac55f378e4e3ed5b504439c69090af8f0281f979fff864e1be333c8ad26e2d",
+      "bytes": 427073,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    },
+    {
+      "path": "screenshots/desktop-forward-0.png",
+      "sha256": "7b1abeefd8842d01ce57225087ada410bda1b1a7eb5959e8bf967c14d73cb622",
+      "bytes": 51392,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    },
+    {
+      "path": "screenshots/desktop-forward-1.png",
+      "sha256": "103687af3e4aa646571645ab4eee749f62c228b4b269ff0af5a85100214a79b8",
+      "bytes": 180129,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    },
+    {
+      "path": "screenshots/desktop-reverse-0.25.png",
+      "sha256": "13457ebe45c4be651e35dff1ffd0bc21af806fa7a6254f1ad1f21ec23ee15d86",
+      "bytes": 83578,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    },
+    {
+      "path": "screenshots/desktop-reverse-0.5.png",
+      "sha256": "2b268b517759594de54f662ef2bf903882763489f0d7be03e58a708579cf305e",
+      "bytes": 5848,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    },
+    {
+      "path": "screenshots/desktop-reverse-0.75.png",
+      "sha256": "58ac55f378e4e3ed5b504439c69090af8f0281f979fff864e1be333c8ad26e2d",
+      "bytes": 427073,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    },
+    {
+      "path": "screenshots/desktop-reverse-0.png",
+      "sha256": "7b1abeefd8842d01ce57225087ada410bda1b1a7eb5959e8bf967c14d73cb622",
+      "bytes": 51392,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    },
+    {
+      "path": "screenshots/desktop-reverse-1.png",
+      "sha256": "103687af3e4aa646571645ab4eee749f62c228b4b269ff0af5a85100214a79b8",
+      "bytes": 180129,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    },
+    {
+      "path": "screenshots/mobile-forward-0.25.png",
+      "sha256": "bcd6e38a97d0a3e800ae0a8256251f6ea9cd12904b66b1b481ffdf6c984e266c",
+      "bytes": 17003,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    },
+    {
+      "path": "screenshots/mobile-forward-0.5.png",
+      "sha256": "b3e5a8ee09aabb518edfe9a512dc3830f291b55c6673b494f7fa01582fc34963",
+      "bytes": 2737,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    },
+    {
+      "path": "screenshots/mobile-forward-0.75.png",
+      "sha256": "f40c3b653c1cf115d1f4adccc53c095e5c4a06ffd4cb2c119ead4e69eb9c8fb0",
+      "bytes": 66929,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    },
+    {
+      "path": "screenshots/mobile-forward-0.png",
+      "sha256": "78ba406d402865c2a658427eb94c21021bbe2ab82dffc942c2288d89a088ecbb",
+      "bytes": 13586,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    },
+    {
+      "path": "screenshots/mobile-forward-1.png",
+      "sha256": "32479cbf0e61eedb57a29fd7171dc60e73c804d71fd6b3d38214ee4a0685185a",
+      "bytes": 25575,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    },
+    {
+      "path": "screenshots/mobile-reverse-0.25.png",
+      "sha256": "bcd6e38a97d0a3e800ae0a8256251f6ea9cd12904b66b1b481ffdf6c984e266c",
+      "bytes": 17003,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    },
+    {
+      "path": "screenshots/mobile-reverse-0.5.png",
+      "sha256": "b3e5a8ee09aabb518edfe9a512dc3830f291b55c6673b494f7fa01582fc34963",
+      "bytes": 2737,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    },
+    {
+      "path": "screenshots/mobile-reverse-0.75.png",
+      "sha256": "f40c3b653c1cf115d1f4adccc53c095e5c4a06ffd4cb2c119ead4e69eb9c8fb0",
+      "bytes": 66929,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    },
+    {
+      "path": "screenshots/mobile-reverse-0.png",
+      "sha256": "78ba406d402865c2a658427eb94c21021bbe2ab82dffc942c2288d89a088ecbb",
+      "bytes": 13586,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    },
+    {
+      "path": "screenshots/mobile-reverse-1.png",
+      "sha256": "32479cbf0e61eedb57a29fd7171dc60e73c804d71fd6b3d38214ee4a0685185a",
+      "bytes": 25575,
+      "kind": "real Edge screenshot; test HUD/controls hidden, no pixels edited"
+    }
+  ],
+  "source": "verify-portal.mjs",
+  "poses": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "desktop": [
+    1440,
+    900
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "pixelComparison": "pixel-results.json"
+}

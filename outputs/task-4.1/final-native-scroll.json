@@ -1,0 +1,21 @@
+{
+  "bodyOverflow": "visible",
+  "client": 380,
+  "marquees": [
+    {
+      "top": -6085.39404296875,
+      "width": 380
+    },
+    {
+      "top": 750.1109008789062,
+      "width": 380
+    },
+    {
+      "top": 6742.7060546875,
+      "width": 380
+    }
+  ],
+  "rootOverflow": "visible",
+  "scroll": 380,
+  "width": 390
+}

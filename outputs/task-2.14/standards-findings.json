@@ -1,0 +1,106 @@
+{
+  "scope": "Initial working-tree Standards audit for task 2.14; source read-only",
+  "literalFindings": [
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 68,
+      "text": "Let's",
+      "proposedKey": "footer.headingFirst",
+      "mounted": "App"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 69,
+      "text": "Connect",
+      "proposedKey": "footer.headingSecond",
+      "mounted": "App"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 85,
+      "text": "Facebook",
+      "proposedKey": "contact.facebookLabel",
+      "mounted": "App"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 88,
+      "text": "LinkedIn",
+      "proposedKey": "contact.linkedinLabel",
+      "mounted": "App"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 91,
+      "text": "Website",
+      "proposedKey": "footer.websiteLabel",
+      "mounted": "App"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 98,
+      "text": "© 2026 Tran Vu Anh Duy",
+      "proposedKey": "footer.legacyCopyright or existing footer.copyright",
+      "mounted": "App"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 99,
+      "text": "Graphic / Multimedia / UXUI",
+      "proposedKey": "footer.disciplines",
+      "mounted": "App"
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 100,
+      "text": "Built with GSAP 3.15",
+      "proposedKey": "footer.builtWith",
+      "mounted": "App"
+    }
+  ],
+  "languageFinding": {
+    "file": "src/i18n/config.js",
+    "line": 19,
+    "problem": "No document.documentElement.lang synchronization; index.html starts vi while English UI inherits vi in Hero/About/Work/Education/Nav/Menu.",
+    "suggestion": "Sync at central i18n languageChanged event, initialize once and clean HMR."
+  },
+  "metadataOutsideSrc": [
+    {
+      "file": "index.html",
+      "line": 11,
+      "key": "seo.description"
+    },
+    {
+      "file": "index.html",
+      "line": 12,
+      "key": "seo.title"
+    }
+  ],
+  "minorExistingStandards": [
+    {
+      "file": "src/components/Marquee.jsx",
+      "line": 6,
+      "problem": "Only default export for non-section component; not an i18n blocker."
+    },
+    {
+      "file": "src/components/Footer.jsx",
+      "line": 11,
+      "problem": "Only default export; animation does not gate reduced-motion and requires locale-aware SplitText cleanup when localized."
+    }
+  ],
+  "existingUnusedStandards": [
+    "src/components/Aurora.jsx default export",
+    "src/components/EvilEye.jsx default export",
+    "src/components/SplashCursor.jsx default export"
+  ],
+  "exclusions": [
+    "data.js literal legacy content per user",
+    "technical filter category strings in Work are comparison values, UI uses t()",
+    "OrbitalSkills scene names and data/skills.js IDs/key paths are technical",
+    "Marquee separators, whitespace, arrows and padded indexes are decoration/numbers",
+    "shader source/CSS/GSAP eases/events/selectors/IDs are not copy",
+    "SceneBoundary console diagnostic is not user-facing copy"
+  ],
+  "unusedOrLabCopy": "No literal displayed copy found in 3d-lab.jsx/LabTelemetry or unused Aurora/EvilEye/SplashCursor.",
+  "smellBaseline": "No actionable new heuristic smell requiring abstraction identified."
+}

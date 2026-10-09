@@ -1,0 +1,8 @@
+[
+  {
+    "level": "error",
+    "message": "TypeError: Cannot read properties of null (reading 'dispatchEvent')\n    at point (http://127.0.0.1:5173/outputs/task-2.4/cursor-qa.js?t=1791163736656:103:10)\n    at document.getElementById.onclick (http://127.0.0.1:5173/outputs/task-2.4/cursor-qa.js?t=1791163736656:227:20)",
+    "timestamp": "2026-10-05T01:30:28.037Z",
+    "url": "http://127.0.0.1:5173/outputs/task-2.4/cursor-qa.js?t=1791163736656"
+  }
+]

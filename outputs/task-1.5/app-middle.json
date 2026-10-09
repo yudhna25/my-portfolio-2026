@@ -1,0 +1,24 @@
+{
+  "scrollY": 1440,
+  "maxScroll": 3534,
+  "scrollProgress": 0.4074702886247878,
+  "currentSection": "about",
+  "quality": "high",
+  "frames": 0,
+  "fpsSamples": [
+    165,
+    165,
+    164,
+    164,
+    165,
+    165,
+    164,
+    162,
+    165,
+    165
+  ],
+  "hidden": false,
+  "canvasCount": 1,
+  "smoother": true,
+  "paused": false
+}

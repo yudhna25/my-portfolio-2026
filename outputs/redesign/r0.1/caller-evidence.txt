@@ -1,0 +1,116 @@
+index.html:61:    <script src="/theme-init.js"></script>
+vite.config.js:3:import { VitePWA } from "vite-plugin-pwa";
+vite.config.js:11:    VitePWA({
+src\3d-lab.jsx:8:import { useLabScroll } from '@/3d/hooks/useLabScroll';
+src\3d-lab.jsx:28:  useLabScroll();
+src\App.jsx:4:import { useScrollProgress } from '@/3d/hooks/useScrollProgress';
+src\App.jsx:19:import { ThemeToggle } from '@/components/ui/ThemeToggle';
+src\App.jsx:20:import { CockpitRails } from '@/components/layout/CockpitRails';
+src\App.jsx:23:const OrbitalSkills = lazy(() => import('@/3d/components/OrbitalSkills').then((module) => ({ default: module.OrbitalSkills })));
+src\App.jsx:24:const Planet = lazy(() => import('@/3d/components/Planet').then((module) => ({ default: module.Planet })));
+src\App.jsx:29:  const aboutPlanet = useRef(null);
+src\App.jsx:35:  useScrollProgress({ scope: root });
+src\App.jsx:66:      <ThemeToggle />
+src\App.jsx:67:      <CockpitRails />
+src\App.jsx:72:            <Planet anchor={aboutPlanet} quality={quality} />
+src\App.jsx:73:            <OrbitalSkills anchor={skillsOrbit} quality={quality} />
+src\App.jsx:81:          <About planetAnchor={aboutPlanet} />
+src\i18n\locales\vi.json:179:    "telemetryFreq": "TẦN SỐ: 1420.405 MHz // ĐƯỜNG HYDROGEN (HI)",
+src\i18n\locales\vi.json:180:    "radioTerminal": "BỘ THU PHÁT KHÔNG GIAN SÂU",
+src\main.jsx:3:import { registerSW } from 'virtual:pwa-register'
+src\main.jsx:8:registerSW({ immediate: true })
+src\3d\utils\shootingStars.js:4:export function triggerShootingStar(options = {}) {
+src\3d\utils\shootingStars.js:10:export function createShootingStars(random = Math.random) {
+src\3d\utils\shootingStars.js:17:export function triggerReactiveMeteor(pool, { x, y, dx, dy, speed = 1.0 } = {}, random = Math.random) {
+src\3d\utils\shootingStars.js:36:export function advanceShootingStars(pool, delta, aspect, positions, alphas, random = Math.random) {
+src\3d\utils\buildStarGeometry.js:3:// Called only when a StarField is mounted or its count changes, never per frame.
+src\3d\utils\buildStarGeometry.js:5:// Uniform directions on a distant shell. StarField moves its center with the
+src\3d\hooks\useSectionAnchor.js:7:export function useSectionAnchor(anchor, radius, frozen) {
+src\3d\hooks\useScrollProgress.js:4:export function useScrollProgress({ scope } = {}) {
+src\stores\useThemeStore.js:3:export const useThemeStore = create((set, get) => ({
+src\3d\hooks\useLabScroll.js:4:export function useLabScroll() {
+src\stores\useScrollStore.js:6:  contactProgress: 0,
+src\stores\useScrollStore.js:7:  setContactProgress: (progress) => {
+src\stores\useScrollStore.js:10:      set((state) => state.contactProgress === value ? state : { contactProgress: value });
+src\stores\useScrollStore.js:13:  // The scroll bridge supplies progress; CameraRig consumes it without measuring again.
+src\3d\GalaxyScene.jsx:8:import { StarField } from '@/3d/components/StarField';
+src\3d\GalaxyScene.jsx:9:import { ShootingStars } from '@/3d/components/ShootingStars';
+src\3d\GalaxyScene.jsx:10:import { Constellations } from '@/3d/components/Constellations';
+src\3d\GalaxyScene.jsx:11:import { StardustWake } from '@/3d/components/StardustWake';
+src\3d\GalaxyScene.jsx:13:import { BlackHoleSystem } from '@/3d/components/BlackHoleSystem';
+src\3d\GalaxyScene.jsx:14:import { CameraRig } from '@/3d/components/CameraRig';
+src\3d\GalaxyScene.jsx:59:              <CameraRig frozen={frozen} />
+src\3d\GalaxyScene.jsx:60:              <StarField count={count ?? QUALITY[quality]} frozen={frozen} />
+src\3d\GalaxyScene.jsx:63:              <Constellations frozen={frozen} />
+src\3d\GalaxyScene.jsx:64:              <BlackHoleSystem frozen={frozen} quality={quality} enableBloom={enableBloom} />
+src\3d\GalaxyScene.jsx:65:              {!hidden && !frozen && <ShootingStars frozen={frozen} />}
+src\3d\GalaxyScene.jsx:66:              {!hidden && !frozen && <StardustWake frozen={frozen} />}
+src\i18n\locales\en.json:179:    "telemetryFreq": "FREQUENCY: 1420.405 MHz // HYDROGEN LINE (HI)",
+src\i18n\locales\en.json:180:    "radioTerminal": "DEEP SPACE TRANSCEIVER",
+src\3d\components\BlackHole.jsx:49:    const contact = frozen ? 0 : state.contactProgress;
+src\components\Work.jsx:9:import { triggerShootingStar } from '@/3d/utils/shootingStars';
+src\components\Work.jsx:10:import { TargetLockReticle } from '@/components/ui/TargetLockReticle';
+src\components\Work.jsx:76:    triggerShootingStar();
+src\components\Work.jsx:160:                    {visible && <TargetLockReticle projectId={project.id} />}
+src\components\sections\Contact.jsx:7:import { triggerShootingStar } from '@/3d/utils/shootingStars';
+src\components\sections\Contact.jsx:19:    const { setContactProgress } = useScrollStore.getState();
+src\components\sections\Contact.jsx:20:    setContactProgress(0);
+src\components\sections\Contact.jsx:30:        onUpdate: () => setContactProgress(phase.progress),
+src\components\sections\Contact.jsx:70:    return () => setContactProgress(0);
+src\components\sections\Contact.jsx:74:    triggerShootingStar();
+src\components\sections\Contact.jsx:121:              <span>{t('contact.telemetryFreq')}</span>
+src\components\sections\Contact.jsx:128:            data-transmission-terminal
+src\components\sections\Contact.jsx:136:                <span className="text-(--text-primary)">{t('contact.radioTerminal')}</span>
+src\components\sections\Contact.jsx:207:              triggerShootingStar();
+src\components\layout\CockpitRails.jsx:6:import { useThemeStore } from '@/stores/useThemeStore';
+src\components\layout\CockpitRails.jsx:10:import { KnurledSwitch } from '@/components/ui/KnurledSwitch';
+src\components\layout\CockpitRails.jsx:62:export function CockpitRails() {
+src\components\layout\CockpitRails.jsx:68:  const theme = useThemeStore((state) => state.theme);
+src\components\layout\CockpitRails.jsx:69:  const toggleTheme = useThemeStore((state) => state.toggleTheme);
+src\components\layout\CockpitRails.jsx:298:          <KnurledSwitch
+src\components\layout\CockpitRails.jsx:453:          <KnurledSwitch
+src\components\layout\CockpitRails.jsx:461:          <KnurledSwitch
+src\components\layout\CockpitRails.jsx:475:export default CockpitRails;
+src\3d\components\CameraRig.jsx:13:export function CameraRig({ frozen = false }) {
+src\3d\components\CameraRig.jsx:52:    const p = state.scrollProgress + (1 - state.scrollProgress) * state.contactProgress;
+src\3d\components\CameraRig.jsx:58:    activeCamera.position.z += (target.z - 2 * state.contactProgress - activeCamera.position.z) * zEase;
+src\3d\components\BlackHoleBloomMask.jsx:16:export function BlackHoleBloomMask({ texture }) {
+src\3d\components\BlackHoleBloomMask.jsx:17:  const effect = useMemo(() => new Effect('BlackHoleBloomMask', MASK_FRAG, {
+src\components\layout\Nav.jsx:9:import { MissionProgressOrbit } from '@/components/ui/MissionProgressOrbit';
+src\components\layout\Nav.jsx:150:      <MissionProgressOrbit />
+src\3d\components\BlackHoleSystem.jsx:6:import { BlackHoleBloomMask } from '@/3d/components/BlackHoleBloomMask';
+src\3d\components\BlackHoleSystem.jsx:9:export function BlackHoleSystem({ frozen = false, quality = 'high', enableBloom = true }) {
+src\3d\components\BlackHoleSystem.jsx:32:        <BlackHoleBloomMask texture={target.texture} />
+src\3d\components\OrbitalSkills.jsx:6:import { useSectionAnchor } from '@/3d/hooks/useSectionAnchor';
+src\3d\components\OrbitalSkills.jsx:30:  const root = useSectionAnchor(anchor, 2.7, frozen);
+src\3d\components\OrbitalSkills.jsx:69:export function OrbitalSkills({ anchor, quality = 'high' }) {
+src\components\ui\MissionProgressOrbit.jsx:8:export function MissionProgressOrbit() {
+src\3d\components\Constellations.jsx:187:      // 3: Sagittarius (Contact: 0.65 -> 1.0 + contactProgress boost)
+src\3d\components\Constellations.jsx:261:export function Constellations({ frozen = false }) {
+src\3d\components\Constellations.jsx:308:    const contactP = frozen ? 0 : state.contactProgress;
+src\3d\components\Constellations.jsx:348:export default Constellations;
+src\components\ui\KnurledSwitch.jsx:8: * KnurledSwitch: Precision mechanical dial switch with 45-degree tactile click.
+src\components\ui\KnurledSwitch.jsx:22:export function KnurledSwitch({
+src\components\ui\KnurledSwitch.jsx:164:export default KnurledSwitch;
+src\components\ui\TargetLockReticle.jsx:15:export function TargetLockReticle({ projectId }) {
+src\3d\components\Planet.jsx:4:import { useSectionAnchor } from '@/3d/hooks/useSectionAnchor';
+src\3d\components\Planet.jsx:6:function PlanetModel({ anchor, frozen, quality }) {
+src\3d\components\Planet.jsx:7:  const root = useSectionAnchor(anchor, 1.8, frozen);
+src\3d\components\Planet.jsx:31:export function Planet({ anchor, quality = 'high' }) {
+src\3d\components\Planet.jsx:35:  return active ? <PlanetModel anchor={anchor} frozen={frozen} quality={quality} /> : null;
+src\components\ui\ThemeToggle.jsx:3:import { useThemeStore } from '@/stores/useThemeStore';
+src\components\ui\ThemeToggle.jsx:6:export function ThemeToggle() {
+src\components\ui\ThemeToggle.jsx:7:  const theme = useThemeStore((state) => state.theme);
+src\components\ui\ThemeToggle.jsx:8:  const toggleTheme = useThemeStore((state) => state.toggleTheme);
+src\3d\components\ShootingStars.jsx:5:  advanceShootingStars,
+src\3d\components\ShootingStars.jsx:6:  createShootingStars,
+src\3d\components\ShootingStars.jsx:7:  triggerReactiveMeteor,
+src\3d\components\ShootingStars.jsx:33:export function ShootingStars({ frozen = false }) {
+src\3d\components\ShootingStars.jsx:35:  const pool = useMemo(() => createShootingStars(), []);
+src\3d\components\ShootingStars.jsx:57:      triggerReactiveMeteor(pool, e.detail);
+src\3d\components\ShootingStars.jsx:74:    advanceShootingStars(pool, delta, size.width / size.height, position.array, aAlpha.array);
+src\3d\components\ShootingStars.jsx:93:export default ShootingStars;
+src\3d\components\StardustWake.jsx:50:export function StardustWake({ frozen = false }) {
+src\3d\components\StardustWake.jsx:207:export default StardustWake;
+src\3d\components\StarField.jsx:42:export function StarField({ count = QUALITY.high, frozen = false }) {
+

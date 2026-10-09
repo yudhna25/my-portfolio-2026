@@ -1,0 +1,115 @@
+{
+  "title": "3D Lab · Stellar Odyssey",
+  "back": "← Trở về portfolio",
+  "scene": "Hố đen mono với ánh sáng bị bẻ cong, camera tiến sát đĩa bồi tụ",
+  "fps": "FPS",
+  "fpsValue": "{{value}} FPS",
+  "waiting": "—",
+  "scroll": "Cuộn trang",
+  "controls": "Điều khiển scene",
+  "quality": {
+    "high": "Cao — {{count}}k sao",
+    "medium": "Trung bình — {{count}}k",
+    "low": "Thấp — {{count}}k"
+  },
+  "bloomOff": "Tắt bloom",
+  "bloomOn": "Bật bloom",
+  "contentOn": "Hiện nội dung",
+  "contentOff": "Ẩn nội dung",
+  "frozen": "Chuyển động tự động đang giảm theo tùy chọn hệ thống.",
+  "running": "Cuộn trang để lượn qua trường sao và bay sát mặt đĩa bồi tụ.",
+  "start": {
+    "code": "T-0 · Khởi hành",
+    "line1": "STELLAR",
+    "line2": "ODYSSEY",
+    "description": "Camera khởi đầu gần hố đen, giữa trường sao {{count}} điểm. Cuộn xuống để quan sát ánh sáng bị bẻ cong từ nhiều góc nhìn."
+  },
+  "travel": {
+    "code": "T-1 · Du hành",
+    "line1": "BAY XUYÊN",
+    "line2": "TRƯỜNG SAO",
+    "description": "Camera lượn trái–phải–trái–phải–trái. Sao lớn lên rất nhẹ khi tiến tới, các dải khí nóng xoay nhanh hơn ở phía trong."
+  },
+  "end": {
+    "code": "T-2 · Điểm kỳ dị",
+    "line1": "HỐ ĐEN",
+    "line2": "",
+    "description": "Ánh sáng phía trước đi ngang bóng hố đen, phía sau bị uốn thành hai cung. Camera dừng ngay trên mặt đĩa phát sáng, với hố đen bên phải."
+  },
+  "story": {
+    "enable": "Story lab",
+    "legacy": "Lab hiện tại",
+    "language": "VI / EN",
+    "prototype": "R2.4 · Prototype finale / handoff",
+    "portfolioPrefix": "PORTFOLI",
+    "portalGlyph": "O",
+    "chapter": "Chương",
+    "progress": "Tiến độ",
+    "poses": "Năm mốc pose",
+    "percent": "{{value}}%",
+    "hold": "Dừng pose",
+    "resume": "Tiếp tục cuộn",
+    "manual": "Dừng",
+    "scroll": "Cuộn",
+    "state": "{{chapter}} · {{value}}% · {{mode}}",
+    "camera": "Camera: {{x}}, {{y}}, {{z}}",
+    "running": "Scrub Portal / Works / Finale. Seed và pha Works giữ nguyên khi dừng hoặc đảo chiều. Chưa tích hợp typography production.",
+    "end": "Điểm nghỉ Contact. Seed {{seed}}, pha mặc định {{phase}} nếu chưa qua Works. Khoảng này giữ đủ hành trình cuộn cho chương cuối.",
+    "chapters": {
+      "hero": "Hero",
+      "portal": "Portal / Ejection",
+      "about": "About",
+      "skills": "Skills",
+      "education": "Education",
+      "experience": "Experience",
+      "departure": "Rời hố đen",
+      "works": "Works",
+      "finale": "Finale",
+      "contact": "Contact"
+    },
+    "notes": {
+      "hero": "O cuối là anchor DOM thật cho R2.2. Scene hiện tại chỉ dùng để kiểm camera, chưa phải Hero redesign.",
+      "portal": "1,75 viewport: tiến về O → lõi mở / khoảng tối → đẩy ra. Một ảnh HDR chung; observer luôn ngoài chân trời.",
+      "about": "Camera nghỉ, hố đen lệch phải để chừa vùng đọc trái.",
+      "skills": "Đổi góc trong 25% đầu rồi giữ pose đọc. Chưa có logo hay kết nối kỹ năng mới.",
+      "education": "1,75 viewport; đổi góc trong 25% đầu rồi giữ pose cho bản đồ sao. Chưa tích hợp bản đồ.",
+      "experience": "Giữ hố đen trong nền khi đọc kinh nghiệm. Trang chính dùng sao băng theo mốc DOM.",
+      "departure": "Pose camera nối Experience với Works; meteor theo DOM được tích hợp trên trang chính.",
+      "works": "Ba hình sao R0.2 cùng hiện: Centaurus / Gemini / Cygnus. Quỹ đạo chậm, hướng đọc giữ nguyên; điều khiển chọn đứng yên.",
+      "finale": "2,25 viewport: rút nhãn → co quỹ đạo / vệt cong → nén 10% → va chạm / tinh vân → khí về tâm / hố đen. Mọi lớp suy từ cùng progress; có thể dừng hoặc đảo tại bất kỳ mốc nào.",
+      "contact": "Pose độc lập: có thể jump thẳng tới đây mà không qua Works. Camera nghỉ với vùng đọc trái."
+    },
+    "backShort": "← Portfolio",
+    "year": "2026",
+    "works": {
+      "help": "Di chuột / Tab / chạm để dừng cả hệ. Chạm lại, nền hoặc Esc để bỏ chọn. Chưa có preview / route.",
+      "edura": "EDURA LMS",
+      "eduraFigure": "BÁN NHÂN MÃ",
+      "veris": "VERIS APP",
+      "verisFigure": "SONG TỬ",
+      "vie": "VIE PERFUME",
+      "vieFigure": "THIÊN NGA",
+      "state": "{{mode}} · pha {{phase}} · gốc {{origin}} · tốc độ {{velocity}} · chốt {{captures}}",
+      "latched": "Đã chốt",
+      "idle": "Quỹ đạo",
+      "controls": "Chọn chòm sao dự án"
+    }
+  },
+  "symbols": {
+    "controls": "Chọn logo hoặc chòm sao mẫu",
+    "help": "R4.1 · Hover / Tab / chạm để chọn. Chạm lại, nền hoặc Esc để trả sao về gốc. Chưa tích hợp layout Skills/Education.",
+    "targets": {
+      "saigonUniversity": "Đại học Sài Gòn · Circinus",
+      "after-effects": "After Effects",
+      "premiere-pro": "Premiere Pro",
+      "illustrator": "Illustrator",
+      "greenAcademy": "Green Academy · Telescopium",
+      "arenaMultimedia": "Arena Multimedia · Pictor",
+      "davinci-resolve": "DaVinci Resolve",
+      "figma": "Figma",
+      "photoshop": "Photoshop",
+      "ai": "AI · ChatGPT / Claude / Antigravity"
+    },
+    "reset": "Trả về gốc"
+  }
+}

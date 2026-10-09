@@ -1,0 +1,62 @@
+[
+  {
+    "pass": true,
+    "message": "3 schools / 2 connected SVG segments"
+  },
+  {
+    "pass": true,
+    "message": "SVG endpoints align with nodes"
+  },
+  {
+    "pass": true,
+    "message": "Approved institution order"
+  },
+  {
+    "pass": true,
+    "message": "Decorative SVG stays out of focus/AT"
+  },
+  {
+    "pass": true,
+    "message": "Owned trigger count"
+  },
+  {
+    "pass": true,
+    "message": "Active node 1"
+  },
+  {
+    "pass": true,
+    "message": "Active node 2"
+  },
+  {
+    "pass": true,
+    "message": "Active node 3"
+  },
+  {
+    "pass": true,
+    "message": "English heading"
+  },
+  {
+    "pass": true,
+    "message": "English degree"
+  },
+  {
+    "pass": true,
+    "message": "English geometry remains connected"
+  },
+  {
+    "pass": true,
+    "message": "Vietnamese degree"
+  },
+  {
+    "pass": true,
+    "message": "Unmount cleans every trigger/smoother"
+  },
+  {
+    "pass": true,
+    "message": "Unmount clears active classes"
+  },
+  {
+    "pass": true,
+    "message": "StrictMode remount"
+  }
+]

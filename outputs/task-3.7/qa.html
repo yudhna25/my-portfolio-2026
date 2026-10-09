@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.svg" />
+  <link rel="stylesheet" href="/src/index.css" />
+  <title>Task 3.7 — Typography checks</title>
+  <style>
+    #qa { position: fixed; z-index: 200; bottom: 8px; right: 8px; max-width: 370px; background: #111; color: #fafafa; border: 1px solid #555; padding: 8px; font: 11px monospace; }
+    #qa button { border: 1px solid #555; padding: 4px; margin: 2px; }
+    #qa pre { max-height: 80px; overflow: auto; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <aside id="qa">
+    <button id="first">Sweep 1</button><button id="second">Sweep 2</button>
+    <button id="languages">Vi / En lifecycle</button><button id="motion">Motion lifecycle</button>
+    <button id="layout">Capture layout</button><button id="menu-check">Menu capture</button>
+    <button data-go="about">About</button><button data-go="playground">Playground</button><button data-go="transmission">Contact</button>
+    <pre id="status">Loading…</pre>
+    <details><summary>Evidence</summary><pre id="results">{}</pre></details>
+  </aside>
+  <script type="module" src="./qa.jsx"></script>
+</body>
+</html>

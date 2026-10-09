@@ -1,0 +1,52 @@
+{
+  "status": "pass",
+  "catalog": {
+    "id": "I/239/hip_main",
+    "frame": "ICRS",
+    "positionEpoch": "J1991.25",
+    "magnitudeBand": "Johnson V",
+    "coordinatesUnit": "degree",
+    "properMotionApplied": false,
+    "note": "RAICRS/DEICRS are J1991.25 positions. They are not relabelled as J2000 or current-date positions."
+  },
+  "convention": {
+    "id": "stellarium-modern",
+    "name": "Stellarium Modern",
+    "commit": "daace2add6a1bf886e8ee1934f51e9c69f818d18",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Star-line figures adapted from Stellarium team, Modern sky culture, CC BY-SA 4.0. Catalog positions from ESA 1997, Hipparcos Catalogue ESA SP-1200, CDS/VizieR I/239/hip_main.",
+    "iauNote": "IAU defines constellation boundaries and names, but no unique official stick figure. Selected edges are the Stellarium Modern convention, not an IAU-prescribed shape."
+  },
+  "records": [
+    {
+      "id": "saigonUniversity",
+      "constellation": "Circinus",
+      "members": 3,
+      "context": 11,
+      "edges": 2,
+      "sourcePositionsExactFloat32": true,
+      "contextLinked": false,
+      "resetExact": true
+    },
+    {
+      "id": "greenAcademy",
+      "constellation": "Telescopium",
+      "members": 2,
+      "context": 6,
+      "edges": 1,
+      "sourcePositionsExactFloat32": true,
+      "contextLinked": false,
+      "resetExact": true
+    },
+    {
+      "id": "arenaMultimedia",
+      "constellation": "Pictor",
+      "members": 3,
+      "context": 12,
+      "edges": 2,
+      "sourcePositionsExactFloat32": true,
+      "contextLinked": false,
+      "resetExact": true
+    }
+  ]
+}

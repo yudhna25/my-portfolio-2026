@@ -1,0 +1,8 @@
+{
+  "src/App.jsx": "cd46f68875c909dc99c1cdaf57ef41b61410024e6dc2c95701545239d713e84d",
+  "src/data.js": "07471ebecad15aba95fb5c88a411188a8e29edd7b16468a3b41623b389d988c9",
+  "src/i18n/locales/vi.json": "e2b8a805258fce76431cd620572cdb53c8aaba66305cf874ae16dcc9b60b5a75",
+  "src/i18n/locales/en.json": "e26d8a09d0a377d763c7e0237e97d8bd296a64ce17ac76b61be1585ae8b19167",
+  "src/3d/components/CameraRig.jsx": "3bedf87e13fa8a3193cef828d79412c179cb088b45356e27325eb570ddb70853",
+  "src/3d/components/BlackHole.jsx": "c90474b8ce0dea45ee473f19edfe198b42c0d8a135ac84d78499e328981fc2c5"
+}

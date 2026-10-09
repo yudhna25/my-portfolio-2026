@@ -1,0 +1,4331 @@
+{
+  "samples": [
+    {
+      "id": "hero",
+      "lang": "vi",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "TRẦN VŨ ANH DUY",
+          "rect": {
+            "x": 16,
+            "y": 196.25,
+            "w": 278,
+            "h": 91.5,
+            "right": 294
+          },
+          "font": "44px",
+          "scroll": 278,
+          "client": 278,
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": 919,
+            "w": 262,
+            "h": 1971.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": 8877.71875,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": 3888.84375,
+            "w": 262,
+            "h": 1584.25,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 15519.375,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 919,
+          "w": 262,
+          "h": 1971.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": 3084.0625,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3208.84375,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": 3496.84375,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3888.84375,
+          "w": 262,
+          "h": 1584.25,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6967.09375,
+          "w": 262,
+          "h": 1324.3125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 8566.40625,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 11067.21875,
+          "w": 270,
+          "h": 3383.65625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 14725.875,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "lang": "vi",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "TRẦN VŨ / ANH DUY",
+          "rect": {
+            "x": 24,
+            "y": 905,
+            "w": 262,
+            "h": 66.0625,
+            "right": 286
+          },
+          "font": "28px",
+          "scroll": 262,
+          "client": 262,
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "KHO VŨ KHÍ PHẦN MỀM",
+          "rect": {
+            "x": 24,
+            "y": 1673.0625,
+            "w": 262,
+            "h": 19.5,
+            "right": 286
+          },
+          "font": "12px",
+          "scroll": 262,
+          "client": 262,
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "NĂNG LỰC CỐT LÕI",
+          "rect": {
+            "x": 24,
+            "y": 1852.5625,
+            "w": 262,
+            "h": 19.5,
+            "right": 286
+          },
+          "font": "12px",
+          "scroll": 262,
+          "client": 262,
+          "outside": [],
+          "clipped": 1
+        }
+      ],
+      "controls": [],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -72,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": 186,
+            "w": 262,
+            "h": 1971.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": 8144.71875,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": 3155.84375,
+            "w": 262,
+            "h": 1584.25,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 14786.375,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 186,
+          "w": 262,
+          "h": 1971.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": 2351.0625,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 2475.84375,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": 2763.84375,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3155.84375,
+          "w": 262,
+          "h": 1584.25,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6234.09375,
+          "w": 262,
+          "h": 1324.3125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 7833.40625,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 10334.21875,
+          "w": 270,
+          "h": 3383.65625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 13992.875,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "skills",
+      "lang": "vi",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "Tinh Vân Kỹ Năng",
+          "rect": {
+            "x": 24,
+            "y": 186.0625,
+            "w": 262,
+            "h": 76.78125,
+            "right": 286
+          },
+          "font": "32px",
+          "scroll": 262,
+          "client": 262,
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Công cụ thiết kế",
+          "rect": {
+            "x": 49,
+            "y": 1103.84375,
+            "w": 212,
+            "h": 24.75,
+            "right": 261
+          },
+          "font": "18px",
+          "scroll": 212,
+          "client": 212,
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "Năng lực cốt lõi",
+          "rect": {
+            "x": 49,
+            "y": 1638.59375,
+            "w": 212,
+            "h": 24.75,
+            "right": 261
+          },
+          "font": "18px",
+          "scroll": 212,
+          "client": 212,
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "Kỹ thuật",
+          "rect": {
+            "x": 49,
+            "y": 2301.34375,
+            "w": 212,
+            "h": 24.75,
+            "right": 261
+          },
+          "font": "18px",
+          "scroll": 212,
+          "client": 212,
+          "outside": [],
+          "clipped": 1
+        }
+      ],
+      "controls": [
+        {
+          "text": "Tạm dừng quỹ đạo",
+          "tag": "INPUT",
+          "x": 103.796875,
+          "y": 541.84375,
+          "w": 169.203125,
+          "h": 44,
+          "right": 273
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -72,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": -1979,
+            "w": 262,
+            "h": 1971.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": 5979.71875,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": 990.84375,
+            "w": 262,
+            "h": 1584.25,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 12621.375,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -1979,
+          "w": 262,
+          "h": 1971.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": 186.0625,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 310.84375,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": 598.84375,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 990.84375,
+          "w": 262,
+          "h": 1584.25,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 4069.09375,
+          "w": 262,
+          "h": 1324.3125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 5668.40625,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 8169.21875,
+          "w": 270,
+          "h": 3383.65625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 11827.875,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "lang": "vi",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "Bản Đồ Sao",
+          "rect": {
+            "x": 20,
+            "y": 186.09375,
+            "w": 270,
+            "h": 40,
+            "right": 290
+          },
+          "font": "32px",
+          "scroll": 270,
+          "client": 270,
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Saigon University",
+          "rect": {
+            "x": 60,
+            "y": 327.09375,
+            "w": 230,
+            "h": 60,
+            "right": 290
+          },
+          "font": "24px",
+          "scroll": 230,
+          "client": 230,
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Arena Multimedia",
+          "rect": {
+            "x": 60,
+            "y": 662.09375,
+            "w": 230,
+            "h": 60,
+            "right": 290
+          },
+          "font": "24px",
+          "scroll": 230,
+          "client": 230,
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "Green Academy",
+          "rect": {
+            "x": 60,
+            "y": 1089.09375,
+            "w": 230,
+            "h": 60,
+            "right": 290
+          },
+          "font": "24px",
+          "scroll": 230,
+          "client": 230,
+          "outside": [],
+          "clipped": 2
+        }
+      ],
+      "controls": [],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -72,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": -4562,
+            "w": 262,
+            "h": 1971.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": 3396.71875,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": -1592.15625,
+            "w": 262,
+            "h": 1584.25,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 10038.375,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -4562,
+          "w": 262,
+          "h": 1971.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -2396.9375,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -2272.15625,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -1984.15625,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -1592.15625,
+          "w": 262,
+          "h": 1584.25,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 1486.09375,
+          "w": 262,
+          "h": 1324.3125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 3085.40625,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 5586.21875,
+          "w": 270,
+          "h": 3383.65625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 9244.875,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "experience",
+      "lang": "vi",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "Nhật Ký Hành Trình",
+          "rect": {
+            "x": 24,
+            "y": 222.09375,
+            "w": 262,
+            "h": 67.1875,
+            "right": 286
+          },
+          "font": "28px",
+          "scroll": 262,
+          "client": 262,
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "HOSANA MEDIA",
+          "rect": {
+            "x": 49,
+            "y": 362.28125,
+            "w": 212,
+            "h": 25,
+            "right": 261
+          },
+          "font": "20px",
+          "scroll": 212,
+          "client": 212,
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "UPWORK",
+          "rect": {
+            "x": 89,
+            "y": 829.15625,
+            "w": 212,
+            "h": 25,
+            "right": 301
+          },
+          "font": "20px",
+          "scroll": 212,
+          "client": 212,
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "DESIGNVELOPER",
+          "rect": {
+            "x": 9,
+            "y": 1196.53125,
+            "w": 212,
+            "h": 25,
+            "right": 221
+          },
+          "font": "20px",
+          "scroll": 212,
+          "client": 212,
+          "outside": [],
+          "clipped": 1
+        }
+      ],
+      "controls": [],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -72,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": -5862,
+            "w": 262,
+            "h": 1971.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": 2096.71875,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": -2892.15625,
+            "w": 262,
+            "h": 1584.25,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 8738.375,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -5862,
+          "w": 262,
+          "h": 1971.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -3696.9375,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -3572.15625,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -3284.15625,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -2892.15625,
+          "w": 262,
+          "h": 1584.25,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 186.09375,
+          "w": 262,
+          "h": 1324.3125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 1785.40625,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 4286.21875,
+          "w": 270,
+          "h": 3383.65625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 7944.875,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "lang": "vi",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "CHÒM SAO DỰ ÁN",
+          "rect": {
+            "x": 20,
+            "y": 229.40625,
+            "w": 270,
+            "h": 57.3125,
+            "right": 290
+          },
+          "font": "25.6px",
+          "scroll": 270,
+          "client": 270,
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "EDURA LMS",
+          "rect": {
+            "x": 41,
+            "y": 725.21875,
+            "w": 228,
+            "h": 25,
+            "right": 269
+          },
+          "font": "20px",
+          "scroll": 228,
+          "client": 228,
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VERIS APP",
+          "rect": {
+            "x": 41,
+            "y": 1426.71875,
+            "w": 228,
+            "h": 25,
+            "right": 269
+          },
+          "font": "20px",
+          "scroll": 228,
+          "client": 228,
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VIE PERFUME",
+          "rect": {
+            "x": 41,
+            "y": 2110.21875,
+            "w": 228,
+            "h": 25,
+            "right": 269
+          },
+          "font": "20px",
+          "scroll": 228,
+          "client": 228,
+          "outside": [],
+          "clipped": 1
+        }
+      ],
+      "controls": [
+        {
+          "text": "Tất cả",
+          "tag": "BUTTON",
+          "x": 20,
+          "y": 351.71875,
+          "w": 76.75,
+          "h": 44,
+          "right": 96.75
+        },
+        {
+          "text": "Product Design",
+          "tag": "BUTTON",
+          "x": 104.75,
+          "y": 351.71875,
+          "w": 137.765625,
+          "h": 44,
+          "right": 242.515625
+        },
+        {
+          "text": "UX/UI",
+          "tag": "BUTTON",
+          "x": 20,
+          "y": 403.71875,
+          "w": 70.1875,
+          "h": 44,
+          "right": 90.1875
+        },
+        {
+          "text": "Graphic",
+          "tag": "BUTTON",
+          "x": 98.1875,
+          "y": 403.71875,
+          "w": 85.734375,
+          "h": 44,
+          "right": 183.921875
+        },
+        {
+          "text": "Product Design01EDURA LMSNền tảng học tập thiết kế để chống lại sự mệt mỏi của người dùng bằng hệ thống phân cấp thị giác chặt chẽ và hành trình mượt mà. Được đánh giá 'Excellent' về đổi mới UX.UX ResearchUI DesignPrototypingXem case study↗",
+          "tag": "A",
+          "x": 20,
+          "y": 495.71875,
+          "w": 270,
+          "h": 637.5,
+          "right": 290
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 41,
+          "y": 1751.71875,
+          "w": 184.40625,
+          "h": 44,
+          "right": 225.40625
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 41,
+          "y": 2427.21875,
+          "w": 184.40625,
+          "h": 44,
+          "right": 225.40625
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -72,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": -7463,
+            "w": 262,
+            "h": 1971.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": 495.71875,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": -4493.15625,
+            "w": 262,
+            "h": 1584.25,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 7137.375,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -7463,
+          "w": 262,
+          "h": 1971.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -5297.9375,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -5173.15625,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -4885.15625,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -4493.15625,
+          "w": 262,
+          "h": 1584.25,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -1414.90625,
+          "w": 262,
+          "h": 1324.3125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 184.40625,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 2685.21875,
+          "w": 270,
+          "h": 3383.65625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6343.875,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "playground",
+      "lang": "vi",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "Trạm Không Gian",
+          "rect": {
+            "x": 20,
+            "y": 186.21875,
+            "w": 270,
+            "h": 71.65625,
+            "right": 290
+          },
+          "font": "32px",
+          "scroll": 270,
+          "client": 270,
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "Starfield Explorer",
+          "rect": {
+            "x": 41,
+            "y": 326.875,
+            "w": 189.359375,
+            "h": 24.75,
+            "right": 230.359375
+          },
+          "font": "18px",
+          "scroll": 189,
+          "client": 189,
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Nebula Shader Playground",
+          "rect": {
+            "x": 41,
+            "y": 787.125,
+            "w": 158.765625,
+            "h": 49.5,
+            "right": 199.765625
+          },
+          "font": "18px",
+          "scroll": 159,
+          "client": 159,
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "Scroll Progress Orbit",
+          "rect": {
+            "x": 41,
+            "y": 1251.625,
+            "w": 163.421875,
+            "h": 49.5,
+            "right": 204.421875
+          },
+          "font": "18px",
+          "scroll": 163,
+          "client": 163,
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "Magnetic Field",
+          "rect": {
+            "x": 41,
+            "y": 1716.125,
+            "w": 158.8125,
+            "h": 24.75,
+            "right": 199.8125
+          },
+          "font": "18px",
+          "scroll": 159,
+          "client": 159,
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "Text Scramble Lab",
+          "rect": {
+            "x": 41,
+            "y": 2092.375,
+            "w": 157.265625,
+            "h": 49.5,
+            "right": 198.265625
+          },
+          "font": "18px",
+          "scroll": 157,
+          "client": 157,
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "Constellation Grid",
+          "rect": {
+            "x": 41,
+            "y": 2493.375,
+            "w": 195.546875,
+            "h": 24.75,
+            "right": 236.546875
+          },
+          "font": "18px",
+          "scroll": 196,
+          "client": 196,
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "Wormhole Tunnel",
+          "rect": {
+            "x": 41,
+            "y": 2869.625,
+            "w": 189.0625,
+            "h": 24.75,
+            "right": 230.0625
+          },
+          "font": "18px",
+          "scroll": 189,
+          "client": 189,
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "Marquee Generator",
+          "rect": {
+            "x": 41,
+            "y": 3245.875,
+            "w": 112.453125,
+            "h": 49.5,
+            "right": 153.453125
+          },
+          "font": "18px",
+          "scroll": 112,
+          "client": 112,
+          "outside": [],
+          "clipped": 2
+        }
+      ],
+      "controls": [
+        {
+          "text": "Đẩy hạt",
+          "tag": "BUTTON",
+          "x": 175.59375,
+          "y": 563.375,
+          "w": 76.40625,
+          "h": 44,
+          "right": 252
+        },
+        {
+          "text": "Tham khảo CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 1966.375,
+          "w": 164.390625,
+          "h": 44,
+          "right": 205.390625
+        },
+        {
+          "text": "Tham khảo CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 2367.375,
+          "w": 164.390625,
+          "h": 44,
+          "right": 205.390625
+        },
+        {
+          "text": "Tham khảo CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 2743.625,
+          "w": 164.390625,
+          "h": 44,
+          "right": 205.390625
+        },
+        {
+          "text": "Tham khảo CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 3119.875,
+          "w": 164.390625,
+          "h": 44,
+          "right": 205.390625
+        },
+        {
+          "text": "Tham khảo CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 3520.875,
+          "w": 164.390625,
+          "h": 44,
+          "right": 205.390625
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -72,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": -9962,
+            "w": 262,
+            "h": 1971.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": -2003.28125,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": -6992.15625,
+            "w": 262,
+            "h": 1584.25,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 4638.375,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -9962,
+          "w": 262,
+          "h": 1971.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -7796.9375,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -7672.15625,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -7384.15625,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -6992.15625,
+          "w": 262,
+          "h": 1584.25,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -3913.90625,
+          "w": 262,
+          "h": 1324.3125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -2314.59375,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 186.21875,
+          "w": 270,
+          "h": 3383.65625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3844.875,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "transmission",
+      "lang": "vi",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "HÃY KẾT NỐI LET'S CONNECT",
+          "rect": {
+            "x": 24,
+            "y": 241.875,
+            "w": 262,
+            "h": 56,
+            "right": 286
+          },
+          "font": "22.4px",
+          "scroll": 262,
+          "client": 262,
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [
+        {
+          "text": "GỬI TÍN HIỆU",
+          "tag": "A",
+          "x": 24,
+          "y": 436.375,
+          "w": 262,
+          "h": 72,
+          "right": 286
+        },
+        {
+          "text": "anhduy25work@gmail.com",
+          "tag": "A",
+          "x": 40,
+          "y": 597.375,
+          "w": 230,
+          "h": 44,
+          "right": 270
+        },
+        {
+          "text": "Facebook",
+          "tag": "A",
+          "x": 40,
+          "y": 657.375,
+          "w": 230,
+          "h": 44,
+          "right": 270
+        },
+        {
+          "text": "0822 021 418",
+          "tag": "A",
+          "x": 40,
+          "y": 717.375,
+          "w": 230,
+          "h": 44,
+          "right": 270
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -72,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": -13621,
+            "w": 262,
+            "h": 1971.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": -5662.28125,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": -10651.15625,
+            "w": 262,
+            "h": 1584.25,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 979.375,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -13621,
+          "w": 262,
+          "h": 1971.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -11455.9375,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -11331.15625,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -11043.15625,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -10651.15625,
+          "w": 262,
+          "h": 1584.25,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -7572.90625,
+          "w": 262,
+          "h": 1324.3125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -5973.59375,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -3472.78125,
+          "w": 270,
+          "h": 3383.65625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 185.875,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "lang": "vi",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "HÃY KẾT NỐI",
+          "rect": {
+            "x": 24,
+            "y": 185.375,
+            "w": 262,
+            "h": 70.6875,
+            "right": 286
+          },
+          "font": "41.6px",
+          "scroll": 262,
+          "client": 262,
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [
+        {
+          "text": "anhduy25work@gmail.com",
+          "tag": "A",
+          "x": 24,
+          "y": 304.0625,
+          "w": 262,
+          "h": 84,
+          "right": 286
+        },
+        {
+          "text": "0822 021 418",
+          "tag": "A",
+          "x": 24,
+          "y": 404.0625,
+          "w": 129.609375,
+          "h": 28,
+          "right": 153.609375
+        },
+        {
+          "text": "Facebook",
+          "tag": "A",
+          "x": 24,
+          "y": 448.0625,
+          "w": 46,
+          "h": 46,
+          "right": 70
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -72,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": -14415,
+            "w": 262,
+            "h": 1971.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": -6456.28125,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": -11445.15625,
+            "w": 262,
+            "h": 1584.25,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 185.375,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -14415,
+          "w": 262,
+          "h": 1971.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -12249.9375,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -12125.15625,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -11837.15625,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -11445.15625,
+          "w": 262,
+          "h": 1584.25,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -8366.90625,
+          "w": 262,
+          "h": 1324.3125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -6767.59375,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -4266.78125,
+          "w": 270,
+          "h": 3383.65625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -608.125,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "stellar-menu",
+      "lang": "vi",
+      "width": 320,
+      "height": 740,
+      "client": 320,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "Khám phá hành trình",
+          "rect": {
+            "x": 12.90625,
+            "y": 96,
+            "w": 284.171875,
+            "h": 16,
+            "right": 297.078125
+          },
+          "font": "12px",
+          "scroll": 284,
+          "client": 284,
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [
+        {
+          "text": "Đóng menu điều hướng",
+          "tag": "BUTTON",
+          "x": 192.328125,
+          "y": 13.5,
+          "w": 93.671875,
+          "h": 44,
+          "right": 286
+        },
+        {
+          "text": "01Về tôiVề tôi",
+          "tag": "A",
+          "x": 12.90625,
+          "y": 137,
+          "w": 284.171875,
+          "h": 44,
+          "right": 297.078125
+        },
+        {
+          "text": "02Dự ánDự án",
+          "tag": "A",
+          "x": 12.90625,
+          "y": 182,
+          "w": 284.171875,
+          "h": 44,
+          "right": 297.078125
+        },
+        {
+          "text": "03Kỹ năngKỹ năng",
+          "tag": "A",
+          "x": 12.90625,
+          "y": 227,
+          "w": 284.171875,
+          "h": 44,
+          "right": 297.078125
+        },
+        {
+          "text": "04Học vấnHọc vấn",
+          "tag": "A",
+          "x": 12.90625,
+          "y": 272,
+          "w": 284.171875,
+          "h": 44,
+          "right": 297.078125
+        },
+        {
+          "text": "05Kinh nghiệmKinh nghiệm",
+          "tag": "A",
+          "x": 12.90625,
+          "y": 317,
+          "w": 284.171875,
+          "h": 44,
+          "right": 297.078125
+        },
+        {
+          "text": "06Thử nghiệmThử nghiệm",
+          "tag": "A",
+          "x": 12.90625,
+          "y": 362,
+          "w": 284.171875,
+          "h": 44,
+          "right": 297.078125
+        },
+        {
+          "text": "07Liên hệLiên hệ",
+          "tag": "A",
+          "x": 12.90625,
+          "y": 407,
+          "w": 284.171875,
+          "h": 44,
+          "right": 297.078125
+        },
+        {
+          "text": "anhduy25work@gmail.com",
+          "tag": "A",
+          "x": 12.90625,
+          "y": 560,
+          "w": 183.546875,
+          "h": 44,
+          "right": 196.453125
+        },
+        {
+          "text": "Facebook",
+          "tag": "A",
+          "x": 12.90625,
+          "y": 620,
+          "w": 65.84375,
+          "h": 44,
+          "right": 78.75
+        },
+        {
+          "text": "Vi",
+          "tag": "BUTTON",
+          "x": 12.90625,
+          "y": 680,
+          "w": 44,
+          "h": 44,
+          "right": 56.90625
+        },
+        {
+          "text": "En",
+          "tag": "BUTTON",
+          "x": 60.90625,
+          "y": 680,
+          "w": 44,
+          "h": 44,
+          "right": 104.90625
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": 539.6699829101562,
+            "w": 262,
+            "h": 1971.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": 8498.388671875,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": 3509.513671875,
+            "w": 262,
+            "h": 1584.25,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 15140.044921875,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 539.6699829101562,
+          "w": 262,
+          "h": 1971.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": 2704.732421875,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 2829.513671875,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": 3117.513671875,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3509.513671875,
+          "w": 262,
+          "h": 1584.25,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6587.763671875,
+          "w": 262,
+          "h": 1324.3125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 8187.076171875,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 10687.888671875,
+          "w": 270,
+          "h": 3383.65625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 14346.544921875,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "hero",
+      "lang": "en",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "TRAN VU ANH DUY",
+          "rect": {
+            "x": 16,
+            "y": 183.25,
+            "w": 278,
+            "h": 91.5,
+            "right": 294
+          },
+          "font": "44px",
+          "scroll": 278,
+          "client": 278,
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": 919,
+            "w": 262,
+            "h": 1943.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": 8922.875,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": 3860.84375,
+            "w": 262,
+            "h": 1609,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 15584.03125,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 919,
+          "w": 262,
+          "h": 1943.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": 3056.0625,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3180.84375,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": 3468.84375,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3860.84375,
+          "w": 262,
+          "h": 1609,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6989.84375,
+          "w": 262,
+          "h": 1346.71875,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 8611.5625,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 11112.375,
+          "w": 270,
+          "h": 3403.15625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 14790.53125,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "lang": "en",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "TRAN VU / ANH DUY",
+          "rect": {
+            "x": 24,
+            "y": 905,
+            "w": 262,
+            "h": 66.0625,
+            "right": 286
+          },
+          "font": "28px",
+          "scroll": 262,
+          "client": 262,
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "SOFTWARE ARSENAL",
+          "rect": {
+            "x": 24,
+            "y": 1645.0625,
+            "w": 262,
+            "h": 19.5,
+            "right": 286
+          },
+          "font": "12px",
+          "scroll": 262,
+          "client": 262,
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "CORE COMPETENCIES",
+          "rect": {
+            "x": 24,
+            "y": 1824.5625,
+            "w": 262,
+            "h": 19.5,
+            "right": 286
+          },
+          "font": "12px",
+          "scroll": 262,
+          "client": 262,
+          "outside": [],
+          "clipped": 1
+        }
+      ],
+      "controls": [],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -72,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": 186,
+            "w": 262,
+            "h": 1943.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": 8189.875,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": 3127.84375,
+            "w": 262,
+            "h": 1609,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 14851.03125,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 186,
+          "w": 262,
+          "h": 1943.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": 2323.0625,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 2447.84375,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": 2735.84375,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3127.84375,
+          "w": 262,
+          "h": 1609,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6256.84375,
+          "w": 262,
+          "h": 1346.71875,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 7878.5625,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 10379.375,
+          "w": 270,
+          "h": 3403.15625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 14057.53125,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "skills",
+      "lang": "en",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "Arsenal Nebula",
+          "rect": {
+            "x": 24,
+            "y": 186.0625,
+            "w": 262,
+            "h": 76.78125,
+            "right": 286
+          },
+          "font": "32px",
+          "scroll": 262,
+          "client": 262,
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Design Tools",
+          "rect": {
+            "x": 49,
+            "y": 1103.84375,
+            "w": 212,
+            "h": 24.75,
+            "right": 261
+          },
+          "font": "18px",
+          "scroll": 212,
+          "client": 212,
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "Core Competencies",
+          "rect": {
+            "x": 49,
+            "y": 1638.59375,
+            "w": 212,
+            "h": 49.5,
+            "right": 261
+          },
+          "font": "18px",
+          "scroll": 212,
+          "client": 212,
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "Technical",
+          "rect": {
+            "x": 49,
+            "y": 2326.09375,
+            "w": 212,
+            "h": 24.75,
+            "right": 261
+          },
+          "font": "18px",
+          "scroll": 212,
+          "client": 212,
+          "outside": [],
+          "clipped": 1
+        }
+      ],
+      "controls": [
+        {
+          "text": "Pause orbit",
+          "tag": "INPUT",
+          "x": 139.796875,
+          "y": 541.84375,
+          "w": 133.203125,
+          "h": 44,
+          "right": 273
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -72,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": -1951,
+            "w": 262,
+            "h": 1943.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": 6052.875,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": 990.84375,
+            "w": 262,
+            "h": 1609,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 12714.03125,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -1951,
+          "w": 262,
+          "h": 1943.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": 186.0625,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 310.84375,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": 598.84375,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 990.84375,
+          "w": 262,
+          "h": 1609,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 4119.84375,
+          "w": 262,
+          "h": 1346.71875,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 5741.5625,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 8242.375,
+          "w": 270,
+          "h": 3403.15625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 11920.53125,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "lang": "en",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "Star Map",
+          "rect": {
+            "x": 20,
+            "y": 185.84375,
+            "w": 270,
+            "h": 40,
+            "right": 290
+          },
+          "font": "32px",
+          "scroll": 270,
+          "client": 270,
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Saigon University",
+          "rect": {
+            "x": 60,
+            "y": 326.84375,
+            "w": 230,
+            "h": 60,
+            "right": 290
+          },
+          "font": "24px",
+          "scroll": 230,
+          "client": 230,
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Arena Multimedia",
+          "rect": {
+            "x": 60,
+            "y": 727.84375,
+            "w": 230,
+            "h": 60,
+            "right": 290
+          },
+          "font": "24px",
+          "scroll": 230,
+          "client": 230,
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "Green Academy",
+          "rect": {
+            "x": 60,
+            "y": 1088.84375,
+            "w": 230,
+            "h": 60,
+            "right": 290
+          },
+          "font": "24px",
+          "scroll": 230,
+          "client": 230,
+          "outside": [],
+          "clipped": 2
+        }
+      ],
+      "controls": [],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -72,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": -4559,
+            "w": 262,
+            "h": 1943.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": 3444.875,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": -1617.15625,
+            "w": 262,
+            "h": 1609,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 10106.03125,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -4559,
+          "w": 262,
+          "h": 1943.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -2421.9375,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -2297.15625,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -2009.15625,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -1617.15625,
+          "w": 262,
+          "h": 1609,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 1511.84375,
+          "w": 262,
+          "h": 1346.71875,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 3133.5625,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 5634.375,
+          "w": 270,
+          "h": 3403.15625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 9312.53125,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "experience",
+      "lang": "en",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "Voyage Log",
+          "rect": {
+            "x": 24,
+            "y": 221.84375,
+            "w": 262,
+            "h": 33.59375,
+            "right": 286
+          },
+          "font": "28px",
+          "scroll": 262,
+          "client": 262,
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "HOSANA MEDIA",
+          "rect": {
+            "x": 49,
+            "y": 328.4375,
+            "w": 212,
+            "h": 25,
+            "right": 261
+          },
+          "font": "20px",
+          "scroll": 212,
+          "client": 212,
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "UPWORK",
+          "rect": {
+            "x": 89,
+            "y": 795.3125,
+            "w": 212,
+            "h": 25,
+            "right": 301
+          },
+          "font": "20px",
+          "scroll": 212,
+          "client": 212,
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "DESIGNVELOPER",
+          "rect": {
+            "x": 9,
+            "y": 1190.6875,
+            "w": 212,
+            "h": 25,
+            "right": 221
+          },
+          "font": "20px",
+          "scroll": 212,
+          "client": 212,
+          "outside": [],
+          "clipped": 1
+        }
+      ],
+      "controls": [],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -72,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": -5885,
+            "w": 262,
+            "h": 1943.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": 2118.875,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": -2943.15625,
+            "w": 262,
+            "h": 1609,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 8780.03125,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -5885,
+          "w": 262,
+          "h": 1943.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -3747.9375,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -3623.15625,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -3335.15625,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -2943.15625,
+          "w": 262,
+          "h": 1609,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 185.84375,
+          "w": 262,
+          "h": 1346.71875,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 1807.5625,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 4308.375,
+          "w": 270,
+          "h": 3403.15625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 7986.53125,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "lang": "en",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "CONSTELLATION OF PROJECTS",
+          "rect": {
+            "x": 20,
+            "y": 229.5625,
+            "w": 270,
+            "h": 57.3125,
+            "right": 290
+          },
+          "font": "25.6px",
+          "scroll": 270,
+          "client": 270,
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "EDURA LMS",
+          "rect": {
+            "x": 41,
+            "y": 725.375,
+            "w": 228,
+            "h": 25,
+            "right": 269
+          },
+          "font": "20px",
+          "scroll": 228,
+          "client": 228,
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VERIS APP",
+          "rect": {
+            "x": 41,
+            "y": 1400.875,
+            "w": 228,
+            "h": 25,
+            "right": 269
+          },
+          "font": "20px",
+          "scroll": 228,
+          "client": 228,
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "VIE PERFUME",
+          "rect": {
+            "x": 41,
+            "y": 2110.375,
+            "w": 228,
+            "h": 25,
+            "right": 269
+          },
+          "font": "20px",
+          "scroll": 228,
+          "client": 228,
+          "outside": [],
+          "clipped": 1
+        }
+      ],
+      "controls": [
+        {
+          "text": "All",
+          "tag": "BUTTON",
+          "x": 20,
+          "y": 351.875,
+          "w": 49.6875,
+          "h": 44,
+          "right": 69.6875
+        },
+        {
+          "text": "Product Design",
+          "tag": "BUTTON",
+          "x": 77.6875,
+          "y": 351.875,
+          "w": 137.765625,
+          "h": 44,
+          "right": 215.453125
+        },
+        {
+          "text": "UX/UI",
+          "tag": "BUTTON",
+          "x": 20,
+          "y": 403.875,
+          "w": 70.1875,
+          "h": 44,
+          "right": 90.1875
+        },
+        {
+          "text": "Graphic",
+          "tag": "BUTTON",
+          "x": 98.1875,
+          "y": 403.875,
+          "w": 85.734375,
+          "h": 44,
+          "right": 183.921875
+        },
+        {
+          "text": "Product Design01EDURA LMSA learning platform designed to combat user fatigue through strict visual hierarchy and seamless user journeys. Rated 'Excellent' for UX innovation.UX ResearchUI DesignPrototypingView case study↗",
+          "tag": "A",
+          "x": 20,
+          "y": 495.875,
+          "w": 270,
+          "h": 611.5,
+          "right": 290
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 41,
+          "y": 1751.875,
+          "w": 184.40625,
+          "h": 44,
+          "right": 225.40625
+        },
+        {
+          "text": "Case study coming soon",
+          "tag": "BUTTON",
+          "x": 41,
+          "y": 2427.375,
+          "w": 184.40625,
+          "h": 44,
+          "right": 225.40625
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -72,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": -7508,
+            "w": 262,
+            "h": 1943.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": 495.875,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": -4566.15625,
+            "w": 262,
+            "h": 1609,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 7157.03125,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -7508,
+          "w": 262,
+          "h": 1943.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -5370.9375,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -5246.15625,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -4958.15625,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -4566.15625,
+          "w": 262,
+          "h": 1609,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -1437.15625,
+          "w": 262,
+          "h": 1346.71875,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 184.5625,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 2685.375,
+          "w": 270,
+          "h": 3403.15625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6363.53125,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "playground",
+      "lang": "en",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "Space Station",
+          "rect": {
+            "x": 20,
+            "y": 185.375,
+            "w": 270,
+            "h": 71.65625,
+            "right": 290
+          },
+          "font": "32px",
+          "scroll": 270,
+          "client": 270,
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "Starfield Explorer",
+          "rect": {
+            "x": 41,
+            "y": 326.03125,
+            "w": 189.359375,
+            "h": 24.75,
+            "right": 230.359375
+          },
+          "font": "18px",
+          "scroll": 189,
+          "client": 189,
+          "outside": [],
+          "clipped": 0
+        },
+        {
+          "text": "Nebula Shader Playground",
+          "rect": {
+            "x": 41,
+            "y": 805.78125,
+            "w": 158.765625,
+            "h": 49.5,
+            "right": 199.765625
+          },
+          "font": "18px",
+          "scroll": 159,
+          "client": 159,
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "Scroll Progress Orbit",
+          "rect": {
+            "x": 41,
+            "y": 1270.28125,
+            "w": 163.421875,
+            "h": 49.5,
+            "right": 204.421875
+          },
+          "font": "18px",
+          "scroll": 163,
+          "client": 163,
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "Magnetic Field",
+          "rect": {
+            "x": 41,
+            "y": 1734.78125,
+            "w": 158.8125,
+            "h": 24.75,
+            "right": 199.8125
+          },
+          "font": "18px",
+          "scroll": 159,
+          "client": 159,
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "Text Scramble Lab",
+          "rect": {
+            "x": 41,
+            "y": 2111.03125,
+            "w": 157.265625,
+            "h": 49.5,
+            "right": 198.265625
+          },
+          "font": "18px",
+          "scroll": 157,
+          "client": 157,
+          "outside": [],
+          "clipped": 2
+        },
+        {
+          "text": "Constellation Grid",
+          "rect": {
+            "x": 41,
+            "y": 2512.03125,
+            "w": 195.546875,
+            "h": 24.75,
+            "right": 236.546875
+          },
+          "font": "18px",
+          "scroll": 196,
+          "client": 196,
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "Wormhole Tunnel",
+          "rect": {
+            "x": 41,
+            "y": 2888.28125,
+            "w": 189.0625,
+            "h": 24.75,
+            "right": 230.0625
+          },
+          "font": "18px",
+          "scroll": 189,
+          "client": 189,
+          "outside": [],
+          "clipped": 1
+        },
+        {
+          "text": "Marquee Generator",
+          "rect": {
+            "x": 41,
+            "y": 3264.53125,
+            "w": 112.453125,
+            "h": 49.5,
+            "right": 153.453125
+          },
+          "font": "18px",
+          "scroll": 112,
+          "client": 112,
+          "outside": [],
+          "clipped": 2
+        }
+      ],
+      "controls": [
+        {
+          "text": "Repel particles",
+          "tag": "BUTTON",
+          "x": 142,
+          "y": 543.03125,
+          "w": 134,
+          "h": 44,
+          "right": 276
+        },
+        {
+          "text": "Explore CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 1985.03125,
+          "w": 149.984375,
+          "h": 44,
+          "right": 190.984375
+        },
+        {
+          "text": "Explore CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 2386.03125,
+          "w": 149.984375,
+          "h": 44,
+          "right": 190.984375
+        },
+        {
+          "text": "Explore CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 2762.28125,
+          "w": 149.984375,
+          "h": 44,
+          "right": 190.984375
+        },
+        {
+          "text": "Explore CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 3138.53125,
+          "w": 149.984375,
+          "h": 44,
+          "right": 190.984375
+        },
+        {
+          "text": "Explore CodePen ↗",
+          "tag": "A",
+          "x": 41,
+          "y": 3539.53125,
+          "w": 149.984375,
+          "h": 44,
+          "right": 190.984375
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -72,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": -10008,
+            "w": 262,
+            "h": 1943.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": -2004.125,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": -7066.15625,
+            "w": 262,
+            "h": 1609,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 4657.03125,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -10008,
+          "w": 262,
+          "h": 1943.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -7870.9375,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -7746.15625,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -7458.15625,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -7066.15625,
+          "w": 262,
+          "h": 1609,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -3937.15625,
+          "w": 262,
+          "h": 1346.71875,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -2315.4375,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 185.375,
+          "w": 270,
+          "h": 3403.15625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3863.53125,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "transmission",
+      "lang": "en",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "LET'S CONNECT HÃY KẾT NỐI",
+          "rect": {
+            "x": 24,
+            "y": 241.53125,
+            "w": 262,
+            "h": 56,
+            "right": 286
+          },
+          "font": "22.4px",
+          "scroll": 262,
+          "client": 262,
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [
+        {
+          "text": "SEND A SIGNAL",
+          "tag": "A",
+          "x": 24,
+          "y": 436.03125,
+          "w": 262,
+          "h": 72,
+          "right": 286
+        },
+        {
+          "text": "anhduy25work@gmail.com",
+          "tag": "A",
+          "x": 40,
+          "y": 597.03125,
+          "w": 230,
+          "h": 44,
+          "right": 270
+        },
+        {
+          "text": "Facebook",
+          "tag": "A",
+          "x": 40,
+          "y": 657.03125,
+          "w": 230,
+          "h": 44,
+          "right": 270
+        },
+        {
+          "text": "0822 021 418",
+          "tag": "A",
+          "x": 40,
+          "y": 717.03125,
+          "w": 230,
+          "h": 44,
+          "right": 270
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -72,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": -13686,
+            "w": 262,
+            "h": 1943.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": -5682.125,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": -10744.15625,
+            "w": 262,
+            "h": 1609,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 979.03125,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -13686,
+          "w": 262,
+          "h": 1943.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -11548.9375,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -11424.15625,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -11136.15625,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -10744.15625,
+          "w": 262,
+          "h": 1609,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -7615.15625,
+          "w": 262,
+          "h": 1346.71875,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -5993.4375,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -3492.625,
+          "w": 270,
+          "h": 3403.15625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 185.53125,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "lang": "en",
+      "width": 320,
+      "height": 740,
+      "client": 310,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "LET'S CONNECT",
+          "rect": {
+            "x": 24,
+            "y": 198.03125,
+            "w": 262,
+            "h": 70.6875,
+            "right": 286
+          },
+          "font": "41.6px",
+          "scroll": 262,
+          "client": 262,
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [
+        {
+          "text": "anhduy25work@gmail.com",
+          "tag": "A",
+          "x": 24,
+          "y": 316.71875,
+          "w": 262,
+          "h": 84,
+          "right": 286
+        },
+        {
+          "text": "0822 021 418",
+          "tag": "A",
+          "x": 24,
+          "y": 416.71875,
+          "w": 129.609375,
+          "h": 28,
+          "right": 153.609375
+        },
+        {
+          "text": "Facebook",
+          "tag": "A",
+          "x": 24,
+          "y": 460.71875,
+          "w": 46,
+          "h": 46,
+          "right": 70
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": -72,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": -14467,
+            "w": 262,
+            "h": 1943.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": -6463.125,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": -11525.15625,
+            "w": 262,
+            "h": 1609,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 198.03125,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -14467,
+          "w": 262,
+          "h": 1943.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": -12329.9375,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -12205.15625,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": -11917.15625,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -11525.15625,
+          "w": 262,
+          "h": 1609,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -8396.15625,
+          "w": 262,
+          "h": 1346.71875,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -6774.4375,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": -4273.625,
+          "w": 270,
+          "h": 3403.15625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": -595.46875,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    },
+    {
+      "id": "stellar-menu",
+      "lang": "en",
+      "width": 320,
+      "height": 740,
+      "client": 320,
+      "scroll": 310,
+      "bodyOverflow": "hidden",
+      "rootOverflow": "hidden",
+      "headings": [
+        {
+          "text": "Explore the odyssey",
+          "rect": {
+            "x": 12.90625,
+            "y": 96,
+            "w": 284.171875,
+            "h": 16,
+            "right": 297.078125
+          },
+          "font": "12px",
+          "scroll": 284,
+          "client": 284,
+          "outside": [],
+          "clipped": 0
+        }
+      ],
+      "controls": [
+        {
+          "text": "Close navigation menu",
+          "tag": "BUTTON",
+          "x": 186.203125,
+          "y": 13.5,
+          "w": 99.796875,
+          "h": 44,
+          "right": 286
+        },
+        {
+          "text": "01AboutAbout",
+          "tag": "A",
+          "x": 12.90625,
+          "y": 137,
+          "w": 284.171875,
+          "h": 44,
+          "right": 297.078125
+        },
+        {
+          "text": "02WorksWorks",
+          "tag": "A",
+          "x": 12.90625,
+          "y": 182,
+          "w": 284.171875,
+          "h": 44,
+          "right": 297.078125
+        },
+        {
+          "text": "03SkillsSkills",
+          "tag": "A",
+          "x": 12.90625,
+          "y": 227,
+          "w": 284.171875,
+          "h": 44,
+          "right": 297.078125
+        },
+        {
+          "text": "04EducationEducation",
+          "tag": "A",
+          "x": 12.90625,
+          "y": 272,
+          "w": 284.171875,
+          "h": 44,
+          "right": 297.078125
+        },
+        {
+          "text": "05ExperienceExperience",
+          "tag": "A",
+          "x": 12.90625,
+          "y": 317,
+          "w": 284.171875,
+          "h": 44,
+          "right": 297.078125
+        },
+        {
+          "text": "06PlaygroundPlayground",
+          "tag": "A",
+          "x": 12.90625,
+          "y": 362,
+          "w": 284.171875,
+          "h": 44,
+          "right": 297.078125
+        },
+        {
+          "text": "07ContactContact",
+          "tag": "A",
+          "x": 12.90625,
+          "y": 407,
+          "w": 284.171875,
+          "h": 44,
+          "right": 297.078125
+        },
+        {
+          "text": "anhduy25work@gmail.com",
+          "tag": "A",
+          "x": 12.90625,
+          "y": 560,
+          "w": 183.546875,
+          "h": 44,
+          "right": 196.453125
+        },
+        {
+          "text": "Facebook",
+          "tag": "A",
+          "x": 12.90625,
+          "y": 620,
+          "w": 65.84375,
+          "h": 44,
+          "right": 78.75
+        },
+        {
+          "text": "Vi",
+          "tag": "BUTTON",
+          "x": 12.90625,
+          "y": 680,
+          "w": 44,
+          "h": 44,
+          "right": 56.90625
+        },
+        {
+          "text": "En",
+          "tag": "BUTTON",
+          "x": 60.90625,
+          "y": 680,
+          "w": 44,
+          "h": 44,
+          "right": 104.90625
+        }
+      ],
+      "navOverlap": [],
+      "navRect": {
+        "x": 0,
+        "y": 0,
+        "w": 310,
+        "h": 72,
+        "right": 310
+      },
+      "cursor": 0,
+      "grids": [
+        {
+          "selector": "#about>div",
+          "columns": "21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px 21.8281px",
+          "rect": {
+            "x": 24,
+            "y": 541.304443359375,
+            "w": 262,
+            "h": 1943.0625,
+            "right": 286
+          }
+        },
+        {
+          "selector": "#works-grid",
+          "columns": "0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px 0.5px",
+          "rect": {
+            "x": 20,
+            "y": 8545.1796875,
+            "w": 270,
+            "h": 1996.5,
+            "right": 290
+          }
+        },
+        {
+          "selector": "#skills>div>div",
+          "columns": "262px",
+          "rect": {
+            "x": 24,
+            "y": 3483.148193359375,
+            "w": 262,
+            "h": 1609.000244140625,
+            "right": 286
+          }
+        }
+      ],
+      "footer": {
+        "x": 24,
+        "y": 15206.3359375,
+        "w": 262,
+        "h": 308.6875,
+        "right": 286
+      },
+      "containers": [
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 541.304443359375,
+          "w": 262,
+          "h": 1943.0625,
+          "right": 286
+        },
+        {
+          "tag": "H2",
+          "x": 24,
+          "y": 2678.366943359375,
+          "w": 262,
+          "h": 76.78125,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 2803.148193359375,
+          "w": 262,
+          "h": 288,
+          "right": 286
+        },
+        {
+          "tag": "FIGCAPTION",
+          "x": 24,
+          "y": 3091.148193359375,
+          "w": 262,
+          "h": 344,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 3483.148193359375,
+          "w": 262,
+          "h": 1609.000244140625,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 6612.1484375,
+          "w": 262,
+          "h": 1346.71875,
+          "right": 286
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 8233.8671875,
+          "w": 270,
+          "h": 2307.8125,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 20,
+          "y": 10734.6796875,
+          "w": 270,
+          "h": 3403.15625,
+          "right": 290
+        },
+        {
+          "tag": "DIV",
+          "x": 24,
+          "y": 14412.8359375,
+          "w": 262,
+          "h": 599.5,
+          "right": 286
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

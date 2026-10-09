@@ -1,0 +1,55 @@
+{
+  "status": "pass",
+  "checkedAt": "2026-10-08T15:46:42.146Z",
+  "assertions": 356,
+  "cases": [
+    "source equality, graph integrity, gnomonic projection and radius",
+    "capture once, unhover-to-scroll race, reversals and canonical release",
+    "deterministic default/deep jumps and finale-zero boundary",
+    "exact exponential easing at 60/165fps and analytic integral",
+    "frozen/offscreen guards preserve phase, velocity and pending return",
+    "real store OR interaction ownership, validation and synchronous capture"
+  ],
+  "geometry": [
+    {
+      "id": "Cen",
+      "stars": 17,
+      "edges": 16,
+      "supporting": 12,
+      "mainRadius": 0.8152329188561248,
+      "fullRadius": 0.9410560945472158,
+      "projectionError": 4.817774512666517e-10
+    },
+    {
+      "id": "Gem",
+      "stars": 17,
+      "edges": 16,
+      "supporting": 12,
+      "mainRadius": 0.8270382733518755,
+      "fullRadius": 0.9734426955700934,
+      "projectionError": 4.93313834226683e-10
+    },
+    {
+      "id": "Cyg",
+      "stars": 10,
+      "edges": 9,
+      "supporting": 12,
+      "mainRadius": 0.8166624042533752,
+      "fullRadius": 0.9945674757156592,
+      "projectionError": 4.961370758671535e-10
+    }
+  ],
+  "metrics": {
+    "maxProjectionError": 4.961370758671535e-10,
+    "refreshRatePhaseDifference": 1.1102230246251565e-16,
+    "refreshRateVelocityDifference": 1.3877787807814457e-17,
+    "pauseSnapPhaseDifference": 8.647962757013516e-8
+  },
+  "production": {
+    "ownerCases": 64,
+    "preservedBaselineFiles": 95,
+    "locales": 2,
+    "projects": 3,
+    "eduraReader": "pending R6.2"
+  }
+}

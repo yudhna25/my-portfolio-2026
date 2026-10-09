@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "changed": [
+    "AGENTS.md",
+    "src/3d/utils/cameraPath.js",
+    "src/App.jsx",
+    "src/components/effects/PortalHeading.jsx",
+    "src/components/sections/Skills.jsx",
+    "src/data/skills.js",
+    "src/i18n/locales/en.json",
+    "src/i18n/locales/vi.json"
+  ],
+  "kept": 88,
+  "newSource": [
+    "src/stores/useSkillsStore.js",
+    "src/3d/components/SkillsSymbols.jsx"
+  ],
+  "rendererAndAnchorPreserved": true,
+  "headAndIndexPreserved": true,
+  "agentsPrefixPreserved": true
+}

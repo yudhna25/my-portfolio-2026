@@ -1,0 +1,25 @@
+{
+  "prototypeUnchanged": true,
+  "fourStarAndNebulaShaderStringsExactlyPreserved": true,
+  "noFrameAllocationsInProductionCallbacks": true,
+  "tiers": {
+    "high": {
+      "count": 10000,
+      "minZ": -299.968505859375,
+      "maxZ": 129.95388793945312,
+      "bufferBytes": 200000
+    },
+    "medium": {
+      "count": 4000,
+      "minZ": -299.8434143066406,
+      "maxZ": 129.88986206054688,
+      "bufferBytes": 80000
+    },
+    "low": {
+      "count": 1500,
+      "minZ": -299.9168701171875,
+      "maxZ": 129.81202697753906,
+      "bufferBytes": 30000
+    }
+  }
+}

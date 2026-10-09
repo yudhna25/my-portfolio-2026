@@ -1,0 +1,80 @@
+{
+  "protectedFiles": [
+    "src/3d/components/CameraRig.jsx",
+    "src/3d/hooks/useScrollProgress.js",
+    "src/stores/useScrollStore.js",
+    "src/3d/components/StarField.jsx",
+    "src/3d/components/BlackHole.jsx",
+    "src/3d/components/BlackHoleSystem.jsx",
+    "src/3d/components/BlackHoleBloomMask.jsx",
+    "src/3d/shaders/blackHole.js"
+  ],
+  "frameAudit": [
+    {
+      "file": "src/3d/components/BlackHole.jsx",
+      "line": 43
+    },
+    {
+      "file": "src/3d/components/CameraRig.jsx",
+      "line": 40
+    },
+    {
+      "file": "src/3d/components/FloatingObjects.jsx",
+      "line": 20
+    },
+    {
+      "file": "src/3d/components/LabTelemetry.jsx",
+      "line": 11
+    },
+    {
+      "file": "src/3d/components/Nebula.jsx",
+      "line": 56
+    },
+    {
+      "file": "src/3d/components/OrbitalSkills.jsx",
+      "line": 39
+    },
+    {
+      "file": "src/3d/components/ParticleFieldDemo.jsx",
+      "line": 46
+    },
+    {
+      "file": "src/3d/components/ShootingStars.jsx",
+      "line": 36
+    },
+    {
+      "file": "src/3d/components/StarField.jsx",
+      "line": 57
+    },
+    {
+      "file": "src/3d/hooks/useSectionAnchor.js",
+      "line": 36
+    }
+  ],
+  "meteorFrames": 2000,
+  "quality": {
+    "high": 24000,
+    "medium": 12000,
+    "low": 1500
+  },
+  "rays": {
+    "high": {
+      "steps": 192,
+      "step": 0.09,
+      "resolution": 0.85,
+      "maxResolution": 1280
+    },
+    "medium": {
+      "steps": 160,
+      "step": 0.11,
+      "resolution": 0.8,
+      "maxResolution": 1024
+    },
+    "low": {
+      "steps": 128,
+      "step": 0.14,
+      "resolution": 0.75,
+      "maxResolution": 768
+    }
+  }
+}

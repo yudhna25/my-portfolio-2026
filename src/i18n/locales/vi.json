@@ -1,0 +1,357 @@
+{
+  "hero": {
+    "portfolio": "PORTFOLIO",
+    "year": "2026",
+    "name": "TRẦN VŨ ANH DUY",
+    "tagline": "Creative Designer",
+    "subTagline": "Nối nhịp giữa UI chức năng và cách kể chuyện điện ảnh.",
+    "scrollIndicator": "CUỘN ĐỂ BẮT ĐẦU HÀNH TRÌNH"
+  },
+  "about": {
+    "sectionLabel": "The Navigator",
+    "heading": "TRẦN VŨ / ANH DUY",
+    "subLabel": "Creative Designer — UX/UI & Motion",
+    "bioFirst": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
+    "bioSecond": "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế.",
+    "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
+    "photoCaption": "FIG.01 — NGƯỜI DẪN ĐƯỜNG",
+    "avatarAlt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+    "toolsLabel": "KHO VŨ KHÍ PHẦN MỀM",
+    "skillsLabel": "NĂNG LỰC CỐT LÕI",
+    "tools": {
+      "figma": "Figma",
+      "photoshop": "Photoshop",
+      "illustrator": "Illustrator",
+      "afterEffects": "After Effects",
+      "videoEditing": "Premiere/DaVinci Resolve",
+      "generativeAi": "AI Tools (Generative)"
+    },
+    "coreSkills": [
+      "Design Thinking",
+      "AI-Assisted Design",
+      "Motion Graphics",
+      "Project Management",
+      "Time Management",
+      "Adaptability",
+      "Teamwork",
+      "Attention to Detail"
+    ],
+    "portraitToggle": "Giữ màu chân dung",
+    "portraitHint": "Di chuột hoặc dùng Tab để xem màu. Chạm để bật hoặc tắt màu."
+  },
+  "works": {
+    "sectionLabel": "Chòm Sao Dự Án",
+    "heading": "CHÒM SAO DỰ ÁN",
+    "cursorCta": "XEM",
+    "projects": {
+      "eduraLms": {
+        "title": "EDURA LMS",
+        "category": "Product Design",
+        "description": "Nền tảng học tập thiết kế để chống lại sự mệt mỏi của người dùng bằng hệ thống phân cấp thị giác chặt chẽ và hành trình mượt mà. Được đánh giá 'Excellent' về đổi mới UX.",
+        "tags": [
+          "UX Research",
+          "UI Design",
+          "Prototyping"
+        ],
+        "linkUrl": "https://www.behance.net/gallery/241524417/Edura-LMS",
+        "previewAlt": "Ảnh giới thiệu dự án EDURA LMS"
+      },
+      "verisApp": {
+        "title": "VERIS APP",
+        "category": "UX/UI Design",
+        "description": "Ứng dụng mạng xã hội thế hệ mới ưu tiên quyền riêng tư và cảm xúc người dùng. Tái định nghĩa giao diện thuật toán feed bằng sự rõ ràng.",
+        "tags": [
+          "Mobile App",
+          "User Interface",
+          "Interaction"
+        ],
+        "caseStudyLabel": "Case study coming soon",
+        "previewAlt": "Ảnh giới thiệu ứng dụng VERIS"
+      },
+      "viePerfume": {
+        "title": "VIE PERFUME",
+        "category": "Graphic Design",
+        "description": "Bộ nhận diện thương hiệu toàn diện cho dòng nước hoa cao cấp. Typography tối giản và thiết kế bao bì gói trọn sự thanh lịch của hương thơm.",
+        "tags": [
+          "Branding",
+          "Packaging",
+          "Visual Identity"
+        ],
+        "caseStudyLabel": "Case study coming soon",
+        "previewAlt": "Ảnh nhận diện thương hiệu nước hoa VIE"
+      }
+    },
+    "tagsLabel": "Chuyên môn",
+    "viewCaseStudy": "Xem case study",
+    "selectLabel": "Chọn dự án",
+    "interactionHint": "Di chuột hoặc dùng Tab để xem. Chạm / nhấn để giữ lựa chọn; chạm lại, chạm nền hoặc Escape để bỏ chọn.",
+    "behanceReference": "Tham khảo trên Behance",
+    "comingSoon": "Case study sắp ra mắt",
+    "constellations": {
+      "edura": "Centaurus",
+      "veris": "Gemini",
+      "vie": "Cygnus"
+    }
+  },
+  "skills": {
+    "heading": "Tinh Vân Kỹ Năng",
+    "toolsLabel": "Công cụ thiết kế",
+    "competenciesLabel": "Năng lực cốt lõi",
+    "technicalLabel": "Kỹ thuật",
+    "commonLabel": "Kỹ năng làm việc chung",
+    "stageLabel": "Sân khấu logo sao",
+    "interactionHint": "Di chuột hoặc dùng Tab để chọn công cụ. Chạm để chọn, chạm lại hoặc nhấn Escape để bỏ chọn.",
+    "clearSelection": "Bỏ chọn công cụ",
+    "activeTool": "Đang chọn {{tool}}",
+    "idleStage": "Chọn một công cụ để xem logo sao và năng lực liên quan.",
+    "toolNames": {
+      "figma": "Figma",
+      "photoshop": "Photoshop",
+      "illustrator": "Illustrator",
+      "after-effects": "After Effects",
+      "premiere-pro": "Premiere",
+      "davinci-resolve": "DaVinci Resolve",
+      "ai": "AI Tools"
+    },
+    "abilityNames": {
+      "wireframing": "Wireframing",
+      "prototyping": "Prototyping",
+      "designThinking": "Design Thinking",
+      "imageEditing": "Xử lý ảnh",
+      "compositing": "Compositing",
+      "vectorDesign": "Thiết kế vector",
+      "brandingPackaging": "Branding/Packaging",
+      "motionGraphics": "Motion Graphics",
+      "vfx": "VFX",
+      "videoEditing": "Dựng phim",
+      "aiAssistedDesign": "AI-Assisted Design",
+      "teamwork": "Teamwork",
+      "projectManagement": "Project Management",
+      "timeManagement": "Time Management",
+      "adaptability": "Adaptability",
+      "attentionToDetail": "Attention to Detail"
+    },
+    "technicalNames": {
+      "web": "HTML/CSS/JS cơ bản",
+      "react": "React (đang học)"
+    },
+    "aiMembers": "ChatGPT · Claude · Antigravity"
+  },
+  "education": {
+    "heading": "Bản Đồ Sao",
+    "institutions": {
+      "saigonUniversity": {
+        "name": "Saigon University",
+        "period": "2021–2026",
+        "degree": "Cử nhân Công nghệ Thông tin",
+        "description": "Tốt nghiệp loại Giỏi. Trọng tâm: Phân tích & Thiết kế Hệ thống, HCI, Usability Testing, Prototyping Web/App."
+      },
+      "arenaMultimedia": {
+        "name": "Arena Multimedia",
+        "period": "2024–nay",
+        "degree": "Advanced Diploma in Multimedia",
+        "description": "Loại Distinction kỳ 2 (UX/UI). Trọng tâm: Thiết kế lấy người dùng làm trung tâm, prototyping mobile, wireframing, web responsive."
+      },
+      "greenAcademy": {
+        "name": "Green Academy",
+        "period": "2022–2023",
+        "degree": "Chứng chỉ Dựng phim Chuyên nghiệp",
+        "description": "Loại Distinction. Trọng tâm: VFX compositing, motion graphics. Học viên xuất sắc — Premiere & After Effects."
+      }
+    },
+    "mapNote": "Ba hướng học tập song song, cùng nuôi dưỡng tư duy thiết kế.",
+    "interactionHint": "Di chuột hoặc dùng Tab để đánh thức một chòm sao. Chạm để chọn; chạm nền hoặc Escape để bỏ chọn.",
+    "clearSelection": "Tan về nền sao",
+    "constellations": {
+      "saigonUniversity": "Circinus",
+      "greenAcademy": "Telescopium",
+      "arenaMultimedia": "Pictor"
+    }
+  },
+  "experience": {
+    "sectionLabel": "Voyage Log",
+    "heading": "Nhật Ký Hành Trình",
+    "positions": {
+      "hosanaMedia": {
+        "company": "HOSANA MEDIA",
+        "role": "Multimedia Executive",
+        "period": "Sep 2024 – Feb 2025",
+        "type": "Full-time",
+        "description": "Sản xuất ấn phẩm marketing có sức ảnh hưởng cao (bao bì, banner). Quản lý trọn vẹn quy trình quay dựng TVC & MV."
+      },
+      "upwork": {
+        "company": "UPWORK",
+        "role": "Multimedia Creator",
+        "period": "2024 – nay",
+        "type": "Freelance",
+        "description": "Sáng tạo và tối ưu nội dung video cho tăng trưởng đa nền tảng. Quay dựng video quảng bá. Dịch vụ thiết kế UI/Visual."
+      },
+      "designveloper": {
+        "company": "DESIGNVELOPER",
+        "role": "UX/UI Designer Intern",
+        "period": "Sep 2025 – Dec 2025",
+        "type": "Internship",
+        "description": "Nghiên cứu UX qua khảo sát. Thiết kế UI nhất quán thương hiệu, tối ưu layout và typography. Bàn giao thiết kế cho đội ngũ phát triển."
+      }
+    }
+  },
+  "contact": {
+    "sectionLabel": "Transmission",
+    "heading": "HÃY KẾT NỐI",
+    "alternateHeading": "LET'S CONNECT",
+    "subHeading": "Gửi một tín hiệu — tôi luôn mở tần số.",
+    "emailCta": "GỬI TÍN HIỆU",
+    "email": "anhduy25work@gmail.com",
+    "emailUrl": "mailto:anhduy25work@gmail.com",
+    "phone": "0822 021 418",
+    "telemetryFreq": "TẦN SỐ: 1420.405 MHz // ĐƯỜNG HYDROGEN (HI)",
+    "radioTerminal": "BỘ THU PHÁT KHÔNG GIAN SÂU",
+    "copyDispatch": "SAO CHÉP TÍN HIỆU",
+    "signalTransmitted": "ĐÃ TRUYỀN TÍN HIỆU // GÓI TIN ĐÃ GỬI TỚI KHOANG LÁI",
+    "facebookUrl": "https://www.facebook.com/tvad.25",
+    "linkedinUrl": "",
+    "behanceUrl": "",
+    "facebookLabel": "Facebook",
+    "linkedinLabel": "LinkedIn",
+    "behanceLabel": "Behance"
+  },
+  "nav": {
+    "menuLabel": "Menu",
+    "menuTitle": "Khám phá hành trình",
+    "closeMenu": "Đóng menu điều hướng",
+    "closeLabel": "Đóng",
+    "languageLabel": "Ngôn ngữ",
+    "langVi": "Vi",
+    "langEn": "En",
+    "langViFull": "Tiếng Việt",
+    "langEnFull": "English",
+    "socialPending": "Đường dẫn này đang được cập nhật.",
+    "logo": "ANH DUY",
+    "label": "Điều hướng chính",
+    "homeLabel": "ANH DUY — Về đầu trang",
+    "skip": "Chuyển đến nội dung chính",
+    "openMenu": "Mở menu điều hướng",
+    "menuPending": "Menu điều hướng đang được chuẩn bị.",
+    "about": "Về tôi",
+    "works": "Dự án",
+    "skills": "Kỹ năng",
+    "education": "Học vấn",
+    "experience": "Kinh nghiệm",
+    "contact": "Liên hệ",
+    "hero": "Khởi đầu",
+    "missionProgress": "Tiến độ hành trình"
+  },
+  "footer": {
+    "label": "Chân trang",
+    "copyright": "© 2026 Trần Vũ Anh Duy — Được xây dựng giữa các vì sao.",
+    "disciplines": "Đồ họa / Đa phương tiện / UX/UI",
+    "buildCredit": "Xây dựng với GSAP {{version}}",
+    "websiteLabel": "Trang web",
+    "websiteUrl": ""
+  },
+  "preloader": {
+    "counterLabel": "ĐANG KẾT NỐI VỚI VŨ TRỤ...",
+    "counterRange": "0–100%",
+    "minimalLabel": "STELLAR ODYSSEY — 2026"
+  },
+  "common": {
+    "opensInNewTab": "mở trong tab mới",
+    "audio": {
+      "label": "Âm thanh không gian",
+      "prefix": "SOUND:",
+      "on": "ON",
+      "off": "OFF",
+      "turnOn": "Bật âm thanh không gian",
+      "turnOff": "Tắt âm thanh không gian",
+      "unavailable": "Không thể bật âm thanh trong trình duyệt này. Bạn có thể thử lại."
+    },
+    "theme": {
+      "toLight": "Chuyển chế độ sáng",
+      "toDark": "Chuyển chế độ tối"
+    },
+    "profile": {
+      "displayName": "TRẦN VŨ ANH DUY",
+      "englishName": "Tran Vu Anh Duy",
+      "role": "Creative Designer",
+      "disciplines": "UX/UI + Đồ họa + Motion"
+    }
+  },
+  "edura": {
+    "metaTitle": "EDURA LMS — UI/UX concept · Trần Vũ Anh Duy",
+    "metaDescription": "Đồ án cuối kỳ UX/UI tại Arena Multimedia: concept và prototype EDURA LMS trên Figma. Vai trò Lead UI, quyết định giao diện và những giới hạn thực tế của dự án.",
+    "overview": {
+      "intro": {
+        "heading": "EDURA LMS",
+        "body": "EDURA là concept và prototype UI/UX trên Figma cho một nền tảng quản lý học tập dành cho học viên tại các trung tâm đào tạo. Thiết kế hướng tới việc đưa lịch học, điểm số, học phí và bài tập về cùng một nơi."
+      },
+      "role": {
+        "heading": "Vai trò: Lead UI",
+        "body": "Trong vai trò Lead UI, tôi đưa ra các quyết định về quy tắc bố cục, màu chủ đạo và thiết kế hệ thống giao diện của EDURA."
+      }
+    },
+    "problem": {
+      "framing": {
+        "heading": "Thông tin học tập nằm ở nhiều nơi",
+        "body": "Tài liệu dự án đặt vấn đề về lịch học, tài liệu và hạn nộp bài nằm trên nhiều kênh thông tin. Hướng giải pháp của EDURA là tập trung các thông tin này trong một giao diện dành cho học viên."
+      }
+    },
+    "decisions": {
+      "layout": {
+        "heading": "Quy tắc bố cục",
+        "body": "Tôi phụ trách các quyết định về quy tắc bố cục. Ở hình tổng quan, các lối vào bảng điểm, lịch học, học phí và khóa học được đặt cạnh nhau; khu vực điểm danh và tiến độ học tập xuất hiện bên dưới."
+      },
+      "color": {
+        "heading": "Màu chủ đạo",
+        "body": "Tôi phụ trách quyết định về màu chủ đạo. Tư liệu EDURA thể hiện xanh lam ở nhận diện và giao diện, kết hợp các bề mặt sáng và những nhóm chức năng có màu riêng trong hình tổng quan."
+      },
+      "system": {
+        "heading": "Thiết kế hệ thống giao diện",
+        "body": "Thiết kế hệ thống giao diện là một phần phạm vi Lead UI tôi phụ trách cho concept và prototype EDURA trên Figma."
+      },
+      "heading": "Các quyết định UI"
+    },
+    "artifacts": {
+      "overview": {
+        "body": "Mockup EDURA giới thiệu các nhóm thông tin và thao tác như bảng điểm, lịch học, học phí, khóa học, điểm danh, bài tập, nộp bài và tiến độ. Đây là hình tổng quan thiết kế, chưa phải chuỗi màn hình mô tả đầy đủ một luồng thao tác."
+      },
+      "direction": {
+        "body": "Tài liệu concept đề xuất tập trung thông tin học tập, dashboard theo dõi tiến trình và hỗ trợ theo nhu cầu trung tâm. Những mô tả này thể hiện định hướng thiết kế; chưa chứng minh các tính năng đã vận hành hoặc tạo ra tác động đo được."
+      },
+      "heading": "Giao diện và định hướng"
+    },
+    "results": {
+      "deliverables": {
+        "heading": "Kết quả ở cấp concept và prototype",
+        "body": "Thiết kế được thể hiện dưới dạng concept và prototype UI/UX trên Figma."
+      }
+    },
+    "eyebrow": "Thiết kế sản phẩm · Concept & prototype",
+    "skip": "Đi đến nội dung dự án",
+    "return": "Trở lại dự án",
+    "viewOriginal": "Xem ảnh gốc",
+    "behance": "Hồ sơ dự án trên Behance",
+    "context": "Đồ án cuối kỳ của học kỳ UX/UI tại Arena Multimedia.",
+    "reflection": {
+      "heading": "Nhìn lại đồ án",
+      "prototype": "Giữa quá trình làm đồ án, nhóm thiếu một thành viên, khiến phần prototype bị chững lại trong một khoảng thời gian.",
+      "references": "Dự án cũng có ít mẫu tham khảo từ các sản phẩm LMS công khai thông tin và giao diện."
+    },
+    "figures": {
+      "overview": {
+        "alt": "Mockup trang tổng quan EDURA với bảng điểm, lịch học, học phí, khóa học, điểm danh, bài tập và tiến độ.",
+        "caption": "Bản tổng quan giao diện EDURA; số liệu trong mockup là dữ liệu minh họa.",
+        "name": "Tổng quan giao diện"
+      },
+      "problem": {
+        "alt": "Slide mô tả thông tin học tập phân tán và khó khăn theo dõi lịch học.",
+        "caption": "Cách đặt vấn đề trong tài liệu concept EDURA.",
+        "name": "Thông tin học tập nằm ở nhiều nơi"
+      },
+      "solution": {
+        "alt": "Slide định hướng EDURA: tập trung thông tin, hỗ trợ tự động, dashboard và tùy biến theo trung tâm.",
+        "caption": "Định hướng giải pháp của concept EDURA. Trích dẫn trong slide là thông điệp thiết kế.",
+        "name": "Định hướng giải pháp"
+      }
+    }
+  }
+}

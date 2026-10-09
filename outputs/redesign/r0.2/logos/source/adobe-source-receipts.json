@@ -1,0 +1,46 @@
+[
+  {
+    "id": "photoshop",
+    "url": "https://www.adobe.com/cc-shared/assets/img/product-icons/svg/photoshop.svg",
+    "finalUrl": "https://www.adobe.com/cc-shared/assets/img/product-icons/svg/photoshop.svg",
+    "httpStatus": 200,
+    "contentType": "image/svg+xml",
+    "bytes": 1480,
+    "sha256": "32d8d8a42e006e84e464986955c3035a2efa2970827a1ac1e38bef12fc223a33",
+    "identicalPathGeometry": true,
+    "checkedAt": "2026-10-07T17:40:44.527Z"
+  },
+  {
+    "id": "illustrator",
+    "url": "https://www.adobe.com/cc-shared/assets/img/product-icons/svg/illustrator.svg",
+    "finalUrl": "https://www.adobe.com/cc-shared/assets/img/product-icons/svg/illustrator.svg",
+    "httpStatus": 200,
+    "contentType": "image/svg+xml",
+    "bytes": 1006,
+    "sha256": "325b4dd225461135f9af1b40221ffb766bb7249abd9943ac115efa33c714acaf",
+    "identicalPathGeometry": true,
+    "checkedAt": "2026-10-07T17:40:44.596Z"
+  },
+  {
+    "id": "after-effects",
+    "url": "https://www.adobe.com/cc-shared/assets/img/product-icons/svg/after-effects.svg",
+    "finalUrl": "https://www.adobe.com/cc-shared/assets/img/product-icons/svg/after-effects.svg",
+    "httpStatus": 200,
+    "contentType": "image/svg+xml",
+    "bytes": 1248,
+    "sha256": "23653d88991cd3bf3da2b9ba3efc46ddef756f013c9337993c8d158fbfd5b675",
+    "identicalPathGeometry": true,
+    "checkedAt": "2026-10-07T17:40:44.673Z"
+  },
+  {
+    "id": "premiere-pro",
+    "url": "https://www.adobe.com/cc-shared/assets/img/product-icons/svg/premiere-pro.svg",
+    "finalUrl": "https://www.adobe.com/cc-shared/assets/img/product-icons/svg/premiere-pro.svg",
+    "httpStatus": 200,
+    "contentType": "image/svg+xml",
+    "bytes": 1107,
+    "sha256": "bb8a26c488d8ea444e88878b83faf35d7f7760ecff0a11410270e641b2b905ea",
+    "identicalPathGeometry": true,
+    "checkedAt": "2026-10-07T17:40:44.739Z"
+  }
+]

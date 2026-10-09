@@ -1,0 +1,27 @@
+[
+  {
+    "case": "1024 desktop En",
+    "firstLeft": 390.21875,
+    "lastRight": 982,
+    "listDisplay": "flex",
+    "logoRight": 134.015625,
+    "width": 1014
+  },
+  {
+    "case": "390 mobile En, callback click + Enter",
+    "focused": true,
+    "listDisplay": "none",
+    "menuCalls": "Menu clicks: 2",
+    "menuHeight": 44,
+    "menuWidth": 44,
+    "outline": "2px",
+    "width": 380
+  },
+  {
+    "case": "320 mobile En",
+    "logoRight": 126.015625,
+    "menuLeft": 242,
+    "menuRight": 286,
+    "width": 310
+  }
+]

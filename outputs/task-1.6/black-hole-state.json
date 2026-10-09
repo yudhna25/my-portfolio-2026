@@ -1,0 +1,18 @@
+{
+  "fps": 1,
+  "points": 10000,
+  "cameraZ": -160,
+  "reduced": false,
+  "scrollY": 0,
+  "maxScroll": 2790,
+  "calls": 7,
+  "geometries": 7,
+  "textures": 0,
+  "dpr": 1,
+  "viewport": [
+    1091,
+    930
+  ],
+  "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "visibility": "visible"
+}

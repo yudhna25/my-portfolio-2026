@@ -1,0 +1,24 @@
+{
+  "before": {
+    "start": 6241,
+    "exists": true
+  },
+  "after": {
+    "locked": "true",
+    "imageRect": {
+      "x": 49,
+      "y": 171.90625,
+      "width": 886,
+      "height": 553.75,
+      "top": 171.90625,
+      "right": 935,
+      "bottom": 725.65625,
+      "left": 49
+    },
+    "flareOpacity": "0",
+    "flare": "matrix(1, 0, 0, 1, 710.55, 0)",
+    "label": "[TARGET LOCKED // SPEC: 2026]",
+    "rootPointer": "none"
+  },
+  "errors": []
+}

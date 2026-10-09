@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-07T17:42:11.832031+00:00",
+  "assertions": 349,
+  "sourceFilesUnchanged": 92,
+  "assetFilesVerified": 26,
+  "uniqueAssets": 24,
+  "claims": 19,
+  "copyBlocksViEn": 10,
+  "newProductImages": 0,
+  "newHtmlSourceVerified": 1,
+  "newScreenshotDecoded": 1,
+  "headAndTrackedStatusUnchanged": true,
+  "agentsOriginalPrefixPreserved": true,
+  "errors": [],
+  "readiness": "verified-partial-reader-handoff; detailed-flow-outcome-author-reflection-missing"
+}

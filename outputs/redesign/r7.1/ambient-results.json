@@ -1,0 +1,200 @@
+{
+  "status": "pass",
+  "base": "http://127.0.0.1:5173",
+  "checkedAt": "2026-10-09T01:24:54.100Z",
+  "configurations": [
+    {
+      "width": 1440,
+      "deviceScaleFactor": 1.75,
+      "poses": [
+        {
+          "label": "ambient-yields",
+          "chapter": "finale",
+          "p": 0.58,
+          "manual": true,
+          "phase": {
+            "progress": 0.58,
+            "label": 0,
+            "travel": 1,
+            "angle": 18,
+            "radius": 0,
+            "figure": 0,
+            "stars": 0,
+            "trails": 0,
+            "cloud": 1,
+            "collapse": 0,
+            "hole": 0,
+            "flare": 0,
+            "contact": 0,
+            "phase": "nebula"
+          },
+          "orbit": {
+            "phase": 0,
+            "origin": 0,
+            "velocity": 0,
+            "latched": true,
+            "visited": true,
+            "captures": 1,
+            "resumePending": false
+          },
+          "selected": "edura",
+          "reduced": false,
+          "language": "vi",
+          "visible": false,
+          "trailVisible": false,
+          "trailSum": 0,
+          "ambientVisible": false,
+          "groups": [
+            {
+              "name": "works-edura",
+              "position": [
+                12.415340188653714,
+                1.1085125168440815,
+                0
+              ],
+              "world": [
+                26.94352313018307,
+                4.374878569146049,
+                -157.70315446934615
+              ],
+              "scale": [
+                3.602665679743265,
+                3.602665679743265,
+                3.602665679743265
+              ]
+            },
+            {
+              "name": "works-veris",
+              "position": [
+                -6.207670094326854,
+                4.228512516844082,
+                0
+              ],
+              "world": [
+                19.917426670452215,
+                7.49342260851359,
+                -174.95017054787644
+              ],
+              "scale": [
+                3.602665679743265,
+                3.602665679743265,
+                3.602665679743265
+              ]
+            },
+            {
+              "name": "works-vie",
+              "position": [
+                -6.207670094326862,
+                -2.0114874831559177,
+                0
+              ],
+              "world": [
+                19.741272561243544,
+                1.2563345297785085,
+                -174.87735552257524
+              ],
+              "scale": [
+                3.602665679743265,
+                3.602665679743265,
+                3.602665679743265
+              ]
+            }
+          ],
+          "camera": [
+            2,
+            4,
+            -160
+          ],
+          "cameraError": 0,
+          "hole": 0,
+          "gas": [
+            1,
+            0,
+            0,
+            0.58
+          ],
+          "enabled": 1,
+          "rayCenter": [
+            0.7500695363920289,
+            0.5755375076347615
+          ],
+          "visibility": 1,
+          "labels": {
+            "hidden": false,
+            "inert": true,
+            "opacity": 0,
+            "visibility": "hidden",
+            "ariaHidden": null,
+            "top": -16,
+            "height": 900
+          },
+          "contactText": {
+            "hidden": false,
+            "inert": true,
+            "opacity": 0,
+            "visibility": "hidden",
+            "ariaHidden": null,
+            "top": 144,
+            "height": 975.421875
+          },
+          "contact": {
+            "hidden": false,
+            "inert": false,
+            "opacity": 1,
+            "visibility": "visible",
+            "ariaHidden": null,
+            "top": 850.5,
+            "height": 1263.421875
+          },
+          "domProgress": 0.58,
+          "finaleHeightVH": 2.25,
+          "y": 10355.40625,
+          "dpr": 1.75,
+          "tier": "high",
+          "glError": 0,
+          "memory": {
+            "geometries": 15,
+            "textures": 23
+          },
+          "copyOctaves": 4,
+          "compiledOctaves": 4,
+          "trailVertices": 2112,
+          "canvas": 1,
+          "cameraWriters": 1,
+          "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "viewport": [
+            1440,
+            900
+          ],
+          "focus": "",
+          "triggers": [
+            "stellar-nav-auto-hide",
+            "anonymous",
+            "anonymous"
+          ],
+          "targets": 21
+        }
+      ],
+      "comparisons": [],
+      "native": [],
+      "benchmarks": [],
+      "lifecycle": [],
+      "errors": [],
+      "warnings": [
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+      ],
+      "quietAmbientSeen": true
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "limits": [
+    "Desktop Edge with emulated viewport/touch/reduced-motion; not a physical phone.",
+    "Precise held poses synchronize DOM scroll then hold the existing story store; native-wheel stream separately exercises the live producer.",
+    "Pixel equality covers the actual Canvas; DOM screenshots are separate.",
+    "Hidden state is simulated through visibilitychange."
+  ],
+  "browser": "154.0.4258.62"
+}

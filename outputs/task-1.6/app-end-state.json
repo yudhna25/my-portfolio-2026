@@ -1,0 +1,28 @@
+{
+  "backgrounds": [
+    {
+      "background": "rgb(245, 245, 240)",
+      "id": ""
+    },
+    {
+      "background": "rgb(26, 26, 26)",
+      "id": "about"
+    },
+    {
+      "background": "rgb(245, 245, 240)",
+      "id": "education"
+    },
+    {
+      "background": "rgb(26, 26, 26)",
+      "id": "work"
+    },
+    {
+      "background": "rgb(245, 245, 240)",
+      "id": "contact"
+    }
+  ],
+  "canvasCount": 1,
+  "loading": false,
+  "maxScroll": 3923,
+  "scrollY": 3923
+}

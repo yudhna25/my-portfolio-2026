@@ -1,0 +1,10 @@
+{
+  "events": 100021,
+  "marks": [
+    "R2.2-opening-O",
+    "R2.2-ejection"
+  ],
+  "format": "Chrome CDP trace gzip JSON",
+  "gpuTiming": "EXT_disjoint_timer_query_webgl2 ray-render region; not full frame",
+  "fileBytes": 1138856
+}

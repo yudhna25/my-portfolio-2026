@@ -1,0 +1,1369 @@
+{
+  "task": "R3.2",
+  "generatedAt": "2026-10-08T04:04:28.483361+00:00",
+  "kind": "actual-render-frame-manifest",
+  "frameCount": 48,
+  "groups": {
+    "hero": 12,
+    "hero-inspect": 3,
+    "dev-deep-link": 3,
+    "lens": 2,
+    "portal": 20,
+    "production-deep-link": 8
+  },
+  "heroWidths": [
+    320,
+    390,
+    768,
+    1024,
+    1440,
+    1920
+  ],
+  "heroLocales": [
+    "vi",
+    "en"
+  ],
+  "portalWidths": [
+    390,
+    1440
+  ],
+  "portalProgress": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "portalDirections": [
+    "forward",
+    "reverse"
+  ],
+  "evidenceFiles": [
+    "browser-results.json",
+    "preview-results.json",
+    "lens-results.json",
+    "lens-pixel-results.json",
+    "hero-pixels.json",
+    "visual-audit.md"
+  ],
+  "limitations": [
+    "Full PNG forward/reverse pairs can differ because ambient/yearglitch/Nav/old section entrance DOM has time-dependent state; shared camera/portal fields are compared separately below, without hiding fullpixel diff.",
+    "DPR1 desktop Edge screenshots and mobile viewport simulation; no physical phone/highDPR/mobilethermal acceptance implied.",
+    "Only five sampled portal poses per direction; intermediate continuous checks belong to browser telemetry.",
+    "Hero accessibleyear is2026; screenshot may capture final7 during100msglitch; do not infer cadence from static PNG.",
+    "Final reduced-motion transition-duration0s source update does not alter normal Hero/portal pixels; these files identify render artifacts by SHA256.",
+    "Retained old About/Works/Contact content is outside R3.2 redesign scope."
+  ],
+  "excludedHistoricalFailure": [
+    "screenshots/failure.png"
+  ],
+  "portalPairs": [
+    {
+      "width": 1440,
+      "transitionProgress": 0,
+      "paths": [
+        "screenshots/portal-1440-forward-0.png",
+        "screenshots/portal-1440-reverse-0.png"
+      ],
+      "fullPngPixelIdentical": false,
+      "changedPixels": 28115,
+      "maxChannelDifference": 63,
+      "sharedPoseAndUniformFieldsExact": true,
+      "comparedFields": [
+        "camera",
+        "mini",
+        "visibility",
+        "pull",
+        "center",
+        "scale",
+        "aperture",
+        "anchor",
+        "intensity"
+      ]
+    },
+    {
+      "width": 1440,
+      "transitionProgress": 0.25,
+      "paths": [
+        "screenshots/portal-1440-forward-0.25.png",
+        "screenshots/portal-1440-reverse-0.25.png"
+      ],
+      "fullPngPixelIdentical": false,
+      "changedPixels": 68,
+      "maxChannelDifference": 1,
+      "sharedPoseAndUniformFieldsExact": true,
+      "comparedFields": [
+        "camera",
+        "mini",
+        "visibility",
+        "pull",
+        "center",
+        "scale",
+        "aperture",
+        "anchor",
+        "intensity"
+      ]
+    },
+    {
+      "width": 1440,
+      "transitionProgress": 0.5,
+      "paths": [
+        "screenshots/portal-1440-forward-0.5.png",
+        "screenshots/portal-1440-reverse-0.5.png"
+      ],
+      "fullPngPixelIdentical": true,
+      "changedPixels": 0,
+      "maxChannelDifference": 0,
+      "sharedPoseAndUniformFieldsExact": true,
+      "comparedFields": [
+        "camera",
+        "mini",
+        "visibility",
+        "pull",
+        "center",
+        "scale",
+        "aperture",
+        "anchor",
+        "intensity"
+      ]
+    },
+    {
+      "width": 1440,
+      "transitionProgress": 0.75,
+      "paths": [
+        "screenshots/portal-1440-forward-0.75.png",
+        "screenshots/portal-1440-reverse-0.75.png"
+      ],
+      "fullPngPixelIdentical": false,
+      "changedPixels": 65137,
+      "maxChannelDifference": 10,
+      "sharedPoseAndUniformFieldsExact": true,
+      "comparedFields": [
+        "camera",
+        "mini",
+        "visibility",
+        "pull",
+        "center",
+        "scale",
+        "aperture",
+        "anchor",
+        "intensity"
+      ]
+    },
+    {
+      "width": 1440,
+      "transitionProgress": 1,
+      "paths": [
+        "screenshots/portal-1440-forward-1.png",
+        "screenshots/portal-1440-reverse-1.png"
+      ],
+      "fullPngPixelIdentical": false,
+      "changedPixels": 155127,
+      "maxChannelDifference": 250,
+      "sharedPoseAndUniformFieldsExact": true,
+      "comparedFields": [
+        "camera",
+        "mini",
+        "visibility",
+        "pull",
+        "center",
+        "scale",
+        "aperture",
+        "anchor",
+        "intensity"
+      ]
+    },
+    {
+      "width": 390,
+      "transitionProgress": 0,
+      "paths": [
+        "screenshots/portal-390-forward-0.png",
+        "screenshots/portal-390-reverse-0.png"
+      ],
+      "fullPngPixelIdentical": true,
+      "changedPixels": 0,
+      "maxChannelDifference": 0,
+      "sharedPoseAndUniformFieldsExact": true,
+      "comparedFields": [
+        "camera",
+        "mini",
+        "visibility",
+        "pull",
+        "center",
+        "scale",
+        "aperture",
+        "anchor",
+        "intensity"
+      ]
+    },
+    {
+      "width": 390,
+      "transitionProgress": 0.25,
+      "paths": [
+        "screenshots/portal-390-forward-0.25.png",
+        "screenshots/portal-390-reverse-0.25.png"
+      ],
+      "fullPngPixelIdentical": false,
+      "changedPixels": 2242,
+      "maxChannelDifference": 250,
+      "sharedPoseAndUniformFieldsExact": true,
+      "comparedFields": [
+        "camera",
+        "mini",
+        "visibility",
+        "pull",
+        "center",
+        "scale",
+        "aperture",
+        "anchor",
+        "intensity"
+      ]
+    },
+    {
+      "width": 390,
+      "transitionProgress": 0.5,
+      "paths": [
+        "screenshots/portal-390-forward-0.5.png",
+        "screenshots/portal-390-reverse-0.5.png"
+      ],
+      "fullPngPixelIdentical": true,
+      "changedPixels": 0,
+      "maxChannelDifference": 0,
+      "sharedPoseAndUniformFieldsExact": true,
+      "comparedFields": [
+        "camera",
+        "mini",
+        "visibility",
+        "pull",
+        "center",
+        "scale",
+        "aperture",
+        "anchor",
+        "intensity"
+      ]
+    },
+    {
+      "width": 390,
+      "transitionProgress": 0.75,
+      "paths": [
+        "screenshots/portal-390-forward-0.75.png",
+        "screenshots/portal-390-reverse-0.75.png"
+      ],
+      "fullPngPixelIdentical": false,
+      "changedPixels": 534,
+      "maxChannelDifference": 17,
+      "sharedPoseAndUniformFieldsExact": true,
+      "comparedFields": [
+        "camera",
+        "mini",
+        "visibility",
+        "pull",
+        "center",
+        "scale",
+        "aperture",
+        "anchor",
+        "intensity"
+      ]
+    },
+    {
+      "width": 390,
+      "transitionProgress": 1,
+      "paths": [
+        "screenshots/portal-390-forward-1.png",
+        "screenshots/portal-390-reverse-1.png"
+      ],
+      "fullPngPixelIdentical": false,
+      "changedPixels": 47064,
+      "maxChannelDifference": 250,
+      "sharedPoseAndUniformFieldsExact": true,
+      "comparedFields": [
+        "camera",
+        "mini",
+        "visibility",
+        "pull",
+        "center",
+        "scale",
+        "aperture",
+        "anchor",
+        "intensity"
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "path": "screenshots/hero-1024-en.png",
+      "imageSize": {
+        "width": 1024,
+        "height": 900
+      },
+      "bytes": 49644,
+      "sha256": "ea893eaa1ab7063b1da721a2d4caded1c30ab57e12ae3608c6845b970f3e90f2",
+      "fileModifiedAt": "2026-10-08T03:59:28.018833+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "hero",
+      "locale": "en",
+      "chapter": "hero",
+      "progress": 0,
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 1024,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/hero-1024-vi.png",
+      "imageSize": {
+        "width": 1024,
+        "height": 900
+      },
+      "bytes": 49771,
+      "sha256": "8a319e43f038b7ca2f11d9ba8a9497613ea89feec3572c62a887475c6e1d722b",
+      "fileModifiedAt": "2026-10-08T03:59:27.283693+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "hero",
+      "locale": "vi",
+      "chapter": "hero",
+      "progress": 0,
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 1024,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/hero-1440-en.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 72772,
+      "sha256": "805f9be0bb9c0c45853756062146bb2860cd2880b19c4167803dbfba75f12276",
+      "fileModifiedAt": "2026-10-08T03:59:29.565012+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "hero",
+      "locale": "en",
+      "chapter": "hero",
+      "progress": 0,
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/hero-1440-vi.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 72482,
+      "sha256": "9184cb3babc4e5ecb11d43019701e6751cab1c9f2a0a927acd655bae68faae8b",
+      "fileModifiedAt": "2026-10-08T03:59:28.818976+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "hero",
+      "locale": "vi",
+      "chapter": "hero",
+      "progress": 0,
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/hero-1920-en.png",
+      "imageSize": {
+        "width": 1920,
+        "height": 900
+      },
+      "bytes": 87558,
+      "sha256": "fcf6f550582b74ef90eff5f89111a9c55f8d790b8ab0c520c0f2dbfddb4d14cb",
+      "fileModifiedAt": "2026-10-08T03:59:31.130599+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "hero",
+      "locale": "en",
+      "chapter": "hero",
+      "progress": 0,
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 1920,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/hero-1920-vi.png",
+      "imageSize": {
+        "width": 1920,
+        "height": 900
+      },
+      "bytes": 90574,
+      "sha256": "bb34a842416b5fed4a77d1d16a4b39404e30fd312c5b58065e819b46e0fe950a",
+      "fileModifiedAt": "2026-10-08T03:59:30.384501+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "hero",
+      "locale": "vi",
+      "chapter": "hero",
+      "progress": 0,
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 1920,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/hero-320-en.png",
+      "imageSize": {
+        "width": 320,
+        "height": 844
+      },
+      "bytes": 23241,
+      "sha256": "31f51ecf49294a1021587cf3d2192a26816c7bc0fb7396600583e26e8d00879c",
+      "fileModifiedAt": "2026-10-08T03:59:23.464087+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "hero",
+      "locale": "en",
+      "chapter": "hero",
+      "progress": 0,
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 320,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/hero-320-vi.png",
+      "imageSize": {
+        "width": 320,
+        "height": 844
+      },
+      "bytes": 23027,
+      "sha256": "72d708ce61c06afa1114b6c96b12d8f65a244e709a8f124532343db906ea1c94",
+      "fileModifiedAt": "2026-10-08T03:59:22.671030+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "hero",
+      "locale": "vi",
+      "chapter": "hero",
+      "progress": 0,
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 320,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/hero-390-en.png",
+      "imageSize": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 26048,
+      "sha256": "13256d905fe8504c7761900415300379cfa9737146c59d3a976220aa6890fe4f",
+      "fileModifiedAt": "2026-10-08T03:59:24.804694+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "hero",
+      "locale": "en",
+      "chapter": "hero",
+      "progress": 0,
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/hero-390-vi.png",
+      "imageSize": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 25890,
+      "sha256": "d0d53bf8f4514da0c3b8435b5ac15b948927ad797c1174894da374ef9d29401a",
+      "fileModifiedAt": "2026-10-08T03:59:24.138356+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "hero",
+      "locale": "vi",
+      "chapter": "hero",
+      "progress": 0,
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/hero-768-en.png",
+      "imageSize": {
+        "width": 768,
+        "height": 900
+      },
+      "bytes": 39959,
+      "sha256": "e5722378e8eb2f458e4edf03f6c9218c7c82dd3755bd86425e5d050c7f25fe13",
+      "fileModifiedAt": "2026-10-08T03:59:26.443266+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "hero",
+      "locale": "en",
+      "chapter": "hero",
+      "progress": 0,
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 768,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/hero-768-vi.png",
+      "imageSize": {
+        "width": 768,
+        "height": 900
+      },
+      "bytes": 40231,
+      "sha256": "7ec913fb0aa9eae7e88682d951dc8c30e6566343b091a8d7fb0d6819bdfe1b0c",
+      "fileModifiedAt": "2026-10-08T03:59:25.730467+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "hero",
+      "locale": "vi",
+      "chapter": "hero",
+      "progress": 0,
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 768,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/inspect-1440.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 70226,
+      "sha256": "39804c9501abddd502a6d4e35658b58f761c1283830688ccc6a19d1568467812",
+      "fileModifiedAt": "2026-10-08T03:34:41.882709+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "hero-inspect",
+      "chapter": "hero",
+      "progress": 0,
+      "environment": "Vite dev",
+      "note": "Latest regenerated inspection frame; visual last digit may be 6 or 7 during valid100msflash.",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/inspect-320.png",
+      "imageSize": {
+        "width": 320,
+        "height": 844
+      },
+      "bytes": 23086,
+      "sha256": "6d6d14dc64aae8aaa6976638dec4793ee50aadb9a583db02749a7896f11dac88",
+      "fileModifiedAt": "2026-10-08T03:34:43.595330+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "hero-inspect",
+      "chapter": "hero",
+      "progress": 0,
+      "environment": "Vite dev",
+      "note": "Latest regenerated inspection frame; visual last digit may be 6 or 7 during valid100msflash.",
+      "viewport": {
+        "width": 320,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/inspect-390.png",
+      "imageSize": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 25890,
+      "sha256": "d0d53bf8f4514da0c3b8435b5ac15b948927ad797c1174894da374ef9d29401a",
+      "fileModifiedAt": "2026-10-08T03:34:42.747615+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "hero-inspect",
+      "chapter": "hero",
+      "progress": 0,
+      "environment": "Vite dev",
+      "note": "Latest regenerated inspection frame; visual last digit may be 6 or 7 during valid100msflash.",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/jump-about.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 184863,
+      "sha256": "9e8b13fc7ae0aa6b83c227ba6af5e65885101444deb96fefa8d00215a2ca51d2",
+      "fileModifiedAt": "2026-10-08T03:59:55.375504+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "dev-deep-link",
+      "sectionId": "about",
+      "hash": "#about",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/jump-transmission.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 83419,
+      "sha256": "0b3a0240770fd619a115c7749d2e960474c9db79b16877749ad914691bdc7bbe",
+      "fileModifiedAt": "2026-10-08T03:59:57.797582+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "dev-deep-link",
+      "sectionId": "transmission",
+      "hash": "#transmission",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/jump-work.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 271270,
+      "sha256": "ee71d2f2bf442406d88c5ffa7e9e3f1463e9fb3ab32564f1e4636c32ddc748ba",
+      "fileModifiedAt": "2026-10-08T03:59:56.607603+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "dev-deep-link",
+      "sectionId": "work",
+      "hash": "#work",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/lens-filter-active.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 71986,
+      "sha256": "79f91b97f44a3ed4d6e84f6fac14d27c568ac74fa3d3dad4f54dc6fa5cb4ba1b",
+      "fileModifiedAt": "2026-10-08T03:34:00.168987+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "lens",
+      "filter": "active",
+      "chapter": "hero",
+      "environment": "Vite dev",
+      "note": "Native pointer comparison, fullviewport image; measured lens region in lens-results.json.",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/lens-filter-disabled.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 71931,
+      "sha256": "b2f91c8c4a3f374a50355fe528faf571d4feef688fa5469d2e40f742f8afa97a",
+      "fileModifiedAt": "2026-10-08T03:34:00.210191+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "lens",
+      "filter": "disabled",
+      "chapter": "hero",
+      "environment": "Vite dev",
+      "note": "Native pointer comparison, fullviewport image; measured lens region in lens-results.json.",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-1440-forward-0.25.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 64264,
+      "sha256": "03e0cfe2b73a8df80176b589b80cf4a6d5e7cd096450d9fd27030a3cd58912af",
+      "fileModifiedAt": "2026-10-08T03:59:32.442506+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "portal",
+      "transitionProgress": 0.25,
+      "direction": "forward",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-1440-forward-0.5.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 14463,
+      "sha256": "c668c73dee4baf63a130f79938d640dbe7b26293719f773cca60e1becbcc72e8",
+      "fileModifiedAt": "2026-10-08T03:59:32.931233+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "portal",
+      "transitionProgress": 0.5,
+      "direction": "forward",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-1440-forward-0.75.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 425177,
+      "sha256": "0620b11fac0d16b8fc15ab115dee047dad9bbcd52dd98068241159f95ce98793",
+      "fileModifiedAt": "2026-10-08T03:59:33.504124+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "portal",
+      "transitionProgress": 0.75,
+      "direction": "forward",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-1440-forward-0.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 72441,
+      "sha256": "0b1b7a50fbde0017aea8e3095cbc983926012d45ecaccb2425ec331c13748383",
+      "fileModifiedAt": "2026-10-08T03:59:31.934416+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "hero",
+      "transitionProgress": 0.0,
+      "direction": "forward",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-1440-forward-1.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 197274,
+      "sha256": "045bf22b099b08c3505f4a5da3b76b8595fa0fb1ac727b5ab04f284f52611df5",
+      "fileModifiedAt": "2026-10-08T03:59:34.027187+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "about",
+      "transitionProgress": 1.0,
+      "direction": "forward",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-1440-reverse-0.25.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 64248,
+      "sha256": "6979519bb660cea5a2433b1c3fe4ceb9a3418ca73679bf0662282e045a6c3850",
+      "fileModifiedAt": "2026-10-08T03:59:36.140388+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "portal",
+      "transitionProgress": 0.25,
+      "direction": "reverse",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-1440-reverse-0.5.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 14463,
+      "sha256": "c668c73dee4baf63a130f79938d640dbe7b26293719f773cca60e1becbcc72e8",
+      "fileModifiedAt": "2026-10-08T03:59:35.632062+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "portal",
+      "transitionProgress": 0.5,
+      "direction": "reverse",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-1440-reverse-0.75.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 424955,
+      "sha256": "ef13f4cc64e5ef6ac2f9ee327bf6cb99ee8287e660340e7c00d6d193552642d5",
+      "fileModifiedAt": "2026-10-08T03:59:35.134746+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "portal",
+      "transitionProgress": 0.75,
+      "direction": "reverse",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-1440-reverse-0.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 71965,
+      "sha256": "b2f14f7d97bd265f0e7efbbad899ab26e26904c6cf046c9c37e8d9ce09673e46",
+      "fileModifiedAt": "2026-10-08T03:59:36.636500+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "hero",
+      "transitionProgress": 0.0,
+      "direction": "reverse",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-1440-reverse-1.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 195369,
+      "sha256": "ae91673bd7fe1b858219f3dca4ac8e883adb09621cf04290ae3277c759b97827",
+      "fileModifiedAt": "2026-10-08T03:59:34.539847+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "about",
+      "transitionProgress": 1.0,
+      "direction": "reverse",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-390-forward-0.25.png",
+      "imageSize": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 23042,
+      "sha256": "d26dba94a8ae78508499680c6731e6d090c96b7b869730d3a7168730bc099215",
+      "fileModifiedAt": "2026-10-08T03:59:39.106089+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "portal",
+      "transitionProgress": 0.25,
+      "direction": "forward",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-390-forward-0.5.png",
+      "imageSize": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 6386,
+      "sha256": "78933dcc8969e740fb37a45cb03fbe0127722f619625d2bb2104414168b2edcf",
+      "fileModifiedAt": "2026-10-08T03:59:39.589678+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "portal",
+      "transitionProgress": 0.5,
+      "direction": "forward",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-390-forward-0.75.png",
+      "imageSize": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 66440,
+      "sha256": "2d9c6420d71718d98082f2848fc93f2ec91872e129fbfa6d49797271f9a44aff",
+      "fileModifiedAt": "2026-10-08T03:59:40.085074+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "portal",
+      "transitionProgress": 0.75,
+      "direction": "forward",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-390-forward-0.png",
+      "imageSize": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 25890,
+      "sha256": "d0d53bf8f4514da0c3b8435b5ac15b948927ad797c1174894da374ef9d29401a",
+      "fileModifiedAt": "2026-10-08T03:59:38.626670+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "hero",
+      "transitionProgress": 0.0,
+      "direction": "forward",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-390-forward-1.png",
+      "imageSize": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 74483,
+      "sha256": "465d17ddf5e71ba2be9ed2b7d4dc656c38099af9821c73f4008f80d84f6c9a9e",
+      "fileModifiedAt": "2026-10-08T03:59:40.590063+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "about",
+      "transitionProgress": 1.0,
+      "direction": "forward",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-390-reverse-0.25.png",
+      "imageSize": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 26172,
+      "sha256": "f690f50a8f4b6c6264799a85bcff387185053f31b55b168e8f8cd1e23225e004",
+      "fileModifiedAt": "2026-10-08T03:59:42.554368+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "portal",
+      "transitionProgress": 0.25,
+      "direction": "reverse",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-390-reverse-0.5.png",
+      "imageSize": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 6386,
+      "sha256": "78933dcc8969e740fb37a45cb03fbe0127722f619625d2bb2104414168b2edcf",
+      "fileModifiedAt": "2026-10-08T03:59:42.066457+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "portal",
+      "transitionProgress": 0.5,
+      "direction": "reverse",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-390-reverse-0.75.png",
+      "imageSize": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 66439,
+      "sha256": "5016301086517c852da364f1588e3efcfc5d70bb27cdfd7529ce88bd8539c8d3",
+      "fileModifiedAt": "2026-10-08T03:59:41.584037+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "portal",
+      "transitionProgress": 0.75,
+      "direction": "reverse",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-390-reverse-0.png",
+      "imageSize": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 25890,
+      "sha256": "d0d53bf8f4514da0c3b8435b5ac15b948927ad797c1174894da374ef9d29401a",
+      "fileModifiedAt": "2026-10-08T03:59:43.034630+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "hero",
+      "transitionProgress": 0.0,
+      "direction": "reverse",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/portal-390-reverse-1.png",
+      "imageSize": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 78176,
+      "sha256": "e133f433f4783e87a2fb7b2085ae6c1534f51cf11fe753b8e3ae25ac93ee0b5a",
+      "fileModifiedAt": "2026-10-08T03:59:41.080236+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "portal",
+      "locale": "vi",
+      "chapter": "about",
+      "transitionProgress": 1.0,
+      "direction": "reverse",
+      "environment": "Vite dev",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/production-1440-about.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 190863,
+      "sha256": "78b181bbbf2e896b66ffb2928ba5576f4a3461455b3866e656c63c6fb8283024",
+      "fileModifiedAt": "2026-10-08T03:58:46.946785+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "production-deep-link",
+      "sectionId": "about",
+      "hash": "#about",
+      "environment": "production preview",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/production-1440-hero.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 71961,
+      "sha256": "5f6736daaa30f7e68ee379064551894fb045076f2ad6d8a6c29fbab7b43f3e59",
+      "fileModifiedAt": "2026-10-08T03:58:46.339838+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "production-deep-link",
+      "sectionId": "hero",
+      "hash": "",
+      "environment": "production preview",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/production-1440-transmission.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 87692,
+      "sha256": "9f9e6ce4efb9c2e734d143e8b07e661ff8189dd02676f33cd397d58c260df388",
+      "fileModifiedAt": "2026-10-08T03:58:48.159559+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "production-deep-link",
+      "sectionId": "transmission",
+      "hash": "#transmission",
+      "environment": "production preview",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/production-1440-work.png",
+      "imageSize": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 306323,
+      "sha256": "dbf2bb76d42b84cab681c348044985ad7e9debc496c43736aa25df46b1dec90a",
+      "fileModifiedAt": "2026-10-08T03:58:47.559790+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "production-deep-link",
+      "sectionId": "work",
+      "hash": "#work",
+      "environment": "production preview",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/production-390-about.png",
+      "imageSize": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 71467,
+      "sha256": "d56a077c944ffafec317d779622448461ac1b71455a2b7bb9beabf37b5134fed",
+      "fileModifiedAt": "2026-10-08T03:58:52.031362+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "production-deep-link",
+      "sectionId": "about",
+      "hash": "#about",
+      "environment": "production preview",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/production-390-hero.png",
+      "imageSize": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 25796,
+      "sha256": "f4d61cb3b21b4e178c29a47f8122ec2096c41751c40c7eada2b01e63edfa21c1",
+      "fileModifiedAt": "2026-10-08T03:58:51.457493+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "production-deep-link",
+      "sectionId": "hero",
+      "hash": "",
+      "environment": "production preview",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/production-390-transmission.png",
+      "imageSize": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 44706,
+      "sha256": "890052453cd7ce6a6c4f5a786fc55e39ffd00ca54e04b94ccab31281bd1ab12a",
+      "fileModifiedAt": "2026-10-08T03:58:53.176356+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "production-deep-link",
+      "sectionId": "transmission",
+      "hash": "#transmission",
+      "environment": "production preview",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    },
+    {
+      "path": "screenshots/production-390-work.png",
+      "imageSize": {
+        "width": 390,
+        "height": 844
+      },
+      "bytes": 126727,
+      "sha256": "2c312a442f027eca40376147e824502b8247712c7b386227582f651262ae32de",
+      "fileModifiedAt": "2026-10-08T03:58:52.612901+00:00",
+      "rendered": true,
+      "illustrationOnly": false,
+      "group": "production-deep-link",
+      "sectionId": "work",
+      "hash": "#work",
+      "environment": "production preview",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "source": "fullviewport PNG dimensions; harness DPR1"
+      }
+    }
+  ],
+  "verificationRuns": {
+    "browser": {
+      "started": "2026-10-08T03:59:18.606Z",
+      "finished": "2026-10-08T04:00:16.887Z"
+    },
+    "preview": {
+      "started": "2026-10-08T03:58:28.679Z",
+      "finished": "2026-10-08T03:58:58.438Z"
+    }
+  }
+}

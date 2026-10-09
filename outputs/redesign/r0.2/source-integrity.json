@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-07T17:50:41.033Z",
+  "protectedSourceFiles": 92,
+  "protectedOtherFiles": 2,
+  "r03ConcurrentFiles": [
+    {
+      "path": "outputs/redesign/r0.3/inspect-source.mjs",
+      "changedSinceR02Start": false
+    }
+  ],
+  "assets": 16,
+  "uniqueWebHashes": 10,
+  "browserImages": 47,
+  "headUnchanged": true,
+  "agentsOriginalPrefixUnchanged": true,
+  "progressRowsAdded": 1,
+  "errors": []
+}

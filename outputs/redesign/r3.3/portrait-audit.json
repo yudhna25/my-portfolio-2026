@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "source": "outputs/redesign/r0.2/portrait/avatar-cutout-color.webp",
+  "sha256": "6b2fea6dcbd2bd204fc0aa6c545cbe7a696670fc4532c992378c3393d53b511f",
+  "bytes": 66084,
+  "size": [
+    800,
+    1000
+  ],
+  "mode": "RGBA",
+  "alphaZero": 541430,
+  "alphaPartial": 258560,
+  "alphaFull": 10,
+  "alphaAtLeast240": 242694,
+  "alphaBounds": [
+    35,
+    16,
+    664,
+    1000
+  ],
+  "transparentProbes": 11,
+  "composite": "portrait-on-dark.png",
+  "note": "Composite uses decoded alpha; hidden RGB in fully transparent WebP pixels is not rendered."
+}

@@ -1,0 +1,64 @@
+{
+  "results": [
+    {
+      "name": "Global duration/ease defaults",
+      "passed": true
+    },
+    {
+      "name": "StrictMode: one live smoother after setup → cleanup → setup",
+      "passed": true
+    },
+    {
+      "name": "One main ScrollTrigger",
+      "passed": true
+    },
+    {
+      "name": "Configuration and initial preloader pause",
+      "passed": true
+    },
+    {
+      "name": "Loading update unpauses without recreating smoother",
+      "passed": true
+    },
+    {
+      "name": "SplitText creates existing CSS class wrappers",
+      "passed": true
+    },
+    {
+      "name": "Live reduced motion kills smoother and updates shared hook",
+      "passed": true
+    },
+    {
+      "name": "Native scroll styles restored",
+      "passed": true
+    },
+    {
+      "name": "Disabling reduced motion recreates one unpaused smoother",
+      "passed": true
+    },
+    {
+      "name": "Unmount kills smoother and all its triggers",
+      "passed": true
+    },
+    {
+      "name": "SplitText auto-reverts original markup/ARIA on unmount",
+      "passed": true
+    },
+    {
+      "name": "Reduced motion at initial mount creates no smoother",
+      "passed": true
+    },
+    {
+      "name": "No stale media handlers after remount",
+      "passed": true
+    },
+    {
+      "name": "Final cleanup: creates equal kills",
+      "passed": true
+    }
+  ],
+  "creates": 4,
+  "kills": 4,
+  "peak": 1,
+  "errors": 0
+}

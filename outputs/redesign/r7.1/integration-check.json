@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-10-09T01:30:30.175Z",
+  "status": "pass",
+  "assertions": 161,
+  "cases": [
+    "real store: hover snapshot, clear live owners, reverse and hold",
+    "selection precedence and default direct Contact",
+    "production wiring and legacy removal",
+    "baseline / protected source / staged work"
+  ],
+  "integrity": {
+    "baselineFiles": 105,
+    "changed": [
+      "src/3d/components/BlackHole.jsx",
+      "src/3d/components/CameraRig.jsx",
+      "src/3d/components/Nebula.jsx",
+      "src/3d/components/StarField.jsx",
+      "src/3d/components/WorksConstellations.jsx",
+      "src/3d/GalaxyScene.jsx",
+      "src/3d/utils/cameraPath.js",
+      "src/App.jsx",
+      "src/components/sections/Contact.jsx",
+      "src/components/Work.jsx",
+      "src/stores/useScrollStore.js"
+    ],
+    "preservedCount": 94,
+    "agentsAppended": "| 09/10/2026 | R7.1 — Finale production đảo chiều | Codex | ✅ Xong local (bàn giao R7.2) | Tái dùng R2.4, finale225vh riêng sau Works160vh/reduced0; snapshot hover-focus-selection/pin-copy cùng progress, gỡ4contactProgress callers, ambient nhường/giữ nền khi dừng; shared Contact endpoint riêng desktop-phải/mobile-trên, 1Canvas/1CameraRig/1HDR pass. Build5.38s/lint0errors2warnings cũ; math31544+integration161, Edge154152poses/10Canvas hold-reverse hashes/18nativewheel/6routecycles/3motioncycles mỗi viewport/Vi-En-resize-direct-reload/0console-GLerror, compiled22poses+8route/2reduced pass; RTX4060 ~165fps DPR1–1.75/GPU p95≤4.64ms. 105baseline11sửa94giữ/HEAD-index-prefix nguyên, không deps/assets mới; Contact panel-terminal chờ R7.2, gas2lớp screen-space/phone-OS-HTTPS chưa verify. outputs/redesign/r7.1/verification.md + handoff.md; chưa R7.2/R8. |",
+    "head": "69ca97dcda6c9cbf3907ec5366b5b4e0247663bb",
+    "stagedDiffHash": "75ddde5c143d4c9ebd1bc8c57bbd9344e8cb7beed14b1891284aa2359363f02f"
+  }
+}

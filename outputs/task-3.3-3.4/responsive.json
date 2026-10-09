@@ -1,0 +1,524 @@
+[
+  {
+    "label": "fps",
+    "objects": 6,
+    "points": 72,
+    "rotations": [
+      [
+        1.0806494999995806,
+        0.7718924999997004,
+        0,
+        "XYZ"
+      ],
+      [
+        1.6806494999995807,
+        1.5718924999997004,
+        0.4,
+        "XYZ"
+      ],
+      [
+        2.2806494999995808,
+        2.3718924999997006,
+        0.8,
+        "XYZ"
+      ],
+      [
+        2.8806494999995804,
+        3.171892499999701,
+        1.2000000000000002,
+        "XYZ"
+      ],
+      [
+        3.4806494999995805,
+        3.9718924999997007,
+        1.6,
+        "XYZ"
+      ],
+      [
+        4.080649499999581,
+        4.7718924999997006,
+        2,
+        "XYZ"
+      ]
+    ],
+    "materials": [
+      {
+        "color": "1a1a1a",
+        "opacity": 1,
+        "type": "MeshBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "ffffff",
+        "opacity": 0.18,
+        "type": "LineBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "1a1a1a",
+        "opacity": 1,
+        "type": "MeshBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "ffffff",
+        "opacity": 0.18,
+        "type": "LineBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "1a1a1a",
+        "opacity": 1,
+        "type": "MeshBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "ffffff",
+        "opacity": 0.18,
+        "type": "LineBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "1a1a1a",
+        "opacity": 1,
+        "type": "MeshBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "ffffff",
+        "opacity": 0.18,
+        "type": "LineBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "1a1a1a",
+        "opacity": 1,
+        "type": "MeshBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "ffffff",
+        "opacity": 0.18,
+        "type": "LineBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "1a1a1a",
+        "opacity": 1,
+        "type": "MeshBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "ffffff",
+        "opacity": 0.18,
+        "type": "LineBasicMaterial",
+        "map": false
+      }
+    ],
+    "centers": [
+      [
+        -0.7825198833650749,
+        0.5250413758558025,
+        0.9754938734683671
+      ],
+      [
+        0.7304953317619497,
+        0.6871399575437495,
+        0.9754938734683672
+      ],
+      [
+        -0.6477509049659911,
+        -0.6789379970411519,
+        0.9754938734683671
+      ],
+      [
+        0.8011290045866737,
+        -0.5459923522487381,
+        0.9754938734683672
+      ],
+      [
+        -0.2310290874709813,
+        0.8340747258007429,
+        0.9754938734683671
+      ],
+      [
+        0.3885650048636692,
+        -0.8187984341420619,
+        0.9754938734683671
+      ]
+    ],
+    "canvas": 1,
+    "hidden": false,
+    "reduced": false,
+    "camera": [
+      0.18423611111111085,
+      2.058833333333337,
+      -168
+    ],
+    "size": {
+      "width": 1440,
+      "height": 900,
+      "top": 0,
+      "left": 0
+    },
+    "dpr": 1,
+    "geometries": 11,
+    "textures": 23,
+    "subscribers": 8,
+    "calls": 1,
+    "frameloop": "always",
+    "glError": 0,
+    "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "starCount": 24000,
+    "frames": 3466,
+    "fps": 165.0070717316925
+  },
+  {
+    "label": "fps",
+    "objects": 6,
+    "points": 72,
+    "rotations": [
+      [
+        1.2383525000031583,
+        0.884537500002256,
+        0,
+        "XYZ"
+      ],
+      [
+        1.8383525000031584,
+        1.684537500002256,
+        0.4,
+        "XYZ"
+      ],
+      [
+        2.438352500003158,
+        2.484537500002256,
+        0.8,
+        "XYZ"
+      ],
+      [
+        3.038352500003158,
+        3.2845375000022563,
+        1.2000000000000002,
+        "XYZ"
+      ],
+      [
+        3.6383525000031582,
+        4.084537500002256,
+        1.6,
+        "XYZ"
+      ],
+      [
+        4.238352500003158,
+        4.884537500002256,
+        2,
+        "XYZ"
+      ]
+    ],
+    "materials": [
+      {
+        "color": "1a1a1a",
+        "opacity": 1,
+        "type": "MeshBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "ffffff",
+        "opacity": 0.18,
+        "type": "LineBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "1a1a1a",
+        "opacity": 1,
+        "type": "MeshBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "ffffff",
+        "opacity": 0.18,
+        "type": "LineBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "1a1a1a",
+        "opacity": 1,
+        "type": "MeshBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "ffffff",
+        "opacity": 0.18,
+        "type": "LineBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "1a1a1a",
+        "opacity": 1,
+        "type": "MeshBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "ffffff",
+        "opacity": 0.18,
+        "type": "LineBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "1a1a1a",
+        "opacity": 1,
+        "type": "MeshBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "ffffff",
+        "opacity": 0.18,
+        "type": "LineBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "1a1a1a",
+        "opacity": 1,
+        "type": "MeshBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "ffffff",
+        "opacity": 0.18,
+        "type": "LineBasicMaterial",
+        "map": false
+      }
+    ],
+    "centers": [
+      [
+        -0.7945474379625852,
+        0.5240146130404923,
+        0.9754938734683672
+      ],
+      [
+        0.719009717133143,
+        0.691938346471216,
+        0.9754938734683672
+      ],
+      [
+        -0.6481347585049894,
+        -0.6727260730219156,
+        0.9754938734683672
+      ],
+      [
+        0.8121998253110075,
+        -0.5440781074332671,
+        0.9754938734683671
+      ],
+      [
+        -0.21868205400156202,
+        0.8299313435570992,
+        0.9754938734683672
+      ],
+      [
+        0.3908364454476541,
+        -0.825190036918199,
+        0.9754938734683671
+      ]
+    ],
+    "canvas": 1,
+    "hidden": false,
+    "reduced": false,
+    "camera": [
+      0.12031219502983992,
+      2.0629394713669345,
+      -168
+    ],
+    "size": {
+      "width": 768,
+      "height": 1024,
+      "top": 0,
+      "left": 0
+    },
+    "dpr": 1,
+    "geometries": 11,
+    "textures": 23,
+    "subscribers": 8,
+    "calls": 1,
+    "frameloop": "always",
+    "glError": 0,
+    "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "starCount": 12000,
+    "frames": 413,
+    "fps": 164.99799759711655
+  },
+  {
+    "label": "fps",
+    "objects": 6,
+    "points": 72,
+    "rotations": [
+      [
+        1.8549370000038767,
+        1.324955000002769,
+        0,
+        "XYZ"
+      ],
+      [
+        2.4549370000038766,
+        2.1249550000027693,
+        0.4,
+        "XYZ"
+      ],
+      [
+        3.0549370000038767,
+        2.924955000002769,
+        0.8,
+        "XYZ"
+      ],
+      [
+        3.6549370000038763,
+        3.7249550000027694,
+        1.2000000000000002,
+        "XYZ"
+      ],
+      [
+        4.254937000003877,
+        4.52495500000277,
+        1.6,
+        "XYZ"
+      ],
+      [
+        4.8549370000038765,
+        5.324955000002769,
+        2,
+        "XYZ"
+      ]
+    ],
+    "materials": [
+      {
+        "color": "1a1a1a",
+        "opacity": 1,
+        "type": "MeshBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "ffffff",
+        "opacity": 0.18,
+        "type": "LineBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "1a1a1a",
+        "opacity": 1,
+        "type": "MeshBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "ffffff",
+        "opacity": 0.18,
+        "type": "LineBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "1a1a1a",
+        "opacity": 1,
+        "type": "MeshBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "ffffff",
+        "opacity": 0.18,
+        "type": "LineBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "1a1a1a",
+        "opacity": 1,
+        "type": "MeshBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "ffffff",
+        "opacity": 0.18,
+        "type": "LineBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "1a1a1a",
+        "opacity": 1,
+        "type": "MeshBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "ffffff",
+        "opacity": 0.18,
+        "type": "LineBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "1a1a1a",
+        "opacity": 1,
+        "type": "MeshBasicMaterial",
+        "map": false
+      },
+      {
+        "color": "ffffff",
+        "opacity": 0.18,
+        "type": "LineBasicMaterial",
+        "map": false
+      }
+    ],
+    "centers": [
+      [
+        -0.7951663606810251,
+        0.540918678786334,
+        0.9754938734683674
+      ],
+      [
+        0.757998404416073,
+        0.7139376886749682,
+        0.9754938734683672
+      ],
+      [
+        -0.6053844805030693,
+        -0.6658575481272212,
+        0.9754938734683672
+      ],
+      [
+        0.8194072855899548,
+        -0.5586552899599829,
+        0.9754938734683674
+      ],
+      [
+        -0.2536439171871388,
+        0.8073106479979064,
+        0.9754938734683674
+      ],
+      [
+        0.34584903457547145,
+        -0.8350568823334195,
+        0.9754938734683672
+      ]
+    ],
+    "canvas": 1,
+    "hidden": false,
+    "reduced": false,
+    "camera": [
+      -0.09871780841347842,
+      2.0710308005041203,
+      -168
+    ],
+    "size": {
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "left": 0
+    },
+    "dpr": 1,
+    "geometries": 11,
+    "textures": 23,
+    "subscribers": 8,
+    "calls": 1,
+    "frameloop": "always",
+    "glError": 0,
+    "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "starCount": 6000,
+    "frames": 413,
+    "fps": 165.01121435358576
+  }
+]

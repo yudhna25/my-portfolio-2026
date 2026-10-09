@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "critical": 2.598076211353316,
+  "results": {
+    "high": {
+      "below": {
+        "captured": true,
+        "steps": 65,
+        "energyError": 0.0001545530040276688,
+        "momentumError": 0.000010381650383112566
+      },
+      "above": {
+        "captured": false,
+        "steps": 105,
+        "energyError": 0.000014945213246742028,
+        "momentumError": 0.0000031534079889155206
+      }
+    },
+    "medium": {
+      "below": {
+        "captured": true,
+        "steps": 53,
+        "energyError": 0.000508076125337098,
+        "momentumError": 0.00002677158016714849
+      },
+      "above": {
+        "captured": false,
+        "steps": 86,
+        "energyError": 0.000041077651254717296,
+        "momentumError": 0.00000866190268864579
+      }
+    },
+    "low": {
+      "below": {
+        "captured": true,
+        "steps": 41,
+        "energyError": 0.002619785692005827,
+        "momentumError": 0.00007032458231427215
+      },
+      "above": {
+        "captured": false,
+        "steps": 68,
+        "energyError": 0.00013916256948298678,
+        "momentumError": 0.000029311685028866827
+      }
+    }
+  }
+}

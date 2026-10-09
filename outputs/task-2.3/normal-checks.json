@@ -1,0 +1,169 @@
+{
+  "passed": 13,
+  "total": 13,
+  "results": [
+    {
+      "name": "one owned trigger (normal) / zero (reduced)",
+      "pass": true,
+      "actual": {
+        "scrollY": 0,
+        "visualScroll": 0,
+        "navY": 0,
+        "currentSection": "hero",
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "threshold 60px",
+      "pass": true,
+      "actual": {
+        "scrollY": 60,
+        "visualScroll": 60,
+        "navY": 0,
+        "currentSection": "hero",
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "threshold 200px",
+      "pass": true,
+      "actual": {
+        "scrollY": 200,
+        "visualScroll": 200,
+        "navY": -72,
+        "currentSection": "hero",
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "scroll up reveals",
+      "pass": true,
+      "actual": {
+        "scrollY": 130,
+        "visualScroll": 130,
+        "navY": 0,
+        "currentSection": "hero",
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "link about: offset + store highlight",
+      "pass": true,
+      "actual": {
+        "top": 80.25263977050781,
+        "scrollY": 640,
+        "visualScroll": 640,
+        "navY": -72,
+        "currentSection": "about",
+        "activeLink": "#about",
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "link work: offset + store highlight",
+      "pass": true,
+      "actual": {
+        "top": 80.37432098388672,
+        "scrollY": 1360,
+        "visualScroll": 1360,
+        "navY": -72,
+        "currentSection": "work",
+        "activeLink": "#work",
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "link skills: offset + store highlight",
+      "pass": true,
+      "actual": {
+        "top": 80.37000274658203,
+        "scrollY": 2080,
+        "visualScroll": 2080,
+        "navY": -72,
+        "currentSection": "skills",
+        "activeLink": "#skills",
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "link education: offset + store highlight",
+      "pass": true,
+      "actual": {
+        "top": 80.3858413696289,
+        "scrollY": 2800,
+        "visualScroll": 2800,
+        "navY": -72,
+        "currentSection": "education",
+        "activeLink": "#education",
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "link experience: offset + store highlight",
+      "pass": true,
+      "actual": {
+        "top": 79.99848175048828,
+        "scrollY": 3520,
+        "visualScroll": 3520,
+        "navY": -72,
+        "currentSection": "experience",
+        "activeLink": "#experience",
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "link playground: offset + store highlight",
+      "pass": true,
+      "actual": {
+        "top": 80.41751861572266,
+        "scrollY": 4240,
+        "visualScroll": 4240,
+        "navY": -72,
+        "currentSection": "playground",
+        "activeLink": "#playground",
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "link contact: offset + store highlight",
+      "pass": true,
+      "actual": {
+        "top": 80.3829574584961,
+        "scrollY": 4960,
+        "visualScroll": 4960,
+        "navY": -72,
+        "currentSection": "contact",
+        "activeLink": "#contact",
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "logo returns to top",
+      "pass": true,
+      "actual": {
+        "scrollY": 0,
+        "visualScroll": 0,
+        "navY": 0,
+        "currentSection": "hero",
+        "triggers": 1,
+        "reduced": false
+      }
+    },
+    {
+      "name": "skip moves keyboard focus",
+      "pass": true,
+      "actual": "smooth-content"
+    }
+  ]
+}

@@ -1,0 +1,698 @@
+{
+  "started": "2026-10-08T15:59:05.469Z",
+  "records": [
+    {
+      "width": 1440,
+      "motion": "no-preference",
+      "id": "edura",
+      "locale": "vi",
+      "hash": "#work",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "active": "edura",
+      "preview": {
+        "x": 144,
+        "y": 692.0005493164062,
+        "width": 1152,
+        "height": 192,
+        "top": 692.0005493164062,
+        "right": 1296,
+        "bottom": 884.0005493164062,
+        "left": 144
+      },
+      "stageTop": 0.00007515624747611582,
+      "image": {
+        "src": "/project1.webp",
+        "alt": "Ảnh giới thiệu dự án EDURA LMS",
+        "width": 1600,
+        "height": 1131,
+        "declared": [
+          1600,
+          1131
+        ],
+        "filter": "none",
+        "colorPixels": 749
+      },
+      "text": "EDURA LMSProduct DesignXem case studyCase study nội bộ đang được chuẩn bị.Tham khảo trên Behance ↗",
+      "action": true,
+      "links": [
+        {
+          "href": "https://www.behance.net/gallery/241524417/Edura-LMS",
+          "rel": "noopener noreferrer",
+          "target": "_blank"
+        }
+      ],
+      "bodyHidden": false
+    },
+    {
+      "width": 1440,
+      "motion": "no-preference",
+      "id": "veris",
+      "locale": "vi",
+      "hash": "#work",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "active": "veris",
+      "preview": {
+        "x": 144,
+        "y": 692.0005493164062,
+        "width": 1152,
+        "height": 192,
+        "top": 692.0005493164062,
+        "right": 1296,
+        "bottom": 884.0005493164062,
+        "left": 144
+      },
+      "stageTop": 0.00007515624747611582,
+      "image": {
+        "src": "/project2.webp",
+        "alt": "Ảnh giới thiệu ứng dụng VERIS",
+        "width": 1600,
+        "height": 900,
+        "declared": [
+          1600,
+          900
+        ],
+        "filter": "none",
+        "colorPixels": 985
+      },
+      "text": "VERIS APPUX/UI DesignCase study sắp ra mắt",
+      "action": null,
+      "links": [],
+      "bodyHidden": false
+    },
+    {
+      "width": 1440,
+      "motion": "no-preference",
+      "id": "vie",
+      "locale": "vi",
+      "hash": "#work",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "active": "vie",
+      "preview": {
+        "x": 144,
+        "y": 692.0005493164062,
+        "width": 1152,
+        "height": 192,
+        "top": 692.0005493164062,
+        "right": 1296,
+        "bottom": 884.0005493164062,
+        "left": 144
+      },
+      "stageTop": 0.00007515624747611582,
+      "image": {
+        "src": "/project3.webp",
+        "alt": "Ảnh nhận diện thương hiệu nước hoa VIE",
+        "width": 1600,
+        "height": 900,
+        "declared": [
+          1600,
+          900
+        ],
+        "filter": "none",
+        "colorPixels": 793
+      },
+      "text": "VIE PERFUMEGraphic DesignCase study sắp ra mắt",
+      "action": null,
+      "links": [],
+      "bodyHidden": false
+    },
+    {
+      "width": 1440,
+      "motion": "no-preference",
+      "id": "edura",
+      "locale": "en",
+      "hash": "#work",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "active": "edura",
+      "preview": {
+        "x": 144,
+        "y": 692.0001220703125,
+        "width": 1152,
+        "height": 192,
+        "top": 692.0001220703125,
+        "right": 1296,
+        "bottom": 884.0001220703125,
+        "left": 144
+      },
+      "stageTop": 0.00011468750017229468,
+      "image": {
+        "src": "/project1.webp",
+        "alt": "EDURA LMS project cover",
+        "width": 1600,
+        "height": 1131,
+        "declared": [
+          1600,
+          1131
+        ],
+        "filter": "none",
+        "colorPixels": 749
+      },
+      "text": "EDURA LMSProduct DesignView case studyThe internal case study is being prepared.Reference on Behance ↗",
+      "action": true,
+      "links": [
+        {
+          "href": "https://www.behance.net/gallery/241524417/Edura-LMS",
+          "rel": "noopener noreferrer",
+          "target": "_blank"
+        }
+      ],
+      "bodyHidden": false
+    },
+    {
+      "width": 1440,
+      "motion": "no-preference",
+      "id": "veris",
+      "locale": "en",
+      "hash": "#work",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "active": "veris",
+      "preview": {
+        "x": 144,
+        "y": 692.0001220703125,
+        "width": 1152,
+        "height": 192,
+        "top": 692.0001220703125,
+        "right": 1296,
+        "bottom": 884.0001220703125,
+        "left": 144
+      },
+      "stageTop": 0.00011468750017229468,
+      "image": {
+        "src": "/project2.webp",
+        "alt": "VERIS app project cover",
+        "width": 1600,
+        "height": 900,
+        "declared": [
+          1600,
+          900
+        ],
+        "filter": "none",
+        "colorPixels": 985
+      },
+      "text": "VERIS APPUX/UI DesignCase study coming soon",
+      "action": null,
+      "links": [],
+      "bodyHidden": false
+    },
+    {
+      "width": 1440,
+      "motion": "no-preference",
+      "id": "vie",
+      "locale": "en",
+      "hash": "#work",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "active": "vie",
+      "preview": {
+        "x": 144,
+        "y": 692.0001220703125,
+        "width": 1152,
+        "height": 192,
+        "top": 692.0001220703125,
+        "right": 1296,
+        "bottom": 884.0001220703125,
+        "left": 144
+      },
+      "stageTop": 0.00011468750017229468,
+      "image": {
+        "src": "/project3.webp",
+        "alt": "VIE perfume brand identity cover",
+        "width": 1600,
+        "height": 900,
+        "declared": [
+          1600,
+          900
+        ],
+        "filter": "none",
+        "colorPixels": 793
+      },
+      "text": "VIE PERFUMEGraphic DesignCase study coming soon",
+      "action": null,
+      "links": [],
+      "bodyHidden": false
+    },
+    {
+      "width": 1440,
+      "motion": "reduce",
+      "id": "edura",
+      "locale": "vi",
+      "hash": "#work",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "active": "edura",
+      "preview": {
+        "x": 144,
+        "y": 692,
+        "width": 1152,
+        "height": 192,
+        "top": 692,
+        "right": 1296,
+        "bottom": 884,
+        "left": 144
+      },
+      "stageTop": 0,
+      "image": {
+        "src": "/project1.webp",
+        "alt": "Ảnh giới thiệu dự án EDURA LMS",
+        "width": 1600,
+        "height": 1131,
+        "declared": [
+          1600,
+          1131
+        ],
+        "filter": "none",
+        "colorPixels": 749
+      },
+      "text": "EDURA LMSProduct DesignXem case studyCase study nội bộ đang được chuẩn bị.Tham khảo trên Behance ↗",
+      "action": true,
+      "links": [
+        {
+          "href": "https://www.behance.net/gallery/241524417/Edura-LMS",
+          "rel": "noopener noreferrer",
+          "target": "_blank"
+        }
+      ],
+      "bodyHidden": false
+    },
+    {
+      "width": 1440,
+      "motion": "reduce",
+      "id": "veris",
+      "locale": "vi",
+      "hash": "#work",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "active": "veris",
+      "preview": {
+        "x": 144,
+        "y": 692,
+        "width": 1152,
+        "height": 192,
+        "top": 692,
+        "right": 1296,
+        "bottom": 884,
+        "left": 144
+      },
+      "stageTop": 0,
+      "image": {
+        "src": "/project2.webp",
+        "alt": "Ảnh giới thiệu ứng dụng VERIS",
+        "width": 1600,
+        "height": 900,
+        "declared": [
+          1600,
+          900
+        ],
+        "filter": "none",
+        "colorPixels": 985
+      },
+      "text": "VERIS APPUX/UI DesignCase study sắp ra mắt",
+      "action": null,
+      "links": [],
+      "bodyHidden": false
+    },
+    {
+      "width": 1440,
+      "motion": "reduce",
+      "id": "vie",
+      "locale": "vi",
+      "hash": "#work",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "active": "vie",
+      "preview": {
+        "x": 144,
+        "y": 692,
+        "width": 1152,
+        "height": 192,
+        "top": 692,
+        "right": 1296,
+        "bottom": 884,
+        "left": 144
+      },
+      "stageTop": 0,
+      "image": {
+        "src": "/project3.webp",
+        "alt": "Ảnh nhận diện thương hiệu nước hoa VIE",
+        "width": 1600,
+        "height": 900,
+        "declared": [
+          1600,
+          900
+        ],
+        "filter": "none",
+        "colorPixels": 793
+      },
+      "text": "VIE PERFUMEGraphic DesignCase study sắp ra mắt",
+      "action": null,
+      "links": [],
+      "bodyHidden": false
+    },
+    {
+      "width": 1440,
+      "motion": "reduce",
+      "id": "edura",
+      "locale": "en",
+      "hash": "#work",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "active": "edura",
+      "preview": {
+        "x": 144,
+        "y": 692,
+        "width": 1152,
+        "height": 192,
+        "top": 692,
+        "right": 1296,
+        "bottom": 884,
+        "left": 144
+      },
+      "stageTop": 0,
+      "image": {
+        "src": "/project1.webp",
+        "alt": "EDURA LMS project cover",
+        "width": 1600,
+        "height": 1131,
+        "declared": [
+          1600,
+          1131
+        ],
+        "filter": "none",
+        "colorPixels": 749
+      },
+      "text": "EDURA LMSProduct DesignView case studyThe internal case study is being prepared.Reference on Behance ↗",
+      "action": true,
+      "links": [
+        {
+          "href": "https://www.behance.net/gallery/241524417/Edura-LMS",
+          "rel": "noopener noreferrer",
+          "target": "_blank"
+        }
+      ],
+      "bodyHidden": false
+    },
+    {
+      "width": 1440,
+      "motion": "reduce",
+      "id": "veris",
+      "locale": "en",
+      "hash": "#work",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "active": "veris",
+      "preview": {
+        "x": 144,
+        "y": 692,
+        "width": 1152,
+        "height": 192,
+        "top": 692,
+        "right": 1296,
+        "bottom": 884,
+        "left": 144
+      },
+      "stageTop": 0,
+      "image": {
+        "src": "/project2.webp",
+        "alt": "VERIS app project cover",
+        "width": 1600,
+        "height": 900,
+        "declared": [
+          1600,
+          900
+        ],
+        "filter": "none",
+        "colorPixels": 985
+      },
+      "text": "VERIS APPUX/UI DesignCase study coming soon",
+      "action": null,
+      "links": [],
+      "bodyHidden": false
+    },
+    {
+      "width": 1440,
+      "motion": "reduce",
+      "id": "vie",
+      "locale": "en",
+      "hash": "#work",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "active": "vie",
+      "preview": {
+        "x": 144,
+        "y": 692,
+        "width": 1152,
+        "height": 192,
+        "top": 692,
+        "right": 1296,
+        "bottom": 884,
+        "left": 144
+      },
+      "stageTop": 0,
+      "image": {
+        "src": "/project3.webp",
+        "alt": "VIE perfume brand identity cover",
+        "width": 1600,
+        "height": 900,
+        "declared": [
+          1600,
+          900
+        ],
+        "filter": "none",
+        "colorPixels": 793
+      },
+      "text": "VIE PERFUMEGraphic DesignCase study coming soon",
+      "action": null,
+      "links": [],
+      "bodyHidden": false
+    },
+    {
+      "width": 390,
+      "motion": "no-preference",
+      "id": "edura",
+      "locale": "vi",
+      "hash": "#work",
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "active": "edura",
+      "preview": {
+        "x": 16,
+        "y": 667.671875,
+        "width": 358,
+        "height": 160,
+        "top": 667.671875,
+        "right": 374,
+        "bottom": 827.671875,
+        "left": 16
+      },
+      "stageTop": -0.328125,
+      "image": {
+        "src": "/project1.webp",
+        "alt": "Ảnh giới thiệu dự án EDURA LMS",
+        "width": 1600,
+        "height": 1131,
+        "declared": [
+          1600,
+          1131
+        ],
+        "filter": "none",
+        "colorPixels": 749
+      },
+      "text": "EDURA LMSProduct DesignXem case studyCase study nội bộ đang được chuẩn bị.Tham khảo trên Behance ↗",
+      "action": true,
+      "links": [
+        {
+          "href": "https://www.behance.net/gallery/241524417/Edura-LMS",
+          "rel": "noopener noreferrer",
+          "target": "_blank"
+        }
+      ],
+      "bodyHidden": false
+    },
+    {
+      "width": 390,
+      "motion": "no-preference",
+      "id": "veris",
+      "locale": "vi",
+      "hash": "#work",
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "active": "veris",
+      "preview": {
+        "x": 16,
+        "y": 667.671875,
+        "width": 358,
+        "height": 160,
+        "top": 667.671875,
+        "right": 374,
+        "bottom": 827.671875,
+        "left": 16
+      },
+      "stageTop": -0.328125,
+      "image": {
+        "src": "/project2.webp",
+        "alt": "Ảnh giới thiệu ứng dụng VERIS",
+        "width": 1600,
+        "height": 900,
+        "declared": [
+          1600,
+          900
+        ],
+        "filter": "none",
+        "colorPixels": 985
+      },
+      "text": "VERIS APPUX/UI DesignCase study sắp ra mắt",
+      "action": null,
+      "links": [],
+      "bodyHidden": false
+    },
+    {
+      "width": 390,
+      "motion": "no-preference",
+      "id": "vie",
+      "locale": "vi",
+      "hash": "#work",
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": 0,
+      "canvas": 1,
+      "active": "vie",
+      "preview": {
+        "x": 16,
+        "y": 667.671875,
+        "width": 358,
+        "height": 160,
+        "top": 667.671875,
+        "right": 374,
+        "bottom": 827.671875,
+        "left": 16
+      },
+      "stageTop": -0.328125,
+      "image": {
+        "src": "/project3.webp",
+        "alt": "Ảnh nhận diện thương hiệu nước hoa VIE",
+        "width": 1600,
+        "height": 900,
+        "declared": [
+          1600,
+          900
+        ],
+        "filter": "none",
+        "colorPixels": 793
+      },
+      "text": "VIE PERFUMEGraphic DesignCase study sắp ra mắt",
+      "action": null,
+      "links": [],
+      "bodyHidden": false
+    }
+  ],
+  "errors": [
+    "U.getTween(...)?.progress is not a function"
+  ],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "lastMeasured": {
+    "locale": "vi",
+    "hash": "#work",
+    "viewport": [
+      390,
+      844
+    ],
+    "overflow": 0,
+    "canvas": 1,
+    "active": "vie",
+    "preview": {
+      "x": 16,
+      "y": 667.671875,
+      "width": 358,
+      "height": 160,
+      "top": 667.671875,
+      "right": 374,
+      "bottom": 827.671875,
+      "left": 16
+    },
+    "stageTop": -0.328125,
+    "image": {
+      "src": "/project3.webp",
+      "alt": "Ảnh nhận diện thương hiệu nước hoa VIE",
+      "width": 1600,
+      "height": 900,
+      "declared": [
+        1600,
+        900
+      ],
+      "filter": "none",
+      "colorPixels": 793
+    },
+    "text": "VIE PERFUMEGraphic DesignCase study sắp ra mắt",
+    "action": null,
+    "links": [],
+    "bodyHidden": false
+  },
+  "status": "FAIL",
+  "failure": "page.waitForFunction: Timeout 30000ms exceeded."
+}

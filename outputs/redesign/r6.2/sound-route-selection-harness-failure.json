@@ -1,0 +1,39 @@
+{
+  "base": "http://127.0.0.1:4173",
+  "browser": "154.0.4258.62",
+  "testedUTC": "2026-10-08T17:53:30.879Z",
+  "records": [
+    {
+      "label": "direct-case-no-consent",
+      "url": "/projects/edura",
+      "doc": 0.4766673209503163,
+      "active": "false",
+      "contextStates": [],
+      "preference": null,
+      "canvas": 0
+    },
+    {
+      "label": "trusted-sound-click-main",
+      "url": "/#work",
+      "doc": 0.4766673209503163,
+      "active": "true",
+      "contextStates": [
+        "running"
+      ],
+      "preference": {
+        "state": {
+          "isMuted": false
+        },
+        "version": 0
+      },
+      "canvas": 1
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "Service Worker registration blocked by Playwright",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "status": "failed",
+  "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#work-case-edura')\u001b[22m\n"
+}

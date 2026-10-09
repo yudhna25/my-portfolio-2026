@@ -1,0 +1,74 @@
+{
+  "start": {
+    "scrollY": 0,
+    "maxScroll": 3534,
+    "scrollProgress": 0,
+    "currentSection": "hero",
+    "quality": "high",
+    "frames": 0,
+    "fpsSamples": [
+      165,
+      164,
+      165,
+      164,
+      164,
+      165,
+      164,
+      165,
+      162,
+      165
+    ],
+    "hidden": false,
+    "canvasCount": 1,
+    "smoother": true,
+    "paused": false
+  },
+  "middle": {
+    "scrollY": 1440,
+    "maxScroll": 3534,
+    "scrollProgress": 0.4074702886247878,
+    "currentSection": "about",
+    "quality": "high",
+    "frames": 0,
+    "fpsSamples": [
+      165,
+      165,
+      164,
+      164,
+      165,
+      165,
+      164,
+      162,
+      165,
+      165
+    ],
+    "hidden": false,
+    "canvasCount": 1,
+    "smoother": true,
+    "paused": false
+  },
+  "end": {
+    "scrollY": 3534,
+    "maxScroll": 3534,
+    "scrollProgress": 1,
+    "currentSection": "contact",
+    "quality": "high",
+    "frames": 0,
+    "fpsSamples": [
+      165,
+      165,
+      164,
+      165,
+      165,
+      165,
+      163,
+      165,
+      165,
+      165
+    ],
+    "hidden": false,
+    "canvasCount": 1,
+    "smoother": true,
+    "paused": false
+  }
+}

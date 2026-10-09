@@ -1,0 +1,25 @@
+{
+  "errors": [],
+  "rect": {
+    "x": 430,
+    "y": 230,
+    "width": 80,
+    "height": 80
+  },
+  "benchmark": {
+    "frames": 364,
+    "elapsedMs": 2204.5999999940395,
+    "fps": 165.10931688332764,
+    "dpr": 1,
+    "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "visible": true,
+    "viewport": [
+      1440,
+      900
+    ]
+  },
+  "touch": {
+    "cursor": 0,
+    "lens": 0
+  }
+}

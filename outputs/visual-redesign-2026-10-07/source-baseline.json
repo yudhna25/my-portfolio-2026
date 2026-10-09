@@ -1,0 +1,313 @@
+{
+  "created": "2026-10-07T15:52:44.399Z",
+  "files": [
+    {
+      "path": "src/3d/components/BlackHole.jsx",
+      "sha256": "c90474b8ce0dea45ee473f19edfe198b42c0d8a135ac84d78499e328981fc2c5"
+    },
+    {
+      "path": "src/3d/components/BlackHoleBloomMask.jsx",
+      "sha256": "17b3d5b7b151b3f4e4999c09c181757985813a749a2fcd0980ee3b32bac92860"
+    },
+    {
+      "path": "src/3d/components/BlackHoleSystem.jsx",
+      "sha256": "24fa7f288c381b461fbd4bce96840f81f23ff10b9db392e6644939d1c27a9767"
+    },
+    {
+      "path": "src/3d/components/CameraRig.jsx",
+      "sha256": "3bedf87e13fa8a3193cef828d79412c179cb088b45356e27325eb570ddb70853"
+    },
+    {
+      "path": "src/3d/components/Constellations.jsx",
+      "sha256": "02f1502255101e29f1a45872479d165a03d366e7c9668fe8bb6168b89f0c0eb5"
+    },
+    {
+      "path": "src/3d/components/LabTelemetry.jsx",
+      "sha256": "63629736a4a170b47af6578e2ca425f154a469c536ef2b4cd28a7e5d8248ac53"
+    },
+    {
+      "path": "src/3d/components/Nebula.jsx",
+      "sha256": "83a8603a74885be2686e40227a71aae59af37cc9310806a9c9e52645d51a085c"
+    },
+    {
+      "path": "src/3d/components/OrbitalSkills.jsx",
+      "sha256": "d49e595e232fe4ab39a62c5f278df075bcffdb319173791206a4b9af26595db7"
+    },
+    {
+      "path": "src/3d/components/Planet.jsx",
+      "sha256": "366ced6a8fa155e5fbca32aef2eb1347b0b30f9a54bed321d141560710e81f4b"
+    },
+    {
+      "path": "src/3d/components/SceneBoundary.jsx",
+      "sha256": "f973636c5119c7080585c7e12a8194aabbc4c830cafec7e4274647aec5ee5507"
+    },
+    {
+      "path": "src/3d/components/SceneFallback.jsx",
+      "sha256": "66cc6c0cc4139e9d1f3447878bed1f27da1e19adfa7862f29615348c9cc17977"
+    },
+    {
+      "path": "src/3d/components/ShootingStars.jsx",
+      "sha256": "c0ab81784ca2ed24ea76655eca18ec3c36b23afe984cc898733be6601242b36c"
+    },
+    {
+      "path": "src/3d/components/StardustWake.jsx",
+      "sha256": "b7d39ef17020f46cc84ad7083a739ce222ff07b4d026355dd478b21aeec9b0ce"
+    },
+    {
+      "path": "src/3d/components/StarField.jsx",
+      "sha256": "411f8f09e9b9778240ac0b2b158ba68210b1e6bd921301a068b0484dd7be7389"
+    },
+    {
+      "path": "src/3d/GalaxyScene.jsx",
+      "sha256": "2760dfd24ca36a03b62da80a4863e9eed7ab9ff753853042a44098f27a685bf6"
+    },
+    {
+      "path": "src/3d/hooks/useLabScroll.js",
+      "sha256": "8dc5d4636179f9a2a3daa0941cece1ef25feaac16a32198bd1fa6af0636b7b0b"
+    },
+    {
+      "path": "src/3d/hooks/useMediaQuery.js",
+      "sha256": "26a20531953a9de2f74b3c57abda7b115a7437ed74b37fb5b2cfcbe0499974df"
+    },
+    {
+      "path": "src/3d/hooks/useScrollProgress.js",
+      "sha256": "cdf9b3051cbd5d2059c2faa8090c07990c4dd8748eb82fd25a936241011d13d5"
+    },
+    {
+      "path": "src/3d/hooks/useSectionAnchor.js",
+      "sha256": "fa71e9373a6afeff60b4d524fd91a75f20c315b28c3f77a224f5bcb3f9b710ed"
+    },
+    {
+      "path": "src/3d/quality.js",
+      "sha256": "50c9d17825d7db83c252ae54e9d7e44ec3775946a29cfb94ae6fa5402d2771d1"
+    },
+    {
+      "path": "src/3d/shaders/blackHole.js",
+      "sha256": "6cb9002d236f12d481fa9b44df89adfa3da932eade9bbecde95fb7eb70ebc3ad"
+    },
+    {
+      "path": "src/3d/utils/buildStarGeometry.js",
+      "sha256": "e031f0b9665ed22eee431a1be173251ab59baa941653dfef4a495cc7cf9bf8e6"
+    },
+    {
+      "path": "src/3d/utils/cameraPath.js",
+      "sha256": "75d604561f85e127dc9c0b990bb0cfcc5ae2a80a2a4f2696f15153909844bf37"
+    },
+    {
+      "path": "src/3d/utils/shootingStars.js",
+      "sha256": "81fc500abe958591e837aa2512d1237203ef94cb637e1f7d9d550c28f3ce2186"
+    },
+    {
+      "path": "src/3d-lab.jsx",
+      "sha256": "15dfc3331ef9bd9fc6554a8c69d88dd8f0a247daf76202030863c3a35ed6f783"
+    },
+    {
+      "path": "src/App.jsx",
+      "sha256": "f68ddb67716e3d211638d64f28d56af122cdf05b0a94dc80eeed6255453de632"
+    },
+    {
+      "path": "src/assets/react.svg",
+      "sha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5"
+    },
+    {
+      "path": "src/components/About.jsx",
+      "sha256": "a0cecd7cfc704015503451d1be0700f754f2fb23e67999ecdd7d839aadec49e1"
+    },
+    {
+      "path": "src/components/Aurora.jsx",
+      "sha256": "c03e2396d0f975a4371705ba60a0176896aa1f22396e7f8153981592f8d4589b"
+    },
+    {
+      "path": "src/components/Cursor.jsx",
+      "sha256": "c8e89de768fa139f78da74cbcefad1a94985256cb34a764868db3b816af461e4"
+    },
+    {
+      "path": "src/components/Education.jsx",
+      "sha256": "1d8feee7dcf0250c87f7282445f9f5cf11cc15d14913db1cd750a35143ffad94"
+    },
+    {
+      "path": "src/components/EvilEye.jsx",
+      "sha256": "c76bebce7c93608d982fc18579bd404cf204d0b1d068c1b3c14817406dd74f11"
+    },
+    {
+      "path": "src/components/Footer.jsx",
+      "sha256": "0cf5f646d7009ce970ce689bb0df63ed3c3aea71025bc3ff8eafedd8ae055134"
+    },
+    {
+      "path": "src/components/Hero.jsx",
+      "sha256": "7b9d7232ff5a0a73cde31c91cc3c0b93d37e877697fac6f29b44a24a7e550ad0"
+    },
+    {
+      "path": "src/components/layout/CockpitRails.jsx",
+      "sha256": "00aaf931a0181d1e73a0a0502c099466d07e84954adc61eeeb1633d790293d5d"
+    },
+    {
+      "path": "src/components/layout/MenuOverlay.jsx",
+      "sha256": "05e364a59dcc924ed48544b447f3adaa40661e5d1135d85f096f4f4b827305c0"
+    },
+    {
+      "path": "src/components/layout/Nav.jsx",
+      "sha256": "8d26abc0cfa5a48ac9c8094a16108c987e88a0394c53350472a8ec0ebf17eb64"
+    },
+    {
+      "path": "src/components/Preloader.jsx",
+      "sha256": "80d50c244b8c1749804c16f30ab6831b399fd3771ab3f1029d659588c5ed4fcd"
+    },
+    {
+      "path": "src/components/sections/Contact.jsx",
+      "sha256": "cc04897f11398e5366ccc422a3e495f9aa3ef0a7e0d6df8124bd979bd1ac1122"
+    },
+    {
+      "path": "src/components/sections/Experience.jsx",
+      "sha256": "af962d42f2b39e83e815cf6b250dc0da8d14b028e1b639ccb03ad711d432075b"
+    },
+    {
+      "path": "src/components/sections/Skills.jsx",
+      "sha256": "ff1f00b5a443255ed2e40aee760c15ebd00d39fd8245c8743849b51ea266fdfb"
+    },
+    {
+      "path": "src/components/SplashCursor.jsx",
+      "sha256": "95a4982d97e49e892788b9847cd41843f084fe9f2a39c10ae0ae88944280d8ec"
+    },
+    {
+      "path": "src/components/ui/KnurledSwitch.jsx",
+      "sha256": "f5f536030a61f18784543b9c1876e1bcabcf74059e5ea3959c251deca15828bd"
+    },
+    {
+      "path": "src/components/ui/MissionProgressOrbit.jsx",
+      "sha256": "dc91037c03205ccde92d00f496908641e52c2841a97f6bc77dbb6bb2a8e41534"
+    },
+    {
+      "path": "src/components/ui/SoundToggle.jsx",
+      "sha256": "ddb1cd7ff9d1e3784174db1177f19ea07b90ffb8392208ee7b0ae8ff541dc38a"
+    },
+    {
+      "path": "src/components/ui/TargetLockReticle.jsx",
+      "sha256": "cda01ac9fee3f3b704e82eb3d232deb3f47d3e5c2a56582e347c568de06c9773"
+    },
+    {
+      "path": "src/components/ui/ThemeToggle.jsx",
+      "sha256": "c53343323e60023a5a76c9994d392a6c194fa7f2abbf0d675078907a3b75caef"
+    },
+    {
+      "path": "src/components/Work.jsx",
+      "sha256": "9bb3072f4c78a5245d8726f0faae51c2d524eb4ac9d41698a028380a1c669e8a"
+    },
+    {
+      "path": "src/data/navigation.js",
+      "sha256": "0e09dfc2377250a6356b0c2f7e8321a4687c0153d48e2bbae99b3afdfedd6374"
+    },
+    {
+      "path": "src/data/skills.js",
+      "sha256": "c29b4879be9ac6142872b6ad9941ee3afd77c5ddfab45706c6573ea695324025"
+    },
+    {
+      "path": "src/data.js",
+      "sha256": "07471ebecad15aba95fb5c88a411188a8e29edd7b16468a3b41623b389d988c9"
+    },
+    {
+      "path": "src/hooks/useGSAPSetup.js",
+      "sha256": "d0d776b48f380b21f6091e9b139ba9d079cc4db4a1be8b5640a0ed09e29d592d"
+    },
+    {
+      "path": "src/hooks/useReducedMotion.js",
+      "sha256": "cf30eaafdf14a457d04c12550e9e6e3ac837daff2c26b2fc37a2efb0cc784b73"
+    },
+    {
+      "path": "src/hooks/useSmoothScroll.js",
+      "sha256": "2dc0684b3f94d6ba7075d643b75caa3112bc5bd8a89d9d39ceb698b2129689cb"
+    },
+    {
+      "path": "src/i18n/config.js",
+      "sha256": "4a71342b0755f24f574ffe22166285ba15dd39555d120a08225bd96c2f45d6c6"
+    },
+    {
+      "path": "src/i18n/locales/en/lab.json",
+      "sha256": "e23aabd9513585f87bcb260a64c3eacbf9a294106ad37540bfab486977f09132"
+    },
+    {
+      "path": "src/i18n/locales/en/scene.json",
+      "sha256": "5534d80716ad31a43574c3dbff7c9994374795d39a542069b0c46020abeea919"
+    },
+    {
+      "path": "src/i18n/locales/en.json",
+      "sha256": "7700eba3fee1dc56231de3e442d45a1d779a05b158c1d7320e92df322c1ac3f5"
+    },
+    {
+      "path": "src/i18n/locales/vi/lab.json",
+      "sha256": "43054c187a01483ad242e5d7a4f5450b168081147eb8dedcdeb7c1377c35359a"
+    },
+    {
+      "path": "src/i18n/locales/vi/scene.json",
+      "sha256": "9f813ec2b2922b424bd5b5c41f66dd4212f865abf30df14cdb0f1d4e71944ffb"
+    },
+    {
+      "path": "src/i18n/locales/vi.json",
+      "sha256": "b9f0bfb04b9aaa1c589e623966419d11752d02336bbd21cb2aa6fefdf92a4c54"
+    },
+    {
+      "path": "src/index.css",
+      "sha256": "1fb7da4ffad2d5ec083123ca7ccef24fbc72631d779268acb87a00238de2f0c3"
+    },
+    {
+      "path": "src/lib/audioEngine.js",
+      "sha256": "ced5514afb6af3322b8793004275726cbc2b78d40f404c577c8adfae07aa99b1"
+    },
+    {
+      "path": "src/lib/utils.js",
+      "sha256": "478739b1eed969267a388fc17db539b53aa66cf15a9467e475274b36de8783f2"
+    },
+    {
+      "path": "src/main.jsx",
+      "sha256": "434f03cf6d9a4e72a1b312b2f5f613193c68b7deeef585148daa388e071d2f50"
+    },
+    {
+      "path": "src/stores/useAudioStore.js",
+      "sha256": "421d14eae90cdf5562e004e5fa937987d172cce58e4a7b95924fecc241f8c8f8"
+    },
+    {
+      "path": "src/stores/useLangStore.js",
+      "sha256": "4feb341440e9997aa4da41186138099408fd42d0797bc627671210491d533060"
+    },
+    {
+      "path": "src/stores/useLoadingStore.js",
+      "sha256": "28171bb7e08ba1157051f9b4e130ee726d57ec9419e761499fbdda6006995ca3"
+    },
+    {
+      "path": "src/stores/useScrollStore.js",
+      "sha256": "86f34e27b444fb2d42943a89e651ddd3bbf9591534df1b13edf83ffaa33e745a"
+    },
+    {
+      "path": "src/stores/useThemeStore.js",
+      "sha256": "cf91b8e98b0671edbf0161bc24475b4a524e77bd116b9ed9cd3a539ef7ef5b2c"
+    },
+    {
+      "path": "src/styles/globals.css",
+      "sha256": "74807d5ca074ec48cb48bf55eb38ce4e7cce329e7047bc36f333a148d4a20cb0"
+    },
+    {
+      "path": "src/styles/menu.css",
+      "sha256": "dd777575640babba2a136b5584153b688fe0b2cf0e0b13071029cfa0d7c7d947"
+    },
+    {
+      "path": "index.html",
+      "sha256": "0e62bb95b46e71f19110ed4375763997e7e58102eda335b98f3a910dcf88395d"
+    },
+    {
+      "path": "vite.config.js",
+      "sha256": "b6176d337e6ce71c05e8308193aeaa308fcb53019ab221af516d15028c4a0635"
+    },
+    {
+      "path": "package.json",
+      "sha256": "e21571db76af9cddd6d3296ac10464f7f6c8ba83eaff6234c0cfde9cce59b632"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "824609c3123813427ea27548c5622e471b9aa9e7d8d249cfc50cdad48b11996c"
+    }
+  ],
+  "agents": {
+    "bytes": 38806,
+    "sha256": "3721e12edda0d6b3c9496c20952f8db7ef943f871177cb961e20bf286615e54a"
+  }
+}

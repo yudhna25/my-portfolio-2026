@@ -1,0 +1,4 @@
+import fs from 'node:fs';let text=fs.readFileSync('src/components/Work.jsx','utf8');
+text=text.replace('grid-cols-[minmax(0,.38fr)_minmax(0,1fr)]','grid-cols-[minmax(0,.65fr)_minmax(0,1fr)]');
+text=text.replace('className="mt-2 min-h-11 cursor-default text-left font-mono text-[10px] text-white/55 sm:text-xs">{t(\'works.viewCaseStudy\')}</button>\n              <p id="work-reader-pending" className="font-body text-[10px] leading-relaxed text-white/55 sm:text-xs">{t(\'works.readerPending\')}</p>', 'className="mt-2 block min-h-11 cursor-default text-left font-mono text-[10px] text-white/55 sm:text-xs">{t(\'works.viewCaseStudy\')}\n                <span id="work-reader-pending" className="mt-1 block font-body text-[10px] leading-relaxed sm:text-xs">{t(\'works.readerPending\')}</span>\n              </button>');
+fs.writeFileSync('src/components/Work.jsx',text);
