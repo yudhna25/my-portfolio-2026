@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "critical": 2.598076211353316,
+  "results": {
+    "high": {
+      "rays": [
+        {
+          "captured": true,
+          "steps": 70,
+          "error": 0.00015455300402233974,
+          "drift": 0.000008369033552262782
+        },
+        {
+          "captured": false,
+          "steps": 106,
+          "error": 0.000014945213250294742,
+          "drift": 0.0000031534079897659188
+        }
+      ],
+      "finiteStressRays": 606
+    },
+    "medium": {
+      "rays": [
+        {
+          "captured": true,
+          "steps": 58,
+          "error": 0.00041818947943639273,
+          "drift": 0.000020045507463039115
+        },
+        {
+          "captured": false,
+          "steps": 87,
+          "error": 0.000041077651260046366,
+          "drift": 0.000008661902690856826
+        }
+      ],
+      "finiteStressRays": 606
+    },
+    "low": {
+      "rays": [
+        {
+          "captured": true,
+          "steps": 46,
+          "error": 0.0017040760660780307,
+          "drift": 0.000063077184941931
+        },
+        {
+          "captured": false,
+          "steps": 69,
+          "error": 0.00013916256948043326,
+          "drift": 0.000029311685029036908
+        }
+      ],
+      "finiteStressRays": 606
+    }
+  },
+  "diskFrameOrthonormal": true
+}

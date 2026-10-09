@@ -9,6 +9,8 @@ export const useScrollStore = create((set) => ({
   chapterProgress: 0,
   storyManual: false,
   storyAnchor: null,
+  sceneFallback: false,
+  setSceneFallback: sceneFallback => set(state => state.sceneFallback === sceneFallback ? state : { sceneFallback }),
   worksOrbit: createWorksOrbit(STORY_IDLE_PHASE),
   worksSelection: null,
   worksHover: null,

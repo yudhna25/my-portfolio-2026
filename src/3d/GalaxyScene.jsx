@@ -12,15 +12,16 @@ import { BlackHoleSystem } from '@/3d/components/BlackHoleSystem';
 import { CameraRig } from '@/3d/components/CameraRig';
 import { QUALITY } from '@/3d/quality';
 import { INITIAL_CAMERA_POSITION } from '@/3d/utils/cameraPath';
-import { portalProgress } from '@/3d/utils/portal';
+import { portalProgress, portalState } from '@/3d/utils/portal';
 import { useScrollStore } from '@/stores/useScrollStore';
 
 function PortalBackdrop({ children, story, reduced }) {
   const root = useRef(null);
+  const phase = useRef({});
   useFrame(() => {
     if (root.current) {
       const state = useScrollStore.getState();
-      root.current.visible = !story || portalProgress(state.storyChapter, state.chapterProgress, reduced) >= 0.52;
+      root.current.visible = !story || portalState(portalProgress(state.storyChapter, state.chapterProgress, reduced), phase.current).backdrop;
     }
   }, -0.5);
   return <group name="portal-backdrop" ref={root}>{children}</group>;

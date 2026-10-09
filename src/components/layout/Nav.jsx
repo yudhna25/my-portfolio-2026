@@ -8,6 +8,7 @@ import { navigationSections } from '@/data/navigation';
 import { SoundToggle } from '@/components/ui/SoundToggle';
 import { playRadioClick } from '@/lib/audioEngine';
 import { navigateRoute, pushMainAnchor } from '@/stores/useRouteStore';
+import { portalProgress, portalState, portalIntake } from '@/3d/utils/portal';
 
 const focusRing = 'focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4';
 
@@ -15,6 +16,7 @@ export function Nav({ onMenuClick, menuOpen = false, reader = false }) {
   const { t } = useTranslation();
   const currentSection = useScrollStore((state) => state.currentSection);
   const reducedMotion = useReducedMotion();
+  const fallback = useScrollStore(state => state.sceneFallback);
   const root = useRef(null);
   const scrollTween = useRef(null);
   const focusFrame = useRef(null);
@@ -36,6 +38,7 @@ export function Nav({ onMenuClick, menuOpen = false, reader = false }) {
       start: 0,
       end: 'max',
       onUpdate: (self) => {
+        if (useScrollStore.getState().storyChapter === 'portal' || menuOpen) { hide.pause(0); return; }
         const keepVisible = self.scroll() <= 80 || self.direction < 0 || bar.querySelector(':focus-visible');
         if (keepVisible) hide.reverse();
         else hide.play();
@@ -52,7 +55,41 @@ export function Nav({ onMenuClick, menuOpen = false, reader = false }) {
       cancelAnimationFrame(focusFrame.current);
       bar.removeEventListener('focusin', revealOnFocus);
     };
-  }, { scope: root, dependencies: [reducedMotion, reader], revertOnUpdate: true });
+  }, { scope: root, dependencies: [reducedMotion, reader, menuOpen], revertOnUpdate: true });
+
+  useGSAP(() => {
+    const stage = root.current.querySelector('[data-portal-controls]');
+    let active = true;
+    const phase = {}, pose = {}, layout = {};
+    gsap.set(stage, { transform: 'none', opacity: 1 });
+    const transform = value => { stage.style.transform = value; };
+    const opacity = gsap.quickSetter(stage, 'opacity');
+    const draw = () => {
+      const state = useScrollStore.getState();
+      const p = reader || menuOpen ? 0 : portalProgress(state.storyChapter, state.chapterProgress, reducedMotion || fallback);
+      portalState(p, phase);
+      portalIntake(p < 0.5 ? p : 0, layout, state.storyAnchor, window.innerWidth, window.innerHeight, 1, pose);
+      pose.opacity = phase.controlsOpacity;
+      transform(`translate(${pose.x}px, ${pose.y}px) rotate(${pose.rotation}deg) scale(${pose.scaleX}, ${pose.scaleY})`);
+      opacity(pose.opacity);
+      stage.inert = !phase.controlsInteractive;
+      stage.dataset.absorbing = String(p > 0 && p < 0.5);
+      stage.setAttribute('aria-hidden', phase.controlsOpacity === 0 ? 'true' : 'false');
+      stage.style.visibility = phase.controlsOpacity === 0 ? 'hidden' : 'visible';
+      if (stage.inert && stage.contains(document.activeElement)) document.getElementById('smooth-content')?.focus({ preventScroll: true });
+    };
+    const measure = () => {
+      if (!active) return;
+      transform('none');
+      const rect = stage.getBoundingClientRect(); layout.x = rect.left + rect.width / 2; layout.y = rect.top + rect.height / 2;
+      draw();
+    };
+    measure();
+    const unsubscribe = useScrollStore.subscribe(draw);
+    window.addEventListener('resize', measure);
+    document.fonts?.ready.then(() => { if (active) measure(); });
+    return () => { active = false; unsubscribe(); window.removeEventListener('resize', measure); };
+  }, { scope: root, dependencies: [reader, menuOpen, reducedMotion, fallback], revertOnUpdate: true });
 
   function navigate(event, id) {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
@@ -101,15 +138,16 @@ export function Nav({ onMenuClick, menuOpen = false, reader = false }) {
   return (
     <header ref={root}>
       <a
-        href={reader ? '#edura-main' : '#smooth-content'}
-        onClick={(event) => navigate(event, reader ? 'edura-main' : 'smooth-content')}
+        href={reader ? '#edura-main' : '#about'}
+        onClick={(event) => navigate(event, reader ? 'edura-main' : 'about')}
         className={`fixed left-[max(1.5rem,env(safe-area-inset-left))] top-[calc(0.75rem+env(safe-area-inset-top))] z-[10000] -translate-y-[150%] border border-white bg-(--bg-void) px-4 py-3 font-body text-sm text-white focus-visible:translate-y-0 ${focusRing}`}
       >
         {t(reader ? 'edura.skip' : 'nav.skip')}
       </a>
+      <div data-portal-controls className="fixed inset-x-0 top-0 z-[70] origin-center [&[data-absorbing=true]>nav]:border-transparent [&[data-absorbing=true]>nav]:bg-transparent">
       <nav
         aria-label={t('nav.label')}
-        className="fixed inset-x-0 top-0 z-[70] flex h-[calc(4.5rem+env(safe-area-inset-top))] items-center justify-between border-b border-white/[0.08] bg-(--bg-void) gap-3 px-[max(1.5rem,env(safe-area-inset-left),env(safe-area-inset-right))] pt-[env(safe-area-inset-top)] font-body lg:px-[max(2rem,env(safe-area-inset-left),env(safe-area-inset-right))]"
+        className="relative flex h-[calc(4.5rem+env(safe-area-inset-top))] items-center justify-between border-b border-white/[0.08] bg-(--bg-void) gap-3 px-[max(1.5rem,env(safe-area-inset-left),env(safe-area-inset-right))] pt-[env(safe-area-inset-top)] font-body lg:px-[max(2rem,env(safe-area-inset-left),env(safe-area-inset-right))]"
       >
         <a
           href="/#hero"
@@ -157,6 +195,7 @@ export function Nav({ onMenuClick, menuOpen = false, reader = false }) {
           </button>
         </div>
       </nav>
+      </div>
     </header>
   );
 }

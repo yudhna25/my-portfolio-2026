@@ -1,0 +1,6362 @@
+{
+  "started": "2026-10-09T09:47:57.464Z",
+  "base": "http://127.0.0.1:5183",
+  "sourceBefore": {
+    "src/App.jsx": "b162332486eb5872031cce5dd56db031c08ddccfb9b9c5dcddf0d84947648b97",
+    "src/components/Hero.jsx": "cff3b6765079d0f04c678857a4ce9b5fa710aaa6d2f90390e6b8ead8967c1ea7",
+    "src/components/effects/PortalHeading.jsx": "da3be79732a4958522e4d2b54a7ec944efdd1071876a418654a0e0e8791584a8",
+    "src/components/About.jsx": "1e637b9a62c5072573336afa34b44bc4059bd266db291f49e235ea65059d5f7e",
+    "src/components/layout/Nav.jsx": "b3817785d873819240231277b99750270587747564a4853bd726639debf33003",
+    "src/components/Cursor.jsx": "807364e0ca3de8f556622f0011e0cb41fea07a703b5d1c2f05a90108f4830f38",
+    "src/3d/GalaxyScene.jsx": "7e7d71ea99624fe9d5ec26ce27a25e62caea732da6f17d6aa0cb5c4646a47c83",
+    "src/3d/components/CameraRig.jsx": "fd01fb40484b7f14f4eb893d07cd486a68b41c1729e9a61193a9bc8de84d816f",
+    "src/3d/utils/cameraPath.js": "b8b74b47c1e03ecf7e09dd08934f69d5b07bf880c9e80402e6c471a95f2b8c7f",
+    "src/3d/utils/portal.js": "973cf175d67a63aeeb0493ff3d148372e812fdc4f788674c47e62f680fbe3254",
+    "src/3d/hooks/useScrollProgress.js": "0998d47a16fb63482217bbec69b97f6da5392ed5575788653782e7127e09f87b",
+    "src/stores/useScrollStore.js": "ff2f96ca3cf87b2dc0ca0d32375d5fa67ab66f680271ed8c6a618e82cd4845e7",
+    "src/3d/components/BlackHole.jsx": "50905550916924c2acaf37743f67837f260b4aaf1a7e4d5b5fbb1aeb7f9a6029",
+    "src/3d/components/BlackHoleSystem.jsx": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+    "src/3d/components/BlackHoleBloomMask.jsx": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c",
+    "src/3d/shaders/blackHole.js": "b5b33465f365d7eaa9983ca4f7133ebd9adda63057ea2a6f51e38980a84a5e64",
+    "src/3d/quality.js": "e41080fcf00415c51806f658902908cebf0eb9b6501371bb558bfd5bf58b64e0"
+  },
+  "browser": "154.0.4258.62",
+  "configurations": [
+    {
+      "id": "1440-vi",
+      "width": 1440,
+      "height": 900,
+      "locale": "vi",
+      "frames": [
+        {
+          "label": "portal-forward-0",
+          "file": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-forward-0.png",
+          "chapter": "portal",
+          "p": 0,
+          "manual": true,
+          "lang": "vi",
+          "reduced": false,
+          "canvas": 1,
+          "producers": 1,
+          "cameraWriters": 1,
+          "pose": [
+            0,
+            2.2,
+            -168,
+            -0.03431425698308484,
+            0,
+            0,
+            0.9994110924778146,
+            59.99999999999999
+          ],
+          "ray": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0,
+              2.2,
+              32
+            ],
+            "uCameraMatrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.9976450635353976,
+              -0.06858809811805859,
+              0,
+              0,
+              0.06858809811805859,
+              0.9976450635353976,
+              0,
+              0,
+              2.2,
+              -168,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8116482204861111,
+              0.49530381944444446
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5
+            ],
+            "uPortalScale": 0.8846424156758257,
+            "uPortalRadius": [
+              321.69374999999997,
+              160.84687499999998
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.08,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformFinite": true,
+          "shared": true,
+          "rayPasses": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "buffer": [
+            1440,
+            900
+          ],
+          "rayId": "b4b9fe62-373a-4576-ae7a-b54d20aed1b2",
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "programs": 10,
+          "observedTargets": 21,
+          "targetDisposals": 0,
+          "dom": [
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": "false",
+              "rect": [
+                0,
+                0,
+                1440,
+                72
+              ]
+            },
+            {
+              "tag": "NAV",
+              "id": "",
+              "layer": "",
+              "ambient": true,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                0,
+                0,
+                1440,
+                72
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": true,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "contents",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                0,
+                0,
+                1440,
+                900
+              ]
+            },
+            {
+              "tag": "HEADER",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": "false",
+              "rect": [
+                0,
+                0,
+                1440,
+                900
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                220.21875,
+                1036.796875,
+                451.546875
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "year",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                220.21875,
+                1036.796875,
+                195.765625
+              ]
+            },
+            {
+              "tag": "H1",
+              "id": "hero-heading",
+              "layer": "heading",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                380.703125,
+                1036.796875,
+                147.0625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                201.59375,
+                380.703125,
+                116.1875,
+                147.0625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                317.78125,
+                380.703125,
+                137.515625,
+                147.0625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                455.296875,
+                380.703125,
+                121.765625,
+                147.0625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                577.0625,
+                380.703125,
+                116.765625,
+                147.0625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                693.828125,
+                380.703125,
+                109.71875,
+                147.0625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                803.546875,
+                380.703125,
+                137.515625,
+                147.0625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                941.0625,
+                380.703125,
+                108.390625,
+                147.0625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                1049.453125,
+                380.703125,
+                48.09375,
+                147.0625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                1097.546875,
+                380.703125,
+                137.515625,
+                147.0625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "identity",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                543.765625,
+                1036.796875,
+                44
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "intro",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                619.765625,
+                410.234375,
+                52
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "indicator",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                852,
+                1222.40625,
+                16
+              ]
+            },
+            {
+              "tag": "SECTION",
+              "id": "about",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                3600,
+                1440,
+                923.765625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "true",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, -3600)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                1440,
+                923.765625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "true",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, -3600)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "grid",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                80,
+                144,
+                1280,
+                635.765625
+              ]
+            },
+            {
+              "tag": "HEADER",
+              "id": "",
+              "layer": "heading",
+              "ambient": false,
+              "transform": "matrix(0.0146722, -0.00311868, 0.00311868, 0.0146722, -280, 143.484)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.3515014648438,
+                402.153076171875,
+                11.2969970703125,
+                5.69384765625
+              ]
+            },
+            {
+              "tag": "FIGURE",
+              "id": "",
+              "layer": "avatar",
+              "ambient": false,
+              "transform": "matrix(0.015, 0, 0, 0.015, 392, -56.875)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                716.280029296875,
+                400.5037536621094,
+                7.44000244140625,
+                8.99249267578125
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "bio",
+              "ambient": false,
+              "transform": "matrix(0.0146722, 0.00311868, -0.00311868, 0.0146722, -280, -190.398)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.1430053710938,
+                401.1722106933594,
+                11.7139892578125,
+                7.65557861328125
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.9899291992188,
+                401.1722106933594,
+                9.78314208984375,
+                3.440765380859375
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.5110473632812,
+                402.9500732421875,
+                9.8841552734375,
+                3.916015625
+              ]
+            },
+            {
+              "tag": "BLOCKQUOTE",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.1430053710938,
+                405.2031555175781,
+                9.77325439453125,
+                3.394256591796875
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                4523.765625,
+                1440,
+                10486.5625
+              ]
+            }
+          ],
+          "backdrop": {
+            "visible": true,
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "ambient": [
+            {
+              "name": "star-field",
+              "uTime": 0
+            },
+            {
+              "name": "nebula",
+              "uTime": 0
+            },
+            {
+              "name": "nebula",
+              "uTime": 0
+            }
+          ],
+          "overflow": 0,
+          "anchor": {
+            "left": 1102.140625,
+            "top": 396.78125,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "scroll": 0,
+          "focus": {
+            "id": "",
+            "tag": "BODY",
+            "hidden": false
+          },
+          "triggers": [
+            "stellar-nav-auto-hide",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "glError": 0,
+          "heroIdle": "true"
+        },
+        {
+          "label": "portal-forward-0.25",
+          "file": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-forward-0.25.png",
+          "chapter": "portal",
+          "p": 0.25,
+          "manual": true,
+          "lang": "vi",
+          "reduced": false,
+          "canvas": 1,
+          "producers": 1,
+          "cameraWriters": 1,
+          "pose": [
+            -1.6770482922617775,
+            2.858032504508049,
+            -182.4393313298272,
+            -0.08343716798604131,
+            -0.0474214569050948,
+            -0.003975092370521132,
+            0.9953761314518814,
+            59.99999999999999
+          ],
+          "ray": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              -1.6770482922617775,
+              2.858032504508049,
+              17.560668670172788
+            ],
+            "uCameraMatrix": [
+              0.9954708081312881,
+              -1.734723475976807e-18,
+              0.09506771354376914,
+              0,
+              0.015826848263732853,
+              0.9860448752782299,
+              -0.16572572163540825,
+              0,
+              -0.09374103174425233,
+              0.166479740321578,
+              0.9815788888469347,
+              0,
+              -1.6770482922617775,
+              2.858032504508049,
+              -182.4393313298272,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.5763664197089259,
+              0.5365972233877495
+            ],
+            "uRayCenter": [
+              0.4999999999999999,
+              0.5057499473925748
+            ],
+            "uPortalScale": 2.805220709212803,
+            "uPortalRadius": [
+              1819.8781220906421,
+              909.9390610453211
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.08,
+            "uPortalPull": 0.25,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0.25
+            ]
+          },
+          "uniformFinite": true,
+          "shared": true,
+          "rayPasses": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "buffer": [
+            1440,
+            900
+          ],
+          "rayId": "b4b9fe62-373a-4576-ae7a-b54d20aed1b2",
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "programs": 10,
+          "observedTargets": 21,
+          "targetDisposals": 0,
+          "dom": [
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.636486, 0.78598, -0.0931072, 0.0753982, -20.4994, 254.625)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": true,
+              "ariaHidden": "false",
+              "rect": [
+                237.87857055664062,
+                -277.9951477050781,
+                923.244140625,
+                1137.239501953125
+              ]
+            },
+            {
+              "tag": "NAV",
+              "id": "",
+              "layer": "",
+              "ambient": true,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                237.87857055664062,
+                -277.9951477050781,
+                923.244140625,
+                1137.239501953125
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": true,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "contents",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.158692, 0, 0, 0.158692, 698.259, 350.878)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                698.2587280273438,
+                350.878173828125,
+                228.51593017578125,
+                142.82247924804688
+              ]
+            },
+            {
+              "tag": "HEADER",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": "false",
+              "rect": [
+                0,
+                0,
+                1440,
+                900
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                220.21875,
+                1036.796875,
+                451.546875
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "year",
+              "ambient": false,
+              "transform": "matrix(0.849659, 0.470421, -0.0551394, 0.0995909, 44.9057, 85.2872)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                319.03857421875,
+                149.7747802734375,
+                891.7186279296875,
+                507.22802734375
+              ]
+            },
+            {
+              "tag": "H1",
+              "id": "hero-heading",
+              "layer": "heading",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                380.703125,
+                1036.796875,
+                147.0625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1.01035, -0.0454133, 0.00537966, 0.119687, 352.055, 107.437)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                552.651123046875,
+                550.2322998046875,
+                118.1817626953125,
+                22.8778076171875
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1.05135, -0.0607448, 0.0072766, 0.12594, 271.705, 79.8057)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                585.4209594726562,
+                520.6029052734375,
+                145.64666748046875,
+                26.87445068359375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1.09275, -0.0891134, 0.0108014, 0.132451, 191.918, 50.9764)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                640.7739868164062,
+                490.0459899902344,
+                134.6474609375,
+                30.329559326171875
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1.13152, -0.148277, 0.0181979, 0.13887, 120.444, 24.0523)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                688.4901123046875,
+                459.4185791015625,
+                134.79864501953125,
+                37.73626708984375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1.13589, -0.346401, 0.0430779, 0.141257, 54.633, -1.883)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                737.8387451171875,
+                422.9612121582031,
+                130.96343994140625,
+                58.78033447265625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.123272, -1.2292, 0.155012, -0.0155457, -14.6811, -30.6214)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                837.7493896484375,
+                337.95294189453125,
+                39.74835205078125,
+                171.31997680664062
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.552426, -1.15978, 0.148444, -0.0707068, -81.0551, -59.5096)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                873.3485107421875,
+                326.671142578125,
+                81.70831298828125,
+                136.10723876953125
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.63152, -1.17645, 0.15297, -0.0821144, -120.911, -77.9452)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                926.155029296875,
+                341.96124267578125,
+                52.86834716796875,
+                68.6558837890625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                1097.546875,
+                380.703125,
+                137.515625,
+                147.0625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "identity",
+              "ambient": false,
+              "transform": "matrix(1.1088, -0.833417, 0.110199, 0.146612, 92.9747, -51.2375)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                235.74057006835938,
+                79.26065063476562,
+                1154.4525146484375,
+                870.534912109375
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "intro",
+              "ambient": false,
+              "transform": "matrix(1.35672, -0.482777, 0.0649857, 0.182626, 270.722, -15.107)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                397.4560546875,
+                526.8845825195312,
+                559.9544677734375,
+                207.54815673828125
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "indicator",
+              "ambient": false,
+              "transform": "matrix(0.73394, -1.30125, 0.178527, 0.100694, 114.853, -216.448)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                477.6356201171875,
+                -152.58380126953125,
+                900.0291748046875,
+                1592.2724609375
+              ]
+            },
+            {
+              "tag": "SECTION",
+              "id": "about",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                2700,
+                1440,
+                923.765625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "true",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, -2700)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                1440,
+                923.765625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "true",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, -2700)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "grid",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                80,
+                144,
+                1280,
+                635.765625
+              ]
+            },
+            {
+              "tag": "HEADER",
+              "id": "",
+              "layer": "heading",
+              "ambient": false,
+              "transform": "matrix(0.0146722, -0.00311868, 0.00311868, 0.0146722, -280, 143.484)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.3515014648438,
+                402.153076171875,
+                11.2969970703125,
+                5.69384765625
+              ]
+            },
+            {
+              "tag": "FIGURE",
+              "id": "",
+              "layer": "avatar",
+              "ambient": false,
+              "transform": "matrix(0.015, 0, 0, 0.015, 392, -56.875)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                716.280029296875,
+                400.5037536621094,
+                7.44000244140625,
+                8.99249267578125
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "bio",
+              "ambient": false,
+              "transform": "matrix(0.0146722, 0.00311868, -0.00311868, 0.0146722, -280, -190.398)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.1430053710938,
+                401.1722106933594,
+                11.7139892578125,
+                7.65557861328125
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.9899291992188,
+                401.1722106933594,
+                9.78314208984375,
+                3.440765380859375
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.5110473632812,
+                402.9500732421875,
+                9.8841552734375,
+                3.916015625
+              ]
+            },
+            {
+              "tag": "BLOCKQUOTE",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.1430053710938,
+                405.2031555175781,
+                9.77325439453125,
+                3.394256591796875
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                3623.765625,
+                1440,
+                10486.5625
+              ]
+            }
+          ],
+          "backdrop": {
+            "visible": true,
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "ambient": [
+            {
+              "name": "star-field",
+              "uTime": 3
+            },
+            {
+              "name": "nebula",
+              "uTime": 3
+            },
+            {
+              "name": "nebula",
+              "uTime": 3
+            }
+          ],
+          "overflow": 0,
+          "anchor": {
+            "left": 1102.140625,
+            "top": 396.78125,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "scroll": 900,
+          "focus": {
+            "id": "",
+            "tag": "BODY",
+            "hidden": false
+          },
+          "triggers": [
+            "stellar-nav-auto-hide",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "glError": 0,
+          "heroIdle": "false"
+        },
+        {
+          "label": "portal-forward-0.44",
+          "file": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-forward-0.44.png",
+          "chapter": "portal",
+          "p": 0.44,
+          "manual": true,
+          "lang": "vi",
+          "reduced": false,
+          "canvas": 1,
+          "producers": 1,
+          "cameraWriters": 1,
+          "pose": [
+            0.9999999999999997,
+            1.4000000000000001,
+            -192,
+            -0.09760948802054814,
+            0.06183956952546078,
+            0.006076946936733582,
+            0.9932831047617794,
+            59.99999999999999
+          ],
+          "ray": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0.9999999999999997,
+              1.4000000000000001,
+              8
+            ],
+            "uCameraMatrix": [
+              0.9922778767136676,
+              -1.734723475976807e-18,
+              -0.12403473458920841,
+              0,
+              -0.02414451488316527,
+              0.9808709171285892,
+              -0.1931561190653222,
+              0,
+              0.12166206387231801,
+              0.19465930219570887,
+              0.9732965109785443,
+              0,
+              0.9999999999999997,
+              1.4000000000000001,
+              -192,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.5,
+              0.55
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5207677573524233
+            ],
+            "uPortalScale": 27.2505234074147,
+            "uPortalRadius": [
+              38603.249999999985,
+              19301.624999999993
+            ],
+            "uPortalVisibility": 0,
+            "uPortalDust": 0,
+            "uPortalPull": 0.44,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              1,
+              0.44
+            ]
+          },
+          "uniformFinite": true,
+          "shared": true,
+          "rayPasses": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "buffer": [
+            1440,
+            900
+          ],
+          "rayId": "b4b9fe62-373a-4576-ae7a-b54d20aed1b2",
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "programs": 10,
+          "observedTargets": 21,
+          "targetDisposals": 0,
+          "dom": [
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0, 0.01, -0.01, 0, -1.08455e-14, 369)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                719.6400146484375,
+                397.79998779296875,
+                0.719970703125,
+                14.4000244140625
+              ]
+            },
+            {
+              "tag": "NAV",
+              "id": "",
+              "layer": "",
+              "ambient": true,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                719.6400146484375,
+                397.79998779296875,
+                0.719970703125,
+                14.4000244140625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": true,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "contents",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.01, 0, 0, 0.01, 712.8, 400.95)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                712.7999877929688,
+                400.95001220703125,
+                14.4000244140625,
+                9
+              ]
+            },
+            {
+              "tag": "HEADER",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                1440,
+                900
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                220.21875,
+                1036.796875,
+                451.546875
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "year",
+              "ambient": false,
+              "transform": "matrix(8.99038e-07, 0.01, -0.01, 8.99038e-07, 0.0078125, 86.8984)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                719.0206909179688,
+                399.81591796875,
+                1.9586181640625,
+                10.3681640625
+              ]
+            },
+            {
+              "tag": "H1",
+              "id": "hero-heading",
+              "layer": "heading",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                380.703125,
+                1036.796875,
+                147.0625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00994329, -0.00106352, 0.00106352, 0.00994329, 460.312, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.3441772460938,
+                404.2070617675781,
+                1.3116455078125,
+                1.58587646484375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00989275, -0.00146063, 0.00146063, 0.00989275, 333.461, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.21240234375,
+                404.1721496582031,
+                1.5751953125,
+                1.65570068359375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00972043, -0.00234804, 0.00234804, 0.00972043, 203.82, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.2355346679688,
+                404.1423034667969,
+                1.5289306640625,
+                1.71539306640625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00864175, -0.00503191, 0.00503191, 0.00864175, 84.5547, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.12548828125,
+                404.0707702636719,
+                1.7490234375,
+                1.85845947265625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.00503445, -0.00864027, 0.00864027, -0.00503445, -28.6875, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.0885009765625,
+                404.15582275390625,
+                1.822998046875,
+                1.6883544921875
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.00951519, -0.0030759, 0.0030759, -0.00951519, -152.305, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.1195678710938,
+                404.0888366699219,
+                1.7608642578125,
+                1.82232666015625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.00984377, -0.00176072, 0.00176072, -0.00984377, -275.258, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.3370361328125,
+                404.1807556152344,
+                1.325927734375,
+                1.63848876953125
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.0099044, -0.00137945, 0.00137945, -0.0099044, -353.5, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.660400390625,
+                404.2385559082031,
+                0.67919921875,
+                1.52288818359375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                1097.546875,
+                380.703125,
+                137.515625,
+                147.0625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "identity",
+              "ambient": false,
+              "transform": "matrix(4.85956e-07, -0.01, 0.01, 4.85956e-07, 0.0078125, -160.766)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                719.7797241210938,
+                399.8160095214844,
+                0.4405517578125,
+                10.36798095703125
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "intro",
+              "ambient": false,
+              "transform": "matrix(0.007929, -0.00609351, 0.00609351, 0.007929, 313.289, -240.766)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                718.2152099609375,
+                403.5439453125,
+                3.569580078125,
+                2.912109375
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "indicator",
+              "ambient": false,
+              "transform": "matrix(-0.00199835, -0.00979829, 0.00979829, -0.00199835, -92.7969, -455)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                718.7001953125,
+                398.9952697753906,
+                2.599609375,
+                12.00946044921875
+              ]
+            },
+            {
+              "tag": "SECTION",
+              "id": "about",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                2016,
+                1440,
+                923.765625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "true",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, -2016)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                1440,
+                923.765625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "true",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, -2016)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "grid",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                80,
+                144,
+                1280,
+                635.765625
+              ]
+            },
+            {
+              "tag": "HEADER",
+              "id": "",
+              "layer": "heading",
+              "ambient": false,
+              "transform": "matrix(0.0146722, -0.00311868, 0.00311868, 0.0146722, -280, 143.484)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.3515014648438,
+                402.153076171875,
+                11.2969970703125,
+                5.69384765625
+              ]
+            },
+            {
+              "tag": "FIGURE",
+              "id": "",
+              "layer": "avatar",
+              "ambient": false,
+              "transform": "matrix(0.015, 0, 0, 0.015, 392, -56.875)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                716.280029296875,
+                400.5037536621094,
+                7.44000244140625,
+                8.99249267578125
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "bio",
+              "ambient": false,
+              "transform": "matrix(0.0146722, 0.00311868, -0.00311868, 0.0146722, -280, -190.398)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.1430053710938,
+                401.1722106933594,
+                11.7139892578125,
+                7.65557861328125
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.9899291992188,
+                401.1722106933594,
+                9.78314208984375,
+                3.440765380859375
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.5110473632812,
+                402.9500732421875,
+                9.8841552734375,
+                3.916015625
+              ]
+            },
+            {
+              "tag": "BLOCKQUOTE",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.1430053710938,
+                405.2031555175781,
+                9.77325439453125,
+                3.394256591796875
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                2939.765625,
+                1440,
+                10486.5625
+              ]
+            }
+          ],
+          "backdrop": {
+            "visible": false,
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "ambient": [
+            {
+              "name": "star-field",
+              "uTime": 5.28
+            },
+            {
+              "name": "nebula",
+              "uTime": 5.28
+            },
+            {
+              "name": "nebula",
+              "uTime": 5.28
+            }
+          ],
+          "overflow": 0,
+          "anchor": {
+            "left": 1102.140625,
+            "top": 396.78125,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "scroll": 1584,
+          "focus": {
+            "id": "",
+            "tag": "BODY",
+            "hidden": false
+          },
+          "triggers": [
+            "stellar-nav-auto-hide",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "glError": 0,
+          "heroIdle": "false"
+        },
+        {
+          "label": "portal-forward-0.47",
+          "file": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-forward-0.47.png",
+          "chapter": "portal",
+          "p": 0.47,
+          "manual": true,
+          "lang": "vi",
+          "reduced": false,
+          "canvas": 1,
+          "producers": 1,
+          "cameraWriters": 1,
+          "pose": [
+            1,
+            1.4,
+            -192,
+            -0.09760948802054814,
+            0.061839569525460804,
+            0.006076946936733583,
+            0.9932831047617794,
+            59.99999999999999
+          ],
+          "ray": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              1,
+              1.4,
+              8
+            ],
+            "uCameraMatrix": [
+              0.9922778767136676,
+              -3.469446951953614e-18,
+              -0.12403473458920845,
+              0,
+              -0.024144514883165276,
+              0.9808709171285892,
+              -0.1931561190653222,
+              0,
+              0.12166206387231805,
+              0.19465930219570887,
+              0.9732965109785443,
+              0,
+              1,
+              1.4,
+              -192,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.5,
+              0.55
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5207677573524233
+            ],
+            "uPortalScale": 27.2505234074147,
+            "uPortalRadius": [
+              38603.249999999985,
+              19301.624999999993
+            ],
+            "uPortalVisibility": 0,
+            "uPortalDust": 0,
+            "uPortalPull": 0.47,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0.11807580174927097,
+              0,
+              0.7407407407407414,
+              0.47
+            ]
+          },
+          "uniformFinite": true,
+          "shared": true,
+          "rayPasses": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "buffer": [
+            1440,
+            900
+          ],
+          "rayId": "b4b9fe62-373a-4576-ae7a-b54d20aed1b2",
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "programs": 10,
+          "observedTargets": 21,
+          "targetDisposals": 0,
+          "dom": [
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0, 0.01, -0.01, 0, -1.08455e-14, 369)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                719.6400146484375,
+                397.79998779296875,
+                0.719970703125,
+                14.4000244140625
+              ]
+            },
+            {
+              "tag": "NAV",
+              "id": "",
+              "layer": "",
+              "ambient": true,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                719.6400146484375,
+                397.79998779296875,
+                0.719970703125,
+                14.4000244140625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": true,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "contents",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.01, 0, 0, 0.01, 712.8, 400.95)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                712.7999877929688,
+                400.95001220703125,
+                14.4000244140625,
+                9
+              ]
+            },
+            {
+              "tag": "HEADER",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                1440,
+                900
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                220.21875,
+                1036.796875,
+                451.546875
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "year",
+              "ambient": false,
+              "transform": "matrix(8.99038e-07, 0.01, -0.01, 8.99038e-07, 0.0078125, 86.8984)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                719.0206909179688,
+                399.81591796875,
+                1.9586181640625,
+                10.3681640625
+              ]
+            },
+            {
+              "tag": "H1",
+              "id": "hero-heading",
+              "layer": "heading",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                380.703125,
+                1036.796875,
+                147.0625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00994329, -0.00106352, 0.00106352, 0.00994329, 460.312, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.3441772460938,
+                404.2070617675781,
+                1.3116455078125,
+                1.58587646484375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00989275, -0.00146063, 0.00146063, 0.00989275, 333.461, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.21240234375,
+                404.1721496582031,
+                1.5751953125,
+                1.65570068359375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00972043, -0.00234804, 0.00234804, 0.00972043, 203.82, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.2355346679688,
+                404.1423034667969,
+                1.5289306640625,
+                1.71539306640625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00864175, -0.00503191, 0.00503191, 0.00864175, 84.5547, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.12548828125,
+                404.0707702636719,
+                1.7490234375,
+                1.85845947265625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.00503445, -0.00864027, 0.00864027, -0.00503445, -28.6875, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.0885009765625,
+                404.15582275390625,
+                1.822998046875,
+                1.6883544921875
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.00951519, -0.0030759, 0.0030759, -0.00951519, -152.305, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.1195678710938,
+                404.0888366699219,
+                1.7608642578125,
+                1.82232666015625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.00984377, -0.00176072, 0.00176072, -0.00984377, -275.258, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.3370361328125,
+                404.1807556152344,
+                1.325927734375,
+                1.63848876953125
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.0099044, -0.00137945, 0.00137945, -0.0099044, -353.5, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.660400390625,
+                404.2385559082031,
+                0.67919921875,
+                1.52288818359375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                1097.546875,
+                380.703125,
+                137.515625,
+                147.0625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "identity",
+              "ambient": false,
+              "transform": "matrix(4.85956e-07, -0.01, 0.01, 4.85956e-07, 0.0078125, -160.766)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                719.7797241210938,
+                399.8160095214844,
+                0.4405517578125,
+                10.36798095703125
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "intro",
+              "ambient": false,
+              "transform": "matrix(0.007929, -0.00609351, 0.00609351, 0.007929, 313.289, -240.766)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                718.2152099609375,
+                403.5439453125,
+                3.569580078125,
+                2.912109375
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "indicator",
+              "ambient": false,
+              "transform": "matrix(-0.00199835, -0.00979829, 0.00979829, -0.00199835, -92.7969, -455)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                718.7001953125,
+                398.9952697753906,
+                2.599609375,
+                12.00946044921875
+              ]
+            },
+            {
+              "tag": "SECTION",
+              "id": "about",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                1908,
+                1440,
+                923.765625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "true",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, -1908)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                1440,
+                923.765625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "true",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, -1908)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "grid",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                80,
+                144,
+                1280,
+                635.765625
+              ]
+            },
+            {
+              "tag": "HEADER",
+              "id": "",
+              "layer": "heading",
+              "ambient": false,
+              "transform": "matrix(0.0146722, -0.00311868, 0.00311868, 0.0146722, -280, 143.484)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.3515014648438,
+                402.153076171875,
+                11.2969970703125,
+                5.69384765625
+              ]
+            },
+            {
+              "tag": "FIGURE",
+              "id": "",
+              "layer": "avatar",
+              "ambient": false,
+              "transform": "matrix(0.015, 0, 0, 0.015, 392, -56.875)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                716.280029296875,
+                400.5037536621094,
+                7.44000244140625,
+                8.99249267578125
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "bio",
+              "ambient": false,
+              "transform": "matrix(0.0146722, 0.00311868, -0.00311868, 0.0146722, -280, -190.398)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.1430053710938,
+                401.1722106933594,
+                11.7139892578125,
+                7.65557861328125
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.9899291992188,
+                401.1722106933594,
+                9.78314208984375,
+                3.440765380859375
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.5110473632812,
+                402.9500732421875,
+                9.8841552734375,
+                3.916015625
+              ]
+            },
+            {
+              "tag": "BLOCKQUOTE",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.1430053710938,
+                405.2031555175781,
+                9.77325439453125,
+                3.394256591796875
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                2831.765625,
+                1440,
+                10486.5625
+              ]
+            }
+          ],
+          "backdrop": {
+            "visible": false,
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "ambient": [
+            {
+              "name": "star-field",
+              "uTime": 5.64
+            },
+            {
+              "name": "nebula",
+              "uTime": 5.64
+            },
+            {
+              "name": "nebula",
+              "uTime": 5.64
+            }
+          ],
+          "overflow": 0,
+          "anchor": {
+            "left": 1102.140625,
+            "top": 396.78125,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "scroll": 1692,
+          "focus": {
+            "id": "",
+            "tag": "BODY",
+            "hidden": false
+          },
+          "triggers": [
+            "stellar-nav-auto-hide",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "glError": 0,
+          "heroIdle": "false"
+        },
+        {
+          "label": "portal-forward-0.5",
+          "file": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-forward-0.5.png",
+          "chapter": "portal",
+          "p": 0.5,
+          "manual": true,
+          "lang": "vi",
+          "reduced": false,
+          "canvas": 1,
+          "producers": 1,
+          "cameraWriters": 1,
+          "pose": [
+            1,
+            1.4,
+            -192,
+            -0.09760948802054814,
+            0.061839569525460804,
+            0.006076946936733583,
+            0.9932831047617794,
+            59.99999999999999
+          ],
+          "ray": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              1,
+              1.4,
+              8
+            ],
+            "uCameraMatrix": [
+              0.9922778767136676,
+              -3.469446951953614e-18,
+              -0.12403473458920845,
+              0,
+              -0.024144514883165276,
+              0.9808709171285892,
+              -0.1931561190653222,
+              0,
+              0.12166206387231805,
+              0.19465930219570887,
+              0.9732965109785443,
+              0,
+              1,
+              1.4,
+              -192,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.5,
+              0.55
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5207677573524233
+            ],
+            "uPortalScale": 27.2505234074147,
+            "uPortalRadius": [
+              38603.249999999985,
+              19301.624999999993
+            ],
+            "uPortalVisibility": 0,
+            "uPortalDust": 0,
+            "uPortalPull": 0.5,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0.3935860058309039,
+              0,
+              0.25925925925925963,
+              0.5
+            ]
+          },
+          "uniformFinite": true,
+          "shared": true,
+          "rayPasses": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "buffer": [
+            1440,
+            900
+          ],
+          "rayId": "b4b9fe62-373a-4576-ae7a-b54d20aed1b2",
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "programs": 10,
+          "observedTargets": 21,
+          "targetDisposals": 0,
+          "dom": [
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                1440,
+                72
+              ]
+            },
+            {
+              "tag": "NAV",
+              "id": "",
+              "layer": "",
+              "ambient": true,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                0,
+                0,
+                1440,
+                72
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": true,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "contents",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                0,
+                0,
+                1440,
+                900
+              ]
+            },
+            {
+              "tag": "HEADER",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                1440,
+                900
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                220.21875,
+                1036.796875,
+                451.546875
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "year",
+              "ambient": false,
+              "transform": "matrix(8.99038e-07, 0.01, -0.01, 8.99038e-07, 0.0078125, 86.8984)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                719.0206909179688,
+                399.81591796875,
+                1.9586181640625,
+                10.3681640625
+              ]
+            },
+            {
+              "tag": "H1",
+              "id": "hero-heading",
+              "layer": "heading",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                380.703125,
+                1036.796875,
+                147.0625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00994329, -0.00106352, 0.00106352, 0.00994329, 460.312, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.3441772460938,
+                404.2070617675781,
+                1.3116455078125,
+                1.58587646484375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00989275, -0.00146063, 0.00146063, 0.00989275, 333.461, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.21240234375,
+                404.1721496582031,
+                1.5751953125,
+                1.65570068359375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00972043, -0.00234804, 0.00234804, 0.00972043, 203.82, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.2355346679688,
+                404.1423034667969,
+                1.5289306640625,
+                1.71539306640625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00864175, -0.00503191, 0.00503191, 0.00864175, 84.5547, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.12548828125,
+                404.0707702636719,
+                1.7490234375,
+                1.85845947265625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.00503445, -0.00864027, 0.00864027, -0.00503445, -28.6875, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.0885009765625,
+                404.15582275390625,
+                1.822998046875,
+                1.6883544921875
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.00951519, -0.0030759, 0.0030759, -0.00951519, -152.305, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.1195678710938,
+                404.0888366699219,
+                1.7608642578125,
+                1.82232666015625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.00984377, -0.00176072, 0.00176072, -0.00984377, -275.258, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.3370361328125,
+                404.1807556152344,
+                1.325927734375,
+                1.63848876953125
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.0099044, -0.00137945, 0.00137945, -0.0099044, -353.5, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.660400390625,
+                404.2385559082031,
+                0.67919921875,
+                1.52288818359375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                1097.546875,
+                380.703125,
+                137.515625,
+                147.0625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "identity",
+              "ambient": false,
+              "transform": "matrix(4.85956e-07, -0.01, 0.01, 4.85956e-07, 0.0078125, -160.766)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                719.7797241210938,
+                399.8160095214844,
+                0.4405517578125,
+                10.36798095703125
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "intro",
+              "ambient": false,
+              "transform": "matrix(0.007929, -0.00609351, 0.00609351, 0.007929, 313.289, -240.766)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                718.2152099609375,
+                403.5439453125,
+                3.569580078125,
+                2.912109375
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "indicator",
+              "ambient": false,
+              "transform": "matrix(-0.00199835, -0.00979829, 0.00979829, -0.00199835, -92.7969, -455)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                718.7001953125,
+                398.9952697753906,
+                2.599609375,
+                12.00946044921875
+              ]
+            },
+            {
+              "tag": "SECTION",
+              "id": "about",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                1800,
+                1440,
+                923.765625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "true",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, -1800)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                1440,
+                923.765625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "true",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, -1800)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "grid",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                80,
+                144,
+                1280,
+                635.765625
+              ]
+            },
+            {
+              "tag": "HEADER",
+              "id": "",
+              "layer": "heading",
+              "ambient": false,
+              "transform": "matrix(0.0146722, -0.00311868, 0.00311868, 0.0146722, -280, 143.484)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.3515014648438,
+                402.153076171875,
+                11.2969970703125,
+                5.69384765625
+              ]
+            },
+            {
+              "tag": "FIGURE",
+              "id": "",
+              "layer": "avatar",
+              "ambient": false,
+              "transform": "matrix(0.015, 0, 0, 0.015, 392, -56.875)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                716.280029296875,
+                400.5037536621094,
+                7.44000244140625,
+                8.99249267578125
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "bio",
+              "ambient": false,
+              "transform": "matrix(0.0146722, 0.00311868, -0.00311868, 0.0146722, -280, -190.398)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.1430053710938,
+                401.1722106933594,
+                11.7139892578125,
+                7.65557861328125
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.9899291992188,
+                401.1722106933594,
+                9.78314208984375,
+                3.440765380859375
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.5110473632812,
+                402.9500732421875,
+                9.8841552734375,
+                3.916015625
+              ]
+            },
+            {
+              "tag": "BLOCKQUOTE",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                714.1430053710938,
+                405.2031555175781,
+                9.77325439453125,
+                3.394256591796875
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                2723.765625,
+                1440,
+                10486.5625
+              ]
+            }
+          ],
+          "backdrop": {
+            "visible": false,
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "ambient": [
+            {
+              "name": "star-field",
+              "uTime": 6
+            },
+            {
+              "name": "nebula",
+              "uTime": 6
+            },
+            {
+              "name": "nebula",
+              "uTime": 6
+            }
+          ],
+          "overflow": 0,
+          "anchor": {
+            "left": 1102.140625,
+            "top": 396.78125,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "scroll": 1800,
+          "focus": {
+            "id": "",
+            "tag": "BODY",
+            "hidden": false
+          },
+          "triggers": [
+            "stellar-nav-auto-hide",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "glError": 0,
+          "heroIdle": "false"
+        },
+        {
+          "label": "portal-forward-0.7",
+          "file": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-forward-0.7.png",
+          "chapter": "portal",
+          "p": 0.7,
+          "manual": true,
+          "lang": "vi",
+          "reduced": false,
+          "canvas": 1,
+          "producers": 1,
+          "cameraWriters": 1,
+          "pose": [
+            3.777459114453263,
+            4.127948189833694,
+            -175.58377160030054,
+            -0.16940011441288577,
+            0.2974391593678107,
+            0.053713473608596615,
+            0.9380556542467883,
+            59.99999999999999
+          ],
+          "ray": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              3.777459114453263,
+              4.127948189833694,
+              24.416228399699463
+            ],
+            "uCameraMatrix": [
+              0.8172896184549374,
+              0,
+              -0.5762271076283924,
+              0,
+              -0.20154491051111878,
+              0.9368369279795996,
+              -0.2858604894363886,
+              0,
+              0.5398308333291532,
+              0.3497664511838528,
+              0.7656670954229426,
+              0,
+              3.777459114453263,
+              4.127948189833694,
+              -175.58377160030054,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.5,
+              0.55
+            ],
+            "uRayCenter": [
+              0.7680254142642157,
+              0.6512674023465375
+            ],
+            "uPortalScale": 83.11277864789646,
+            "uPortalRadius": [
+              38603.249999999985,
+              19301.624999999993
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0,
+            "uPortalPull": 0.7,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              1,
+              0,
+              0,
+              0.7
+            ]
+          },
+          "uniformFinite": true,
+          "shared": true,
+          "rayPasses": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "buffer": [
+            1440,
+            900
+          ],
+          "rayId": "b4b9fe62-373a-4576-ae7a-b54d20aed1b2",
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "programs": 10,
+          "observedTargets": 21,
+          "targetDisposals": 0,
+          "dom": [
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                1440,
+                72
+              ]
+            },
+            {
+              "tag": "NAV",
+              "id": "",
+              "layer": "",
+              "ambient": true,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                0,
+                0,
+                1440,
+                72
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": true,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "contents",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                0,
+                0,
+                1440,
+                900
+              ]
+            },
+            {
+              "tag": "HEADER",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                1440,
+                900
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                220.21875,
+                1036.796875,
+                451.546875
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "year",
+              "ambient": false,
+              "transform": "matrix(8.99038e-07, 0.01, -0.01, 8.99038e-07, 0.0078125, 86.8984)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                719.0206909179688,
+                399.81591796875,
+                1.9586181640625,
+                10.3681640625
+              ]
+            },
+            {
+              "tag": "H1",
+              "id": "hero-heading",
+              "layer": "heading",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                380.703125,
+                1036.796875,
+                147.0625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00994329, -0.00106352, 0.00106352, 0.00994329, 460.312, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.3441772460938,
+                404.2070617675781,
+                1.3116455078125,
+                1.58587646484375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00989275, -0.00146063, 0.00146063, 0.00989275, 333.461, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.21240234375,
+                404.1721496582031,
+                1.5751953125,
+                1.65570068359375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00972043, -0.00234804, 0.00234804, 0.00972043, 203.82, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.2355346679688,
+                404.1423034667969,
+                1.5289306640625,
+                1.71539306640625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00864175, -0.00503191, 0.00503191, 0.00864175, 84.5547, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.12548828125,
+                404.0707702636719,
+                1.7490234375,
+                1.85845947265625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.00503445, -0.00864027, 0.00864027, -0.00503445, -28.6875, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.0885009765625,
+                404.15582275390625,
+                1.822998046875,
+                1.6883544921875
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.00951519, -0.0030759, 0.0030759, -0.00951519, -152.305, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.1195678710938,
+                404.0888366699219,
+                1.7608642578125,
+                1.82232666015625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.00984377, -0.00176072, 0.00176072, -0.00984377, -275.258, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.3370361328125,
+                404.1807556152344,
+                1.325927734375,
+                1.63848876953125
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.0099044, -0.00137945, 0.00137945, -0.0099044, -353.5, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.660400390625,
+                404.2385559082031,
+                0.67919921875,
+                1.52288818359375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                1097.546875,
+                380.703125,
+                137.515625,
+                147.0625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "identity",
+              "ambient": false,
+              "transform": "matrix(4.85956e-07, -0.01, 0.01, 4.85956e-07, 0.0078125, -160.766)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                719.7797241210938,
+                399.8160095214844,
+                0.4405517578125,
+                10.36798095703125
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "intro",
+              "ambient": false,
+              "transform": "matrix(0.007929, -0.00609351, 0.00609351, 0.007929, 313.289, -240.766)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                718.2152099609375,
+                403.5439453125,
+                3.569580078125,
+                2.912109375
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "indicator",
+              "ambient": false,
+              "transform": "matrix(-0.00199835, -0.00979829, 0.00979829, -0.00199835, -92.7969, -455)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                718.7001953125,
+                398.9952697753906,
+                2.599609375,
+                12.00946044921875
+              ]
+            },
+            {
+              "tag": "SECTION",
+              "id": "about",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": true,
+              "ariaHidden": "false",
+              "rect": [
+                0,
+                1080,
+                1440,
+                923.765625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "true",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, -1080)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                1440,
+                923.765625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "true",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, -1080)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "grid",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                80,
+                144,
+                1280,
+                635.765625
+              ]
+            },
+            {
+              "tag": "HEADER",
+              "id": "",
+              "layer": "heading",
+              "ambient": false,
+              "transform": "matrix(0.858009, -0.046635, 0.0297791, 0.547888, -75.8396, 30.8634)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                611.777587890625,
+                211.20501708984375,
+                624.7657470703125,
+                162.3480224609375
+              ]
+            },
+            {
+              "tag": "FIGURE",
+              "id": "",
+              "layer": "avatar",
+              "ambient": false,
+              "transform": "matrix(0.392484, 0, 0, 0.108897, 266.578, -10.9787)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                497.24176025390625,
+                418.25439453125,
+                194.67205810546875,
+                65.28375244140625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "bio",
+              "ambient": false,
+              "transform": "matrix(0.056382, 0.0113023, -0.00294825, 0.0147074, -260.753, -185.347)",
+              "translate": "none",
+              "opacity": "0.41701",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                718.406005859375,
+                403.2709655761719,
+                41.68218994140625,
+                13.560821533203125
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                719.2066650390625,
+                403.2709655761719,
+                36.71630859375,
+                8.73187255859375
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                718.75390625,
+                405.0531005859375,
+                36.81182861328125,
+                9.208251953125
+              ]
+            },
+            {
+              "tag": "BLOCKQUOTE",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                718.406005859375,
+                407.3116149902344,
+                36.70697021484375,
+                8.685211181640625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                2003.765625,
+                1440,
+                10486.5625
+              ]
+            }
+          ],
+          "backdrop": {
+            "visible": true,
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "ambient": [
+            {
+              "name": "star-field",
+              "uTime": 8.399999999999999
+            },
+            {
+              "name": "nebula",
+              "uTime": 8.399999999999999
+            },
+            {
+              "name": "nebula",
+              "uTime": 8.399999999999999
+            }
+          ],
+          "overflow": 0,
+          "anchor": {
+            "left": 1102.140625,
+            "top": 396.78125,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "scroll": 2520,
+          "focus": {
+            "id": "",
+            "tag": "BODY",
+            "hidden": false
+          },
+          "triggers": [
+            "stellar-nav-auto-hide",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "glError": 0,
+          "heroIdle": "false"
+        },
+        {
+          "label": "portal-forward-0.94",
+          "file": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-forward-0.94.png",
+          "chapter": "portal",
+          "p": 0.94,
+          "manual": true,
+          "lang": "vi",
+          "reduced": false,
+          "canvas": 1,
+          "producers": 1,
+          "cameraWriters": 1,
+          "pose": [
+            2.0000000000000004,
+            5,
+            -154,
+            -0.16798420551306958,
+            0.3020470700936579,
+            0.05416153431403444,
+            0.9368112949504448,
+            59.99999999999999
+          ],
+          "ray": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              2.0000000000000004,
+              5,
+              46
+            ],
+            "uCameraMatrix": [
+              0.8116681912971732,
+              0,
+              -0.5841187783630787,
+              0,
+              -0.20295654838893423,
+              0.937695669797785,
+              -0.2820203366931783,
+              0,
+              0.547725649118631,
+              0.34745766769850317,
+              0.7610977482919594,
+              0,
+              2.0000000000000004,
+              5,
+              -154,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.5,
+              0.55
+            ],
+            "uRayCenter": [
+              0.861091405824844,
+              0.6988752066768357
+            ],
+            "uPortalScale": 152.77984127402985,
+            "uPortalRadius": [
+              38603.249999999985,
+              19301.624999999993
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0,
+            "uPortalPull": 0.94,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0.1040000000000002,
+              0.8959999999999998,
+              0,
+              0.94
+            ]
+          },
+          "uniformFinite": true,
+          "shared": true,
+          "rayPasses": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "buffer": [
+            1440,
+            900
+          ],
+          "rayId": "b4b9fe62-373a-4576-ae7a-b54d20aed1b2",
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "programs": 10,
+          "observedTargets": 21,
+          "targetDisposals": 0,
+          "dom": [
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "0.740741",
+              "visibility": "visible",
+              "display": "block",
+              "inert": true,
+              "ariaHidden": "false",
+              "rect": [
+                0,
+                0,
+                1440,
+                72
+              ]
+            },
+            {
+              "tag": "NAV",
+              "id": "",
+              "layer": "",
+              "ambient": true,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                0,
+                0,
+                1440,
+                72
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": true,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "contents",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "0.740741",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                0,
+                0,
+                1440,
+                900
+              ]
+            },
+            {
+              "tag": "HEADER",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                1440,
+                900
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                220.21875,
+                1036.796875,
+                451.546875
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "year",
+              "ambient": false,
+              "transform": "matrix(8.99038e-07, 0.01, -0.01, 8.99038e-07, 0.0078125, 86.8984)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                719.0206909179688,
+                399.81591796875,
+                1.9586181640625,
+                10.3681640625
+              ]
+            },
+            {
+              "tag": "H1",
+              "id": "hero-heading",
+              "layer": "heading",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                380.703125,
+                1036.796875,
+                147.0625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00994329, -0.00106352, 0.00106352, 0.00994329, 460.312, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.3441772460938,
+                404.2070617675781,
+                1.3116455078125,
+                1.58587646484375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00989275, -0.00146063, 0.00146063, 0.00989275, 333.461, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.21240234375,
+                404.1721496582031,
+                1.5751953125,
+                1.65570068359375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00972043, -0.00234804, 0.00234804, 0.00972043, 203.82, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.2355346679688,
+                404.1423034667969,
+                1.5289306640625,
+                1.71539306640625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00864175, -0.00503191, 0.00503191, 0.00864175, 84.5547, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.12548828125,
+                404.0707702636719,
+                1.7490234375,
+                1.85845947265625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.00503445, -0.00864027, 0.00864027, -0.00503445, -28.6875, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.0885009765625,
+                404.15582275390625,
+                1.822998046875,
+                1.6883544921875
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.00951519, -0.0030759, 0.0030759, -0.00951519, -152.305, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.1195678710938,
+                404.0888366699219,
+                1.7608642578125,
+                1.82232666015625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.00984377, -0.00176072, 0.00176072, -0.00984377, -275.258, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.3370361328125,
+                404.1807556152344,
+                1.325927734375,
+                1.63848876953125
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.0099044, -0.00137945, 0.00137945, -0.0099044, -353.5, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.660400390625,
+                404.2385559082031,
+                0.67919921875,
+                1.52288818359375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                1097.546875,
+                380.703125,
+                137.515625,
+                147.0625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "identity",
+              "ambient": false,
+              "transform": "matrix(4.85956e-07, -0.01, 0.01, 4.85956e-07, 0.0078125, -160.766)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                719.7797241210938,
+                399.8160095214844,
+                0.4405517578125,
+                10.36798095703125
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "intro",
+              "ambient": false,
+              "transform": "matrix(0.007929, -0.00609351, 0.00609351, 0.007929, 313.289, -240.766)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                718.2152099609375,
+                403.5439453125,
+                3.569580078125,
+                2.912109375
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "indicator",
+              "ambient": false,
+              "transform": "matrix(-0.00199835, -0.00979829, 0.00979829, -0.00199835, -92.7969, -455)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                718.7001953125,
+                398.9952697753906,
+                2.599609375,
+                12.00946044921875
+              ]
+            },
+            {
+              "tag": "SECTION",
+              "id": "about",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": "false",
+              "rect": [
+                0,
+                216,
+                1440,
+                923.765625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "true",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, -216)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                1440,
+                923.765625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "true",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, -216)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "grid",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                80,
+                144,
+                1280,
+                635.765625
+              ]
+            },
+            {
+              "tag": "HEADER",
+              "id": "",
+              "layer": "heading",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                640,
+                144,
+                720,
+                235.03125
+              ]
+            },
+            {
+              "tag": "FIGURE",
+              "id": "",
+              "layer": "avatar",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                80,
+                162.125,
+                496,
+                599.5
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "bio",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                640,
+                411.03125,
+                720,
+                368.734375
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                640,
+                411.03125,
+                646.125,
+                97.171875
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                640,
+                532.203125,
+                646.125,
+                129.5625
+              ]
+            },
+            {
+              "tag": "BLOCKQUOTE",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                640,
+                685.765625,
+                646.125,
+                94
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                1139.765625,
+                1440,
+                10486.5625
+              ]
+            }
+          ],
+          "backdrop": {
+            "visible": true,
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "ambient": [
+            {
+              "name": "star-field",
+              "uTime": 11.28
+            },
+            {
+              "name": "nebula",
+              "uTime": 11.28
+            },
+            {
+              "name": "nebula",
+              "uTime": 11.28
+            }
+          ],
+          "overflow": 0,
+          "anchor": {
+            "left": 1102.140625,
+            "top": 396.78125,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "scroll": 3384,
+          "focus": {
+            "id": "",
+            "tag": "BODY",
+            "hidden": false
+          },
+          "triggers": [
+            "stellar-nav-auto-hide",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "glError": 0,
+          "heroIdle": "false"
+        },
+        {
+          "label": "portal-forward-1",
+          "file": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-forward-1.png",
+          "chapter": "portal",
+          "p": 1,
+          "manual": true,
+          "lang": "vi",
+          "reduced": false,
+          "canvas": 1,
+          "producers": 1,
+          "cameraWriters": 1,
+          "pose": [
+            2.0000000000000004,
+            5,
+            -154,
+            -0.16798420551306958,
+            0.3020470700936579,
+            0.05416153431403444,
+            0.9368112949504448,
+            59.99999999999999
+          ],
+          "ray": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              2.0000000000000004,
+              5,
+              46
+            ],
+            "uCameraMatrix": [
+              0.8116681912971732,
+              0,
+              -0.5841187783630787,
+              0,
+              -0.20295654838893423,
+              0.937695669797785,
+              -0.2820203366931783,
+              0,
+              0.547725649118631,
+              0.34745766769850317,
+              0.7610977482919594,
+              0,
+              2.0000000000000004,
+              5,
+              -154,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.5,
+              0.55
+            ],
+            "uRayCenter": [
+              0.861091405824844,
+              0.6988752066768357
+            ],
+            "uPortalScale": 152.77984127402985,
+            "uPortalRadius": [
+              38603.249999999985,
+              19301.624999999993
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0,
+            "uPortalPull": 1,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              1,
+              0,
+              1
+            ]
+          },
+          "uniformFinite": true,
+          "shared": true,
+          "rayPasses": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "buffer": [
+            1440,
+            900
+          ],
+          "rayId": "b4b9fe62-373a-4576-ae7a-b54d20aed1b2",
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "programs": 10,
+          "observedTargets": 21,
+          "targetDisposals": 0,
+          "dom": [
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": "false",
+              "rect": [
+                0,
+                0,
+                1440,
+                72
+              ]
+            },
+            {
+              "tag": "NAV",
+              "id": "",
+              "layer": "",
+              "ambient": true,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                0,
+                0,
+                1440,
+                72
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": true,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "contents",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "hidden",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                0,
+                0,
+                1440,
+                900
+              ]
+            },
+            {
+              "tag": "HEADER",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": true,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                1440,
+                900
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                220.21875,
+                1036.796875,
+                451.546875
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "year",
+              "ambient": false,
+              "transform": "matrix(8.99038e-07, 0.01, -0.01, 8.99038e-07, 0.0078125, 86.8984)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                719.0206909179688,
+                399.81591796875,
+                1.9586181640625,
+                10.3681640625
+              ]
+            },
+            {
+              "tag": "H1",
+              "id": "hero-heading",
+              "layer": "heading",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                201.59375,
+                380.703125,
+                1036.796875,
+                147.0625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00994329, -0.00106352, 0.00106352, 0.00994329, 460.312, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.3441772460938,
+                404.2070617675781,
+                1.3116455078125,
+                1.58587646484375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00989275, -0.00146063, 0.00146063, 0.00989275, 333.461, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.21240234375,
+                404.1721496582031,
+                1.5751953125,
+                1.65570068359375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00972043, -0.00234804, 0.00234804, 0.00972043, 203.82, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.2355346679688,
+                404.1423034667969,
+                1.5289306640625,
+                1.71539306640625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(0.00864175, -0.00503191, 0.00503191, 0.00864175, 84.5547, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.12548828125,
+                404.0707702636719,
+                1.7490234375,
+                1.85845947265625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.00503445, -0.00864027, 0.00864027, -0.00503445, -28.6875, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.0885009765625,
+                404.15582275390625,
+                1.822998046875,
+                1.6883544921875
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.00951519, -0.0030759, 0.0030759, -0.00951519, -152.305, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.1195678710938,
+                404.0888366699219,
+                1.7608642578125,
+                1.82232666015625
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.00984377, -0.00176072, 0.00176072, -0.00984377, -275.258, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.3370361328125,
+                404.1807556152344,
+                1.325927734375,
+                1.63848876953125
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "matrix(-0.0099044, -0.00137945, 0.00137945, -0.0099044, -353.5, -49.2344)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                719.660400390625,
+                404.2385559082031,
+                0.67919921875,
+                1.52288818359375
+              ]
+            },
+            {
+              "tag": "SPAN",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "inline-block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                1097.546875,
+                380.703125,
+                137.515625,
+                147.0625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "identity",
+              "ambient": false,
+              "transform": "matrix(4.85956e-07, -0.01, 0.01, 4.85956e-07, 0.0078125, -160.766)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "flex",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                719.7797241210938,
+                399.8160095214844,
+                0.4405517578125,
+                10.36798095703125
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "intro",
+              "ambient": false,
+              "transform": "matrix(0.007929, -0.00609351, 0.00609351, 0.007929, 313.289, -240.766)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                718.2152099609375,
+                403.5439453125,
+                3.569580078125,
+                2.912109375
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "indicator",
+              "ambient": false,
+              "transform": "matrix(-0.00199835, -0.00979829, 0.00979829, -0.00199835, -92.7969, -455)",
+              "translate": "none",
+              "opacity": "0",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                718.7001953125,
+                398.9952697753906,
+                2.599609375,
+                12.00946044921875
+              ]
+            },
+            {
+              "tag": "SECTION",
+              "id": "about",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": "false",
+              "rect": [
+                0,
+                0,
+                1440,
+                923.765625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "true",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": "true",
+              "rect": [
+                0,
+                0,
+                1440,
+                923.765625
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "true",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "grid",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                80,
+                144,
+                1280,
+                635.765625
+              ]
+            },
+            {
+              "tag": "HEADER",
+              "id": "",
+              "layer": "heading",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                640,
+                144,
+                720,
+                235.03125
+              ]
+            },
+            {
+              "tag": "FIGURE",
+              "id": "",
+              "layer": "avatar",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                80,
+                162.125,
+                496,
+                599.5
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "bio",
+              "ambient": false,
+              "transform": "matrix(1, 0, 0, 1, 0, 0)",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                640,
+                411.03125,
+                720,
+                368.734375
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                640,
+                411.03125,
+                646.125,
+                97.171875
+              ]
+            },
+            {
+              "tag": "P",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                640,
+                532.203125,
+                646.125,
+                129.5625
+              ]
+            },
+            {
+              "tag": "BLOCKQUOTE",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": null,
+              "rect": [
+                640,
+                685.765625,
+                646.125,
+                94
+              ]
+            },
+            {
+              "tag": "DIV",
+              "id": "",
+              "layer": "",
+              "ambient": false,
+              "transform": "none",
+              "translate": "none",
+              "opacity": "1",
+              "visibility": "visible",
+              "display": "block",
+              "inert": false,
+              "ariaHidden": "false",
+              "rect": [
+                0,
+                923.765625,
+                1440,
+                10486.5625
+              ]
+            }
+          ],
+          "backdrop": {
+            "visible": true,
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "quaternion": [
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "ambient": [
+            {
+              "name": "star-field",
+              "uTime": 12
+            },
+            {
+              "name": "nebula",
+              "uTime": 12
+            },
+            {
+              "name": "nebula",
+              "uTime": 12
+            }
+          ],
+          "overflow": 0,
+          "anchor": {
+            "left": 1102.140625,
+            "top": 396.78125,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "scroll": 3600,
+          "focus": {
+            "id": "",
+            "tag": "BODY",
+            "hidden": false
+          },
+          "triggers": [
+            "stellar-nav-auto-hide",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "glError": 0,
+          "heroIdle": "false"
+        }
+      ],
+      "environment": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+        "dpr": 1,
+        "rendererDpr": 1,
+        "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "ranges": [
+          {
+            "id": "hero",
+            "top": 0,
+            "height": 0,
+            "end": 0
+          },
+          {
+            "id": "portal",
+            "top": 0,
+            "height": 3600,
+            "end": 3600
+          },
+          {
+            "id": "about",
+            "top": 3600,
+            "height": 924,
+            "end": 4523.765625
+          },
+          {
+            "id": "skills",
+            "top": 4523.765625,
+            "height": 1059,
+            "end": 5582.953125
+          },
+          {
+            "id": "education",
+            "top": 5582.953125,
+            "height": 1575,
+            "end": 7157.953125
+          },
+          {
+            "id": "experience",
+            "top": 7157.953125,
+            "height": 2608,
+            "end": 8775.90625
+          },
+          {
+            "id": "departure",
+            "top": 8775.90625,
+            "height": 990,
+            "end": 9765.90625
+          },
+          {
+            "id": "works",
+            "top": 9765.90625,
+            "height": 1440,
+            "end": 11205.90625
+          },
+          {
+            "id": "finale",
+            "top": 11205.90625,
+            "height": 2025,
+            "end": 13230.90625
+          },
+          {
+            "id": "contact",
+            "top": 13230.90625,
+            "height": 1263,
+            "end": 14110
+          }
+        ]
+      }
+    }
+  ],
+  "comparisons": [],
+  "scenarios": [],
+  "lifecycle": [],
+  "errors": [],
+  "warnings": [
+    {
+      "id": "1440-vi",
+      "type": "warning",
+      "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    }
+  ],
+  "limits": [
+    "Desktop Edge headless; 390px/touch viewport is not a physical phone.",
+    "Held checkpoints use the existing story store and exact visible scroll; native producer sampled separately.",
+    "Authored pose/uniforms/DOM state compared at equal progress; ambient uTime, idle glitch/dots and pointer following recorded separately.",
+    "No FPS claim, GPU benchmark, screen reader, OS motion switch, public HTTPS, Safari or Firefox validation."
+  ],
+  "status": "PASS",
+  "finished": "2026-10-09T09:48:05.065Z",
+  "sourceAfter": {
+    "src/App.jsx": "b162332486eb5872031cce5dd56db031c08ddccfb9b9c5dcddf0d84947648b97",
+    "src/components/Hero.jsx": "cff3b6765079d0f04c678857a4ce9b5fa710aaa6d2f90390e6b8ead8967c1ea7",
+    "src/components/effects/PortalHeading.jsx": "da3be79732a4958522e4d2b54a7ec944efdd1071876a418654a0e0e8791584a8",
+    "src/components/About.jsx": "1e637b9a62c5072573336afa34b44bc4059bd266db291f49e235ea65059d5f7e",
+    "src/components/layout/Nav.jsx": "b3817785d873819240231277b99750270587747564a4853bd726639debf33003",
+    "src/components/Cursor.jsx": "807364e0ca3de8f556622f0011e0cb41fea07a703b5d1c2f05a90108f4830f38",
+    "src/3d/GalaxyScene.jsx": "7e7d71ea99624fe9d5ec26ce27a25e62caea732da6f17d6aa0cb5c4646a47c83",
+    "src/3d/components/CameraRig.jsx": "fd01fb40484b7f14f4eb893d07cd486a68b41c1729e9a61193a9bc8de84d816f",
+    "src/3d/utils/cameraPath.js": "b8b74b47c1e03ecf7e09dd08934f69d5b07bf880c9e80402e6c471a95f2b8c7f",
+    "src/3d/utils/portal.js": "973cf175d67a63aeeb0493ff3d148372e812fdc4f788674c47e62f680fbe3254",
+    "src/3d/hooks/useScrollProgress.js": "0998d47a16fb63482217bbec69b97f6da5392ed5575788653782e7127e09f87b",
+    "src/stores/useScrollStore.js": "ff2f96ca3cf87b2dc0ca0d32375d5fa67ab66f680271ed8c6a618e82cd4845e7",
+    "src/3d/components/BlackHole.jsx": "50905550916924c2acaf37743f67837f260b4aaf1a7e4d5b5fbb1aeb7f9a6029",
+    "src/3d/components/BlackHoleSystem.jsx": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+    "src/3d/components/BlackHoleBloomMask.jsx": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c",
+    "src/3d/shaders/blackHole.js": "b5b33465f365d7eaa9983ca4f7133ebd9adda63057ea2a6f51e38980a84a5e64",
+    "src/3d/quality.js": "e41080fcf00415c51806f658902908cebf0eb9b6501371bb558bfd5bf58b64e0"
+  }
+}

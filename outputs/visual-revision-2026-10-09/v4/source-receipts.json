@@ -1,0 +1,136 @@
+[
+  {
+    "url": "https://johanmeuris.eu/work/stellarium-constellation-art/",
+    "finalUrl": "https://johanmeuris.eu/work/stellarium-constellation-art/",
+    "filename": "author.html",
+    "status": 200,
+    "retrievedAt": "2026-10-09T08:07:10.382Z",
+    "bytes": 49785,
+    "sha256": "c3c54680488d0fdda5cbb386da93a39accf09a490585e378ac80dc0b42b22f3b"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/centaurus.png",
+    "finalUrl": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/centaurus.png",
+    "filename": "centaurus.png",
+    "status": 200,
+    "retrievedAt": "2026-10-09T08:07:09.936Z",
+    "bytes": 33573,
+    "sha256": "76c4e6b98f224ad7e4853e46be5c7b897dfb344f7e495a321a9a711ddd5cc232"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/src/core/modules/ConstellationMgr.cpp",
+    "finalUrl": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/src/core/modules/ConstellationMgr.cpp",
+    "filename": "ConstellationMgr.cpp",
+    "status": 200,
+    "retrievedAt": "2026-10-09T08:07:10.181Z",
+    "bytes": 68623,
+    "sha256": "31e2a6d3fecb292672e806abffc2df6f7d608b5cf7ce1ca57f781930ca20591b"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/cygnus.png",
+    "finalUrl": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/cygnus.png",
+    "filename": "cygnus.png",
+    "status": 200,
+    "retrievedAt": "2026-10-09T08:07:09.937Z",
+    "bytes": 29252,
+    "sha256": "d9ad9d2ffea6fb50eedf1ace1353efcca35bedf7fe4c45c6b67b8b01ec5e87a0"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/description.md",
+    "finalUrl": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/description.md",
+    "filename": "description.md",
+    "status": 200,
+    "retrievedAt": "2026-10-09T08:07:09.764Z",
+    "bytes": 53269,
+    "sha256": "4b58344f63168d7c816fdfef405103b5770fda2e1f4a4bf5c8871041ce042586"
+  },
+  {
+    "url": "https://artlibre.org/licence/lal/en/",
+    "finalUrl": "https://artlibre.org/licence/lal/en/",
+    "filename": "free-art-license.html",
+    "status": 200,
+    "retrievedAt": "2026-10-09T08:07:11.208Z",
+    "bytes": 48969,
+    "sha256": "785a845ffa3c29f9603bd77bca766ecae5915df142e882a54d27f8b71a918e13"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/gemini.png",
+    "finalUrl": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/gemini.png",
+    "filename": "gemini.png",
+    "status": 200,
+    "retrievedAt": "2026-10-09T08:07:09.997Z",
+    "bytes": 18325,
+    "sha256": "fb481f6bb73c44a7b0009a20fc7b17d574dac1d425a13b48b75a8bb6b2e5511a"
+  },
+  {
+    "filename": "hipparcos-ReadMe.txt",
+    "source": "outputs/redesign/r0.2/astronomy/sources/hipparcos-ReadMe.txt",
+    "url": "https://cdsarc.cds.unistra.fr/ftp/I/239/ReadMe",
+    "status": "inherited snapshot; fresh FTP 403 / ReadMe CGI 500",
+    "bytes": 70108,
+    "sha256": "3c0c1bb103579dedf346b22c708687320782a72bb8f6f29fb9cae354e0916a10"
+  },
+  {
+    "url": "https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=I%2F239%2Fhip_main&HIP=22449%2C22509%2C22549%2C22730%2C22797%2C22845%2C23123%2C24436%2C25336%2C25930%2C26207%2C26311%2C26727%2C27366%2C27913%2C27989%2C28614%2C28716%2C28734%2C29038%2C29426%2C29434%2C29655%2C30343%2C30883%2C31681%2C32246%2C32362%2C33018%2C34088%2C34693%2C35350%2C35550%2C36046%2C36850%2C36962%2C37740%2C37826%2C47908%2C48455%2C49583%2C49669%2C50335%2C50583%2C54872%2C54879%2C56480%2C56561%2C57632%2C59196%2C60823%2C61932%2C65109%2C65936%2C66657%2C67464%2C67472%2C68002%2C68282%2C68702%2C68933%2C71352%2C71683%2C73334%2C78265%2C78401%2C78820%2C80763%2C81266%2C82396%2C82514%2C82671%2C82729%2C84143%2C85927%2C86228%2C86670%2C87073%2C94779%2C95853%2C95947%2C97165%2C98110%2C100453%2C102098%2C102488%2C104732%2C107310&-out=HIP%2CRAICRS%2CDEICRS%2CVmag&-out.max=1000",
+    "finalUrl": "https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=I%2F239%2Fhip_main&HIP=22449%2C22509%2C22549%2C22730%2C22797%2C22845%2C23123%2C24436%2C25336%2C25930%2C26207%2C26311%2C26727%2C27366%2C27913%2C27989%2C28614%2C28716%2C28734%2C29038%2C29426%2C29434%2C29655%2C30343%2C30883%2C31681%2C32246%2C32362%2C33018%2C34088%2C34693%2C35350%2C35550%2C36046%2C36850%2C36962%2C37740%2C37826%2C47908%2C48455%2C49583%2C49669%2C50335%2C50583%2C54872%2C54879%2C56480%2C56561%2C57632%2C59196%2C60823%2C61932%2C65109%2C65936%2C66657%2C67464%2C67472%2C68002%2C68282%2C68702%2C68933%2C71352%2C71683%2C73334%2C78265%2C78401%2C78820%2C80763%2C81266%2C82396%2C82514%2C82671%2C82729%2C84143%2C85927%2C86228%2C86670%2C87073%2C94779%2C95853%2C95947%2C97165%2C98110%2C100453%2C102098%2C102488%2C104732%2C107310&-out=HIP%2CRAICRS%2CDEICRS%2CVmag&-out.max=1000",
+    "filename": "hipparcos-stars.tsv",
+    "status": 200,
+    "retrievedAt": "2026-10-09T08:07:12.238Z",
+    "bytes": 5974,
+    "sha256": "420bf242426fd67f81633e99f74a42b49deb0648c46d0339910e91cb58a7b6b8"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/index.json",
+    "finalUrl": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/index.json",
+    "filename": "index.json",
+    "status": 200,
+    "retrievedAt": "2026-10-09T08:07:09.669Z",
+    "bytes": 205767,
+    "sha256": "1f2f5ffd6c9e25a7d0dcfdbf1f756e2db03dd3b8ed4ec016a2839b09f6b0fe1e"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/leo.png",
+    "finalUrl": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/leo.png",
+    "filename": "leo.png",
+    "status": 200,
+    "retrievedAt": "2026-10-09T08:07:09.935Z",
+    "bytes": 32902,
+    "sha256": "1e12035d808d63f4dbc9e4a195fce32ef69281d38efea2ea2242c38cf0fec2ba"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/orion.png",
+    "finalUrl": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/orion.png",
+    "filename": "orion.png",
+    "status": 200,
+    "retrievedAt": "2026-10-09T08:07:09.962Z",
+    "bytes": 41095,
+    "sha256": "3edea0a3275ce25e084642f55111e07d8e7fc16cfeb8a04844719f45523744ae"
+  },
+  {
+    "url": "https://api.github.com/repos/Stellarium/stellarium/commits/daace2add6a1bf886e8ee1934f51e9c69f818d18",
+    "finalUrl": "https://api.github.com/repos/Stellarium/stellarium/commits/daace2add6a1bf886e8ee1934f51e9c69f818d18",
+    "filename": "revision.json",
+    "status": 200,
+    "retrievedAt": "2026-10-09T08:07:10.260Z",
+    "bytes": 4278,
+    "sha256": "91d2178f3ab90a7bbe8400a1c81b835acaec493324f4026b3dca98c7838b53b6"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/scorpius.png",
+    "finalUrl": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/scorpius.png",
+    "filename": "scorpius.png",
+    "status": 200,
+    "retrievedAt": "2026-10-09T08:07:09.945Z",
+    "bytes": 38820,
+    "sha256": "e681573f0d51cc934bf170fa4136396a78d234d5d0db3f778cc16ea0df6f2d64"
+  },
+  {
+    "url": "https://cds.unistra.fr/vizier-org/licences_vizier.html",
+    "finalUrl": "https://cds.unistra.fr/vizier-org/licences_vizier.html",
+    "filename": "vizier-licenses.html",
+    "status": 200,
+    "retrievedAt": "2026-10-09T08:07:10.428Z",
+    "bytes": 9428,
+    "sha256": "f6bab16f7060f41c98958f0044fa3a526eeeeacdd23cb2fa7a529016d2b29e9f"
+  }
+]

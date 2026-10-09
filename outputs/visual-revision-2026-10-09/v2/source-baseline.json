@@ -1,0 +1,434 @@
+[
+  {
+    "path": "public\\theme-init.js",
+    "sha256": "B4B82E9564CBBF346B6C924D262B8B741CB2EEAC29C46ECE0E7D387DD14D6B57"
+  },
+  {
+    "path": "public\\pwa-maskable-512x512.png",
+    "sha256": "9894D4A3820F39BB8456E5881ECB9C9AA3006A774BEEFB774E619E18BD97F834"
+  },
+  {
+    "path": "public\\pwa-maskable-192x192.png",
+    "sha256": "D848D131A9C68BB1469C201AD41C923A4F10CC79890719B86E21CCCDDA13A3B6"
+  },
+  {
+    "path": "public\\pwa-512x512.png",
+    "sha256": "AC06E97BDA0B1A82B5FE7F8CBCEDBEF0BB7A9AC1DE1C1D988AD9833091470F97"
+  },
+  {
+    "path": "public\\pwa-192x192.png",
+    "sha256": "6E838D4B2412CB88C71F6BEFCC441B984EFC2C73E1974C4C1A244BD7D7E9F724"
+  },
+  {
+    "path": "tools/codex-skills\\react-3d-ui\\SKILL.md",
+    "sha256": "541CE17D466E1EA4AB62E357287F87805260506F4682142BC8D519C0CC5D27E3"
+  },
+  {
+    "path": "src\\styles\\menu.css",
+    "sha256": "DD777575640BABBA2A136B5584153B688FE0B2CF0E0B13071029CFA0D7C7D947"
+  },
+  {
+    "path": "src\\styles\\globals.css",
+    "sha256": "9032E46E8EA120948D32FBE835FC13CB3CBB315152DB19C2A4843D30F4B048E5"
+  },
+  {
+    "path": "tools/codex-skills\\react-3d-ui\\agents\\openai.yaml",
+    "sha256": "F5BC24AE37C19ADA0F9E8DFDF62DCC4C88C6B9C678D4EAF4619AB4E43E8DC9BA"
+  },
+  {
+    "path": "public\\projects\\edura\\solution.webp",
+    "sha256": "7714B0840765FECC8A397C5C3A03EB97DA448D752090821752998948F8BA47A8"
+  },
+  {
+    "path": "public\\projects\\edura\\problem.webp",
+    "sha256": "11E86FF9FFE00BF747A3B50DB209E68658B08FCAA2989E4CB6300146B2FC1C4D"
+  },
+  {
+    "path": "public\\projects\\edura\\overview.webp",
+    "sha256": "CC792C5DFB8D3ACAF30925372969711E6B18A19CA831E6CC9BAA8E63900D9B23"
+  },
+  {
+    "path": "public\\project3.webp",
+    "sha256": "03117079520095B5DAB4CD53A4B8C2A8495FE174EFC1AA4D9B9D998447DAD6FC"
+  },
+  {
+    "path": "public\\project2.webp",
+    "sha256": "1032B163B247F7D528B313F093ABF6BC29EADE6B39D98B5ACBBD5B068056DE9B"
+  },
+  {
+    "path": "public\\project1.webp",
+    "sha256": "2E9D8CEE3C4C3584BB74BDEFFCF384DCFABEB7D74BB165FD48D5094E38AD359B"
+  },
+  {
+    "path": "public\\og-image.jpg",
+    "sha256": "BC898F6EBDA22F5920AF9BCF5BC01C7AA3EBB7A53E01434A787283C4598E9E2F"
+  },
+  {
+    "path": "public\\icons\\ps.png",
+    "sha256": "F3083BD3ED5AC24D94D45907A1FA4AB1713F1D8FC6361D2E9EBFC960C5B85862"
+  },
+  {
+    "path": "public\\icons\\pr.png",
+    "sha256": "6AF65C63D2F8A59FC54F49F5BC76B9938777789A04F36B625433409D9803EFAB"
+  },
+  {
+    "path": "public\\icons\\figma.png",
+    "sha256": "79036C1F608B11EB14A711EC02BAB4CC162A2406E7FB89AE5F02A456D4918F48"
+  },
+  {
+    "path": "public\\icons\\ai.png",
+    "sha256": "7A9E921269CB9257010D22F61694268D14C171B245413134E7CD3244FCC56331"
+  },
+  {
+    "path": "public\\icons\\ae.png",
+    "sha256": "13DF4673F9BD262A1376C488E1CBFC67BD1CD0500555C05677EDFA15128069AF"
+  },
+  {
+    "path": "public\\favicon.svg",
+    "sha256": "59B453E9CCAEFDE87745B96561282B6ECF48F2DCA482898D2FEDCAE064D18AA7"
+  },
+  {
+    "path": "src\\stores\\useThemeStore.js",
+    "sha256": "52E649AB76B03C676F2C423E2EF3E274EBB97A8B435392FE4BF1B006DF4F8624"
+  },
+  {
+    "path": "src\\stores\\useSkillsStore.js",
+    "sha256": "CF06593DE4261C5E0A571B2A07E9D50243F99F20A8AD7B5E52AA0C2CEAAFAAC5"
+  },
+  {
+    "path": "src\\stores\\useScrollStore.js",
+    "sha256": "998A0D5D9224A6603A4F48166AFACF72A525C6C5A394862B7CBBA705D50B79F5"
+  },
+  {
+    "path": "src\\stores\\useRouteStore.js",
+    "sha256": "07598BD2C0D9ADF00F0F832895F2124B79894FECC166970A842191AB34085B5D"
+  },
+  {
+    "path": "src\\stores\\useLoadingStore.js",
+    "sha256": "8F9CC13AB4FC969EDB440D662B15D48F793497025817ACF0224AB0AD3F8C9A67"
+  },
+  {
+    "path": "src\\stores\\useLangStore.js",
+    "sha256": "9CA61FD05C9AB48A081072D55D59C4FC8949AFFE630FC97BC26404810005D09F"
+  },
+  {
+    "path": "src\\stores\\useEducationStore.js",
+    "sha256": "8D968968C314F3FC0B90FE8DB1E5E0C44908C4C6C22E282235030BCFB29A6C49"
+  },
+  {
+    "path": "src\\stores\\useAudioStore.js",
+    "sha256": "7E7188DE8CD1E260029C3EBD113F64C8B5CDCF1BB6C8D553D6757BF4B1A0C7CA"
+  },
+  {
+    "path": "src\\main.jsx",
+    "sha256": "147DF528E244299AA66772BAFBF3412A6641C0E2AB75431FF539A59C7839206F"
+  },
+  {
+    "path": "src\\data\\skills.js",
+    "sha256": "189CD6619CBF59B0CCD36D796C0D8B10A2E106567951CAD4E0F95EBBED5E8E1D"
+  },
+  {
+    "path": "src\\data\\navigation.js",
+    "sha256": "6E23B91B93C8BC0C57CA9D7AFCA9F5DD27E70226CD17469F319AAED762C03A0F"
+  },
+  {
+    "path": "src\\data\\education.js",
+    "sha256": "BCB689413001357AB7C10D77EB7E6C0145D1B4CD99892248A8F9257B95DE29B2"
+  },
+  {
+    "path": "tools/codex-skills\\galaxy-portfolio\\SKILL.md",
+    "sha256": "01DCC16AE160E222B62D885415817BBCAA3AE4FC287DED85BA5419A65A03AAD5"
+  },
+  {
+    "path": "public\\avatar.webp",
+    "sha256": "E6C0BAC02737F8BEB0BD25CA08793E552CC801B54D88464C9AE761A15DD90BD2"
+  },
+  {
+    "path": "public\\avatar-cutout.webp",
+    "sha256": "6B2FEA6DCBD2BD204FC0AA6C545CBE7A696670FC4532C992378C3393D53B511F"
+  },
+  {
+    "path": "src\\3d-lab.jsx",
+    "sha256": "E8B041D3DCE2A5559A50F4E7C634FD39E515383299BABB8526F07A3058E416D7"
+  },
+  {
+    "path": "src\\lib\\utils.js",
+    "sha256": "478739B1EED969267A388FC17DB539B53AA66CF15A9467E475274B36DE8783F2"
+  },
+  {
+    "path": "src\\lib\\audioEngine.js",
+    "sha256": "B5725A71C0E893E898FCC0E277ED464237F47BC12328A15EA9B34F432307DC77"
+  },
+  {
+    "path": "src\\App.jsx",
+    "sha256": "8682B3FD77FA99DEB59D0D219B9FBF28E36BD536220E94C7A1791B82325BCD05"
+  },
+  {
+    "path": "src\\index.css",
+    "sha256": "EC90E0ABFB7970145FF020105E43DDA0AB4D28BF12457769F5C9079C009639A0"
+  },
+  {
+    "path": "src\\data.js",
+    "sha256": "909413A8E834E1A0998CF20D3228DE4E67E74C6460968D82A8C16EEE9A6A9680"
+  },
+  {
+    "path": "src\\components\\Work.jsx",
+    "sha256": "DB7A4075BEAFF94625309A41BBD9EF30F69E54BDA90CC16C174DD140AA11E1F4"
+  },
+  {
+    "path": "tools/codex-skills\\galaxy-portfolio\\agents\\openai.yaml",
+    "sha256": "FF7BFBB4D578B26D8668E8AEC27F6527974FFD46A8348557E9CCA3242E233C85"
+  },
+  {
+    "path": "src\\components\\Footer.jsx",
+    "sha256": "79A993376661C8189E8B52A2BEA2D166F97D63B001DDE2922E61B0B77BA1B14C"
+  },
+  {
+    "path": "src\\components\\EvilEye.jsx",
+    "sha256": "C76BEBCE7C93608D982FC18579BD404CF204D0B1D068C1B3C14817406DD74F11"
+  },
+  {
+    "path": "src\\components\\ui\\SoundToggle.jsx",
+    "sha256": "29E29630680251960B789C247BE30465B0F6571230183E67B656D698F20C80FA"
+  },
+  {
+    "path": "src\\components\\SplashCursor.jsx",
+    "sha256": "95A4982D97E49E892788B9847CD41843F084FE9F2A39C10AE0AE88944280D8EC"
+  },
+  {
+    "path": "src\\components\\effects\\PortalHeading.jsx",
+    "sha256": "DEAE4EC8B9336DE37F47C0DD4BFE5707B0312DCBFECF54CD03BAE49D0515BC6C"
+  },
+  {
+    "path": "src\\components\\Education.jsx",
+    "sha256": "E39ACB513195AFF54DD849DD6FD19A5F1EE4474551C9FA89A9032DEC744C7092"
+  },
+  {
+    "path": "src\\components\\Cursor.jsx",
+    "sha256": "5D74BB591597CFA76B298B37863B3A246BD53A298F96DC5EA913FC8C5A7FC8AE"
+  },
+  {
+    "path": "src\\components\\Aurora.jsx",
+    "sha256": "C03E2396D0F975A4371705BA60A0176896AA1F22396E7F8153981592F8D4589B"
+  },
+  {
+    "path": "src\\components\\About.jsx",
+    "sha256": "330C475E889E533AA296E1C62A376F2EF057039F4D30FEFA259C4833A40669D2"
+  },
+  {
+    "path": "src\\components\\sections\\Skills.jsx",
+    "sha256": "07300C842058D37E78F97683A376B5D1CD0646EDF7CFC17F0030CD5780FA9D28"
+  },
+  {
+    "path": "src\\components\\sections\\Experience.jsx",
+    "sha256": "EF374CB0353EDF75D543FD1B819CAB9B79061EC5FBE303178574C5B0C389289D"
+  },
+  {
+    "path": "src\\components\\sections\\Contact.jsx",
+    "sha256": "C5E7B77CD8C1943AA043CA69BC051E2A00734C3E778E5C96B726FE3150B44226"
+  },
+  {
+    "path": "src\\components\\Preloader.jsx",
+    "sha256": "80D50C244B8C1749804C16F30AB6831B399FD3771AB3F1029D659588C5ED4FCD"
+  },
+  {
+    "path": "src\\components\\layout\\Nav.jsx",
+    "sha256": "E9785F731B2D4A31A8B604B8F1B8132320040FBF43649DEB12395745C61C9D71"
+  },
+  {
+    "path": "src\\components\\layout\\MenuOverlay.jsx",
+    "sha256": "46FEFBEE0FE26EC884AA023D5E67D6BF949EE55002CF702E6A6F82459BF7D897"
+  },
+  {
+    "path": "src\\components\\Hero.jsx",
+    "sha256": "C28DBA84A23B705C937FAC5343B17FB8B80CC6993877B24399F32CCC36C839C6"
+  },
+  {
+    "path": "src\\3d\\GalaxyScene.jsx",
+    "sha256": "6B1E0747BB0E591C20ACB9273D45AF71541B7AB959951B846C8491110BDB48B1"
+  },
+  {
+    "path": "src\\hooks\\useSmoothScroll.js",
+    "sha256": "3386776D0AE6ECC61D7674F997B0ACD999FD930268B98C5B37A38CE17815383E"
+  },
+  {
+    "path": "src\\hooks\\useReducedMotion.js",
+    "sha256": "91BC0B684C97EE1B951FC43516A4C18697E32F17DBD7BAE5482207083228B947"
+  },
+  {
+    "path": "src\\hooks\\useGSAPSetup.js",
+    "sha256": "3E01127B4D73FD0E8C4F6C6AF569B8D58FAC8BC3F0D9AAA3AB577D4691F86B02"
+  },
+  {
+    "path": "src\\3d\\quality.js",
+    "sha256": "1254E64082D733AD7E07EE36321A0D6ED1A418DFBF1BE2BE1ECE38A247D5C681"
+  },
+  {
+    "path": "src\\components\\pages\\Edura.jsx",
+    "sha256": "7183A1653928FD8A0150A1DD6B690756446EC66850963A25A11A3FCC528908A7"
+  },
+  {
+    "path": "src\\i18n\\config.js",
+    "sha256": "3A7C679AF690A23FFD0E0F8E66E2C1A1FC8303D0F4B7DD30DF53BEF14DD971D3"
+  },
+  {
+    "path": "src\\assets\\react.svg",
+    "sha256": "35EF61ED53B323AE94A16A8EC659B3D0AF3880698791133F23B084085AB1C2E5"
+  },
+  {
+    "path": "src\\3d\\utils\\worksOrbit.js",
+    "sha256": "3B357D6392AC8CD7370FAE9670F90B5611F13A8969C9CA05422D0186D508E9F3"
+  },
+  {
+    "path": "src\\3d\\utils\\symbolMorph.js",
+    "sha256": "50BF740F932B71FF5DB60136126FFDEA1F0ED20328511AAA46E15FA01D4254C4"
+  },
+  {
+    "path": "src\\3d\\utils\\storyMeteor.js",
+    "sha256": "FEC6C5E2EA1EDA06D23DCB14C19930349DBF08D4FD5B83849A05902A4FC544A6"
+  },
+  {
+    "path": "src\\3d\\utils\\shootingStars.js",
+    "sha256": "620BEA9B207BB1CCEFF2A8DEFBB894F431083FCBD8F12153A8F00A1633035FCE"
+  },
+  {
+    "path": "src\\3d\\utils\\portal.js",
+    "sha256": "49E227007EDCAE46F4C655162AC63BBF85AE83E5A3BD7D53175C37CDF17140B1"
+  },
+  {
+    "path": "src\\3d\\utils\\finale.js",
+    "sha256": "59E5F731F13EACB7F950739EF1E1EBFD98FA7FD3E9D9C0BA2D8693B10B2BBE1D"
+  },
+  {
+    "path": "src\\3d\\utils\\cameraPath.js",
+    "sha256": "73E87D857F093A2FE84DE2D2AF801C227EA99E11103BA603C84977991574EFC5"
+  },
+  {
+    "path": "src\\3d\\utils\\buildStarGeometry.js",
+    "sha256": "35D7CF2AA82B6FA93C5465CC5E97E4C12155C6E5A40AFE8363C2C8DA4067B150"
+  },
+  {
+    "path": "src\\3d\\data\\worksConstellations.json",
+    "sha256": "133DCB33D88F35E2522CBA0A040AE760D9767E71BEF344404C117F73F6ADF699"
+  },
+  {
+    "path": "src\\3d\\data\\symbolTargets.json",
+    "sha256": "0EDFEC1C16363C7E65B6061105D0C791515130D120F0172B55CDB4A93A9BB903"
+  },
+  {
+    "path": "src\\i18n\\locales\\vi.json",
+    "sha256": "502EE94030F9BCC04812BD600396C40006385111B798B8DCEADA4BB411C8C390"
+  },
+  {
+    "path": "src\\3d\\hooks\\useSectionAnchor.js",
+    "sha256": "C60A591A4243E31AF603BCDEE47E74DF38FE826271B5B1AF17D06E47D88E0418"
+  },
+  {
+    "path": "src\\3d\\hooks\\useScrollProgress.js",
+    "sha256": "A606C78F79929F5CD75E96C6F667BFD2B90DA64C2457A9417A648A966B98607F"
+  },
+  {
+    "path": "src\\3d\\hooks\\useMediaQuery.js",
+    "sha256": "C9873DAB37C19E4AAD975F7C9AC2B43AAA6565606FB6B91D60D2C5A1EB8671B0"
+  },
+  {
+    "path": "src\\3d\\hooks\\useLabScroll.js",
+    "sha256": "A3828AB0BA03CB6FEC3D494F5C304F10E576ACCBBBD8F4DB9B25C8F0911EFE29"
+  },
+  {
+    "path": "src\\i18n\\locales\\vi\\scene.json",
+    "sha256": "26897416254DD3C9A75E4F739ED751D975D99460744251469F800D976B6F38AE"
+  },
+  {
+    "path": "src\\i18n\\locales\\vi\\lab.json",
+    "sha256": "EC53BEA1736579CA63B6D9B86FC223228BFA0027824ADBAD02D0D7DA86AAF4AB"
+  },
+  {
+    "path": "src\\i18n\\locales\\en.json",
+    "sha256": "D58585C97C57ACA25C72AA75C323D117B94996946A63DC334A3496634BDA6641"
+  },
+  {
+    "path": "src\\3d\\components\\BlackHoleSystem.jsx",
+    "sha256": "2D024010F32FFFD38259A9BF65DD2CB986563085DBFDB91DF4B9FB4F588D1CA6"
+  },
+  {
+    "path": "src\\3d\\components\\BlackHoleBloomMask.jsx",
+    "sha256": "A4A53EDC528F200545B09BB9FE84477633C959310F86F54431061E1E6019049C"
+  },
+  {
+    "path": "src\\3d\\components\\BlackHole.jsx",
+    "sha256": "33092601112DACDCACE04EF43B4F4729811833EB5D154C42A061C7048B2E48B9"
+  },
+  {
+    "path": "src\\3d\\components\\Nebula.jsx",
+    "sha256": "DD1C7384AA3B0F8CDFAF5BF91FDB4C6F1B4BE302C05A1AB09F3F3B1DC5B700B4"
+  },
+  {
+    "path": "src\\3d\\components\\LabTelemetry.jsx",
+    "sha256": "B53DDE5F806C82D8DCCC40B4BD4C9E0531464DE98505959294E44809A7F81B14"
+  },
+  {
+    "path": "src\\3d\\components\\CameraRig.jsx",
+    "sha256": "FD01FB40484B7F14F4EB893D07CD486A68B41C1729E9A61193A9BC8DE84D816F"
+  },
+  {
+    "path": "src\\3d\\components\\SceneFallback.jsx",
+    "sha256": "473131E386E1BA4A85850184D09F23EED52755C95DA3956F7959ACF1866B2F51"
+  },
+  {
+    "path": "src\\3d\\components\\SceneBoundary.jsx",
+    "sha256": "EE1C3710E1F289A7686C65DA0E0845F244BA9838EE9BF8ABDFFB8B51C587B815"
+  },
+  {
+    "path": "src\\3d\\components\\SkillsSymbols.jsx",
+    "sha256": "7556D64B2A82F48FDDCDC427474CADA6D7DD9B0885E3D0D81088699F31F5FD42"
+  },
+  {
+    "path": "src\\3d\\components\\ShootingStars.jsx",
+    "sha256": "705BBBF35B0E6D9CBE1FB57CB96EC8AB86144BFBCE6C359D26EE99052A7FA595"
+  },
+  {
+    "path": "src\\3d\\components\\StarField.jsx",
+    "sha256": "3A3D7AF2864FC319E163EFB150DC6547CBFA6507E494A9BC3D1BEC826BA6656E"
+  },
+  {
+    "path": "src\\3d\\components\\StoryMeteor.jsx",
+    "sha256": "E80E47EFAC1A7B957BD9C79975F23FB0E6D9BE23889EE008D72C8E7272C39466"
+  },
+  {
+    "path": "src\\3d\\components\\SymbolStars.jsx",
+    "sha256": "71979763DA15C5AC2C9F48B13B98FCDF270460F20558E6824B27C93EDE7C9A08"
+  },
+  {
+    "path": "src\\3d\\components\\WorksConstellations.jsx",
+    "sha256": "CDFE0EB115B53B56B0E63E092322201B7ACF495023DCE804F07CFC3804AE0707"
+  },
+  {
+    "path": "src\\3d\\shaders\\blackHole.js",
+    "sha256": "C29C10035BA58A67BB049F41CC5CF165A6A1F67B9F57AF8ED345AF04A9B04EDE"
+  },
+  {
+    "path": "src\\i18n\\locales\\en\\scene.json",
+    "sha256": "0CB051CA2EC3BF29329D42B39E2C62B151922E0B3599AA02F82B780A6606A1CF"
+  },
+  {
+    "path": "src\\i18n\\locales\\en\\lab.json",
+    "sha256": "DF846645028275C93814676CEC64F0C10F16CF5033BD324127998EF2469C399D"
+  },
+  {
+    "path": "AGENTS.md",
+    "sha256": "205C5E6827D5EA0F59B8E6225AB95DF7F7F13D0A2867CD145E6574C8BB674747"
+  },
+  {
+    "path": "package.json",
+    "sha256": "E21571DB76AF9CDDD6D3296AC10464F7F6C8BA83EAFF6234C0CFDE9CCE59B632"
+  },
+  {
+    "path": "package-lock.json",
+    "sha256": "824609C3123813427EA27548C5622E471B9AA9E7D8D249CFC50CDAD48B11996C"
+  },
+  {
+    "path": "vite.config.js",
+    "sha256": "44C8E05E4635DE03D3F86EB0FB38488131E45F6FBF725B90E40A4AB892FC2B99"
+  }
+]

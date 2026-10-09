@@ -9,6 +9,7 @@ import { WorksConstellations } from '@/3d/components/WorksConstellations';
 import { SymbolStars } from '@/3d/components/SymbolStars';
 import { SYMBOL_TOOL_IDS, SYMBOL_EDUCATION_IDS } from '@/3d/utils/symbolMorph';
 import { PortalHeading } from '@/components/effects/PortalHeading';
+import About from '@/components/About';
 import { useLabScroll } from '@/3d/hooks/useLabScroll';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
 import { useScrollStore } from '@/stores/useScrollStore';
@@ -116,12 +117,14 @@ export default function Lab() {
   const quality = chosenQuality ?? (mobile ? 'low' : tablet ? 'medium' : 'high');
   const bloomEnabled = bloom && quality !== 'low';
   const frozen = useReducedMotion();
+  const fallback = useScrollStore(state => state.sceneFallback);
+  const staticMotion = frozen || fallback;
   const { t } = useTranslation('lab');
   const chapter = useScrollStore(state => state.storyChapter);
   const manual = useScrollStore(state => state.storyManual);
   const entering = story && (chapter === 'hero' || chapter === 'portal');
   useSmoothScroll({ scope });
-  const controls = useLabScroll({ scope, story, locale: i18n.language });
+  const controls = useLabScroll({ scope, story, locale: i18n.language, staticMotion });
   useEffect(() => { document.title = t('title'); }, [t]);
 
   return (
@@ -132,13 +135,13 @@ export default function Lab() {
           active={showContent && (chapter === 'skills' || chapter === 'education')} frozen={frozen} />}
         <LabTelemetry story={story} frozen={frozen} />
       </>}</GalaxyScene>
-      {story && <PortalHeading label={t('story.portfolioPrefix') + t('story.portalGlyph')} year={t('story.year')} name={i18n.t('hero.name')} visible={showContent} />}
+      {story && <PortalHeading label={t('story.portfolioPrefix') + t('story.portalGlyph')} year={t('story.year')} name={i18n.t('hero.name')} role={i18n.t('hero.tagline')} visible={showContent} />}
       {story && <WorksControls visible={showContent} />}
       <a href="/" aria-label={t('back')} className="fixed top-3 left-6 z-30 inline-flex min-h-11 items-center font-mono text-xs uppercase tracking-widest text-secondary hover:text-foreground"><span className="sm:hidden">{t('story.backShort')}</span><span className="hidden sm:inline">{t('back')}</span></a>
-      <div id="smooth-wrapper"><main id="smooth-content" aria-hidden={!showContent || entering} className={`relative z-10 pointer-events-none ${showContent && !entering ? 'opacity-100' : 'opacity-0'}`}>
+      <div id="smooth-wrapper"><main id="smooth-content" aria-hidden={!showContent} className={`relative z-10 pointer-events-none ${showContent ? 'opacity-100' : 'opacity-0'}`}>
         {story ? <>
-          {STORY_CHAPTERS.map(item => (
-            <section key={item.id} id={`lab-${item.id}`} data-story-chapter={item.id} className={`flex flex-col justify-start px-6 pt-28 pb-64 sm:px-12 lg:px-20 ${item.height === 1.75 ? 'min-h-[175vh]' : item.height === 2.25 ? 'min-h-[225vh]' : item.height === 1.1 ? 'min-h-[110vh]' : 'min-h-screen'}`}>
+          {STORY_CHAPTERS.map(item => item.id === 'about' ? <div key={item.id} id="lab-about" data-story-chapter="about" className="pointer-events-auto"><About /></div> : (
+            <section key={item.id} id={`lab-${item.id}`} data-story-chapter={item.id} className={`flex flex-col justify-start px-6 pt-28 pb-64 sm:px-12 lg:px-20 ${entering ? 'invisible' : ''} ${item.id === 'portal' ? staticMotion ? 'min-h-screen' : 'min-h-[400vh]' : item.id === 'finale' && staticMotion ? 'min-h-0' : item.height === 1.75 ? 'min-h-[175vh]' : item.height === 2.25 ? 'min-h-[225vh]' : item.height === 1.1 ? 'min-h-[110vh]' : 'min-h-screen'}`}>
               <div className={`max-w-lg ${item.id === 'works' || chapter === 'works' ? 'invisible' : ''}`}>
                 <p className="font-mono text-xs uppercase tracking-widest text-secondary">{t('story.prototype')}</p>
                 <h2 className="mt-4 font-display text-3xl sm:text-5xl">{t(`story.chapters.${item.id}`)}</h2>

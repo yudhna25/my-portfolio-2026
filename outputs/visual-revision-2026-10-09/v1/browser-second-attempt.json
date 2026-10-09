@@ -1,0 +1,439 @@
+{
+  "startedAt": "2026-10-09T08:19:47.000Z",
+  "base": "http://127.0.0.1:5181",
+  "sourceStart": {
+    "src/components/Hero.jsx": "e7456e0cb8ffc8f345d425c0f4da1d935e9c3aec856230aa81bd97cab6430a09",
+    "src/components/effects/PortalHeading.jsx": "2e0542c3e2f0cf1915e10cec6251af8d4949563c139dfa7add6dab7c6b352fad",
+    "src/styles/hero.css": "16d98c26bb26eeb51a5e0b7fa841496a58cb2024f946d889a64186415d756776",
+    "src/3d/components/BlackHole.jsx": "e271e109b132fb7f07c60d0d089df84be35e517ae2f882066b7e2ddfb3fd1c2f",
+    "src/3d/components/BlackHoleSystem.jsx": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+    "src/3d/shaders/blackHole.js": "f29274d6673fcf79e1c2b26fb85a54cbf6553fbc7639c421f7c66ce1f839b3bb",
+    "src/3d/quality.js": "e41080fcf00415c51806f658902908cebf0eb9b6501371bb558bfd5bf58b64e0"
+  },
+  "checks": [
+    {
+      "label": "320-vi: no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "width": 320,
+        "height": 568,
+        "lang": "vi",
+        "rootFont": "16px",
+        "content": {
+          "left": 16,
+          "top": 164.203125,
+          "right": 304,
+          "bottom": 403.78125,
+          "width": 288,
+          "height": 239.578125
+        },
+        "title": {
+          "left": 16,
+          "top": 206.6875,
+          "right": 304,
+          "bottom": 247.53125,
+          "width": 288,
+          "height": 40.84375
+        },
+        "year": {
+          "left": 16,
+          "top": 164.203125,
+          "right": 244.890625,
+          "bottom": 216.484375,
+          "width": 228.890625,
+          "height": 52.28125
+        },
+        "anchor": {
+          "left": 266.171875,
+          "top": 211.140625,
+          "right": 303.1875,
+          "bottom": 243.046875,
+          "width": 37.015625,
+          "height": 31.90625
+        },
+        "name": {
+          "left": 16,
+          "top": 263.53125,
+          "right": 134.046875,
+          "bottom": 307.53125,
+          "width": 118.046875,
+          "height": 44
+        },
+        "role": {
+          "left": 16,
+          "top": 311.53125,
+          "right": 134.453125,
+          "bottom": 334.28125,
+          "width": 118.453125,
+          "height": 22.75
+        },
+        "intro": {
+          "left": 16,
+          "top": 358.28125,
+          "right": 304,
+          "bottom": 403.78125,
+          "width": 288,
+          "height": 45.5
+        },
+        "indicator": {
+          "left": 16,
+          "top": 520,
+          "right": 304,
+          "bottom": 536,
+          "width": 288,
+          "height": 16
+        },
+        "yearFontRatio": 1.5997503739189396,
+        "stroke": "2px",
+        "vector": "non-scaling-stroke",
+        "anchorInkHeight": 33,
+        "finalColor": "rgba(0, 0, 0, 0)",
+        "overflow": 0,
+        "semanticYear": "2026",
+        "accessibleTitle": "PORTFOLIO",
+        "glyphs": 9,
+        "nameSemantic": "TRẦN VŨ ANH DUY",
+        "nameVisual": "TRẦN VŨ ANH DUY",
+        "dashOffset": "-5px",
+        "idle": "true",
+        "canvasCount": 1
+      }
+    },
+    {
+      "label": "320-vi: all four year digits fit",
+      "pass": true,
+      "detail": 1.5997503739189396
+    },
+    {
+      "label": "320-vi: heading/anchor fit",
+      "pass": true,
+      "detail": {
+        "left": 266.171875,
+        "top": 211.140625,
+        "right": 303.1875,
+        "bottom": 243.046875,
+        "width": 37.015625,
+        "height": 31.90625
+      }
+    },
+    {
+      "label": "320-vi: semantic year/title stable",
+      "pass": true
+    },
+    {
+      "label": "320-vi: final glyph transparent",
+      "pass": true
+    },
+    {
+      "label": "320-vi: contour 2px",
+      "pass": true
+    },
+    {
+      "label": "320-vi: complete decoded name",
+      "pass": true,
+      "detail": "TRẦN VŨ ANH DUY"
+    },
+    {
+      "label": "320-vi: role position",
+      "pass": true,
+      "detail": {
+        "left": 16,
+        "top": 311.53125,
+        "right": 134.453125,
+        "bottom": 334.28125,
+        "width": 118.453125,
+        "height": 22.75
+      }
+    },
+    {
+      "label": "320-vi: left alignment",
+      "pass": true
+    },
+    {
+      "label": "320-vi: one canvas",
+      "pass": true
+    },
+    {
+      "label": "320-vi-text200: no horizontal overflow",
+      "pass": false,
+      "detail": {
+        "width": 320,
+        "height": 568,
+        "lang": "vi",
+        "rootFont": "32px",
+        "content": {
+          "left": 32,
+          "top": 45.203125,
+          "right": 288,
+          "bottom": 522.78125,
+          "width": 256,
+          "height": 477.578125
+        },
+        "title": {
+          "left": 32,
+          "top": 82.96875,
+          "right": 288,
+          "bottom": 119.28125,
+          "width": 256,
+          "height": 36.3125
+        },
+        "year": {
+          "left": 32,
+          "top": 45.203125,
+          "right": 235.453125,
+          "bottom": 91.671875,
+          "width": 203.453125,
+          "height": 46.46875
+        },
+        "anchor": {
+          "left": 254.375,
+          "top": 86.9375,
+          "right": 287.28125,
+          "bottom": 115.296875,
+          "width": 32.90625,
+          "height": 28.359375
+        },
+        "name": {
+          "left": 32,
+          "top": 151.28125,
+          "right": 268.078125,
+          "bottom": 239.28125,
+          "width": 236.078125,
+          "height": 88
+        },
+        "role": {
+          "left": 32,
+          "top": 247.28125,
+          "right": 268.890625,
+          "bottom": 292.78125,
+          "width": 236.890625,
+          "height": 45.5
+        },
+        "intro": {
+          "left": 32,
+          "top": 340.78125,
+          "right": 288,
+          "bottom": 522.78125,
+          "width": 256,
+          "height": 182
+        },
+        "indicator": {
+          "left": 32,
+          "top": 488,
+          "right": 288,
+          "bottom": 504,
+          "width": 256,
+          "height": 16
+        },
+        "yearFontRatio": 1.5996303573739883,
+        "stroke": "2px",
+        "vector": "non-scaling-stroke",
+        "anchorInkHeight": 29,
+        "finalColor": "rgba(0, 0, 0, 0)",
+        "overflow": 268,
+        "semanticYear": "2026",
+        "accessibleTitle": "PORTFOLIO",
+        "glyphs": 9,
+        "nameSemantic": "TRẦN VŨ ANH DUY",
+        "nameVisual": "TRẦN VŨ ANH DUY",
+        "dashOffset": "-12px",
+        "idle": "true",
+        "canvasCount": 1
+      }
+    }
+  ],
+  "frames": [
+    {
+      "label": "320-vi",
+      "file": "outputs/visual-revision-2026-10-09/v1/screenshots/320-vi.png",
+      "source": {
+        "src/components/Hero.jsx": "e7456e0cb8ffc8f345d425c0f4da1d935e9c3aec856230aa81bd97cab6430a09",
+        "src/components/effects/PortalHeading.jsx": "2e0542c3e2f0cf1915e10cec6251af8d4949563c139dfa7add6dab7c6b352fad",
+        "src/styles/hero.css": "16d98c26bb26eeb51a5e0b7fa841496a58cb2024f946d889a64186415d756776",
+        "src/3d/components/BlackHole.jsx": "e271e109b132fb7f07c60d0d089df84be35e517ae2f882066b7e2ddfb3fd1c2f",
+        "src/3d/components/BlackHoleSystem.jsx": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+        "src/3d/shaders/blackHole.js": "f29274d6673fcf79e1c2b26fb85a54cbf6553fbc7639c421f7c66ce1f839b3bb",
+        "src/3d/quality.js": "e41080fcf00415c51806f658902908cebf0eb9b6501371bb558bfd5bf58b64e0"
+      }
+    }
+  ],
+  "metrics": [
+    {
+      "width": 320,
+      "height": 568,
+      "lang": "vi",
+      "rootFont": "16px",
+      "content": {
+        "left": 16,
+        "top": 164.203125,
+        "right": 304,
+        "bottom": 403.78125,
+        "width": 288,
+        "height": 239.578125
+      },
+      "title": {
+        "left": 16,
+        "top": 206.6875,
+        "right": 304,
+        "bottom": 247.53125,
+        "width": 288,
+        "height": 40.84375
+      },
+      "year": {
+        "left": 16,
+        "top": 164.203125,
+        "right": 244.890625,
+        "bottom": 216.484375,
+        "width": 228.890625,
+        "height": 52.28125
+      },
+      "anchor": {
+        "left": 266.171875,
+        "top": 211.140625,
+        "right": 303.1875,
+        "bottom": 243.046875,
+        "width": 37.015625,
+        "height": 31.90625
+      },
+      "name": {
+        "left": 16,
+        "top": 263.53125,
+        "right": 134.046875,
+        "bottom": 307.53125,
+        "width": 118.046875,
+        "height": 44
+      },
+      "role": {
+        "left": 16,
+        "top": 311.53125,
+        "right": 134.453125,
+        "bottom": 334.28125,
+        "width": 118.453125,
+        "height": 22.75
+      },
+      "intro": {
+        "left": 16,
+        "top": 358.28125,
+        "right": 304,
+        "bottom": 403.78125,
+        "width": 288,
+        "height": 45.5
+      },
+      "indicator": {
+        "left": 16,
+        "top": 520,
+        "right": 304,
+        "bottom": 536,
+        "width": 288,
+        "height": 16
+      },
+      "yearFontRatio": 1.5997503739189396,
+      "stroke": "2px",
+      "vector": "non-scaling-stroke",
+      "anchorInkHeight": 33,
+      "finalColor": "rgba(0, 0, 0, 0)",
+      "overflow": 0,
+      "semanticYear": "2026",
+      "accessibleTitle": "PORTFOLIO",
+      "glyphs": 9,
+      "nameSemantic": "TRẦN VŨ ANH DUY",
+      "nameVisual": "TRẦN VŨ ANH DUY",
+      "dashOffset": "-5px",
+      "idle": "true",
+      "canvasCount": 1
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "lang": "vi",
+      "rootFont": "32px",
+      "content": {
+        "left": 32,
+        "top": 45.203125,
+        "right": 288,
+        "bottom": 522.78125,
+        "width": 256,
+        "height": 477.578125
+      },
+      "title": {
+        "left": 32,
+        "top": 82.96875,
+        "right": 288,
+        "bottom": 119.28125,
+        "width": 256,
+        "height": 36.3125
+      },
+      "year": {
+        "left": 32,
+        "top": 45.203125,
+        "right": 235.453125,
+        "bottom": 91.671875,
+        "width": 203.453125,
+        "height": 46.46875
+      },
+      "anchor": {
+        "left": 254.375,
+        "top": 86.9375,
+        "right": 287.28125,
+        "bottom": 115.296875,
+        "width": 32.90625,
+        "height": 28.359375
+      },
+      "name": {
+        "left": 32,
+        "top": 151.28125,
+        "right": 268.078125,
+        "bottom": 239.28125,
+        "width": 236.078125,
+        "height": 88
+      },
+      "role": {
+        "left": 32,
+        "top": 247.28125,
+        "right": 268.890625,
+        "bottom": 292.78125,
+        "width": 236.890625,
+        "height": 45.5
+      },
+      "intro": {
+        "left": 32,
+        "top": 340.78125,
+        "right": 288,
+        "bottom": 522.78125,
+        "width": 256,
+        "height": 182
+      },
+      "indicator": {
+        "left": 32,
+        "top": 488,
+        "right": 288,
+        "bottom": 504,
+        "width": 256,
+        "height": 16
+      },
+      "yearFontRatio": 1.5996303573739883,
+      "stroke": "2px",
+      "vector": "non-scaling-stroke",
+      "anchorInkHeight": 29,
+      "finalColor": "rgba(0, 0, 0, 0)",
+      "overflow": 268,
+      "semanticYear": "2026",
+      "accessibleTitle": "PORTFOLIO",
+      "glyphs": 9,
+      "nameSemantic": "TRẦN VŨ ANH DUY",
+      "nameVisual": "TRẦN VŨ ANH DUY",
+      "dashOffset": "-12px",
+      "idle": "true",
+      "canvasCount": 1
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "label": "320-app",
+      "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    }
+  ],
+  "browser": "154.0.4258.62",
+  "failure": "AssertionError [ERR_ASSERTION]: 320-vi-text200: no horizontal overflow\n    at check (file:///C:/Users/duytva/my-portfolio-2026/outputs/visual-revision-2026-10-09/v1/check-browser.mjs:13:104)\n    at geometryChecks (file:///C:/Users/duytva/my-portfolio-2026/outputs/visual-revision-2026-10-09/v1/check-browser.mjs:69:3)\n    at file:///C:/Users/duytva/my-portfolio-2026/outputs/visual-revision-2026-10-09/v1/check-browser.mjs:93:68"
+}

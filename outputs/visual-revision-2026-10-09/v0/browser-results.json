@@ -1,0 +1,5834 @@
+{
+  "capturedAt": "2026-10-09T07:34:06.482Z",
+  "base": "http://127.0.0.1:5180",
+  "build": "current source, Vite development server",
+  "browser": "154.0.4258.62",
+  "configurations": [
+    {
+      "width": 1440,
+      "height": 900,
+      "devicePixelRatio": 1,
+      "rendererDpr": 1,
+      "drawingBuffer": [
+        1440,
+        900
+      ],
+      "quality": "high",
+      "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+      "ranges": [
+        {
+          "id": "hero",
+          "top": 0,
+          "end": 0
+        },
+        {
+          "id": "portal",
+          "top": 0,
+          "end": 1575
+        },
+        {
+          "id": "about",
+          "top": 1575,
+          "end": 2498.765625
+        },
+        {
+          "id": "skills",
+          "top": 2498.765625,
+          "end": 3557.953125
+        },
+        {
+          "id": "education",
+          "top": 3557.953125,
+          "end": 5132.953125
+        },
+        {
+          "id": "experience",
+          "top": 5132.953125,
+          "end": 6750.90625
+        },
+        {
+          "id": "departure",
+          "top": 6750.90625,
+          "end": 7740.90625
+        },
+        {
+          "id": "works",
+          "top": 7740.90625,
+          "end": 9180.90625
+        },
+        {
+          "id": "finale",
+          "top": 9180.90625,
+          "end": 11205.90625
+        },
+        {
+          "id": "contact",
+          "top": 11205.90625,
+          "end": 12085
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "devicePixelRatio": 1,
+      "rendererDpr": 1,
+      "drawingBuffer": [
+        390,
+        844
+      ],
+      "quality": "low",
+      "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+      "ranges": [
+        {
+          "id": "hero",
+          "top": 0,
+          "end": 0
+        },
+        {
+          "id": "portal",
+          "top": 0,
+          "end": 1477
+        },
+        {
+          "id": "about",
+          "top": 1477,
+          "end": 2859.328125
+        },
+        {
+          "id": "skills",
+          "top": 2859.328125,
+          "end": 4351.703125
+        },
+        {
+          "id": "education",
+          "top": 4351.703125,
+          "end": 6302.5625
+        },
+        {
+          "id": "experience",
+          "top": 6302.5625,
+          "end": 7981.28125
+        },
+        {
+          "id": "departure",
+          "top": 7981.28125,
+          "end": 8909.671875
+        },
+        {
+          "id": "works",
+          "top": 8909.671875,
+          "end": 10260.0625
+        },
+        {
+          "id": "finale",
+          "top": 10260.0625,
+          "end": 12159.0625
+        },
+        {
+          "id": "contact",
+          "top": 12159.0625,
+          "end": 13018
+        }
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "label": "hero",
+      "direction": "baseline",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-hero.png",
+      "chapter": "hero",
+      "p": 0,
+      "manual": true,
+      "section": "hero",
+      "canvasCount": 1,
+      "pose": [
+        0,
+        2.2,
+        -168,
+        -0.03431425698308484,
+        0,
+        0,
+        0.9994110924778146,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 1,
+        "uPortalVisibility": 1,
+        "uPortalScale": 0.29223378115384674,
+        "uPortalPull": 0,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "orbit": {
+        "phase": 0,
+        "origin": 0,
+        "velocity": 0,
+        "latched": false,
+        "visited": false,
+        "captures": 0,
+        "resumePending": false
+      },
+      "selection": null,
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 0,
+      "reading": {
+        "x": 0,
+        "y": 1575,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": "true"
+      },
+      "about": {
+        "x": 0,
+        "y": 1575,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "hidden",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "contact": {
+        "x": 80,
+        "y": 11349.90625,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 7740.90625,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 3,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "about",
+      "direction": "baseline",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-about.png",
+      "chapter": "about",
+      "p": 0,
+      "manual": true,
+      "section": "about",
+      "canvasCount": 1,
+      "pose": [
+        2,
+        5,
+        -154,
+        -0.16798420551306958,
+        0.30204707009365783,
+        0.05416153431403444,
+        0.9368112949504449,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 253.17533635363128,
+        "uPortalPull": 1,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "orbit": {
+        "phase": 0,
+        "origin": 0,
+        "velocity": 0,
+        "latched": false,
+        "visited": false,
+        "captures": 0,
+        "resumePending": false
+      },
+      "selection": null,
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 1575,
+      "reading": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 9774.90625,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 6165.90625,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 6,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "education",
+      "direction": "baseline",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-education.png",
+      "chapter": "education",
+      "p": 0.12,
+      "manual": true,
+      "section": "education",
+      "canvasCount": 1,
+      "pose": [
+        2,
+        5,
+        -128.54944,
+        -0.21642922731561262,
+        0.2965462821772147,
+        0.06919110983818567,
+        0.9275943522951177,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 391.69082564732463,
+        "uPortalPull": 1,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0.12
+        ]
+      },
+      "orbit": {
+        "phase": 0,
+        "origin": 0,
+        "velocity": 0,
+        "latched": false,
+        "visited": false,
+        "captures": 0,
+        "resumePending": false
+      },
+      "selection": null,
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 3746.953125,
+      "reading": {
+        "x": 0,
+        "y": -2171.953125,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -2171.953125,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 7602.953125,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 3993.953125,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 9,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "experience",
+      "direction": "baseline",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-experience.png",
+      "chapter": "experience",
+      "p": 0.32,
+      "manual": true,
+      "section": "experience",
+      "canvasCount": 1,
+      "pose": [
+        2,
+        5,
+        -110,
+        -0.1977688497154303,
+        0.2736781555063731,
+        0.05761016637790625,
+        0.9395045598669413,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 492.8631054698773,
+        "uPortalPull": 1,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0.32
+        ]
+      },
+      "orbit": {
+        "phase": 0,
+        "origin": 0,
+        "velocity": 0,
+        "latched": false,
+        "visited": false,
+        "captures": 0,
+        "resumePending": false
+      },
+      "selection": null,
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 5651,
+      "reading": {
+        "x": 0,
+        "y": -4076,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -4076,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 5698.90625,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 2089.90625,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 11,
+        "textures": 23,
+        "meteorVisible": true,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "works",
+      "direction": "baseline",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-works.png",
+      "chapter": "works",
+      "p": 0.2,
+      "manual": true,
+      "section": "work",
+      "canvasCount": 1,
+      "pose": [
+        0,
+        4,
+        -160,
+        -0.012697642456594214,
+        -0.5558083969169416,
+        -0.008490989369735549,
+        0.8311700781983113,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 219.74976817566903,
+        "uPortalPull": 1,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0.2
+        ]
+      },
+      "orbit": {
+        "phase": 0.008097534054787112,
+        "origin": 0,
+        "velocity": 0.056534795682006145,
+        "latched": false,
+        "visited": true,
+        "captures": 0,
+        "resumePending": false
+      },
+      "selection": null,
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            12.414933153591138,
+            1.137684906065502,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -6.294530311483008,
+            4.213824033502178,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -6.120402842108131,
+            -2.0259713890354347,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 8028.90625,
+      "reading": {
+        "x": 0,
+        "y": -6453.90625,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -6453.90625,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 3321,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 17,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "contact",
+      "direction": "baseline",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-contact.png",
+      "chapter": "contact",
+      "p": 0,
+      "manual": true,
+      "section": "transmission",
+      "canvasCount": 1,
+      "pose": [
+        2,
+        4,
+        -160,
+        -0.09529842761110566,
+        0.23829622406675574,
+        0.023503197980104654,
+        0.966219808829795,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 220.02156762176443,
+        "uPortalPull": 1,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0.013191937539736392,
+        "uFinaleGas": [
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "orbit": {
+        "phase": 0.013191937539736392,
+        "origin": 0.013191937539736392,
+        "velocity": 0,
+        "latched": true,
+        "visited": true,
+        "captures": 1,
+        "resumePending": false
+      },
+      "selection": null,
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            12.414259900775788,
+            1.156037279006144,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -6.3489655488558885,
+            4.204478657243097,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -6.065294351919902,
+            -2.034978385716996,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 11206,
+      "reading": {
+        "x": 0,
+        "y": -9631,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -9631,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 143.90625,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": -3465.09375,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 17,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "education-active-sgu",
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-education-active-sgu.png",
+      "chapter": "education",
+      "p": 0.12,
+      "manual": true,
+      "section": "education",
+      "canvasCount": 1,
+      "pose": [
+        2,
+        5,
+        -128.54944,
+        -0.21642922731561262,
+        0.2965462821772147,
+        0.06919110983818567,
+        0.9275943522951177,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 391.69082564732463,
+        "uPortalPull": 1,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0.013191937539736392,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0.12
+        ]
+      },
+      "orbit": {
+        "phase": 0.013191937539736392,
+        "origin": 0.013191937539736392,
+        "velocity": 0,
+        "latched": true,
+        "visited": true,
+        "captures": 1,
+        "resumePending": false
+      },
+      "selection": null,
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            12.414259900775788,
+            1.156037279006144,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -6.3489655488558885,
+            4.204478657243097,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -6.065294351919902,
+            -2.034978385716996,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 3746.953125,
+      "reading": {
+        "x": 0,
+        "y": -2171.953125,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -2171.953125,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 7602.953125,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 3993.953125,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 17,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "works-active-edura",
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-works-active-edura.png",
+      "chapter": "works",
+      "p": 0.2,
+      "manual": true,
+      "section": "work",
+      "canvasCount": 1,
+      "pose": [
+        0,
+        4,
+        -160,
+        -0.012697642456594214,
+        -0.5558083969169416,
+        -0.008490989369735549,
+        0.8311700781983113,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 219.74976817566903,
+        "uPortalPull": 1,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0.013191937539736392,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0.2
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.013191937539736392,
+        "velocity": 0.0007161688974228282,
+        "latched": false,
+        "visited": true,
+        "captures": 1,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            12.408932302701281,
+            1.2242465239074987,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -6.549869292958421,
+            4.169035198663899,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -5.859063009742868,
+            -2.0677441720391507,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 8028.90625,
+      "reading": {
+        "x": 0,
+        "y": -6453.90625,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -6453.90625,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 3321,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 17,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "portal-fwd-0",
+      "direction": "forward",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-fwd-0.png",
+      "chapter": "portal",
+      "p": 0,
+      "manual": true,
+      "section": "hero",
+      "canvasCount": 1,
+      "pose": [
+        0,
+        2.2,
+        -168,
+        -0.03431425698308484,
+        0,
+        0,
+        0.9994110924778146,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 1,
+        "uPortalVisibility": 1,
+        "uPortalScale": 0.29223378115384674,
+        "uPortalPull": 0,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0.013191937539736392,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.013191937539736392,
+        "velocity": 0.0007161688974228282,
+        "latched": false,
+        "visited": true,
+        "captures": 1,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            12.408932302701281,
+            1.2242465239074987,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -6.549869292958421,
+            4.169035198663899,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -5.859063009742868,
+            -2.0677441720391507,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 0,
+      "reading": {
+        "x": 0,
+        "y": 1575,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": "true"
+      },
+      "about": {
+        "x": 0,
+        "y": 1575,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "hidden",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "contact": {
+        "x": 80,
+        "y": 11349.90625,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 7740.90625,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 17,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "portal-fwd-0.25",
+      "direction": "forward",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-fwd-0.25.png",
+      "chapter": "portal",
+      "p": 0.25,
+      "manual": true,
+      "section": "hero",
+      "canvasCount": 1,
+      "pose": [
+        0.5829903978052127,
+        1.73360768175583,
+        -181.9917695473251,
+        -0.05113586066085116,
+        0.016159244679329953,
+        0.0008275079802649615,
+        0.9985606229951238,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 1,
+        "uPortalVisibility": 1,
+        "uPortalScale": 0.34528643829851424,
+        "uPortalPull": 0.25,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0.013191937539736392,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0.25
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.013191937539736392,
+        "velocity": 0.0007161688974228282,
+        "latched": false,
+        "visited": true,
+        "captures": 1,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            12.408932302701281,
+            1.2242465239074987,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -6.549869292958421,
+            4.169035198663899,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -5.859063009742868,
+            -2.0677441720391507,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 393.75,
+      "reading": {
+        "x": 0,
+        "y": 1181.25,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": "true"
+      },
+      "about": {
+        "x": 0,
+        "y": 1181.25,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "hidden",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "contact": {
+        "x": 80,
+        "y": 10956.15625,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 7347.15625,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 17,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "portal-fwd-0.5",
+      "direction": "forward",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-fwd-0.5.png",
+      "chapter": "portal",
+      "p": 0.5,
+      "manual": true,
+      "section": "hero",
+      "canvasCount": 1,
+      "pose": [
+        1,
+        1.4,
+        -192,
+        -0.09760948802054814,
+        0.061839569525460804,
+        0.006076946936733583,
+        0.9932831047617794,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 1,
+        "uPortalVisibility": 0,
+        "uPortalScale": 44.73170682757215,
+        "uPortalPull": 0.5,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0.013191937539736392,
+        "uFinaleGas": [
+          0.3935860058309039,
+          0,
+          0.25925925925925963,
+          0.5
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.013191937539736392,
+        "velocity": 0.0007161688974228282,
+        "latched": false,
+        "visited": true,
+        "captures": 1,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            12.408932302701281,
+            1.2242465239074987,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -6.549869292958421,
+            4.169035198663899,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -5.859063009742868,
+            -2.0677441720391507,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 787.5,
+      "reading": {
+        "x": 0,
+        "y": 787.5,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": "true"
+      },
+      "about": {
+        "x": 0,
+        "y": 787.5,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "hidden",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 10562.40625,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 6953.40625,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 17,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "portal-fwd-0.75",
+      "direction": "forward",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-fwd-0.75.png",
+      "chapter": "portal",
+      "p": 0.75,
+      "manual": true,
+      "section": "hero",
+      "canvasCount": 1,
+      "pose": [
+        1.31640625,
+        2.5390625000000004,
+        -179.9765625,
+        -0.15686062002860307,
+        0.24814018230447432,
+        0.040754488688468544,
+        0.9550708180349172,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 110.56863343106468,
+        "uPortalPull": 0.75,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0.013191937539736392,
+        "uFinaleGas": [
+          0.9259259259259258,
+          0.07407407407407418,
+          0,
+          0.75
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.013191937539736392,
+        "velocity": 0.0007161688974228282,
+        "latched": false,
+        "visited": true,
+        "captures": 1,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            12.408932302701281,
+            1.2242465239074987,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -6.549869292958421,
+            4.169035198663899,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -5.859063009742868,
+            -2.0677441720391507,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 1181,
+      "reading": {
+        "x": 0,
+        "y": 394,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": "true"
+      },
+      "about": {
+        "x": 0,
+        "y": 394,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "hidden",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 10168.90625,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 6559.90625,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 17,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "portal-fwd-1",
+      "direction": "forward",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-fwd-1.png",
+      "chapter": "portal",
+      "p": 1,
+      "manual": true,
+      "section": "hero",
+      "canvasCount": 1,
+      "pose": [
+        2,
+        5,
+        -154,
+        -0.16798420551306958,
+        0.30204707009365783,
+        0.05416153431403444,
+        0.9368112949504449,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 253.17533635363128,
+        "uPortalPull": 1,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0.013191937539736392,
+        "uFinaleGas": [
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.013191937539736392,
+        "velocity": 0.0007161688974228282,
+        "latched": false,
+        "visited": true,
+        "captures": 1,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            12.408932302701281,
+            1.2242465239074987,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -6.549869292958421,
+            4.169035198663899,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -5.859063009742868,
+            -2.0677441720391507,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 1575,
+      "reading": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 9774.90625,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 6165.90625,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 17,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "portal-rev-1",
+      "direction": "reverse",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-rev-1.png",
+      "chapter": "portal",
+      "p": 1,
+      "manual": true,
+      "section": "hero",
+      "canvasCount": 1,
+      "pose": [
+        2,
+        5,
+        -154,
+        -0.16798420551306958,
+        0.30204707009365783,
+        0.05416153431403444,
+        0.9368112949504449,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 253.17533635363128,
+        "uPortalPull": 1,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0.013191937539736392,
+        "uFinaleGas": [
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.013191937539736392,
+        "velocity": 0.0007161688974228282,
+        "latched": false,
+        "visited": true,
+        "captures": 1,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            12.408932302701281,
+            1.2242465239074987,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -6.549869292958421,
+            4.169035198663899,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -5.859063009742868,
+            -2.0677441720391507,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 1575,
+      "reading": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 9774.90625,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 6165.90625,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 17,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "portal-rev-0.75",
+      "direction": "reverse",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-rev-0.75.png",
+      "chapter": "portal",
+      "p": 0.75,
+      "manual": true,
+      "section": "hero",
+      "canvasCount": 1,
+      "pose": [
+        1.31640625,
+        2.5390625000000004,
+        -179.9765625,
+        -0.15686062002860307,
+        0.24814018230447432,
+        0.040754488688468544,
+        0.9550708180349172,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 110.56863343106468,
+        "uPortalPull": 0.75,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0.013191937539736392,
+        "uFinaleGas": [
+          0.9259259259259258,
+          0.07407407407407418,
+          0,
+          0.75
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.013191937539736392,
+        "velocity": 0.0007161688974228282,
+        "latched": false,
+        "visited": true,
+        "captures": 1,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            12.408932302701281,
+            1.2242465239074987,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -6.549869292958421,
+            4.169035198663899,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -5.859063009742868,
+            -2.0677441720391507,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 1181,
+      "reading": {
+        "x": 0,
+        "y": 394,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": "true"
+      },
+      "about": {
+        "x": 0,
+        "y": 394,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "hidden",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 10168.90625,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 6559.90625,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 17,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "portal-rev-0.5",
+      "direction": "reverse",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-rev-0.5.png",
+      "chapter": "portal",
+      "p": 0.5,
+      "manual": true,
+      "section": "hero",
+      "canvasCount": 1,
+      "pose": [
+        1,
+        1.4,
+        -192,
+        -0.09760948802054814,
+        0.061839569525460804,
+        0.006076946936733583,
+        0.9932831047617794,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 1,
+        "uPortalVisibility": 0,
+        "uPortalScale": 44.73170682757215,
+        "uPortalPull": 0.5,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0.013191937539736392,
+        "uFinaleGas": [
+          0.3935860058309039,
+          0,
+          0.25925925925925963,
+          0.5
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.013191937539736392,
+        "velocity": 0.0007161688974228282,
+        "latched": false,
+        "visited": true,
+        "captures": 1,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            12.408932302701281,
+            1.2242465239074987,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -6.549869292958421,
+            4.169035198663899,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -5.859063009742868,
+            -2.0677441720391507,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 787.5,
+      "reading": {
+        "x": 0,
+        "y": 787.5,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": "true"
+      },
+      "about": {
+        "x": 0,
+        "y": 787.5,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "hidden",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 10562.40625,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 6953.40625,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 17,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "portal-rev-0.25",
+      "direction": "reverse",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-rev-0.25.png",
+      "chapter": "portal",
+      "p": 0.25,
+      "manual": true,
+      "section": "hero",
+      "canvasCount": 1,
+      "pose": [
+        0.5829903978052127,
+        1.73360768175583,
+        -181.9917695473251,
+        -0.05113586066085116,
+        0.016159244679329953,
+        0.0008275079802649615,
+        0.9985606229951238,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 1,
+        "uPortalVisibility": 1,
+        "uPortalScale": 0.34528643829851424,
+        "uPortalPull": 0.25,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0.013191937539736392,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0.25
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.013191937539736392,
+        "velocity": 0.0007161688974228282,
+        "latched": false,
+        "visited": true,
+        "captures": 1,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            12.408932302701281,
+            1.2242465239074987,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -6.549869292958421,
+            4.169035198663899,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -5.859063009742868,
+            -2.0677441720391507,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 394,
+      "reading": {
+        "x": 0,
+        "y": 1181,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": "true"
+      },
+      "about": {
+        "x": 0,
+        "y": 1181,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "hidden",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "contact": {
+        "x": 80,
+        "y": 10955.90625,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 7346.90625,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 17,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "portal-rev-0",
+      "direction": "reverse",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-rev-0.png",
+      "chapter": "portal",
+      "p": 0,
+      "manual": true,
+      "section": "hero",
+      "canvasCount": 1,
+      "pose": [
+        0,
+        2.2,
+        -168,
+        -0.03431425698308484,
+        0,
+        0,
+        0.9994110924778146,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 1,
+        "uPortalVisibility": 1,
+        "uPortalScale": 0.29223378115384674,
+        "uPortalPull": 0,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0.013191937539736392,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.013191937539736392,
+        "velocity": 0.0007161688974228282,
+        "latched": false,
+        "visited": true,
+        "captures": 1,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            12.408932302701281,
+            1.2242465239074987,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -6.549869292958421,
+            4.169035198663899,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -5.859063009742868,
+            -2.0677441720391507,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 0,
+      "reading": {
+        "x": 0,
+        "y": 1575,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": "true"
+      },
+      "about": {
+        "x": 0,
+        "y": 1575,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "hidden",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "contact": {
+        "x": 80,
+        "y": 11349.90625,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 7740.90625,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 17,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "finale-fwd-0",
+      "direction": "forward",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-fwd-0.png",
+      "chapter": "finale",
+      "p": 0,
+      "manual": true,
+      "section": "finale",
+      "canvasCount": 1,
+      "pose": [
+        0,
+        4,
+        -160,
+        -0.012697642456594214,
+        -0.5558083969169416,
+        -0.008490989369735549,
+        0.8311700781983113,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 219.74976817566903,
+        "uPortalPull": 1,
+        "uFinaleHole": 0,
+        "uFinaleOrigin": 0.013191937539736392,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.013191937539736392,
+        "velocity": 0.0007161688974228282,
+        "latched": false,
+        "visited": true,
+        "captures": 1,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            12.408932302701281,
+            1.2242465239074987,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -6.549869292958421,
+            4.169035198663899,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -5.859063009742868,
+            -2.0677441720391507,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 9181,
+      "reading": {
+        "x": 0,
+        "y": -7606,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -7606,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 143.90625,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": -0.09375,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 17,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "finale-fwd-0.25",
+      "direction": "forward",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-fwd-0.25.png",
+      "chapter": "finale",
+      "p": 0.25,
+      "manual": true,
+      "section": "finale",
+      "canvasCount": 1,
+      "pose": [
+        0.7220458984375,
+        4,
+        -160,
+        -0.03050177022728443,
+        -0.4719303368348603,
+        -0.016339864913739274,
+        0.8809565301435355,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 219.78521290470147,
+        "uPortalPull": 1,
+        "uFinaleHole": 0,
+        "uFinaleOrigin": 0.032130076058620706,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0.25
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.032130076058620706,
+        "velocity": 0,
+        "latched": true,
+        "visited": true,
+        "captures": 2,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            -7.532943208533377,
+            -1.4955425367800412,
+            3.106440099753337
+          ],
+          "scale": [
+            2.001631307415586,
+            2.001631307415586,
+            2.001631307415586
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -13.88151977682458,
+            1.1566606908685069,
+            3.106440099753337
+          ],
+          "scale": [
+            2.001631307415586,
+            2.001631307415586,
+            2.001631307415586
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -18.622617387078524,
+            -1.7648510037178347,
+            3.106440099753337
+          ],
+          "scale": [
+            2.001631307415586,
+            2.001631307415586,
+            2.001631307415586
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 9687.15625,
+      "reading": {
+        "x": 0,
+        "y": -8112.15625,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -8112.15625,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 144,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": -16,
+        "width": 1440,
+        "height": 900,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 18,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "finale-fwd-0.5",
+      "direction": "forward",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-fwd-0.5.png",
+      "chapter": "finale",
+      "p": 0.5,
+      "manual": true,
+      "section": "finale",
+      "canvasCount": 1,
+      "pose": [
+        2,
+        4,
+        -160,
+        -0.09529842761110566,
+        0.23829622406675574,
+        0.023503197980104654,
+        0.966219808829795,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 220.02156762176443,
+        "uPortalPull": 1,
+        "uFinaleHole": 0,
+        "uFinaleOrigin": 0.032130076058620706,
+        "uFinaleGas": [
+          0.3935860058309039,
+          0,
+          0.25925925925925963,
+          0.5
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.032130076058620706,
+        "velocity": 0,
+        "latched": true,
+        "visited": true,
+        "captures": 2,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            -36.96632994206815,
+            -3.5313704011045317,
+            8.604550227279573
+          ],
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -36.96632994206815,
+            -3.5313704011045317,
+            8.604550227279573
+          ],
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -36.96632994206815,
+            -3.5313704011045317,
+            8.604550227279573
+          ],
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 10193,
+      "reading": {
+        "x": 0,
+        "y": -8618,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -8618,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 144.40625,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": -15.59375,
+        "width": 1440,
+        "height": 900,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 18,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "finale-fwd-0.75",
+      "direction": "forward",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-fwd-0.75.png",
+      "chapter": "finale",
+      "p": 0.75,
+      "manual": true,
+      "section": "finale",
+      "canvasCount": 1,
+      "pose": [
+        2,
+        4,
+        -160,
+        -0.09529842761110566,
+        0.23829622406675574,
+        0.023503197980104654,
+        0.966219808829795,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 220.02156762176443,
+        "uPortalPull": 1,
+        "uFinaleHole": 0.09672280382339571,
+        "uFinaleOrigin": 0.032130076058620706,
+        "uFinaleGas": [
+          0.9259259259259258,
+          0.07407407407407418,
+          0,
+          0.75
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.032130076058620706,
+        "velocity": 0,
+        "latched": true,
+        "visited": true,
+        "captures": 2,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            -36.96632994206815,
+            -3.5313704011045317,
+            8.604550227279573
+          ],
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -36.96632994206815,
+            -3.5313704011045317,
+            8.604550227279573
+          ],
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -36.96632994206815,
+            -3.5313704011045317,
+            8.604550227279573
+          ],
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 10699.65625,
+      "reading": {
+        "x": 0,
+        "y": -9124.65625,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -9124.65625,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 144,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": -16,
+        "width": 1440,
+        "height": 900,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 18,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "finale-fwd-1",
+      "direction": "forward",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-fwd-1.png",
+      "chapter": "finale",
+      "p": 1,
+      "manual": true,
+      "section": "finale",
+      "canvasCount": 1,
+      "pose": [
+        2,
+        4,
+        -160,
+        -0.09529842761110566,
+        0.23829622406675574,
+        0.023503197980104654,
+        0.966219808829795,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 220.02156762176443,
+        "uPortalPull": 1,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0.032130076058620706,
+        "uFinaleGas": [
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.032130076058620706,
+        "velocity": 0,
+        "latched": true,
+        "visited": true,
+        "captures": 2,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            -36.96632994206815,
+            -3.5313704011045317,
+            8.604550227279573
+          ],
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -36.96632994206815,
+            -3.5313704011045317,
+            8.604550227279573
+          ],
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -36.96632994206815,
+            -3.5313704011045317,
+            8.604550227279573
+          ],
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 11206,
+      "reading": {
+        "x": 0,
+        "y": -9631,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -9631,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 143.90625,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": -16.09375,
+        "width": 1440,
+        "height": 900,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 18,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "finale-rev-1",
+      "direction": "reverse",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-rev-1.png",
+      "chapter": "finale",
+      "p": 1,
+      "manual": true,
+      "section": "finale",
+      "canvasCount": 1,
+      "pose": [
+        2,
+        4,
+        -160,
+        -0.09529842761110566,
+        0.23829622406675574,
+        0.023503197980104654,
+        0.966219808829795,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 220.02156762176443,
+        "uPortalPull": 1,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0.032130076058620706,
+        "uFinaleGas": [
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.032130076058620706,
+        "velocity": 0,
+        "latched": true,
+        "visited": true,
+        "captures": 2,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            -36.96632994206815,
+            -3.5313704011045317,
+            8.604550227279573
+          ],
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -36.96632994206815,
+            -3.5313704011045317,
+            8.604550227279573
+          ],
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -36.96632994206815,
+            -3.5313704011045317,
+            8.604550227279573
+          ],
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 11205.90625,
+      "reading": {
+        "x": 0,
+        "y": -9630.90625,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -9630.90625,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 144,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": -16,
+        "width": 1440,
+        "height": 900,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 18,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "finale-rev-0.75",
+      "direction": "reverse",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-rev-0.75.png",
+      "chapter": "finale",
+      "p": 0.75,
+      "manual": true,
+      "section": "finale",
+      "canvasCount": 1,
+      "pose": [
+        2,
+        4,
+        -160,
+        -0.09529842761110566,
+        0.23829622406675574,
+        0.023503197980104654,
+        0.966219808829795,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 220.02156762176443,
+        "uPortalPull": 1,
+        "uFinaleHole": 0.09672280382339571,
+        "uFinaleOrigin": 0.032130076058620706,
+        "uFinaleGas": [
+          0.9259259259259258,
+          0.07407407407407418,
+          0,
+          0.75
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.032130076058620706,
+        "velocity": 0,
+        "latched": true,
+        "visited": true,
+        "captures": 2,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            -36.96632994206815,
+            -3.5313704011045317,
+            8.604550227279573
+          ],
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -36.96632994206815,
+            -3.5313704011045317,
+            8.604550227279573
+          ],
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -36.96632994206815,
+            -3.5313704011045317,
+            8.604550227279573
+          ],
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 10699.65625,
+      "reading": {
+        "x": 0,
+        "y": -9124.65625,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -9124.65625,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 144,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": -16,
+        "width": 1440,
+        "height": 900,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 18,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "finale-rev-0.5",
+      "direction": "reverse",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-rev-0.5.png",
+      "chapter": "finale",
+      "p": 0.5,
+      "manual": true,
+      "section": "finale",
+      "canvasCount": 1,
+      "pose": [
+        2,
+        4,
+        -160,
+        -0.09529842761110566,
+        0.23829622406675574,
+        0.023503197980104654,
+        0.966219808829795,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 220.02156762176443,
+        "uPortalPull": 1,
+        "uFinaleHole": 0,
+        "uFinaleOrigin": 0.032130076058620706,
+        "uFinaleGas": [
+          0.3935860058309039,
+          0,
+          0.25925925925925963,
+          0.5
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.032130076058620706,
+        "velocity": 0,
+        "latched": true,
+        "visited": true,
+        "captures": 2,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            -36.96632994206815,
+            -3.5313704011045317,
+            8.604550227279573
+          ],
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -36.96632994206815,
+            -3.5313704011045317,
+            8.604550227279573
+          ],
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -36.96632994206815,
+            -3.5313704011045317,
+            8.604550227279573
+          ],
+          "scale": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 10193,
+      "reading": {
+        "x": 0,
+        "y": -8618,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -8618,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 144.40625,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": -15.59375,
+        "width": 1440,
+        "height": 900,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 18,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "finale-rev-0.25",
+      "direction": "reverse",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-rev-0.25.png",
+      "chapter": "finale",
+      "p": 0.25,
+      "manual": true,
+      "section": "finale",
+      "canvasCount": 1,
+      "pose": [
+        0.7220458984375,
+        4,
+        -160,
+        -0.03050177022728443,
+        -0.4719303368348603,
+        -0.016339864913739274,
+        0.8809565301435355,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 219.78521290470147,
+        "uPortalPull": 1,
+        "uFinaleHole": 0,
+        "uFinaleOrigin": 0.032130076058620706,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0.25
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.032130076058620706,
+        "velocity": 0,
+        "latched": true,
+        "visited": true,
+        "captures": 2,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            -7.532943208533377,
+            -1.4955425367800412,
+            3.106440099753337
+          ],
+          "scale": [
+            2.001631307415586,
+            2.001631307415586,
+            2.001631307415586
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -13.88151977682458,
+            1.1566606908685069,
+            3.106440099753337
+          ],
+          "scale": [
+            2.001631307415586,
+            2.001631307415586,
+            2.001631307415586
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -18.622617387078524,
+            -1.7648510037178347,
+            3.106440099753337
+          ],
+          "scale": [
+            2.001631307415586,
+            2.001631307415586,
+            2.001631307415586
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 9687.15625,
+      "reading": {
+        "x": 0,
+        "y": -8112.15625,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -8112.15625,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 144,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": -16,
+        "width": 1440,
+        "height": 900,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 18,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "finale-rev-0",
+      "direction": "reverse",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-rev-0.png",
+      "chapter": "finale",
+      "p": 0,
+      "manual": true,
+      "section": "finale",
+      "canvasCount": 1,
+      "pose": [
+        0,
+        4,
+        -160,
+        -0.012697642456594214,
+        -0.5558083969169416,
+        -0.008490989369735549,
+        0.8311700781983113,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 219.74976817566903,
+        "uPortalPull": 1,
+        "uFinaleHole": 0,
+        "uFinaleOrigin": 0.032130076058620706,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.032130076058620706,
+        "velocity": 0,
+        "latched": true,
+        "visited": true,
+        "captures": 2,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            12.408932302701281,
+            1.2242465239074987,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -6.549869292958421,
+            4.169035198663899,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -5.859063009742868,
+            -2.0677441720391507,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 9181,
+      "reading": {
+        "x": 0,
+        "y": -7606,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -7606,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 80,
+        "y": 143.90625,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": -0.09375,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 18,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "hero",
+      "direction": "baseline",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/390-hero.png",
+      "chapter": "hero",
+      "p": 0,
+      "manual": true,
+      "section": "hero",
+      "canvasCount": 1,
+      "pose": [
+        0,
+        2.2,
+        -168,
+        -0.03431425698308484,
+        0,
+        0,
+        0.9994110924778146,
+        102.655566772743
+      ],
+      "uniforms": {
+        "uPortalMini": 1,
+        "uPortalVisibility": 1,
+        "uPortalScale": 0.18225504550943128,
+        "uPortalPull": 0,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "orbit": {
+        "phase": 0,
+        "origin": 0,
+        "velocity": 0,
+        "latched": false,
+        "visited": false,
+        "captures": 0,
+        "resumePending": false
+      },
+      "selection": null,
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 325.40625,
+        "top": 202.546875,
+        "width": 47.484375,
+        "height": 50.78125,
+        "fixed": true
+      },
+      "scroll": 0,
+      "reading": {
+        "x": 0,
+        "y": 1477,
+        "width": 390,
+        "height": 12384.90625,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": "true"
+      },
+      "about": {
+        "x": 0,
+        "y": 1477,
+        "width": 390,
+        "height": 1382.328125,
+        "opacity": "1",
+        "visibility": "hidden",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 16,
+        "y": 202.546875,
+        "width": 358,
+        "height": 375.28125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "contact": {
+        "x": 24,
+        "y": 12255.0625,
+        "width": 342,
+        "height": 922.84375,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 8909.671875,
+        "width": 390,
+        "height": 844,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 2,
+        "textures": 1,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "about",
+      "direction": "baseline",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/390-about.png",
+      "chapter": "about",
+      "p": 0,
+      "manual": true,
+      "section": "about",
+      "canvasCount": 1,
+      "pose": [
+        2,
+        5,
+        -154,
+        -0.19029422656535136,
+        0.21220171895430104,
+        0.04216911690473278,
+        0.9575908851843827,
+        102.655566772743
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 157.89578558238233,
+        "uPortalPull": 1,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "orbit": {
+        "phase": 0,
+        "origin": 0,
+        "velocity": 0,
+        "latched": false,
+        "visited": false,
+        "captures": 0,
+        "resumePending": false
+      },
+      "selection": null,
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 325.40625,
+        "top": 202.546875,
+        "width": 47.484375,
+        "height": 50.78125,
+        "fixed": true
+      },
+      "scroll": 1477,
+      "reading": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 12384.90625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 1382.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 16,
+        "y": 202.546875,
+        "width": 358,
+        "height": 375.28125,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 24,
+        "y": 10778.0625,
+        "width": 342,
+        "height": 922.84375,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 7432.671875,
+        "width": 390,
+        "height": 844,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 5,
+        "textures": 1,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "education",
+      "direction": "baseline",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/390-education.png",
+      "chapter": "education",
+      "p": 0.12,
+      "manual": true,
+      "section": "education",
+      "canvasCount": 1,
+      "pose": [
+        2,
+        5,
+        -128.54944,
+        -0.24360867948787612,
+        0.20543239996627569,
+        0.052879953593260115,
+        0.9463910665418626,
+        102.655566772743
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 244.282604742392,
+        "uPortalPull": 1,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0.12
+        ]
+      },
+      "orbit": {
+        "phase": 0,
+        "origin": 0,
+        "velocity": 0,
+        "latched": false,
+        "visited": false,
+        "captures": 0,
+        "resumePending": false
+      },
+      "selection": null,
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 325.40625,
+        "top": 202.546875,
+        "width": 47.484375,
+        "height": 50.78125,
+        "fixed": true
+      },
+      "scroll": 4585.80625,
+      "reading": {
+        "x": 0,
+        "y": -3109,
+        "width": 390,
+        "height": 12384.90625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -3109,
+        "width": 390,
+        "height": 1382.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 16,
+        "y": 202.546875,
+        "width": 358,
+        "height": 375.28125,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 24,
+        "y": 7669.0625,
+        "width": 342,
+        "height": 922.84375,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 4323.671875,
+        "width": 390,
+        "height": 844,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 8,
+        "textures": 1,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "experience",
+      "direction": "baseline",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/390-experience.png",
+      "chapter": "experience",
+      "p": 0.32,
+      "manual": true,
+      "section": "experience",
+      "canvasCount": 1,
+      "pose": [
+        2,
+        5,
+        -110,
+        -0.21926597433068934,
+        0.18688855369569793,
+        0.042835652040985564,
+        0.9566400618375582,
+        102.655566772743
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 307.3798907253735,
+        "uPortalPull": 1,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0.32
+        ]
+      },
+      "orbit": {
+        "phase": 0,
+        "origin": 0,
+        "velocity": 0,
+        "latched": false,
+        "visited": false,
+        "captures": 0,
+        "resumePending": false
+      },
+      "selection": null,
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 325.40625,
+        "top": 202.546875,
+        "width": 47.484375,
+        "height": 50.78125,
+        "fixed": true
+      },
+      "scroll": 6839.7525000000005,
+      "reading": {
+        "x": 0,
+        "y": -5363,
+        "width": 390,
+        "height": 12384.90625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -5363,
+        "width": 390,
+        "height": 1382.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 16,
+        "y": 202.546875,
+        "width": 358,
+        "height": 375.28125,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 24,
+        "y": 5415.0625,
+        "width": 342,
+        "height": 922.84375,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 2069.671875,
+        "width": 390,
+        "height": 844,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 10,
+        "textures": 1,
+        "meteorVisible": true,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "works",
+      "direction": "baseline",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/390-works.png",
+      "chapter": "works",
+      "p": 0.2,
+      "manual": true,
+      "section": "work",
+      "canvasCount": 1,
+      "pose": [
+        0,
+        4,
+        -160,
+        -0.01942139637313905,
+        -0.47336075178448217,
+        -0.010439931316870618,
+        0.8805926503594307,
+        102.655566772743
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 137.04953561976777,
+        "uPortalPull": 1,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0.2
+        ]
+      },
+      "orbit": {
+        "phase": 0.008041054765675675,
+        "origin": 0,
+        "velocity": 0.05642367141667479,
+        "latched": false,
+        "visited": true,
+        "captures": 0,
+        "resumePending": false
+      },
+      "selection": null,
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            7.7593367573727114,
+            2.480916251836866,
+            0
+          ],
+          "scale": [
+            4.156921938165304,
+            4.156921938165304,
+            4.156921938165304
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -3.9337036843997755,
+            11.187197054592305,
+            0
+          ],
+          "scale": [
+            4.156921938165304,
+            4.156921938165304,
+            4.156921938165304
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -3.825633072972934,
+            -6.471308966302978,
+            0
+          ],
+          "scale": [
+            4.156921938165304,
+            4.156921938165304,
+            4.156921938165304
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 325.40625,
+        "top": 202.546875,
+        "width": 47.484375,
+        "height": 50.78125,
+        "fixed": true
+      },
+      "scroll": 9179.75,
+      "reading": {
+        "x": 0,
+        "y": -7703,
+        "width": 390,
+        "height": 12384.90625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -7703,
+        "width": 390,
+        "height": 1382.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 16,
+        "y": 202.546875,
+        "width": 358,
+        "height": 375.28125,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 24,
+        "y": 3075.0625,
+        "width": 342,
+        "height": 922.84375,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": -0.25,
+        "width": 390,
+        "height": 844,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 16,
+        "textures": 1,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "label": "contact",
+      "direction": "baseline",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "outputs/visual-revision-2026-10-09/v0/screenshots/390-contact.png",
+      "chapter": "contact",
+      "p": 0,
+      "manual": true,
+      "section": "transmission",
+      "canvasCount": 1,
+      "pose": [
+        2,
+        4,
+        -160,
+        -0.3306164603930485,
+        0.023571143305672566,
+        0.008260252074913323,
+        0.9434346429700863,
+        102.655566772743
+      ],
+      "uniforms": {
+        "uPortalMini": 0,
+        "uPortalVisibility": 1,
+        "uPortalScale": 137.21904655112536,
+        "uPortalPull": 1,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0.01216649514588916,
+        "uFinaleGas": [
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "orbit": {
+        "phase": 0.01216649514588916,
+        "origin": 0.01216649514588916,
+        "velocity": 0,
+        "latched": true,
+        "visited": true,
+        "captures": 1,
+        "resumePending": false
+      },
+      "selection": null,
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            7.759013323929809,
+            2.522974890361102,
+            0
+          ],
+          "scale": [
+            4.156921938165304,
+            4.156921938165304,
+            4.156921938165304
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -3.961263492320331,
+            11.165799704429,
+            0
+          ],
+          "scale": [
+            4.156921938165304,
+            4.156921938165304,
+            4.156921938165304
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -3.7977498316094795,
+            -6.49197025466391,
+            0
+          ],
+          "scale": [
+            4.156921938165304,
+            4.156921938165304,
+            4.156921938165304
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 325.40625,
+        "top": 202.546875,
+        "width": 47.484375,
+        "height": 50.78125,
+        "fixed": true
+      },
+      "scroll": 12159.0625,
+      "reading": {
+        "x": 0,
+        "y": -10682,
+        "width": 390,
+        "height": 12384.90625,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "about": {
+        "x": 0,
+        "y": -10682,
+        "width": 390,
+        "height": 1382.328125,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 16,
+        "y": 202.546875,
+        "width": 358,
+        "height": 375.28125,
+        "opacity": "0",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "true"
+      },
+      "contact": {
+        "x": 24,
+        "y": 96.0625,
+        "width": 342,
+        "height": 922.84375,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": -3249.328125,
+        "width": 390,
+        "height": 844,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 16,
+        "textures": 1,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "chapter": "portal",
+      "p": 1,
+      "poseEqual": true,
+      "activeUniformsEqual": true,
+      "rawUniformDifferences": [],
+      "worksTransformsEqual": null,
+      "readingEqual": true,
+      "readingGateEqual": true,
+      "maxReadingRectDelta": 0
+    },
+    {
+      "chapter": "portal",
+      "p": 0.75,
+      "poseEqual": true,
+      "activeUniformsEqual": true,
+      "rawUniformDifferences": [],
+      "worksTransformsEqual": null,
+      "readingEqual": true,
+      "readingGateEqual": true,
+      "maxReadingRectDelta": 0
+    },
+    {
+      "chapter": "portal",
+      "p": 0.5,
+      "poseEqual": true,
+      "activeUniformsEqual": true,
+      "rawUniformDifferences": [],
+      "worksTransformsEqual": null,
+      "readingEqual": true,
+      "readingGateEqual": true,
+      "maxReadingRectDelta": 0
+    },
+    {
+      "chapter": "portal",
+      "p": 0.25,
+      "poseEqual": true,
+      "activeUniformsEqual": true,
+      "rawUniformDifferences": [],
+      "worksTransformsEqual": null,
+      "readingEqual": false,
+      "readingGateEqual": true,
+      "maxReadingRectDelta": 0.25
+    },
+    {
+      "chapter": "portal",
+      "p": 0,
+      "poseEqual": true,
+      "activeUniformsEqual": true,
+      "rawUniformDifferences": [],
+      "worksTransformsEqual": null,
+      "readingEqual": true,
+      "readingGateEqual": true,
+      "maxReadingRectDelta": 0
+    },
+    {
+      "chapter": "finale",
+      "p": 1,
+      "poseEqual": true,
+      "activeUniformsEqual": true,
+      "rawUniformDifferences": [],
+      "worksTransformsEqual": true,
+      "readingEqual": false,
+      "readingGateEqual": true,
+      "maxReadingRectDelta": 0.09375
+    },
+    {
+      "chapter": "finale",
+      "p": 0.75,
+      "poseEqual": true,
+      "activeUniformsEqual": true,
+      "rawUniformDifferences": [],
+      "worksTransformsEqual": true,
+      "readingEqual": true,
+      "readingGateEqual": true,
+      "maxReadingRectDelta": 0
+    },
+    {
+      "chapter": "finale",
+      "p": 0.5,
+      "poseEqual": true,
+      "activeUniformsEqual": true,
+      "rawUniformDifferences": [],
+      "worksTransformsEqual": true,
+      "readingEqual": true,
+      "readingGateEqual": true,
+      "maxReadingRectDelta": 0
+    },
+    {
+      "chapter": "finale",
+      "p": 0.25,
+      "poseEqual": true,
+      "activeUniformsEqual": true,
+      "rawUniformDifferences": [],
+      "worksTransformsEqual": true,
+      "readingEqual": true,
+      "readingGateEqual": true,
+      "maxReadingRectDelta": 0
+    },
+    {
+      "chapter": "finale",
+      "p": 0,
+      "poseEqual": true,
+      "activeUniformsEqual": true,
+      "rawUniformDifferences": [
+        "uFinaleOrigin"
+      ],
+      "worksTransformsEqual": true,
+      "readingEqual": true,
+      "readingGateEqual": true,
+      "maxReadingRectDelta": 0
+    }
+  ],
+  "native": [
+    {
+      "delta": 220,
+      "chapter": "portal",
+      "p": 0.38984291746031746,
+      "manual": false,
+      "section": "hero",
+      "canvasCount": 1,
+      "pose": [
+        0.951165115950678,
+        1.4390679072394574,
+        -190.82796278281626,
+        -0.08721470507089779,
+        0.05144637366766246,
+        0.004510107354080766,
+        0.99485000114967,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 1,
+        "uPortalVisibility": 1,
+        "uPortalScale": 15.977658782262015,
+        "uPortalPull": 0.38984291746031746,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0.032130076058620706,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0.38984291746031746
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.032130076058620706,
+        "velocity": 0,
+        "latched": true,
+        "visited": true,
+        "captures": 2,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            12.408932302701281,
+            1.2242465239074987,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -6.549869292958421,
+            4.169035198663899,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -5.859063009742868,
+            -2.0677441720391507,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 614.002595,
+      "reading": {
+        "x": 0,
+        "y": 960.9973754882812,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": "true"
+      },
+      "about": {
+        "x": 0,
+        "y": 960.9973754882812,
+        "width": 1440,
+        "height": 923.7656860351562,
+        "opacity": "1",
+        "visibility": "hidden",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "0.176638",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "contact": {
+        "x": 80,
+        "y": 10735.9033203125,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 7126.90380859375,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 18,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    },
+    {
+      "delta": -220,
+      "chapter": "portal",
+      "p": 0.2501556634920635,
+      "manual": false,
+      "section": "hero",
+      "canvasCount": 1,
+      "pose": [
+        0.5835028302376606,
+        1.7331977358098716,
+        -182.00406792570385,
+        -0.051161992085466505,
+        0.016184459513744066,
+        0.0008292242055395163,
+        0.9985588746905772,
+        59.99999999999999
+      ],
+      "uniforms": {
+        "uPortalMini": 1,
+        "uPortalVisibility": 1,
+        "uPortalScale": 0.34595143102609516,
+        "uPortalPull": 0.2501556634920635,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0.032130076058620706,
+        "uFinaleGas": [
+          0,
+          0,
+          0,
+          0.2501556634920635
+        ]
+      },
+      "orbit": {
+        "phase": 0.032130076058620706,
+        "origin": 0.032130076058620706,
+        "velocity": 0,
+        "latched": true,
+        "visited": true,
+        "captures": 2,
+        "resumePending": false
+      },
+      "selection": "edura",
+      "finaleSelection": null,
+      "worksTransforms": [
+        {
+          "id": "edura",
+          "position": [
+            12.408932302701281,
+            1.2242465239074987,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "veris",
+          "position": [
+            -6.549869292958421,
+            4.169035198663899,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        },
+        {
+          "id": "vie",
+          "position": [
+            -5.859063009742868,
+            -2.0677441720391507,
+            0
+          ],
+          "scale": [
+            3.602665679743265,
+            3.602665679743265,
+            3.602665679743265
+          ]
+        }
+      ],
+      "anchor": {
+        "left": 1202.390625,
+        "top": 216,
+        "width": 175.703125,
+        "height": 187.921875,
+        "fixed": true
+      },
+      "scroll": 393.99517,
+      "reading": {
+        "x": 0,
+        "y": 1181.0048828125,
+        "width": 1440,
+        "height": 11410.328125,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": "true"
+      },
+      "about": {
+        "x": 0,
+        "y": 1181.0048828125,
+        "width": 1440,
+        "height": 923.765625,
+        "opacity": "1",
+        "visibility": "hidden",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "hero": {
+        "x": 57.59375,
+        "y": 216,
+        "width": 1324.8125,
+        "height": 367.921875,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": "false"
+      },
+      "contact": {
+        "x": 80,
+        "y": 10955.9111328125,
+        "width": 1280,
+        "height": 975.421875,
+        "opacity": "0",
+        "visibility": "hidden",
+        "inert": true,
+        "ariaHidden": null
+      },
+      "works": {
+        "x": 0,
+        "y": 7346.9111328125,
+        "width": 1440,
+        "height": 900,
+        "opacity": "1",
+        "visibility": "visible",
+        "inert": false,
+        "ariaHidden": null
+      },
+      "overflow": 0,
+      "scene": {
+        "geometries": 18,
+        "textures": 23,
+        "meteorVisible": false,
+        "symbolCount": 192
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "width": 1440,
+      "type": "warning",
+      "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "width": 390,
+      "type": "warning",
+      "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    }
+  ],
+  "limits": [
+    "Mobile viewport/touch emulation on desktop, not a physical phone.",
+    "Held poses synchronize visible DOM scroll and hold the existing store; native scroll is sampled separately.",
+    "Camera and authored uniforms are compared at equal progress; ambient scene and wall-clock DOM reveals are not pixel-equality tests.",
+    "No FPS/GPU benchmark, physical screen reader, OS motion toggle or public HTTPS verification."
+  ],
+  "status": "captured"
+}

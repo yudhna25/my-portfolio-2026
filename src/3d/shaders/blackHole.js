@@ -11,12 +11,36 @@ export const BLACK_HOLE_VERT = /* glsl */ `
   }
 `;
 
+// The HDR pass already traces composed screen pixels; copy/mask never magnify it.
+export const PORTAL_IMAGE_GLSL = /* glsl */ `
+  uniform float uPortalEnabled, uPortalMini, uPortalScale, uPortalVisibility, uPortalDust, uPortalPull;
+  uniform vec2 uPortalCenter, uRayCenter, uPortalRadius, uPortalViewport;
+  uniform float uFinaleEnabled, uFinaleHole, uFinaleOrigin;
+  uniform vec4 uFinaleGas;
+  vec2 portalRayUV(vec2 uv) {
+    return uPortalEnabled > 0.5 && uPortalMini > 0.5
+      ? uRayCenter + (uv - uPortalCenter) / max(uPortalScale, 0.001) : uv;
+  }
+  float portalCoverage(vec2 uv) {
+    if (uPortalEnabled < 0.5 || uPortalMini < 0.5) return 1.0;
+    vec2 offset = (uv - uPortalCenter) * uPortalViewport;
+    // Feather outside the disk, with an aperture aligned to its physical plane.
+    offset = mat2(0.573576, -0.819152, 0.819152, 0.573576) * offset;
+    return 1.0 - smoothstep(0.96, 1.0, length(offset / max(uPortalRadius, vec2(1.0))));
+  }
+  vec4 portalImage(sampler2D image, vec2 uv) {
+    return texture2D(image, uv);
+  }
+`;
+
 export const BLACK_HOLE_FRAG = /* glsl */ `
   uniform float uTime;
   uniform float uDiskIntensity;
   uniform vec3 uObserver;
   uniform mat4 uCameraMatrix;
   uniform mat4 uInverseProjection;
+  uniform mat3 uDiskFrame;
+  ${PORTAL_IMAGE_GLSL}
   varying vec2 vUv;
 
   float hash(vec3 p) {
@@ -40,24 +64,25 @@ export const BLACK_HOLE_FRAG = /* glsl */ `
     float angle = atan(p.z, p.x);
     // Keplerian shear: inner lanes move faster, bright knots are stretched.
     float phase = angle - uTime * 0.42 * pow(3.0 / r, 1.5);
-    vec3 domain = vec3(r * 0.22, cos(phase) * 3.0, sin(phase) * 3.0);
+    vec3 domain = vec3(r * 0.9, cos(phase) * 6.0, sin(phase) * 6.0);
     float knots = turbulence(domain);
-    float lane = sin(r * 22.0 + knots * 5.0);
-    float fine = sin(r * 47.0 + noise(domain * 2.7) * 3.0);
-    float bands = 0.2 + 0.6 * pow(0.5 + 0.5 * lane, 2.0)
-      + 0.2 * pow(0.5 + 0.5 * fine, 3.0);
-    float profile = pow(3.0 / r, 1.65) * smoothstep(3.0, 3.25, r)
-      * (1.0 - smoothstep(11.0, 14.0, r));
+    float lane = sin(r * 12.0 + knots * 8.0);
+    float fine = sin(r * 28.0 + noise(domain * 2.7) * 5.0);
+    float bands = 0.12 + 0.75 * pow(0.5 + 0.5 * lane, 2.0)
+      + 0.13 * pow(0.5 + 0.5 * fine, 3.0);
+    float profile = pow(3.0 / r, 3.2) * smoothstep(3.0, 3.25, r)
+      * (1.0 - smoothstep(5.5, 9.0, r));
     float speed = sqrt(0.5 / (r - 1.0));
     vec3 velocity = vec3(p.z, 0.0, -p.x) / r;
     float towardObserver = dot(velocity, -normalize(ray));
     float shift = sqrt((1.0 - 1.0 / r) / (1.0 - 1.0 / length(uObserver)))
       * sqrt(1.0 - speed * speed) / (1.0 - speed * towardObserver);
     // Relativistic beaming, monochrome at the user's explicit preference.
-    return uDiskIntensity * 2.1 * profile * bands * (0.7 + 0.6 * knots) * pow(shift, 3.0);
+    return uDiskIntensity * 2.8 * profile * bands * (0.4 + 0.9 * knots * knots) * pow(shift, 3.0);
   }
   vec3 acceleration(vec3 p, float angularMomentum2) {
-    float r2 = dot(p, p);
+    // RK4 substages can cross the horizon; bound gravity before any division.
+    float r2 = max(dot(p, p), 1.0);
     return -1.5 * angularMomentum2 * p / (r2 * r2 * sqrt(r2));
   }
   void advance(inout vec3 p, inout vec3 v, float h, float angularMomentum2) {
@@ -72,35 +97,43 @@ export const BLACK_HOLE_FRAG = /* glsl */ `
     v += h / 6.0 * (a1 + 2.0 * a2 + 2.0 * a3 + a4);
   }
   void main() {
-    vec4 view = uInverseProjection * vec4(vUv * 2.0 - 1.0, 1.0, 1.0);
+    float aperture = portalCoverage(vUv);
+    if ((uPortalEnabled > 0.5 && uPortalVisibility <= 0.00001)
+      || (uFinaleEnabled > 0.5 && uFinaleHole <= 0.00001)) discard;
+    if (aperture <= 0.0) discard;
+    vec4 view = uInverseProjection * vec4(portalRayUV(vUv) * 2.0 - 1.0, 1.0, 1.0);
     vec3 direction = normalize(mat3(uCameraMatrix) * (view.xyz / view.w));
     vec3 p = uObserver;
-    float observerRadius = length(p);
+    float observerRadius = max(length(p), 1.1);
     vec3 radial = p / observerRadius;
     // Convert a static observer's local orthonormal ray to coordinate velocity.
     vec3 vr = dot(direction, radial) * radial;
     vec3 v = vr + (direction - vr) / sqrt(1.0 - 1.0 / observerRadius);
     vec3 momentum = cross(p, v);
     float momentum2 = dot(momentum, momentum);
-    // At r = 14, b = r / sqrt(1 - 1/r) = 14.53. A larger impact
-    // parameter cannot reach the disk even after gravitational deflection.
-    if (sqrt(momentum2) > 14.6) discard;
+    // No emission beyond r=9: b=9/sqrt(1-1/9)=9.546 cannot reach the disk.
+    if (sqrt(momentum2) > 9.6 || (observerRadius > 9.0 && dot(p, v) > 0.0)) discard;
     float light = 0.0;
     float coverage = 0.0;
-    float minRadius = 1e4;
+    float impact = sqrt(momentum2);
+    float rimWidth = max(fwidth(impact) * 1.25, 0.008);
+    vec3 diskNormal = vec3(uDiskFrame[0].y, uDiskFrame[1].y, uDiskFrame[2].y);
     for (int i = 0; i < TRACE_STEPS; i++) {
       vec3 previous = p;
       vec3 previousVelocity = v;
-      float h = max(0.035, length(p) * TRACE_STEP);
+      float r = length(p);
+      float h = max(0.035, r * TRACE_STEP);
+      float inwardSpeed = max(-dot(p, v) / r, 0.0);
+      if (inwardSpeed > 0.0) h = min(h, (r - 1.0) * 0.4 / inwardSpeed);
       advance(p, v, h, momentum2);
       float radius = length(p);
-      minRadius = min(minRadius, radius);
-      if (previous.y * p.y <= 0.0 && abs(previous.y - p.y) > 0.000001) {
-        float t = previous.y / (previous.y - p.y);
+      float previousPlane = dot(diskNormal, previous), plane = dot(diskNormal, p);
+      if (previousPlane * plane <= 0.0 && abs(previousPlane - plane) > 0.000001) {
+        float t = previousPlane / (previousPlane - plane);
         vec3 hit = mix(previous, p, t);
-        float diskRadius = length(hit.xz);
-        if (diskRadius >= 3.0 && diskRadius <= 14.0) {
-          light = diskEmission(hit, mix(previousVelocity, v, t));
+        float diskRadius = length(hit);
+        if (diskRadius >= 3.0 && diskRadius <= 9.0) {
+          light = diskEmission(uDiskFrame * hit, uDiskFrame * mix(previousVelocity, v, t));
           coverage = 1.0;
           break;
         }
@@ -110,37 +143,14 @@ export const BLACK_HOLE_FRAG = /* glsl */ `
       // Critical rays beyond the finite budget must not expose background stars.
       if (i == TRACE_STEPS - 1) coverage = 1.0;
     }
-    // Einstein Ring (Photon Sphere relativistic ring):
-    // Gravitational lensing bends and concentrates deflected background light into a luminous circular ring.
-    if (minRadius > 1.01 && minRadius < 1.55) {
-      float ringProximity = smoothstep(1.55, 1.18, minRadius) * smoothstep(1.01, 1.07, minRadius);
-      float einsteinGlow = pow(ringProximity, 3.2) * 2.8 * uDiskIntensity;
-      light += einsteinGlow;
-      coverage = max(coverage, smoothstep(0.05, 0.35, einsteinGlow));
-    }
-    gl_FragColor = vec4(vec3(light), coverage);
-  }
-`;
-
-// Copy and bloom mask must sample the same HDR rays at the same screen coordinates.
-export const PORTAL_IMAGE_GLSL = /* glsl */ `
-  uniform float uPortalEnabled, uPortalMini, uPortalScale, uPortalVisibility, uPortalDust, uPortalPull;
-  uniform vec2 uPortalCenter, uRayCenter, uPortalRadius, uPortalViewport;
-  uniform float uFinaleEnabled, uFinaleHole, uFinaleOrigin;
-  uniform vec4 uFinaleGas;
-  vec4 portalImage(sampler2D image, vec2 uv) {
-    vec2 rayUV = uv;
-    float coverage = 1.0;
-    if (uPortalEnabled > 0.5 && uPortalMini > 0.5) {
-      rayUV = uRayCenter + (uv - uPortalCenter) / max(uPortalScale, 0.001);
-      float inside = step(0.0, rayUV.x) * step(rayUV.x, 1.0) * step(0.0, rayUV.y) * step(rayUV.y, 1.0);
-      vec2 offset = (uv - uPortalCenter) * uPortalViewport;
-      float aperture = 1.0 - smoothstep(0.96, 1.0, length(offset / max(uPortalRadius, vec2(1.0))));
-      coverage = inside * aperture;
-    }
-    vec4 ray = texture2D(image, clamp(rayUV, vec2(0.0), vec2(1.0)));
-    ray.a *= coverage;
-    return ray;
+    // Critical impact parameter = 3√3/2. The narrow white rim stays outside
+    // captured rays; foreground gas is preserved by the same HDR alpha mask.
+    float rim = exp(-pow((impact - 2.598076) / rimWidth, 2.0))
+      * smoothstep(2.598076 - rimWidth * 0.4, 2.598076 + rimWidth * 0.4, impact)
+      * step(dot(direction, radial), 0.0);
+    light += rim * 1.65 * uDiskIntensity;
+    coverage = max(coverage, rim);
+    gl_FragColor = vec4(vec3(light), coverage * aperture);
   }
 `;
 
@@ -204,7 +214,7 @@ export const BLACK_HOLE_COPY = /* glsl */ `
       vec2 cell = floor(dustPx / 7.0);
       float grain = fract(sin(dot(cell, vec2(127.1, 311.7))) * 43758.5453);
       float dust = step(0.99, grain) * exp(-dot(fract(dustPx / 7.0) - 0.5, fract(dustPx / 7.0) - 0.5) * 80.0)
-        * exp(-length(dustPx) / 100.0) * uPortalDust;
+        * exp(-length(dustPx) / 100.0) * uPortalDust * (1.0 - image.a);
       a = max(a, dust);
       rgb += vec3(dust * 0.7);
       gl_FragColor = vec4(rgb / max(a, 0.00001), a);

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Matrix4, Mesh, OrthographicCamera, PlaneGeometry, Scene, ShaderMaterial, Vector3 } from 'three';
+import { Matrix3, Matrix4, Mesh, OrthographicCamera, PlaneGeometry, Scene, ShaderMaterial, Vector2, Vector3 } from 'three';
 import { RAY_QUALITY } from '@/3d/quality';
 import { BLACK_HOLE_CENTER } from '@/3d/utils/cameraPath';
 import { BLACK_HOLE_VERT, BLACK_HOLE_FRAG, BLACK_HOLE_COPY } from '@/3d/shaders/blackHole';
@@ -16,6 +16,7 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
   const finale = useRef({});
   const copyDefines = useMemo(() => ({ FINALE_OCTAVES: quality === 'low' ? 2 : quality === 'medium' ? 3 : 4 }), [quality]);
   const projected = useMemo(() => new Vector3(), []);
+  const bufferSize = useMemo(() => new Vector2(), []);
   const renderer = useMemo(() => {
     const tier = RAY_QUALITY[quality];
     const material = new ShaderMaterial({
@@ -28,6 +29,10 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
         uObserver: { value: new Vector3() },
         uCameraMatrix: { value: new Matrix4() },
         uInverseProjection: { value: new Matrix4() },
+        // A real tilted disk plane: 55° screen diagonal, slightly above edge-on.
+        uDiskFrame: { value: new Matrix3().setFromMatrix4(new Matrix4().makeRotationZ(55 * Math.PI / 180)
+          .multiply(new Matrix4().makeRotationX(4 * Math.PI / 180))).transpose() },
+        ...portal,
       },
       depthTest: false, depthWrite: false, toneMapped: false,
     });
@@ -35,7 +40,7 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
     const scene = new Scene();
     scene.add(new Mesh(geometry, material));
     return { scene, material, geometry, camera: new OrthographicCamera(-1, 1, 1, -1, 0, 1) };
-  }, [quality]);
+  }, [quality, portal]);
   const copyUniforms = useMemo(() => ({ uImage: { value: target.texture }, ...portal }), [target, portal]);
   useEffect(() => {
     rendererRef.current = renderer;
@@ -51,6 +56,8 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
     const active = rendererRef.current;
     if (!active) return;
     const uniforms = active.material.uniforms;
+    gl.getDrawingBufferSize(bufferSize);
+    if (target.width !== bufferSize.x || target.height !== bufferSize.y) target.setSize(bufferSize.x, bufferSize.y);
     const state = useScrollStore.getState();
     portal.uPortalEnabled.value = story ? 1 : 0;
     const ending = story && (state.storyChapter === 'finale' || state.storyChapter === 'contact');
@@ -67,15 +74,19 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
       const cssWidth = window.innerWidth, cssHeight = window.innerHeight;
       const width = anchor?.width || 32, height = anchor?.height || 40;
       const left = anchor?.left ?? cssWidth * 0.75, top = anchor?.top ?? cssHeight * 0.2;
-      portal.uPortalCenter.value.set((left + width / 2) / cssWidth, 1 - (top + height / 2) / cssHeight);
+      const anchorX = (left + width / 2) / cssWidth, anchorY = 1 - (top + height / 2) / cssHeight;
+      portal.uPortalCenter.value.set(anchorX + (0.5 - anchorX) * phase.current.center,
+        anchorY + (0.55 - anchorY) * phase.current.center);
       portal.uPortalViewport.value.set(cssWidth, cssHeight);
       projected.copy(center).project(camera);
-      portal.uRayCenter.value.set(projected.x * 0.5 + 0.5, projected.y * 0.5 + 0.5);
-      const radius = camera.position.distanceTo(center);
-      const shadow = 2.598 * cssHeight / (2 * Math.tan(camera.fov * Math.PI / 360) * radius);
-      // Fit the same HDR silhouette inside the bright O's counter in both surfaces.
-      portal.uPortalScale.value = Math.max(0.001, Math.min(width, height) * 0.105 / shadow) * phase.current.growth;
-      portal.uPortalRadius.value.set(width * 0.255 * phase.current.growth, height * 0.19 * phase.current.growth);
+      portal.uRayCenter.value.set(Number.isFinite(projected.x) ? projected.x * 0.5 + 0.5 : 0.5,
+        Number.isFinite(projected.y) ? projected.y * 0.5 + 0.5 : 0.5);
+      const radius = Math.max(1.1, camera.position.distanceTo(center));
+      const shadowAngle = Math.asin(Math.min(0.999, 2.598076 * Math.sqrt(1 - 1 / radius) / radius));
+      const shadow = Math.tan(shadowAngle) * cssHeight / (2 * Math.tan(camera.fov * Math.PI / 360));
+      // The anchor is the cap-height slot, not the counter of a visible O glyph.
+      portal.uPortalScale.value = Math.max(0.001, height * 0.48 / shadow) * phase.current.growth;
+      portal.uPortalRadius.value.set(height * 2.8 * phase.current.growth, height * 1.4 * phase.current.growth);
       portal.uPortalMini.value = phase.current.mini;
       portal.uPortalVisibility.value = phase.current.visibility;
       portal.uPortalDust.value = phase.current.dust;
@@ -83,6 +94,11 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
     }
     uniforms.uDiskIntensity.value = 1 + (ending ? 0.35 * authored.hole : 0);
     uniforms.uObserver.value.copy(camera.position).sub(center);
+    const observer = uniforms.uObserver.value;
+    const observerRadius = observer.length();
+    // Cinematic zoom/rebase must never send a static ray observer through rs=1.
+    if (!Number.isFinite(observerRadius) || observerRadius < 0.000001) observer.set(0, 0, 1.1);
+    else if (observerRadius < 1.1) observer.multiplyScalar(1.1 / observerRadius);
     uniforms.uCameraMatrix.value.copy(camera.matrixWorld);
     uniforms.uInverseProjection.value.copy(camera.projectionMatrixInverse);
     if (story) uniforms.uTime.value = ending ? authored.collapse * 3 : 0;

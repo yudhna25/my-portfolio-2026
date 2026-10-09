@@ -18,7 +18,7 @@ export const INITIAL_CAMERA_POSITION = Object.freeze([start.x, start.y, start.z]
 
 // R2 lab foundation: DOM ranges and exterior poses, no portal/finale renderer.
 export const STORY_CHAPTERS = Object.freeze([
-  { id: 'hero', height: 1 }, { id: 'portal', height: 1.75, transition: true },
+  { id: 'hero', height: 1 }, { id: 'portal', height: 4, transition: true },
   { id: 'about', height: 1 }, { id: 'skills', height: 1 },
   { id: 'education', height: 1.75 }, { id: 'experience', height: 1 },
   { id: 'departure', height: 1.1, transition: true },
@@ -51,9 +51,8 @@ export function storyCameraPath(chapter, progress, target = {}, frozen = false, 
   let from = HERO, to = HERO;
   switch (chapter) {
     case 'portal':
-      if (p <= 0.45) { from = HERO; to = CLOSE; p /= 0.45; }
-      else if (p <= 0.60) { from = to = CLOSE; p = 0; }
-      else { from = CLOSE; to = ABOUT; p = (p - 0.60) / 0.40; }
+      if (p < 0.47) { from = HERO; to = CLOSE; p = clampStoryProgress(p / 0.44); }
+      else { from = CLOSE; to = ABOUT; p = clampStoryProgress((p - 0.50) / 0.44); }
       break;
     case 'about': from = to = ABOUT; break;
     case 'contact': from = to = CONTACT; break;
@@ -77,5 +76,10 @@ export function storyCameraPath(chapter, progress, target = {}, frozen = false, 
   target.lookX *= 1 - portraitContact;
   target.lookY -= 23 * portraitContact;
   target.parallax = 0;
+  if (chapter === 'portal' && !frozen) {
+    const bend = Math.sin(ease * Math.PI);
+    target.x += 2.4 * bend * (progress < 0.47 ? -1 : 1);
+    target.y += 1.2 * bend;
+  }
   return target;
 }

@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import { Matrix4, Vector3 } from 'three';
+const out='outputs/visual-revision-2026-10-09/v2';
+const browser=JSON.parse(fs.readFileSync(`${out}/browser-results.json`,'utf8'));
+const results=browser.configurations.map(config=>{
+  const s=config.frames.find(f=>f.label==='o-size'),u=s.uniforms;
+  const view=new Matrix4().fromArray(u.uCameraMatrix).invert();
+  const projection=new Matrix4().fromArray(u.uInverseProjection).invert();
+  const e=u.uDiskFrame,axis=new Vector3(e[0],e[3],e[6]);
+  const left=new Vector3(0,0,-200).addScaledVector(axis,-1).applyMatrix4(view).applyMatrix4(projection);
+  const right=new Vector3(0,0,-200).addScaledVector(axis,1).applyMatrix4(view).applyMatrix4(projection);
+  const angle=Math.atan2((right.y-left.y)*s.viewport[1],(right.x-left.x)*s.viewport[0])*180/Math.PI;
+  const radius=Math.hypot(...u.uObserver);
+  const shadowPx=Math.tan(Math.asin(2.598076*Math.sqrt(1-1/radius)/radius))*s.viewport[1]*projection.elements[5]/2;
+  const predictedRingToCap=2*shadowPx*u.uPortalScale/s.anchor.height;
+  assert(Math.abs(angle-55)<1);assert(Math.abs(predictedRingToCap-.96)<.001);assert.deepEqual(s.target,s.drawingBuffer);
+  return {id:config.id,projectedDiskTangentDegrees:angle,predictedRingToCap,target:s.target,buffer:s.drawingBuffer,rendererDpr:s.rendererDpr};
+});
+fs.writeFileSync(`${out}/mapping-results.json`,JSON.stringify({status:'PASS',method:'Projection of physical disk tangent from captured live ray/camera uniforms; cap ratio is analytic, not a screenshot edge detector.',results},null,2));
+console.log(JSON.stringify(results));

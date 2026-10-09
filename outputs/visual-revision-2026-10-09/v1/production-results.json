@@ -1,0 +1,134 @@
+{
+  "startedAt": "2026-10-09T08:44:07.566Z",
+  "base": "http://127.0.0.1:5182",
+  "buildFingerprint": {
+    "dist/assets/davinci-resolve-DTEn20Mv.webp": "eafe92dded33f19395885cb80e1128ad0ec54e77ea792abfbe4077d3250e22b1",
+    "dist/assets/events-9ce18a08.esm-cIGF7Z44.js": "aa4ff751d20f61e92b13e9abe28c0031393526998aace9d99f0d9e5996e1bb9c",
+    "dist/assets/GalaxyScene-CsPSeBp_.js": "e3acbbffa5e9ec7b29a5bae6ec0e1a27b720379f295e85cf2dabd4efe275d768",
+    "dist/assets/index-BO1Qxwvs.js": "a0ebd7a46d2b7dffab010dcb7bee951debab7d1fc4f87bf3fabf32f4843173cd",
+    "dist/assets/index-PfcTtBoD.css": "3525ba094cedb92ce29e0de714268e4fb67f13e1df58def8bd83ab2649bfca2d",
+    "dist/assets/SkillsSymbols--oQh2GJK.js": "375793b886e8f1ba17c9912bad3123efb11632151f0a045a14ba6ce61204069d",
+    "dist/assets/StoryMeteor-Co-_EV5e.js": "c3d87029011d7b8e9c52d3ed74a46705849f299edb3ded3e34b728898558a19f",
+    "dist/assets/unbounded-cyrillic-wght-normal-C627f1f8.woff2": "e30bf6a6063b6a47232bbd657e24c7cf4fdaf76fc2c50d92d9ee63e2ad2087cf",
+    "dist/assets/unbounded-latin-ext-wght-normal-D6H-S6MW.woff2": "845e1c9fe2e9a7bfbedfeb447fbeba4bc1b5ecd6246277910ccdaad35a7a532c",
+    "dist/assets/unbounded-latin-wght-normal-D5afBTBx.woff2": "22f9b928aa3928a896340422b54d690fbb5875c30eae4c106f029c61f2289fd6",
+    "dist/assets/unbounded-vietnamese-wght-normal-rat7GD3o.woff2": "aa6b9cba3768a781df88a462a85ca40c6644662bb7d59ab4375ad1ff64f51251",
+    "dist/assets/workbox-window.prod.es5-BBnX5xw4.js": "cadd21be4a88598a4dec91a26a025df0a5790ff6baec54a884e401c3f5c95557",
+    "dist/assets/WorksConstellations-Ci7kuw0E.js": "f5f05ebc52d99d0728f8f52466f7af117a87d0bbcc826b35e0063926ab628e5a",
+    "dist/index.html": "3012771b580c9ef80ff8952c41e20dd52a60cd5d163626d572ac067ca1459b6f"
+  },
+  "checks": [
+    {
+      "label": "390: semantic heading/year",
+      "pass": true
+    },
+    {
+      "label": "390: production hover decode",
+      "pass": true
+    },
+    {
+      "label": "390: Vietnamese decode restored",
+      "pass": true
+    },
+    {
+      "label": "390: anchor stable",
+      "pass": true
+    },
+    {
+      "label": "390: dash runs continuously",
+      "pass": true,
+      "detail": {
+        "first": "-10px",
+        "second": "-13px"
+      }
+    },
+    {
+      "label": "390: native menu language switch",
+      "pass": true
+    },
+    {
+      "label": "390: native Tab focus/ring",
+      "pass": true
+    },
+    {
+      "label": "390: native portal pauses/resets",
+      "pass": true
+    },
+    {
+      "label": "390: native reverse restores Hero",
+      "pass": true
+    },
+    {
+      "label": "390: page overflow 0 / one Canvas",
+      "pass": true
+    },
+    {
+      "label": "1440: semantic heading/year",
+      "pass": true
+    },
+    {
+      "label": "1440: production hover decode",
+      "pass": true
+    },
+    {
+      "label": "1440: Vietnamese decode restored",
+      "pass": true
+    },
+    {
+      "label": "1440: anchor stable",
+      "pass": true
+    },
+    {
+      "label": "1440: dash runs continuously",
+      "pass": true,
+      "detail": {
+        "first": "-10px",
+        "second": "-13px"
+      }
+    },
+    {
+      "label": "1440: native menu language switch",
+      "pass": true
+    },
+    {
+      "label": "1440: native Tab focus/ring",
+      "pass": true
+    },
+    {
+      "label": "1440: native portal pauses/resets",
+      "pass": true
+    },
+    {
+      "label": "1440: native reverse restores Hero",
+      "pass": true
+    },
+    {
+      "label": "1440: page overflow 0 / one Canvas",
+      "pass": true
+    },
+    {
+      "label": "production browser errors 0",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "configurations": [
+    {
+      "width": 390,
+      "height": 844,
+      "dpr": 1,
+      "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "quality": "low"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "dpr": 1,
+      "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "quality": "high"
+    }
+  ],
+  "browser": "154.0.4258.62",
+  "completedAt": "2026-10-09T08:44:31.032Z"
+}

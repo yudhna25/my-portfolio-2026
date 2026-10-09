@@ -1,0 +1,145 @@
+{
+  "started": "2026-10-09T09:53:29.171Z",
+  "base": "http://127.0.0.1:5183",
+  "sourceBefore": {
+    "src/App.jsx": "8c74f91ddd2a61c150b656ef8a461eb6dd132c28b4b0ae7def4bdedbc10d02b4",
+    "src/components/Hero.jsx": "cff3b6765079d0f04c678857a4ce9b5fa710aaa6d2f90390e6b8ead8967c1ea7",
+    "src/components/effects/PortalHeading.jsx": "20ebbe736791eacd62c233648ed40c0602bc61ee2140594295fcec12df3a7f4d",
+    "src/components/About.jsx": "1e637b9a62c5072573336afa34b44bc4059bd266db291f49e235ea65059d5f7e",
+    "src/components/layout/Nav.jsx": "56fa5c82bf5fe6f9c2cfabbd1e6cfc238cf8f59f2ff1eb15cfe095c421d7091b",
+    "src/components/Cursor.jsx": "c27ff23a33378ae7966638443b85901272fb94f413a420f2ffbd76379b786888",
+    "src/3d/GalaxyScene.jsx": "7e7d71ea99624fe9d5ec26ce27a25e62caea732da6f17d6aa0cb5c4646a47c83",
+    "src/3d/components/CameraRig.jsx": "fd01fb40484b7f14f4eb893d07cd486a68b41c1729e9a61193a9bc8de84d816f",
+    "src/3d/utils/cameraPath.js": "b8b74b47c1e03ecf7e09dd08934f69d5b07bf880c9e80402e6c471a95f2b8c7f",
+    "src/3d/utils/portal.js": "973cf175d67a63aeeb0493ff3d148372e812fdc4f788674c47e62f680fbe3254",
+    "src/3d/hooks/useScrollProgress.js": "0998d47a16fb63482217bbec69b97f6da5392ed5575788653782e7127e09f87b",
+    "src/stores/useScrollStore.js": "ff2f96ca3cf87b2dc0ca0d32375d5fa67ab66f680271ed8c6a618e82cd4845e7",
+    "src/3d/components/BlackHole.jsx": "50905550916924c2acaf37743f67837f260b4aaf1a7e4d5b5fbb1aeb7f9a6029",
+    "src/3d/components/BlackHoleSystem.jsx": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+    "src/3d/components/BlackHoleBloomMask.jsx": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c",
+    "src/3d/shaders/blackHole.js": "b5b33465f365d7eaa9983ca4f7133ebd9adda63057ea2a6f51e38980a84a5e64",
+    "src/3d/quality.js": "e41080fcf00415c51806f658902908cebf0eb9b6501371bb558bfd5bf58b64e0"
+  },
+  "browser": "154.0.4258.62",
+  "configurations": [
+    {
+      "id": "1440-vi",
+      "width": 1440,
+      "height": 900,
+      "locale": "vi",
+      "frames": [],
+      "environment": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+        "dpr": 1,
+        "rendererDpr": 1,
+        "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "ranges": [
+          {
+            "id": "hero",
+            "top": 0,
+            "height": 0,
+            "end": 0
+          },
+          {
+            "id": "portal",
+            "top": 0,
+            "height": 3600,
+            "end": 3600
+          },
+          {
+            "id": "about",
+            "top": 3600,
+            "height": 924,
+            "end": 4523.765625
+          },
+          {
+            "id": "skills",
+            "top": 4523.765625,
+            "height": 1059,
+            "end": 5582.953125
+          },
+          {
+            "id": "education",
+            "top": 5582.953125,
+            "height": 1575,
+            "end": 7157.953125
+          },
+          {
+            "id": "experience",
+            "top": 7157.953125,
+            "height": 2608,
+            "end": 8775.90625
+          },
+          {
+            "id": "departure",
+            "top": 8775.90625,
+            "height": 990,
+            "end": 9765.90625
+          },
+          {
+            "id": "works",
+            "top": 9765.90625,
+            "height": 1440,
+            "end": 11205.90625
+          },
+          {
+            "id": "finale",
+            "top": 11205.90625,
+            "height": 2025,
+            "end": 13230.90625
+          },
+          {
+            "id": "contact",
+            "top": 13230.90625,
+            "height": 1263,
+            "end": 14110
+          }
+        ]
+      }
+    }
+  ],
+  "comparisons": [],
+  "scenarios": [],
+  "lifecycle": [],
+  "errors": [],
+  "warnings": [
+    {
+      "id": "1440-vi",
+      "type": "warning",
+      "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    },
+    {
+      "id": "1440-vi",
+      "type": "warning",
+      "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    }
+  ],
+  "limits": [
+    "Desktop Edge headless; 390px/touch viewport is not a physical phone.",
+    "Held checkpoints use the existing story store and exact visible scroll; native producer sampled separately.",
+    "Authored pose/uniforms/DOM state compared at equal progress; ambient uTime, idle glitch/dots and pointer following recorded separately.",
+    "No FPS claim, GPU benchmark, screen reader, OS motion switch, public HTTPS, Safari or Firefox validation."
+  ],
+  "status": "FAIL",
+  "failure": "page.waitForFunction: Timeout 60000ms exceeded.\n    at ready (C:\\Users\\duytva\\my-portfolio-2026\\outputs\\visual-revision-2026-10-09\\v3\\check-browser.mjs:100:14)\n    at async routeCycles (C:\\Users\\duytva\\my-portfolio-2026\\outputs\\visual-revision-2026-10-09\\v3\\check-browser.mjs:404:5)\n    at async file:///C:/Users/duytva/my-portfolio-2026/outputs/visual-revision-2026-10-09/v3/check-browser.mjs:476:28",
+  "finished": "2026-10-09T09:54:34.954Z",
+  "sourceAfter": {
+    "src/App.jsx": "8c74f91ddd2a61c150b656ef8a461eb6dd132c28b4b0ae7def4bdedbc10d02b4",
+    "src/components/Hero.jsx": "cff3b6765079d0f04c678857a4ce9b5fa710aaa6d2f90390e6b8ead8967c1ea7",
+    "src/components/effects/PortalHeading.jsx": "20ebbe736791eacd62c233648ed40c0602bc61ee2140594295fcec12df3a7f4d",
+    "src/components/About.jsx": "1e637b9a62c5072573336afa34b44bc4059bd266db291f49e235ea65059d5f7e",
+    "src/components/layout/Nav.jsx": "56fa5c82bf5fe6f9c2cfabbd1e6cfc238cf8f59f2ff1eb15cfe095c421d7091b",
+    "src/components/Cursor.jsx": "c27ff23a33378ae7966638443b85901272fb94f413a420f2ffbd76379b786888",
+    "src/3d/GalaxyScene.jsx": "7e7d71ea99624fe9d5ec26ce27a25e62caea732da6f17d6aa0cb5c4646a47c83",
+    "src/3d/components/CameraRig.jsx": "fd01fb40484b7f14f4eb893d07cd486a68b41c1729e9a61193a9bc8de84d816f",
+    "src/3d/utils/cameraPath.js": "b8b74b47c1e03ecf7e09dd08934f69d5b07bf880c9e80402e6c471a95f2b8c7f",
+    "src/3d/utils/portal.js": "973cf175d67a63aeeb0493ff3d148372e812fdc4f788674c47e62f680fbe3254",
+    "src/3d/hooks/useScrollProgress.js": "0998d47a16fb63482217bbec69b97f6da5392ed5575788653782e7127e09f87b",
+    "src/stores/useScrollStore.js": "ff2f96ca3cf87b2dc0ca0d32375d5fa67ab66f680271ed8c6a618e82cd4845e7",
+    "src/3d/components/BlackHole.jsx": "50905550916924c2acaf37743f67837f260b4aaf1a7e4d5b5fbb1aeb7f9a6029",
+    "src/3d/components/BlackHoleSystem.jsx": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+    "src/3d/components/BlackHoleBloomMask.jsx": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c",
+    "src/3d/shaders/blackHole.js": "b5b33465f365d7eaa9983ca4f7133ebd9adda63057ea2a6f51e38980a84a5e64",
+    "src/3d/quality.js": "e41080fcf00415c51806f658902908cebf0eb9b6501371bb558bfd5bf58b64e0"
+  }
+}

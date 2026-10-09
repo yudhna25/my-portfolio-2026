@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="vi">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>G1 — Hero và portal tới/lùi</title>
+<style>
+  :root{color-scheme:dark;font:16px system-ui;background:#080808;color:#fafafa}body{margin:0;padding:24px;max-width:1800px;margin-inline:auto}h1{font-size:clamp(24px,3vw,36px)}p{color:#bbb;max-width:85ch;line-height:1.6}a{color:inherit}label{display:inline-flex;align-items:center;gap:8px;margin-right:16px}select,button{min-height:44px;background:#141414;color:white;border:1px solid #555;border-radius:4px;padding:8px}input{height:44px;width:min(420px,60vw)}.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:24px 0}.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}figure{margin:0}figcaption{margin:12px 0;color:#bbb}img{display:block;width:100%;max-height:78vh;object-fit:contain;background:black;border:1px solid #333}details{margin-top:32px}summary{cursor:pointer;min-height:44px}details img{max-width:1000px;margin-top:16px}:focus-visible{outline:2px solid white;outline-offset:4px}@media(max-width:800px){.pair{grid-template-columns:1fr}body{padding:16px}}
+</style>
+<h1>G1 — Hero và portal</h1>
+<p>Ảnh từ cùng bản tích hợp V3. Chọn một mốc để so hai hướng cuộn; các ảnh này là checkpoint tĩnh, không phải video hoặc phép đo FPS. <a href="/">Mở bản chạy thật</a> để xem nhịp chuyển động bằng cuộn.</p>
+<div class="controls">
+  <label>Màn hình <select id="width"><option>1440</option><option>390</option><option>1920</option></select></label>
+  <label>Ngôn ngữ <select id="locale"><option value="vi">Việt</option><option value="en">English</option></select></label>
+  <button id="previous" aria-label="Mốc trước">←</button>
+  <label>Tiến độ <input id="progress" type="range" min="0" max="7" step="1" value="0"></label>
+  <button id="next" aria-label="Mốc sau">→</button>
+  <output id="phase" aria-live="polite"></output>
+</div>
+<div class="pair">
+  <figure><figcaption>Cuộn tới</figcaption><a id="forward-link"><img id="forward" alt="Checkpoint portal khi cuộn tới"></a></figure>
+  <figure><figcaption>Cuộn ngược</figcaption><a id="reverse-link"><img id="reverse" alt="Cùng checkpoint portal khi cuộn ngược"></a></figure>
+</div>
+<details><summary>Glitch giữ số 7 ở Hero — ảnh 1440px, tiếng Việt</summary><img src="screenshots/1440-vi-hero-glitch-hold-7.png" alt="Hero giữ số 7 sau cosmic glitch"></details>
+<p>390px là viewport trên desktop; chưa kiểm điện thoại thật. Chỉ xin duyệt Hero, O, glitch và portal; các section khác chưa thực hiện V5/V6/V7.</p>
+<script>
+  const points=[0,.25,.44,.47,.50,.70,.94,1];
+  const width=document.getElementById('width'),locale=document.getElementById('locale'),progress=document.getElementById('progress');
+  function draw(){const p=points[Number(progress.value)];for(const direction of ['forward','reverse']){const file=`screenshots/${width.value}-${locale.value}-portal-${direction}-${p}.png`;document.getElementById(direction).src=file;document.getElementById(`${direction}-link`).href=file;}document.getElementById('phase').textContent=`${Math.round(p*100)}% · ${p<.44?'Hút vào':p<=.50?'Dark core':p<.94?'Đẩy ra':'Ổn định About'}`;}
+  [width,locale,progress].forEach(node=>node.addEventListener('input',draw));
+  document.getElementById('previous').onclick=()=>{progress.value=Math.max(0,Number(progress.value)-1);draw();};
+  document.getElementById('next').onclick=()=>{progress.value=Math.min(7,Number(progress.value)+1);draw();};
+  draw();
+</script>
+</html>

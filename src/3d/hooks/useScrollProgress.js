@@ -3,7 +3,7 @@ import { gsap, ScrollSmoother, ScrollTrigger, useGSAPSetup } from '@/hooks/useGS
 import { useScrollStore } from '@/stores/useScrollStore';
 import { clampStoryProgress, segmentProgress } from '@/3d/utils/cameraPath';
 
-export function useScrollProgress({ scope, story = false, locale, ready = true, initialPosition, historyManaged = false } = {}) {
+export function useScrollProgress({ scope, story = false, locale, ready = true, initialPosition, historyManaged = false, staticMotion = false } = {}) {
   const controls = useRef(null);
   const initialized = useRef(false);
   const restoredEntry = useRef(null);
@@ -179,7 +179,7 @@ export function useScrollProgress({ scope, story = false, locale, ready = true, 
       ScrollTrigger.removeEventListener('refresh', measure);
       document.fonts?.removeEventListener('loadingdone', measure);
     };
-  }, { scope, dependencies: [story, locale, ready, initialPosition, historyManaged], revertOnUpdate: true });
+  }, { scope, dependencies: [story, locale, ready, initialPosition, historyManaged, staticMotion], revertOnUpdate: true });
   return controls;
 }
 

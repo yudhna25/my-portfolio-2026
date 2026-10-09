@@ -1,0 +1,557 @@
+{
+  "checks": [
+    {
+      "label": "Hero caller and all copy unchanged",
+      "pass": true
+    },
+    {
+      "label": "heading, O anchor and details JSX unchanged",
+      "pass": true
+    },
+    {
+      "label": "portal intake transforms unchanged",
+      "pass": true
+    },
+    {
+      "label": "glitch timeline unchanged",
+      "pass": true
+    },
+    {
+      "label": "decode timeline unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 0 content unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 0 title unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 0 year unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 0 anchor unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 0 name unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 0 role unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 0 intro unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 0 indicator unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 1 content unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 1 title unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 1 year unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 1 anchor unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 1 name unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 1 role unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 1 intro unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 1 indicator unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 2 content unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 2 title unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 2 year unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 2 anchor unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 2 name unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 2 role unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 2 intro unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 2 indicator unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 3 content unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 3 title unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 3 year unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 3 anchor unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 3 name unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 3 role unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 3 intro unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 3 indicator unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 4 content unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 4 title unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 4 year unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 4 anchor unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 4 name unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 4 role unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 4 intro unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 4 indicator unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 5 content unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 5 title unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 5 year unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 5 anchor unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 5 name unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 5 role unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 5 intro unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 5 indicator unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 6 content unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 6 title unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 6 year unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 6 anchor unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 6 name unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 6 role unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 6 intro unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 6 indicator unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 7 content unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 7 title unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 7 year unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 7 anchor unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 7 name unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 7 role unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 7 intro unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 7 indicator unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 8 content unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 8 title unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 8 year unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 8 anchor unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 8 name unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 8 role unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 8 intro unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 8 indicator unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 9 content unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 9 title unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 9 year unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 9 anchor unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 9 name unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 9 role unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 9 intro unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 9 indicator unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 10 content unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 10 title unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 10 year unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 10 anchor unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 10 name unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 10 role unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 10 intro unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 10 indicator unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 11 content unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 11 title unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 11 year unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 11 anchor unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 11 name unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 11 role unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 11 intro unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 11 indicator unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 12 content unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 12 title unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 12 year unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 12 anchor unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 12 name unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 12 role unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 12 intro unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 12 indicator unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 13 content unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 13 title unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 13 year unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 13 anchor unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 13 name unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 13 role unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 13 intro unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 13 indicator unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 14 content unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 14 title unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 14 year unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 14 anchor unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 14 name unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 14 role unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 14 intro unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 14 indicator unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 15 content unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 15 title unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 15 year unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 15 anchor unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 15 name unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 15 role unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 15 intro unchanged",
+      "pass": true
+    },
+    {
+      "label": "geometry 15 indicator unchanged",
+      "pass": true
+    },
+    {
+      "label": "browser source stable",
+      "pass": true
+    },
+    {
+      "label": "build and browser match",
+      "pass": true
+    },
+    {
+      "label": "production dist fingerprint matches",
+      "pass": true
+    },
+    {
+      "label": "all screenshots exist",
+      "pass": true
+    }
+  ],
+  "ownedSource": {
+    "src/components/Hero.jsx": "cff3b6765079d0f04c678857a4ce9b5fa710aaa6d2f90390e6b8ead8967c1ea7",
+    "src/components/effects/PortalHeading.jsx": "286fd4b7882265f10b31c386f2a748131523b5daeee1b7eea8a258ff70742a6e",
+    "src/styles/hero.css": "b48673c8b73a430889ae1e7695abe08900b2a3863a3e867e4c086974d62e7643"
+  }
+}

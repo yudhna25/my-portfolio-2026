@@ -1,0 +1,75 @@
+@layer components {
+  .portal-heading {
+    --hero-font-size: calc((100vw - 2rem) / 7.05);
+    font-size: var(--hero-font-size);
+    padding-block: calc(4.5rem + 16px) calc(4rem + 32px);
+  }
+
+  .portal-heading [data-hero-content] {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100svh - 8.5rem - 48px);
+  }
+
+  .portal-heading [data-hero-layer='year'], .portal-heading h1 { flex-shrink: 0; }
+  .portal-heading [data-hero-details] { scrollbar-width: thin; }
+  .portal-heading[data-hero-idle='false'] [data-hero-details] { overflow: visible; }
+
+  .portal-heading[aria-hidden='true'] [data-hero-content] { pointer-events: none; }
+
+  .portal-heading h1 { font-size: var(--hero-font-size); }
+
+  .hero-year-svg {
+    width: 5.6032em;
+    height: 1.3312em;
+    overflow: visible;
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: normal;
+  }
+
+  .hero-year-svg text { font-size: 1000px; }
+  .hero-year-svg text, .hero-year-svg tspan { vector-effect: non-scaling-stroke; }
+  .hero-year-svg path, .hero-year-svg circle { vector-effect: non-scaling-stroke; }
+  .portal-heading [data-hero-name], .portal-heading [data-hero-role] { font-size: inherit; }
+
+  .hero-year-base { stroke-width: 0.6px; stroke-opacity: 0.24; }
+  .hero-year-stars { fill: white; stroke-width: 0.5px; opacity: 0.42; }
+  /* Normalized meteor dashes must scale with their contour, including on mobile. */
+  .hero-year-svg [data-year-meteor] path { vector-effect: none; }
+  .hero-year-tail { stroke-width: 4px; stroke-opacity: 0.18; stroke-dasharray: 36 964; }
+  .hero-year-wake { stroke-width: 5px; stroke-opacity: 0.4; stroke-dasharray: 14 986; }
+  .hero-year-head { stroke-width: 7px; stroke-opacity: 0.9; stroke-dasharray: 1.5 998.5; stroke-linecap: round; }
+  .hero-noise-cyan { stroke: #86dce8; clip-path: polygon(0 24%, 100% 29%, 100% 39%, 0 34%, 0 70%, 100% 65%, 100% 72%, 0 77%); }
+  .hero-noise-orange { stroke: #e8ad86; clip-path: polygon(0 45%, 100% 42%, 100% 51%, 0 54%, 0 82%, 100% 77%, 100% 84%, 0 89%); }
+
+  /* Unbounded 800: O ink bounds inside the unchanged glyph advance/line box. */
+  .hero-o-anchor {
+    position: absolute;
+    left: 0.03125em;
+    top: 0.109375em;
+    width: 0.90625em;
+    height: 0.78125em;
+  }
+
+  .portal-heading[data-hero-idle='true'] [data-hero-details] { pointer-events: auto; }
+
+  @media (min-width: 768px) {
+    .portal-heading { --hero-font-size: calc(72vw / 7.05); }
+  }
+
+  @media (max-height: 550px) and (min-width: 768px) {
+    .portal-heading { --hero-font-size: min(calc(72vw / 7.05), 19vh); }
+  }
+
+  @media (max-width: 767px) {
+    .hero-year-tail { stroke-width: 12px; }
+    .hero-year-wake { stroke-width: 16px; }
+    .hero-year-head { stroke-width: 22px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-year-noise] { visibility: hidden; }
+    [data-year-meteor] { visibility: hidden; }
+  }
+}

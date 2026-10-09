@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "method": "Projection of physical disk tangent from captured live ray/camera uniforms; cap ratio is analytic, not a screenshot edge detector.",
+  "results": [
+    {
+      "id": "390-dpr3",
+      "projectedDiskTangentDegrees": 54.93650430535013,
+      "predictedRingToCap": 0.9600000000000001,
+      "target": [
+        390,
+        844
+      ],
+      "buffer": [
+        390,
+        844
+      ],
+      "rendererDpr": 1
+    },
+    {
+      "id": "900-dpr2",
+      "projectedDiskTangentDegrees": 54.93650430535013,
+      "predictedRingToCap": 0.9599999999999997,
+      "target": [
+        1350,
+        1350
+      ],
+      "buffer": [
+        1350,
+        1350
+      ],
+      "rendererDpr": 1.5
+    },
+    {
+      "id": "1440-dpr1",
+      "projectedDiskTangentDegrees": 54.93650430535013,
+      "predictedRingToCap": 0.9600000000000002,
+      "target": [
+        1440,
+        900
+      ],
+      "buffer": [
+        1440,
+        900
+      ],
+      "rendererDpr": 1
+    },
+    {
+      "id": "1920-dpr2",
+      "projectedDiskTangentDegrees": 54.93650430535012,
+      "predictedRingToCap": 0.9600000000000004,
+      "target": [
+        3360,
+        1890
+      ],
+      "buffer": [
+        3360,
+        1890
+      ],
+      "rendererDpr": 1.75
+    }
+  ]
+}

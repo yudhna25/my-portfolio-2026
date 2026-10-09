@@ -1,0 +1,37 @@
+[
+  {
+    "path": "src/components/Hero.jsx",
+    "owner": "V1",
+    "baselineSha256": "c28dba84a23b705c937fac5343b17fb8b80cc6993877b24399f32ccc36c839c6",
+    "currentSha256": "cff3b6765079d0f04c678857a4ce9b5fa710aaa6d2f90390e6b8ead8967c1ea7",
+    "note": "Observed external worker change; V4 did not write this file."
+  },
+  {
+    "path": "src/3d/components/BlackHole.jsx",
+    "owner": "V2",
+    "baselineSha256": "63ff1bfb40d44ac15910c7fb5ee28040ced5a5aa3672d01164b28606d72db96a",
+    "currentSha256": "e271e109b132fb7f07c60d0d089df84be35e517ae2f882066b7e2ddfb3fd1c2f",
+    "note": "Observed external worker change; V4 did not write this file."
+  },
+  {
+    "path": "src/3d/shaders/blackHole.js",
+    "owner": "V2",
+    "baselineSha256": "d28dac981d1f98afea1c40ac9a4653e12bf2bcb780b97905746353ea5f30b281",
+    "currentSha256": "b5b33465f365d7eaa9983ca4f7133ebd9adda63057ea2a6f51e38980a84a5e64",
+    "note": "Observed external worker change; V4 did not write this file."
+  },
+  {
+    "path": "src/components/effects/PortalHeading.jsx",
+    "owner": "V1",
+    "baselineSha256": "deae4ec8b9336de37f47c0dd4bfe5707b0312dcbfecf54cd03bae49d0515bc6c",
+    "currentSha256": "a4d795f5be4f8f611ce13ae853176dd4671dee0187c4ff1203de2fa97d442129",
+    "note": "Observed external worker change; V4 did not write this file."
+  },
+  {
+    "path": "src/styles/hero.css",
+    "owner": "V1",
+    "baselineSha256": null,
+    "currentSha256": "b73110af10884a44b0f74221b87f68c22f4e500c3463697d79d23a977bff8a2e",
+    "note": "New file from parallel owner; V4 did not write this file."
+  }
+]

@@ -1,0 +1,6333 @@
+{
+  "started": "2026-10-09T08:23:39.461Z",
+  "base": "http://127.0.0.1:5183",
+  "configurations": [
+    {
+      "id": "390-dpr3",
+      "frames": [
+        {
+          "label": "o-size",
+          "chapter": "hero",
+          "p": 0,
+          "canvas": 1,
+          "tier": "low",
+          "viewport": [
+            390,
+            844
+          ],
+          "deviceDpr": 3,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            390,
+            844
+          ],
+          "target": [
+            390,
+            844
+          ],
+          "targetMiB": 2.51129150390625,
+          "memory": {
+            "geometries": 2,
+            "textures": 1
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0,
+              2.2,
+              32
+            ],
+            "uCameraMatrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.9976450635353976,
+              -0.06858809811805859,
+              0,
+              0,
+              0.06858809811805859,
+              0.9976450635353976,
+              0,
+              0,
+              2.2,
+              -168,
+              1
+            ],
+            "uInverseProjection": [
+              0.5773502691896258,
+              0,
+              0,
+              0,
+              0,
+              1.2494451979385748,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.99875,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8974158653846154,
+              0.5660267328199052
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5
+            ],
+            "uPortalScale": 0.7049264329789794,
+            "uPortalRadius": [
+              111.08125,
+              55.540625
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              390,
+              844
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 326.984375,
+            "top": 346.4375,
+            "width": 46.015625,
+            "height": 39.671875,
+            "fixed": true
+          },
+          "camera": [
+            0,
+            2.2,
+            -168
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "39e3d3b2-03da-434c-ac77-4333ef42d7e8",
+          "compiledMask": false,
+          "pixels": {
+            "count": 329160,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 811,
+            "lit": 3891,
+            "maxHalfBits": 16754,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 811,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "o-slot-preview",
+          "chapter": "hero",
+          "p": 0,
+          "canvas": 1,
+          "tier": "low",
+          "viewport": [
+            390,
+            844
+          ],
+          "deviceDpr": 3,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            390,
+            844
+          ],
+          "target": [
+            390,
+            844
+          ],
+          "targetMiB": 2.51129150390625,
+          "memory": {
+            "geometries": 2,
+            "textures": 1
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0,
+              2.2,
+              32
+            ],
+            "uCameraMatrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.9976450635353976,
+              -0.06858809811805859,
+              0,
+              0,
+              0.06858809811805859,
+              0.9976450635353976,
+              0,
+              0,
+              2.2,
+              -168,
+              1
+            ],
+            "uInverseProjection": [
+              0.5773502691896258,
+              0,
+              0,
+              0,
+              0,
+              1.2494451979385748,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.99875,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8974158653846154,
+              0.5660267328199052
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5
+            ],
+            "uPortalScale": 0.7049264329789794,
+            "uPortalRadius": [
+              111.08125,
+              55.540625
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              390,
+              844
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 326.984375,
+            "top": 346.4375,
+            "width": 46.015625,
+            "height": 39.671875,
+            "fixed": true
+          },
+          "camera": [
+            0,
+            2.2,
+            -168
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "39e3d3b2-03da-434c-ac77-4333ef42d7e8",
+          "compiledMask": false,
+          "pixels": {
+            "count": 329160,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 811,
+            "lit": 3891,
+            "maxHalfBits": 16754,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 811,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "close-up",
+          "chapter": "portal",
+          "p": 0.3,
+          "canvas": 1,
+          "tier": "low",
+          "viewport": [
+            390,
+            844
+          ],
+          "deviceDpr": 3,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            390,
+            844
+          ],
+          "target": [
+            390,
+            844
+          ],
+          "targetMiB": 2.51129150390625,
+          "memory": {
+            "geometries": 2,
+            "textures": 1
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0.7407407407407407,
+              1.6074074074074074,
+              14.222222222222229
+            ],
+            "uCameraMatrix": [
+              0.998646416445549,
+              0,
+              -0.05201283418987231,
+              0,
+              -0.006363477633140385,
+              0.9924877098371367,
+              -0.12217877055629543,
+              0,
+              0.051622098687245106,
+              0.12234437388877088,
+              0.9911442947951065,
+              0,
+              0.7407407407407407,
+              1.6074074074074074,
+              -185.77777777777777,
+              1
+            ],
+            "uInverseProjection": [
+              0.5773502691896258,
+              0,
+              0,
+              0,
+              0,
+              1.2494451979385748,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.99875,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8974158653846154,
+              0.5660267328199052
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5041057499964436
+            ],
+            "uPortalScale": 2.178505779705449,
+            "uPortalRadius": [
+              762.1734767693479,
+              381.08673838467394
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.1141688888888889,
+            "uPortalPull": 0.3,
+            "uPortalViewport": [
+              390,
+              844
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0.3
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 326.984375,
+            "top": 346.4375,
+            "width": 46.015625,
+            "height": 39.671875,
+            "fixed": true
+          },
+          "camera": [
+            0.7407407407407407,
+            1.6074074074074074,
+            -185.77777777777777
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "39e3d3b2-03da-434c-ac77-4333ef42d7e8",
+          "compiledMask": false,
+          "pixels": {
+            "count": 329160,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 28542,
+            "lit": 99587,
+            "maxHalfBits": 17623,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 28542,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "dark-core",
+          "chapter": "portal",
+          "p": 0.4,
+          "canvas": 1,
+          "tier": "low",
+          "viewport": [
+            390,
+            844
+          ],
+          "deviceDpr": 3,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            390,
+            844
+          ],
+          "target": [
+            390,
+            844
+          ],
+          "targetMiB": 2.51129150390625,
+          "memory": {
+            "geometries": 2,
+            "textures": 1
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0.9657064471879286,
+              1.427434842249657,
+              8.823045267489704
+            ],
+            "uCameraMatrix": [
+              0.9940633368018772,
+              0,
+              -0.10880295228677271,
+              0,
+              -0.01954270251249971,
+              0.9837368819410552,
+              -0.17854923659147448,
+              0,
+              0.1070334770285712,
+              0.17961555363857107,
+              0.9778967673973996,
+              0,
+              0.9657064471879286,
+              1.427434842249657,
+              -191.1769547325103,
+              1
+            ],
+            "uInverseProjection": [
+              0.5773502691896258,
+              0,
+              0,
+              0,
+              0,
+              1.2494451979385748,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.99875,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8974158653846154,
+              0.5660267328199052
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5084596899423128
+            ],
+            "uPortalScale": 51.91635096478666,
+            "uPortalRadius": [
+              28964.12379855115,
+              14482.061899275575
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.012479999999999984,
+            "uPortalPull": 0.4,
+            "uPortalViewport": [
+              390,
+              844
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0.4
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 326.984375,
+            "top": 346.4375,
+            "width": 46.015625,
+            "height": 39.671875,
+            "fixed": true
+          },
+          "camera": [
+            0.9657064471879286,
+            1.427434842249657,
+            -191.1769547325103
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "39e3d3b2-03da-434c-ac77-4333ef42d7e8",
+          "compiledMask": false
+        },
+        {
+          "label": "physical-observer-close",
+          "chapter": "portal",
+          "p": 0.66,
+          "canvas": 1,
+          "tier": "low",
+          "viewport": [
+            390,
+            844
+          ],
+          "deviceDpr": 3,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            390,
+            844
+          ],
+          "target": [
+            390,
+            844
+          ],
+          "targetMiB": 2.51129150390625,
+          "memory": {
+            "geometries": 5,
+            "textures": 1
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              1.06075,
+              1.6187000000000002,
+              10.30850000000001
+            ],
+            "uCameraMatrix": [
+              0.9771615695797583,
+              -3.469446951953614e-18,
+              -0.2124976868966418,
+              0,
+              -0.0541226578899941,
+              0.9670207421237591,
+              -0.24888073891994308,
+              0,
+              0.20548967088237277,
+              0.2546976330915037,
+              0.9449355061898351,
+              0,
+              1.06075,
+              1.6187000000000002,
+              -189.6915,
+              1
+            ],
+            "uInverseProjection": [
+              0.5773502691896258,
+              0,
+              0,
+              0,
+              0,
+              1.2494451979385748,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.99875,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.8974158653846154,
+              0.5660267328199052
+            ],
+            "uRayCenter": [
+              0.596363795687139,
+              0.5408114415270389
+            ],
+            "uPortalScale": 139.54111809577975,
+            "uPortalRadius": [
+              66648.75,
+              33324.375
+            ],
+            "uPortalVisibility": 0.39358600583090436,
+            "uPortalDust": 0,
+            "uPortalPull": 0.66,
+            "uPortalViewport": [
+              390,
+              844
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              1,
+              0,
+              0,
+              0.66
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 326.984375,
+            "top": 346.4375,
+            "width": 46.015625,
+            "height": 39.671875,
+            "fixed": true
+          },
+          "camera": [
+            1.06075,
+            1.6187000000000002,
+            -189.6915
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "39e3d3b2-03da-434c-ac77-4333ef42d7e8",
+          "compiledMask": false,
+          "pixels": {
+            "count": 329160,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 12439,
+            "lit": 97259,
+            "maxHalfBits": 17563,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 12439,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "about",
+          "chapter": "about",
+          "p": 0,
+          "canvas": 1,
+          "tier": "low",
+          "viewport": [
+            390,
+            844
+          ],
+          "deviceDpr": 3,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            390,
+            844
+          ],
+          "target": [
+            390,
+            844
+          ],
+          "targetMiB": 2.51129150390625,
+          "memory": {
+            "geometries": 5,
+            "textures": 1
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              2,
+              5,
+              46
+            ],
+            "uCameraMatrix": [
+              0.9063843921046296,
+              1.3877787807814457e-17,
+              -0.4224539427548535,
+              0,
+              -0.16152304793698713,
+              0.9240197458307394,
+              -0.3465513155364462,
+              0,
+              0.3903557848095335,
+              0.3823447519123229,
+              0.8375170756174691,
+              0,
+              2,
+              5,
+              -154,
+              1
+            ],
+            "uInverseProjection": [
+              0.5773502691896258,
+              0,
+              0,
+              0,
+              0,
+              1.2494451979385748,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.99875,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.8974158653846154,
+              0.5660267328199052
+            ],
+            "uRayCenter": [
+              0.8702116397802198,
+              0.6130517346635225
+            ],
+            "uPortalScale": 608.7123262008629,
+            "uPortalRadius": [
+              66648.75,
+              33324.375
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0,
+            "uPortalPull": 1,
+            "uPortalViewport": [
+              390,
+              844
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 326.984375,
+            "top": 346.4375,
+            "width": 46.015625,
+            "height": 39.671875,
+            "fixed": true
+          },
+          "camera": [
+            2,
+            5,
+            -154
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "39e3d3b2-03da-434c-ac77-4333ef42d7e8",
+          "compiledMask": false
+        },
+        {
+          "label": "finale-api",
+          "chapter": "finale",
+          "p": 0.8,
+          "canvas": 1,
+          "tier": "low",
+          "viewport": [
+            390,
+            844
+          ],
+          "deviceDpr": 3,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            390,
+            844
+          ],
+          "target": [
+            390,
+            844
+          ],
+          "targetMiB": 2.51129150390625,
+          "memory": {
+            "geometries": 5,
+            "textures": 1
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0.7777777777777789,
+            "uDiskIntensity": 1.1154984069185254,
+            "uObserver": [
+              2,
+              4,
+              40
+            ],
+            "uCameraMatrix": [
+              0.9987523388778446,
+              1.734723475976807e-18,
+              -0.049937616943892225,
+              0,
+              -0.031172031868555057,
+              0.7812490487056614,
+              -0.6234406373711012,
+              0,
+              0.03901371573204352,
+              0.6242194517126962,
+              0.7802743146408705,
+              0,
+              2,
+              4,
+              -160,
+              1
+            ],
+            "uInverseProjection": [
+              0.5773502691896258,
+              0,
+              0,
+              0,
+              0,
+              1.2494451979385748,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.99875,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.8974158653846154,
+              0.5660267328199052
+            ],
+            "uRayCenter": [
+              0.5,
+              0.7590986306554472
+            ],
+            "uPortalScale": 529.6204582402514,
+            "uPortalRadius": [
+              66648.75,
+              33324.375
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0,
+            "uPortalPull": 1,
+            "uPortalViewport": [
+              390,
+              844
+            ],
+            "uFinaleEnabled": 1,
+            "uFinaleHole": 0.32999544833864414,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0.7407407407407404,
+              0.25925925925925963,
+              0,
+              0.8
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 326.984375,
+            "top": 346.4375,
+            "width": 46.015625,
+            "height": 39.671875,
+            "fixed": true
+          },
+          "camera": [
+            2,
+            4,
+            -160
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "39e3d3b2-03da-434c-ac77-4333ef42d7e8",
+          "compiledMask": false
+        },
+        {
+          "label": "contact-api",
+          "chapter": "contact",
+          "p": 0,
+          "canvas": 1,
+          "tier": "low",
+          "viewport": [
+            390,
+            844
+          ],
+          "deviceDpr": 3,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            390,
+            844
+          ],
+          "target": [
+            390,
+            844
+          ],
+          "targetMiB": 2.51129150390625,
+          "memory": {
+            "geometries": 5,
+            "textures": 1
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 3,
+            "uDiskIntensity": 1.35,
+            "uObserver": [
+              2,
+              4,
+              40
+            ],
+            "uCameraMatrix": [
+              0.9987523388778446,
+              1.734723475976807e-18,
+              -0.049937616943892225,
+              0,
+              -0.031172031868555057,
+              0.7812490487056614,
+              -0.6234406373711012,
+              0,
+              0.03901371573204352,
+              0.6242194517126962,
+              0.7802743146408705,
+              0,
+              2,
+              4,
+              -160,
+              1
+            ],
+            "uInverseProjection": [
+              0.5773502691896258,
+              0,
+              0,
+              0,
+              0,
+              1.2494451979385748,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.99875,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.8974158653846154,
+              0.5660267328199052
+            ],
+            "uRayCenter": [
+              0.5,
+              0.7590986306554472
+            ],
+            "uPortalScale": 529.6204582402514,
+            "uPortalRadius": [
+              66648.75,
+              33324.375
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0,
+            "uPortalPull": 1,
+            "uPortalViewport": [
+              390,
+              844
+            ],
+            "uFinaleEnabled": 1,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              1,
+              0,
+              1
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 326.984375,
+            "top": 346.4375,
+            "width": 46.015625,
+            "height": 39.671875,
+            "fixed": true
+          },
+          "camera": [
+            2,
+            4,
+            -160
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "39e3d3b2-03da-434c-ac77-4333ef42d7e8",
+          "compiledMask": false
+        }
+      ],
+      "performance": [
+        {
+          "label": "O-size full target",
+          "ms": 2202.399999976158,
+          "frames": 132,
+          "fps": 59.934616782341514,
+          "cpuSubmissionMs": {
+            "samples": 132,
+            "mean": 0.3181818217942209,
+            "p95": 0.5,
+            "max": 1.100000023841858
+          },
+          "gpuMs": {
+            "samples": 131,
+            "mean": 2.0710414580152676,
+            "p95": 3.843817,
+            "max": 4.710814
+          },
+          "frameIntervalMs": {
+            "samples": 132,
+            "mean": 16.683333333694573,
+            "p95": 17.100000023841858,
+            "max": 17.300000071525574
+          },
+          "gpuTimer": true
+        },
+        {
+          "label": "close-up full target",
+          "ms": 2214.100000023842,
+          "frames": 132,
+          "fps": 59.617903436420484,
+          "cpuSubmissionMs": {
+            "samples": 132,
+            "mean": 0.36742424603664514,
+            "p95": 0.6999999284744263,
+            "max": 1.2999999523162842
+          },
+          "gpuMs": {
+            "samples": 78,
+            "mean": 10.524425115384616,
+            "p95": 12.500116,
+            "max": 15.445188
+          },
+          "frameIntervalMs": {
+            "samples": 132,
+            "mean": 16.68257575685328,
+            "p95": 17.200000047683716,
+            "max": 17.5
+          },
+          "gpuTimer": true
+        },
+        {
+          "label": "close-up ray only",
+          "ms": 2201.2999999523163,
+          "frames": 132,
+          "fps": 59.96456639388513,
+          "cpuSubmissionMs": {
+            "samples": 132,
+            "mean": 0.3469697020270608,
+            "p95": 0.6000000238418579,
+            "max": 1.3000000715255737
+          },
+          "gpuMs": {
+            "samples": 65,
+            "mean": 10.761897323076921,
+            "p95": 11.706369,
+            "max": 12.112201
+          },
+          "frameIntervalMs": {
+            "samples": 132,
+            "mean": 16.681818181818183,
+            "p95": 17.09999990463257,
+            "max": 18.100000023841858
+          },
+          "gpuTimer": true
+        }
+      ]
+    },
+    {
+      "id": "900-dpr2",
+      "frames": [
+        {
+          "label": "o-size",
+          "chapter": "hero",
+          "p": 0,
+          "canvas": 1,
+          "tier": "medium",
+          "viewport": [
+            900,
+            900
+          ],
+          "deviceDpr": 2,
+          "rendererDpr": 1.5,
+          "drawingBuffer": [
+            1350,
+            1350
+          ],
+          "target": [
+            1350,
+            1350
+          ],
+          "targetMiB": 13.904571533203125,
+          "memory": {
+            "geometries": 3,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0,
+              2.2,
+              32
+            ],
+            "uCameraMatrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.9976450635353976,
+              -0.06858809811805859,
+              0,
+              0,
+              0.06858809811805859,
+              0.9976450635353976,
+              0,
+              0,
+              2.2,
+              -168,
+              1
+            ],
+            "uInverseProjection": [
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.99875,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.811640625,
+              0.5313628472222223
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5
+            ],
+            "uPortalScale": 0.5528263157936106,
+            "uPortalRadius": [
+              201.03125,
+              100.515625
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              900,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 688.828125,
+            "top": 385.875,
+            "width": 83.296875,
+            "height": 71.796875,
+            "fixed": true
+          },
+          "camera": [
+            0,
+            2.2,
+            -168
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "d801612d-f97a-4691-b6e2-f28fac7b7481",
+          "compiledMask": true,
+          "pixels": {
+            "count": 1822500,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 6261,
+            "lit": 26455,
+            "maxHalfBits": 17423,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 6261,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "o-slot-preview",
+          "chapter": "hero",
+          "p": 0,
+          "canvas": 1,
+          "tier": "medium",
+          "viewport": [
+            900,
+            900
+          ],
+          "deviceDpr": 2,
+          "rendererDpr": 1.5,
+          "drawingBuffer": [
+            1350,
+            1350
+          ],
+          "target": [
+            1350,
+            1350
+          ],
+          "targetMiB": 13.904571533203125,
+          "memory": {
+            "geometries": 3,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0,
+              2.2,
+              32
+            ],
+            "uCameraMatrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.9976450635353976,
+              -0.06858809811805859,
+              0,
+              0,
+              0.06858809811805859,
+              0.9976450635353976,
+              0,
+              0,
+              2.2,
+              -168,
+              1
+            ],
+            "uInverseProjection": [
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.99875,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.811640625,
+              0.5313628472222223
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5
+            ],
+            "uPortalScale": 0.5528263157936106,
+            "uPortalRadius": [
+              201.03125,
+              100.515625
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              900,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 688.828125,
+            "top": 385.875,
+            "width": 83.296875,
+            "height": 71.796875,
+            "fixed": true
+          },
+          "camera": [
+            0,
+            2.2,
+            -168
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "d801612d-f97a-4691-b6e2-f28fac7b7481",
+          "compiledMask": true,
+          "pixels": {
+            "count": 1822500,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 6261,
+            "lit": 26455,
+            "maxHalfBits": 17423,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 6261,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "close-up",
+          "chapter": "portal",
+          "p": 0.28,
+          "canvas": 1,
+          "tier": "medium",
+          "viewport": [
+            900,
+            900
+          ],
+          "deviceDpr": 2,
+          "rendererDpr": 1.5,
+          "drawingBuffer": [
+            1350,
+            1350
+          ],
+          "target": [
+            1350,
+            1350
+          ],
+          "targetMiB": 13.904571533203125,
+          "memory": {
+            "geometries": 3,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0.679681755829904,
+              1.6562545953360768,
+              15.687637860082305
+            ],
+            "uCameraMatrix": [
+              0.9990627504912155,
+              0,
+              -0.04328533909913702,
+              0,
+              -0.004908511799538757,
+              0.9935495353586704,
+              -0.11329266216522597,
+              0,
+              0.04300612854979007,
+              0.11339894527097787,
+              0.9926183315447024,
+              0,
+              0.679681755829904,
+              1.6562545953360768,
+              -184.3123621399177,
+              1
+            ],
+            "uInverseProjection": [
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.99875,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.811640625,
+              0.5313628472222223
+            ],
+            "uRayCenter": [
+              0.5000000000000001,
+              0.5074080568274746
+            ],
+            "uPortalScale": 1.073530568252773,
+            "uPortalRadius": [
+              787.3345733494657,
+              393.66728667473285
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0.28,
+            "uPortalViewport": [
+              900,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0.28
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 688.828125,
+            "top": 385.875,
+            "width": 83.296875,
+            "height": 71.796875,
+            "fixed": true
+          },
+          "camera": [
+            0.679681755829904,
+            1.6562545953360768,
+            -184.3123621399177
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "d801612d-f97a-4691-b6e2-f28fac7b7481",
+          "compiledMask": true,
+          "pixels": {
+            "count": 1822500,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 83533,
+            "lit": 326504,
+            "maxHalfBits": 17630,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 83533,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "dark-core",
+          "chapter": "portal",
+          "p": 0.4,
+          "canvas": 1,
+          "tier": "medium",
+          "viewport": [
+            900,
+            900
+          ],
+          "deviceDpr": 2,
+          "rendererDpr": 1.5,
+          "drawingBuffer": [
+            1350,
+            1350
+          ],
+          "target": [
+            1350,
+            1350
+          ],
+          "targetMiB": 13.904571533203125,
+          "memory": {
+            "geometries": 3,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0.9657064471879286,
+              1.427434842249657,
+              8.823045267489704
+            ],
+            "uCameraMatrix": [
+              0.9940633368018772,
+              0,
+              -0.10880295228677271,
+              0,
+              -0.01954270251249971,
+              0.9837368819410552,
+              -0.17854923659147448,
+              0,
+              0.1070334770285712,
+              0.17961555363857107,
+              0.9778967673973996,
+              0,
+              0.9657064471879286,
+              1.427434842249657,
+              -191.1769547325103,
+              1
+            ],
+            "uInverseProjection": [
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.99875,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.811640625,
+              0.5313628472222223
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5183076366956718
+            ],
+            "uPortalScale": 40.71449684759788,
+            "uPortalRadius": [
+              52418.33353853585,
+              26209.166769267926
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.012479999999999984,
+            "uPortalPull": 0.4,
+            "uPortalViewport": [
+              900,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0.4
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 688.828125,
+            "top": 385.875,
+            "width": 83.296875,
+            "height": 71.796875,
+            "fixed": true
+          },
+          "camera": [
+            0.9657064471879286,
+            1.427434842249657,
+            -191.1769547325103
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "d801612d-f97a-4691-b6e2-f28fac7b7481",
+          "compiledMask": true
+        },
+        {
+          "label": "physical-observer-close",
+          "chapter": "portal",
+          "p": 0.66,
+          "canvas": 1,
+          "tier": "medium",
+          "viewport": [
+            900,
+            900
+          ],
+          "deviceDpr": 2,
+          "rendererDpr": 1.5,
+          "drawingBuffer": [
+            1350,
+            1350
+          ],
+          "target": [
+            1350,
+            1350
+          ],
+          "targetMiB": 13.904571533203125,
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              1.06075,
+              1.6187000000000002,
+              10.30850000000001
+            ],
+            "uCameraMatrix": [
+              0.9771615695797583,
+              -3.469446951953614e-18,
+              -0.2124976868966418,
+              0,
+              -0.0541226578899941,
+              0.9670207421237591,
+              -0.24888073891994308,
+              0,
+              0.20548967088237277,
+              0.2546976330915037,
+              0.9449355061898351,
+              0,
+              1.06075,
+              1.6187000000000002,
+              -189.6915,
+              1
+            ],
+            "uInverseProjection": [
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.99875,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.811640625,
+              0.5313628472222223
+            ],
+            "uRayCenter": [
+              0.596363795687139,
+              0.5883201452533866
+            ],
+            "uPortalScale": 109.43269908692926,
+            "uPortalRadius": [
+              120618.75,
+              60309.375
+            ],
+            "uPortalVisibility": 0.39358600583090436,
+            "uPortalDust": 0,
+            "uPortalPull": 0.66,
+            "uPortalViewport": [
+              900,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              1,
+              0,
+              0,
+              0.66
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 688.828125,
+            "top": 385.875,
+            "width": 83.296875,
+            "height": 71.796875,
+            "fixed": true
+          },
+          "camera": [
+            1.06075,
+            1.6187000000000002,
+            -189.6915
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "d801612d-f97a-4691-b6e2-f28fac7b7481",
+          "compiledMask": true,
+          "pixels": {
+            "count": 1822500,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 148660,
+            "lit": 869601,
+            "maxHalfBits": 17641,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 148660,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "about",
+          "chapter": "about",
+          "p": 0,
+          "canvas": 1,
+          "tier": "medium",
+          "viewport": [
+            900,
+            900
+          ],
+          "deviceDpr": 2,
+          "rendererDpr": 1.5,
+          "drawingBuffer": [
+            1350,
+            1350
+          ],
+          "target": [
+            1350,
+            1350
+          ],
+          "targetMiB": 13.904571533203125,
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              2,
+              5,
+              46
+            ],
+            "uCameraMatrix": [
+              0.9063843921046296,
+              1.3877787807814457e-17,
+              -0.4224539427548535,
+              0,
+              -0.16152304793698713,
+              0.9240197458307394,
+              -0.3465513155364462,
+              0,
+              0.3903557848095335,
+              0.3823447519123229,
+              0.8375170756174691,
+              0,
+              2,
+              5,
+              -154,
+              1
+            ],
+            "uInverseProjection": [
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.99875,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.811640625,
+              0.5313628472222223
+            ],
+            "uRayCenter": [
+              0.8702116397802198,
+              0.7446555488615718
+            ],
+            "uPortalScale": 477.37207306824916,
+            "uPortalRadius": [
+              120618.75,
+              60309.375
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0,
+            "uPortalPull": 1,
+            "uPortalViewport": [
+              900,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 688.828125,
+            "top": 385.875,
+            "width": 83.296875,
+            "height": 71.796875,
+            "fixed": true
+          },
+          "camera": [
+            2,
+            5,
+            -154
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "d801612d-f97a-4691-b6e2-f28fac7b7481",
+          "compiledMask": true
+        },
+        {
+          "label": "finale-api",
+          "chapter": "finale",
+          "p": 0.8,
+          "canvas": 1,
+          "tier": "medium",
+          "viewport": [
+            900,
+            900
+          ],
+          "deviceDpr": 2,
+          "rendererDpr": 1.5,
+          "drawingBuffer": [
+            1350,
+            1350
+          ],
+          "target": [
+            1350,
+            1350
+          ],
+          "targetMiB": 13.904571533203125,
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0.7777777777777789,
+            "uDiskIntensity": 1.1154984069185254,
+            "uObserver": [
+              2,
+              4,
+              40
+            ],
+            "uCameraMatrix": [
+              0.9447386991041867,
+              -2.0816681711721685e-17,
+              -0.3278243285891529,
+              0,
+              -0.06816146971149378,
+              0.9781456819466541,
+              -0.19643074844810884,
+              0,
+              0.3206599514465409,
+              0.20792071779674845,
+              0.9240920790966596,
+              0,
+              2,
+              4,
+              -160,
+              1
+            ],
+            "uInverseProjection": [
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.99875,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.811640625,
+              0.5313628472222223
+            ],
+            "uRayCenter": [
+              0.7528790450466623,
+              0.5919492337948007
+            ],
+            "uPortalScale": 415.3456488510098,
+            "uPortalRadius": [
+              120618.75,
+              60309.375
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0,
+            "uPortalPull": 1,
+            "uPortalViewport": [
+              900,
+              900
+            ],
+            "uFinaleEnabled": 1,
+            "uFinaleHole": 0.32999544833864414,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0.7407407407407404,
+              0.25925925925925963,
+              0,
+              0.8
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 688.828125,
+            "top": 385.875,
+            "width": 83.296875,
+            "height": 71.796875,
+            "fixed": true
+          },
+          "camera": [
+            2,
+            4,
+            -160
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "d801612d-f97a-4691-b6e2-f28fac7b7481",
+          "compiledMask": true
+        },
+        {
+          "label": "contact-api",
+          "chapter": "contact",
+          "p": 0,
+          "canvas": 1,
+          "tier": "medium",
+          "viewport": [
+            900,
+            900
+          ],
+          "deviceDpr": 2,
+          "rendererDpr": 1.5,
+          "drawingBuffer": [
+            1350,
+            1350
+          ],
+          "target": [
+            1350,
+            1350
+          ],
+          "targetMiB": 13.904571533203125,
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 3,
+            "uDiskIntensity": 1.35,
+            "uObserver": [
+              2,
+              4,
+              40
+            ],
+            "uCameraMatrix": [
+              0.9447386991041867,
+              -2.0816681711721685e-17,
+              -0.3278243285891529,
+              0,
+              -0.06816146971149378,
+              0.9781456819466541,
+              -0.19643074844810884,
+              0,
+              0.3206599514465409,
+              0.20792071779674845,
+              0.9240920790966596,
+              0,
+              2,
+              4,
+              -160,
+              1
+            ],
+            "uInverseProjection": [
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.99875,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.811640625,
+              0.5313628472222223
+            ],
+            "uRayCenter": [
+              0.7528790450466623,
+              0.5919492337948007
+            ],
+            "uPortalScale": 415.3456488510098,
+            "uPortalRadius": [
+              120618.75,
+              60309.375
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0,
+            "uPortalPull": 1,
+            "uPortalViewport": [
+              900,
+              900
+            ],
+            "uFinaleEnabled": 1,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              1,
+              0,
+              1
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 688.828125,
+            "top": 385.875,
+            "width": 83.296875,
+            "height": 71.796875,
+            "fixed": true
+          },
+          "camera": [
+            2,
+            4,
+            -160
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "d801612d-f97a-4691-b6e2-f28fac7b7481",
+          "compiledMask": true
+        }
+      ],
+      "performance": [
+        {
+          "label": "O-size full target",
+          "ms": 2200.899999976158,
+          "frames": 132,
+          "fps": 59.975464583320424,
+          "cpuSubmissionMs": {
+            "samples": 132,
+            "mean": 0.6037878827615217,
+            "p95": 0.8999999761581421,
+            "max": 1.3000000715255737
+          },
+          "gpuMs": {
+            "samples": 72,
+            "mean": 12.278466555555553,
+            "p95": 13.827194,
+            "max": 14.873607
+          },
+          "frameIntervalMs": {
+            "samples": 132,
+            "mean": 16.685606060606062,
+            "p95": 17.100000023841858,
+            "max": 17.90000009536743
+          },
+          "gpuTimer": true
+        },
+        {
+          "label": "close-up full target",
+          "ms": 2205.5,
+          "frames": 67,
+          "fps": 30.378598957152573,
+          "cpuSubmissionMs": {
+            "samples": 67,
+            "mean": 0.5447761211822282,
+            "p95": 0.7999999523162842,
+            "max": 1.899999976158142
+          },
+          "gpuMs": {
+            "samples": 11,
+            "mean": 33.84580345454546,
+            "p95": 35.100942,
+            "max": 35.100942
+          },
+          "frameIntervalMs": {
+            "samples": 67,
+            "mean": 32.81194029815161,
+            "p95": 38.39999997615814,
+            "max": 67.39999997615814
+          },
+          "gpuTimer": true
+        },
+        {
+          "label": "close-up ray only",
+          "ms": 2201.8000000715256,
+          "frames": 61,
+          "fps": 27.704605322017628,
+          "cpuSubmissionMs": {
+            "samples": 61,
+            "mean": 0.5655737704918032,
+            "p95": 0.7000000476837158,
+            "max": 1.2000000476837158
+          },
+          "gpuMs": {
+            "samples": 10,
+            "mean": 28.292469599999997,
+            "p95": 37.039768,
+            "max": 37.039768
+          },
+          "frameIntervalMs": {
+            "samples": 61,
+            "mean": 36.050819672521996,
+            "p95": 39.800000071525574,
+            "max": 40.799999952316284
+          },
+          "gpuTimer": true
+        }
+      ]
+    },
+    {
+      "id": "1440-dpr1",
+      "frames": [
+        {
+          "label": "o-size",
+          "chapter": "hero",
+          "p": 0,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1440,
+            900
+          ],
+          "deviceDpr": 1,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            1440,
+            900
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "targetMiB": 9.8876953125,
+          "memory": {
+            "geometries": 3,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0,
+              2.2,
+              32
+            ],
+            "uCameraMatrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.9976450635353976,
+              -0.06858809811805859,
+              0,
+              0,
+              0.06858809811805859,
+              0.9976450635353976,
+              0,
+              0,
+              2.2,
+              -168,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8116482204861111,
+              0.49948784722222217
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5
+            ],
+            "uPortalScale": 0.8846424156758257,
+            "uPortalRadius": [
+              321.69374999999997,
+              160.84687499999998
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1102.140625,
+            "top": 393.015625,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "camera": [
+            0,
+            2.2,
+            -168
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "f6b0b5aa-a965-445a-9950-0d2b42d76f95",
+          "compiledMask": true,
+          "pixels": {
+            "count": 1296000,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 7134,
+            "lit": 29955,
+            "maxHalfBits": 17460,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 7134,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "o-slot-preview",
+          "chapter": "hero",
+          "p": 0,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1440,
+            900
+          ],
+          "deviceDpr": 1,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            1440,
+            900
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "targetMiB": 9.8876953125,
+          "memory": {
+            "geometries": 3,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0,
+              2.2,
+              32
+            ],
+            "uCameraMatrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.9976450635353976,
+              -0.06858809811805859,
+              0,
+              0,
+              0.06858809811805859,
+              0.9976450635353976,
+              0,
+              0,
+              2.2,
+              -168,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8116482204861111,
+              0.49948784722222217
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5
+            ],
+            "uPortalScale": 0.8846424156758257,
+            "uPortalRadius": [
+              321.69374999999997,
+              160.84687499999998
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1102.140625,
+            "top": 393.015625,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "camera": [
+            0,
+            2.2,
+            -168
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "f6b0b5aa-a965-445a-9950-0d2b42d76f95",
+          "compiledMask": true,
+          "pixels": {
+            "count": 1296000,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 7134,
+            "lit": 29955,
+            "maxHalfBits": 17460,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 7134,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "close-up",
+          "chapter": "portal",
+          "p": 0.28,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1440,
+            900
+          ],
+          "deviceDpr": 1,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            1440,
+            900
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "targetMiB": 9.8876953125,
+          "memory": {
+            "geometries": 3,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0.679681755829904,
+              1.6562545953360768,
+              15.687637860082305
+            ],
+            "uCameraMatrix": [
+              0.9990627504912155,
+              0,
+              -0.04328533909913702,
+              0,
+              -0.004908511799538757,
+              0.9935495353586704,
+              -0.11329266216522597,
+              0,
+              0.04300612854979007,
+              0.11339894527097787,
+              0.9926183315447024,
+              0,
+              0.679681755829904,
+              1.6562545953360768,
+              -184.3123621399177,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8116482204861111,
+              0.49948784722222217
+            ],
+            "uRayCenter": [
+              0.5000000000000001,
+              0.5074080568274746
+            ],
+            "uPortalScale": 1.7178825393607482,
+            "uPortalRadius": [
+              1259.9066632945855,
+              629.9533316472928
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0.28,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0.28
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1102.140625,
+            "top": 393.015625,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "camera": [
+            0.679681755829904,
+            1.6562545953360768,
+            -184.3123621399177
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "f6b0b5aa-a965-445a-9950-0d2b42d76f95",
+          "compiledMask": true,
+          "pixels": {
+            "count": 1296000,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 95047,
+            "lit": 312895,
+            "maxHalfBits": 17623,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 95047,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "dark-core",
+          "chapter": "portal",
+          "p": 0.4,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1440,
+            900
+          ],
+          "deviceDpr": 1,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            1440,
+            900
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "targetMiB": 9.8876953125,
+          "memory": {
+            "geometries": 3,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0.9657064471879286,
+              1.427434842249657,
+              8.823045267489704
+            ],
+            "uCameraMatrix": [
+              0.9940633368018772,
+              0,
+              -0.10880295228677271,
+              0,
+              -0.01954270251249971,
+              0.9837368819410552,
+              -0.17854923659147448,
+              0,
+              0.1070334770285712,
+              0.17961555363857107,
+              0.9778967673973996,
+              0,
+              0.9657064471879286,
+              1.427434842249657,
+              -191.1769547325103,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8116482204861111,
+              0.49948784722222217
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5183076366956718
+            ],
+            "uPortalScale": 65.15205556482856,
+            "uPortalRadius": [
+              83880.7413512196,
+              41940.3706756098
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.012479999999999984,
+            "uPortalPull": 0.4,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0.4
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1102.140625,
+            "top": 393.015625,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "camera": [
+            0.9657064471879286,
+            1.427434842249657,
+            -191.1769547325103
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "f6b0b5aa-a965-445a-9950-0d2b42d76f95",
+          "compiledMask": true
+        },
+        {
+          "label": "physical-observer-close",
+          "chapter": "portal",
+          "p": 0.66,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1440,
+            900
+          ],
+          "deviceDpr": 1,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            1440,
+            900
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "targetMiB": 9.8876953125,
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              1.06075,
+              1.6187000000000002,
+              10.30850000000001
+            ],
+            "uCameraMatrix": [
+              0.9613998770419151,
+              6.938893903907228e-18,
+              -0.2751550043589804,
+              0,
+              -0.0690225891051243,
+              0.9680260106265921,
+              -0.24116700633293545,
+              0,
+              0.26635720117356637,
+              0.2508498410411395,
+              0.9306600875897812,
+              0,
+              1.06075,
+              1.6187000000000002,
+              -189.6915,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.8116482204861111,
+              0.49948784722222217
+            ],
+            "uRayCenter": [
+              0.5956284303120422,
+              0.5835798977497041
+            ],
+            "uPortalScale": 175.1161341428054,
+            "uPortalRadius": [
+              193016.24999999997,
+              96508.12499999999
+            ],
+            "uPortalVisibility": 0.39358600583090436,
+            "uPortalDust": 0,
+            "uPortalPull": 0.66,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              1,
+              0,
+              0,
+              0.66
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1102.140625,
+            "top": 393.015625,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "camera": [
+            1.06075,
+            1.6187000000000002,
+            -189.6915
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "f6b0b5aa-a965-445a-9950-0d2b42d76f95",
+          "compiledMask": true,
+          "pixels": {
+            "count": 1296000,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 67259,
+            "lit": 469804,
+            "maxHalfBits": 17647,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 67259,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "about",
+          "chapter": "about",
+          "p": 0,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1440,
+            900
+          ],
+          "deviceDpr": 1,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            1440,
+            900
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "targetMiB": 9.8876953125,
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              2,
+              5,
+              46
+            ],
+            "uCameraMatrix": [
+              0.8116681912971733,
+              2.7755575615628914e-17,
+              -0.5841187783630787,
+              0,
+              -0.20295654838893423,
+              0.937695669797785,
+              -0.28202033669317833,
+              0,
+              0.547725649118631,
+              0.3474576676985032,
+              0.7610977482919595,
+              0,
+              2,
+              5,
+              -154,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.8116482204861111,
+              0.49948784722222217
+            ],
+            "uRayCenter": [
+              0.8610914058248438,
+              0.6988752066768357
+            ],
+            "uPortalScale": 763.8992063701494,
+            "uPortalRadius": [
+              193016.24999999997,
+              96508.12499999999
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0,
+            "uPortalPull": 1,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1102.140625,
+            "top": 393.015625,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "camera": [
+            2,
+            5,
+            -154
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "f6b0b5aa-a965-445a-9950-0d2b42d76f95",
+          "compiledMask": true
+        },
+        {
+          "label": "finale-api",
+          "chapter": "finale",
+          "p": 0.8,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1440,
+            900
+          ],
+          "deviceDpr": 1,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            1440,
+            900
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "targetMiB": 9.8876953125,
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0.7777777777777789,
+            "uDiskIntensity": 1.1154984069185254,
+            "uObserver": [
+              2,
+              4,
+              40
+            ],
+            "uCameraMatrix": [
+              0.8853250185604691,
+              6.938893903907228e-18,
+              -0.4649726997479584,
+              0,
+              -0.09083702183690215,
+              0.9807316187591177,
+              -0.17295701035206046,
+              0,
+              0.4560134285026125,
+              0.1953599036806698,
+              0.8682662385807548,
+              0,
+              2,
+              4,
+              -160,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.8116482204861111,
+              0.49948784722222217
+            ],
+            "uRayCenter": [
+              0.7500695363920289,
+              0.5755375076347615
+            ],
+            "uPortalScale": 664.6434289448259,
+            "uPortalRadius": [
+              193016.24999999997,
+              96508.12499999999
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0,
+            "uPortalPull": 1,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 1,
+            "uFinaleHole": 0.32999544833864414,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0.7407407407407404,
+              0.25925925925925963,
+              0,
+              0.8
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1102.140625,
+            "top": 393.015625,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "camera": [
+            2,
+            4,
+            -160
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "f6b0b5aa-a965-445a-9950-0d2b42d76f95",
+          "compiledMask": true
+        },
+        {
+          "label": "contact-api",
+          "chapter": "contact",
+          "p": 0,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1440,
+            900
+          ],
+          "deviceDpr": 1,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            1440,
+            900
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "targetMiB": 9.8876953125,
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 3,
+            "uDiskIntensity": 1.35,
+            "uObserver": [
+              2,
+              4,
+              40
+            ],
+            "uCameraMatrix": [
+              0.8853250185604691,
+              6.938893903907228e-18,
+              -0.4649726997479584,
+              0,
+              -0.09083702183690215,
+              0.9807316187591177,
+              -0.17295701035206046,
+              0,
+              0.4560134285026125,
+              0.1953599036806698,
+              0.8682662385807548,
+              0,
+              2,
+              4,
+              -160,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.8116482204861111,
+              0.49948784722222217
+            ],
+            "uRayCenter": [
+              0.7500695363920289,
+              0.5755375076347615
+            ],
+            "uPortalScale": 664.6434289448259,
+            "uPortalRadius": [
+              193016.24999999997,
+              96508.12499999999
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0,
+            "uPortalPull": 1,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 1,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              1,
+              0,
+              1
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1102.140625,
+            "top": 393.015625,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "camera": [
+            2,
+            4,
+            -160
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "f6b0b5aa-a965-445a-9950-0d2b42d76f95",
+          "compiledMask": true
+        },
+        {
+          "label": "observer-center",
+          "chapter": "hero",
+          "p": 0,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1440,
+            900
+          ],
+          "deviceDpr": 1,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            1440,
+            900
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "targetMiB": 9.8876953125,
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0,
+              0,
+              1.1
+            ],
+            "uCameraMatrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              -200,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8116482204861111,
+              0.49948784722222217
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5
+            ],
+            "uPortalScale": 0.06975137820598597,
+            "uPortalRadius": [
+              321.69374999999997,
+              160.84687499999998
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1102.140625,
+            "top": 393.015625,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "camera": [
+            0,
+            0,
+            -200
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "f6b0b5aa-a965-445a-9950-0d2b42d76f95",
+          "compiledMask": true,
+          "pixels": {
+            "count": 1296000,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 147375,
+            "lit": 2433,
+            "maxHalfBits": 15818,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 147375,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "observer-inside",
+          "chapter": "hero",
+          "p": 0,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1440,
+            900
+          ],
+          "deviceDpr": 1,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            1440,
+            900
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "targetMiB": 9.8876953125,
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0,
+              0,
+              1.1
+            ],
+            "uCameraMatrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              -199.5,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8116482204861111,
+              0.49948784722222217
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5
+            ],
+            "uPortalScale": 0.06975137820598597,
+            "uPortalRadius": [
+              321.69374999999997,
+              160.84687499999998
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1102.140625,
+            "top": 393.015625,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "camera": [
+            0,
+            0,
+            -199.5
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "f6b0b5aa-a965-445a-9950-0d2b42d76f95",
+          "compiledMask": true,
+          "pixels": {
+            "count": 1296000,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 147375,
+            "lit": 2433,
+            "maxHalfBits": 15818,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 147375,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "observer-safe",
+          "chapter": "hero",
+          "p": 0,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1440,
+            900
+          ],
+          "deviceDpr": 1,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            1440,
+            900
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "targetMiB": 9.8876953125,
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0,
+              0,
+              1.1
+            ],
+            "uCameraMatrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              -198.9,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8116482204861111,
+              0.49948784722222217
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5
+            ],
+            "uPortalScale": 0.06975137820598597,
+            "uPortalRadius": [
+              321.69374999999997,
+              160.84687499999998
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1102.140625,
+            "top": 393.015625,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "camera": [
+            0,
+            0,
+            -198.9
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "f6b0b5aa-a965-445a-9950-0d2b42d76f95",
+          "compiledMask": true,
+          "pixels": {
+            "count": 1296000,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 147375,
+            "lit": 2433,
+            "maxHalfBits": 15818,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 147375,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "observer-near",
+          "chapter": "hero",
+          "p": 0,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1440,
+            900
+          ],
+          "deviceDpr": 1,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            1440,
+            900
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "targetMiB": 9.8876953125,
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              1,
+              1,
+              8
+            ],
+            "uCameraMatrix": [
+              0.9922778767136676,
+              -1.734723475976807e-18,
+              -0.12403473458920845,
+              0,
+              -0.015267620413811482,
+              0.9923953268977463,
+              -0.12214096331049185,
+              0,
+              0.12309149097933274,
+              0.12309149097933272,
+              0.9847319278346619,
+              0,
+              1,
+              1,
+              -192,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8116482204861111,
+              0.49948784722222217
+            ],
+            "uRayCenter": [
+              0.5,
+              0.4999999999999996
+            ],
+            "uPortalScale": 0.22541966296535257,
+            "uPortalRadius": [
+              321.69374999999997,
+              160.84687499999998
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1102.140625,
+            "top": 393.015625,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "camera": [
+            1,
+            1,
+            -192
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "f6b0b5aa-a965-445a-9950-0d2b42d76f95",
+          "compiledMask": true,
+          "pixels": {
+            "count": 1296000,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 5044,
+            "lit": 88773,
+            "maxHalfBits": 17609,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 5044,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "resized",
+          "chapter": "hero",
+          "p": 0,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1024,
+            768
+          ],
+          "deviceDpr": 1,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            1024,
+            768
+          ],
+          "target": [
+            1024,
+            768
+          ],
+          "targetMiB": 6,
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0,
+              2.2,
+              32
+            ],
+            "uCameraMatrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.9976450635353976,
+              -0.06858809811805859,
+              0,
+              0,
+              0.06858809811805859,
+              0.9976450635353976,
+              0,
+              0,
+              2.2,
+              -168,
+              1
+            ],
+            "uInverseProjection": [
+              0.769800358919501,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896258,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.99875,
+              0,
+              0,
+              -1,
+              5.0012500000000015
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8116378784179688,
+              0.5281575520833333
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5
+            ],
+            "uPortalScale": 0.7370892220575175,
+            "uPortalRadius": [
+              228.725,
+              114.3625
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              1024,
+              768
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 783.734375,
+            "top": 321.53125,
+            "width": 94.765625,
+            "height": 81.6875,
+            "fixed": true
+          },
+          "camera": [
+            0,
+            2.2,
+            -168
+          ],
+          "glError": 0,
+          "disposeEvents": 21,
+          "rayId": "f6b0b5aa-a965-445a-9950-0d2b42d76f95",
+          "compiledMask": true,
+          "pixels": {
+            "count": 786432,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 3568,
+            "lit": 15635,
+            "maxHalfBits": 17483,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 3568,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "resize-restored",
+          "chapter": "hero",
+          "p": 0,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1440,
+            900
+          ],
+          "deviceDpr": 1,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            1440,
+            900
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "targetMiB": 9.8876953125,
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0,
+              2.2,
+              32
+            ],
+            "uCameraMatrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.9976450635353976,
+              -0.06858809811805859,
+              0,
+              0,
+              0.06858809811805859,
+              0.9976450635353976,
+              0,
+              0,
+              2.2,
+              -168,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8116482204861111,
+              0.49948784722222217
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5
+            ],
+            "uPortalScale": 0.8846424156758257,
+            "uPortalRadius": [
+              321.69374999999997,
+              160.84687499999998
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1102.140625,
+            "top": 393.015625,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "camera": [
+            0,
+            2.2,
+            -168
+          ],
+          "glError": 0,
+          "disposeEvents": 42,
+          "rayId": "f6b0b5aa-a965-445a-9950-0d2b42d76f95",
+          "compiledMask": true,
+          "pixels": {
+            "count": 1296000,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 7134,
+            "lit": 29955,
+            "maxHalfBits": 17460,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 7134,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "reduced",
+          "chapter": "hero",
+          "p": 0,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1440,
+            900
+          ],
+          "deviceDpr": 1,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            1440,
+            900
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "targetMiB": 9.8876953125,
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0,
+              2.2,
+              32
+            ],
+            "uCameraMatrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.9976450635353976,
+              -0.06858809811805859,
+              0,
+              0,
+              0.06858809811805859,
+              0.9976450635353976,
+              0,
+              0,
+              2.2,
+              -168,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8116482204861111,
+              0.49948784722222217
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5
+            ],
+            "uPortalScale": 0.8846424156758257,
+            "uPortalRadius": [
+              321.69374999999997,
+              160.84687499999998
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              1,
+              0,
+              1
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1102.140625,
+            "top": 393.015625,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "camera": [
+            0,
+            2.2,
+            -168
+          ],
+          "glError": 0,
+          "disposeEvents": 42,
+          "rayId": "f6b0b5aa-a965-445a-9950-0d2b42d76f95",
+          "compiledMask": true,
+          "pixels": {
+            "count": 1296000,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 7134,
+            "lit": 29955,
+            "maxHalfBits": 17460,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 7134,
+              "leak": 0
+            }
+          }
+        }
+      ],
+      "performance": [
+        {
+          "label": "O-size full target",
+          "ms": 2208.899999976158,
+          "frames": 132,
+          "fps": 59.75825071366958,
+          "cpuSubmissionMs": {
+            "samples": 132,
+            "mean": 0.826515150792671,
+            "p95": 1.5,
+            "max": 3.100000023841858
+          },
+          "gpuMs": {
+            "samples": 65,
+            "mean": 11.055360384615385,
+            "p95": 12.631949,
+            "max": 13.479446
+          },
+          "frameIntervalMs": {
+            "samples": 132,
+            "mean": 16.671212120489642,
+            "p95": 17.699999928474426,
+            "max": 18.5
+          },
+          "gpuTimer": true
+        },
+        {
+          "label": "close-up full target",
+          "ms": 2210.7999999523163,
+          "frames": 71,
+          "fps": 32.11507146803481,
+          "cpuSubmissionMs": {
+            "samples": 71,
+            "mean": 0.5140845137582698,
+            "p95": 0.8999999761581421,
+            "max": 0.9000000953674316
+          },
+          "gpuMs": {
+            "samples": 11,
+            "mean": 31.792894909090908,
+            "p95": 33.735281,
+            "max": 33.735281
+          },
+          "frameIntervalMs": {
+            "samples": 71,
+            "mean": 30.912676055666427,
+            "p95": 36,
+            "max": 37.799999952316284
+          },
+          "gpuTimer": true
+        },
+        {
+          "label": "close-up ray only",
+          "ms": 2200.100000023842,
+          "frames": 68,
+          "fps": 30.90768601393714,
+          "cpuSubmissionMs": {
+            "samples": 68,
+            "mean": 0.5323529383715462,
+            "p95": 0.7999999523162842,
+            "max": 1
+          },
+          "gpuMs": {
+            "samples": 12,
+            "mean": 26.353213666666665,
+            "p95": 32.536286,
+            "max": 32.536286
+          },
+          "frameIntervalMs": {
+            "samples": 68,
+            "mean": 32.664705883054175,
+            "p95": 36.200000047683716,
+            "max": 37.800000071525574
+          },
+          "gpuTimer": true
+        }
+      ],
+      "disposal": {
+        "targets": [
+          "f6b0b5aa-a965-445a-9950-0d2b42d76f95",
+          "e3791474-1f40-4f11-98ec-ceca4a72a3ca",
+          "497e51fa-1d45-4a4d-86e9-fb89d24f73cd",
+          "00955f69-afcf-42a7-b05b-e6bdc3cc2e3e",
+          "ae314b0a-dca4-4c45-b7d9-4ad224d2591b",
+          "35ab82fa-fe67-4933-8a01-74e4018670b0",
+          "e094e428-111f-4c57-98d0-defee8f3b71f",
+          "7b394560-6aa5-40d1-a8a6-fd2fc6f6c108",
+          "a812f9a7-f1d1-4963-b6ad-3f3049e82cd4",
+          "5ad7e418-38c7-4e17-abd4-41314d0ac9f5",
+          "06a615cc-173e-4403-b014-8d3b1e8e4943",
+          "6033f7e0-5727-413f-b628-2a2e83ff1aa2",
+          "a40f24db-1ae0-4911-97d7-791e4e28d001",
+          "256e20b2-2db8-4318-9494-d6941704fdad",
+          "734ca648-953b-419c-a60c-7ea2ea623ffa",
+          "cccebe2a-fb4a-42e6-9b44-9511ff8494b1",
+          "3017ab42-ecf7-425a-85a0-8a8020a0ad30",
+          "57790872-9249-4977-963a-b66909676cac",
+          "f30296c7-9e86-429b-b387-2662215bd232",
+          "19fc95c0-b986-4a7e-ac49-dbaf26a2ae94",
+          "7b355e34-0174-4e3e-8728-d4ccdb65a26f"
+        ],
+        "disposal": [
+          {
+            "id": "f6b0b5aa-a965-445a-9950-0d2b42d76f95",
+            "width": 1024,
+            "height": 768
+          },
+          {
+            "id": "e3791474-1f40-4f11-98ec-ceca4a72a3ca",
+            "width": 1024,
+            "height": 768
+          },
+          {
+            "id": "497e51fa-1d45-4a4d-86e9-fb89d24f73cd",
+            "width": 1024,
+            "height": 768
+          },
+          {
+            "id": "35ab82fa-fe67-4933-8a01-74e4018670b0",
+            "width": 1024,
+            "height": 768
+          },
+          {
+            "id": "e094e428-111f-4c57-98d0-defee8f3b71f",
+            "width": 512,
+            "height": 384
+          },
+          {
+            "id": "7b355e34-0174-4e3e-8728-d4ccdb65a26f",
+            "width": 512,
+            "height": 384
+          },
+          {
+            "id": "7b394560-6aa5-40d1-a8a6-fd2fc6f6c108",
+            "width": 256,
+            "height": 192
+          },
+          {
+            "id": "19fc95c0-b986-4a7e-ac49-dbaf26a2ae94",
+            "width": 256,
+            "height": 192
+          },
+          {
+            "id": "a812f9a7-f1d1-4963-b6ad-3f3049e82cd4",
+            "width": 128,
+            "height": 96
+          },
+          {
+            "id": "f30296c7-9e86-429b-b387-2662215bd232",
+            "width": 128,
+            "height": 96
+          },
+          {
+            "id": "5ad7e418-38c7-4e17-abd4-41314d0ac9f5",
+            "width": 64,
+            "height": 48
+          },
+          {
+            "id": "57790872-9249-4977-963a-b66909676cac",
+            "width": 64,
+            "height": 48
+          },
+          {
+            "id": "06a615cc-173e-4403-b014-8d3b1e8e4943",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "id": "3017ab42-ecf7-425a-85a0-8a8020a0ad30",
+            "width": 32,
+            "height": 24
+          },
+          {
+            "id": "6033f7e0-5727-413f-b628-2a2e83ff1aa2",
+            "width": 16,
+            "height": 12
+          },
+          {
+            "id": "cccebe2a-fb4a-42e6-9b44-9511ff8494b1",
+            "width": 16,
+            "height": 12
+          },
+          {
+            "id": "a40f24db-1ae0-4911-97d7-791e4e28d001",
+            "width": 8,
+            "height": 6
+          },
+          {
+            "id": "734ca648-953b-419c-a60c-7ea2ea623ffa",
+            "width": 8,
+            "height": 6
+          },
+          {
+            "id": "256e20b2-2db8-4318-9494-d6941704fdad",
+            "width": 4,
+            "height": 3
+          },
+          {
+            "id": "ae314b0a-dca4-4c45-b7d9-4ad224d2591b",
+            "width": 1024,
+            "height": 768
+          },
+          {
+            "id": "00955f69-afcf-42a7-b05b-e6bdc3cc2e3e",
+            "width": 1024,
+            "height": 768
+          },
+          {
+            "id": "f6b0b5aa-a965-445a-9950-0d2b42d76f95",
+            "width": 1440,
+            "height": 900
+          },
+          {
+            "id": "e3791474-1f40-4f11-98ec-ceca4a72a3ca",
+            "width": 1440,
+            "height": 900
+          },
+          {
+            "id": "497e51fa-1d45-4a4d-86e9-fb89d24f73cd",
+            "width": 1440,
+            "height": 900
+          },
+          {
+            "id": "35ab82fa-fe67-4933-8a01-74e4018670b0",
+            "width": 1440,
+            "height": 900
+          },
+          {
+            "id": "e094e428-111f-4c57-98d0-defee8f3b71f",
+            "width": 720,
+            "height": 450
+          },
+          {
+            "id": "7b355e34-0174-4e3e-8728-d4ccdb65a26f",
+            "width": 720,
+            "height": 450
+          },
+          {
+            "id": "7b394560-6aa5-40d1-a8a6-fd2fc6f6c108",
+            "width": 360,
+            "height": 225
+          },
+          {
+            "id": "19fc95c0-b986-4a7e-ac49-dbaf26a2ae94",
+            "width": 360,
+            "height": 225
+          },
+          {
+            "id": "a812f9a7-f1d1-4963-b6ad-3f3049e82cd4",
+            "width": 180,
+            "height": 113
+          },
+          {
+            "id": "f30296c7-9e86-429b-b387-2662215bd232",
+            "width": 180,
+            "height": 113
+          },
+          {
+            "id": "5ad7e418-38c7-4e17-abd4-41314d0ac9f5",
+            "width": 90,
+            "height": 57
+          },
+          {
+            "id": "57790872-9249-4977-963a-b66909676cac",
+            "width": 90,
+            "height": 57
+          },
+          {
+            "id": "06a615cc-173e-4403-b014-8d3b1e8e4943",
+            "width": 45,
+            "height": 29
+          },
+          {
+            "id": "3017ab42-ecf7-425a-85a0-8a8020a0ad30",
+            "width": 45,
+            "height": 29
+          },
+          {
+            "id": "6033f7e0-5727-413f-b628-2a2e83ff1aa2",
+            "width": 23,
+            "height": 15
+          },
+          {
+            "id": "cccebe2a-fb4a-42e6-9b44-9511ff8494b1",
+            "width": 23,
+            "height": 15
+          },
+          {
+            "id": "a40f24db-1ae0-4911-97d7-791e4e28d001",
+            "width": 12,
+            "height": 8
+          },
+          {
+            "id": "734ca648-953b-419c-a60c-7ea2ea623ffa",
+            "width": 12,
+            "height": 8
+          },
+          {
+            "id": "256e20b2-2db8-4318-9494-d6941704fdad",
+            "width": 6,
+            "height": 4
+          },
+          {
+            "id": "ae314b0a-dca4-4c45-b7d9-4ad224d2591b",
+            "width": 1440,
+            "height": 900
+          },
+          {
+            "id": "00955f69-afcf-42a7-b05b-e6bdc3cc2e3e",
+            "width": 1440,
+            "height": 900
+          },
+          {
+            "id": "497e51fa-1d45-4a4d-86e9-fb89d24f73cd",
+            "width": 1440,
+            "height": 900
+          },
+          {
+            "id": "f6b0b5aa-a965-445a-9950-0d2b42d76f95",
+            "width": 1440,
+            "height": 900
+          },
+          {
+            "id": "e3791474-1f40-4f11-98ec-ceca4a72a3ca",
+            "width": 1440,
+            "height": 900
+          },
+          {
+            "id": "35ab82fa-fe67-4933-8a01-74e4018670b0",
+            "width": 1440,
+            "height": 900
+          },
+          {
+            "id": "7b355e34-0174-4e3e-8728-d4ccdb65a26f",
+            "width": 720,
+            "height": 450
+          },
+          {
+            "id": "e094e428-111f-4c57-98d0-defee8f3b71f",
+            "width": 720,
+            "height": 450
+          },
+          {
+            "id": "7b394560-6aa5-40d1-a8a6-fd2fc6f6c108",
+            "width": 360,
+            "height": 225
+          },
+          {
+            "id": "a812f9a7-f1d1-4963-b6ad-3f3049e82cd4",
+            "width": 180,
+            "height": 113
+          },
+          {
+            "id": "5ad7e418-38c7-4e17-abd4-41314d0ac9f5",
+            "width": 90,
+            "height": 57
+          },
+          {
+            "id": "06a615cc-173e-4403-b014-8d3b1e8e4943",
+            "width": 45,
+            "height": 29
+          },
+          {
+            "id": "6033f7e0-5727-413f-b628-2a2e83ff1aa2",
+            "width": 23,
+            "height": 15
+          },
+          {
+            "id": "a40f24db-1ae0-4911-97d7-791e4e28d001",
+            "width": 12,
+            "height": 8
+          },
+          {
+            "id": "256e20b2-2db8-4318-9494-d6941704fdad",
+            "width": 6,
+            "height": 4
+          },
+          {
+            "id": "7b355e34-0174-4e3e-8728-d4ccdb65a26f",
+            "width": 720,
+            "height": 450
+          },
+          {
+            "id": "19fc95c0-b986-4a7e-ac49-dbaf26a2ae94",
+            "width": 360,
+            "height": 225
+          },
+          {
+            "id": "f30296c7-9e86-429b-b387-2662215bd232",
+            "width": 180,
+            "height": 113
+          },
+          {
+            "id": "57790872-9249-4977-963a-b66909676cac",
+            "width": 90,
+            "height": 57
+          },
+          {
+            "id": "3017ab42-ecf7-425a-85a0-8a8020a0ad30",
+            "width": 45,
+            "height": 29
+          },
+          {
+            "id": "cccebe2a-fb4a-42e6-9b44-9511ff8494b1",
+            "width": 23,
+            "height": 15
+          },
+          {
+            "id": "734ca648-953b-419c-a60c-7ea2ea623ffa",
+            "width": 12,
+            "height": 8
+          },
+          {
+            "id": "00955f69-afcf-42a7-b05b-e6bdc3cc2e3e",
+            "width": 1440,
+            "height": 900
+          },
+          {
+            "id": "ae314b0a-dca4-4c45-b7d9-4ad224d2591b",
+            "width": 1440,
+            "height": 900
+          }
+        ],
+        "rayDisposed": 1,
+        "rayGeometryDisposed": 1,
+        "canvases": 0,
+        "memory": {
+          "geometries": 0,
+          "textures": 0
+        }
+      }
+    },
+    {
+      "id": "1920-dpr2",
+      "frames": [
+        {
+          "label": "o-size",
+          "chapter": "hero",
+          "p": 0,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1920,
+            1080
+          ],
+          "deviceDpr": 2,
+          "rendererDpr": 1.75,
+          "drawingBuffer": [
+            3360,
+            1890
+          ],
+          "target": [
+            3360,
+            1890
+          ],
+          "targetMiB": 48.44970703125,
+          "memory": {
+            "geometries": 3,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0,
+              2.2,
+              32
+            ],
+            "uCameraMatrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.9976450635353976,
+              -0.06858809811805859,
+              0,
+              0,
+              0.06858809811805859,
+              0.9976450635353976,
+              0,
+              0,
+              2.2,
+              -168,
+              1
+            ],
+            "uInverseProjection": [
+              1.0264004785593344,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896256,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -0.9999999999999999,
+              5.00125
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8116292317708333,
+              0.4759693287037037
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5
+            ],
+            "uPortalScale": 0.9829360174175842,
+            "uPortalRadius": [
+              428.92499999999995,
+              214.46249999999998
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              1920,
+              1080
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1469.484375,
+            "top": 489.359375,
+            "width": 177.6875,
+            "height": 153.1875,
+            "fixed": true
+          },
+          "camera": [
+            0,
+            2.2,
+            -168
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "bee86d41-86d7-4a3f-ae7c-9d2566f1d3a5",
+          "compiledMask": true,
+          "pixels": {
+            "count": 6350400,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 39455,
+            "lit": 155986,
+            "maxHalfBits": 17581,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 39455,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "o-slot-preview",
+          "chapter": "hero",
+          "p": 0,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1920,
+            1080
+          ],
+          "deviceDpr": 2,
+          "rendererDpr": 1.75,
+          "drawingBuffer": [
+            3360,
+            1890
+          ],
+          "target": [
+            3360,
+            1890
+          ],
+          "targetMiB": 48.44970703125,
+          "memory": {
+            "geometries": 3,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0,
+              2.2,
+              32
+            ],
+            "uCameraMatrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.9976450635353976,
+              -0.06858809811805859,
+              0,
+              0,
+              0.06858809811805859,
+              0.9976450635353976,
+              0,
+              0,
+              2.2,
+              -168,
+              1
+            ],
+            "uInverseProjection": [
+              1.0264004785593344,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896256,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -0.9999999999999999,
+              5.00125
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8116292317708333,
+              0.4759693287037037
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5
+            ],
+            "uPortalScale": 0.9829360174175842,
+            "uPortalRadius": [
+              428.92499999999995,
+              214.46249999999998
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              1920,
+              1080
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1469.484375,
+            "top": 489.359375,
+            "width": 177.6875,
+            "height": 153.1875,
+            "fixed": true
+          },
+          "camera": [
+            0,
+            2.2,
+            -168
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "bee86d41-86d7-4a3f-ae7c-9d2566f1d3a5",
+          "compiledMask": true,
+          "pixels": {
+            "count": 6350400,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 39455,
+            "lit": 155986,
+            "maxHalfBits": 17581,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 39455,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "close-up",
+          "chapter": "portal",
+          "p": 0.28,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1920,
+            1080
+          ],
+          "deviceDpr": 2,
+          "rendererDpr": 1.75,
+          "drawingBuffer": [
+            3360,
+            1890
+          ],
+          "target": [
+            3360,
+            1890
+          ],
+          "targetMiB": 48.44970703125,
+          "memory": {
+            "geometries": 3,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0.679681755829904,
+              1.6562545953360768,
+              15.687637860082305
+            ],
+            "uCameraMatrix": [
+              0.9990627504912155,
+              0,
+              -0.04328533909913702,
+              0,
+              -0.004908511799538757,
+              0.9935495353586704,
+              -0.11329266216522597,
+              0,
+              0.04300612854979007,
+              0.11339894527097787,
+              0.9926183315447024,
+              0,
+              0.679681755829904,
+              1.6562545953360768,
+              -184.3123621399177,
+              1
+            ],
+            "uInverseProjection": [
+              1.0264004785593344,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896256,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -0.9999999999999999,
+              5.00125
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8116292317708333,
+              0.4759693287037037
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5074080568274746
+            ],
+            "uPortalScale": 1.9087583770674978,
+            "uPortalRadius": [
+              1679.8755510594474,
+              839.9377755297237
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0.28,
+            "uPortalViewport": [
+              1920,
+              1080
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0.28
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1469.484375,
+            "top": 489.359375,
+            "width": 177.6875,
+            "height": 153.1875,
+            "fixed": true
+          },
+          "camera": [
+            0.679681755829904,
+            1.6562545953360768,
+            -184.3123621399177
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "bee86d41-86d7-4a3f-ae7c-9d2566f1d3a5",
+          "compiledMask": true,
+          "pixels": {
+            "count": 6350400,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 519306,
+            "lit": 1591174,
+            "maxHalfBits": 17630,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 519306,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "dark-core",
+          "chapter": "portal",
+          "p": 0.4,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1920,
+            1080
+          ],
+          "deviceDpr": 2,
+          "rendererDpr": 1.75,
+          "drawingBuffer": [
+            3360,
+            1890
+          ],
+          "target": [
+            3360,
+            1890
+          ],
+          "targetMiB": 48.44970703125,
+          "memory": {
+            "geometries": 3,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0.9657064471879286,
+              1.427434842249657,
+              8.823045267489704
+            ],
+            "uCameraMatrix": [
+              0.9940633368018772,
+              0,
+              -0.10880295228677271,
+              0,
+              -0.01954270251249971,
+              0.9837368819410552,
+              -0.17854923659147448,
+              0,
+              0.1070334770285712,
+              0.17961555363857107,
+              0.9778967673973996,
+              0,
+              0.9657064471879286,
+              1.427434842249657,
+              -191.1769547325103,
+              1
+            ],
+            "uInverseProjection": [
+              1.0264004785593344,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896256,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -0.9999999999999999,
+              5.00125
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8116292317708333,
+              0.4759693287037037
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5183076366956718
+            ],
+            "uPortalScale": 72.39117284980951,
+            "uPortalRadius": [
+              111840.98846829281,
+              55920.494234146405
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.012479999999999984,
+            "uPortalPull": 0.4,
+            "uPortalViewport": [
+              1920,
+              1080
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0.4
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1469.484375,
+            "top": 489.359375,
+            "width": 177.6875,
+            "height": 153.1875,
+            "fixed": true
+          },
+          "camera": [
+            0.9657064471879286,
+            1.427434842249657,
+            -191.1769547325103
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "bee86d41-86d7-4a3f-ae7c-9d2566f1d3a5",
+          "compiledMask": true
+        },
+        {
+          "label": "physical-observer-close",
+          "chapter": "portal",
+          "p": 0.66,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1920,
+            1080
+          ],
+          "deviceDpr": 2,
+          "rendererDpr": 1.75,
+          "drawingBuffer": [
+            3360,
+            1890
+          ],
+          "target": [
+            3360,
+            1890
+          ],
+          "targetMiB": 48.44970703125,
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              1.06075,
+              1.6187000000000002,
+              10.30850000000001
+            ],
+            "uCameraMatrix": [
+              0.956080288504985,
+              0,
+              -0.29310489919519334,
+              0,
+              -0.07314389038884447,
+              0.9683622989214551,
+              -0.2385884098742838,
+              0,
+              0.2838317340097988,
+              0.24954850836571746,
+              0.9258321061301753,
+              0,
+              1.06075,
+              1.6187000000000002,
+              -189.6915,
+              1
+            ],
+            "uInverseProjection": [
+              1.0264004785593344,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896256,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -0.9999999999999999,
+              5.00125
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.8116292317708333,
+              0.4759693287037037
+            ],
+            "uRayCenter": [
+              0.5954086576081936,
+              0.5819290819257998
+            ],
+            "uPortalScale": 194.57348238089492,
+            "uPortalRadius": [
+              257354.99999999997,
+              128677.49999999999
+            ],
+            "uPortalVisibility": 0.39358600583090436,
+            "uPortalDust": 0,
+            "uPortalPull": 0.66,
+            "uPortalViewport": [
+              1920,
+              1080
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              1,
+              0,
+              0,
+              0.66
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1469.484375,
+            "top": 489.359375,
+            "width": 177.6875,
+            "height": 153.1875,
+            "fixed": true
+          },
+          "camera": [
+            1.06075,
+            1.6187000000000002,
+            -189.6915
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "bee86d41-86d7-4a3f-ae7c-9d2566f1d3a5",
+          "compiledMask": true,
+          "pixels": {
+            "count": 6350400,
+            "nonfinite": 0,
+            "nonmono": 0,
+            "captured": 300070,
+            "lit": 2140516,
+            "maxHalfBits": 17648,
+            "glError": 0,
+            "coreLeak": {
+              "checked": 300070,
+              "leak": 0
+            }
+          }
+        },
+        {
+          "label": "about",
+          "chapter": "about",
+          "p": 0,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1920,
+            1080
+          ],
+          "deviceDpr": 2,
+          "rendererDpr": 1.75,
+          "drawingBuffer": [
+            3360,
+            1890
+          ],
+          "target": [
+            3360,
+            1890
+          ],
+          "targetMiB": 48.44970703125,
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              2,
+              5,
+              46
+            ],
+            "uCameraMatrix": [
+              0.7828572634318487,
+              -1.3877787807814457e-17,
+              -0.6222013380667042,
+              0,
+              -0.20939807986847148,
+              0.9416677690025113,
+              -0.2634658554143788,
+              0,
+              0.5859069458876507,
+              0.33654392406019323,
+              0.7371914527032801,
+              0,
+              2,
+              5,
+              -154,
+              1
+            ],
+            "uInverseProjection": [
+              1.0264004785593344,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896256,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -0.9999999999999999,
+              5.00125
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.8116292317708333,
+              0.4759693287037037
+            ],
+            "uRayCenter": [
+              0.8584849164262907,
+              0.6844367738076667
+            ],
+            "uPortalScale": 848.7768959668327,
+            "uPortalRadius": [
+              257354.99999999997,
+              128677.49999999999
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0,
+            "uPortalPull": 1,
+            "uPortalViewport": [
+              1920,
+              1080
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1469.484375,
+            "top": 489.359375,
+            "width": 177.6875,
+            "height": 153.1875,
+            "fixed": true
+          },
+          "camera": [
+            2,
+            5,
+            -154
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "bee86d41-86d7-4a3f-ae7c-9d2566f1d3a5",
+          "compiledMask": true
+        },
+        {
+          "label": "finale-api",
+          "chapter": "finale",
+          "p": 0.8,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1920,
+            1080
+          ],
+          "deviceDpr": 2,
+          "rendererDpr": 1.75,
+          "drawingBuffer": [
+            3360,
+            1890
+          ],
+          "target": [
+            3360,
+            1890
+          ],
+          "targetMiB": 48.44970703125,
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0.7777777777777789,
+            "uDiskIntensity": 1.1154984069185254,
+            "uObserver": [
+              2,
+              4,
+              40
+            ],
+            "uCameraMatrix": [
+              0.8657817205237041,
+              6.938893903907228e-18,
+              -0.5004218344627008,
+              0,
+              -0.0956840416132336,
+              0.9815497806347493,
+              -0.16554332459036958,
+              0,
+              0.4911889418417028,
+              0.19120676801796394,
+              0.8498078578576176,
+              0,
+              2,
+              4,
+              -160,
+              1
+            ],
+            "uInverseProjection": [
+              1.0264004785593344,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896256,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -0.9999999999999999,
+              5.00125
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.8116292317708333,
+              0.4759693287037037
+            ],
+            "uRayCenter": [
+              0.7492337075456444,
+              0.5699542263875628
+            ],
+            "uPortalScale": 738.4926988275844,
+            "uPortalRadius": [
+              257354.99999999997,
+              128677.49999999999
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0,
+            "uPortalPull": 1,
+            "uPortalViewport": [
+              1920,
+              1080
+            ],
+            "uFinaleEnabled": 1,
+            "uFinaleHole": 0.32999544833864414,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0.7407407407407404,
+              0.25925925925925963,
+              0,
+              0.8
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1469.484375,
+            "top": 489.359375,
+            "width": 177.6875,
+            "height": 153.1875,
+            "fixed": true
+          },
+          "camera": [
+            2,
+            4,
+            -160
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "bee86d41-86d7-4a3f-ae7c-9d2566f1d3a5",
+          "compiledMask": true
+        },
+        {
+          "label": "contact-api",
+          "chapter": "contact",
+          "p": 0,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1920,
+            1080
+          ],
+          "deviceDpr": 2,
+          "rendererDpr": 1.75,
+          "drawingBuffer": [
+            3360,
+            1890
+          ],
+          "target": [
+            3360,
+            1890
+          ],
+          "targetMiB": 48.44970703125,
+          "memory": {
+            "geometries": 6,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 3,
+            "uDiskIntensity": 1.35,
+            "uObserver": [
+              2,
+              4,
+              40
+            ],
+            "uCameraMatrix": [
+              0.8657817205237041,
+              6.938893903907228e-18,
+              -0.5004218344627008,
+              0,
+              -0.0956840416132336,
+              0.9815497806347493,
+              -0.16554332459036958,
+              0,
+              0.4911889418417028,
+              0.19120676801796394,
+              0.8498078578576176,
+              0,
+              2,
+              4,
+              -160,
+              1
+            ],
+            "uInverseProjection": [
+              1.0264004785593344,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896256,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -0.9999999999999999,
+              5.00125
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 0,
+            "uPortalCenter": [
+              0.8116292317708333,
+              0.4759693287037037
+            ],
+            "uRayCenter": [
+              0.7492337075456444,
+              0.5699542263875628
+            ],
+            "uPortalScale": 738.4926988275844,
+            "uPortalRadius": [
+              257354.99999999997,
+              128677.49999999999
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0,
+            "uPortalPull": 1,
+            "uPortalViewport": [
+              1920,
+              1080
+            ],
+            "uFinaleEnabled": 1,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              1,
+              0,
+              1
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1469.484375,
+            "top": 489.359375,
+            "width": 177.6875,
+            "height": 153.1875,
+            "fixed": true
+          },
+          "camera": [
+            2,
+            4,
+            -160
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "bee86d41-86d7-4a3f-ae7c-9d2566f1d3a5",
+          "compiledMask": true
+        }
+      ],
+      "performance": [
+        {
+          "label": "O-size full target",
+          "ms": 2205.3000000715256,
+          "frames": 46,
+          "fps": 20.858840066434524,
+          "cpuSubmissionMs": {
+            "samples": 46,
+            "mean": 0.560869566772295,
+            "p95": 0.8000000715255737,
+            "max": 2.200000047683716
+          },
+          "gpuMs": {
+            "samples": 7,
+            "mean": 49.39792085714286,
+            "p95": 53.415536,
+            "max": 53.415536
+          },
+          "frameIntervalMs": {
+            "samples": 46,
+            "mean": 47.284782609213956,
+            "p95": 57.700000047683716,
+            "max": 59
+          },
+          "gpuTimer": true
+        },
+        {
+          "label": "close-up full target",
+          "ms": 2204.899999976158,
+          "frames": 12,
+          "fps": 5.442423692743325,
+          "cpuSubmissionMs": {
+            "samples": 12,
+            "mean": 0.6416666607062022,
+            "p95": 1.2999999523162842,
+            "max": 1.2999999523162842
+          },
+          "gpuMs": {
+            "samples": 1,
+            "mean": 191.323818,
+            "p95": 191.323818,
+            "max": 191.323818
+          },
+          "frameIntervalMs": {
+            "samples": 12,
+            "mean": 144.2999999920527,
+            "p95": 221.29999995231628,
+            "max": 221.29999995231628
+          },
+          "gpuTimer": true
+        },
+        {
+          "label": "close-up ray only",
+          "ms": 2210.7000000476837,
+          "frames": 15,
+          "fps": 6.7851811641907345,
+          "cpuSubmissionMs": {
+            "samples": 15,
+            "mean": 0.7666666746139527,
+            "p95": 1.5,
+            "max": 1.5
+          },
+          "gpuMs": {
+            "samples": 3,
+            "mean": 140.62235366666667,
+            "p95": 175.078716,
+            "max": 175.078716
+          },
+          "frameIntervalMs": {
+            "samples": 15,
+            "mean": 178.46000000635783,
+            "p95": 683.1000000238419,
+            "max": 683.1000000238419
+          },
+          "gpuTimer": true
+        }
+      ]
+    }
+  ],
+  "errors": [
+    "[vite] failed to connect to websocket.\nyour current setup:\n  (browser) 127.0.0.1:5183/ <--[HTTP]--> 127.0.0.1:5183/ (server)\n  (browser) 127.0.0.1:5183/ <--[WebSocket (failing)]--> 127.0.0.1:5183/ (server)\nCheck out your Vite / network configuration and https://vite.dev/config/server-options.html#server-hmr .",
+    "[vite] failed to connect to websocket.\nyour current setup:\n  (browser) 127.0.0.1:5183/ <--[HTTP]--> 127.0.0.1:5183/ (server)\n  (browser) 127.0.0.1:5183/ <--[WebSocket (failing)]--> 127.0.0.1:5183/ (server)\nCheck out your Vite / network configuration and https://vite.dev/config/server-options.html#server-hmr .",
+    "[vite] failed to connect to websocket.\nyour current setup:\n  (browser) 127.0.0.1:5183/ <--[HTTP]--> 127.0.0.1:5183/ (server)\n  (browser) 127.0.0.1:5183/ <--[WebSocket (failing)]--> 127.0.0.1:5183/ (server)\nCheck out your Vite / network configuration and https://vite.dev/config/server-options.html#server-hmr .",
+    "[vite] failed to connect to websocket.\nyour current setup:\n  (browser) 127.0.0.1:5183/ <--[HTTP]--> 127.0.0.1:5183/ (server)\n  (browser) 127.0.0.1:5183/ <--[WebSocket (failing)]--> 127.0.0.1:5183/ (server)\nCheck out your Vite / network configuration and https://vite.dev/config/server-options.html#server-hmr ."
+  ],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "sourceBefore": {
+    "src/3d/components/BlackHole.jsx": "e271e109b132fb7f07c60d0d089df84be35e517ae2f882066b7e2ddfb3fd1c2f",
+    "src/3d/components/BlackHoleSystem.jsx": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+    "src/3d/components/BlackHoleBloomMask.jsx": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c",
+    "src/3d/shaders/blackHole.js": "b5b33465f365d7eaa9983ca4f7133ebd9adda63057ea2a6f51e38980a84a5e64",
+    "src/3d/quality.js": "e41080fcf00415c51806f658902908cebf0eb9b6501371bb558bfd5bf58b64e0",
+    "src/components/Hero.jsx": "cff3b6765079d0f04c678857a4ce9b5fa710aaa6d2f90390e6b8ead8967c1ea7",
+    "src/components/effects/PortalHeading.jsx": "f445214fd731c9ede870477bc7f1ff49a9daa8f76b128b0ff460df0b6c779012",
+    "src/styles/hero.css": "f239972ea99698411e8818da51a52f9abfcd616b32b6656869e3795d514e4603"
+  },
+  "hotReload": "Vite WebSocket blocked per test page to prevent concurrent V1 edits navigating a captured page.",
+  "browser": "154.0.4258.62",
+  "fallback": {
+    "canvas": 0,
+    "fallback": true,
+    "about": true
+  },
+  "status": "FAIL",
+  "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   '[vite] failed to connect to websocket.\\n' +\n+     'your current setup:\\n' +\n+     '  (browser) 127.0.0.1:5183/ <--[HTTP]--> 127.0.0.1:5183/ (server)\\n' +\n+     '  (browser) 127.0.0.1:5183/ <--[WebSocket (failing)]--> 127.0.0.1:5183/ (server)\\n' +\n+     'Check out your Vite / network configuration and https://vite.dev/config/server-options.html#server-hmr .',\n+   '[vite] failed to connect to websocket.\\n' +\n+     'your current setup:\\n' +\n+     '  (browser) 127.0.0.1:5183/ <--[HTTP]--> 127.0.0.1:5183/ (server)\\n' +\n+     '  (browser) 127.0.0.1:5183/ <--[WebSocket (failing)]--> 127.0.0.1:5183/ (server)\\n' +\n+     'Check out your Vite / network configuration and https://vite.dev/config/server-options.html#server-hmr .',\n+   '[vite] failed to connect to websocket.\\n' +\n+     'your current setup:\\n' +\n+     '  (browser) 127.0.0.1:5183/ <--[HTTP]--> 127.0.0.1:5183/ (server)\\n' +\n+     '  (browser) 127.0.0.1:5183/ <--[WebSocket (failing)]--> 127.0.0.1:5183/ (server)\\n' +\n+     'Check out your Vite / network configuration and https://vite.dev/config/server-options.html#server-hmr .',\n+   '[vite] failed to connect to websocket.\\n' +\n+     'your current setup:\\n' +\n+     '  (browser) 127.0.0.1:5183/ <--[HTTP]--> 127.0.0.1:5183/ (server)\\n' +\n+     '  (browser) 127.0.0.1:5183/ <--[WebSocket (failing)]--> 127.0.0.1:5183/ (server)\\n' +\n+     'Check out your Vite / network configuration and https://vite.dev/config/server-options.html#server-hmr .'\n+ ]\n- []\n\n    at file:///C:/Users/duytva/my-portfolio-2026/outputs/visual-revision-2026-10-09/v2/verify-browser.mjs:226:10",
+  "finished": "2026-10-09T08:25:13.662Z",
+  "sourceAfter": {
+    "src/3d/components/BlackHole.jsx": "e271e109b132fb7f07c60d0d089df84be35e517ae2f882066b7e2ddfb3fd1c2f",
+    "src/3d/components/BlackHoleSystem.jsx": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+    "src/3d/components/BlackHoleBloomMask.jsx": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c",
+    "src/3d/shaders/blackHole.js": "b5b33465f365d7eaa9983ca4f7133ebd9adda63057ea2a6f51e38980a84a5e64",
+    "src/3d/quality.js": "e41080fcf00415c51806f658902908cebf0eb9b6501371bb558bfd5bf58b64e0",
+    "src/components/Hero.jsx": "cff3b6765079d0f04c678857a4ce9b5fa710aaa6d2f90390e6b8ead8967c1ea7",
+    "src/components/effects/PortalHeading.jsx": "a4d795f5be4f8f611ce13ae853176dd4671dee0187c4ff1203de2fa97d442129",
+    "src/styles/hero.css": "b73110af10884a44b0f74221b87f68c22f4e500c3463697d79d23a977bff8a2e"
+  }
+}

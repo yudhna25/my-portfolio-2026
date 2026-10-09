@@ -1,14 +1,10 @@
 import { useEffect, useMemo, useRef } from 'react';
-import { useThree } from '@react-three/fiber';
 import { EffectComposer, Select, SelectiveBloom } from '@react-three/postprocessing';
 import { HalfFloatType, LinearFilter, Vector2, Vector4, WebGLRenderTarget } from 'three';
 import { BlackHole } from '@/3d/components/BlackHole';
 import { BlackHoleBloomMask } from '@/3d/components/BlackHoleBloomMask';
-import { RAY_QUALITY } from '@/3d/quality';
 
 export function BlackHoleSystem({ frozen = false, quality = 'high', enableBloom = true, story = false, reduced = false }) {
-  const size = useThree(state => state.size);
-  const dpr = useThree(state => state.viewport.dpr);
   const light = useRef(null);
   const lights = useMemo(() => [light], []);
   const portal = useMemo(() => ({
@@ -24,11 +20,6 @@ export function BlackHoleSystem({ frozen = false, quality = 'high', enableBloom 
     depthBuffer: false, stencilBuffer: false,
   }), []);
   useEffect(() => () => target.dispose(), [target]);
-  useEffect(() => {
-    const tier = RAY_QUALITY[quality];
-    const ratio = Math.min(dpr * tier.resolution, tier.maxResolution / Math.max(size.width, size.height));
-    target.setSize(Math.max(1, Math.round(size.width * ratio)), Math.max(1, Math.round(size.height * ratio)));
-  }, [target, size.width, size.height, dpr, quality]);
 
   return <>
     <Select enabled><BlackHole target={target} frozen={frozen} quality={quality} story={story} reduced={reduced} portal={portal} /></Select>

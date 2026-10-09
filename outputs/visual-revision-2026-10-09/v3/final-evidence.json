@@ -1,0 +1,815 @@
+{
+  "status": "PASS",
+  "finalizedAt": "2026-10-09T10:28:20.752Z",
+  "source": {
+    "src/App.jsx": "8c74f91ddd2a61c150b656ef8a461eb6dd132c28b4b0ae7def4bdedbc10d02b4",
+    "src/components/Hero.jsx": "cff3b6765079d0f04c678857a4ce9b5fa710aaa6d2f90390e6b8ead8967c1ea7",
+    "src/components/effects/PortalHeading.jsx": "8984ae0390a1857b1cc38a2a5960788f78172850bedeaefce91e0167642df0f2",
+    "src/components/About.jsx": "3a692cc9e3bc695addb38d6f033ec7bcf289b09e0f3e4095ac29602ee02eba38",
+    "src/components/layout/Nav.jsx": "23c67183b84dcb60d641bfdd4f17cf6b1ac811cc052811dffec0862a325fa204",
+    "src/components/Cursor.jsx": "c27ff23a33378ae7966638443b85901272fb94f413a420f2ffbd76379b786888",
+    "src/3d/GalaxyScene.jsx": "7e7d71ea99624fe9d5ec26ce27a25e62caea732da6f17d6aa0cb5c4646a47c83",
+    "src/3d/components/CameraRig.jsx": "fd01fb40484b7f14f4eb893d07cd486a68b41c1729e9a61193a9bc8de84d816f",
+    "src/3d/utils/cameraPath.js": "b8b74b47c1e03ecf7e09dd08934f69d5b07bf880c9e80402e6c471a95f2b8c7f",
+    "src/3d/utils/portal.js": "973cf175d67a63aeeb0493ff3d148372e812fdc4f788674c47e62f680fbe3254",
+    "src/3d/hooks/useScrollProgress.js": "0998d47a16fb63482217bbec69b97f6da5392ed5575788653782e7127e09f87b",
+    "src/stores/useScrollStore.js": "ff2f96ca3cf87b2dc0ca0d32375d5fa67ab66f680271ed8c6a618e82cd4845e7",
+    "src/3d/components/BlackHole.jsx": "50905550916924c2acaf37743f67837f260b4aaf1a7e4d5b5fbb1aeb7f9a6029",
+    "src/3d/components/BlackHoleSystem.jsx": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+    "src/3d/components/BlackHoleBloomMask.jsx": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c",
+    "src/3d/shaders/blackHole.js": "b5b33465f365d7eaa9983ca4f7133ebd9adda63057ea2a6f51e38980a84a5e64",
+    "src/3d/quality.js": "e41080fcf00415c51806f658902908cebf0eb9b6501371bb558bfd5bf58b64e0",
+    "src/3d/components/StarField.jsx": "dc49618e05073f458ffdcccf3ea6c3704533b74dac0b6c401478f11af927cec8",
+    "src/3d/components/Nebula.jsx": "ab3e2687f71ab7d7bda4563d57746c0bd1b028a0ec44e73fca9a21399a784d99",
+    "src/3d/components/SceneFallback.jsx": "3e9ed1ba375c03587468b22b3dbf09e6bbcb37ab763dc3c96994872655271749",
+    "src/styles/hero.css": "2eccb1a5a19e3a5635fa932365601e4fae654f659870583b4a9050631b4cbf16",
+    "src/3d-lab.jsx": "fbe81b3624aff6c4430a7d4a3ac5989adc5f8588fc1872392040dc8f95788a2b"
+  },
+  "appFrames": 100,
+  "appComparisons": 61,
+  "labFrames": 16,
+  "labComparisons": 8,
+  "images": [
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-vi-portal-forward-0.png",
+      "sha256": "787e3ac9c1d0fdbb77a833c3618476acf74cfd7b9933c68eedde081244d84d1e",
+      "bytes": 42183
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-vi-portal-forward-0.25.png",
+      "sha256": "ff44e3d6f3efbf89060e81f66c2a8fcbabdaed0552bd4805464ded165b103d4c",
+      "bytes": 128699
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-vi-portal-forward-0.44.png",
+      "sha256": "b3e5a8ee09aabb518edfe9a512dc3830f291b55c6673b494f7fa01582fc34963",
+      "bytes": 2737
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-vi-portal-forward-0.47.png",
+      "sha256": "b3e5a8ee09aabb518edfe9a512dc3830f291b55c6673b494f7fa01582fc34963",
+      "bytes": 2737
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-vi-portal-forward-0.5.png",
+      "sha256": "b3e5a8ee09aabb518edfe9a512dc3830f291b55c6673b494f7fa01582fc34963",
+      "bytes": 2737
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-vi-portal-forward-0.7.png",
+      "sha256": "a19da56707bc81e6693b2b331f8e52714a5fe90a41e42f28ab6faa5b5a5429de",
+      "bytes": 51063
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-vi-portal-forward-0.94.png",
+      "sha256": "93e4917b623f145d52cc7b470e04630d4f0fa0fe848ba07c03f607b497a68dad",
+      "bytes": 96138
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-vi-portal-forward-1.png",
+      "sha256": "d3fc5e496f7d49998c1aaa66083eac3485018de57e9588fa103bccc59d44f483",
+      "bytes": 95492
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-vi-portal-reverse-1.png",
+      "sha256": "d3fc5e496f7d49998c1aaa66083eac3485018de57e9588fa103bccc59d44f483",
+      "bytes": 95492
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-vi-portal-reverse-0.94.png",
+      "sha256": "93e4917b623f145d52cc7b470e04630d4f0fa0fe848ba07c03f607b497a68dad",
+      "bytes": 96138
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-vi-portal-reverse-0.7.png",
+      "sha256": "a19da56707bc81e6693b2b331f8e52714a5fe90a41e42f28ab6faa5b5a5429de",
+      "bytes": 51063
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-vi-portal-reverse-0.5.png",
+      "sha256": "b3e5a8ee09aabb518edfe9a512dc3830f291b55c6673b494f7fa01582fc34963",
+      "bytes": 2737
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-vi-portal-reverse-0.47.png",
+      "sha256": "b3e5a8ee09aabb518edfe9a512dc3830f291b55c6673b494f7fa01582fc34963",
+      "bytes": 2737
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-vi-portal-reverse-0.44.png",
+      "sha256": "b3e5a8ee09aabb518edfe9a512dc3830f291b55c6673b494f7fa01582fc34963",
+      "bytes": 2737
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-vi-portal-reverse-0.25.png",
+      "sha256": "b927817e2106b85d9561f70cc7b572af960e8bc10ec3f4cffa6b95021e3d9bfe",
+      "bytes": 128664
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-vi-portal-reverse-0.png",
+      "sha256": "5b78c644718569df1e3e3c8a3362a75f386dc9a901256de7bb4668a88c3c282e",
+      "bytes": 41603
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-en-portal-forward-0.png",
+      "sha256": "ba5a78dc9a78e1f302d75ec19aeca36d12c383c7650c14c39a813ec506bbc20d",
+      "bytes": 42074
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-en-portal-forward-0.25.png",
+      "sha256": "3395ca665719ca295289d3988f84f86e9e72ecd9c290c34661d9b1883278f2cc",
+      "bytes": 130469
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-en-portal-forward-0.44.png",
+      "sha256": "b3e5a8ee09aabb518edfe9a512dc3830f291b55c6673b494f7fa01582fc34963",
+      "bytes": 2737
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-en-portal-forward-0.47.png",
+      "sha256": "b3e5a8ee09aabb518edfe9a512dc3830f291b55c6673b494f7fa01582fc34963",
+      "bytes": 2737
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-en-portal-forward-0.5.png",
+      "sha256": "b3e5a8ee09aabb518edfe9a512dc3830f291b55c6673b494f7fa01582fc34963",
+      "bytes": 2737
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-en-portal-forward-0.7.png",
+      "sha256": "b8d1cb092ccbf0b88d2ce8d08be37eff2b8c044b4967c2f23f1ff142bd22950f",
+      "bytes": 50731
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-en-portal-forward-0.94.png",
+      "sha256": "64c80ccf30da0159fdf4855c388b69af34794d4860c93640555eb115184b9255",
+      "bytes": 95247
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-en-portal-forward-1.png",
+      "sha256": "47d6400cf0bcffbcbd3ec3cd856593768814d374342e074b2f75738159be283c",
+      "bytes": 94545
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-en-portal-reverse-1.png",
+      "sha256": "47d6400cf0bcffbcbd3ec3cd856593768814d374342e074b2f75738159be283c",
+      "bytes": 94545
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-en-portal-reverse-0.94.png",
+      "sha256": "64c80ccf30da0159fdf4855c388b69af34794d4860c93640555eb115184b9255",
+      "bytes": 95247
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-en-portal-reverse-0.7.png",
+      "sha256": "b8d1cb092ccbf0b88d2ce8d08be37eff2b8c044b4967c2f23f1ff142bd22950f",
+      "bytes": 50731
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-en-portal-reverse-0.5.png",
+      "sha256": "b3e5a8ee09aabb518edfe9a512dc3830f291b55c6673b494f7fa01582fc34963",
+      "bytes": 2737
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-en-portal-reverse-0.47.png",
+      "sha256": "b3e5a8ee09aabb518edfe9a512dc3830f291b55c6673b494f7fa01582fc34963",
+      "bytes": 2737
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-en-portal-reverse-0.44.png",
+      "sha256": "b3e5a8ee09aabb518edfe9a512dc3830f291b55c6673b494f7fa01582fc34963",
+      "bytes": 2737
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-en-portal-reverse-0.25.png",
+      "sha256": "99866538f19af366805ebc5505425e40dc9418ca359402e54bdabc48bd9a5d53",
+      "bytes": 130422
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-en-portal-reverse-0.png",
+      "sha256": "eb8675eae04a24d8e8a32c3925a1cf1efdeac5a882b889c3b45055ed483e3462",
+      "bytes": 41588
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-forward-0.png",
+      "sha256": "530b94b4a685fcf65128c7e7cbef82ca463aff00488b04f70425515237978242",
+      "bytes": 196142
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-forward-0.25.png",
+      "sha256": "3bd8ee196efce031c26d9a24af11ca70efb1155666c5d8626cf4ee3dea7b7ee1",
+      "bytes": 529619
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-forward-0.44.png",
+      "sha256": "2b268b517759594de54f662ef2bf903882763489f0d7be03e58a708579cf305e",
+      "bytes": 5848
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-forward-0.47.png",
+      "sha256": "2b268b517759594de54f662ef2bf903882763489f0d7be03e58a708579cf305e",
+      "bytes": 5848
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-forward-0.5.png",
+      "sha256": "2b268b517759594de54f662ef2bf903882763489f0d7be03e58a708579cf305e",
+      "bytes": 5848
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-forward-0.7.png",
+      "sha256": "3cadd672260350f28d5e06c6aed7271fcae6b4d480dff0dd079971cec780ee80",
+      "bytes": 166726
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-forward-0.94.png",
+      "sha256": "65795e064149eeac5953eb5616b59f26b35688cbd2dc389b62de5d35fec48c1c",
+      "bytes": 296147
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-forward-1.png",
+      "sha256": "715cbf753755fd844f056c9be71919d2e5391306a2a6fe2caf266ec6dd4f6290",
+      "bytes": 291821
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-reverse-1.png",
+      "sha256": "715cbf753755fd844f056c9be71919d2e5391306a2a6fe2caf266ec6dd4f6290",
+      "bytes": 291821
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-reverse-0.94.png",
+      "sha256": "65795e064149eeac5953eb5616b59f26b35688cbd2dc389b62de5d35fec48c1c",
+      "bytes": 296147
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-reverse-0.7.png",
+      "sha256": "3cadd672260350f28d5e06c6aed7271fcae6b4d480dff0dd079971cec780ee80",
+      "bytes": 166726
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-reverse-0.5.png",
+      "sha256": "2b268b517759594de54f662ef2bf903882763489f0d7be03e58a708579cf305e",
+      "bytes": 5848
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-reverse-0.47.png",
+      "sha256": "2b268b517759594de54f662ef2bf903882763489f0d7be03e58a708579cf305e",
+      "bytes": 5848
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-reverse-0.44.png",
+      "sha256": "2b268b517759594de54f662ef2bf903882763489f0d7be03e58a708579cf305e",
+      "bytes": 5848
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-reverse-0.25.png",
+      "sha256": "f65a81aa3199aa2b53887c3a6c7c89c6b16010efadec002fde12e875bb93d575",
+      "bytes": 529502
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-portal-reverse-0.png",
+      "sha256": "e0ddc15aad625ea4a030c2227695ae81c99a0d984147f933917f53ce09465ccf",
+      "bytes": 194854
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-hero-glitch-hold-7.png",
+      "sha256": "9a6937cf35b485bf28c6843b2378ad287aaff20820776521d8e2e6f103f89c83",
+      "bytes": 196952
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-en-portal-forward-0.png",
+      "sha256": "bc620342178d9ed09f5465037351220a9e331589f9026ea8c0725fe01ae98eea",
+      "bytes": 197267
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-en-portal-forward-0.25.png",
+      "sha256": "abded1a769890eb42de1478fbadaafbc3eb2f15910b6ffa999ad8c51d0733852",
+      "bytes": 528073
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-en-portal-forward-0.44.png",
+      "sha256": "2b268b517759594de54f662ef2bf903882763489f0d7be03e58a708579cf305e",
+      "bytes": 5848
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-en-portal-forward-0.47.png",
+      "sha256": "2b268b517759594de54f662ef2bf903882763489f0d7be03e58a708579cf305e",
+      "bytes": 5848
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-en-portal-forward-0.5.png",
+      "sha256": "2b268b517759594de54f662ef2bf903882763489f0d7be03e58a708579cf305e",
+      "bytes": 5848
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-en-portal-forward-0.7.png",
+      "sha256": "d16c7a2e37307d3df60f25cc2f2ed5c3916ac2c8f640c3266b4b4333d22988af",
+      "bytes": 165788
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-en-portal-forward-0.94.png",
+      "sha256": "a2541f08493496d76d74c29699fccd1aa08fb6b78cda39d9adec23ba0d2a1042",
+      "bytes": 286678
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-en-portal-forward-1.png",
+      "sha256": "4e7f067f0835c1247c70ed138ae4c53e6b89b5c7042607004fd85616902cca42",
+      "bytes": 282502
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-en-portal-reverse-1.png",
+      "sha256": "4e7f067f0835c1247c70ed138ae4c53e6b89b5c7042607004fd85616902cca42",
+      "bytes": 282502
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-en-portal-reverse-0.94.png",
+      "sha256": "a2541f08493496d76d74c29699fccd1aa08fb6b78cda39d9adec23ba0d2a1042",
+      "bytes": 286678
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-en-portal-reverse-0.7.png",
+      "sha256": "d16c7a2e37307d3df60f25cc2f2ed5c3916ac2c8f640c3266b4b4333d22988af",
+      "bytes": 165788
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-en-portal-reverse-0.5.png",
+      "sha256": "2b268b517759594de54f662ef2bf903882763489f0d7be03e58a708579cf305e",
+      "bytes": 5848
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-en-portal-reverse-0.47.png",
+      "sha256": "2b268b517759594de54f662ef2bf903882763489f0d7be03e58a708579cf305e",
+      "bytes": 5848
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-en-portal-reverse-0.44.png",
+      "sha256": "2b268b517759594de54f662ef2bf903882763489f0d7be03e58a708579cf305e",
+      "bytes": 5848
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-en-portal-reverse-0.25.png",
+      "sha256": "a1c3c9a5a0a1fc6ed70d5b65a5280e38ebe6049abaa23a211e3910dce99d9dac",
+      "bytes": 527941
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-en-portal-reverse-0.png",
+      "sha256": "6f5a4aae989879657a4dbd272fd35b90465f71dd9a13dfbac540d776daa9296b",
+      "bytes": 196103
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-vi-portal-forward-0.png",
+      "sha256": "cfcd609d4419717a2f9cddd614430ae9c4077a123771ee4719e34efdfce1656c",
+      "bytes": 266352
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-vi-portal-forward-0.25.png",
+      "sha256": "c9816a9b850a9b87e4df79cced21f8fc614b4100892849292fac961e4ccc5df8",
+      "bytes": 688164
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-vi-portal-forward-0.44.png",
+      "sha256": "82a2e41ba517809f5b58a7da95b52f22e165cd40afabe2fa4b082bc45388d894",
+      "bytes": 8508
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-vi-portal-forward-0.47.png",
+      "sha256": "82a2e41ba517809f5b58a7da95b52f22e165cd40afabe2fa4b082bc45388d894",
+      "bytes": 8508
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-vi-portal-forward-0.5.png",
+      "sha256": "82a2e41ba517809f5b58a7da95b52f22e165cd40afabe2fa4b082bc45388d894",
+      "bytes": 8508
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-vi-portal-forward-0.7.png",
+      "sha256": "3f451b7d965ffa0081dab955ab273d2b7fdbb6b1a1bed9f7785505961de37ae1",
+      "bytes": 214429
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-vi-portal-forward-0.94.png",
+      "sha256": "a618d6e5088308d311e73e4f63371939e81a6d2b70e45a7ec291df43cf174e86",
+      "bytes": 344128
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-vi-portal-forward-1.png",
+      "sha256": "493eeb1eb88f0a6e5d2893bdad5acfa545a6a126af9e780ea8c346e4744e8087",
+      "bytes": 344339
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-vi-portal-reverse-1.png",
+      "sha256": "493eeb1eb88f0a6e5d2893bdad5acfa545a6a126af9e780ea8c346e4744e8087",
+      "bytes": 344339
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-vi-portal-reverse-0.94.png",
+      "sha256": "a618d6e5088308d311e73e4f63371939e81a6d2b70e45a7ec291df43cf174e86",
+      "bytes": 344128
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-vi-portal-reverse-0.7.png",
+      "sha256": "3f451b7d965ffa0081dab955ab273d2b7fdbb6b1a1bed9f7785505961de37ae1",
+      "bytes": 214429
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-vi-portal-reverse-0.5.png",
+      "sha256": "82a2e41ba517809f5b58a7da95b52f22e165cd40afabe2fa4b082bc45388d894",
+      "bytes": 8508
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-vi-portal-reverse-0.47.png",
+      "sha256": "82a2e41ba517809f5b58a7da95b52f22e165cd40afabe2fa4b082bc45388d894",
+      "bytes": 8508
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-vi-portal-reverse-0.44.png",
+      "sha256": "82a2e41ba517809f5b58a7da95b52f22e165cd40afabe2fa4b082bc45388d894",
+      "bytes": 8508
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-vi-portal-reverse-0.25.png",
+      "sha256": "e876f40c20c80b0a8179f8d4994a5dcea04634975b7b9d27d949c5a3e527fc55",
+      "bytes": 688112
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-vi-portal-reverse-0.png",
+      "sha256": "70d38582eb7b7e99416114043e935023df0b96d58ad50be4efcd26932cd1434d",
+      "bytes": 264186
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-en-portal-forward-0.png",
+      "sha256": "9634561d829337a1821f1087f789454988569e9726cd322d46a05fa0cfae44df",
+      "bytes": 264782
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-en-portal-forward-0.25.png",
+      "sha256": "7cb1d9db86fe595af2cca539093daedbc6fc3e48a231688d9f17b5e32a6bc014",
+      "bytes": 687442
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-en-portal-forward-0.44.png",
+      "sha256": "82a2e41ba517809f5b58a7da95b52f22e165cd40afabe2fa4b082bc45388d894",
+      "bytes": 8508
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-en-portal-forward-0.47.png",
+      "sha256": "82a2e41ba517809f5b58a7da95b52f22e165cd40afabe2fa4b082bc45388d894",
+      "bytes": 8508
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-en-portal-forward-0.5.png",
+      "sha256": "82a2e41ba517809f5b58a7da95b52f22e165cd40afabe2fa4b082bc45388d894",
+      "bytes": 8508
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-en-portal-forward-0.7.png",
+      "sha256": "1145b5565fc47eedc5b02204e149f8a182acf168250bc0bf90aaf8a89471748e",
+      "bytes": 213480
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-en-portal-forward-0.94.png",
+      "sha256": "beb0edf21f73bfdba799828610ebcd6f7bff73bab415c5dce2a68571ee3b32aa",
+      "bytes": 332242
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-en-portal-forward-1.png",
+      "sha256": "6e35e4b3e91025033ac7259b1a6b06f34f44388eb32afd2c5069f626334663b3",
+      "bytes": 335031
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-en-portal-reverse-1.png",
+      "sha256": "6e35e4b3e91025033ac7259b1a6b06f34f44388eb32afd2c5069f626334663b3",
+      "bytes": 335031
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-en-portal-reverse-0.94.png",
+      "sha256": "beb0edf21f73bfdba799828610ebcd6f7bff73bab415c5dce2a68571ee3b32aa",
+      "bytes": 332242
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-en-portal-reverse-0.7.png",
+      "sha256": "1145b5565fc47eedc5b02204e149f8a182acf168250bc0bf90aaf8a89471748e",
+      "bytes": 213480
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-en-portal-reverse-0.5.png",
+      "sha256": "82a2e41ba517809f5b58a7da95b52f22e165cd40afabe2fa4b082bc45388d894",
+      "bytes": 8508
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-en-portal-reverse-0.47.png",
+      "sha256": "82a2e41ba517809f5b58a7da95b52f22e165cd40afabe2fa4b082bc45388d894",
+      "bytes": 8508
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-en-portal-reverse-0.44.png",
+      "sha256": "82a2e41ba517809f5b58a7da95b52f22e165cd40afabe2fa4b082bc45388d894",
+      "bytes": 8508
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-en-portal-reverse-0.25.png",
+      "sha256": "841d9ffcd9b7b9b58aecb8c7ba10cd95d89e55341ac0e69ded0b8226f2d92d82",
+      "bytes": 687723
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1920-en-portal-reverse-0.png",
+      "sha256": "a85f20b98496192cc7c0b9b5c41ff2c4cb4892960c6dd8c327c16766f4409760",
+      "bytes": 263605
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-hash-about-direct-about.png",
+      "sha256": "2ee32d02cd5875f544c9ad5aad678cd4778857bcfab628a7d3d406d00dbdfc84",
+      "bytes": 297918
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-hash-work-direct-work.png",
+      "sha256": "294bd4be41cc805f172b3e2dc6a5d3de81a48c03dc76dfde54402787018783ba",
+      "bytes": 122178
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-hash-transmission-direct-transmission.png",
+      "sha256": "105c2ffc3e68e29094f635d84ab534d0288ee1ee31a261211488d682be447215",
+      "bytes": 72576
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-lab-portal-forward-0.png",
+      "sha256": "2c0667ad6e5277ca92c3acd10bad123c003146749a755abc00a45fcf32fa7f52",
+      "bytes": 203136
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-lab-portal-forward-0.25.png",
+      "sha256": "a75a4eed6d03359b3e4ae3b16600618d2256a588ccdf64ba17b8be0a72ef24f3",
+      "bytes": 425070
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-lab-portal-forward-0.44.png",
+      "sha256": "2e92d49f8b971b08fa642fa653ea25e7cbc80ab51f930b152b5385143909e32f",
+      "bytes": 29421
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-lab-portal-forward-0.47.png",
+      "sha256": "74e077d4e3939d89f2749ffa76eb1ca81bb903c42fd96b0bc223cdade6d5a1d5",
+      "bytes": 29392
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-lab-portal-forward-0.5.png",
+      "sha256": "fe52b564a80ad76cb9d6561b7574e281b184332c5a6ea854f20b458daf088d54",
+      "bytes": 29392
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-lab-portal-forward-0.7.png",
+      "sha256": "78065b651be3dab74995584d3828de5e941e33650a8f3f6278d2d74fed8334ed",
+      "bytes": 213398
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-lab-portal-forward-0.94.png",
+      "sha256": "f57b39812ababbc732c989ad61f577ffcb15044b532e637521fa8c4b0d845c3e",
+      "bytes": 304643
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-lab-portal-forward-1.png",
+      "sha256": "210f3117951a8ec410f0670e72dc48957e94d242115a5346f27e433574517678",
+      "bytes": 304209
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-lab-portal-reverse-1.png",
+      "sha256": "67e8aa543fe8dbe31d77869eb3b7b20a9d9cd2cde6d6459cd260ab32331a382a",
+      "bytes": 304204
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-lab-portal-reverse-0.94.png",
+      "sha256": "ff0842feb3f61bae30aa6bc5318d14c6e095b6709971482048425e959ebb66fd",
+      "bytes": 304353
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-lab-portal-reverse-0.7.png",
+      "sha256": "2eafb4f1619121d87fdc6b36c6c96511f6fa8876acd679e99a89c95d6ac00f05",
+      "bytes": 213511
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-lab-portal-reverse-0.5.png",
+      "sha256": "8e6112333e9f3888188307c5883f8e639bcec05aff1d463c70426438ce58146d",
+      "bytes": 29345
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-lab-portal-reverse-0.47.png",
+      "sha256": "a8a89ea5a76a198b2e6474725e48a549b601d3995dfda1fd45b0018a496b9c8c",
+      "bytes": 29345
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-lab-portal-reverse-0.44.png",
+      "sha256": "f76f65dd3b8bae8c8181e0fbb392844e18e827c3295fb8e634d9fe3bae51ad8c",
+      "bytes": 29404
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-lab-portal-reverse-0.25.png",
+      "sha256": "4d263ee7d445ab292b82b367a6120506d34ec4a773f7f2b136c575f66f2bc148",
+      "bytes": 425146
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/1440-vi-lab-portal-reverse-0.png",
+      "sha256": "98b66d2d8f74180d84da9f0c83ab2c01684b9d98d47af271b120250bfe3291ed",
+      "bytes": 201177
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-live-fallback.png",
+      "sha256": "5cf9d8d1e747a95000d110eb1f647347308d274721f3b80f40fa3eb63ec13390",
+      "bytes": 76670
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v3/screenshots/390-initial-no-webgl.png",
+      "sha256": "1abed0f2667262005d446528a4a027a9c100f7bd54cd0a50a682ad51509bd8cf",
+      "bytes": 92736
+    }
+  ],
+  "dist": [
+    {
+      "path": "dist/assets/davinci-resolve-DTEn20Mv.webp",
+      "sha256": "eafe92dded33f19395885cb80e1128ad0ec54e77ea792abfbe4077d3250e22b1"
+    },
+    {
+      "path": "dist/assets/events-9ce18a08.esm-BwAtCFiA.js",
+      "sha256": "eaf05fbe8f5c42a361043289ee3f913a5a6ea4c7dff21586cc6cddc57970b58c"
+    },
+    {
+      "path": "dist/assets/GalaxyScene-BhZ-Gog9.js",
+      "sha256": "b58aa2f37bdf34cd6e031170f8dc4a00f8944474a572492a013efca4e227c805"
+    },
+    {
+      "path": "dist/assets/index-BlDSNhjw.js",
+      "sha256": "b8de7be5808c86e700df18ffd0c7b5a62ee596f3b457335d6a5710404f57518b"
+    },
+    {
+      "path": "dist/assets/index-Br_60DYv.css",
+      "sha256": "20a798f91e14d19a3992619fd4b3ba61fb326310afaf35ab1ec51dd21d1e5915"
+    },
+    {
+      "path": "dist/assets/SkillsSymbols-d1VEjNpI.js",
+      "sha256": "5200b899d4bff8caef3e4a4f97572d646049f76c80173f21ed7c1732604118c5"
+    },
+    {
+      "path": "dist/assets/StoryMeteor-CpbUusip.js",
+      "sha256": "d1672f0f8548a5748ffb124f3738d27af84c4f4ae59106103e21d40afdca206f"
+    },
+    {
+      "path": "dist/assets/unbounded-cyrillic-wght-normal-C627f1f8.woff2",
+      "sha256": "e30bf6a6063b6a47232bbd657e24c7cf4fdaf76fc2c50d92d9ee63e2ad2087cf"
+    },
+    {
+      "path": "dist/assets/unbounded-latin-ext-wght-normal-D6H-S6MW.woff2",
+      "sha256": "845e1c9fe2e9a7bfbedfeb447fbeba4bc1b5ecd6246277910ccdaad35a7a532c"
+    },
+    {
+      "path": "dist/assets/unbounded-latin-wght-normal-D5afBTBx.woff2",
+      "sha256": "22f9b928aa3928a896340422b54d690fbb5875c30eae4c106f029c61f2289fd6"
+    },
+    {
+      "path": "dist/assets/unbounded-vietnamese-wght-normal-rat7GD3o.woff2",
+      "sha256": "aa6b9cba3768a781df88a462a85ca40c6644662bb7d59ab4375ad1ff64f51251"
+    },
+    {
+      "path": "dist/assets/workbox-window.prod.es5-BBnX5xw4.js",
+      "sha256": "cadd21be4a88598a4dec91a26a025df0a5790ff6baec54a884e401c3f5c95557"
+    },
+    {
+      "path": "dist/assets/WorksConstellations-C9wBQOZs.js",
+      "sha256": "85a93953eab88cd5ed84b3e300026ea98997d8e4244aa6135f5f3c3faca73006"
+    },
+    {
+      "path": "dist/avatar-cutout.webp",
+      "sha256": "6b2fea6dcbd2bd204fc0aa6c545cbe7a696670fc4532c992378c3393d53b511f"
+    },
+    {
+      "path": "dist/avatar.webp",
+      "sha256": "e6c0bac02737f8beb0bd25ca08793e552cc801b54d88464c9ae761a15dd90bd2"
+    },
+    {
+      "path": "dist/constellations/ATTRIBUTION.md",
+      "sha256": "dab159cd0628e98651e020268b615807193b163f8ccdf6d54979b75f14dda949"
+    },
+    {
+      "path": "dist/constellations/centaurus.svg",
+      "sha256": "717ce7d895f3408e95dd0b1e313fd5eeae24b706353154195d6df7346c60ab17"
+    },
+    {
+      "path": "dist/constellations/cygnus.svg",
+      "sha256": "d27f0e299bffbc52a6f2ac7dab9a0926082eef373e8dfdf95dc9d71e79ffdc37"
+    },
+    {
+      "path": "dist/constellations/gemini.svg",
+      "sha256": "ea4ad1fbd4155d823b0890af68221cfe638f18f6e59b1d3303f07649c6b62273"
+    },
+    {
+      "path": "dist/constellations/leo.svg",
+      "sha256": "fff19ee2dd7345c30fdc8a801f3b2a9a13bbafafd8e921d71ea04ed2fb75b829"
+    },
+    {
+      "path": "dist/constellations/manifest.json",
+      "sha256": "751e44452b742ac08c3a48bff7ecaf11a9f2ade5cec002ba36f2946c623e27d8"
+    },
+    {
+      "path": "dist/constellations/orion.svg",
+      "sha256": "7fea1ced47cfb586e03f03404e01f6a419066f597322dcf31b5b5e8ee1a2684f"
+    },
+    {
+      "path": "dist/constellations/scorpius.svg",
+      "sha256": "2b720432b3a77bb670b124c3dea66a1faa7fbbaf3150cab0f7f67071ed5032a5"
+    },
+    {
+      "path": "dist/favicon.svg",
+      "sha256": "59b453e9ccaefde87745b96561282b6ecf48f2dca482898d2fedcae064d18aa7"
+    },
+    {
+      "path": "dist/icons/ae.png",
+      "sha256": "13df4673f9bd262a1376c488e1cbfc67bd1cd0500555c05677edfa15128069af"
+    },
+    {
+      "path": "dist/icons/ai.png",
+      "sha256": "7a9e921269cb9257010d22f61694268d14c171b245413134e7cd3244fcc56331"
+    },
+    {
+      "path": "dist/icons/figma.png",
+      "sha256": "79036c1f608b11eb14a711ec02bab4cc162a2406e7fb89ae5f02a456d4918f48"
+    },
+    {
+      "path": "dist/icons/pr.png",
+      "sha256": "6af65c63d2f8a59fc54f49f5bc76b9938777789a04f36b625433409d9803efab"
+    },
+    {
+      "path": "dist/icons/ps.png",
+      "sha256": "f3083bd3ed5ac24d94d45907a1fa4ab1713f1d8fc6361d2e9ebfc960c5b85862"
+    },
+    {
+      "path": "dist/index.html",
+      "sha256": "fe79cbd75b70d459831395dad3fe0fee39ea0b0e82477336ccbf4acb75708cf9"
+    },
+    {
+      "path": "dist/manifest.webmanifest",
+      "sha256": "b859feed1968ceb37e959eeaf4ea1a27e3b2d7d13804a564b37fd7c659a83f1c"
+    },
+    {
+      "path": "dist/og-image.jpg",
+      "sha256": "bc898f6ebda22f5920af9bcf5bc01c7aa3ebb7a53e01434a787283c4598e9e2f"
+    },
+    {
+      "path": "dist/project1.webp",
+      "sha256": "2e9d8cee3c4c3584bb74bdeffcf384dcfabeb7d74bb165fd48d5094e38ad359b"
+    },
+    {
+      "path": "dist/project2.webp",
+      "sha256": "1032b163b247f7d528b313f093abf6bc29eade6b39d98b5acbbd5b068056de9b"
+    },
+    {
+      "path": "dist/project3.webp",
+      "sha256": "03117079520095b5dab4cd53a4b8c2a8495fe174efc1aa4d9b9d998447dad6fc"
+    },
+    {
+      "path": "dist/projects/edura/overview.webp",
+      "sha256": "cc792c5dfb8d3acaf30925372969711e6b18a19ca831e6cc9baa8e63900d9b23"
+    },
+    {
+      "path": "dist/projects/edura/problem.webp",
+      "sha256": "11e86ff9ffe00bf747a3b50db209e68658b08fcaa2989e4cb6300146b2fc1c4d"
+    },
+    {
+      "path": "dist/projects/edura/solution.webp",
+      "sha256": "7714b0840765fecc8a397c5c3a03eb97da448d752090821752998948f8ba47a8"
+    },
+    {
+      "path": "dist/pwa-192x192.png",
+      "sha256": "6e838d4b2412cb88c71f6befcc441b984efc2c73e1974c4c1a244bd7d7e9f724"
+    },
+    {
+      "path": "dist/pwa-512x512.png",
+      "sha256": "ac06e97bda0b1a82b5fe7f8cbcedbef0bb7a9ac1de1c1d988ad9833091470f97"
+    },
+    {
+      "path": "dist/pwa-maskable-192x192.png",
+      "sha256": "d848d131a9c68bb1469c201ad41c923a4f10cc79890719b86e21cccdda13a3b6"
+    },
+    {
+      "path": "dist/pwa-maskable-512x512.png",
+      "sha256": "9894d4a3820f39bb8456e5881ecb9c9aa3006a774beefb774e619e18bd97f834"
+    },
+    {
+      "path": "dist/sw.js",
+      "sha256": "e71dbb7555e18e9ce25000c9680cb8aa2e23e9456ddefa0a8ad41e0eb3d60119"
+    },
+    {
+      "path": "dist/theme-init.js",
+      "sha256": "b4b82e9564cbbf346b6c924d262b8b741cb2eeac29c46ece0e7d387dd14d6b57"
+    },
+    {
+      "path": "dist/workbox-4e9e9954.js",
+      "sha256": "f2db86fc677662558d612bdbf847e94438d835e808b0ef03e6c3b7ac52c20a75"
+    }
+  ],
+  "buildLogSha256": "af2804821f5af894421888a47ef5e87f259839e6e8dc6cdc2dd7691f8213e762",
+  "lintLogSha256": "16d1714d98ecc1eca5ac74e7c2a42d761d8f2033dcc28c0bdd05df5b2ed256d2",
+  "gate": "G1 pending human visual approval",
+  "limits": [
+    "Desktop Edge headless; 390px/touch viewport is not a physical phone.",
+    "Held checkpoints use the existing story store and exact visible scroll; native producer sampled separately.",
+    "Authored pose/uniforms/DOM state compared at equal progress; ambient uTime, idle glitch/dots and pointer following recorded separately.",
+    "No FPS claim, GPU benchmark, screen reader, OS motion switch, public HTTPS, Safari or Firefox validation."
+  ]
+}

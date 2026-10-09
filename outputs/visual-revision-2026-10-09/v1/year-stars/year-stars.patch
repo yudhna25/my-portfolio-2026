@@ -1,0 +1,151 @@
+diff --git a/src/components/effects/PortalHeading.jsx b/src/components/effects/PortalHeading.jsx
+--- a/src/components/effects/PortalHeading.jsx
++++ b/src/components/effects/PortalHeading.jsx
+@@ -1,4 +1,4 @@
+-import { useRef } from 'react';
++import { useId, useRef } from 'react';
+ import '@fontsource-variable/unbounded';
+ import { gsap, useGSAPSetup } from '@/hooks/useGSAPSetup';
+ import { useScrollStore } from '@/stores/useScrollStore';
+@@ -6,9 +6,22 @@
+ import { portalProgress, portalState } from '@/3d/utils/portal';
+ import '@/styles/hero.css';
+ 
+-// Native SVG text contours share the heading's local Unbounded font and weight.
++// Contours baked from the installed Unbounded 800; glyph advances stay unchanged.
++const YEAR_CONTOURS = {
++  "2": "M31 324 C35.667 264 55.833 212.167 91.5 168.5 C127.167 124.833 174.667 91.333 234 68 C293.333 44.667 360 33 434 33 C504.667 33 566.5 43.667 619.5 65 C672.5 86.333 713.667 115.833 743 153.5 C772.333 191.167 787 235 787 285 C787 324.333 776.167 360.667 754.5 394 C732.833 427.333 699.333 459.833 654 491.5 C608.667 523.167 549.667 555.333 477 588 L286 676 L281 618 L807 618 L807 800 L50 800 L50 640 L373 463 C421.667 436.333 459 414.167 485 396.5 C511 378.833 529.333 362.5 540 347.5 C550.667 332.5 556 316.333 556 299 C556 281 551 265.333 541 252 C531 238.667 516.167 228.333 496.5 221 C476.833 213.667 453 210 425 210 C388.333 210 358.5 215.167 335.5 225.5 C312.5 235.833 295.167 249.667 283.5 267 C271.833 284.333 264.667 303.333 262 324 L31 324 Z",
++  "0": "M467 817 C381 817 305.833 800.667 241.5 768 C177.167 735.333 127.333 689.667 92 631 C56.667 572.333 39 503.667 39 425 C39 346.333 56.667 277.667 92 219 C127.333 160.333 177.167 114.667 241.5 82 C305.833 49.333 381 33 467 33 C553.667 33 629.167 49.333 693.5 82 C757.833 114.667 807.667 160.333 843 219 C878.333 277.667 896 346.333 896 425 C896.667 503.667 879.167 572.333 843.5 631 C807.833 689.667 757.833 735.333 693.5 768 C629.167 800.667 553.667 817 467 817 Z M468 629 C530.667 629 579.333 611.167 614 575.5 C648.667 539.833 665.667 489.667 665 425 C665 359.667 647.833 309.333 613.5 274 C579.167 238.667 530.667 221 468 221 C406 221 357.5 238.667 322.5 274 C287.5 309.333 270 359.667 270 425 C270 489.667 287.5 539.833 322.5 575.5 C357.5 611.167 406 629 468 629 Z",
++  "6": "M454 33 C520.667 33 579.833 43.167 631.5 63.5 C683.167 83.833 724.833 111.167 756.5 145.5 C788.167 179.833 807.333 218.667 814 262 L601 262 C592.333 244 576.667 229 554 217 C531.333 205 500 199 460 199 C414.667 199 376.833 207.333 346.5 224 C316.167 240.667 293.5 265 278.5 297 C263.5 329 256 368.333 256 415 C256 467.667 264.167 511.333 280.5 546 C296.833 580.667 320.333 606.667 351 624 C381.667 641.333 419 650 463 650 C491.667 650 516 646 536 638 C556 630 571 619.333 581 606 C591 592.667 596 578 596 562 C596 544 591.167 528.5 581.5 515.5 C571.833 502.5 557.333 492.667 538 486 C518.667 479.333 495 476 467 476 C429 476 392.333 483.833 357 499.5 C321.667 515.167 288.333 539.667 257 573 L182 523 C202 481 228 444.167 260 412.5 C292 380.833 330.167 355.833 374.5 337.5 C418.833 319.167 469.333 310 526 310 C589.333 310 643.5 320.333 688.5 341 C733.5 361.667 768.167 390.333 792.5 427 C816.833 463.667 829 506 829 554 C829 604.667 814.667 649.833 786 689.5 C757.333 729.167 715.667 760.333 661 783 C606.333 805.667 539 817 459 817 C365 817 287 800.333 225 767 C163 733.667 116.833 687.5 86.5 628.5 C56.167 569.5 41 502 41 426 C41 350 56.333 282.333 87 223 C117.667 163.667 163.667 117.167 225 83.5 C286.333 49.833 362.667 33 454 33 Z",
++  "7": "M117 800 L528 168 L528 232 L15 232 L15 50 L742 50 L742 235 L386 800 L117 800 Z"
++};
++const YEAR_STARS = Array.from({ length: 12 }, (_, group) => Array.from({ length: 125 }, (_, point) => {
++  const seed = group * 125 + point + 1;
++  const random = n => { const value = Math.sin(seed * n) * 43758.5453; return value - Math.floor(value); };
++  return { x: random(12.9898) * 3502, y: random(78.233) * 832, r: 1.5 + random(45.164) * 2.5 };
++}));
++
+ export function PortalHeading({ label, name, year, role, visible = true, glitch = false, children }) {
+   const scope = useRef(null);
++  const starsId = useId();
+   const frozen = useReducedMotion();
+   useGSAPSetup(() => {
+     const stage = scope.current;
+@@ -24,13 +37,23 @@
+     const noise = stage.querySelector('[data-year-noise]');
+     const glyphs = stage.querySelectorAll('[data-year-glyph]');
+     const changeDigit = value => {
+-      glyphs.forEach(glyph => { glyph.textContent = value; });
++      glyphs.forEach(glyph => {
++        if (glyph.tagName === 'path') glyph.setAttribute('d', YEAR_CONTOURS[value]);
++        else glyph.textContent = value;
++      });
+       digit.dataset.digit = value;
+     };
+     const resetDigit = () => changeDigit(year.slice(-1));
+-    const dash = !frozen ? gsap.to(stage.querySelectorAll('[data-year-dash]'), {
+-      id: 'hero-year-dash', strokeDashoffset: -36, duration: 6, ease: 'none', repeat: -1, paused: true,
+-    }) : null;
++    const meteors = !frozen ? gsap.timeline({ id: 'hero-year-meteors', paused: true }) : null;
++    const twinkle = !frozen ? gsap.timeline({ id: 'hero-year-twinkle', paused: true }) : null;
++    stage.querySelectorAll('[data-year-meteor]').forEach((meteor, index) => {
++      const paths = meteor.querySelectorAll('path');
++      gsap.set(paths, { strokeDashoffset: -index * 197 });
++      meteors?.to(paths, { strokeDashoffset: -index * 197 - 1000, duration: 4 + index * 0.3, repeat: -1, ease: 'none' }, 0);
++    });
++    stage.querySelectorAll('[data-year-twinkle]').forEach((group, index) => {
++      twinkle?.to(group, { opacity: 0.95, duration: 1.4 + index % 4 * 0.25, repeat: -1, yoyo: true, repeatDelay: 1.8 + index % 3 * 0.6, ease: 'sine.inOut' }, index * 0.37);
++    });
+     const flash = glitch && !frozen ? gsap.timeline({ id: 'hero-year-glitch', paused: true, repeat: -1 }) : null;
+     if (flash) {
+       for (const [start, next] of [[12, '7'], [15.4, year.slice(-1)]]) {
+@@ -65,11 +88,13 @@
+       stage.dataset.heroIdle = String(idle);
+       nameNode.tabIndex = idle ? 0 : -1;
+       if (idle) {
+-        dash?.restart();
++        meteors?.restart();
++        twinkle?.restart();
+         flash?.restart();
+         decode?.restart();
+       } else {
+-        dash?.pause(0);
++        meteors?.pause(0);
++        twinkle?.pause(0);
+         flash?.pause(0);
+         decode?.pause(0);
+         resetDigit();
+@@ -99,11 +124,31 @@
+       <div data-hero-layer="year" data-hero-year className="relative z-0 -mb-[0.24em]">
+         <span className="sr-only">{year}</span>
+         <svg aria-hidden="true" focusable="false" viewBox="0 0 3502 832" className="hero-year-svg" fill="none" stroke="white" strokeWidth="2">
+-          <text x="0" y="800" vectorEffect="non-scaling-stroke" className="hero-year-base">{prefix}</text>
+-          <text x="0" y="800" vectorEffect="non-scaling-stroke" data-year-dash>{prefix}</text>
++          <defs>
++            <pattern id={starsId} width="3502" height="832" patternUnits="userSpaceOnUse">
++              {YEAR_STARS.map((group, index) => <g key={index} data-year-twinkle className="hero-year-stars">
++                {group.map((star, point) => <circle key={point} cx={star.x} cy={star.y} r={star.r} />)}
++              </g>)}
++            </pattern>
++            {[0, 850, 1785, 2635].map((offset, index) => <pattern key={index} id={`${starsId}-${index}`} href={`#${starsId}`} patternTransform={`translate(${-offset} 0)`} />)}
++          </defs>
++          {Array.from(prefix, (char, index) => <g key={index} transform={`translate(${[0, 850, 1785][index]} 0)`}>
++            <path d={YEAR_CONTOURS[char]} className="hero-year-base" fill={`url(#${starsId}-${index})`} />
++            {(char === '0' ? YEAR_CONTOURS[char].match(/M[^M]+/g) : [YEAR_CONTOURS[char]]).map((path, contour) => <g key={contour} data-year-meteor>
++              <path d={path} pathLength="1000" className="hero-year-tail" />
++              <path d={path} pathLength="1000" className="hero-year-wake" />
++              <path d={path} pathLength="1000" className="hero-year-head" />
++            </g>)}
++          </g>)}
+           <g data-year-digit data-digit={lastDigit}>
+-            <text x="0" y="800" vectorEffect="non-scaling-stroke" className="hero-year-base"><tspan stroke="none">{prefix}</tspan><tspan data-year-glyph>{lastDigit}</tspan></text>
+-            <text x="0" y="800" vectorEffect="non-scaling-stroke" data-year-dash><tspan stroke="none">{prefix}</tspan><tspan data-year-glyph>{lastDigit}</tspan></text>
++            <g transform="translate(2635 0)">
++              <path data-year-glyph d={YEAR_CONTOURS[lastDigit]} className="hero-year-base" fill={`url(#${starsId}-3)`} />
++              <g data-year-meteor>
++                <path data-year-glyph d={YEAR_CONTOURS[lastDigit]} pathLength="1000" className="hero-year-tail" />
++                <path data-year-glyph d={YEAR_CONTOURS[lastDigit]} pathLength="1000" className="hero-year-wake" />
++                <path data-year-glyph d={YEAR_CONTOURS[lastDigit]} pathLength="1000" className="hero-year-head" />
++              </g>
++            </g>
+           </g>
+           <g data-year-noise className="opacity-0">
+             <text x="0" y="800" vectorEffect="non-scaling-stroke" className="hero-noise-cyan"><tspan stroke="none">{prefix}</tspan><tspan data-year-glyph>{lastDigit}</tspan></text>
+diff --git a/src/styles/hero.css b/src/styles/hero.css
+--- a/src/styles/hero.css
++++ b/src/styles/hero.css
+@@ -29,10 +29,16 @@
+ 
+   .hero-year-svg text { font-size: 1000px; }
+   .hero-year-svg text, .hero-year-svg tspan { vector-effect: non-scaling-stroke; }
++  .hero-year-svg path, .hero-year-svg circle { vector-effect: non-scaling-stroke; }
+   .portal-heading [data-hero-name], .portal-heading [data-hero-role] { font-size: inherit; }
+ 
+-  .hero-year-base { stroke-opacity: 0.72; }
+-  [data-year-dash] { stroke-dasharray: 12 24; }
++  .hero-year-base { stroke-width: 0.6px; stroke-opacity: 0.24; }
++  .hero-year-stars { fill: white; stroke-width: 0.5px; opacity: 0.42; }
++  /* Normalized meteor dashes must scale with their contour, including on mobile. */
++  .hero-year-svg [data-year-meteor] path { vector-effect: none; }
++  .hero-year-tail { stroke-width: 4px; stroke-opacity: 0.18; stroke-dasharray: 36 964; }
++  .hero-year-wake { stroke-width: 5px; stroke-opacity: 0.4; stroke-dasharray: 14 986; }
++  .hero-year-head { stroke-width: 7px; stroke-opacity: 0.9; stroke-dasharray: 1.5 998.5; stroke-linecap: round; }
+   .hero-noise-cyan { stroke: #86dce8; clip-path: polygon(0 24%, 100% 29%, 100% 39%, 0 34%, 0 70%, 100% 65%, 100% 72%, 0 77%); }
+   .hero-noise-orange { stroke: #e8ad86; clip-path: polygon(0 45%, 100% 42%, 100% 51%, 0 54%, 0 82%, 100% 77%, 100% 84%, 0 89%); }
+ 
+@@ -55,8 +61,14 @@
+     .portal-heading { --hero-font-size: min(calc(72vw / 7.05), 19vh); }
+   }
+ 
++  @media (max-width: 767px) {
++    .hero-year-tail { stroke-width: 12px; }
++    .hero-year-wake { stroke-width: 16px; }
++    .hero-year-head { stroke-width: 22px; }
++  }
++
+   @media (prefers-reduced-motion: reduce) {
+     [data-year-noise] { visibility: hidden; }
+-    [data-year-dash] { stroke-dasharray: none; }
++    [data-year-meteor] { visibility: hidden; }
+   }
+ }

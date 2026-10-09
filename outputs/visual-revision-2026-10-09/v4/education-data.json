@@ -1,0 +1,1359 @@
+{
+  "schemaVersion": 1,
+  "catalog": {
+    "id": "I/239/hip_main",
+    "frame": "ICRS",
+    "positionEpoch": "J1991.25",
+    "magnitudeBand": "Johnson V",
+    "coordinatesUnit": "degree",
+    "properMotionApplied": false,
+    "note": "RAICRS/DEICRS are J1991.25 positions. They are not relabelled as J2000 or current-date positions."
+  },
+  "education": [
+    {
+      "id": "saigonUniversity",
+      "constellationId": "Ori",
+      "name": "Orion",
+      "assignment": "SGU",
+      "geometry": {
+        "convention": "Stellarium Modern",
+        "sourceId": "stellarium-modern",
+        "sourceConstellationId": "CON modern Ori",
+        "polylinesHip": [
+          [
+            26727,
+            26311,
+            25930
+          ],
+          [
+            29434,
+            29426
+          ],
+          [
+            29434,
+            28716,
+            27913
+          ],
+          [
+            29426,
+            29038,
+            27913
+          ],
+          [
+            29426,
+            28614,
+            27989,
+            26727,
+            27366,
+            24436,
+            25930,
+            25336,
+            26207,
+            27989
+          ],
+          [
+            25336,
+            22449,
+            22549,
+            22730,
+            22797,
+            23123
+          ],
+          [
+            22449,
+            22509,
+            22845
+          ],
+          [
+            29038,
+            28614
+          ]
+        ],
+        "edges": [
+          [
+            "HIP 26727",
+            "HIP 26311"
+          ],
+          [
+            "HIP 26311",
+            "HIP 25930"
+          ],
+          [
+            "HIP 29434",
+            "HIP 29426"
+          ],
+          [
+            "HIP 29434",
+            "HIP 28716"
+          ],
+          [
+            "HIP 28716",
+            "HIP 27913"
+          ],
+          [
+            "HIP 29426",
+            "HIP 29038"
+          ],
+          [
+            "HIP 29038",
+            "HIP 27913"
+          ],
+          [
+            "HIP 29426",
+            "HIP 28614"
+          ],
+          [
+            "HIP 28614",
+            "HIP 27989"
+          ],
+          [
+            "HIP 27989",
+            "HIP 26727"
+          ],
+          [
+            "HIP 26727",
+            "HIP 27366"
+          ],
+          [
+            "HIP 27366",
+            "HIP 24436"
+          ],
+          [
+            "HIP 24436",
+            "HIP 25930"
+          ],
+          [
+            "HIP 25930",
+            "HIP 25336"
+          ],
+          [
+            "HIP 25336",
+            "HIP 26207"
+          ],
+          [
+            "HIP 26207",
+            "HIP 27989"
+          ],
+          [
+            "HIP 25336",
+            "HIP 22449"
+          ],
+          [
+            "HIP 22449",
+            "HIP 22549"
+          ],
+          [
+            "HIP 22549",
+            "HIP 22730"
+          ],
+          [
+            "HIP 22730",
+            "HIP 22797"
+          ],
+          [
+            "HIP 22797",
+            "HIP 23123"
+          ],
+          [
+            "HIP 22449",
+            "HIP 22509"
+          ],
+          [
+            "HIP 22509",
+            "HIP 22845"
+          ],
+          [
+            "HIP 29038",
+            "HIP 28614"
+          ]
+        ],
+        "stars": [
+          {
+            "id": "HIP 26727",
+            "hip": 26727,
+            "raDeg": 85.18968672,
+            "decDeg": -1.94257841,
+            "vmag": 1.74,
+            "position": [
+              -0.132260938,
+              -0.405529399,
+              0
+            ]
+          },
+          {
+            "id": "HIP 26311",
+            "hip": 26311,
+            "raDeg": 84.05338572,
+            "decDeg": -1.20191725,
+            "vmag": 1.69,
+            "position": [
+              -0.077500725,
+              -0.369532621,
+              0
+            ]
+          },
+          {
+            "id": "HIP 25930",
+            "hip": 25930,
+            "raDeg": 83.00166562,
+            "decDeg": -0.2990934,
+            "vmag": 2.25,
+            "position": [
+              -0.02700515,
+              -0.325905551,
+              0
+            ]
+          },
+          {
+            "id": "HIP 29434",
+            "hip": 29434,
+            "raDeg": 93.01365054,
+            "decDeg": 16.13044684,
+            "vmag": 4.95,
+            "position": [
+              -0.495045204,
+              0.473639177,
+              0
+            ]
+          },
+          {
+            "id": "HIP 29426",
+            "hip": 29426,
+            "raDeg": 92.98498656,
+            "decDeg": 14.20881425,
+            "vmag": 4.45,
+            "position": [
+              -0.49568358,
+              0.378621092,
+              0
+            ]
+          },
+          {
+            "id": "HIP 28716",
+            "hip": 28716,
+            "raDeg": 90.9799315,
+            "decDeg": 20.13845865,
+            "vmag": 4.64,
+            "position": [
+              -0.394907035,
+              0.66977369,
+              0
+            ]
+          },
+          {
+            "id": "HIP 27913",
+            "hip": 27913,
+            "raDeg": 88.59618305,
+            "decDeg": 20.27641498,
+            "vmag": 4.39,
+            "position": [
+              -0.283666686,
+              0.671714739,
+              0
+            ]
+          },
+          {
+            "id": "HIP 29038",
+            "hip": 29038,
+            "raDeg": 91.89300774,
+            "decDeg": 14.76852318,
+            "vmag": 4.42,
+            "position": [
+              -0.442889757,
+              0.403842382,
+              0
+            ]
+          },
+          {
+            "id": "HIP 28614",
+            "hip": 28614,
+            "raDeg": 90.59579323,
+            "decDeg": 9.64736756,
+            "vmag": 4.12,
+            "position": [
+              -0.385320166,
+              0.153074082,
+              0
+            ]
+          },
+          {
+            "id": "HIP 27989",
+            "hip": 27989,
+            "raDeg": 88.79287161,
+            "decDeg": 7.40703634,
+            "vmag": 0.45,
+            "position": [
+              -0.300746119,
+              0.044006057,
+              0
+            ]
+          },
+          {
+            "id": "HIP 27366",
+            "hip": 27366,
+            "raDeg": 86.93911641,
+            "decDeg": -9.66960186,
+            "vmag": 2.07,
+            "position": [
+              -0.220071928,
+              -0.792358211,
+              0
+            ]
+          },
+          {
+            "id": "HIP 24436",
+            "hip": 24436,
+            "raDeg": 78.63446353,
+            "decDeg": -8.20163919,
+            "vmag": 0.18,
+            "position": [
+              0.185232941,
+              -0.716648972,
+              0
+            ]
+          },
+          {
+            "id": "HIP 25336",
+            "hip": 25336,
+            "raDeg": 81.28278416,
+            "decDeg": 6.34973451,
+            "vmag": 1.64,
+            "position": [
+              0.054542536,
+              -0.008334502,
+              0
+            ]
+          },
+          {
+            "id": "HIP 26207",
+            "hip": 26207,
+            "raDeg": 83.78449043,
+            "decDeg": 9.93416294,
+            "vmag": 3.39,
+            "position": [
+              -0.063177952,
+              0.162263997,
+              0
+            ]
+          },
+          {
+            "id": "HIP 22449",
+            "hip": 22449,
+            "raDeg": 72.45890935,
+            "decDeg": 6.96124744,
+            "vmag": 3.19,
+            "position": [
+              0.475435882,
+              0.025696061,
+              0
+            ]
+          },
+          {
+            "id": "HIP 22549",
+            "hip": 22549,
+            "raDeg": 72.80152507,
+            "decDeg": 5.60510146,
+            "vmag": 3.68,
+            "position": [
+              0.460061873,
+              -0.039997617,
+              0
+            ]
+          },
+          {
+            "id": "HIP 22730",
+            "hip": 22730,
+            "raDeg": 73.34481369,
+            "decDeg": 2.50826491,
+            "vmag": 5.33,
+            "position": [
+              0.436392807,
+              -0.189741406,
+              0
+            ]
+          },
+          {
+            "id": "HIP 22797",
+            "hip": 22797,
+            "raDeg": 73.5628985,
+            "decDeg": 2.44067149,
+            "vmag": 3.71,
+            "position": [
+              0.425813893,
+              -0.193081308,
+              0
+            ]
+          },
+          {
+            "id": "HIP 23123",
+            "hip": 23123,
+            "raDeg": 74.63709525,
+            "decDeg": 1.71403506,
+            "vmag": 4.47,
+            "position": [
+              0.374136371,
+              -0.228467222,
+              0
+            ]
+          },
+          {
+            "id": "HIP 22509",
+            "hip": 22509,
+            "raDeg": 72.65300943,
+            "decDeg": 8.90025258,
+            "vmag": 4.35,
+            "position": [
+              0.464174339,
+              0.119027518,
+              0
+            ]
+          },
+          {
+            "id": "HIP 22845",
+            "hip": 22845,
+            "raDeg": 73.7237672,
+            "decDeg": 10.15114511,
+            "vmag": 4.64,
+            "position": [
+              0.411508984,
+              0.178022777,
+              0
+            ]
+          }
+        ],
+        "supportingStars": [],
+        "supportingStarPolicy": "No extra context catalog query in V4. Shared StarField supplies ambient context.",
+        "fieldStarsReturned": 0
+      },
+      "projection": {
+        "type": "gnomonic",
+        "origin": {
+          "raDeg": 82.43743888969622,
+          "decDeg": 6.526394520531372
+        },
+        "fieldRadiusDeg": 20.166599282434795,
+        "uniformScale": 2.7228174458111547,
+        "xDirection": "celestial west right (increasing RA left)",
+        "yDirection": "north up",
+        "z": 0,
+        "view": "sky as seen from Earth, not exterior celestial globe",
+        "normalization": "same scalar for x/y; no independent stretch, mirroring or invented coordinates"
+      },
+      "calibrationStars": [],
+      "artwork": {
+        "assetId": "Ori",
+        "url": "/constellations/orion.svg",
+        "sha256": "7fea1ced47cfb586e03f03404e01f6a419066f597322dcf31b5b5e8ee1a2684f",
+        "viewBox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "anchors": [
+          {
+            "hip": 27913,
+            "sourcePixel": [
+              59,
+              11
+            ],
+            "vectorPixel": [
+              183.67363513082697,
+              31.54537569357485
+            ],
+            "localPosition": [
+              -0.2836666864545299,
+              0.6717147393969265,
+              0.0
+            ],
+            "raDeg": 88.59618305,
+            "decDeg": 20.27641498,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 27366,
+            "sourcePixel": [
+              329,
+              477
+            ],
+            "vectorPixel": [
+              203.11203407657248,
+              479.05448959149385
+            ],
+            "localPosition": [
+              -0.22007192781743914,
+              -0.7923582105239494,
+              0.0
+            ],
+            "raDeg": 86.93911641,
+            "decDeg": -9.66960186,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 22449,
+            "sourcePixel": [
+              421,
+              91
+            ],
+            "vectorPixel": [
+              415.701224977224,
+              229.00769923294988
+            ],
+            "localPosition": [
+              0.4754358823636227,
+              0.02569606057183006,
+              0.0
+            ],
+            "raDeg": 72.45890935,
+            "decDeg": 6.96124744,
+            "role": "line-pattern"
+          }
+        ],
+        "sourcePixelToLocal": [
+          [
+            0.002407045051613288,
+            -0.0012534594187449402,
+            -0.412844886606511
+          ],
+          [
+            -0.001256823703165899,
+            -0.002408798237984194,
+            0.7746151024277982
+          ],
+          [
+            6.771696510735681e-05,
+            -5.8563632201080204e-05,
+            1.0
+          ]
+        ],
+        "sourcePixelToVector": [
+          [
+            0.7540476035424905,
+            -0.39896729333315967,
+            144.18897564847998
+          ],
+          [
+            0.4002008011639209,
+            0.7224027200096932,
+            0.09281024442276475
+          ],
+          [
+            6.771696510735681e-05,
+            -5.8563632201080204e-05,
+            1.0
+          ]
+        ],
+        "vectorPixelToLocal": [
+          [
+            0.0032716047661430357,
+            0.0,
+            -0.8845742265633603
+          ],
+          [
+            -0.0,
+            -0.0032716047661430357,
+            0.7749187408657986
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixConvention": "row-major 3x3, column [x,y,1], divide by third coordinate",
+        "plane": {
+          "center": [
+            -0.04704340643074306,
+            -0.06261207926681861,
+            0
+          ],
+          "width": 1.6750616402652345,
+          "height": 1.6750616402652345,
+          "localZ": -0.01
+        },
+        "opacity": {
+          "idle": [
+            0.08,
+            0.12
+          ],
+          "active": [
+            0.25,
+            0.35
+          ]
+        }
+      },
+      "notes": [
+        "Calibration stars have no added edges.",
+        "Artwork uses three verified HIP anchors, not center-fit."
+      ]
+    },
+    {
+      "id": "greenAcademy",
+      "constellationId": "Sco",
+      "name": "Scorpius",
+      "assignment": "Green Academy",
+      "geometry": {
+        "convention": "Stellarium Modern",
+        "sourceId": "stellarium-modern",
+        "sourceConstellationId": "CON modern Sco",
+        "polylinesHip": [
+          [
+            85927,
+            86670,
+            87073,
+            86228,
+            84143,
+            82671,
+            82514,
+            82396,
+            81266,
+            80763,
+            78401
+          ],
+          [
+            80763,
+            78265
+          ],
+          [
+            80763,
+            78820
+          ]
+        ],
+        "edges": [
+          [
+            "HIP 85927",
+            "HIP 86670"
+          ],
+          [
+            "HIP 86670",
+            "HIP 87073"
+          ],
+          [
+            "HIP 87073",
+            "HIP 86228"
+          ],
+          [
+            "HIP 86228",
+            "HIP 84143"
+          ],
+          [
+            "HIP 84143",
+            "HIP 82671"
+          ],
+          [
+            "HIP 82671",
+            "HIP 82514"
+          ],
+          [
+            "HIP 82514",
+            "HIP 82396"
+          ],
+          [
+            "HIP 82396",
+            "HIP 81266"
+          ],
+          [
+            "HIP 81266",
+            "HIP 80763"
+          ],
+          [
+            "HIP 80763",
+            "HIP 78401"
+          ],
+          [
+            "HIP 80763",
+            "HIP 78265"
+          ],
+          [
+            "HIP 80763",
+            "HIP 78820"
+          ]
+        ],
+        "stars": [
+          {
+            "id": "HIP 85927",
+            "hip": 85927,
+            "raDeg": 263.40219373,
+            "decDeg": -37.10374835,
+            "vmag": 1.62,
+            "position": [
+              -0.386589876,
+              -0.150806393,
+              0
+            ]
+          },
+          {
+            "id": "HIP 86670",
+            "hip": 86670,
+            "raDeg": 265.62199908,
+            "decDeg": -39.02992092,
+            "vmag": 2.39,
+            "position": [
+              -0.456964303,
+              -0.248963362,
+              0
+            ]
+          },
+          {
+            "id": "HIP 87073",
+            "hip": 87073,
+            "raDeg": 266.89617137,
+            "decDeg": -40.12698197,
+            "vmag": 2.99,
+            "position": [
+              -0.495837697,
+              -0.306208542,
+              0
+            ]
+          },
+          {
+            "id": "HIP 86228",
+            "hip": 86228,
+            "raDeg": 264.32969072,
+            "decDeg": -42.99782155,
+            "vmag": 1.86,
+            "position": [
+              -0.389420663,
+              -0.425345754,
+              0
+            ]
+          },
+          {
+            "id": "HIP 84143",
+            "hip": 84143,
+            "raDeg": 258.038233,
+            "decDeg": -43.23849039,
+            "vmag": 3.32,
+            "position": [
+              -0.176666788,
+              -0.414872471,
+              0
+            ]
+          },
+          {
+            "id": "HIP 82671",
+            "hip": 82671,
+            "raDeg": 253.49886366,
+            "decDeg": -42.36201968,
+            "vmag": 4.7,
+            "position": [
+              -0.025622743,
+              -0.368856548,
+              0
+            ]
+          },
+          {
+            "id": "HIP 82514",
+            "hip": 82514,
+            "raDeg": 252.96766195,
+            "decDeg": -38.04732717,
+            "vmag": 3.0,
+            "position": [
+              -0.008168303,
+              -0.171763227,
+              0
+            ]
+          },
+          {
+            "id": "HIP 82396",
+            "hip": 82396,
+            "raDeg": 252.54268738,
+            "decDeg": -34.29260982,
+            "vmag": 2.29,
+            "position": [
+              0.007298691,
+              -0.002015221,
+              0
+            ]
+          },
+          {
+            "id": "HIP 81266",
+            "hip": 81266,
+            "raDeg": 248.97066423,
+            "decDeg": -28.21596156,
+            "vmag": 2.82,
+            "position": [
+              0.150834686,
+              0.270951979,
+              0
+            ]
+          },
+          {
+            "id": "HIP 80763",
+            "hip": 80763,
+            "raDeg": 247.35194804,
+            "decDeg": -26.43194608,
+            "vmag": 1.06,
+            "position": [
+              0.220177991,
+              0.350384595,
+              0
+            ]
+          },
+          {
+            "id": "HIP 78401",
+            "hip": 78401,
+            "raDeg": 240.08338225,
+            "decDeg": -22.62162024,
+            "vmag": 2.29,
+            "position": [
+              0.54429424,
+              0.508459267,
+              0
+            ]
+          },
+          {
+            "id": "HIP 78265",
+            "hip": 78265,
+            "raDeg": 239.71300283,
+            "decDeg": -26.1140428,
+            "vmag": 2.89,
+            "position": [
+              0.539146804,
+              0.342303797,
+              0
+            ]
+          },
+          {
+            "id": "HIP 78820",
+            "hip": 78820,
+            "raDeg": 241.35931206,
+            "decDeg": -19.80539286,
+            "vmag": 2.56,
+            "position": [
+              0.503732577,
+              0.648574499,
+              0
+            ]
+          }
+        ],
+        "supportingStars": [],
+        "supportingStarPolicy": "No extra context catalog query in V4. Shared StarField supplies ambient context.",
+        "fieldStarsReturned": 0
+      },
+      "projection": {
+        "type": "gnomonic",
+        "origin": {
+          "raDeg": 252.73839113844622,
+          "decDeg": -34.24812298018214
+        },
+        "fieldRadiusDeg": 21.138305434750553,
+        "uniformScale": 2.586410793873572,
+        "xDirection": "celestial west right (increasing RA left)",
+        "yDirection": "north up",
+        "z": 0,
+        "view": "sky as seen from Earth, not exterior celestial globe",
+        "normalization": "same scalar for x/y; no independent stretch, mirroring or invented coordinates"
+      },
+      "calibrationStars": [
+        {
+          "id": "HIP 82729",
+          "hip": 82729,
+          "raDeg": 253.64627156,
+          "decDeg": -42.36075916,
+          "vmag": 3.62,
+          "position": [
+            -0.03059022744430372,
+            -0.3688477079031075,
+            0.0
+          ],
+          "role": "calibration-only; no edge"
+        }
+      ],
+      "artwork": {
+        "assetId": "Sco",
+        "url": "/constellations/scorpius.svg",
+        "sha256": "2b720432b3a77bb670b124c3dea66a1faa7fbbaf3150cab0f7f67071ed5032a5",
+        "viewBox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "anchors": [
+          {
+            "hip": 78820,
+            "sourcePixel": [
+              447,
+              29
+            ],
+            "vectorPixel": [
+              440.9194276663294,
+              41.75787684659933
+            ],
+            "localPosition": [
+              0.5037325773160798,
+              0.64857449935011,
+              0.0
+            ],
+            "raDeg": 241.35931206,
+            "decDeg": -19.80539286,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 85927,
+            "sourcePixel": [
+              62,
+              365
+            ],
+            "vectorPixel": [
+              77.0003735966816,
+              368.5045935721549
+            ],
+            "localPosition": [
+              -0.38658987556198054,
+              -0.1508063933284969,
+              0.0
+            ],
+            "raDeg": 263.40219373,
+            "decDeg": -37.10374835,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 82729,
+            "sourcePixel": [
+              217,
+              462
+            ],
+            "vectorPixel": [
+              222.51513038318316,
+              457.6289200356621
+            ],
+            "localPosition": [
+              -0.03059022744430372,
+              -0.3688477079031075,
+              0.0
+            ],
+            "raDeg": 253.64627156,
+            "decDeg": -42.36075916,
+            "role": "calibration-only"
+          }
+        ],
+        "sourcePixelToLocal": [
+          [
+            0.0023409015643532883,
+            1.9929461811989855e-05,
+            -0.5486148295596958
+          ],
+          [
+            2.035156291810805e-05,
+            -0.0023463123766034933,
+            0.7005851500352573
+          ],
+          [
+            -2.8658366466434776e-05,
+            7.300720270797343e-05,
+            1.0
+          ]
+        ],
+        "sourcePixelToVector": [
+          [
+            0.9501076038259585,
+            0.02530423276817555,
+            10.772718881337113
+          ],
+          [
+            -0.01711287428310461,
+            0.9814577033114882,
+            20.498537898446216
+          ],
+          [
+            -2.8658366466434776e-05,
+            7.300720270797343e-05,
+            1.0
+          ]
+        ],
+        "vectorPixelToLocal": [
+          [
+            0.00244648485129242,
+            0.0,
+            -0.5749701231101189
+          ],
+          [
+            -0.0,
+            -0.00244648485129242,
+            0.7507345124774497
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixConvention": "row-major 3x3, column [x,y,1], divide by third coordinate",
+        "plane": {
+          "center": [
+            0.05132999882074063,
+            0.12443439054659011,
+            0
+          ],
+          "width": 1.252600243861719,
+          "height": 1.252600243861719,
+          "localZ": -0.01
+        },
+        "opacity": {
+          "idle": [
+            0.08,
+            0.12
+          ],
+          "active": [
+            0.25,
+            0.35
+          ]
+        }
+      },
+      "notes": [
+        "Calibration stars have no added edges.",
+        "Artwork uses three verified HIP anchors, not center-fit."
+      ]
+    },
+    {
+      "id": "arenaMultimedia",
+      "constellationId": "Leo",
+      "name": "Leo",
+      "assignment": "Arena",
+      "geometry": {
+        "convention": "Stellarium Modern",
+        "sourceId": "stellarium-modern",
+        "sourceConstellationId": "CON modern Leo",
+        "polylinesHip": [
+          [
+            57632,
+            54879,
+            49669,
+            49583,
+            50583,
+            54872,
+            57632
+          ],
+          [
+            50583,
+            50335,
+            48455,
+            47908
+          ],
+          [
+            54872,
+            54879
+          ]
+        ],
+        "edges": [
+          [
+            "HIP 57632",
+            "HIP 54879"
+          ],
+          [
+            "HIP 54879",
+            "HIP 49669"
+          ],
+          [
+            "HIP 49669",
+            "HIP 49583"
+          ],
+          [
+            "HIP 49583",
+            "HIP 50583"
+          ],
+          [
+            "HIP 50583",
+            "HIP 54872"
+          ],
+          [
+            "HIP 54872",
+            "HIP 57632"
+          ],
+          [
+            "HIP 50583",
+            "HIP 50335"
+          ],
+          [
+            "HIP 50335",
+            "HIP 48455"
+          ],
+          [
+            "HIP 48455",
+            "HIP 47908"
+          ],
+          [
+            "HIP 54872",
+            "HIP 54879"
+          ]
+        ],
+        "stars": [
+          {
+            "id": "HIP 57632",
+            "hip": 57632,
+            "raDeg": 177.26615977,
+            "decDeg": 14.57233687,
+            "vmag": 2.14,
+            "position": [
+              -0.801692976,
+              -0.168602658,
+              0
+            ]
+          },
+          {
+            "id": "HIP 54879",
+            "hip": 54879,
+            "raDeg": 168.56017036,
+            "decDeg": 15.4297631,
+            "vmag": 3.33,
+            "position": [
+              -0.424811629,
+              -0.156439095,
+              0
+            ]
+          },
+          {
+            "id": "HIP 49669",
+            "hip": 49669,
+            "raDeg": 152.09358075,
+            "decDeg": 11.96719513,
+            "vmag": 1.36,
+            "position": [
+              0.248492002,
+              -0.30989897,
+              0
+            ]
+          },
+          {
+            "id": "HIP 49583",
+            "hip": 49583,
+            "raDeg": 151.83313948,
+            "decDeg": 16.76266572,
+            "vmag": 3.48,
+            "position": [
+              0.251896933,
+              -0.107049473,
+              0
+            ]
+          },
+          {
+            "id": "HIP 50583",
+            "hip": 50583,
+            "raDeg": 154.99234054,
+            "decDeg": 19.84186032,
+            "vmag": 2.01,
+            "position": [
+              0.122569874,
+              0.018533115,
+              0
+            ]
+          },
+          {
+            "id": "HIP 54872",
+            "hip": 54872,
+            "raDeg": 168.52671705,
+            "decDeg": 20.52403384,
+            "vmag": 2.56,
+            "position": [
+              -0.410259538,
+              0.058948044,
+              0
+            ]
+          },
+          {
+            "id": "HIP 50335",
+            "hip": 50335,
+            "raDeg": 154.17251805,
+            "decDeg": 23.4173284,
+            "vmag": 3.43,
+            "position": [
+              0.15139031,
+              0.168791799,
+              0
+            ]
+          },
+          {
+            "id": "HIP 48455",
+            "hip": 48455,
+            "raDeg": 148.19149028,
+            "decDeg": 26.00708498,
+            "vmag": 3.88,
+            "position": [
+              0.377219169,
+              0.290071913,
+              0
+            ]
+          },
+          {
+            "id": "HIP 47908",
+            "hip": 47908,
+            "raDeg": 146.4629267,
+            "decDeg": 23.77427792,
+            "vmag": 2.97,
+            "position": [
+              0.450790611,
+              0.20027195,
+              0
+            ]
+          }
+        ],
+        "supportingStars": [],
+        "supportingStarPolicy": "No extra context catalog query in V4. Shared StarField supplies ambient context.",
+        "fieldStarsReturned": 0
+      },
+      "projection": {
+        "type": "gnomonic",
+        "origin": {
+          "raDeg": 158.115569831241,
+          "decDeg": 19.424488301350298
+        },
+        "fieldRadiusDeg": 22.718300264534207,
+        "uniformScale": 2.388433860968587,
+        "xDirection": "celestial west right (increasing RA left)",
+        "yDirection": "north up",
+        "z": 0,
+        "view": "sky as seen from Earth, not exterior celestial globe",
+        "normalization": "same scalar for x/y; no independent stretch, mirroring or invented coordinates"
+      },
+      "calibrationStars": [],
+      "artwork": {
+        "assetId": "Leo",
+        "url": "/constellations/leo.svg",
+        "sha256": "fff19ee2dd7345c30fdc8a801f3b2a9a13bbafafd8e921d71ea04ed2fb75b829",
+        "viewBox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "anchors": [
+          {
+            "hip": 57632,
+            "sourcePixel": [
+              69,
+              411
+            ],
+            "vectorPixel": [
+              65.64721983806568,
+              254.643231913345
+            ],
+            "localPosition": [
+              -0.8016929755896813,
+              -0.16860265847843964,
+              0.0
+            ],
+            "raDeg": 177.26615977,
+            "decDeg": 14.57233687,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 49669,
+            "sourcePixel": [
+              383,
+              186
+            ],
+            "vectorPixel": [
+              387.71229503509386,
+              297.97522401070125
+            ],
+            "localPosition": [
+              0.2484920022387476,
+              -0.3098989698906111,
+              0.0
+            ],
+            "raDeg": 152.09358075,
+            "decDeg": 11.96719513,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 47908,
+            "sourcePixel": [
+              321,
+              32
+            ],
+            "vectorPixel": [
+              449.752143131346,
+              141.5187529397855
+            ],
+            "localPosition": [
+              0.45079061054821123,
+              0.20027194976656013,
+              0.0
+            ],
+            "raDeg": 146.4629267,
+            "decDeg": 23.77427792,
+            "role": "line-pattern"
+          }
+        ],
+        "sourcePixelToLocal": [
+          [
+            0.0018860942728348665,
+            -0.002117076628787948,
+            -0.06756371718613821
+          ],
+          [
+            -0.0023146981622678402,
+            -0.0025382552032236776,
+            1.0331043667333286
+          ],
+          [
+            0.0001340958239469429,
+            -4.761889721904641e-06,
+            1.0
+          ]
+        ],
+        "sourcePixelToVector": [
+          [
+            0.6201889054581894,
+            -0.6507370206898713,
+            290.7860285277315
+          ],
+          [
+            0.7370721853910428,
+            0.7774520767294942,
+            -113.88980903713681
+          ],
+          [
+            0.0001340958239469429,
+            -4.761889721904641e-06,
+            1.0
+          ]
+        ],
+        "vectorPixelToLocal": [
+          [
+            0.003260785036024046,
+            0.0,
+            -1.0157544476942266
+          ],
+          [
+            -0.0,
+            -0.003260785036024046,
+            0.6617341816693967
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixConvention": "row-major 3x3, column [x,y,1], divide by third coordinate",
+        "plane": {
+          "center": [
+            -0.18099347847207076,
+            -0.17302678755275908,
+            0
+          ],
+          "width": 1.6695219384443114,
+          "height": 1.6695219384443114,
+          "localZ": -0.01
+        },
+        "opacity": {
+          "idle": [
+            0.08,
+            0.12
+          ],
+          "active": [
+            0.25,
+            0.35
+          ]
+        }
+      },
+      "notes": [
+        "Calibration stars have no added edges.",
+        "Artwork uses three verified HIP anchors, not center-fit."
+      ]
+    }
+  ]
+}

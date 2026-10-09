@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "assertions": 100308,
+  "sampleCount": 4000,
+  "aspects": [
+    0.46208530805687204,
+    1.6,
+    1.7777777777777777
+  ],
+  "minimumObserverRadius": 8.182909018191513,
+  "sourceHashes": {
+    "src/3d/utils/portal.js": "973cf175d67a63aeeb0493ff3d148372e812fdc4f788674c47e62f680fbe3254",
+    "src/3d/utils/cameraPath.js": "b8b74b47c1e03ecf7e09dd08934f69d5b07bf880c9e80402e6c471a95f2b8c7f"
+  },
+  "scope": "Pure analytic portal/intake/camera, forward-reverse equality, scalar/camera continuity, exterior observer and hidden mapping rebase. DOM/GPU/resource behavior requires Browser evidence."
+}

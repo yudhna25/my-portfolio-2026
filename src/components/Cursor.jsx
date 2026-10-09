@@ -4,6 +4,7 @@ import { useGSAP } from '@gsap/react';
 import { gsap } from '@/hooks/useGSAPSetup';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { useScrollStore } from '@/stores/useScrollStore';
+import { portalProgress, portalState } from '@/3d/utils/portal';
 
 const desktopQuery = typeof window === 'undefined'
   ? null
@@ -34,6 +35,7 @@ function DesktopCursor() {
   const root = useRef(null);
   const lastPointer = useRef(null);
   const reducedMotion = useReducedMotion();
+  const fallback = useScrollStore(state => state.sceneFallback);
   const { t } = useTranslation();
 
   useGSAP((context, contextSafe) => {
@@ -167,6 +169,9 @@ function DesktopCursor() {
 
     const move = (event) => {
       if (event.pointerType === 'touch') { hideLens(); return; }
+      const state = useScrollStore.getState();
+      const p = portalProgress(state.storyChapter, state.chapterProgress, reducedMotion || fallback);
+      if (p > 0 && p < 0.96) { hideLens(); return; }
       // Read the target rectangle before any transform writes.
       updateTarget(event.target);
       const magnet = activeMagnet ? magnets.get(activeMagnet) : null;
@@ -218,7 +223,18 @@ function DesktopCursor() {
     window.addEventListener('blur', hide);
     window.addEventListener('scroll', hideLens, { passive: true });
     window.addEventListener('resize', hideLens, { passive: true });
-    const unsubscribe = useScrollStore.subscribe(hideLens);
+    let swallowing = false;
+    const syncPortal = () => {
+      hideLens();
+      const state = useScrollStore.getState();
+      const p = portalProgress(state.storyChapter, state.chapterProgress, reducedMotion || fallback);
+      const next = p > 0 && p < 0.96;
+      if (next && !swallowing) [dotX, dotY, ringX, ringY, ringScaleX, ringScaleY, fillOpacity, labelOpacity, dotOpacity]
+        .forEach(set => set.tween?.progress(1).pause());
+      swallowing = next;
+    };
+    const unsubscribe = useScrollStore.subscribe(syncPortal);
+    syncPortal();
     if (lastPointer.current) {
       const point = lastPointer.current;
       move({ ...point, target: document.elementFromPoint(point.clientX, point.clientY) });
@@ -238,7 +254,27 @@ function DesktopCursor() {
       magnets.forEach((magnet) => magnet.restore());
       magnets.clear();
     };
-  }, { scope: root, dependencies: [reducedMotion], revertOnUpdate: true });
+  }, { scope: root, dependencies: [reducedMotion, fallback], revertOnUpdate: true });
+
+  useGSAP(() => {
+    const stage = root.current.querySelector('[data-cursor-portal]');
+    const phase = {};
+    gsap.set(stage, { transform: 'none', opacity: 1 });
+    const opacity = gsap.quickSetter(stage, 'opacity');
+    const draw = () => {
+      const state = useScrollStore.getState();
+      const p = portalProgress(state.storyChapter, state.chapterProgress, reducedMotion || fallback);
+      portalState(p, phase);
+      const s = p < 0.5 ? Math.max(0.01, Math.pow(1 - phase.intake, 2)) : 1;
+      const anchor = state.storyAnchor;
+      const ox = anchor ? anchor.left + anchor.width / 2 : window.innerWidth * 0.5;
+      const oy = anchor ? anchor.top + anchor.height / 2 : window.innerHeight * 0.45;
+      stage.style.transform = `translate(${(ox + (window.innerWidth * 0.5 - ox) * phase.center) * (1 - s)}px, ${(oy + (window.innerHeight * 0.45 - oy) * phase.center) * (1 - s)}px) scale(${s})`;
+      opacity(phase.controlsOpacity);
+    };
+    draw();
+    return useScrollStore.subscribe(draw);
+  }, { scope: root, dependencies: [reducedMotion, fallback], revertOnUpdate: true });
 
   return (
     <div ref={root} data-custom-cursor aria-hidden="true"
@@ -257,7 +293,8 @@ function DesktopCursor() {
         <div data-cursor-lens data-active="false" aria-hidden="true"
           className="invisible fixed top-0 left-0 z-30 size-20 [clip-path:circle(50%)]" />
       </>}
-      <div className="gsap-cursor-ring fixed top-0 left-0 z-[9998] size-16 mix-blend-difference" aria-hidden="true">
+      <div data-cursor-portal className="fixed inset-0 z-[9998] origin-top-left">
+      <div className="gsap-cursor-ring fixed top-0 left-0 size-16 mix-blend-difference" aria-hidden="true">
         <svg viewBox="0 0 64 64" className="absolute inset-0 size-full"
           aria-hidden="true" focusable="false">
           <g data-cursor-shape>
@@ -271,7 +308,8 @@ function DesktopCursor() {
           {t('works.cursorCta')}
         </span>
       </div>
-      <div className="gsap-cursor-dot fixed top-0 left-0 z-[9998] size-1 rounded-full bg-white mix-blend-difference" aria-hidden="true" />
+      <div className="gsap-cursor-dot fixed top-0 left-0 size-1 rounded-full bg-white mix-blend-difference" aria-hidden="true" />
+      </div>
     </div>
   );
 }

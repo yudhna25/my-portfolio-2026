@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-09T03:19:41.987Z",
+  "status": "PASS",
+  "assertions": 70709,
+  "locales": {
+    "main": 243,
+    "lab": 93,
+    "scene": 2
+  },
+  "redesignTasks": 24,
+  "lastCompleted": "R7.1",
+  "remaining": [
+    "R7.2",
+    "R8.1",
+    "R8.2",
+    "R8.3",
+    "R8.4"
+  ],
+  "scope": "Static assertions for camera/finale/orbit/locale; no fresh Browser or FPS measurements"
+}

@@ -1,0 +1,130 @@
+{
+  "status": "PASS",
+  "assets": [
+    {
+      "id": "Ori",
+      "stars": 21,
+      "edges": 24,
+      "context": 0,
+      "calibration": 0,
+      "anchors": 3,
+      "maxAnchorLocalError": 2.6668472207145996e-15,
+      "maxAnchorSourceRoundtripPx": 1.2710574864626038e-13,
+      "maxMainStarProjectionError": 6.72019288585121e-10,
+      "silhouetteAreaRelativeError": 0.0006043588898944649,
+      "sourceBoundaryVerticesChecked": 3690,
+      "svgBytes": 105067
+    },
+    {
+      "id": "Sco",
+      "stars": 13,
+      "edges": 12,
+      "context": 0,
+      "calibration": 1,
+      "anchors": 3,
+      "maxAnchorLocalError": 3.510833468576701e-16,
+      "maxAnchorSourceRoundtripPx": 5.684341886080802e-14,
+      "maxMainStarProjectionError": 6.21683225411974e-10,
+      "silhouetteAreaRelativeError": 0.0005557787832851584,
+      "sourceBoundaryVerticesChecked": 3189,
+      "svgBytes": 76034
+    },
+    {
+      "id": "Leo",
+      "stars": 9,
+      "edges": 10,
+      "context": 0,
+      "calibration": 0,
+      "anchors": 3,
+      "maxAnchorLocalError": 1.1443916996305594e-16,
+      "maxAnchorSourceRoundtripPx": 1.191086668529821e-13,
+      "maxMainStarProjectionError": 6.768665261359999e-10,
+      "silhouetteAreaRelativeError": 0.00024274989390032765,
+      "sourceBoundaryVerticesChecked": 1876,
+      "svgBytes": 79122
+    },
+    {
+      "id": "Cen",
+      "stars": 17,
+      "edges": 16,
+      "context": 12,
+      "calibration": 0,
+      "anchors": 3,
+      "maxAnchorLocalError": 3.885780586188048e-16,
+      "maxAnchorSourceRoundtripPx": 4.0194366942304644e-14,
+      "maxMainStarProjectionError": 6.624382953021724e-10,
+      "silhouetteAreaRelativeError": 0.0005155127508784543,
+      "sourceBoundaryVerticesChecked": 2174,
+      "svgBytes": 62044
+    },
+    {
+      "id": "Gem",
+      "stars": 17,
+      "edges": 16,
+      "context": 12,
+      "calibration": 0,
+      "anchors": 3,
+      "maxAnchorLocalError": 7.897565585389871e-16,
+      "maxAnchorSourceRoundtripPx": 6.355287432313019e-14,
+      "maxMainStarProjectionError": 6.22138506425112e-10,
+      "silhouetteAreaRelativeError": 0.0021088931572580665,
+      "sourceBoundaryVerticesChecked": 1276,
+      "svgBytes": 37711
+    },
+    {
+      "id": "Cyg",
+      "stars": 10,
+      "edges": 9,
+      "context": 12,
+      "calibration": 0,
+      "anchors": 3,
+      "maxAnchorLocalError": 3.3766115072321297e-16,
+      "maxAnchorSourceRoundtripPx": 8.038873388460929e-14,
+      "maxMainStarProjectionError": 4.874452208193095e-10,
+      "silhouetteAreaRelativeError": 0.0008413622714494198,
+      "sourceBoundaryVerticesChecked": 1688,
+      "svgBytes": 68020
+    }
+  ],
+  "sources": 15,
+  "protectedFilesUnchanged": 82,
+  "concurrentProtectedChanges": [
+    {
+      "path": "src/components/Hero.jsx",
+      "owner": "V1",
+      "baselineSha256": "c28dba84a23b705c937fac5343b17fb8b80cc6993877b24399f32ccc36c839c6",
+      "currentSha256": "cff3b6765079d0f04c678857a4ce9b5fa710aaa6d2f90390e6b8ead8967c1ea7",
+      "note": "Observed external worker change; V4 did not write this file."
+    },
+    {
+      "path": "src/3d/components/BlackHole.jsx",
+      "owner": "V2",
+      "baselineSha256": "63ff1bfb40d44ac15910c7fb5ee28040ced5a5aa3672d01164b28606d72db96a",
+      "currentSha256": "e271e109b132fb7f07c60d0d089df84be35e517ae2f882066b7e2ddfb3fd1c2f",
+      "note": "Observed external worker change; V4 did not write this file."
+    },
+    {
+      "path": "src/3d/shaders/blackHole.js",
+      "owner": "V2",
+      "baselineSha256": "d28dac981d1f98afea1c40ac9a4653e12bf2bcb780b97905746353ea5f30b281",
+      "currentSha256": "b5b33465f365d7eaa9983ca4f7133ebd9adda63057ea2a6f51e38980a84a5e64",
+      "note": "Observed external worker change; V4 did not write this file."
+    },
+    {
+      "path": "src/components/effects/PortalHeading.jsx",
+      "owner": "V1",
+      "baselineSha256": "deae4ec8b9336de37f47c0dd4bfe5707b0312dcbfecf54cd03bae49d0515bc6c",
+      "currentSha256": "a4d795f5be4f8f611ce13ae853176dd4671dee0187c4ff1203de2fa97d442129",
+      "note": "Observed external worker change; V4 did not write this file."
+    },
+    {
+      "path": "src/styles/hero.css",
+      "owner": "V1",
+      "baselineSha256": null,
+      "currentSha256": "b73110af10884a44b0f74221b87f68c22f4e500c3463697d79d23a977bff8a2e",
+      "note": "New file from parallel owner; V4 did not write this file."
+    }
+  ],
+  "svgDecode": "6/6 via librsvg",
+  "opacityChecks": "24/24 rendered on #050505; visual interpretation in verification.md"
+}

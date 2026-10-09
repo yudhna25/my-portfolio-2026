@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.svg"></head>
+<body><div id="root"></div><script type="module">
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import '/src/index.css';
+import { i18n } from '/src/i18n/config.js';
+import { PortalHeading } from '/src/components/effects/PortalHeading.jsx';
+import { gsap } from '/src/hooks/useGSAPSetup.js';
+import { useScrollStore } from '/src/stores/useScrollStore.js';
+const root = createRoot(document.getElementById('root'));
+let subscribers=0;
+const subscribe=useScrollStore.subscribe;
+useScrollStore.subscribe=listener=>{subscribers++;const remove=subscribe(listener);return()=>{subscribers--;remove();};};
+let props = { label:i18n.t('hero.portfolio'), name:i18n.t('hero.name'), year:i18n.t('hero.year'), role:i18n.t('hero.tagline'), glitch:true };
+window.v1Fixture = { gsap, scroll:useScrollStore,
+  listenerBaseline:window.v1Listeners?.filter(x=>x.type==='visibilitychange').length??0,
+  subscriptions() { return subscribers; },
+  render(next={}) { props={...props,...next}; root.render(React.createElement(React.StrictMode,null,React.createElement(PortalHeading,props))); },
+  unmount() { root.unmount(); },
+};
+v1Fixture.render();
+</script></body></html>

@@ -1,0 +1,191 @@
+{
+  "renderer": "sharp 0.35.5 / librsvg 2.63.2",
+  "assets": [
+    {
+      "id": "Ori",
+      "decodedWidth": 512,
+      "decodedHeight": 512,
+      "opacityStats": [
+        {
+          "opacity": 0.08,
+          "previewSize": 132,
+          "peakChannel": 24,
+          "background": 5
+        },
+        {
+          "opacity": 0.12,
+          "previewSize": 132,
+          "peakChannel": 33,
+          "background": 5
+        },
+        {
+          "opacity": 0.25,
+          "previewSize": 132,
+          "peakChannel": 66,
+          "background": 5
+        },
+        {
+          "opacity": 0.35,
+          "previewSize": 132,
+          "peakChannel": 90,
+          "background": 5
+        }
+      ]
+    },
+    {
+      "id": "Sco",
+      "decodedWidth": 512,
+      "decodedHeight": 512,
+      "opacityStats": [
+        {
+          "opacity": 0.08,
+          "previewSize": 132,
+          "peakChannel": 23,
+          "background": 5
+        },
+        {
+          "opacity": 0.12,
+          "previewSize": 132,
+          "peakChannel": 33,
+          "background": 5
+        },
+        {
+          "opacity": 0.25,
+          "previewSize": 132,
+          "peakChannel": 65,
+          "background": 5
+        },
+        {
+          "opacity": 0.35,
+          "previewSize": 132,
+          "peakChannel": 89,
+          "background": 5
+        }
+      ]
+    },
+    {
+      "id": "Leo",
+      "decodedWidth": 512,
+      "decodedHeight": 512,
+      "opacityStats": [
+        {
+          "opacity": 0.08,
+          "previewSize": 132,
+          "peakChannel": 24,
+          "background": 5
+        },
+        {
+          "opacity": 0.12,
+          "previewSize": 132,
+          "peakChannel": 33,
+          "background": 5
+        },
+        {
+          "opacity": 0.25,
+          "previewSize": 132,
+          "peakChannel": 66,
+          "background": 5
+        },
+        {
+          "opacity": 0.35,
+          "previewSize": 132,
+          "peakChannel": 90,
+          "background": 5
+        }
+      ]
+    },
+    {
+      "id": "Cen",
+      "decodedWidth": 512,
+      "decodedHeight": 512,
+      "opacityStats": [
+        {
+          "opacity": 0.08,
+          "previewSize": 132,
+          "peakChannel": 24,
+          "background": 5
+        },
+        {
+          "opacity": 0.12,
+          "previewSize": 132,
+          "peakChannel": 33,
+          "background": 5
+        },
+        {
+          "opacity": 0.25,
+          "previewSize": 132,
+          "peakChannel": 66,
+          "background": 5
+        },
+        {
+          "opacity": 0.35,
+          "previewSize": 132,
+          "peakChannel": 90,
+          "background": 5
+        }
+      ]
+    },
+    {
+      "id": "Gem",
+      "decodedWidth": 256,
+      "decodedHeight": 256,
+      "opacityStats": [
+        {
+          "opacity": 0.08,
+          "previewSize": 132,
+          "peakChannel": 24,
+          "background": 5
+        },
+        {
+          "opacity": 0.12,
+          "previewSize": 132,
+          "peakChannel": 33,
+          "background": 5
+        },
+        {
+          "opacity": 0.25,
+          "previewSize": 132,
+          "peakChannel": 66,
+          "background": 5
+        },
+        {
+          "opacity": 0.35,
+          "previewSize": 132,
+          "peakChannel": 90,
+          "background": 5
+        }
+      ]
+    },
+    {
+      "id": "Cyg",
+      "decodedWidth": 512,
+      "decodedHeight": 512,
+      "opacityStats": [
+        {
+          "opacity": 0.08,
+          "previewSize": 132,
+          "peakChannel": 24,
+          "background": 5
+        },
+        {
+          "opacity": 0.12,
+          "previewSize": 132,
+          "peakChannel": 33,
+          "background": 5
+        },
+        {
+          "opacity": 0.25,
+          "previewSize": 132,
+          "peakChannel": 66,
+          "background": 5
+        },
+        {
+          "opacity": 0.35,
+          "previewSize": 132,
+          "peakChannel": 90,
+          "background": 5
+        }
+      ]
+    }
+  ]
+}

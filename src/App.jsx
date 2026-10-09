@@ -37,11 +37,13 @@ function Portfolio({ restore }) {
   const [educationStages] = useState(() => ({ saigonUniversity: { current: null }, greenAcademy: { current: null }, arenaMultimedia: { current: null } }));
   const { i18n } = useTranslation();
   const reduced = useReducedMotion();
+  const fallback = useScrollStore(state => state.sceneFallback);
+  const staticMotion = reduced || fallback;
   const loading = useLoadingStore((state) => state.isLoading);
   const setLoading = useLoadingStore((state) => state.setLoading);
 
   useSmoothScroll({ scope: root, paused: loading });
-  const progress = useScrollProgress({ scope: root, story: true, locale: i18n.resolvedLanguage, ready: !loading, initialPosition: restore, historyManaged: true });
+  const progress = useScrollProgress({ scope: root, story: true, locale: i18n.resolvedLanguage, ready: !loading, initialPosition: restore, historyManaged: true, staticMotion });
 
   useGSAPSetup(() => {
     if (loading || !restore) return;
@@ -53,7 +55,7 @@ function Portfolio({ restore }) {
     inputs.forEach(type => window.addEventListener(type, cancel, { passive: true }));
     const settle = () => {
       if (!active) return;
-      if ((!progress.current || !document.querySelector('canvas')) && tries++ < 120) {
+      if ((!progress.current || !document.querySelector('canvas') && !useScrollStore.getState().sceneFallback) && tries++ < 120) {
         frame = requestAnimationFrame(settle);
         return;
       }
@@ -86,7 +88,7 @@ function Portfolio({ restore }) {
     let previous;
     const draw = () => {
       const state = useScrollStore.getState();
-      const settled = portalProgress(state.storyChapter, state.chapterProgress, reduced) === 1;
+      const settled = portalProgress(state.storyChapter, state.chapterProgress, staticMotion) === 1;
       if (settled === previous) return;
       previous = settled;
       // Publish the readable DOM immediately with inert, before native focus runs.
@@ -97,7 +99,7 @@ function Portfolio({ restore }) {
     };
     draw();
     return useScrollStore.subscribe(draw);
-  }, { scope: root, dependencies: [reduced], revertOnUpdate: true });
+  }, { scope: root, dependencies: [staticMotion], revertOnUpdate: true });
 
   useEffect(() => {
     document.body.classList.toggle('loading-lock', loading);
@@ -139,15 +141,15 @@ function Portfolio({ restore }) {
         <main id="smooth-content" tabIndex={-1}>
           <section id="hero" aria-labelledby="hero-heading">
             <div data-story-chapter="hero" />
-            <div data-story-chapter="portal" aria-hidden="true" className="min-h-[175vh] motion-reduce:min-h-screen" />
+            <div data-story-chapter="portal" aria-hidden="true" className={staticMotion ? 'min-h-screen' : 'min-h-[400vh]'} />
           </section>
+          <div data-story-chapter="about"><About /></div>
           <div ref={reading} data-story-content className="invisible">
-            <div data-story-chapter="about"><About /></div>
             <div data-story-chapter="skills"><Skills stageRef={skillsStage} /></div>
             <div data-story-chapter="education"><Education stageRefs={educationStages} /></div>
             <div data-story-chapter="experience"><Experience onLayout={captureMeteorLayout} /></div>
             <div data-story-chapter="works"><Work /></div>
-            <div data-story-chapter="finale" aria-hidden="true" className="min-h-[225vh] motion-reduce:min-h-0" />
+            <div data-story-chapter="finale" aria-hidden="true" className={staticMotion ? 'min-h-0' : 'min-h-[225vh]'} />
             <div data-story-chapter="contact"><Contact /></div>
             <Footer />
           </div>

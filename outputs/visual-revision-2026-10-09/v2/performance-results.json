@@ -1,0 +1,949 @@
+{
+  "started": "2026-10-09T08:29:40.370Z",
+  "base": "http://127.0.0.1:5183",
+  "configurations": [
+    {
+      "id": "390-dpr3",
+      "frames": [
+        {
+          "label": "configuration",
+          "chapter": "hero",
+          "p": 0,
+          "canvas": 1,
+          "tier": "low",
+          "viewport": [
+            390,
+            844
+          ],
+          "deviceDpr": 3,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            390,
+            844
+          ],
+          "target": [
+            390,
+            844
+          ],
+          "targetMiB": 2.51129150390625,
+          "memory": {
+            "geometries": 2,
+            "textures": 1
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0,
+              2.2,
+              32
+            ],
+            "uCameraMatrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.9976450635353976,
+              -0.06858809811805859,
+              0,
+              0,
+              0.06858809811805859,
+              0.9976450635353976,
+              0,
+              0,
+              2.2,
+              -168,
+              1
+            ],
+            "uInverseProjection": [
+              0.5773502691896258,
+              0,
+              0,
+              0,
+              0,
+              1.2494451979385748,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.99875,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8974158653846154,
+              0.5660267328199052
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5
+            ],
+            "uPortalScale": 0.7049264329789794,
+            "uPortalRadius": [
+              111.08125,
+              55.540625
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              390,
+              844
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 326.984375,
+            "top": 346.4375,
+            "width": 46.015625,
+            "height": 39.671875,
+            "fixed": true
+          },
+          "camera": [
+            0,
+            2.2,
+            -168
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "de24d586-07fd-4282-90b6-908bfbccbe8c",
+          "compiledMask": false
+        }
+      ],
+      "performance": [
+        {
+          "label": "O-size full target",
+          "ms": 6011.5,
+          "frames": 360,
+          "fps": 59.885219995009564,
+          "cpuSubmissionMs": {
+            "samples": 360,
+            "mean": 0.5816666685872608,
+            "p95": 1.2000000476837158,
+            "max": 1.7999999523162842
+          },
+          "gpuMs": {
+            "samples": 359,
+            "mean": 0.8868049080779948,
+            "p95": 1.244328,
+            "max": 2.505823
+          },
+          "frameIntervalMs": {
+            "samples": 360,
+            "mean": 16.680555555555557,
+            "p95": 17.5,
+            "max": 18.600000023841858
+          },
+          "gpuTimer": true
+        },
+        {
+          "label": "close-up full target",
+          "ms": 6003.699999928474,
+          "frames": 360,
+          "fps": 59.96302280331943,
+          "cpuSubmissionMs": {
+            "samples": 360,
+            "mean": 0.5238888863060209,
+            "p95": 1.1999999284744263,
+            "max": 1.600000023841858
+          },
+          "gpuMs": {
+            "samples": 359,
+            "mean": 9.133381256267404,
+            "p95": 9.650878,
+            "max": 12.3792
+          },
+          "frameIntervalMs": {
+            "samples": 360,
+            "mean": 16.682777777645324,
+            "p95": 17.5,
+            "max": 18.5
+          },
+          "gpuTimer": true
+        },
+        {
+          "label": "close-up ray only",
+          "ms": 6002.100000023842,
+          "frames": 360,
+          "fps": 59.97900734719015,
+          "cpuSubmissionMs": {
+            "samples": 360,
+            "mean": 0.5302777790360981,
+            "p95": 1.2000000476837158,
+            "max": 2.600000023841858
+          },
+          "gpuMs": {
+            "samples": 359,
+            "mean": 9.042939150417824,
+            "p95": 9.681877,
+            "max": 10.833956
+          },
+          "frameIntervalMs": {
+            "samples": 360,
+            "mean": 16.68361111117734,
+            "p95": 17.600000023841858,
+            "max": 18.799999952316284
+          },
+          "gpuTimer": true
+        }
+      ],
+      "source": {
+        "src/3d/components/BlackHole.jsx": "e271e109b132fb7f07c60d0d089df84be35e517ae2f882066b7e2ddfb3fd1c2f",
+        "src/3d/components/BlackHoleSystem.jsx": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+        "src/3d/components/BlackHoleBloomMask.jsx": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c",
+        "src/3d/shaders/blackHole.js": "b5b33465f365d7eaa9983ca4f7133ebd9adda63057ea2a6f51e38980a84a5e64",
+        "src/3d/quality.js": "e41080fcf00415c51806f658902908cebf0eb9b6501371bb558bfd5bf58b64e0",
+        "src/components/Hero.jsx": "cff3b6765079d0f04c678857a4ce9b5fa710aaa6d2f90390e6b8ead8967c1ea7",
+        "src/components/effects/PortalHeading.jsx": "a4d795f5be4f8f611ce13ae853176dd4671dee0187c4ff1203de2fa97d442129",
+        "src/styles/hero.css": "b73110af10884a44b0f74221b87f68c22f4e500c3463697d79d23a977bff8a2e"
+      }
+    },
+    {
+      "id": "900-dpr2",
+      "frames": [
+        {
+          "label": "configuration",
+          "chapter": "hero",
+          "p": 0,
+          "canvas": 1,
+          "tier": "medium",
+          "viewport": [
+            900,
+            900
+          ],
+          "deviceDpr": 2,
+          "rendererDpr": 1.5,
+          "drawingBuffer": [
+            1350,
+            1350
+          ],
+          "target": [
+            1350,
+            1350
+          ],
+          "targetMiB": 13.904571533203125,
+          "memory": {
+            "geometries": 3,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0,
+              2.2,
+              32
+            ],
+            "uCameraMatrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.9976450635353976,
+              -0.06858809811805859,
+              0,
+              0,
+              0.06858809811805859,
+              0.9976450635353976,
+              0,
+              0,
+              2.2,
+              -168,
+              1
+            ],
+            "uInverseProjection": [
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.99875,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.811640625,
+              0.5313628472222223
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5
+            ],
+            "uPortalScale": 0.5528263157936106,
+            "uPortalRadius": [
+              201.03125,
+              100.515625
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              900,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 688.828125,
+            "top": 385.875,
+            "width": 83.296875,
+            "height": 71.796875,
+            "fixed": true
+          },
+          "camera": [
+            0,
+            2.2,
+            -168
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "56c1fbb5-849d-45d4-a03f-378b7375c50b",
+          "compiledMask": true
+        }
+      ],
+      "performance": [
+        {
+          "label": "O-size full target",
+          "ms": 6007,
+          "frames": 360,
+          "fps": 59.93008157149992,
+          "cpuSubmissionMs": {
+            "samples": 360,
+            "mean": 1.115555555290646,
+            "p95": 1.7000000476837158,
+            "max": 2.100000023841858
+          },
+          "gpuMs": {
+            "samples": 359,
+            "mean": 9.636820008356548,
+            "p95": 10.321708,
+            "max": 12.586032
+          },
+          "frameIntervalMs": {
+            "samples": 360,
+            "mean": 16.68166666660044,
+            "p95": 17.399999976158142,
+            "max": 18.100000023841858
+          },
+          "gpuTimer": true
+        },
+        {
+          "label": "close-up full target",
+          "ms": 6013.700000047684,
+          "frames": 150,
+          "fps": 24.94304670981436,
+          "cpuSubmissionMs": {
+            "samples": 150,
+            "mean": 0.5646666669845581,
+            "p95": 0.8999999761581421,
+            "max": 1.6999999284744263
+          },
+          "gpuMs": {
+            "samples": 144,
+            "mean": 38.25971911805554,
+            "p95": 48.931887,
+            "max": 55.869026
+          },
+          "frameIntervalMs": {
+            "samples": 150,
+            "mean": 40.124000000158944,
+            "p95": 54.5,
+            "max": 66.60000002384186
+          },
+          "gpuTimer": true
+        },
+        {
+          "label": "close-up ray only",
+          "ms": 6007.899999976158,
+          "frames": 161,
+          "fps": 26.798049235280033,
+          "cpuSubmissionMs": {
+            "samples": 161,
+            "mean": 0.5403726715478838,
+            "p95": 1,
+            "max": 1.899999976158142
+          },
+          "gpuMs": {
+            "samples": 155,
+            "mean": 26.846958754838717,
+            "p95": 28.704551,
+            "max": 31.880455
+          },
+          "frameIntervalMs": {
+            "samples": 161,
+            "mean": 37.19068323010983,
+            "p95": 44.200000047683716,
+            "max": 60.60000002384186
+          },
+          "gpuTimer": true
+        }
+      ],
+      "source": {
+        "src/3d/components/BlackHole.jsx": "e271e109b132fb7f07c60d0d089df84be35e517ae2f882066b7e2ddfb3fd1c2f",
+        "src/3d/components/BlackHoleSystem.jsx": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+        "src/3d/components/BlackHoleBloomMask.jsx": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c",
+        "src/3d/shaders/blackHole.js": "b5b33465f365d7eaa9983ca4f7133ebd9adda63057ea2a6f51e38980a84a5e64",
+        "src/3d/quality.js": "e41080fcf00415c51806f658902908cebf0eb9b6501371bb558bfd5bf58b64e0",
+        "src/components/Hero.jsx": "cff3b6765079d0f04c678857a4ce9b5fa710aaa6d2f90390e6b8ead8967c1ea7",
+        "src/components/effects/PortalHeading.jsx": "a4d795f5be4f8f611ce13ae853176dd4671dee0187c4ff1203de2fa97d442129",
+        "src/styles/hero.css": "b73110af10884a44b0f74221b87f68c22f4e500c3463697d79d23a977bff8a2e"
+      }
+    },
+    {
+      "id": "1440-dpr1",
+      "frames": [
+        {
+          "label": "configuration",
+          "chapter": "hero",
+          "p": 0,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1440,
+            900
+          ],
+          "deviceDpr": 1,
+          "rendererDpr": 1,
+          "drawingBuffer": [
+            1440,
+            900
+          ],
+          "target": [
+            1440,
+            900
+          ],
+          "targetMiB": 9.8876953125,
+          "memory": {
+            "geometries": 3,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0,
+              2.2,
+              32
+            ],
+            "uCameraMatrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.9976450635353976,
+              -0.06858809811805859,
+              0,
+              0,
+              0.06858809811805859,
+              0.9976450635353976,
+              0,
+              0,
+              2.2,
+              -168,
+              1
+            ],
+            "uInverseProjection": [
+              0.9237604307034011,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896257,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -1,
+              5.001250000000001
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8116482204861111,
+              0.49948784722222217
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5
+            ],
+            "uPortalScale": 0.8846424156758257,
+            "uPortalRadius": [
+              321.69374999999997,
+              160.84687499999998
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              1440,
+              900
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1102.140625,
+            "top": 393.015625,
+            "width": 133.265625,
+            "height": 114.890625,
+            "fixed": true
+          },
+          "camera": [
+            0,
+            2.2,
+            -168
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "d1e6a546-f663-40a6-9a3c-95c6f6111911",
+          "compiledMask": true
+        }
+      ],
+      "performance": [
+        {
+          "label": "O-size full target",
+          "ms": 6000.600000023842,
+          "frames": 360,
+          "fps": 59.994000599701636,
+          "cpuSubmissionMs": {
+            "samples": 360,
+            "mean": 1.0150000045696894,
+            "p95": 1.7000000476837158,
+            "max": 3.5
+          },
+          "gpuMs": {
+            "samples": 359,
+            "mean": 9.575997164345413,
+            "p95": 10.75804,
+            "max": 13.561279
+          },
+          "frameIntervalMs": {
+            "samples": 360,
+            "mean": 16.681944444444444,
+            "p95": 17.700000047683716,
+            "max": 20
+          },
+          "gpuTimer": true
+        },
+        {
+          "label": "close-up full target",
+          "ms": 6004.299999952316,
+          "frames": 176,
+          "fps": 29.31232616648031,
+          "cpuSubmissionMs": {
+            "samples": 176,
+            "mean": 0.4971590888771144,
+            "p95": 0.7999999523162842,
+            "max": 1.1999999284744263
+          },
+          "gpuMs": {
+            "samples": 170,
+            "mean": 32.847183294117634,
+            "p95": 36.598686,
+            "max": 41.867915
+          },
+          "frameIntervalMs": {
+            "samples": 176,
+            "mean": 34.08465909077363,
+            "p95": 60.89999997615814,
+            "max": 75.09999990463257
+          },
+          "gpuTimer": true
+        },
+        {
+          "label": "close-up ray only",
+          "ms": 6001.600000023842,
+          "frames": 173,
+          "fps": 28.825646494153684,
+          "cpuSubmissionMs": {
+            "samples": 173,
+            "mean": 0.49768785865320636,
+            "p95": 0.8000000715255737,
+            "max": 1.7000000476837158
+          },
+          "gpuMs": {
+            "samples": 167,
+            "mean": 25.835409622754494,
+            "p95": 28.734385,
+            "max": 29.974713
+          },
+          "frameIntervalMs": {
+            "samples": 173,
+            "mean": 34.79826589609157,
+            "p95": 39.40000009536743,
+            "max": 46
+          },
+          "gpuTimer": true
+        }
+      ],
+      "source": {
+        "src/3d/components/BlackHole.jsx": "e271e109b132fb7f07c60d0d089df84be35e517ae2f882066b7e2ddfb3fd1c2f",
+        "src/3d/components/BlackHoleSystem.jsx": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+        "src/3d/components/BlackHoleBloomMask.jsx": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c",
+        "src/3d/shaders/blackHole.js": "b5b33465f365d7eaa9983ca4f7133ebd9adda63057ea2a6f51e38980a84a5e64",
+        "src/3d/quality.js": "e41080fcf00415c51806f658902908cebf0eb9b6501371bb558bfd5bf58b64e0",
+        "src/components/Hero.jsx": "cff3b6765079d0f04c678857a4ce9b5fa710aaa6d2f90390e6b8ead8967c1ea7",
+        "src/components/effects/PortalHeading.jsx": "a4d795f5be4f8f611ce13ae853176dd4671dee0187c4ff1203de2fa97d442129",
+        "src/styles/hero.css": "b73110af10884a44b0f74221b87f68c22f4e500c3463697d79d23a977bff8a2e"
+      }
+    },
+    {
+      "id": "1920-dpr2",
+      "frames": [
+        {
+          "label": "configuration",
+          "chapter": "hero",
+          "p": 0,
+          "canvas": 1,
+          "tier": "high",
+          "viewport": [
+            1920,
+            1080
+          ],
+          "deviceDpr": 2,
+          "rendererDpr": 1.75,
+          "drawingBuffer": [
+            3360,
+            1890
+          ],
+          "target": [
+            3360,
+            1890
+          ],
+          "targetMiB": 48.44970703125,
+          "memory": {
+            "geometries": 3,
+            "textures": 23
+          },
+          "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+          "uniforms": {
+            "uTime": 0,
+            "uDiskIntensity": 1,
+            "uObserver": [
+              0,
+              2.2,
+              32
+            ],
+            "uCameraMatrix": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0.9976450635353976,
+              -0.06858809811805859,
+              0,
+              0,
+              0.06858809811805859,
+              0.9976450635353976,
+              0,
+              0,
+              2.2,
+              -168,
+              1
+            ],
+            "uInverseProjection": [
+              1.0264004785593344,
+              0,
+              0,
+              0,
+              0,
+              0.5773502691896256,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -4.998749999999999,
+              0,
+              0,
+              -0.9999999999999999,
+              5.00125
+            ],
+            "uDiskFrame": [
+              0.5735764363510462,
+              -0.8171566310795415,
+              0.057141158069891625,
+              0.8191520442889918,
+              0.5721792329799459,
+              -0.04001066962257071,
+              0,
+              0.0697564737441253,
+              0.9975640502598242
+            ],
+            "uPortalEnabled": 1,
+            "uPortalMini": 1,
+            "uPortalCenter": [
+              0.8116292317708333,
+              0.4759693287037037
+            ],
+            "uRayCenter": [
+              0.5,
+              0.5
+            ],
+            "uPortalScale": 0.9829360174175842,
+            "uPortalRadius": [
+              428.92499999999995,
+              214.46249999999998
+            ],
+            "uPortalVisibility": 1,
+            "uPortalDust": 0.12,
+            "uPortalPull": 0,
+            "uPortalViewport": [
+              1920,
+              1080
+            ],
+            "uFinaleEnabled": 0,
+            "uFinaleHole": 1,
+            "uFinaleOrigin": 0,
+            "uFinaleGas": [
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "uniformsFinite": true,
+          "shared": true,
+          "rayPerFrame": [
+            1,
+            1
+          ],
+          "anchor": {
+            "left": 1469.484375,
+            "top": 489.359375,
+            "width": 177.6875,
+            "height": 153.1875,
+            "fixed": true
+          },
+          "camera": [
+            0,
+            2.2,
+            -168
+          ],
+          "glError": 0,
+          "disposeEvents": 0,
+          "rayId": "fc291061-2086-463b-b843-f2f4eba864c9",
+          "compiledMask": true
+        }
+      ],
+      "performance": [
+        {
+          "label": "O-size full target",
+          "ms": 6008.899999976158,
+          "frames": 112,
+          "fps": 18.639018788870573,
+          "cpuSubmissionMs": {
+            "samples": 112,
+            "mean": 0.5830357181174415,
+            "p95": 0.8000000715255737,
+            "max": 1.600000023841858
+          },
+          "gpuMs": {
+            "samples": 106,
+            "mean": 49.00401247169813,
+            "p95": 55.340695,
+            "max": 61.389504
+          },
+          "frameIntervalMs": {
+            "samples": 112,
+            "mean": 53.40982142942293,
+            "p95": 62,
+            "max": 156.39999997615814
+          },
+          "gpuTimer": true
+        },
+        {
+          "label": "close-up full target",
+          "ms": 6003.800000071526,
+          "frames": 38,
+          "fps": 6.329324760909306,
+          "cpuSubmissionMs": {
+            "samples": 38,
+            "mean": 0.6552631635414926,
+            "p95": 1.100000023841858,
+            "max": 1.2999999523162842
+          },
+          "gpuMs": {
+            "samples": 33,
+            "mean": 151.41277257575757,
+            "p95": 168.372743,
+            "max": 172.221727
+          },
+          "frameIntervalMs": {
+            "samples": 38,
+            "mean": 155.05263157894737,
+            "p95": 174.10000002384186,
+            "max": 197.80000007152557
+          },
+          "gpuTimer": true
+        },
+        {
+          "label": "close-up ray only",
+          "ms": 6008.399999976158,
+          "frames": 37,
+          "fps": 6.158045403126759,
+          "cpuSubmissionMs": {
+            "samples": 37,
+            "mean": 0.6297297381065987,
+            "p95": 1.100000023841858,
+            "max": 1.100000023841858
+          },
+          "gpuMs": {
+            "samples": 31,
+            "mean": 120.20513422580645,
+            "p95": 130.098812,
+            "max": 130.544061
+          },
+          "frameIntervalMs": {
+            "samples": 37,
+            "mean": 162.55675675417925,
+            "p95": 201.39999997615814,
+            "max": 203.29999995231628
+          },
+          "gpuTimer": true
+        }
+      ],
+      "source": {
+        "src/3d/components/BlackHole.jsx": "e271e109b132fb7f07c60d0d089df84be35e517ae2f882066b7e2ddfb3fd1c2f",
+        "src/3d/components/BlackHoleSystem.jsx": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+        "src/3d/components/BlackHoleBloomMask.jsx": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c",
+        "src/3d/shaders/blackHole.js": "b5b33465f365d7eaa9983ca4f7133ebd9adda63057ea2a6f51e38980a84a5e64",
+        "src/3d/quality.js": "e41080fcf00415c51806f658902908cebf0eb9b6501371bb558bfd5bf58b64e0",
+        "src/components/Hero.jsx": "cff3b6765079d0f04c678857a4ce9b5fa710aaa6d2f90390e6b8ead8967c1ea7",
+        "src/components/effects/PortalHeading.jsx": "a4d795f5be4f8f611ce13ae853176dd4671dee0187c4ff1203de2fa97d442129",
+        "src/styles/hero.css": "b73110af10884a44b0f74221b87f68c22f4e500c3463697d79d23a977bff8a2e"
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "sourceBefore": {
+    "src/3d/components/BlackHole.jsx": "e271e109b132fb7f07c60d0d089df84be35e517ae2f882066b7e2ddfb3fd1c2f",
+    "src/3d/components/BlackHoleSystem.jsx": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+    "src/3d/components/BlackHoleBloomMask.jsx": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c",
+    "src/3d/shaders/blackHole.js": "b5b33465f365d7eaa9983ca4f7133ebd9adda63057ea2a6f51e38980a84a5e64",
+    "src/3d/quality.js": "e41080fcf00415c51806f658902908cebf0eb9b6501371bb558bfd5bf58b64e0",
+    "src/components/Hero.jsx": "cff3b6765079d0f04c678857a4ce9b5fa710aaa6d2f90390e6b8ead8967c1ea7",
+    "src/components/effects/PortalHeading.jsx": "a4d795f5be4f8f611ce13ae853176dd4671dee0187c4ff1203de2fa97d442129",
+    "src/styles/hero.css": "b73110af10884a44b0f74221b87f68c22f4e500c3463697d79d23a977bff8a2e"
+  },
+  "hotReload": "Vite WebSocket blocked per test page to prevent concurrent V1 edits navigating a captured page.",
+  "browser": "154.0.4258.62",
+  "status": "PASS",
+  "finished": "2026-10-09T08:31:10.879Z",
+  "sourceAfter": {
+    "src/3d/components/BlackHole.jsx": "e271e109b132fb7f07c60d0d089df84be35e517ae2f882066b7e2ddfb3fd1c2f",
+    "src/3d/components/BlackHoleSystem.jsx": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+    "src/3d/components/BlackHoleBloomMask.jsx": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c",
+    "src/3d/shaders/blackHole.js": "b5b33465f365d7eaa9983ca4f7133ebd9adda63057ea2a6f51e38980a84a5e64",
+    "src/3d/quality.js": "e41080fcf00415c51806f658902908cebf0eb9b6501371bb558bfd5bf58b64e0",
+    "src/components/Hero.jsx": "cff3b6765079d0f04c678857a4ce9b5fa710aaa6d2f90390e6b8ead8967c1ea7",
+    "src/components/effects/PortalHeading.jsx": "a4d795f5be4f8f611ce13ae853176dd4671dee0187c4ff1203de2fa97d442129",
+    "src/styles/hero.css": "b73110af10884a44b0f74221b87f68c22f4e500c3463697d79d23a977bff8a2e"
+  }
+}

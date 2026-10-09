@@ -1,0 +1,1241 @@
+{
+  "task": "V0",
+  "capturedAt": "2026-10-09T07:26:11.357Z",
+  "root": ".",
+  "git": {
+    "branch": "main",
+    "head": "5296621304fa2192efd0e05bbd5c47679e7d4614",
+    "status": " M AGENTS.md\n?? outputs/project-status-2026-10-09/\n?? outputs/visual-revision-2026-10-09/\n?? prompts.md",
+    "diffStat": " AGENTS.md | 4 ++++\n 1 file changed, 4 insertions(+)",
+    "preExistingStatus": " M AGENTS.md\n?? outputs/project-status-2026-10-09/\n?? prompts.md",
+    "captureStatusNote": "Inventory captured after creating the V0 output directory; pre-existing edits listed separately."
+  },
+  "runtime": {
+    "node": "v24.21.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "versions": {
+    "react": "19.2.3",
+    "vite": "7.3.6",
+    "tailwindcss": "4.3.3",
+    "gsap": "3.15.0",
+    "@react-three/fiber": "9.8.1",
+    "three": "0.186.1",
+    "zustand": "5.0.15",
+    "@react-three/postprocessing": "3.1.3",
+    "postprocessing": "6.39.5"
+  },
+  "inventory": [
+    {
+      "path": ".gitignore",
+      "bytes": 277,
+      "sha256": "d50ab07e11fa4bf3b1c7c3312e1d7baeab56cca756832ccf40476823ad2a38b7"
+    },
+    {
+      "path": "3d-lab.html",
+      "bytes": 443,
+      "sha256": "0985426c7b495d24d6a786edc33c9f6b1a694ad5ca7c618a6aa18ae5501d0a87"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 56066,
+      "sha256": "dc54acecad0a399a05fc2aef2f71c46b66273d7483ccaf55544f63d7577cdaa7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1173,
+      "sha256": "0592a648101d2fb3057915284295c2c8b4cb794ad2e7fcb87caa2b67a6bbb0d3"
+    },
+    {
+      "path": "eslint.config.js",
+      "bytes": 837,
+      "sha256": "0e765a818ff4c77decab96743525b1c91151b5b48aab88a5240d52ca539d1cee"
+    },
+    {
+      "path": "index.html",
+      "bytes": 6930,
+      "sha256": "2328876f2109702b0985231501c7b547cd337ee87beb19848602f00c67a432e7"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/mono/after-effects.svg",
+      "bytes": 1248,
+      "sha256": "22ddf748011151ace0418f26ca4a061b5aafe2e3b1dbbbff1c2cbac16cfc4f98"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/mono/chatgpt.svg",
+      "bytes": 3003,
+      "sha256": "11e545d4e3ee51d3aa6235477c99b2f8445fa5c46c55b7d5f19de9a8d8d26fb0"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/mono/claude.svg",
+      "bytes": 2601,
+      "sha256": "27fe1b1bd0ba34ad10142cb4e5e293c3861971581ec03ef832c986a35e500e88"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/mono/davinci-resolve.webp",
+      "bytes": 30488,
+      "sha256": "eafe92dded33f19395885cb80e1128ad0ec54e77ea792abfbe4077d3250e22b1"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/mono/figma.svg",
+      "bytes": 1630,
+      "sha256": "d170a900bcc350e9661df0d553b8d6d4157c88792d3553c5a63604ad4b58873d"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/mono/google-antigravity.svg",
+      "bytes": 461,
+      "sha256": "b19664975ecee44944ccfc74ad952d1033a92635cf61c8820709aa28e643ffd6"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/mono/illustrator.svg",
+      "bytes": 1006,
+      "sha256": "3b8ecf9a2edc3bb532bbd2709e6042ac2c7a6144aee5534fb5de6d6a1df49654"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/mono/photoshop.svg",
+      "bytes": 1480,
+      "sha256": "8f2a154d340093c54ebb6d5ada6c7810c6d398f8dc7f91f4e42983e881d45dfb"
+    },
+    {
+      "path": "outputs/redesign/r0.2/logos/mono/premiere-pro.svg",
+      "bytes": 1107,
+      "sha256": "4f246aee08da3112643f37898bbf0de1c546c654851c40365b36fa7f5a5d1626"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 422076,
+      "sha256": "824609c3123813427ea27548c5622e471b9aa9e7d8d249cfc50cdad48b11996c"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1456,
+      "sha256": "e21571db76af9cddd6d3296ac10464f7f6c8ba83eaff6234c0cfde9cce59b632"
+    },
+    {
+      "path": "postcss.config.js",
+      "bytes": 74,
+      "sha256": "725980494aa651bb44b5bcfef02fa9d20af03700c1e3f1d178b39c339dceb9b5"
+    },
+    {
+      "path": "prompts.md",
+      "bytes": 49221,
+      "sha256": "5dcbc853a9d14422c29d9867a5c32c8f15ac780ae46cbf00524e86056bf1a6e5"
+    },
+    {
+      "path": "public/avatar-cutout.webp",
+      "bytes": 66084,
+      "sha256": "6b2fea6dcbd2bd204fc0aa6c545cbe7a696670fc4532c992378c3393d53b511f"
+    },
+    {
+      "path": "public/avatar.webp",
+      "bytes": 112382,
+      "sha256": "e6c0bac02737f8beb0bd25ca08793e552cc801b54d88464c9ae761a15dd90bd2"
+    },
+    {
+      "path": "public/favicon.svg",
+      "bytes": 1042,
+      "sha256": "59b453e9ccaefde87745b96561282b6ecf48f2dca482898d2fedcae064d18aa7"
+    },
+    {
+      "path": "public/icons/ae.png",
+      "bytes": 4553,
+      "sha256": "13df4673f9bd262a1376c488e1cbfc67bd1cd0500555c05677edfa15128069af"
+    },
+    {
+      "path": "public/icons/ai.png",
+      "bytes": 3381,
+      "sha256": "7a9e921269cb9257010d22f61694268d14c171b245413134e7cd3244fcc56331"
+    },
+    {
+      "path": "public/icons/figma.png",
+      "bytes": 2217,
+      "sha256": "79036c1f608b11eb14a711ec02bab4cc162a2406e7fb89ae5f02a456d4918f48"
+    },
+    {
+      "path": "public/icons/pr.png",
+      "bytes": 16211,
+      "sha256": "6af65c63d2f8a59fc54f49f5bc76b9938777789a04f36b625433409d9803efab"
+    },
+    {
+      "path": "public/icons/ps.png",
+      "bytes": 3871,
+      "sha256": "f3083bd3ed5ac24d94d45907a1fa4ab1713f1d8fc6361d2e9ebfc960c5b85862"
+    },
+    {
+      "path": "public/og-image.jpg",
+      "bytes": 62445,
+      "sha256": "bc898f6ebda22f5920af9bcf5bc01c7aa3ebb7a53e01434a787283c4598e9e2f"
+    },
+    {
+      "path": "public/project1.webp",
+      "bytes": 51014,
+      "sha256": "2e9d8cee3c4c3584bb74bdeffcf384dcfabeb7d74bb165fd48d5094e38ad359b"
+    },
+    {
+      "path": "public/project2.webp",
+      "bytes": 62292,
+      "sha256": "1032b163b247f7d528b313f093abf6bc29eade6b39d98b5acbbd5b068056de9b"
+    },
+    {
+      "path": "public/project3.webp",
+      "bytes": 43608,
+      "sha256": "03117079520095b5dab4cd53a4b8c2a8495fe174efc1aa4d9b9d998447dad6fc"
+    },
+    {
+      "path": "public/projects/edura/overview.webp",
+      "bytes": 92204,
+      "sha256": "cc792c5dfb8d3acaf30925372969711e6b18a19ca831e6cc9baa8e63900d9b23"
+    },
+    {
+      "path": "public/projects/edura/problem.webp",
+      "bytes": 135960,
+      "sha256": "11e86ff9ffe00bf747a3b50db209e68658b08fcaa2989e4cb6300146b2fc1c4d"
+    },
+    {
+      "path": "public/projects/edura/solution.webp",
+      "bytes": 96112,
+      "sha256": "7714b0840765fecc8a397c5c3a03eb97da448d752090821752998948f8ba47a8"
+    },
+    {
+      "path": "public/pwa-192x192.png",
+      "bytes": 5958,
+      "sha256": "6e838d4b2412cb88c71f6befcc441b984efc2c73e1974c4c1a244bd7d7e9f724"
+    },
+    {
+      "path": "public/pwa-512x512.png",
+      "bytes": 21440,
+      "sha256": "ac06e97bda0b1a82b5fe7f8cbcedbef0bb7a9ac1de1c1d988ad9833091470f97"
+    },
+    {
+      "path": "public/pwa-maskable-192x192.png",
+      "bytes": 4912,
+      "sha256": "d848d131a9c68bb1469c201ad41c923a4f10cc79890719b86e21cccdda13a3b6"
+    },
+    {
+      "path": "public/pwa-maskable-512x512.png",
+      "bytes": 18479,
+      "sha256": "9894d4a3820f39bb8456e5881ecb9c9aa3006a774beefb774e619e18bd97f834"
+    },
+    {
+      "path": "public/theme-init.js",
+      "bytes": 484,
+      "sha256": "b4b82e9564cbbf346b6c924d262b8b741cb2eeac29c46ece0e7d387dd14d6b57"
+    },
+    {
+      "path": "src/3d-lab.jsx",
+      "bytes": 16923,
+      "sha256": "e8b041d3dce2a5559a50f4e7c634fd39e515383299babb8526f07a3058e416d7"
+    },
+    {
+      "path": "src/3d/GalaxyScene.jsx",
+      "bytes": 4417,
+      "sha256": "6b1e0747bb0e591c20acb9273d45af71541b7ab959951b846c8491110bdb48b1"
+    },
+    {
+      "path": "src/3d/components/BlackHole.jsx",
+      "bytes": 6136,
+      "sha256": "33092601112dacdcace04ef43b4f4729811833eb5d154c42a061c7048b2e48b9"
+    },
+    {
+      "path": "src/3d/components/BlackHoleBloomMask.jsx",
+      "bytes": 1312,
+      "sha256": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c"
+    },
+    {
+      "path": "src/3d/components/BlackHoleSystem.jsx",
+      "bytes": 2516,
+      "sha256": "2d024010f32fffd38259a9bf65dd2cb986563085dbfdb91df4b9fb4f588d1ca6"
+    },
+    {
+      "path": "src/3d/components/CameraRig.jsx",
+      "bytes": 3464,
+      "sha256": "fd01fb40484b7f14f4eb893d07cd486a68b41c1729e9a61193a9bc8de84d816f"
+    },
+    {
+      "path": "src/3d/components/LabTelemetry.jsx",
+      "bytes": 2626,
+      "sha256": "b53dde5f806c82d8dccc40b4bd4c9e0531464de98505959294e44809a7f81b14"
+    },
+    {
+      "path": "src/3d/components/Nebula.jsx",
+      "bytes": 2646,
+      "sha256": "dd1c7384aa3b0f8cdfaf5bf91fdb4c6f1b4be302c05a1ab09f3f3b1dc5b700b4"
+    },
+    {
+      "path": "src/3d/components/SceneBoundary.jsx",
+      "bytes": 433,
+      "sha256": "ee1c3710e1f289a7686c65da0e0845f244ba9838ee9bf8abdffb8b51c587b815"
+    },
+    {
+      "path": "src/3d/components/SceneFallback.jsx",
+      "bytes": 747,
+      "sha256": "473131e386e1ba4a85850184d09f23eed52755c95da3956f7959acf1866b2f51"
+    },
+    {
+      "path": "src/3d/components/ShootingStars.jsx",
+      "bytes": 3077,
+      "sha256": "705bbbf35b0e6d9cbe1fb57cb96ec8ab86144bfbce6c359d26ee99052a7fa595"
+    },
+    {
+      "path": "src/3d/components/SkillsSymbols.jsx",
+      "bytes": 1336,
+      "sha256": "7556d64b2a82f48fddcdc427474cada6d7dd9b0885e3d0d81088699f31f5fd42"
+    },
+    {
+      "path": "src/3d/components/StarField.jsx",
+      "bytes": 3321,
+      "sha256": "3a3d7af2864fc319e163efb150dc6547cbfa6507e494a9bc3d1bec826ba6656e"
+    },
+    {
+      "path": "src/3d/components/StoryMeteor.jsx",
+      "bytes": 3887,
+      "sha256": "e80e47efac1a7b957bd9c79975f23fb0e6d9be23889ee008d72c8e7272c39466"
+    },
+    {
+      "path": "src/3d/components/SymbolStars.jsx",
+      "bytes": 6503,
+      "sha256": "71979763da15c5ac2c9f48b13b98fcdf270460f20558e6824b27c93ede7c9a08"
+    },
+    {
+      "path": "src/3d/components/WorksConstellations.jsx",
+      "bytes": 8650,
+      "sha256": "cdfe0eb115b53b56b0e63e092322201b7acf495023dce804f07cfc3804ae0707"
+    },
+    {
+      "path": "src/3d/data/symbolTargets.json",
+      "bytes": 66482,
+      "sha256": "0edfec1c16363c7e65b6061105d0c791515130d120f0172b55cdb4a93a9bb903"
+    },
+    {
+      "path": "src/3d/data/worksConstellations.json",
+      "bytes": 36834,
+      "sha256": "133dcb33d88f35e2522cba0a040ae760d9767e71bef344404c117f73f6adf699"
+    },
+    {
+      "path": "src/3d/hooks/useLabScroll.js",
+      "bytes": 234,
+      "sha256": "a3828ab0ba03cb6fec3d494f5c304f10e576accbbbd8f4db9b25c8f0911efe29"
+    },
+    {
+      "path": "src/3d/hooks/useMediaQuery.js",
+      "bytes": 530,
+      "sha256": "c9873dab37c19e4aad975f7c9ac2b43aaa6565606fb6b91d60d2c5a1eb8671b0"
+    },
+    {
+      "path": "src/3d/hooks/useScrollProgress.js",
+      "bytes": 9092,
+      "sha256": "a606c78f79929f5cd75e96c6f667bfd2b90da64c2457a9417a648a966b98607f"
+    },
+    {
+      "path": "src/3d/hooks/useSectionAnchor.js",
+      "bytes": 2736,
+      "sha256": "c60a591a4243e31af603bcdee47e74df38fe826271b5b1af17d06e47d88e0418"
+    },
+    {
+      "path": "src/3d/quality.js",
+      "bytes": 360,
+      "sha256": "1254e64082d733ad7e07ee36321a0d6ed1a418dfbf1be2be1ece38a247d5c681"
+    },
+    {
+      "path": "src/3d/shaders/blackHole.js",
+      "bytes": 10130,
+      "sha256": "c29c10035ba58a67bb049f41cc5cf165a6a1f67b9f57af8ed345af04a9b04ede"
+    },
+    {
+      "path": "src/3d/utils/buildStarGeometry.js",
+      "bytes": 1603,
+      "sha256": "35d7cf2aa82b6fa93c5465cc5e97e4c12155c6e5a40afe8363c2c8da4067b150"
+    },
+    {
+      "path": "src/3d/utils/cameraPath.js",
+      "bytes": 3853,
+      "sha256": "73e87d857f093a2fe84de2d2af801c227ea99e11103ba603c84977991574efc5"
+    },
+    {
+      "path": "src/3d/utils/finale.js",
+      "bytes": 1913,
+      "sha256": "59e5f731f13eacb7f950739ef1e1ebfd98fa7fd3e9d9c0ba2d8693b10b2bbe1d"
+    },
+    {
+      "path": "src/3d/utils/portal.js",
+      "bytes": 768,
+      "sha256": "49e227007edcae46f4c655162ac63bbf85ae83e5a3bd7d53175c37cdf17140b1"
+    },
+    {
+      "path": "src/3d/utils/shootingStars.js",
+      "bytes": 2495,
+      "sha256": "620bea9b207bb1cceff2a8defbb894f431083fcbd8f12153a8f00a1633035fce"
+    },
+    {
+      "path": "src/3d/utils/storyMeteor.js",
+      "bytes": 3441,
+      "sha256": "fec6c5e2ea1eda06d23dcb14c19930349dbf08d4fd5b83849a05902a4fc544a6"
+    },
+    {
+      "path": "src/3d/utils/symbolMorph.js",
+      "bytes": 5749,
+      "sha256": "50bf740f932b71ff5db60136126ffdea1f0ed20328511aaa46e15fa01d4254c4"
+    },
+    {
+      "path": "src/3d/utils/worksOrbit.js",
+      "bytes": 1612,
+      "sha256": "3b357d6392ac8cd7370fae9670f90b5611f13a8969c9ca05422d0186d508e9f3"
+    },
+    {
+      "path": "src/App.jsx",
+      "bytes": 9033,
+      "sha256": "8682b3fd77fa99deb59d0d219b9fbf28e36bd536220e94c7a1791b82325bcd05"
+    },
+    {
+      "path": "src/assets/react.svg",
+      "bytes": 4126,
+      "sha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5"
+    },
+    {
+      "path": "src/components/About.jsx",
+      "bytes": 5506,
+      "sha256": "330c475e889e533aa296e1c62a376f2ef057039f4d30fefa259c4833a40669d2"
+    },
+    {
+      "path": "src/components/Aurora.jsx",
+      "bytes": 6452,
+      "sha256": "c03e2396d0f975a4371705ba60a0176896aa1f22396e7f8153981592f8d4589b"
+    },
+    {
+      "path": "src/components/Cursor.jsx",
+      "bytes": 13816,
+      "sha256": "5d74bb591597cfa76b298b37863b3a246bd53a298f96dc5ea913fc8c5a7fc8ae"
+    },
+    {
+      "path": "src/components/Education.jsx",
+      "bytes": 6170,
+      "sha256": "e39acb513195aff54dd849dd6fd19a5f1ee4474551c9fa89a9032dec744c7092"
+    },
+    {
+      "path": "src/components/EvilEye.jsx",
+      "bytes": 8917,
+      "sha256": "c76bebce7c93608d982fc18579bd404cf204d0b1d068c1b3c14817406dd74f11"
+    },
+    {
+      "path": "src/components/Footer.jsx",
+      "bytes": 7514,
+      "sha256": "79a993376661c8189e8b52a2bea2d166f97d63b001dde2922e61b0b77ba1b14c"
+    },
+    {
+      "path": "src/components/Hero.jsx",
+      "bytes": 834,
+      "sha256": "c28dba84a23b705c937fac5343b17fb8b80cc6993877b24399f32ccc36c839c6"
+    },
+    {
+      "path": "src/components/Preloader.jsx",
+      "bytes": 5539,
+      "sha256": "80d50c244b8c1749804c16f30ab6831b399fd3771ab3f1029d659588c5ed4fcd"
+    },
+    {
+      "path": "src/components/SplashCursor.jsx",
+      "bytes": 36078,
+      "sha256": "95a4982d97e49e892788b9847cd41843f084fe9f2a39c10ae0ae88944280d8ec"
+    },
+    {
+      "path": "src/components/Work.jsx",
+      "bytes": 10953,
+      "sha256": "db7a4075beaff94625309a41bbd9ef30f69e54bda90cc16c174dd140aa11e1f4"
+    },
+    {
+      "path": "src/components/effects/PortalHeading.jsx",
+      "bytes": 3720,
+      "sha256": "deae4ec8b9336de37f47c0dd4bfe5707b0312dcbfecf54cd03bae49d0515bc6c"
+    },
+    {
+      "path": "src/components/layout/MenuOverlay.jsx",
+      "bytes": 13795,
+      "sha256": "46fefbee0fe26ec884aa023d5e67d6bf949ee55002cf702e6a6f82459bf7d897"
+    },
+    {
+      "path": "src/components/layout/Nav.jsx",
+      "bytes": 7670,
+      "sha256": "e9785f731b2d4a31a8b604b8f1b8132320040fbf43649deb12395745c61c9d71"
+    },
+    {
+      "path": "src/components/pages/Edura.jsx",
+      "bytes": 8656,
+      "sha256": "7183a1653928fd8a0150a1dd6b690756446ec66850963a25a11a3fcc528908a7"
+    },
+    {
+      "path": "src/components/sections/Contact.jsx",
+      "bytes": 11333,
+      "sha256": "c5e7b77cd8c1943aa043ca69bc051e2a00734c3e778e5c96b726fe3150b44226"
+    },
+    {
+      "path": "src/components/sections/Experience.jsx",
+      "bytes": 4807,
+      "sha256": "ef374cb0353edf75d543fd1b819cab9b79061ec5fbe303178574c5b0c389289d"
+    },
+    {
+      "path": "src/components/sections/Skills.jsx",
+      "bytes": 11325,
+      "sha256": "07300c842058d37e78f97683a376b5d1cd0646edf7cfc17f0030cd5780fa9d28"
+    },
+    {
+      "path": "src/components/ui/SoundToggle.jsx",
+      "bytes": 2001,
+      "sha256": "29e29630680251960b789c247be30465b0f6571230183e67b656d698f20c80fa"
+    },
+    {
+      "path": "src/data.js",
+      "bytes": 4138,
+      "sha256": "909413a8e834e1a0998cf20d3228de4e67e74c6460968d82a8c16eee9a6a9680"
+    },
+    {
+      "path": "src/data/education.js",
+      "bytes": 214,
+      "sha256": "bcb689413001357ab7c10d77eb7e6c0145d1b4cd99892248a8f9257b95de29b2"
+    },
+    {
+      "path": "src/data/navigation.js",
+      "bytes": 305,
+      "sha256": "6e23b91b93c8bc0c57ca9d7afca9f5dd27e70226cd17469f319aaed762c03a0f"
+    },
+    {
+      "path": "src/data/skills.js",
+      "bytes": 904,
+      "sha256": "189cd6619cbf59b0ccd36d796c0d8b10a2e106567951cad4e0f95ebbed5e8e1d"
+    },
+    {
+      "path": "src/hooks/useGSAPSetup.js",
+      "bytes": 2125,
+      "sha256": "3e01127b4d73fd0e8c4f6c6af569b8d58fac8bc3f0d9aaa3ab577d4691f86b02"
+    },
+    {
+      "path": "src/hooks/useReducedMotion.js",
+      "bytes": 549,
+      "sha256": "91bc0b684c97ee1b951fc43516a4c18697e32f17dbd7bae5482207083228b947"
+    },
+    {
+      "path": "src/hooks/useSmoothScroll.js",
+      "bytes": 1251,
+      "sha256": "3386776d0ae6ecc61d7674f997b0acd999fd930268b98c5b37a38ce17815383e"
+    },
+    {
+      "path": "src/i18n/config.js",
+      "bytes": 2831,
+      "sha256": "3a7c679af690a23ffd0e0f8e66e2c1a1fc8303d0f4b7dd30df53bef14dd971d3"
+    },
+    {
+      "path": "src/i18n/locales/en.json",
+      "bytes": 15054,
+      "sha256": "d58585c97c57aca25c72aa75c323d117b94996946a63dc334a3496634bda6641"
+    },
+    {
+      "path": "src/i18n/locales/en/lab.json",
+      "bytes": 5432,
+      "sha256": "df846645028275c93814676cec64f0c10f16cf5033bd324127998ef2469c399d"
+    },
+    {
+      "path": "src/i18n/locales/en/scene.json",
+      "bytes": 155,
+      "sha256": "0cb051ca2ec3bf29329d42b39e2c62b151922e0b3599aa02f82b780a6606a1cf"
+    },
+    {
+      "path": "src/i18n/locales/vi.json",
+      "bytes": 16905,
+      "sha256": "502ee94030f9bcc04812bd600396c40006385111b798b8dceada4bb411c8c390"
+    },
+    {
+      "path": "src/i18n/locales/vi/lab.json",
+      "bytes": 5742,
+      "sha256": "ec53bea1736579ca63b6d9b86fc223228bfa0027824adbad02d0d7da86aaf4ab"
+    },
+    {
+      "path": "src/i18n/locales/vi/scene.json",
+      "bytes": 189,
+      "sha256": "26897416254dd3c9a75e4f739ed751d975d99460744251469f800d976b6f38ae"
+    },
+    {
+      "path": "src/index.css",
+      "bytes": 4613,
+      "sha256": "ec90e0abfb7970145ff020105e43dda0ab4d28bf12457769f5c9079c009639a0"
+    },
+    {
+      "path": "src/lib/audioEngine.js",
+      "bytes": 4841,
+      "sha256": "b5725a71c0e893e898fcc0e277ed464237f47bc12328a15ea9b34f432307dc77"
+    },
+    {
+      "path": "src/lib/utils.js",
+      "bytes": 25,
+      "sha256": "478739b1eed969267a388fc17db539b53aa66cf15a9467e475274b36de8783f2"
+    },
+    {
+      "path": "src/main.jsx",
+      "bytes": 368,
+      "sha256": "147df528e244299aa66772bafbf3412a6641c0e2ab75431ff539a59c7839206f"
+    },
+    {
+      "path": "src/stores/useAudioStore.js",
+      "bytes": 1751,
+      "sha256": "7e7188de8cd1e260029c3ebd113f64c8b5cdcf1bb6c8d553d6757bf4b1a0c7ca"
+    },
+    {
+      "path": "src/stores/useEducationStore.js",
+      "bytes": 880,
+      "sha256": "8d968968c314f3fc0b90fe8db1e5e0c44908c4c6c22e282235030bcfb29a6c49"
+    },
+    {
+      "path": "src/stores/useLangStore.js",
+      "bytes": 192,
+      "sha256": "9ca61fd05c9ab48a081072d55d59c4fc8949affe630fc97bc26404810005d09f"
+    },
+    {
+      "path": "src/stores/useLoadingStore.js",
+      "bytes": 164,
+      "sha256": "8f9cc13ab4fc969edb440d662b15d48f793497025817acf0224ab0ad3f8c9a67"
+    },
+    {
+      "path": "src/stores/useRouteStore.js",
+      "bytes": 4557,
+      "sha256": "07598bd2c0d9adf00f0f832895f2124b79894fecc166970a842191ab34085b5d"
+    },
+    {
+      "path": "src/stores/useScrollStore.js",
+      "bytes": 2727,
+      "sha256": "998a0d5d9224a6603a4f48166afacf72a525c6c5a394862b7cbba705d50b79f5"
+    },
+    {
+      "path": "src/stores/useSkillsStore.js",
+      "bytes": 684,
+      "sha256": "cf06593de4261c5e0a571b2a07e9d50243f99f20a8ad7b5e52aa0c2ceaafaac5"
+    },
+    {
+      "path": "src/stores/useThemeStore.js",
+      "bytes": 820,
+      "sha256": "52e649ab76b03c676f2c423e2ef3e274ebb97a8b435392fe4bf1b006df4f8624"
+    },
+    {
+      "path": "src/styles/globals.css",
+      "bytes": 4267,
+      "sha256": "9032e46e8ea120948d32fbe835fc13cb3cbb315152db19c2a4843d30f4b048e5"
+    },
+    {
+      "path": "src/styles/menu.css",
+      "bytes": 138,
+      "sha256": "dd777575640babba2a136b5584153b688fe0b2cf0e0b13071029cfa0d7c7d947"
+    },
+    {
+      "path": "tools/codex-skills/galaxy-portfolio/SKILL.md",
+      "bytes": 2961,
+      "sha256": "01dcc16ae160e222b62d885415817bbcaa3ae4fc287ded85ba5419a65a03aad5"
+    },
+    {
+      "path": "tools/codex-skills/galaxy-portfolio/agents/openai.yaml",
+      "bytes": 219,
+      "sha256": "ff7bfbb4d578b26d8668e8aec27f6527974ffd46a8348557e9cca3242e233c85"
+    },
+    {
+      "path": "tools/codex-skills/react-3d-ui/SKILL.md",
+      "bytes": 4357,
+      "sha256": "541ce17d466e1ea4ab62e357287f87805260506f4682142bc8d519c0cc5d27e3"
+    },
+    {
+      "path": "tools/codex-skills/react-3d-ui/agents/openai.yaml",
+      "bytes": 209,
+      "sha256": "f5bc24ae37c19ada0f9e8dfdf62dcc4c88c6b9c678d4eaf4619ab4e43e8dc9ba"
+    },
+    {
+      "path": "vercel.json",
+      "bytes": 164,
+      "sha256": "4480bfa95f8d1d9b876258883eec48e39e1a4234c4f917e0e2b5f6d0501df6bb"
+    },
+    {
+      "path": "vite.config.js",
+      "bytes": 2602,
+      "sha256": "44c8e05e4635de03d3f86eb0fb38488131e45f6fbf725b90e40a4ab892fc2b99"
+    }
+  ],
+  "checks": {
+    "build": {
+      "exitCode": 0,
+      "wallSeconds": 9.9248133,
+      "status": "PASS",
+      "viteSeconds": 6.31,
+      "pwaEntries": 34,
+      "pwaKiB": 2739.7,
+      "log": "outputs/visual-revision-2026-10-09/v0/build.log",
+      "warnings": [
+        "Chunks larger than 500 kB: 557.22 kB and 920.24 kB before gzip."
+      ]
+    },
+    "lint": {
+      "exitCode": 0,
+      "wallSeconds": 7.7840769,
+      "status": "PASS",
+      "errors": 0,
+      "warnings": [
+        {
+          "path": "src/components/SplashCursor.jsx",
+          "line": 149,
+          "rule": "react-hooks/unsupported-syntax"
+        },
+        {
+          "path": "src/components/SplashCursor.jsx",
+          "line": 175,
+          "rule": "react-hooks/unsupported-syntax"
+        }
+      ],
+      "log": "outputs/visual-revision-2026-10-09/v0/lint.log"
+    },
+    "environment": {
+      "sandboxBuild": {
+        "exitCode": 1,
+        "wallSeconds": 3.1630657,
+        "classification": "EPERM realpath sandbox environment; successful retry uses unchanged source",
+        "log": "outputs/visual-revision-2026-10-09/v0/build-sandbox.log"
+      },
+      "devScanNote": "Vite dependency scan found stale HTML fixture imports in outputs; App compiled on demand, no final Browser errors."
+    },
+    "scope": {
+      "status": "PASS",
+      "immutableFiles": 124,
+      "agentsPrefixPreserved": true,
+      "report": "outputs/visual-revision-2026-10-09/v0/integrity-results.json"
+    }
+  },
+  "browser": {
+    "status": "captured",
+    "capturedAt": "2026-10-09T07:34:06.482Z",
+    "browser": "154.0.4258.62",
+    "mode": "headless development App / serviceWorkers:block",
+    "configurations": [
+      {
+        "width": 1440,
+        "height": 900,
+        "devicePixelRatio": 1,
+        "rendererDpr": 1,
+        "drawingBuffer": [
+          1440,
+          900
+        ],
+        "quality": "high",
+        "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+        "ranges": [
+          {
+            "id": "hero",
+            "top": 0,
+            "end": 0
+          },
+          {
+            "id": "portal",
+            "top": 0,
+            "end": 1575
+          },
+          {
+            "id": "about",
+            "top": 1575,
+            "end": 2498.765625
+          },
+          {
+            "id": "skills",
+            "top": 2498.765625,
+            "end": 3557.953125
+          },
+          {
+            "id": "education",
+            "top": 3557.953125,
+            "end": 5132.953125
+          },
+          {
+            "id": "experience",
+            "top": 5132.953125,
+            "end": 6750.90625
+          },
+          {
+            "id": "departure",
+            "top": 6750.90625,
+            "end": 7740.90625
+          },
+          {
+            "id": "works",
+            "top": 7740.90625,
+            "end": 9180.90625
+          },
+          {
+            "id": "finale",
+            "top": 9180.90625,
+            "end": 11205.90625
+          },
+          {
+            "id": "contact",
+            "top": 11205.90625,
+            "end": 12085
+          }
+        ]
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "devicePixelRatio": 1,
+        "rendererDpr": 1,
+        "drawingBuffer": [
+          390,
+          844
+        ],
+        "quality": "low",
+        "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 630 (0x00003E98) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+        "ranges": [
+          {
+            "id": "hero",
+            "top": 0,
+            "end": 0
+          },
+          {
+            "id": "portal",
+            "top": 0,
+            "end": 1477
+          },
+          {
+            "id": "about",
+            "top": 1477,
+            "end": 2859.328125
+          },
+          {
+            "id": "skills",
+            "top": 2859.328125,
+            "end": 4351.703125
+          },
+          {
+            "id": "education",
+            "top": 4351.703125,
+            "end": 6302.5625
+          },
+          {
+            "id": "experience",
+            "top": 6302.5625,
+            "end": 7981.28125
+          },
+          {
+            "id": "departure",
+            "top": 7981.28125,
+            "end": 8909.671875
+          },
+          {
+            "id": "works",
+            "top": 8909.671875,
+            "end": 10260.0625
+          },
+          {
+            "id": "finale",
+            "top": 10260.0625,
+            "end": 12159.0625
+          },
+          {
+            "id": "contact",
+            "top": 12159.0625,
+            "end": 13018
+          }
+        ]
+      }
+    ],
+    "results": "outputs/visual-revision-2026-10-09/v0/browser-results.json",
+    "frames": [
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-hero.png",
+        "label": "hero",
+        "chapter": "hero",
+        "p": 0,
+        "direction": "baseline",
+        "width": 1440,
+        "height": 900,
+        "bytes": 71930,
+        "sha256": "cda28ee1ed5a5970a6bd0595eed42f689719f8befa56c768ed5fa082b63e8e45"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-about.png",
+        "label": "about",
+        "chapter": "about",
+        "p": 0,
+        "direction": "baseline",
+        "width": 1440,
+        "height": 900,
+        "bytes": 306135,
+        "sha256": "a2b04af42f25186d1a778efffc519c608071a6d741f8a8c435fa546b65bc72f5"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-education.png",
+        "label": "education",
+        "chapter": "education",
+        "p": 0.12,
+        "direction": "baseline",
+        "width": 1440,
+        "height": 900,
+        "bytes": 188670,
+        "sha256": "5c66c140246c33b04f78998cfb87d60972b18a46c8929fe8b34638a1b7f69fb6"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-experience.png",
+        "label": "experience",
+        "chapter": "experience",
+        "p": 0.32,
+        "direction": "baseline",
+        "width": 1440,
+        "height": 900,
+        "bytes": 128745,
+        "sha256": "821de08a588b42f91315671927a11a64e3f021bbecc1fa7143e9f3a62da552a7"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-works.png",
+        "label": "works",
+        "chapter": "works",
+        "p": 0.2,
+        "direction": "baseline",
+        "width": 1440,
+        "height": 900,
+        "bytes": 66788,
+        "sha256": "78e66355c09c29766f95e4a219771ee69699d5f3661cd58efa0e90ba6242ecb0"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-contact.png",
+        "label": "contact",
+        "chapter": "contact",
+        "p": 0,
+        "direction": "baseline",
+        "width": 1440,
+        "height": 900,
+        "bytes": 76238,
+        "sha256": "263de5dadc15da5e85b892fafe88bb70485508252ed8a00b5f3283daad0c573e"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-education-active-sgu.png",
+        "label": "education-active-sgu",
+        "chapter": "education",
+        "p": 0.12,
+        "direction": "baseline",
+        "width": 1440,
+        "height": 900,
+        "bytes": 172553,
+        "sha256": "43765f4f00f7327511e67047d788f49c382d646db4320983330b5441e4dd82ca"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-works-active-edura.png",
+        "label": "works-active-edura",
+        "chapter": "works",
+        "p": 0.2,
+        "direction": "baseline",
+        "width": 1440,
+        "height": 900,
+        "bytes": 118490,
+        "sha256": "4068a9a308fb063781612ce20e7e4758258729bb397afac683d3a6a079168bd8"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-fwd-0.png",
+        "label": "portal-fwd-0",
+        "chapter": "portal",
+        "p": 0,
+        "direction": "forward",
+        "width": 1440,
+        "height": 900,
+        "bytes": 66816,
+        "sha256": "26d8e9b26af0edc4366767f479bd6678155e3a119c55f83ea92e78f3552e6bc5"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-fwd-0.25.png",
+        "label": "portal-fwd-0.25",
+        "chapter": "portal",
+        "p": 0.25,
+        "direction": "forward",
+        "width": 1440,
+        "height": 900,
+        "bytes": 64567,
+        "sha256": "55fe809b28e0ee5c7125c6460da4d57f453090ec97e7b59c1f8d9a6fe0b52394"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-fwd-0.5.png",
+        "label": "portal-fwd-0.5",
+        "chapter": "portal",
+        "p": 0.5,
+        "direction": "forward",
+        "width": 1440,
+        "height": 900,
+        "bytes": 6939,
+        "sha256": "07591adc5ca1902563a56951460262c68df9f94538e434a1f1c373c34e665fee"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-fwd-0.75.png",
+        "label": "portal-fwd-0.75",
+        "chapter": "portal",
+        "p": 0.75,
+        "direction": "forward",
+        "width": 1440,
+        "height": 900,
+        "bytes": 283788,
+        "sha256": "dcade0263f5952c3e09c69b55ea4e23310ffc71e161ab5571409f40d6a7020f9"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-fwd-1.png",
+        "label": "portal-fwd-1",
+        "chapter": "portal",
+        "p": 1,
+        "direction": "forward",
+        "width": 1440,
+        "height": 900,
+        "bytes": 354861,
+        "sha256": "1a331af95196f0e340aac3fdcc1a7e5c7cc4a66c46ab8ad3c2702b7eaedda4b6"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-rev-1.png",
+        "label": "portal-rev-1",
+        "chapter": "portal",
+        "p": 1,
+        "direction": "reverse",
+        "width": 1440,
+        "height": 900,
+        "bytes": 354975,
+        "sha256": "4309ca8390e51e088b56cffae74292e5dc2c706a3585edd53f08e7d147af7ddf"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-rev-0.75.png",
+        "label": "portal-rev-0.75",
+        "chapter": "portal",
+        "p": 0.75,
+        "direction": "reverse",
+        "width": 1440,
+        "height": 900,
+        "bytes": 283688,
+        "sha256": "2b6b770d565ef721ab0a71b3e643cab32ca856da65ac9fe1bf89ca77ccb43ea1"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-rev-0.5.png",
+        "label": "portal-rev-0.5",
+        "chapter": "portal",
+        "p": 0.5,
+        "direction": "reverse",
+        "width": 1440,
+        "height": 900,
+        "bytes": 7351,
+        "sha256": "035763d817b6fb09f66dd5520ddca672923e9ccd15ed9d1b7e7a312a39678c5a"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-rev-0.25.png",
+        "label": "portal-rev-0.25",
+        "chapter": "portal",
+        "p": 0.25,
+        "direction": "reverse",
+        "width": 1440,
+        "height": 900,
+        "bytes": 64574,
+        "sha256": "e326695be9e59127ea798f680805db25647e16ff0b75c063744ed211c25faa57"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-portal-rev-0.png",
+        "label": "portal-rev-0",
+        "chapter": "portal",
+        "p": 0,
+        "direction": "reverse",
+        "width": 1440,
+        "height": 900,
+        "bytes": 65613,
+        "sha256": "f0d5373f11309aa40d1f9f241f621d169442ae2bea8798f07675112baa5fca2e"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-fwd-0.png",
+        "label": "finale-fwd-0",
+        "chapter": "finale",
+        "p": 0,
+        "direction": "forward",
+        "width": 1440,
+        "height": 900,
+        "bytes": 62685,
+        "sha256": "c23a89150056631dde31e7dbf0065dcf0a55e184c02bcca1c08c335dfd926bae"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-fwd-0.25.png",
+        "label": "finale-fwd-0.25",
+        "chapter": "finale",
+        "p": 0.25,
+        "direction": "forward",
+        "width": 1440,
+        "height": 900,
+        "bytes": 83079,
+        "sha256": "be268c32b934d1718a2e8f06c6f61cb2326315d6cf3b287de4460088b043b6c2"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-fwd-0.5.png",
+        "label": "finale-fwd-0.5",
+        "chapter": "finale",
+        "p": 0.5,
+        "direction": "forward",
+        "width": 1440,
+        "height": 900,
+        "bytes": 337159,
+        "sha256": "103fe7fe1e8726c3a28b2bbe452bdb90c6d3df843b9335c97ea8fd09cfd636cd"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-fwd-0.75.png",
+        "label": "finale-fwd-0.75",
+        "chapter": "finale",
+        "p": 0.75,
+        "direction": "forward",
+        "width": 1440,
+        "height": 900,
+        "bytes": 417844,
+        "sha256": "7f1b2e34a286763dec7362bf1aceca35ef43bed7964d618b82e633f68e4c690d"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-fwd-1.png",
+        "label": "finale-fwd-1",
+        "chapter": "finale",
+        "p": 1,
+        "direction": "forward",
+        "width": 1440,
+        "height": 900,
+        "bytes": 77456,
+        "sha256": "5457c25df393e985e36f0feb2ee635e572edecf513ddafd20032de6fd1ac1e6e"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-rev-1.png",
+        "label": "finale-rev-1",
+        "chapter": "finale",
+        "p": 1,
+        "direction": "reverse",
+        "width": 1440,
+        "height": 900,
+        "bytes": 86268,
+        "sha256": "f0f76efa6cae10b8c5dfd02260fd91c8ffee2b75992c652eada19dfbb8091660"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-rev-0.75.png",
+        "label": "finale-rev-0.75",
+        "chapter": "finale",
+        "p": 0.75,
+        "direction": "reverse",
+        "width": 1440,
+        "height": 900,
+        "bytes": 394943,
+        "sha256": "d6b96f8029696af1a58135456a0cee80774952f3782a39177b8daaaccb1e7346"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-rev-0.5.png",
+        "label": "finale-rev-0.5",
+        "chapter": "finale",
+        "p": 0.5,
+        "direction": "reverse",
+        "width": 1440,
+        "height": 900,
+        "bytes": 336823,
+        "sha256": "65d8df452819dfbda1257fe8581fe332a8a94a113b294702126d0899ec12aece"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-rev-0.25.png",
+        "label": "finale-rev-0.25",
+        "chapter": "finale",
+        "p": 0.25,
+        "direction": "reverse",
+        "width": 1440,
+        "height": 900,
+        "bytes": 82612,
+        "sha256": "3629de95ca96ec24e17992ec4e464a24beec8739ecf57128b9f67f42daf30aeb"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/1440-finale-rev-0.png",
+        "label": "finale-rev-0",
+        "chapter": "finale",
+        "p": 0,
+        "direction": "reverse",
+        "width": 1440,
+        "height": 900,
+        "bytes": 62698,
+        "sha256": "cac7dfee77aaa9d1ca97bb8f2be56ad823998d6aaab876881ff743f89bf734b7"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/390-hero.png",
+        "label": "hero",
+        "chapter": "hero",
+        "p": 0,
+        "direction": "baseline",
+        "width": 390,
+        "height": 844,
+        "bytes": 25990,
+        "sha256": "9d6d3a14d6216acebf9e60d963c149ddb653c8d646fa63ce8de85b773ec6f6b4"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/390-about.png",
+        "label": "about",
+        "chapter": "about",
+        "p": 0,
+        "direction": "baseline",
+        "width": 390,
+        "height": 844,
+        "bytes": 94674,
+        "sha256": "200d1c7974e7f412c6850d3076498cd7b955e96104f33d9ac5e396e8808383fd"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/390-education.png",
+        "label": "education",
+        "chapter": "education",
+        "p": 0.12,
+        "direction": "baseline",
+        "width": 390,
+        "height": 844,
+        "bytes": 42330,
+        "sha256": "a3c2b9de88e0c444712ac6803983f4b80c800b1e9fe64f3499dbc03138298da9"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/390-experience.png",
+        "label": "experience",
+        "chapter": "experience",
+        "p": 0.32,
+        "direction": "baseline",
+        "width": 390,
+        "height": 844,
+        "bytes": 43051,
+        "sha256": "b58ab834e99034945bb0cd841d3af8dfeb95b11791ee8d7e590ec11e85828d10"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/390-works.png",
+        "label": "works",
+        "chapter": "works",
+        "p": 0.2,
+        "direction": "baseline",
+        "width": 390,
+        "height": 844,
+        "bytes": 23426,
+        "sha256": "e29ca56fb71043038831ba89ca63e1b06d822cdea95e927864735c9854af49c9"
+      },
+      {
+        "file": "outputs/visual-revision-2026-10-09/v0/screenshots/390-contact.png",
+        "label": "contact",
+        "chapter": "contact",
+        "p": 0,
+        "direction": "baseline",
+        "width": 390,
+        "height": 844,
+        "bytes": 37222,
+        "sha256": "4eb98c1f99c3e965259d91b7df3391b2d09d9cce138654bef7f40d117cb57a7c"
+      }
+    ],
+    "comparisonCount": 10,
+    "nativeSamples": 2,
+    "errors": [],
+    "warnings": [
+      {
+        "width": 1440,
+        "type": "warning",
+        "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+      },
+      {
+        "width": 390,
+        "type": "warning",
+        "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+      }
+    ],
+    "limits": [
+      "Mobile viewport/touch emulation on desktop, not a physical phone.",
+      "Held poses synchronize visible DOM scroll and hold the existing store; native scroll is sampled separately.",
+      "Camera and authored uniforms are compared at equal progress; ambient scene and wall-clock DOM reveals are not pixel-equality tests.",
+      "No FPS/GPU benchmark, physical screen reader, OS motion toggle or public HTTPS verification."
+    ]
+  },
+  "inputFingerprintSHA256": "69d922dbee693c423fbb327b4a45949fe8c0c0fd09baa5ba6e9fa2660cf64b20"
+}
