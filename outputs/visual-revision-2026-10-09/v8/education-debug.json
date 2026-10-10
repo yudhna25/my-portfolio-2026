@@ -1,0 +1,574 @@
+{
+  "list": [
+    {
+      "name": "star-field",
+      "visible": true,
+      "parent": "portal-backdrop",
+      "material": "ShaderMaterial",
+      "opacity": 1,
+      "uniforms": {
+        "uTime": 10.007899999998603,
+        "uPixelRatio": 1,
+        "uApproach": 0.42557123374338,
+        "uPortal": 0,
+        "uIntake": 1,
+        "uEject": 1,
+        "uEjecting": 1,
+        "uPortalCenter": "object",
+        "uViewport": "object",
+        "uColorA": "object",
+        "uColorB": "object"
+      }
+    },
+    {
+      "name": "nebula",
+      "visible": true,
+      "parent": "portal-backdrop",
+      "material": "ShaderMaterial",
+      "opacity": 1,
+      "uniforms": {
+        "uTime": 10.007899999998603,
+        "uPortal": 0,
+        "uIntake": 1,
+        "uEject": 1,
+        "uEjecting": 1,
+        "uPortalOpacity": 1,
+        "uPortalCenter": "object",
+        "uViewport": "object",
+        "uColorA": "object",
+        "uColorB": "object"
+      }
+    },
+    {
+      "name": "nebula",
+      "visible": true,
+      "parent": "portal-backdrop",
+      "material": "ShaderMaterial",
+      "opacity": 1,
+      "uniforms": {
+        "uTime": 10.007899999998603,
+        "uPortal": 0,
+        "uIntake": 1,
+        "uEject": 1,
+        "uEjecting": 1,
+        "uPortalOpacity": 1,
+        "uPortalCenter": "object",
+        "uViewport": "object",
+        "uColorA": "object",
+        "uColorB": "object"
+      }
+    },
+    {
+      "name": "accretion-disk",
+      "visible": true,
+      "parent": "black-hole",
+      "material": "ShaderMaterial",
+      "opacity": 1,
+      "uniforms": {
+        "uImage": "object",
+        "uPortalEnabled": 1,
+        "uPortalMini": 0,
+        "uPortalCenter": "object",
+        "uRayCenter": "object",
+        "uPortalScale": 154.51798002069677,
+        "uPortalRadius": "object",
+        "uPortalVisibility": 1,
+        "uPortalDust": 0,
+        "uPortalPull": 1,
+        "uPortalViewport": "object",
+        "uFinaleEnabled": 0,
+        "uFinaleHole": 1,
+        "uFinaleOrigin": 0,
+        "uFinaleGas": "object"
+      }
+    },
+    {
+      "name": "shooting-stars",
+      "visible": true,
+      "parent": "",
+      "material": "ShaderMaterial",
+      "opacity": 1,
+      "uniforms": {
+        "uPixelRatio": 1,
+        "uVisibility": 1
+      }
+    },
+    {
+      "name": "symbol-pool",
+      "visible": true,
+      "parent": "symbol-anchor",
+      "material": "ShaderMaterial",
+      "opacity": 1,
+      "uniforms": {
+        "uDpr": 1,
+        "uFormation": 1,
+        "uLogo": 0,
+        "uEducation": 1
+      }
+    },
+    {
+      "name": "symbol-links",
+      "visible": true,
+      "parent": "symbol-anchor",
+      "material": "LineBasicMaterial",
+      "opacity": 0.55,
+      "uniforms": {}
+    },
+    {
+      "name": "education-link-glow",
+      "visible": true,
+      "parent": "symbol-anchor",
+      "material": "ShaderMaterial",
+      "opacity": 1,
+      "uniforms": {
+        "uDpr": 1,
+        "uOpacity": 0,
+        "uResolution": "object"
+      }
+    },
+    {
+      "name": "symbol-logo-figma",
+      "visible": false,
+      "parent": "symbol-anchor",
+      "material": "MeshBasicMaterial",
+      "opacity": 0.008365092172118376,
+      "uniforms": {}
+    },
+    {
+      "name": "symbol-logo-photoshop",
+      "visible": false,
+      "parent": "symbol-anchor",
+      "material": "MeshBasicMaterial",
+      "opacity": 0.06194507395847163,
+      "uniforms": {}
+    },
+    {
+      "name": "symbol-logo-illustrator",
+      "visible": false,
+      "parent": "symbol-anchor",
+      "material": "MeshBasicMaterial",
+      "opacity": 0.007377199821562158,
+      "uniforms": {}
+    },
+    {
+      "name": "symbol-logo-after-effects",
+      "visible": false,
+      "parent": "symbol-anchor",
+      "material": "MeshBasicMaterial",
+      "opacity": 0.0016384523241884522,
+      "uniforms": {}
+    },
+    {
+      "name": "symbol-logo-premiere-pro",
+      "visible": false,
+      "parent": "symbol-anchor",
+      "material": "MeshBasicMaterial",
+      "opacity": 0.011683969209506609,
+      "uniforms": {}
+    },
+    {
+      "name": "symbol-logo-davinci-resolve",
+      "visible": false,
+      "parent": "symbol-anchor",
+      "material": "MeshBasicMaterial",
+      "opacity": 0.008029162071100656,
+      "uniforms": {}
+    },
+    {
+      "name": "symbol-logo-chatgpt",
+      "visible": false,
+      "parent": "symbol-anchor",
+      "material": "MeshBasicMaterial",
+      "opacity": 1,
+      "uniforms": {}
+    },
+    {
+      "name": "symbol-logo-claude",
+      "visible": false,
+      "parent": "symbol-anchor",
+      "material": "MeshBasicMaterial",
+      "opacity": 1,
+      "uniforms": {}
+    },
+    {
+      "name": "symbol-logo-google-antigravity",
+      "visible": false,
+      "parent": "symbol-anchor",
+      "material": "MeshBasicMaterial",
+      "opacity": 1,
+      "uniforms": {}
+    },
+    {
+      "name": "education-art-saigonUniversity",
+      "visible": true,
+      "parent": "education-art-anchor-saigonUniversity",
+      "material": "MeshBasicMaterial",
+      "opacity": 0.29999999992208776,
+      "uniforms": {}
+    },
+    {
+      "name": "education-art-greenAcademy",
+      "visible": true,
+      "parent": "education-art-anchor-greenAcademy",
+      "material": "MeshBasicMaterial",
+      "opacity": 0.1,
+      "uniforms": {}
+    },
+    {
+      "name": "education-art-arenaMultimedia",
+      "visible": false,
+      "parent": "education-art-anchor-arenaMultimedia",
+      "material": "MeshBasicMaterial",
+      "opacity": 0.1,
+      "uniforms": {}
+    },
+    {
+      "name": "story-meteor-wake",
+      "visible": true,
+      "parent": "story-meteor",
+      "material": "ShaderMaterial",
+      "opacity": 1,
+      "uniforms": {
+        "uOpacity": 0,
+        "uViewport": "object",
+        "uWidth": 76,
+        "uJourney": 0,
+        "uWake": 1
+      }
+    },
+    {
+      "name": "story-meteor-trail",
+      "visible": true,
+      "parent": "story-meteor",
+      "material": "ShaderMaterial",
+      "opacity": 1,
+      "uniforms": {
+        "uOpacity": 0,
+        "uViewport": "object",
+        "uWidth": 76,
+        "uJourney": 0,
+        "uWake": 0
+      }
+    },
+    {
+      "name": "story-meteor-head",
+      "visible": true,
+      "parent": "story-meteor",
+      "material": "ShaderMaterial",
+      "opacity": 1,
+      "uniforms": {
+        "uHead": "object",
+        "uOpacity": 0,
+        "uViewport": "object",
+        "uCore": 16,
+        "uDiameter": 80
+      }
+    },
+    {
+      "name": "",
+      "visible": true,
+      "parent": "works-edura",
+      "material": "LineBasicMaterial",
+      "opacity": 0.13,
+      "uniforms": {}
+    },
+    {
+      "name": "",
+      "visible": true,
+      "parent": "works-edura",
+      "material": "ShaderMaterial",
+      "opacity": 1,
+      "uniforms": {
+        "uPixelRatio": 1,
+        "uStrength": 1,
+        "uActive": 0
+      }
+    },
+    {
+      "name": "works-art-edura",
+      "visible": true,
+      "parent": "works-edura",
+      "material": "MeshBasicMaterial",
+      "opacity": 0,
+      "uniforms": {}
+    },
+    {
+      "name": "",
+      "visible": true,
+      "parent": "works-veris",
+      "material": "LineBasicMaterial",
+      "opacity": 0.13,
+      "uniforms": {}
+    },
+    {
+      "name": "",
+      "visible": true,
+      "parent": "works-veris",
+      "material": "ShaderMaterial",
+      "opacity": 1,
+      "uniforms": {
+        "uPixelRatio": 1,
+        "uStrength": 1,
+        "uActive": 0
+      }
+    },
+    {
+      "name": "works-art-veris",
+      "visible": true,
+      "parent": "works-veris",
+      "material": "MeshBasicMaterial",
+      "opacity": 0,
+      "uniforms": {}
+    },
+    {
+      "name": "",
+      "visible": true,
+      "parent": "works-vie",
+      "material": "LineBasicMaterial",
+      "opacity": 0.13,
+      "uniforms": {}
+    },
+    {
+      "name": "",
+      "visible": true,
+      "parent": "works-vie",
+      "material": "ShaderMaterial",
+      "opacity": 1,
+      "uniforms": {
+        "uPixelRatio": 1,
+        "uStrength": 1,
+        "uActive": 0
+      }
+    },
+    {
+      "name": "works-art-vie",
+      "visible": true,
+      "parent": "works-vie",
+      "material": "MeshBasicMaterial",
+      "opacity": 0,
+      "uniforms": {}
+    },
+    {
+      "name": "finale-trails",
+      "visible": true,
+      "parent": "works-constellations",
+      "material": "ShaderMaterial",
+      "opacity": 1,
+      "uniforms": {
+        "uOpacity": 0
+      }
+    }
+  ],
+  "center": [
+    {
+      "tag": "polygon",
+      "id": "",
+      "cls": "pointer-events-auto cursor-pointer fill-transparent stroke-transparent stroke-1 focus-visible:stroke-white/75 focus-visible:stroke-2 focus-visible:outline-none! focus-visible:shadow-none!",
+      "rect": {
+        "x": 111.74736022949219,
+        "y": 322.39215087890625,
+        "width": 128.33087158203125,
+        "height": 180.729736328125,
+        "top": 322.39215087890625,
+        "right": 240.07823181152344,
+        "bottom": 503.12188720703125,
+        "left": 111.74736022949219
+      }
+    },
+    {
+      "tag": "DIV",
+      "id": "education-stage-saigonUniversity",
+      "cls": "relative h-[min(34vh,18rem)] min-h-56 lg:ml-0 lg:h-[31vh] lg:min-h-64 lg:w-full w-[92%]",
+      "rect": {
+        "x": 24,
+        "y": 262.09375,
+        "width": 314.625,
+        "height": 286.953125,
+        "top": 262.09375,
+        "right": 338.625,
+        "bottom": 549.046875,
+        "left": 24
+      }
+    },
+    {
+      "tag": "LI",
+      "id": "",
+      "cls": "relative min-w-0 lg:col-start-1 lg:col-span-5 lg:row-start-1",
+      "rect": {
+        "x": 24,
+        "y": 262.09375,
+        "width": 342,
+        "height": 466.15625,
+        "top": 262.09375,
+        "right": 366,
+        "bottom": 728.25,
+        "left": 24
+      }
+    },
+    {
+      "tag": "UL",
+      "id": "",
+      "cls": "mt-8 grid list-none grid-cols-1 gap-y-12 p-0 lg:mt-12 lg:grid-cols-12 lg:gap-x-16 lg:gap-y-10",
+      "rect": {
+        "x": 24,
+        "y": 262.09375,
+        "width": 342,
+        "height": 1494.46875,
+        "top": 262.09375,
+        "right": 366,
+        "bottom": 1756.5625,
+        "left": 24
+      }
+    },
+    {
+      "tag": "DIV",
+      "id": "",
+      "cls": "mx-auto max-w-7xl",
+      "rect": {
+        "x": 24,
+        "y": -0.296875,
+        "width": 342,
+        "height": 1756.859375,
+        "top": -0.296875,
+        "right": 366,
+        "bottom": 1756.5625,
+        "left": 24
+      }
+    },
+    {
+      "tag": "SECTION",
+      "id": "education",
+      "cls": "relative isolate border-y border-white/[0.06] px-6 py-24 text-(--text-primary) sm:px-8 lg:min-h-[175vh] lg:px-12 lg:py-28",
+      "rect": {
+        "x": 0,
+        "y": -97.296875,
+        "width": 390,
+        "height": 1950.859375,
+        "top": -97.296875,
+        "right": 390,
+        "bottom": 1853.5625,
+        "left": 0
+      }
+    },
+    {
+      "tag": "DIV",
+      "id": "",
+      "cls": null,
+      "rect": {
+        "x": 0,
+        "y": -97.296875,
+        "width": 390,
+        "height": 1950.859375,
+        "top": -97.296875,
+        "right": 390,
+        "bottom": 1853.5625,
+        "left": 0
+      }
+    },
+    {
+      "tag": "DIV",
+      "id": "",
+      "cls": "invisible",
+      "rect": {
+        "x": 0,
+        "y": -1589.671875,
+        "width": 390,
+        "height": 11002.578125,
+        "top": -1589.671875,
+        "right": 390,
+        "bottom": 9412.90625,
+        "left": 0
+      }
+    },
+    {
+      "tag": "MAIN",
+      "id": "smooth-content",
+      "cls": null,
+      "rect": {
+        "x": 0,
+        "y": -6348,
+        "width": 390,
+        "height": 15760.90625,
+        "top": -6348,
+        "right": 390,
+        "bottom": 9412.90625,
+        "left": 0
+      }
+    },
+    {
+      "tag": "DIV",
+      "id": "smooth-wrapper",
+      "cls": "z-10",
+      "rect": {
+        "x": 0,
+        "y": -6348,
+        "width": 390,
+        "height": 15760.90625,
+        "top": -6348,
+        "right": 390,
+        "bottom": 9412.90625,
+        "left": 0
+      }
+    },
+    {
+      "tag": "DIV",
+      "id": "",
+      "cls": "bg-transparent text-(--text-primary) min-h-screen font-sans",
+      "rect": {
+        "x": 0,
+        "y": -6348,
+        "width": 390,
+        "height": 15760.90625,
+        "top": -6348,
+        "right": 390,
+        "bottom": 9412.90625,
+        "left": 0
+      }
+    },
+    {
+      "tag": "DIV",
+      "id": "root",
+      "cls": null,
+      "rect": {
+        "x": 0,
+        "y": -6348,
+        "width": 390,
+        "height": 15760.90625,
+        "top": -6348,
+        "right": 390,
+        "bottom": 9412.90625,
+        "left": 0
+      }
+    },
+    {
+      "tag": "BODY",
+      "id": "",
+      "cls": "dark",
+      "rect": {
+        "x": 0,
+        "y": -6348,
+        "width": 390,
+        "height": 15761,
+        "top": -6348,
+        "right": 390,
+        "bottom": 9413,
+        "left": 0
+      }
+    },
+    {
+      "tag": "HTML",
+      "id": "",
+      "cls": "dark",
+      "rect": {
+        "x": 0,
+        "y": -6348,
+        "width": 390,
+        "height": 15761,
+        "top": -6348,
+        "right": 390,
+        "bottom": 9413,
+        "left": 0
+      }
+    }
+  ]
+}

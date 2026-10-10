@@ -1,138 +1,131 @@
-import { useId, useLayoutEffect, useMemo, useRef } from 'react';
+import { useId, useLayoutEffect, useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import { useTranslation } from 'react-i18next';
 import { gsap } from '@/hooks/useGSAPSetup';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useScrollStore } from '@/stores/useScrollStore';
+import '@/styles/opening.css';
 
-const MOTION = {
-  count: 2,
-  reveal: 0.32,
-  spin: 1.2,
-  maxWaitMs: 2400,
+let openingSeen = false;
+const smooth = (a, b, p) => {
+  const t = Math.min(1, Math.max(0, (p - a) / (b - a)));
+  return t * t * t * (t * (t * 6 - 15) + 10);
 };
 
 export function Preloader({ onComplete }) {
   const root = useRef(null);
-  const content = useRef(null);
-  const spinner = useRef(null);
-  const counter = useRef(null);
+  const ring = useRef(null);
+  const veil = useRef(null);
+  const light = useRef(null);
   const done = useRef(onComplete);
   const completed = useRef(false);
-  const percent = useRef(0);
-  const deadline = useRef(null);
-  const reducedMotion = useReducedMotion();
-  const { t, i18n } = useTranslation();
-  const gradientId = `stellar-spinner-${useId()}`;
-  const format = useMemo(() => new Intl.NumberFormat(i18n.resolvedLanguage ?? 'vi', {
-    style: 'percent', maximumFractionDigits: 0,
-  }), [i18n.resolvedLanguage]);
+  const started = useRef(null);
+  const reduced = useReducedMotion();
+  const { t } = useTranslation();
+  const gradient = `opening-${useId()}`;
+  useLayoutEffect(() => { done.current = onComplete; }, [onComplete]);
 
-  useLayoutEffect(() => {
-    done.current = onComplete;
-  }, [onComplete]);
-
-  useGSAP(() => {
+  useGSAP((context, contextSafe) => {
     if (completed.current) return;
-    // Reduced motion needs no artificial loading delay or animation ticker.
-    if (reducedMotion) {
-      completed.current = true;
-      percent.current = 100;
-      counter.current.textContent = format.format(1);
-      done.current?.();
-      return;
-    }
-    // Keep the original deadline through StrictMode and locale changes.
-    deadline.current ??= performance.now() + MOTION.maxWaitMs;
     let active = true;
-    const progress = { value: percent.current };
-    const countDuration = MOTION.count * (1 - percent.current / 100);
-    counter.current.textContent = format.format(percent.current / 100);
-    const rotation = gsap.to(spinner.current, {
-      rotation: 360, duration: MOTION.spin, ease: 'none', repeat: -1,
+    let timeline;
+    let finishTimer;
+    let forced = false;
+    const complete = () => {
+      if (!active || completed.current) return;
+      completed.current = true;
+      openingSeen = true;
+      done.current?.();
+    };
+    if (reduced) { complete(); return; }
+    started.current ??= performance.now();
+    gsap.set(ring.current, { xPercent: -50, yPercent: -50, x: 0, y: 0, scale: 1 });
+    const x = gsap.quickSetter(ring.current, 'x', 'px');
+    const y = gsap.quickSetter(ring.current, 'y', 'px');
+    const scaleX = gsap.quickSetter(ring.current, 'scaleX');
+    const scaleY = gsap.quickSetter(ring.current, 'scaleY');
+    const ringAlpha = gsap.quickSetter(ring.current, 'opacity');
+    const veilAlpha = gsap.quickSetter(veil.current, 'opacity');
+    const lightAlpha = gsap.quickSetter(light.current, 'opacity');
+    const pose = { x: 0, y: 0, scale: 1 };
+    const model = { p: 0 };
+    const measure = () => {
+      const rect = document.querySelector('[data-story-anchor="portal"]')?.getBoundingClientRect();
+      if (!rect?.height) return false;
+      pose.x = rect.left + rect.width / 2 - window.innerWidth / 2;
+      pose.y = rect.top + rect.height / 2 - window.innerHeight / 2;
+      pose.scale = Math.max(0.01, rect.height * 0.96 / (ring.current.offsetWidth * 0.84));
+      return true;
+    };
+    const draw = () => {
+      measure();
+      const p = model.p, move = smooth(0, 0.74, p);
+      x(pose.x * move); y(pose.y * move);
+      const size = Math.exp(Math.log(pose.scale) * move);
+      scaleX(size); scaleY(size);
+      // Reveal only once the live photon ring and the opening have the same center.
+      veilAlpha(1 - smooth(0.74, 0.98, p));
+      ringAlpha(1 - smooth(0.78, 1, p));
+      lightAlpha(0.72 + 0.28 * smooth(0, 0.3, p));
+    };
+    const begin = contextSafe(() => {
+      if (!active || timeline || document.hidden) return;
+      const fallback = useScrollStore.getState().sceneFallback;
+      const ready = document.fonts.status === 'loaded'
+        && (fallback || document.querySelector('[data-galaxy-scene]')?.dataset.sceneReady === 'true');
+      if ((!ready && !forced) || !measure()) return;
+      const reload = performance.getEntriesByType('navigation')[0]?.type === 'reload';
+      const warm = (openingSeen || reload) && performance.now() - started.current < 1800 && !forced;
+      const duration = warm ? 0.9 : 1.8;
+      root.current.dataset.openingDuration = String(duration);
+      root.current.dataset.openingReady = forced ? 'watchdog' : 'scene-font';
+      timeline = gsap.timeline({ id: 'preloader-intro', onComplete: complete })
+        .to(model, { p: 1, duration, ease: 'none', onUpdate: draw });
+      finishTimer = window.setTimeout(() => {
+        if (active && !document.hidden) timeline.totalProgress(1);
+      }, duration * 1000 + 250);
     });
-    const timeline = gsap.timeline({
-      id: 'preloader-intro',
-      defaults: { ease: 'power2.inOut' },
-      onComplete: () => {
-        if (!active || completed.current) return;
-        completed.current = true;
-        rotation?.kill();
-        done.current?.();
-      },
-    });
-
-    timeline.addLabel('connect', 0);
-    timeline.to(progress, {
-      value: 100,
-      duration: countDuration,
-      onUpdate: () => {
-        if (!active || !counter.current) return;
-        // Reverting an old context must never rewind the numeric progress.
-        percent.current = Math.max(percent.current, Math.round(progress.value));
-      },
-    }, 'connect');
-    timeline.to(counter.current, {
-      duration: countDuration,
-      ease: 'none',
-      scrambleText: { text: format.format(1), chars: '0123456789', tweenLength: false, speed: 0.5 },
-    }, 'connect');
-    timeline.addLabel('reveal');
-    timeline.call(() => rotation?.pause(), null, 'reveal');
-    timeline.to(content.current, { autoAlpha: 0, duration: 0.12 }, 'reveal');
-    timeline.to(root.current, {
-      autoAlpha: 0,
-      // One short full-screen curtain is the requested clip-path exception.
-      clipPath: 'inset(0% 0% 100% 0%)',
-      duration: MOTION.reveal,
-      ease: 'power3.inOut',
-    }, 'reveal');
-
-    // Finish even if the ticker is throttled or applies lag smoothing.
-    const timeout = window.setTimeout(() => {
-      if (active) timeline.totalProgress(1);
-    }, Math.max(0, deadline.current - performance.now()));
-
+    const resize = draw;
+    const visibility = () => { timeline?.paused(document.hidden); begin(); };
+    const key = event => { if (event.key === 'Tab' && !completed.current) event.preventDefault(); };
+    const waitTimer = window.setTimeout(() => { forced = true; begin(); }, Math.max(0, 5000 - (performance.now() - started.current)));
+    gsap.ticker.add(begin);
+    document.addEventListener('visibilitychange', visibility);
+    document.addEventListener('keydown', key, true);
+    window.addEventListener('resize', resize);
+    document.fonts?.addEventListener('loadingdone', resize);
+    root.current.focus({ preventScroll: true });
+    begin();
     return () => {
       active = false;
-      window.clearTimeout(timeout);
-      // useGSAP's context reverts the timeline, rotation and DOM styles.
+      window.clearTimeout(waitTimer); window.clearTimeout(finishTimer);
+      gsap.ticker.remove(begin);
+      document.removeEventListener('visibilitychange', visibility);
+      document.removeEventListener('keydown', key, true);
+      window.removeEventListener('resize', resize);
+      document.fonts?.removeEventListener('loadingdone', resize);
     };
-  }, { scope: root, dependencies: [reducedMotion, format], revertOnUpdate: true });
+  }, { scope: root, dependencies: [reduced], revertOnUpdate: true });
 
-  return (
-    <div
-      ref={root}
-      role="status"
-      aria-label={t('preloader.counterLabel')}
-      aria-live="polite"
-      className="fixed inset-0 z-[9999] grid place-items-center overflow-hidden bg-(--bg-void) px-6 text-(--text-primary) [clip-path:inset(0%_0%_0%_0%)] will-change-opacity"
-      data-preloader
-    >
-      <div ref={content} className="flex flex-col items-center gap-7 text-center font-mono">
-        <div aria-hidden="true" className="relative grid size-36 place-items-center sm:size-40">
-          <div ref={spinner} className="absolute inset-0 motion-safe:will-change-transform" data-preloader-spinner>
-            <svg viewBox="0 0 160 160" className="size-full" fill="none" aria-hidden="true" focusable="false">
-              <defs>
-                <linearGradient id={gradientId} x1="12" y1="12" x2="148" y2="148" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#FFFFFF" />
-                  <stop offset="0.55" stopColor="#999999" />
-                  <stop offset="1" stopColor="#333333" />
-                </linearGradient>
-              </defs>
-              <circle cx="80" cy="80" r="68" stroke={`url(#${gradientId})`} strokeWidth="1.5" strokeDasharray="342 85.257" strokeLinecap="round" />
-            </svg>
-          </div>
-          {/* Decorative progress is excluded from live announcements every frame. */}
-          <span key={i18n.resolvedLanguage} ref={counter} className="text-[2rem] leading-none tracking-[-0.06em] tabular-nums sm:text-[2.25rem]" data-preloader-percent>
-            {format.format(0)}
-          </span>
-        </div>
-        <p className="max-w-80 text-[0.625rem] leading-5 tracking-[0.16em] text-(--text-secondary) sm:text-[0.6875rem]">
-          {t('preloader.counterLabel')}
-        </p>
-      </div>
+  if (reduced) return null;
+  return <div ref={root} role="status" aria-label={t('preloader.counterLabel')} aria-live="polite"
+    tabIndex={-1} className="stellar-opening fixed inset-0 z-[9999] overflow-hidden" data-preloader>
+    <div ref={veil} className="absolute inset-0 bg-(--bg-void)" data-opening-veil />
+    <div ref={ring} className="opening-ring" data-preloader-ring aria-hidden="true">
+      <svg viewBox="-100 -100 200 200" fill="none" className="size-full overflow-visible" focusable="false">
+        <defs><linearGradient id={gradient} x1="-100" y1="-100" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+          <stop stopColor="white" /><stop offset="0.5" stopColor="#999" /><stop offset="1" stopColor="white" />
+        </linearGradient></defs>
+        <g ref={light}>
+          <circle r="84" stroke={`url(#${gradient})`} strokeWidth="1.2" />
+          <circle r="86" stroke="white" strokeWidth="0.35" opacity="0.25" />
+          <ellipse rx="112" ry="18" transform="rotate(55)" stroke={`url(#${gradient})`} strokeWidth="0.8" opacity="0.7" />
+          <ellipse rx="104" ry="14" transform="rotate(55)" stroke="white" strokeWidth="0.3" opacity="0.3" />
+        </g>
+      </svg>
     </div>
-  );
+    <span className="sr-only">{t('preloader.counterLabel')}</span>
+  </div>;
 }
 
 export default Preloader;

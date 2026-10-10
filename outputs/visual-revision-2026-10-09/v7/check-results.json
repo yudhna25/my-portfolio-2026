@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "width": 390,
+      "height": 844,
+      "scalePx": 98.95117903898691,
+      "relativeScale": 1.691473145965588
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "scalePx": 171.6625828067944,
+      "relativeScale": 1.4901265868645348
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "scalePx": 210.58864849308523,
+      "relativeScale": 1.799902978573378
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "scalePx": 252.72000000000003,
+      "relativeScale": 1.8
+    }
+  ],
+  "orbit": {
+    "phase": 0.8375558770035131,
+    "origin": 0.8375000768026543,
+    "velocity": 0.006865198794847038,
+    "latched": false,
+    "visited": true,
+    "captures": 1,
+    "resumePending": false
+  }
+}

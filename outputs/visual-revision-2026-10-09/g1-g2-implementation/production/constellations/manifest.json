@@ -1,0 +1,1217 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-09",
+  "revision": "daace2add6a1bf886e8ee1934f51e9c69f818d18",
+  "revisionDate": "2026-03-05T20:21:47Z",
+  "catalog": {
+    "id": "I/239/hip_main",
+    "frame": "ICRS",
+    "positionEpoch": "J1991.25",
+    "magnitudeBand": "Johnson V",
+    "coordinatesUnit": "degree",
+    "properMotionApplied": false,
+    "note": "RAICRS/DEICRS are J1991.25 positions. They are not relabelled as J2000 or current-date positions."
+  },
+  "linePatternSource": {
+    "id": "stellarium-modern",
+    "name": "Stellarium Modern",
+    "commit": "daace2add6a1bf886e8ee1934f51e9c69f818d18",
+    "license": "CC BY-SA 4.0",
+    "attribution": "Star-line figures adapted from Stellarium team, Modern sky culture, CC BY-SA 4.0. Catalog positions from ESA 1997, Hipparcos Catalogue ESA SP-1200, CDS/VizieR I/239/hip_main.",
+    "iauNote": "IAU defines constellation boundaries and names, but no unique official stick figure. Selected edges are the Stellarium Modern convention, not an IAU-prescribed shape."
+  },
+  "sourceReceipts": "outputs/visual-revision-2026-10-09/v4/source-receipts.json",
+  "creditsUrl": "/constellations/ATTRIBUTION.md",
+  "assets": [
+    {
+      "id": "Ori",
+      "name": "Orion",
+      "entityId": "saigonUniversity",
+      "assignment": "SGU",
+      "section": "education",
+      "source": {
+        "url": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/orion.png",
+        "revision": "daace2add6a1bf886e8ee1934f51e9c69f818d18",
+        "sha256": "3edea0a3275ce25e084642f55111e07d8e7fc16cfeb8a04844719f45523744ae",
+        "size": [
+          512,
+          512
+        ],
+        "metadataSha256": "1f2f5ffd6c9e25a7d0dcfdbf1f756e2db03dd3b8ed4ec016a2839b09f6b0fe1e",
+        "author": "Johan Meuris",
+        "authorPage": "https://johanmeuris.eu/work/stellarium-constellation-art/",
+        "originalLicense": "Free Art License (unversioned source notice)",
+        "date": "2005-10-30 (author portfolio publication date)"
+      },
+      "license": {
+        "artwork": "Free Art License 1.3",
+        "url": "https://artlibre.org/licence/lal/en/",
+        "linePattern": "CC BY-SA 4.0 — Stellarium team",
+        "catalog": "ESA 1997 / CDS VizieR terms; no blanket FAL/CC assignment"
+      },
+      "credit": "Orion outline derivative, 2026-10-09. Original: Johan Meuris, Stellarium constellation art (2005), Free Art License; vector tracing/calibration: Tran Vu Anh Duy portfolio / Codex. Modified silhouette/ink contours, grayscale, removed shading; not a recovered vector master.",
+      "derivative": {
+        "method": "deterministic pixel-grid contour trace + Douglas-Peucker, three-star projective calibration; no AI/no raster embed/no upscale",
+        "vectorMasterVerified": false,
+        "silhouetteThreshold": 12,
+        "detailLocalContrast": 9,
+        "detailsMinArea": 8,
+        "sourceToVectorApplied": true,
+        "crop": "calibrated silhouette + three anchors, square with 3% margin per side",
+        "outerPaths": 37,
+        "detailContours": 68
+      },
+      "artwork": {
+        "assetId": "Ori",
+        "url": "/constellations/orion.svg",
+        "sha256": "7fea1ced47cfb586e03f03404e01f6a419066f597322dcf31b5b5e8ee1a2684f",
+        "viewBox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "anchors": [
+          {
+            "hip": 27913,
+            "sourcePixel": [
+              59,
+              11
+            ],
+            "vectorPixel": [
+              183.67363513082697,
+              31.54537569357485
+            ],
+            "localPosition": [
+              -0.2836666864545299,
+              0.6717147393969265,
+              0.0
+            ],
+            "raDeg": 88.59618305,
+            "decDeg": 20.27641498,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 27366,
+            "sourcePixel": [
+              329,
+              477
+            ],
+            "vectorPixel": [
+              203.11203407657248,
+              479.05448959149385
+            ],
+            "localPosition": [
+              -0.22007192781743914,
+              -0.7923582105239494,
+              0.0
+            ],
+            "raDeg": 86.93911641,
+            "decDeg": -9.66960186,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 22449,
+            "sourcePixel": [
+              421,
+              91
+            ],
+            "vectorPixel": [
+              415.701224977224,
+              229.00769923294988
+            ],
+            "localPosition": [
+              0.4754358823636227,
+              0.02569606057183006,
+              0.0
+            ],
+            "raDeg": 72.45890935,
+            "decDeg": 6.96124744,
+            "role": "line-pattern"
+          }
+        ],
+        "sourcePixelToLocal": [
+          [
+            0.002407045051613288,
+            -0.0012534594187449402,
+            -0.412844886606511
+          ],
+          [
+            -0.001256823703165899,
+            -0.002408798237984194,
+            0.7746151024277982
+          ],
+          [
+            6.771696510735681e-05,
+            -5.8563632201080204e-05,
+            1.0
+          ]
+        ],
+        "sourcePixelToVector": [
+          [
+            0.7540476035424905,
+            -0.39896729333315967,
+            144.18897564847998
+          ],
+          [
+            0.4002008011639209,
+            0.7224027200096932,
+            0.09281024442276475
+          ],
+          [
+            6.771696510735681e-05,
+            -5.8563632201080204e-05,
+            1.0
+          ]
+        ],
+        "vectorPixelToLocal": [
+          [
+            0.0032716047661430357,
+            0.0,
+            -0.8845742265633603
+          ],
+          [
+            -0.0,
+            -0.0032716047661430357,
+            0.7749187408657986
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixConvention": "row-major 3x3, column [x,y,1], divide by third coordinate",
+        "plane": {
+          "center": [
+            -0.04704340643074306,
+            -0.06261207926681861,
+            0
+          ],
+          "width": 1.6750616402652345,
+          "height": 1.6750616402652345,
+          "localZ": -0.01
+        },
+        "opacity": {
+          "idle": [
+            0.08,
+            0.12
+          ],
+          "active": [
+            0.25,
+            0.35
+          ]
+        }
+      },
+      "projection": {
+        "type": "gnomonic",
+        "origin": {
+          "raDeg": 82.43743888969622,
+          "decDeg": 6.526394520531372
+        },
+        "fieldRadiusDeg": 20.166599282434795,
+        "uniformScale": 2.7228174458111547,
+        "xDirection": "celestial west right (increasing RA left)",
+        "yDirection": "north up",
+        "z": 0,
+        "view": "sky as seen from Earth, not exterior celestial globe",
+        "normalization": "same scalar for x/y; no independent stretch, mirroring or invented coordinates"
+      },
+      "calibrationStars": []
+    },
+    {
+      "id": "Sco",
+      "name": "Scorpius",
+      "entityId": "greenAcademy",
+      "assignment": "Green Academy",
+      "section": "education",
+      "source": {
+        "url": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/scorpius.png",
+        "revision": "daace2add6a1bf886e8ee1934f51e9c69f818d18",
+        "sha256": "e681573f0d51cc934bf170fa4136396a78d234d5d0db3f778cc16ea0df6f2d64",
+        "size": [
+          512,
+          512
+        ],
+        "metadataSha256": "1f2f5ffd6c9e25a7d0dcfdbf1f756e2db03dd3b8ed4ec016a2839b09f6b0fe1e",
+        "author": "Johan Meuris",
+        "authorPage": "https://johanmeuris.eu/work/stellarium-constellation-art/",
+        "originalLicense": "Free Art License (unversioned source notice)",
+        "date": "2005-10-30 (author portfolio publication date)"
+      },
+      "license": {
+        "artwork": "Free Art License 1.3",
+        "url": "https://artlibre.org/licence/lal/en/",
+        "linePattern": "CC BY-SA 4.0 — Stellarium team",
+        "catalog": "ESA 1997 / CDS VizieR terms; no blanket FAL/CC assignment"
+      },
+      "credit": "Scorpius outline derivative, 2026-10-09. Original: Johan Meuris, Stellarium constellation art (2005), Free Art License; vector tracing/calibration: Tran Vu Anh Duy portfolio / Codex. Modified silhouette/ink contours, grayscale, removed shading; not a recovered vector master.",
+      "derivative": {
+        "method": "deterministic pixel-grid contour trace + Douglas-Peucker, three-star projective calibration; no AI/no raster embed/no upscale",
+        "vectorMasterVerified": false,
+        "silhouetteThreshold": 12,
+        "detailLocalContrast": 9,
+        "detailsMinArea": 8,
+        "sourceToVectorApplied": true,
+        "crop": "calibrated silhouette + three anchors, square with 3% margin per side",
+        "outerPaths": 27,
+        "detailContours": 30
+      },
+      "artwork": {
+        "assetId": "Sco",
+        "url": "/constellations/scorpius.svg",
+        "sha256": "2b720432b3a77bb670b124c3dea66a1faa7fbbaf3150cab0f7f67071ed5032a5",
+        "viewBox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "anchors": [
+          {
+            "hip": 78820,
+            "sourcePixel": [
+              447,
+              29
+            ],
+            "vectorPixel": [
+              440.9194276663294,
+              41.75787684659933
+            ],
+            "localPosition": [
+              0.5037325773160798,
+              0.64857449935011,
+              0.0
+            ],
+            "raDeg": 241.35931206,
+            "decDeg": -19.80539286,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 85927,
+            "sourcePixel": [
+              62,
+              365
+            ],
+            "vectorPixel": [
+              77.0003735966816,
+              368.5045935721549
+            ],
+            "localPosition": [
+              -0.38658987556198054,
+              -0.1508063933284969,
+              0.0
+            ],
+            "raDeg": 263.40219373,
+            "decDeg": -37.10374835,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 82729,
+            "sourcePixel": [
+              217,
+              462
+            ],
+            "vectorPixel": [
+              222.51513038318316,
+              457.6289200356621
+            ],
+            "localPosition": [
+              -0.03059022744430372,
+              -0.3688477079031075,
+              0.0
+            ],
+            "raDeg": 253.64627156,
+            "decDeg": -42.36075916,
+            "role": "calibration-only"
+          }
+        ],
+        "sourcePixelToLocal": [
+          [
+            0.0023409015643532883,
+            1.9929461811989855e-05,
+            -0.5486148295596958
+          ],
+          [
+            2.035156291810805e-05,
+            -0.0023463123766034933,
+            0.7005851500352573
+          ],
+          [
+            -2.8658366466434776e-05,
+            7.300720270797343e-05,
+            1.0
+          ]
+        ],
+        "sourcePixelToVector": [
+          [
+            0.9501076038259585,
+            0.02530423276817555,
+            10.772718881337113
+          ],
+          [
+            -0.01711287428310461,
+            0.9814577033114882,
+            20.498537898446216
+          ],
+          [
+            -2.8658366466434776e-05,
+            7.300720270797343e-05,
+            1.0
+          ]
+        ],
+        "vectorPixelToLocal": [
+          [
+            0.00244648485129242,
+            0.0,
+            -0.5749701231101189
+          ],
+          [
+            -0.0,
+            -0.00244648485129242,
+            0.7507345124774497
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixConvention": "row-major 3x3, column [x,y,1], divide by third coordinate",
+        "plane": {
+          "center": [
+            0.05132999882074063,
+            0.12443439054659011,
+            0
+          ],
+          "width": 1.252600243861719,
+          "height": 1.252600243861719,
+          "localZ": -0.01
+        },
+        "opacity": {
+          "idle": [
+            0.08,
+            0.12
+          ],
+          "active": [
+            0.25,
+            0.35
+          ]
+        }
+      },
+      "projection": {
+        "type": "gnomonic",
+        "origin": {
+          "raDeg": 252.73839113844622,
+          "decDeg": -34.24812298018214
+        },
+        "fieldRadiusDeg": 21.138305434750553,
+        "uniformScale": 2.586410793873572,
+        "xDirection": "celestial west right (increasing RA left)",
+        "yDirection": "north up",
+        "z": 0,
+        "view": "sky as seen from Earth, not exterior celestial globe",
+        "normalization": "same scalar for x/y; no independent stretch, mirroring or invented coordinates"
+      },
+      "calibrationStars": [
+        {
+          "id": "HIP 82729",
+          "hip": 82729,
+          "raDeg": 253.64627156,
+          "decDeg": -42.36075916,
+          "vmag": 3.62,
+          "position": [
+            -0.03059022744430372,
+            -0.3688477079031075,
+            0.0
+          ],
+          "role": "calibration-only; no edge"
+        }
+      ]
+    },
+    {
+      "id": "Leo",
+      "name": "Leo",
+      "entityId": "arenaMultimedia",
+      "assignment": "Arena",
+      "section": "education",
+      "source": {
+        "url": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/leo.png",
+        "revision": "daace2add6a1bf886e8ee1934f51e9c69f818d18",
+        "sha256": "1e12035d808d63f4dbc9e4a195fce32ef69281d38efea2ea2242c38cf0fec2ba",
+        "size": [
+          512,
+          512
+        ],
+        "metadataSha256": "1f2f5ffd6c9e25a7d0dcfdbf1f756e2db03dd3b8ed4ec016a2839b09f6b0fe1e",
+        "author": "Johan Meuris",
+        "authorPage": "https://johanmeuris.eu/work/stellarium-constellation-art/",
+        "originalLicense": "Free Art License (unversioned source notice)",
+        "date": "2005-10-30 (author portfolio publication date)"
+      },
+      "license": {
+        "artwork": "Free Art License 1.3",
+        "url": "https://artlibre.org/licence/lal/en/",
+        "linePattern": "CC BY-SA 4.0 — Stellarium team",
+        "catalog": "ESA 1997 / CDS VizieR terms; no blanket FAL/CC assignment"
+      },
+      "credit": "Leo outline derivative, 2026-10-09. Original: Johan Meuris, Stellarium constellation art (2005), Free Art License; vector tracing/calibration: Tran Vu Anh Duy portfolio / Codex. Modified silhouette/ink contours, grayscale, removed shading; not a recovered vector master.",
+      "derivative": {
+        "method": "deterministic pixel-grid contour trace + Douglas-Peucker, three-star projective calibration; no AI/no raster embed/no upscale",
+        "vectorMasterVerified": false,
+        "silhouetteThreshold": 12,
+        "detailLocalContrast": 9,
+        "detailsMinArea": 8,
+        "sourceToVectorApplied": true,
+        "crop": "calibrated silhouette + three anchors, square with 3% margin per side",
+        "outerPaths": 17,
+        "detailContours": 53
+      },
+      "artwork": {
+        "assetId": "Leo",
+        "url": "/constellations/leo.svg",
+        "sha256": "fff19ee2dd7345c30fdc8a801f3b2a9a13bbafafd8e921d71ea04ed2fb75b829",
+        "viewBox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "anchors": [
+          {
+            "hip": 57632,
+            "sourcePixel": [
+              69,
+              411
+            ],
+            "vectorPixel": [
+              65.64721983806568,
+              254.643231913345
+            ],
+            "localPosition": [
+              -0.8016929755896813,
+              -0.16860265847843964,
+              0.0
+            ],
+            "raDeg": 177.26615977,
+            "decDeg": 14.57233687,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 49669,
+            "sourcePixel": [
+              383,
+              186
+            ],
+            "vectorPixel": [
+              387.71229503509386,
+              297.97522401070125
+            ],
+            "localPosition": [
+              0.2484920022387476,
+              -0.3098989698906111,
+              0.0
+            ],
+            "raDeg": 152.09358075,
+            "decDeg": 11.96719513,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 47908,
+            "sourcePixel": [
+              321,
+              32
+            ],
+            "vectorPixel": [
+              449.752143131346,
+              141.5187529397855
+            ],
+            "localPosition": [
+              0.45079061054821123,
+              0.20027194976656013,
+              0.0
+            ],
+            "raDeg": 146.4629267,
+            "decDeg": 23.77427792,
+            "role": "line-pattern"
+          }
+        ],
+        "sourcePixelToLocal": [
+          [
+            0.0018860942728348665,
+            -0.002117076628787948,
+            -0.06756371718613821
+          ],
+          [
+            -0.0023146981622678402,
+            -0.0025382552032236776,
+            1.0331043667333286
+          ],
+          [
+            0.0001340958239469429,
+            -4.761889721904641e-06,
+            1.0
+          ]
+        ],
+        "sourcePixelToVector": [
+          [
+            0.6201889054581894,
+            -0.6507370206898713,
+            290.7860285277315
+          ],
+          [
+            0.7370721853910428,
+            0.7774520767294942,
+            -113.88980903713681
+          ],
+          [
+            0.0001340958239469429,
+            -4.761889721904641e-06,
+            1.0
+          ]
+        ],
+        "vectorPixelToLocal": [
+          [
+            0.003260785036024046,
+            0.0,
+            -1.0157544476942266
+          ],
+          [
+            -0.0,
+            -0.003260785036024046,
+            0.6617341816693967
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixConvention": "row-major 3x3, column [x,y,1], divide by third coordinate",
+        "plane": {
+          "center": [
+            -0.18099347847207076,
+            -0.17302678755275908,
+            0
+          ],
+          "width": 1.6695219384443114,
+          "height": 1.6695219384443114,
+          "localZ": -0.01
+        },
+        "opacity": {
+          "idle": [
+            0.08,
+            0.12
+          ],
+          "active": [
+            0.25,
+            0.35
+          ]
+        }
+      },
+      "projection": {
+        "type": "gnomonic",
+        "origin": {
+          "raDeg": 158.115569831241,
+          "decDeg": 19.424488301350298
+        },
+        "fieldRadiusDeg": 22.718300264534207,
+        "uniformScale": 2.388433860968587,
+        "xDirection": "celestial west right (increasing RA left)",
+        "yDirection": "north up",
+        "z": 0,
+        "view": "sky as seen from Earth, not exterior celestial globe",
+        "normalization": "same scalar for x/y; no independent stretch, mirroring or invented coordinates"
+      },
+      "calibrationStars": []
+    },
+    {
+      "id": "Cen",
+      "name": "Centaurus",
+      "entityId": "edura",
+      "assignment": "EDURA",
+      "section": "works",
+      "source": {
+        "url": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/centaurus.png",
+        "revision": "daace2add6a1bf886e8ee1934f51e9c69f818d18",
+        "sha256": "76c4e6b98f224ad7e4853e46be5c7b897dfb344f7e495a321a9a711ddd5cc232",
+        "size": [
+          512,
+          512
+        ],
+        "metadataSha256": "1f2f5ffd6c9e25a7d0dcfdbf1f756e2db03dd3b8ed4ec016a2839b09f6b0fe1e",
+        "author": "Johan Meuris",
+        "authorPage": "https://johanmeuris.eu/work/stellarium-constellation-art/",
+        "originalLicense": "Free Art License (unversioned source notice)",
+        "date": "2005-10-30 (author portfolio publication date)"
+      },
+      "license": {
+        "artwork": "Free Art License 1.3",
+        "url": "https://artlibre.org/licence/lal/en/",
+        "linePattern": "CC BY-SA 4.0 — Stellarium team",
+        "catalog": "ESA 1997 / CDS VizieR terms; no blanket FAL/CC assignment"
+      },
+      "credit": "Centaurus outline derivative, 2026-10-09. Original: Johan Meuris, Stellarium constellation art (2005), Free Art License; vector tracing/calibration: Tran Vu Anh Duy portfolio / Codex. Modified silhouette/ink contours, grayscale, removed shading; not a recovered vector master.",
+      "derivative": {
+        "method": "deterministic pixel-grid contour trace + Douglas-Peucker, three-star projective calibration; no AI/no raster embed/no upscale",
+        "vectorMasterVerified": false,
+        "silhouetteThreshold": 12,
+        "detailLocalContrast": 9,
+        "detailsMinArea": 8,
+        "sourceToVectorApplied": true,
+        "crop": "calibrated silhouette + three anchors, square with 3% margin per side",
+        "outerPaths": 12,
+        "detailContours": 45
+      },
+      "artwork": {
+        "assetId": "Cen",
+        "url": "/constellations/centaurus.svg",
+        "sha256": "717ce7d895f3408e95dd0b1e313fd5eeae24b706353154195d6df7346c60ab17",
+        "viewBox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "anchors": [
+          {
+            "hip": 68933,
+            "sourcePixel": [
+              118,
+              157
+            ],
+            "vectorPixel": [
+              178.19136715903932,
+              94.23715143130785
+            ],
+            "localPosition": [
+              -0.2615989516300962,
+              0.4494105489516473,
+              0.0
+            ],
+            "raDeg": 211.67218608,
+            "decDeg": -36.36869575,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 71683,
+            "sourcePixel": [
+              194,
+              444
+            ],
+            "vectorPixel": [
+              163.33308121363058,
+              395.9717020226668
+            ],
+            "localPosition": [
+              -0.30769584217039453,
+              -0.48670177261353725,
+              0.0
+            ],
+            "raDeg": 219.92041034,
+            "decDeg": -60.83514707,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 56561,
+            "sourcePixel": [
+              463,
+              412
+            ],
+            "vectorPixel": [
+              422.00957601353423,
+              447.92332509761167
+            ],
+            "localPosition": [
+              0.4948315899944019,
+              -0.6478783909041931,
+              0.0
+            ],
+            "raDeg": 173.94553448,
+            "decDeg": -63.01982488,
+            "role": "line-pattern"
+          }
+        ],
+        "sourcePixelToLocal": [
+          [
+            0.0027604344521013524,
+            -0.0008826541507253138,
+            -0.44540794829370545
+          ],
+          [
+            -0.0008628796628435151,
+            -0.0029805988472535678,
+            1.0134368944218284
+          ],
+          [
+            -0.00012131076220505499,
+            9.718177904825063e-06,
+            1.0
+          ]
+        ],
+        "sourcePixelToVector": [
+          [
+            0.8579178520575974,
+            -0.28195238624200275,
+            118.94471082808664
+          ],
+          [
+            0.24912493753523826,
+            0.9630519203491164,
+            -87.56393370725706
+          ],
+          [
+            -0.00012131076220505499,
+            9.718177904825063e-06,
+            1.0
+          ]
+        ],
+        "vectorPixelToLocal": [
+          [
+            0.003102436627593793,
+            0.0,
+            -0.8144263758253134
+          ],
+          [
+            -0.0,
+            -0.003102436627593793,
+            0.7417753392322394
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixConvention": "row-major 3x3, column [x,y,1], divide by third coordinate",
+        "plane": {
+          "center": [
+            -0.020202599161302404,
+            -0.05244843743177163,
+            0
+          ],
+          "width": 1.588447553328022,
+          "height": 1.588447553328022,
+          "localZ": -0.01
+        },
+        "opacity": {
+          "idle": [
+            0.08,
+            0.12
+          ],
+          "active": [
+            0.25,
+            0.35
+          ]
+        }
+      },
+      "projection": {
+        "type": "gnomonic",
+        "origin": {
+          "raDeg": 203.00533565794234,
+          "decDeg": -48.805858667496544
+        },
+        "fieldRadiusDeg": 25.544998835256287,
+        "uniformScale": 2.0923130619014265,
+        "xDirection": "celestial west right (increasing RA left)",
+        "yDirection": "north up",
+        "z": 0,
+        "view": "sky as seen from Earth, not exterior celestial globe",
+        "normalization": "same scalar for x/y; no independent stretch, mirroring or invented coordinates"
+      },
+      "calibrationStars": []
+    },
+    {
+      "id": "Gem",
+      "name": "Gemini",
+      "entityId": "veris",
+      "assignment": "VERIS",
+      "section": "works",
+      "source": {
+        "url": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/gemini.png",
+        "revision": "daace2add6a1bf886e8ee1934f51e9c69f818d18",
+        "sha256": "fb481f6bb73c44a7b0009a20fc7b17d574dac1d425a13b48b75a8bb6b2e5511a",
+        "size": [
+          256,
+          256
+        ],
+        "metadataSha256": "1f2f5ffd6c9e25a7d0dcfdbf1f756e2db03dd3b8ed4ec016a2839b09f6b0fe1e",
+        "author": "Johan Meuris",
+        "authorPage": "https://johanmeuris.eu/work/stellarium-constellation-art/",
+        "originalLicense": "Free Art License (unversioned source notice)",
+        "date": "2005-10-30 (author portfolio publication date)"
+      },
+      "license": {
+        "artwork": "Free Art License 1.3",
+        "url": "https://artlibre.org/licence/lal/en/",
+        "linePattern": "CC BY-SA 4.0 — Stellarium team",
+        "catalog": "ESA 1997 / CDS VizieR terms; no blanket FAL/CC assignment"
+      },
+      "credit": "Gemini outline derivative, 2026-10-09. Original: Johan Meuris, Stellarium constellation art (2005), Free Art License; vector tracing/calibration: Tran Vu Anh Duy portfolio / Codex. Modified silhouette/ink contours, grayscale, removed shading; not a recovered vector master.",
+      "derivative": {
+        "method": "deterministic pixel-grid contour trace + Douglas-Peucker, three-star projective calibration; no AI/no raster embed/no upscale",
+        "vectorMasterVerified": false,
+        "silhouetteThreshold": 12,
+        "detailLocalContrast": 9,
+        "detailsMinArea": 8,
+        "sourceToVectorApplied": true,
+        "crop": "calibrated silhouette + three anchors, square with 3% margin per side",
+        "outerPaths": 12,
+        "detailContours": 37
+      },
+      "artwork": {
+        "assetId": "Gem",
+        "url": "/constellations/gemini.svg",
+        "sha256": "ea4ad1fbd4155d823b0890af68221cfe638f18f6e59b1d3303f07649c6b62273",
+        "viewBox": [
+          0,
+          0,
+          256,
+          256
+        ],
+        "anchors": [
+          {
+            "hip": 37740,
+            "sourcePixel": [
+              14,
+              81
+            ],
+            "vectorPixel": [
+              29.295762325722183,
+              119.02984530905583
+            ],
+            "localPosition": [
+              -0.6452395975653422,
+              0.04886298611749196,
+              0.0
+            ],
+            "raDeg": 116.11195237,
+            "decDeg": 24.39812929,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 32362,
+            "sourcePixel": [
+              117,
+              252
+            ],
+            "vectorPixel": [
+              156.9308985686109,
+              229.6522793384044
+            ],
+            "localPosition": [
+              0.23342589724695842,
+              -0.7126837054515717,
+              0.0
+            ],
+            "raDeg": 101.3226398,
+            "decDeg": 12.89605513,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 28734,
+            "sourcePixel": [
+              249,
+              165
+            ],
+            "vectorPixel": [
+              243.15244966888366,
+              127.39727617449745
+            ],
+            "localPosition": [
+              0.8269920898417216,
+              -0.008740061116302579,
+              0.0
+            ],
+            "raDeg": 91.0300689,
+            "decDeg": 23.26363207,
+            "role": "line-pattern"
+          }
+        ],
+        "sourcePixelToLocal": [
+          [
+            0.005596726882462446,
+            0.001754177556814439,
+            -0.8649369431462126
+          ],
+          [
+            0.0017048136600442102,
+            -0.005453377545472311,
+            0.4666627422539427
+          ],
+          [
+            -3.8166343389462996e-05,
+            -7.661863795741649e-06,
+            1.0
+          ]
+        ],
+        "sourcePixelToVector": [
+          [
+            0.8082863812074021,
+            0.2538696156075748,
+            -2.6175207165412218
+          ],
+          [
+            -0.2524554268894979,
+            0.7911924063416949,
+            58.340164069083
+          ],
+          [
+            -3.8166343389462996e-05,
+            -7.661863795741649e-06,
+            1.0
+          ]
+        ],
+        "vectorPixelToLocal": [
+          [
+            0.006884197570332097,
+            0.0,
+            -0.8469174133891056
+          ],
+          [
+            -0.0,
+            -0.006884197570332097,
+            0.8682879579910999
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixConvention": "row-major 3x3, column [x,y,1], divide by third coordinate",
+        "plane": {
+          "center": [
+            0.034259875613402824,
+            -0.012889331011408545,
+            0
+          ],
+          "width": 1.762354578005017,
+          "height": 1.762354578005017,
+          "localZ": -0.01
+        },
+        "opacity": {
+          "idle": [
+            0.08,
+            0.12
+          ],
+          "active": [
+            0.25,
+            0.35
+          ]
+        }
+      },
+      "projection": {
+        "type": "gnomonic",
+        "origin": {
+          "raDeg": 105.02842905030263,
+          "decDeg": 24.0348985856947
+        },
+        "fieldRadiusDeg": 15.408751370713073,
+        "uniformScale": 3.6283123917722766,
+        "xDirection": "celestial west right (increasing RA left)",
+        "yDirection": "north up",
+        "z": 0,
+        "view": "sky as seen from Earth, not exterior celestial globe",
+        "normalization": "same scalar for x/y; no independent stretch, mirroring or invented coordinates"
+      },
+      "calibrationStars": []
+    },
+    {
+      "id": "Cyg",
+      "name": "Cygnus",
+      "entityId": "vie",
+      "assignment": "VIE",
+      "section": "works",
+      "source": {
+        "url": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/cygnus.png",
+        "revision": "daace2add6a1bf886e8ee1934f51e9c69f818d18",
+        "sha256": "d9ad9d2ffea6fb50eedf1ace1353efcca35bedf7fe4c45c6b67b8b01ec5e87a0",
+        "size": [
+          512,
+          512
+        ],
+        "metadataSha256": "1f2f5ffd6c9e25a7d0dcfdbf1f756e2db03dd3b8ed4ec016a2839b09f6b0fe1e",
+        "author": "Johan Meuris",
+        "authorPage": "https://johanmeuris.eu/work/stellarium-constellation-art/",
+        "originalLicense": "Free Art License (unversioned source notice)",
+        "date": "2005-10-30 (author portfolio publication date)"
+      },
+      "license": {
+        "artwork": "Free Art License 1.3",
+        "url": "https://artlibre.org/licence/lal/en/",
+        "linePattern": "CC BY-SA 4.0 — Stellarium team",
+        "catalog": "ESA 1997 / CDS VizieR terms; no blanket FAL/CC assignment"
+      },
+      "credit": "Cygnus outline derivative, 2026-10-09. Original: Johan Meuris, Stellarium constellation art (2005), Free Art License; vector tracing/calibration: Tran Vu Anh Duy portfolio / Codex. Modified silhouette/ink contours, grayscale, removed shading; not a recovered vector master.",
+      "derivative": {
+        "method": "deterministic pixel-grid contour trace + Douglas-Peucker, three-star projective calibration; no AI/no raster embed/no upscale",
+        "vectorMasterVerified": false,
+        "silhouetteThreshold": 12,
+        "detailLocalContrast": 9,
+        "detailsMinArea": 8,
+        "sourceToVectorApplied": true,
+        "crop": "calibrated silhouette + three anchors, square with 3% margin per side",
+        "outerPaths": 15,
+        "detailContours": 48
+      },
+      "artwork": {
+        "assetId": "Cyg",
+        "url": "/constellations/cygnus.svg",
+        "sha256": "d27f0e299bffbc52a6f2ac7dab9a0926082eef373e8dfdf95dc9d71e79ffdc37",
+        "viewBox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "anchors": [
+          {
+            "hip": 107310,
+            "sourcePixel": [
+              7,
+              382
+            ],
+            "vectorPixel": [
+              18.981907893611503,
+              428.32011108515417
+            ],
+            "localPosition": [
+              -0.7335588629619689,
+              -0.35892739824372943,
+              0.0
+            ],
+            "raDeg": 326.03501874,
+            "decDeg": 28.74322228,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 94779,
+            "sourcePixel": [
+              474,
+              46
+            ],
+            "vectorPixel": [
+              434.9601040814041,
+              77.84453727036296
+            ],
+            "localPosition": [
+              0.37087686417406557,
+              0.5715967223878539,
+              0.0
+            ],
+            "raDeg": 289.27545794,
+            "decDeg": 53.36816064,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 95947,
+            "sourcePixel": [
+              467,
+              453
+            ],
+            "vectorPixel": [
+              456.71699601865373,
+              456.77308523339843
+            ],
+            "localPosition": [
+              0.4286421244380644,
+              -0.43447097596147244,
+              0.0
+            ],
+            "raDeg": 292.68035529,
+            "decDeg": 27.9596948,
+            "role": "line-pattern"
+          }
+        ],
+        "sourcePixelToLocal": [
+          [
+            0.0025458814112815967,
+            0.0001993931445641469,
+            -0.8344085070494163
+          ],
+          [
+            0.00020081745793134603,
+            -0.002549074445923189,
+            0.610056604156296
+          ],
+          [
+            5.82212130794179e-05,
+            2.341497473543017e-05,
+            1.0
+          ]
+        ],
+        "sourcePixelToVector": [
+          [
+            0.9760799836762658,
+            0.08201385328094186,
+            -19.00242383609725
+          ],
+          [
+            -0.05856999541487388,
+            0.9669552239015934,
+            63.358884687284416
+          ],
+          [
+            5.82212130794179e-05,
+            2.341497473543017e-05,
+            1.0
+          ]
+        ],
+        "vectorPixelToLocal": [
+          [
+            0.0026550327331037304,
+            0.0,
+            -0.7839564497562675
+          ],
+          [
+            -0.0,
+            -0.0026550327331037304,
+            0.7782765169339809
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixConvention": "row-major 3x3, column [x,y,1], divide by third coordinate",
+        "plane": {
+          "center": [
+            -0.10426807008171246,
+            0.09858813725942595,
+            0
+          ],
+          "width": 1.35937675934911,
+          "height": 1.35937675934911,
+          "localZ": -0.01
+        },
+        "opacity": {
+          "idle": [
+            0.08,
+            0.12
+          ],
+          "active": [
+            0.25,
+            0.35
+          ]
+        }
+      },
+      "projection": {
+        "type": "gnomonic",
+        "origin": {
+          "raDeg": 305.0261176402872,
+          "decDeg": 39.75909427296922
+        },
+        "fieldRadiusDeg": 24.58104455374974,
+        "uniformScale": 2.186099960839337,
+        "xDirection": "celestial west right (increasing RA left)",
+        "yDirection": "north up",
+        "z": 0,
+        "view": "sky as seen from Earth, not exterior celestial globe",
+        "normalization": "same scalar for x/y; no independent stretch, mirroring or invented coordinates"
+      },
+      "calibrationStars": []
+    }
+  ]
+}

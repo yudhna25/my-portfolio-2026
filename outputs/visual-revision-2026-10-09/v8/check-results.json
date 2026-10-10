@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "changed": [
+    "src/3d-lab.jsx",
+    "src/3d/components/SkillsSymbols.jsx",
+    "src/3d/components/WorksConstellations.jsx",
+    "src/App.jsx",
+    "src/components/Education.jsx",
+    "src/components/Work.jsx",
+    "src/i18n/locales/en.json",
+    "src/i18n/locales/en/lab.json",
+    "src/i18n/locales/vi.json",
+    "src/i18n/locales/vi/lab.json"
+  ],
+  "added": [
+    "src/components/ui/ConstellationCredits.jsx"
+  ],
+  "preserved": 79,
+  "parity": [
+    {
+      "namespace": ".json",
+      "keys": 254
+    },
+    {
+      "namespace": "/lab.json",
+      "keys": 93
+    }
+  ],
+  "productionSources": 90
+}

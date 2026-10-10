@@ -1,6 +1,6 @@
 @layer components {
   .portal-heading {
-    --hero-font-size: calc((100vw - 2rem) / 7.05);
+    --hero-font-size: calc((100vw - 2rem) / 9.165);
     font-size: var(--hero-font-size);
     padding-block: calc(4.5rem + 16px) calc(4rem + 32px);
   }
@@ -17,11 +17,11 @@
 
   .portal-heading[aria-hidden='true'] [data-hero-content] { pointer-events: none; }
 
-  .portal-heading h1 { font-size: var(--hero-font-size); }
+  .portal-heading h1 { font-size: var(--hero-font-size); width: max-content; max-width: 100%; }
 
   .hero-year-svg {
-    width: 5.6032em;
-    height: 1.3312em;
+    width: 9.165em;
+    height: 2.177em;
     overflow: visible;
     font-family: var(--font-display);
     font-weight: 800;
@@ -33,12 +33,12 @@
   .hero-year-svg path, .hero-year-svg circle { vector-effect: non-scaling-stroke; }
   .portal-heading [data-hero-name], .portal-heading [data-hero-role] { font-size: inherit; }
 
-  .hero-year-base { stroke-width: 0.6px; stroke-opacity: 0.24; }
+  .hero-year-base { stroke: none; }
   .hero-year-stars { fill: white; stroke-width: 0.5px; opacity: 0.42; }
   /* Normalized meteor dashes must scale with their contour, including on mobile. */
   .hero-year-svg [data-year-meteor] path { vector-effect: none; }
-  .hero-year-tail { stroke-width: 4px; stroke-opacity: 0.18; stroke-dasharray: 36 964; }
-  .hero-year-wake { stroke-width: 5px; stroke-opacity: 0.4; stroke-dasharray: 14 986; }
+  .hero-year-tail { stroke-width: 4px; stroke-opacity: 0.24; stroke-dasharray: 350 650; }
+  .hero-year-wake { stroke-width: 5px; stroke-opacity: 0.5; stroke-dasharray: 100 900; }
   .hero-year-head { stroke-width: 7px; stroke-opacity: 0.9; stroke-dasharray: 1.5 998.5; stroke-linecap: round; }
   .hero-noise-cyan { stroke: #86dce8; clip-path: polygon(0 24%, 100% 29%, 100% 39%, 0 34%, 0 70%, 100% 65%, 100% 72%, 0 77%); }
   .hero-noise-orange { stroke: #e8ad86; clip-path: polygon(0 45%, 100% 42%, 100% 51%, 0 54%, 0 82%, 100% 77%, 100% 84%, 0 89%); }
@@ -56,10 +56,15 @@
 
   @media (min-width: 768px) {
     .portal-heading { --hero-font-size: calc(72vw / 7.05); }
+    .hero-year-svg { margin-left: -1.0575em; }
   }
 
   @media (max-height: 550px) and (min-width: 768px) {
-    .portal-heading { --hero-font-size: min(calc(72vw / 7.05), 19vh); }
+    .portal-heading { --hero-font-size: min(calc(72vw / 7.05), 12vh); }
+  }
+
+  @media (min-width: 768px) and (min-height: 551px) {
+    .portal-heading { --hero-font-size: min(calc(72vw / 7.05), calc((100svh - 280px) / 3.2)); }
   }
 
   @media (max-width: 767px) {
@@ -71,5 +76,10 @@
   @media (prefers-reduced-motion: reduce) {
     [data-year-noise] { visibility: hidden; }
     [data-year-meteor] { visibility: hidden; }
+  }
+  .portal-heading[data-static-motion='true'] .hero-year-base {
+    stroke: rgb(255 255 255 / 0.2);
+    stroke-width: 1px;
+    stroke-dasharray: 1 5;
   }
 }

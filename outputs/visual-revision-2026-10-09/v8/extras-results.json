@@ -1,0 +1,186 @@
+{
+  "cases": [
+    {
+      "width": 320,
+      "lang": "vi",
+      "chapter": "education",
+      "p": 0.05
+    },
+    {
+      "width": 320,
+      "lang": "vi",
+      "chapter": "experience",
+      "p": 0.4
+    },
+    {
+      "width": 320,
+      "lang": "vi",
+      "chapter": "works",
+      "p": 0.3
+    },
+    {
+      "width": 320,
+      "lang": "en",
+      "chapter": "education",
+      "p": 0.05
+    },
+    {
+      "width": 320,
+      "lang": "en",
+      "chapter": "experience",
+      "p": 0.4
+    },
+    {
+      "width": 320,
+      "lang": "en",
+      "chapter": "works",
+      "p": 0.3
+    },
+    {
+      "width": 320,
+      "svgFocus": {
+        "tag": "polygon",
+        "id": "",
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "stroke": "2px"
+      }
+    },
+    {
+      "width": 390,
+      "lang": "vi",
+      "chapter": "education",
+      "p": 0.05
+    },
+    {
+      "width": 390,
+      "lang": "vi",
+      "chapter": "experience",
+      "p": 0.4
+    },
+    {
+      "width": 390,
+      "lang": "vi",
+      "chapter": "works",
+      "p": 0.3
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "chapter": "education",
+      "p": 0.05
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "chapter": "experience",
+      "p": 0.4
+    },
+    {
+      "width": 390,
+      "lang": "en",
+      "chapter": "works",
+      "p": 0.3
+    },
+    {
+      "width": 390,
+      "svgFocus": {
+        "tag": "polygon",
+        "id": "",
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "stroke": "2px"
+      }
+    },
+    {
+      "width": 1440,
+      "lang": "vi",
+      "chapter": "education",
+      "p": 0.05
+    },
+    {
+      "width": 1440,
+      "lang": "vi",
+      "chapter": "experience",
+      "p": 0.4
+    },
+    {
+      "width": 1440,
+      "lang": "vi",
+      "chapter": "works",
+      "p": 0.3
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "chapter": "education",
+      "p": 0.05
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "chapter": "experience",
+      "p": 0.4
+    },
+    {
+      "width": 1440,
+      "lang": "en",
+      "chapter": "works",
+      "p": 0.3
+    },
+    {
+      "width": 1440,
+      "svgFocus": {
+        "tag": "polygon",
+        "id": "",
+        "outline": "none",
+        "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "stroke": "2px"
+      }
+    },
+    {
+      "lab": 390,
+      "buttons": [
+        "Tiếp tục cuộn",
+        "0%",
+        "25%",
+        "50%",
+        "75%",
+        "100%",
+        "Cao — 24k sao",
+        "Trung bình — 12k",
+        "Thấp — 1,5k",
+        "Bật bloom",
+        "Ẩn nội dung",
+        "Lab hiện tại",
+        "VI / EN"
+      ]
+    },
+    {
+      "lab": 1440,
+      "buttons": [
+        "Tiếp tục cuộn",
+        "0%",
+        "25%",
+        "50%",
+        "75%",
+        "100%",
+        "Cao — 24k sao",
+        "Trung bình — 12k",
+        "Thấp — 1,5k",
+        "Tắt bloom",
+        "Ẩn nội dung",
+        "Lab hiện tại",
+        "VI / EN"
+      ]
+    }
+  ],
+  "errors": [],
+  "checks": 69,
+  "hidden": {
+    "frameloop": "never",
+    "before": 5968,
+    "after": 5968
+  },
+  "status": "pass"
+}

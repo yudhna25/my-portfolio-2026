@@ -1,5 +1,7 @@
 # Hiện trạng Stellar Odyssey — 09/10/2026
 
+> **Cập nhật triển khai 10/10/2026:** P1–P4 đã hoàn tất code và kiểm kỹ thuật/local theo lệnh “bắt đầu kế hoạch tinh chỉnh g1-g2”. Opening tâm→O, năm lớn/contour chậm dài, intake chuỗi+dải và comet lớn/S liên tục đã có trong bản tích hợp. **G1/G2 vẫn chờ người dùng duyệt visual lại; V9/G3 chưa bắt đầu.** [Verification](../visual-revision-2026-10-09/g1-g2-implementation/verification.md) · [Gallery](../visual-revision-2026-10-09/g1-g2-implementation/review.html). V8 và các số đo09/10 bên dưới là baseline lịch sử; bộ mới kiểm cùng source/build và regression Skills/Education/Works/EDURA. R7.2/Contact-Footer không phải việc tiếp theo.
+
 **Dự án đã triển khai redesign đến R7.1. Bước kế tiếp là R7.2 — Contact/Footer, sau đó R8.1–R8.4 — kiểm thử và nghiệm thu toàn hành trình.** Có 19/24 đầu việc redesign được ghi nhận hoàn thành; đây là số lượng task, không phải phần trăm công sức hay chất lượng hoàn thiện.
 
 Báo cáo dựa trên cấu trúc repository, luồng production và lab trong `src/` (80 file), cấu hình, dữ liệu/locale, kế hoạch và các bàn giao gần nhất. Đã chạy lại build, lint và kiểm tra logic tĩnh. Không chạy Browser, benchmark GPU, screen reader hay điện thoại thật trong phiên này. Các kết quả Browser/FPS ở báo cáo R7.1 là bằng chứng của phiên trước.

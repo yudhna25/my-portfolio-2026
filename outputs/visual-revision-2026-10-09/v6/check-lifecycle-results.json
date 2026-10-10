@@ -1,0 +1,549 @@
+{
+  "checks": [
+    {
+      "name": "single canvas / two unique geometry / three unique materials",
+      "pass": true,
+      "detail": {
+        "geometry": 2,
+        "material": 3,
+        "subscribers": 9,
+        "visibilityListeners": 3,
+        "canvas": 1
+      }
+    },
+    {
+      "name": "lifecycle 1: render active and subscriber count stable",
+      "pass": true,
+      "detail": {
+        "visible": true,
+        "version": 1,
+        "frames": 441,
+        "frameloop": "always",
+        "subscribers": 9,
+        "visibilityListeners": 3,
+        "labels": [
+          {
+            "text": "HOSANA MEDIAMultimedia Executive",
+            "opacity": "0.72"
+          },
+          {
+            "text": "UPWORKMultimedia Creator",
+            "opacity": "0.789362"
+          },
+          {
+            "text": "DESIGNVELOPERUX/UI Designer Intern",
+            "opacity": "0.72"
+          }
+        ],
+        "wakes": [
+          0,
+          0.470733,
+          0
+        ]
+      }
+    },
+    {
+      "name": "lifecycle 1: all V6 resources disposed / subscriptions removed",
+      "pass": true,
+      "detail": {
+        "geometry": 2,
+        "material": 3,
+        "subscribers": 0,
+        "visibilityListeners": 2,
+        "labels": 3
+      }
+    },
+    {
+      "name": "lifecycle 1: remount keeps resource and subscriber counts",
+      "pass": true,
+      "detail": {
+        "geometry": 2,
+        "material": 3,
+        "subscribers": 9,
+        "visibilityListeners": 3,
+        "canvas": 1
+      }
+    },
+    {
+      "name": "lifecycle 2: render active and subscriber count stable",
+      "pass": true,
+      "detail": {
+        "visible": true,
+        "version": 1,
+        "frames": 441,
+        "frameloop": "always",
+        "subscribers": 9,
+        "visibilityListeners": 3,
+        "labels": [
+          {
+            "text": "HOSANA MEDIAMultimedia Executive",
+            "opacity": "0.72"
+          },
+          {
+            "text": "UPWORKMultimedia Creator",
+            "opacity": "0.789362"
+          },
+          {
+            "text": "DESIGNVELOPERUX/UI Designer Intern",
+            "opacity": "0.72"
+          }
+        ],
+        "wakes": [
+          0,
+          0.470733,
+          0
+        ]
+      }
+    },
+    {
+      "name": "lifecycle 2: all V6 resources disposed / subscriptions removed",
+      "pass": true,
+      "detail": {
+        "geometry": 2,
+        "material": 3,
+        "subscribers": 0,
+        "visibilityListeners": 2,
+        "labels": 3
+      }
+    },
+    {
+      "name": "lifecycle 2: remount keeps resource and subscriber counts",
+      "pass": true,
+      "detail": {
+        "geometry": 2,
+        "material": 3,
+        "subscribers": 9,
+        "visibilityListeners": 3,
+        "canvas": 1
+      }
+    },
+    {
+      "name": "lifecycle 3: render active and subscriber count stable",
+      "pass": true,
+      "detail": {
+        "visible": true,
+        "version": 1,
+        "frames": 441,
+        "frameloop": "always",
+        "subscribers": 9,
+        "visibilityListeners": 3,
+        "labels": [
+          {
+            "text": "HOSANA MEDIAMultimedia Executive",
+            "opacity": "0.72"
+          },
+          {
+            "text": "UPWORKMultimedia Creator",
+            "opacity": "0.789362"
+          },
+          {
+            "text": "DESIGNVELOPERUX/UI Designer Intern",
+            "opacity": "0.72"
+          }
+        ],
+        "wakes": [
+          0,
+          0.470733,
+          0
+        ]
+      }
+    },
+    {
+      "name": "lifecycle 3: all V6 resources disposed / subscriptions removed",
+      "pass": true,
+      "detail": {
+        "geometry": 2,
+        "material": 3,
+        "subscribers": 0,
+        "visibilityListeners": 2,
+        "labels": 3
+      }
+    },
+    {
+      "name": "lifecycle 3: remount keeps resource and subscriber counts",
+      "pass": true,
+      "detail": {
+        "geometry": 2,
+        "material": 3,
+        "subscribers": 9,
+        "visibilityListeners": 3,
+        "canvas": 1
+      }
+    },
+    {
+      "name": "hidden simulation: never loop, zero render calls, geometry held, wake off",
+      "pass": true,
+      "detail": {
+        "hiddenStart": {
+          "visible": true,
+          "version": 1,
+          "frames": 21,
+          "frameloop": "never",
+          "subscribers": 8,
+          "visibilityListeners": 3,
+          "labels": [
+            {
+              "text": "HOSANA MEDIAMultimedia Executive",
+              "opacity": "0.72"
+            },
+            {
+              "text": "UPWORKMultimedia Creator",
+              "opacity": "0.789362"
+            },
+            {
+              "text": "DESIGNVELOPERUX/UI Designer Intern",
+              "opacity": "0.72"
+            }
+          ],
+          "wakes": [
+            0,
+            0,
+            0
+          ]
+        },
+        "hiddenEnd": {
+          "visible": true,
+          "version": 1,
+          "frames": 21,
+          "frameloop": "never",
+          "subscribers": 8,
+          "visibilityListeners": 3,
+          "labels": [
+            {
+              "text": "HOSANA MEDIAMultimedia Executive",
+              "opacity": "0.72"
+            },
+            {
+              "text": "UPWORKMultimedia Creator",
+              "opacity": "0.789362"
+            },
+            {
+              "text": "DESIGNVELOPERUX/UI Designer Intern",
+              "opacity": "0.72"
+            }
+          ],
+          "wakes": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "visible resume: always loop and meteor resumes",
+      "pass": true,
+      "detail": {
+        "visible": true,
+        "version": 1,
+        "frames": 945,
+        "frameloop": "always",
+        "subscribers": 9,
+        "visibilityListeners": 3,
+        "labels": [
+          {
+            "text": "HOSANA MEDIAMultimedia Executive",
+            "opacity": "0.72"
+          },
+          {
+            "text": "UPWORKMultimedia Creator",
+            "opacity": "0.789362"
+          },
+          {
+            "text": "DESIGNVELOPERUX/UI Designer Intern",
+            "opacity": "0.72"
+          }
+        ],
+        "wakes": [
+          0,
+          0.470733,
+          0
+        ]
+      }
+    },
+    {
+      "name": "offscreen Works: meteor hidden, no buffer uploads, wakes off",
+      "pass": true,
+      "detail": {
+        "offStart": {
+          "visible": false,
+          "version": 1,
+          "frames": 1386,
+          "frameloop": "always",
+          "subscribers": 9,
+          "visibilityListeners": 3,
+          "labels": [
+            {
+              "text": "HOSANA MEDIAMultimedia Executive",
+              "opacity": "0.72"
+            },
+            {
+              "text": "UPWORKMultimedia Creator",
+              "opacity": "0.72"
+            },
+            {
+              "text": "DESIGNVELOPERUX/UI Designer Intern",
+              "opacity": "0.72"
+            }
+          ],
+          "wakes": [
+            0,
+            0,
+            0
+          ]
+        },
+        "offEnd": {
+          "visible": false,
+          "version": 1,
+          "frames": 2457,
+          "frameloop": "always",
+          "subscribers": 9,
+          "visibilityListeners": 3,
+          "labels": [
+            {
+              "text": "HOSANA MEDIAMultimedia Executive",
+              "opacity": "0.72"
+            },
+            {
+              "text": "UPWORKMultimedia Creator",
+              "opacity": "0.72"
+            },
+            {
+              "text": "DESIGNVELOPERUX/UI Designer Intern",
+              "opacity": "0.72"
+            }
+          ],
+          "wakes": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "reduced motion: meteor hidden, buffers held, wakes off, three full labels",
+      "pass": true,
+      "detail": {
+        "reducedStart": {
+          "visible": false,
+          "version": 1,
+          "frames": 3381,
+          "frameloop": "always",
+          "subscribers": 8,
+          "visibilityListeners": 3,
+          "labels": [
+            {
+              "text": "HOSANA MEDIAMultimedia Executive",
+              "opacity": "1"
+            },
+            {
+              "text": "UPWORKMultimedia Creator",
+              "opacity": "1"
+            },
+            {
+              "text": "DESIGNVELOPERUX/UI Designer Intern",
+              "opacity": "1"
+            }
+          ],
+          "wakes": [
+            0,
+            0,
+            0
+          ]
+        },
+        "reducedEnd": {
+          "visible": false,
+          "version": 1,
+          "frames": 4452,
+          "frameloop": "always",
+          "subscribers": 8,
+          "visibilityListeners": 3,
+          "labels": [
+            {
+              "text": "HOSANA MEDIAMultimedia Executive",
+              "opacity": "1"
+            },
+            {
+              "text": "UPWORKMultimedia Creator",
+              "opacity": "1"
+            },
+            {
+              "text": "DESIGNVELOPERUX/UI Designer Intern",
+              "opacity": "1"
+            }
+          ],
+          "wakes": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "three live reduced-motion cycles: Experience store subscription does not accumulate",
+      "pass": true,
+      "detail": {
+        "store": 1,
+        "visibility": 3,
+        "fiber": 8
+      }
+    },
+    {
+      "name": "actual WebGL context loss: static #050505 fallback / full DOM / V6 disposed",
+      "pass": true,
+      "detail": {
+        "canvas": 0,
+        "background": "rgb(5, 5, 5)",
+        "labels": [
+          "HOSANA MEDIAMultimedia Executive",
+          "UPWORKMultimedia Creator",
+          "DESIGNVELOPERUX/UI Designer Intern"
+        ],
+        "wakes": [
+          0,
+          0,
+          0
+        ],
+        "store": true,
+        "disposed": {
+          "geometry": 2,
+          "material": 3
+        }
+      }
+    },
+    {
+      "name": "no runtime console errors",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "lifecycle": [
+    {
+      "cycle": 1,
+      "alive": {
+        "visible": true,
+        "version": 1,
+        "frames": 441,
+        "frameloop": "always",
+        "subscribers": 9,
+        "visibilityListeners": 3,
+        "labels": [
+          {
+            "text": "HOSANA MEDIAMultimedia Executive",
+            "opacity": "0.72"
+          },
+          {
+            "text": "UPWORKMultimedia Creator",
+            "opacity": "0.789362"
+          },
+          {
+            "text": "DESIGNVELOPERUX/UI Designer Intern",
+            "opacity": "0.72"
+          }
+        ],
+        "wakes": [
+          0,
+          0.470733,
+          0
+        ]
+      },
+      "disposed": {
+        "geometry": 2,
+        "material": 3,
+        "subscribers": 0,
+        "visibilityListeners": 2,
+        "labels": 3
+      }
+    },
+    {
+      "cycle": 2,
+      "alive": {
+        "visible": true,
+        "version": 1,
+        "frames": 441,
+        "frameloop": "always",
+        "subscribers": 9,
+        "visibilityListeners": 3,
+        "labels": [
+          {
+            "text": "HOSANA MEDIAMultimedia Executive",
+            "opacity": "0.72"
+          },
+          {
+            "text": "UPWORKMultimedia Creator",
+            "opacity": "0.789362"
+          },
+          {
+            "text": "DESIGNVELOPERUX/UI Designer Intern",
+            "opacity": "0.72"
+          }
+        ],
+        "wakes": [
+          0,
+          0.470733,
+          0
+        ]
+      },
+      "disposed": {
+        "geometry": 2,
+        "material": 3,
+        "subscribers": 0,
+        "visibilityListeners": 2,
+        "labels": 3
+      }
+    },
+    {
+      "cycle": 3,
+      "alive": {
+        "visible": true,
+        "version": 1,
+        "frames": 441,
+        "frameloop": "always",
+        "subscribers": 9,
+        "visibilityListeners": 3,
+        "labels": [
+          {
+            "text": "HOSANA MEDIAMultimedia Executive",
+            "opacity": "0.72"
+          },
+          {
+            "text": "UPWORKMultimedia Creator",
+            "opacity": "0.789362"
+          },
+          {
+            "text": "DESIGNVELOPERUX/UI Designer Intern",
+            "opacity": "0.72"
+          }
+        ],
+        "wakes": [
+          0,
+          0.470733,
+          0
+        ]
+      },
+      "disposed": {
+        "geometry": 2,
+        "material": 3,
+        "subscribers": 0,
+        "visibilityListeners": 2,
+        "labels": 3
+      }
+    }
+  ],
+  "consoleErrors": [],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.WebGLRenderer: WEBGL_lose_context extension not supported."
+  ],
+  "limitations": [
+    "document.hidden is simulated, not a real OS/tab visibility toggle.",
+    "Fixture uses the production GalaxyScene/StoryMeteor/Experience but does not mount the full App."
+  ],
+  "passed": 17,
+  "total": 17
+}

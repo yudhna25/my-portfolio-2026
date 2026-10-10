@@ -1,0 +1,177 @@
+{
+  "capturedAt": "2026-10-09T15:36:49.556814+00:00",
+  "owned": [
+    {
+      "file": "src/3d/components/StoryMeteor.jsx",
+      "before": "e80e47efac1a7b957bd9c79975f23fb0e6d9be23889ee008d72c8e7272c39466",
+      "after": "6a760690b766dc3ddc307dbff0725220a71eed923ea6242ac72d8dc8585d13a0"
+    },
+    {
+      "file": "src/3d/utils/storyMeteor.js",
+      "before": "fec6c5e2ea1eda06d23dcb14c19930349dbf08d4fd5b83849a05902a4fc544a6",
+      "after": "4765d339c4fcce73367717d75355aa5131a8d02ffc0a7ac45ed89846becc65a7"
+    },
+    {
+      "file": "src/components/sections/Experience.jsx",
+      "before": "ef374cb0353edf75d543fd1b819cab9b79061ec5fbe303178574c5b0c389289d",
+      "after": "c463874179135d435879a67f1e69009921b51cebe52c4d8947ee70a66a87a654"
+    }
+  ],
+  "protected": [
+    {
+      "file": "src/App.jsx",
+      "before": "55e36cfdd4c2065ac490822c9f6bfb7791bd0e5e0042039af1e5b9d5309c8017",
+      "after": "55e36cfdd4c2065ac490822c9f6bfb7791bd0e5e0042039af1e5b9d5309c8017",
+      "unchanged": true
+    },
+    {
+      "file": "src/3d/GalaxyScene.jsx",
+      "before": "3adecca63b3de4598619abc0267559bab132529951520db2129fcf9db1df92ab",
+      "after": "3adecca63b3de4598619abc0267559bab132529951520db2129fcf9db1df92ab",
+      "unchanged": true
+    },
+    {
+      "file": "src/3d/components/CameraRig.jsx",
+      "before": "fd01fb40484b7f14f4eb893d07cd486a68b41c1729e9a61193a9bc8de84d816f",
+      "after": "fd01fb40484b7f14f4eb893d07cd486a68b41c1729e9a61193a9bc8de84d816f",
+      "unchanged": true
+    },
+    {
+      "file": "src/3d/utils/cameraPath.js",
+      "before": "93b6ed5a8488aab7b840a4db5e5d75528aa467df9d40183245a6573e44c8e376",
+      "after": "93b6ed5a8488aab7b840a4db5e5d75528aa467df9d40183245a6573e44c8e376",
+      "unchanged": true
+    },
+    {
+      "file": "src/stores/useScrollStore.js",
+      "before": "0331d852280994a400c2bf9a649d54a8cf40fcd9287dfdfad7f4eb7efacd817b",
+      "after": "0331d852280994a400c2bf9a649d54a8cf40fcd9287dfdfad7f4eb7efacd817b",
+      "unchanged": true
+    },
+    {
+      "file": "src/3d/components/ShootingStars.jsx",
+      "before": "705bbbf35b0e6d9cbe1fb57cb96ec8ab86144bfbce6c359d26ee99052a7fa595",
+      "after": "705bbbf35b0e6d9cbe1fb57cb96ec8ab86144bfbce6c359d26ee99052a7fa595",
+      "unchanged": true
+    },
+    {
+      "file": "src/3d/utils/shootingStars.js",
+      "before": "620bea9b207bb1cceff2a8defbb894f431083fcbd8f12153a8f00a1633035fce",
+      "after": "620bea9b207bb1cceff2a8defbb894f431083fcbd8f12153a8f00a1633035fce",
+      "unchanged": true
+    },
+    {
+      "file": "src/3d/components/BlackHoleSystem.jsx",
+      "before": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+      "after": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+      "unchanged": true
+    },
+    {
+      "file": "src/3d/components/BlackHoleBloomMask.jsx",
+      "before": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c",
+      "after": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c",
+      "unchanged": true
+    },
+    {
+      "file": "src/3d/shaders/blackHole.js",
+      "before": "ec58f14414ff84b3d50e71f55b03da2e89c1038abec0d2add272924bc52c4c2d",
+      "after": "ec58f14414ff84b3d50e71f55b03da2e89c1038abec0d2add272924bc52c4c2d",
+      "unchanged": true
+    },
+    {
+      "file": "src/i18n/locales/vi.json",
+      "before": "502ee94030f9bcc04812bd600396c40006385111b798b8dceada4bb411c8c390",
+      "after": "502ee94030f9bcc04812bd600396c40006385111b798b8dceada4bb411c8c390",
+      "unchanged": true
+    },
+    {
+      "file": "src/i18n/locales/en.json",
+      "before": "d58585c97c57aca25c72aa75c323d117b94996946a63dc334a3496634bda6641",
+      "after": "d58585c97c57aca25c72aa75c323d117b94996946a63dc334a3496634bda6641",
+      "unchanged": true
+    },
+    {
+      "file": "src/3d-lab.jsx",
+      "before": "bbdeb9fab645b45fcd9cd17d2b763ea1cc2ab8affc41f9b187512c7404145f2b",
+      "after": "bbdeb9fab645b45fcd9cd17d2b763ea1cc2ab8affc41f9b187512c7404145f2b",
+      "unchanged": true
+    },
+    {
+      "file": "src/index.css",
+      "before": "ec90e0abfb7970145ff020105e43dda0ab4d28bf12457769f5c9079c009639a0",
+      "after": "ec90e0abfb7970145ff020105e43dda0ab4d28bf12457769f5c9079c009639a0",
+      "unchanged": true
+    },
+    {
+      "file": "AGENTS.md",
+      "before": "a71ce20158b11e775b4d051854e9b1a3f98844e1095dbf75c8dd94e88f91f45a",
+      "after": "a71ce20158b11e775b4d051854e9b1a3f98844e1095dbf75c8dd94e88f91f45a",
+      "unchanged": true
+    },
+    {
+      "file": "package.json",
+      "before": "e21571db76af9cddd6d3296ac10464f7f6c8ba83eaff6234c0cfde9cce59b632",
+      "after": "e21571db76af9cddd6d3296ac10464f7f6c8ba83eaff6234c0cfde9cce59b632",
+      "unchanged": true
+    },
+    {
+      "file": "package-lock.json",
+      "before": "824609c3123813427ea27548c5622e471b9aa9e7d8d249cfc50cdad48b11996c",
+      "after": "824609c3123813427ea27548c5622e471b9aa9e7d8d249cfc50cdad48b11996c",
+      "unchanged": true
+    }
+  ],
+  "concurrentChangesOutsideV6": [
+    {
+      "file": "src/3d/components/WorksConstellations.jsx",
+      "before": "cdfe0eb115b53b56b0e63e092322201b7acf495023dce804f07cfc3804ae0707",
+      "after": "85a97090bebf95c54dd994c8624e9259af7be61151d1f088411a82abafbdd14c"
+    },
+    {
+      "file": "src/3d/data/worksConstellations.json",
+      "before": "133dcb33d88f35e2522cba0a040ae760d9767e71bef344404c117f73f6adf699",
+      "after": "9a15065151553f677e7c6dff6b946d5b4a95b3f36984da66a59a3d603be029d1"
+    },
+    {
+      "file": "src/3d/components/SkillsSymbols.jsx",
+      "before": "7556d64b2a82f48fddcdc427474cada6d7dd9b0885e3d0d81088699f31f5fd42",
+      "after": "4fd9bd1e520249be89db42067a9054ca28e04db474cc7ad0e5ae2de58041c72c"
+    },
+    {
+      "file": "src/3d/utils/worksOrbit.js",
+      "before": "3b357d6392ac8cd7370fae9670f90b5611f13a8969c9ca05422d0186d508e9f3",
+      "after": "50361d623ef2e2cc31681efe087b02a596641365f37bd11f1d3a02b35a9ac934"
+    },
+    {
+      "file": "src/components/Work.jsx",
+      "before": "db7a4075beaff94625309a41bbd9ef30f69e54bda90cc16c174dd140aa11e1f4",
+      "after": "4a2c5491549c6e5ba4d4808fd9fe01cbc6144b0c635687653049ef9dcacfeaf7"
+    },
+    {
+      "file": "src/3d/data/symbolTargets.json",
+      "before": "0edfec1c16363c7e65b6061105d0c791515130d120f0172b55cdb4a93a9bb903",
+      "after": "ef4f695079db19305e3b8fa550750cf4ed7a296293f9b50439500a629852446a"
+    },
+    {
+      "file": "src/components/Education.jsx",
+      "before": "e39acb513195aff54dd849dd6fd19a5f1ee4474551c9fa89a9032dec744c7092",
+      "after": "107288df6967ad2cd617838bcc623021f413fc0089497fcef84eef7dbc48ad81"
+    },
+    {
+      "file": "src/3d/utils/symbolMorph.js",
+      "before": "50bf740f932b71ff5db60136126ffdea1f0ed20328511aaa46e15fa01d4254c4",
+      "after": "45717165d6d014c64a630cd11a03c5ec87689c887025983d3079ed05c6f95d10"
+    },
+    {
+      "file": "src/data/education.js",
+      "before": "bcb689413001357ab7c10d77eb7e6c0145d1b4cd99892248a8f9257b95de29b2",
+      "after": "5872a9387ff9d1fcabf5b2fc57af5b0eddd59ca70ef4e6840b784bf3b8abe0f6"
+    },
+    {
+      "file": "src/3d/components/SymbolStars.jsx",
+      "before": "71979763da15c5ac2c9f48b13b98fcdf270460f20558e6824b27c93ede7c9a08",
+      "after": "32bab130a67c903567850fdf9a15fb4a9d952220b6a5e06033f32af3b80c1ce0"
+    }
+  ],
+  "note": "V6 wrote only its three owned source files and its output directory; external worker changes are preserved. No AGENTS append because V0 reserves it for V8 integrator."
+}

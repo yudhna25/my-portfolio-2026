@@ -1,0 +1,1181 @@
+{
+  "status": "pass",
+  "buildAt": "2026-10-10T06:06:06.028Z",
+  "source": {
+    "3d-lab.html": "0985426c7b495d24d6a786edc33c9f6b1a694ad5ca7c618a6aa18ae5501d0a87",
+    "index.html": "2328876f2109702b0985231501c7b547cd337ee87beb19848602f00c67a432e7",
+    "package-lock.json": "824609c3123813427ea27548c5622e471b9aa9e7d8d249cfc50cdad48b11996c",
+    "package.json": "e21571db76af9cddd6d3296ac10464f7f6c8ba83eaff6234c0cfde9cce59b632",
+    "public/avatar-cutout.webp": "6b2fea6dcbd2bd204fc0aa6c545cbe7a696670fc4532c992378c3393d53b511f",
+    "public/avatar.webp": "e6c0bac02737f8beb0bd25ca08793e552cc801b54d88464c9ae761a15dd90bd2",
+    "public/constellations/ATTRIBUTION.md": "6de4459ce515f9bf4cd7687e48b8935fc997a6d9a7af2a5113b4df9b75ff10ee",
+    "public/constellations/centaurus.svg": "717ce7d895f3408e95dd0b1e313fd5eeae24b706353154195d6df7346c60ab17",
+    "public/constellations/cygnus.svg": "d27f0e299bffbc52a6f2ac7dab9a0926082eef373e8dfdf95dc9d71e79ffdc37",
+    "public/constellations/gemini.svg": "ea4ad1fbd4155d823b0890af68221cfe638f18f6e59b1d3303f07649c6b62273",
+    "public/constellations/leo.svg": "fff19ee2dd7345c30fdc8a801f3b2a9a13bbafafd8e921d71ea04ed2fb75b829",
+    "public/constellations/manifest.json": "751e44452b742ac08c3a48bff7ecaf11a9f2ade5cec002ba36f2946c623e27d8",
+    "public/constellations/orion.svg": "7fea1ced47cfb586e03f03404e01f6a419066f597322dcf31b5b5e8ee1a2684f",
+    "public/constellations/scorpius.svg": "2b720432b3a77bb670b124c3dea66a1faa7fbbaf3150cab0f7f67071ed5032a5",
+    "public/favicon.svg": "59b453e9ccaefde87745b96561282b6ecf48f2dca482898d2fedcae064d18aa7",
+    "public/icons/ae.png": "13df4673f9bd262a1376c488e1cbfc67bd1cd0500555c05677edfa15128069af",
+    "public/icons/ai.png": "7a9e921269cb9257010d22f61694268d14c171b245413134e7cd3244fcc56331",
+    "public/icons/figma.png": "79036c1f608b11eb14a711ec02bab4cc162a2406e7fb89ae5f02a456d4918f48",
+    "public/icons/pr.png": "6af65c63d2f8a59fc54f49f5bc76b9938777789a04f36b625433409d9803efab",
+    "public/icons/ps.png": "f3083bd3ed5ac24d94d45907a1fa4ab1713f1d8fc6361d2e9ebfc960c5b85862",
+    "public/og-image.jpg": "bc898f6ebda22f5920af9bcf5bc01c7aa3ebb7a53e01434a787283c4598e9e2f",
+    "public/project1.webp": "2e9d8cee3c4c3584bb74bdeffcf384dcfabeb7d74bb165fd48d5094e38ad359b",
+    "public/project2.webp": "1032b163b247f7d528b313f093abf6bc29eade6b39d98b5acbbd5b068056de9b",
+    "public/project3.webp": "03117079520095b5dab4cd53a4b8c2a8495fe174efc1aa4d9b9d998447dad6fc",
+    "public/projects/edura/overview.webp": "cc792c5dfb8d3acaf30925372969711e6b18a19ca831e6cc9baa8e63900d9b23",
+    "public/projects/edura/problem.webp": "11e86ff9ffe00bf747a3b50db209e68658b08fcaa2989e4cb6300146b2fc1c4d",
+    "public/projects/edura/solution.webp": "7714b0840765fecc8a397c5c3a03eb97da448d752090821752998948f8ba47a8",
+    "public/pwa-192x192.png": "6e838d4b2412cb88c71f6befcc441b984efc2c73e1974c4c1a244bd7d7e9f724",
+    "public/pwa-512x512.png": "ac06e97bda0b1a82b5fe7f8cbcedbef0bb7a9ac1de1c1d988ad9833091470f97",
+    "public/pwa-maskable-192x192.png": "d848d131a9c68bb1469c201ad41c923a4f10cc79890719b86e21cccdda13a3b6",
+    "public/pwa-maskable-512x512.png": "9894d4a3820f39bb8456e5881ecb9c9aa3006a774beefb774e619e18bd97f834",
+    "public/theme-init.js": "b4b82e9564cbbf346b6c924d262b8b741cb2eeac29c46ece0e7d387dd14d6b57",
+    "src/3d-lab.jsx": "f821add1f90557ff50eaa01c0e355e748178ff3a95d3c4c243f7970ac27adae7",
+    "src/3d/GalaxyScene.jsx": "92c0ab96b4d51923d1df6fe838b7018e03846d625dd745946c678f88d21d7c0a",
+    "src/3d/components/BlackHole.jsx": "b757f8ff046b2ead03e43806ff9c3e5d943268a9189fb290a64f627a5c78e1d3",
+    "src/3d/components/BlackHoleBloomMask.jsx": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c",
+    "src/3d/components/BlackHoleSystem.jsx": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+    "src/3d/components/CameraRig.jsx": "fd01fb40484b7f14f4eb893d07cd486a68b41c1729e9a61193a9bc8de84d816f",
+    "src/3d/components/LabTelemetry.jsx": "b53dde5f806c82d8dccc40b4bd4c9e0531464de98505959294e44809a7f81b14",
+    "src/3d/components/Nebula.jsx": "eebb3e1f5bb13a2ee379bb98bf95547d6f7b428d05a9211bcd35dd157de7d874",
+    "src/3d/components/SceneBoundary.jsx": "ee1c3710e1f289a7686c65da0e0845f244ba9838ee9bf8abdffb8b51c587b815",
+    "src/3d/components/SceneFallback.jsx": "c08f7799f5c5109fac1bcbd8bcdf4523aa11e8fd412b945c9e5a89ed0a647b1c",
+    "src/3d/components/ShootingStars.jsx": "705bbbf35b0e6d9cbe1fb57cb96ec8ab86144bfbce6c359d26ee99052a7fa595",
+    "src/3d/components/SkillsSymbols.jsx": "a2b65eed6e10e5903e6b760ebc7ba992353e9cb4eea91211a9d57efba13e8370",
+    "src/3d/components/StarField.jsx": "07fb658d4495d01d02ea71981d1c368a02933618231104651c3a577deee8fa01",
+    "src/3d/components/StoryMeteor.jsx": "ba036c110ccc9fd289727bfc01fa311d7c2cf0fa45923c97ee631adf9a0ae28e",
+    "src/3d/components/SymbolStars.jsx": "32bab130a67c903567850fdf9a15fb4a9d952220b6a5e06033f32af3b80c1ce0",
+    "src/3d/components/WorksConstellations.jsx": "3714666d8828087e527a7d6ea9923ad8080f0c95f662e2388b8ecfe7f52d61b7",
+    "src/3d/data/symbolTargets.json": "ef4f695079db19305e3b8fa550750cf4ed7a296293f9b50439500a629852446a",
+    "src/3d/data/worksConstellations.json": "9a15065151553f677e7c6dff6b946d5b4a95b3f36984da66a59a3d603be029d1",
+    "src/3d/hooks/useLabScroll.js": "a3828ab0ba03cb6fec3d494f5c304f10e576accbbbd8f4db9b25c8f0911efe29",
+    "src/3d/hooks/useMediaQuery.js": "c9873dab37c19e4aad975f7c9ac2b43aaa6565606fb6b91d60d2c5a1eb8671b0",
+    "src/3d/hooks/useScrollProgress.js": "efbbdfa55462c06d850777f45bd2b7626cf9d973378e5ad07d82c3205b689a7e",
+    "src/3d/hooks/useSectionAnchor.js": "c60a591a4243e31af603bcdee47e74df38fe826271b5b1af17d06e47d88e0418",
+    "src/3d/quality.js": "729c42d6e83d1931dbdaf3e4891f908c0904993dc599ce1c3935b7d485251401",
+    "src/3d/shaders/blackHole.js": "ec58f14414ff84b3d50e71f55b03da2e89c1038abec0d2add272924bc52c4c2d",
+    "src/3d/utils/buildStarGeometry.js": "35d7cf2aa82b6fa93c5465cc5e97e4c12155c6e5a40afe8363c2c8da4067b150",
+    "src/3d/utils/cameraPath.js": "93b6ed5a8488aab7b840a4db5e5d75528aa467df9d40183245a6573e44c8e376",
+    "src/3d/utils/finale.js": "59e5f731f13eacb7f950739ef1e1ebfd98fa7fd3e9d9c0ba2d8693b10b2bbe1d",
+    "src/3d/utils/portal.js": "e063d0cb23f051fa1b0d56addd6c3d1c0cb15ddd1bcec01b113701b59d79f07d",
+    "src/3d/utils/shootingStars.js": "620bea9b207bb1cceff2a8defbb894f431083fcbd8f12153a8f00a1633035fce",
+    "src/3d/utils/storyMeteor.js": "deb88d14615584b002239c4137a8c42da9c3096b3a4f3605a07fc18a81af910b",
+    "src/3d/utils/symbolMorph.js": "45717165d6d014c64a630cd11a03c5ec87689c887025983d3079ed05c6f95d10",
+    "src/3d/utils/worksOrbit.js": "d59fbd598f538def0612a9f2f886a8a313957f95e1cd8128d5124588d644ece8",
+    "src/App.jsx": "e9bae9a85a9ccb80035052acfa578324443ea87d97e291610e6e6ff63be41b3c",
+    "src/assets/react.svg": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
+    "src/components/About.jsx": "18a37d89e8bdf672056ded7c197188bd8a22fae1131a778816dedb009a9ab188",
+    "src/components/Aurora.jsx": "c03e2396d0f975a4371705ba60a0176896aa1f22396e7f8153981592f8d4589b",
+    "src/components/Cursor.jsx": "1b2caa9e251f9f0cb48c2d543d95b02f304397822fc289181111d69471926747",
+    "src/components/Education.jsx": "8db4e6cf74601f2c120db5294c1396602cd7bbfa0999ab4161bee94317554b59",
+    "src/components/EvilEye.jsx": "c76bebce7c93608d982fc18579bd404cf204d0b1d068c1b3c14817406dd74f11",
+    "src/components/Footer.jsx": "79a993376661c8189e8b52a2bea2d166f97d63b001dde2922e61b0b77ba1b14c",
+    "src/components/Hero.jsx": "85f11e17c90b3cfc306439f2a5ed8fbc46e5cd72fa3c54ee19861c0f49f5e9d1",
+    "src/components/Preloader.jsx": "d0bab97eb12d5430e5c3bd07ed1c1b4766e2a125167bbaf5e6ecab447bbcc456",
+    "src/components/SplashCursor.jsx": "95a4982d97e49e892788b9847cd41843f084fe9f2a39c10ae0ae88944280d8ec",
+    "src/components/Work.jsx": "395e7a5de2cee597c03a5655b73a3d9ddbda98bdcda813da15961f2d32049659",
+    "src/components/effects/PortalHeading.jsx": "227fb1dee96e59015f68e4ce18225d5072430aa18f86fc4ed18ef5051a70df56",
+    "src/components/effects/portalTrails.js": "685b0bf982c3d9f45c241c559a118f197512235c1dcd6fba57af4981354be8b4",
+    "src/components/layout/MenuOverlay.jsx": "46fefbee0fe26ec884aa023d5e67d6bf949ee55002cf702e6a6f82459bf7d897",
+    "src/components/layout/Nav.jsx": "fc012c65bcdcfb6dbca224cbbfc7950eda165d51aca743914bacd1c790b29d75",
+    "src/components/pages/Edura.jsx": "7183a1653928fd8a0150a1dd6b690756446ec66850963a25a11a3fcc528908a7",
+    "src/components/sections/Contact.jsx": "c5e7b77cd8c1943aa043ca69bc051e2a00734c3e778e5c96b726fe3150b44226",
+    "src/components/sections/Experience.jsx": "9339e97d56fdeec1e438af05646fddefea614b5e7fbb0baf162db3bd325ec240",
+    "src/components/sections/Skills.jsx": "07300c842058d37e78f97683a376b5d1cd0646edf7cfc17f0030cd5780fa9d28",
+    "src/components/ui/ConstellationCredits.jsx": "a969378504c14027d371c6ed914cba7aed1c5fd490d0e651d5705e4f46f64e06",
+    "src/components/ui/SoundToggle.jsx": "29e29630680251960b789c247be30465b0f6571230183e67b656d698f20c80fa",
+    "src/data.js": "909413a8e834e1a0998cf20d3228de4e67e74c6460968d82a8c16eee9a6a9680",
+    "src/data/education.js": "5872a9387ff9d1fcabf5b2fc57af5b0eddd59ca70ef4e6840b784bf3b8abe0f6",
+    "src/data/navigation.js": "6e23b91b93c8bc0c57ca9d7afca9f5dd27e70226cd17469f319aaed762c03a0f",
+    "src/data/skills.js": "189cd6619cbf59b0ccd36d796c0d8b10a2e106567951cad4e0f95ebbed5e8e1d",
+    "src/hooks/useGSAPSetup.js": "3e01127b4d73fd0e8c4f6c6af569b8d58fac8bc3f0d9aaa3ab577d4691f86b02",
+    "src/hooks/useReducedMotion.js": "91bc0b684c97ee1b951fc43516a4c18697e32f17dbd7bae5482207083228b947",
+    "src/hooks/useSmoothScroll.js": "3386776d0ae6ecc61d7674f997b0acd999fd930268b98c5b37a38ce17815383e",
+    "src/i18n/config.js": "3a7c679af690a23ffd0e0f8e66e2c1a1fc8303d0f4b7dd30df53bef14dd971d3",
+    "src/i18n/locales/en.json": "1578cdae4fb0d4b3c4f3494564367fc56572b87ba0379ab5db8e24a847cfe081",
+    "src/i18n/locales/en/lab.json": "28b2ee9bada3280fe4731920b0ebc2a9ceabbd6b7d3bc260c3b91ded24cba79e",
+    "src/i18n/locales/en/scene.json": "0cb051ca2ec3bf29329d42b39e2c62b151922e0b3599aa02f82b780a6606a1cf",
+    "src/i18n/locales/vi.json": "a860442004b4269ce60188db00f80d36847bd995a79594a5bbd6833bc7a7b554",
+    "src/i18n/locales/vi/lab.json": "f33ea5cf0a38e223afaaa4d24d28a5cc8e3ec212e9d51f1de5d752c21c2dfd25",
+    "src/i18n/locales/vi/scene.json": "26897416254dd3c9a75e4f739ed751d975d99460744251469f800d976b6f38ae",
+    "src/index.css": "ec90e0abfb7970145ff020105e43dda0ab4d28bf12457769f5c9079c009639a0",
+    "src/lib/audioEngine.js": "b5725a71c0e893e898fcc0e277ed464237f47bc12328a15ea9b34f432307dc77",
+    "src/lib/utils.js": "478739b1eed969267a388fc17db539b53aa66cf15a9467e475274b36de8783f2",
+    "src/main.jsx": "147df528e244299aa66772bafbf3412a6641c0e2ab75431ff539a59c7839206f",
+    "src/stores/useAudioStore.js": "7e7188de8cd1e260029c3ebd113f64c8b5cdcf1bb6c8d553d6757bf4b1a0c7ca",
+    "src/stores/useEducationStore.js": "8d968968c314f3fc0b90fe8db1e5e0c44908c4c6c22e282235030bcfb29a6c49",
+    "src/stores/useLangStore.js": "9ca61fd05c9ab48a081072d55d59c4fc8949affe630fc97bc26404810005d09f",
+    "src/stores/useLoadingStore.js": "8f9cc13ab4fc969edb440d662b15d48f793497025817acf0224ab0ad3f8c9a67",
+    "src/stores/useRouteStore.js": "07598bd2c0d9adf00f0f832895f2124b79894fecc166970a842191ab34085b5d",
+    "src/stores/useScrollStore.js": "0331d852280994a400c2bf9a649d54a8cf40fcd9287dfdfad7f4eb7efacd817b",
+    "src/stores/useSkillsStore.js": "cf06593de4261c5e0a571b2a07e9d50243f99f20a8ad7b5e52aa0c2ceaafaac5",
+    "src/stores/useThemeStore.js": "52e649ab76b03c676f2c423e2ef3e274ebb97a8b435392fe4bf1b006df4f8624",
+    "src/styles/globals.css": "9032e46e8ea120948d32fbe835fc13cb3cbb315152db19c2a4843d30f4b048e5",
+    "src/styles/hero.css": "df515df149539078eda5e724c1e8b673a935473fcdd496a9618fec75a219dd6a",
+    "src/styles/menu.css": "dd777575640babba2a136b5584153b688fe0b2cf0e0b13071029cfa0d7c7d947",
+    "src/styles/opening.css": "43364e3a8bda681274494c745616a906017f87eb1ff575174f88a7f7a6c73fb8",
+    "src/styles/portal-trails.css": "721e9dadba62e8f8da898db730515b38fa4f9e72a58075bd2e49de84690d26b0",
+    "vite.config.js": "44c8e05e4635de03d3f86eb0fb38488131e45f6fbf725b90e40a4ab892fc2b99"
+  },
+  "production": {
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/3d-lab.html": "ffd4b1b70c05542505f6a75f6ae817a43e45a1911c070bbe86a6615f828f3caa",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/assets/GalaxyScene-BhLCMhhq.js": "f5b15d26affcc802e1bba0887e5bc285a43966ea6add372eaf27050330ee8b45",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/assets/SkillsSymbols-BKWRukEJ.js": "b32ea928ee2ad5e001b75211c47e77bfa7ea1d2d712508dfb87fe95dfb1a08d1",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/assets/StoryMeteor-TvbBMZW_.js": "91071bb122cb031d31d7d624037290b5c8f0081b21a39005db2353ac34dfe8cb",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/assets/WorksConstellations-DORM642_.js": "49aa7735126ea81bf9294fb282b1718fccce5e834ce995731cafea667ecfc682",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/assets/davinci-resolve-DTEn20Mv.webp": "eafe92dded33f19395885cb80e1128ad0ec54e77ea792abfbe4077d3250e22b1",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/assets/events-9ce18a08.esm-d-HC3t5i.js": "7246ea116ef6fd8d771b6ea1d60c25bab1e92a45449644dfedeb2448dc7eb731",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/assets/index-BuqNyh6e.js": "d97ff14af73f014140f019b0f9303bebf62be17bdbb8ee85203d41bf2766417c",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/assets/index-Dmyq6c0Q.css": "e254a75a2b5b9dd512b5e85ad9d9844a530f49b4e96a9e5ed09408e449ba9c0e",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/assets/lab-ghHEG7nt.js": "e98897d3ef3acf7c93d2617b1a15834d72231fb0395b63f9a070c182fa8417e3",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/assets/unbounded-cyrillic-wght-normal-C627f1f8.woff2": "e30bf6a6063b6a47232bbd657e24c7cf4fdaf76fc2c50d92d9ee63e2ad2087cf",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/assets/unbounded-latin-ext-wght-normal-D6H-S6MW.woff2": "845e1c9fe2e9a7bfbedfeb447fbeba4bc1b5ecd6246277910ccdaad35a7a532c",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/assets/unbounded-latin-wght-normal-D5afBTBx.woff2": "22f9b928aa3928a896340422b54d690fbb5875c30eae4c106f029c61f2289fd6",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/assets/unbounded-vietnamese-wght-normal-rat7GD3o.woff2": "aa6b9cba3768a781df88a462a85ca40c6644662bb7d59ab4375ad1ff64f51251",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/assets/useSmoothScroll-B_xdmju5.css": "bd12573924e876d88bcbb7a95ca656d15bc77555eab5ab51171d0058755e5aff",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/assets/useSmoothScroll-BypRy3Sz.js": "4ba6e7d8d4db7768f06cf408ddb37f9091dc1c861459333d3d29eb7bbfea1835",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/assets/workbox-window.prod.es5-BBnX5xw4.js": "cadd21be4a88598a4dec91a26a025df0a5790ff6baec54a884e401c3f5c95557",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/avatar-cutout.webp": "6b2fea6dcbd2bd204fc0aa6c545cbe7a696670fc4532c992378c3393d53b511f",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/avatar.webp": "e6c0bac02737f8beb0bd25ca08793e552cc801b54d88464c9ae761a15dd90bd2",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/constellations/ATTRIBUTION.md": "6de4459ce515f9bf4cd7687e48b8935fc997a6d9a7af2a5113b4df9b75ff10ee",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/constellations/centaurus.svg": "717ce7d895f3408e95dd0b1e313fd5eeae24b706353154195d6df7346c60ab17",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/constellations/cygnus.svg": "d27f0e299bffbc52a6f2ac7dab9a0926082eef373e8dfdf95dc9d71e79ffdc37",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/constellations/gemini.svg": "ea4ad1fbd4155d823b0890af68221cfe638f18f6e59b1d3303f07649c6b62273",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/constellations/leo.svg": "fff19ee2dd7345c30fdc8a801f3b2a9a13bbafafd8e921d71ea04ed2fb75b829",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/constellations/manifest.json": "751e44452b742ac08c3a48bff7ecaf11a9f2ade5cec002ba36f2946c623e27d8",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/constellations/orion.svg": "7fea1ced47cfb586e03f03404e01f6a419066f597322dcf31b5b5e8ee1a2684f",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/constellations/scorpius.svg": "2b720432b3a77bb670b124c3dea66a1faa7fbbaf3150cab0f7f67071ed5032a5",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/favicon.svg": "59b453e9ccaefde87745b96561282b6ecf48f2dca482898d2fedcae064d18aa7",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/icons/ae.png": "13df4673f9bd262a1376c488e1cbfc67bd1cd0500555c05677edfa15128069af",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/icons/ai.png": "7a9e921269cb9257010d22f61694268d14c171b245413134e7cd3244fcc56331",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/icons/figma.png": "79036c1f608b11eb14a711ec02bab4cc162a2406e7fb89ae5f02a456d4918f48",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/icons/pr.png": "6af65c63d2f8a59fc54f49f5bc76b9938777789a04f36b625433409d9803efab",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/icons/ps.png": "f3083bd3ed5ac24d94d45907a1fa4ab1713f1d8fc6361d2e9ebfc960c5b85862",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/index.html": "237cad449582c220387d30f635abae30f30a1fe1e24a5e90ddc08762afbc6f10",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/manifest.webmanifest": "b859feed1968ceb37e959eeaf4ea1a27e3b2d7d13804a564b37fd7c659a83f1c",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/og-image.jpg": "bc898f6ebda22f5920af9bcf5bc01c7aa3ebb7a53e01434a787283c4598e9e2f",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/project1.webp": "2e9d8cee3c4c3584bb74bdeffcf384dcfabeb7d74bb165fd48d5094e38ad359b",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/project2.webp": "1032b163b247f7d528b313f093abf6bc29eade6b39d98b5acbbd5b068056de9b",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/project3.webp": "03117079520095b5dab4cd53a4b8c2a8495fe174efc1aa4d9b9d998447dad6fc",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/projects/edura/overview.webp": "cc792c5dfb8d3acaf30925372969711e6b18a19ca831e6cc9baa8e63900d9b23",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/projects/edura/problem.webp": "11e86ff9ffe00bf747a3b50db209e68658b08fcaa2989e4cb6300146b2fc1c4d",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/projects/edura/solution.webp": "7714b0840765fecc8a397c5c3a03eb97da448d752090821752998948f8ba47a8",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/pwa-192x192.png": "6e838d4b2412cb88c71f6befcc441b984efc2c73e1974c4c1a244bd7d7e9f724",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/pwa-512x512.png": "ac06e97bda0b1a82b5fe7f8cbcedbef0bb7a9ac1de1c1d988ad9833091470f97",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/pwa-maskable-192x192.png": "d848d131a9c68bb1469c201ad41c923a4f10cc79890719b86e21cccdda13a3b6",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/pwa-maskable-512x512.png": "9894d4a3820f39bb8456e5881ecb9c9aa3006a774beefb774e619e18bd97f834",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/sw.js": "ba40b053431dd9ba75a113737d0c98e01f2aa2a47e45c3e47c061b95422be365",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/theme-init.js": "b4b82e9564cbbf346b6c924d262b8b741cb2eeac29c46ece0e7d387dd14d6b57",
+    "outputs/visual-revision-2026-10-09/g1-g2-implementation/production/workbox-4e9e9954.js": "f2db86fc677662558d612bdbf847e94438d835e808b0ef03e6c3b7ac52c20a75"
+  },
+  "media": [
+    {
+      "file": "screenshots/hero-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 31420,
+      "sha256": "dea8d836edda44f8b9232aa08e8d26f13800985f030ba7d2f2ca86ec4c0de91f"
+    },
+    {
+      "file": "screenshots/portal-0.1-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 63156,
+      "sha256": "b9d1c893834d2587545576b0cbea17fb0a7379b63f296ff3f5493e9ab5ea8ee4"
+    },
+    {
+      "file": "screenshots/portal-0.22-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 43057,
+      "sha256": "736bca9a0436bb69c8c8dff1581350ea269e32194da68b21ee9feded67d830b2"
+    },
+    {
+      "file": "screenshots/portal-0.34-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 42300,
+      "sha256": "b2938c62f11872109ac6dda657c2488816daf684d295043c2eaad5fe195d8e92"
+    },
+    {
+      "file": "screenshots/portal-0.5-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 2189,
+      "sha256": "ddff13b111bda1c719c9183c6f976376af9e293a66943bd839694b6c8dc11a0c"
+    },
+    {
+      "file": "screenshots/portal-0.9-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 74196,
+      "sha256": "5fae5a964d1eaf6201feede5ab46928ad7e2f7622844f0aecd07956c0233b675"
+    },
+    {
+      "file": "screenshots/meteor-0.04-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 43437,
+      "sha256": "80c3e82fc4d2d4019d2cff07892b067c3bf41f0f818d76ddb26ff93ab13324c6"
+    },
+    {
+      "file": "screenshots/meteor-0.15-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 44359,
+      "sha256": "e8c910ca6791f1fead9e840375c704b55f1163b418c4eb1778e4f283b2e05bf7"
+    },
+    {
+      "file": "screenshots/meteor-0.32-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 49915,
+      "sha256": "14366f1358c86d6dc44ee7419887ecd7972185b0f3a7b12db3eda7bbc566b5fb"
+    },
+    {
+      "file": "screenshots/meteor-0.5-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 42733,
+      "sha256": "3ea32d918ba6a394afbc5e9f6ab34ba696723d598502d3a3e64372d08ac1c737"
+    },
+    {
+      "file": "screenshots/meteor-0.7-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 25105,
+      "sha256": "793072077fda53592487556bb264bba93a7382bd86574b1abfbd0203d558b67e"
+    },
+    {
+      "file": "screenshots/meteor-0.92-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 15135,
+      "sha256": "de56b672b7c894071343c3e6f703873617d655148b4ae34c9430f43d3b8f6322"
+    },
+    {
+      "file": "screenshots/departure-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 30676,
+      "sha256": "87e129a2d3d9435b62b5932e064425e0007b1e28ba987361aae960a9a0731f87"
+    },
+    {
+      "file": "screenshots/skills-regression-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 42808,
+      "sha256": "c441bebd093634d879ef0dedad746438ecd691e4dfd643bac9805ce054c9b38e"
+    },
+    {
+      "file": "screenshots/education-regression-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 64433,
+      "sha256": "4529e7b8d756edc18d73a7fa5f4ee7a0e9a48d9cd0c490e7c8b2ae809de5e83a"
+    },
+    {
+      "file": "screenshots/works-regression-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 51214,
+      "sha256": "ed7f785d6f151113d641bf895f74da575205ca14565f260f4460535c9a4f8bb6"
+    },
+    {
+      "file": "screenshots/hero-cycle-4-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 31589,
+      "sha256": "76d8ccb678c830687bd5c89223785801ac792851ecc3b378d01df576fea240b3"
+    },
+    {
+      "file": "screenshots/hero-cycle-8-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 31633,
+      "sha256": "b2e6403cd31c48a2a67c568801f722ed7c5541da06f3b29728855657960793f8"
+    },
+    {
+      "file": "screenshots/hero-cycle-12-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 31016,
+      "sha256": "cec54c6bfb7af0f87df5d760827a3bcd2e582ef142f55d02223282b5cb4f8bd9"
+    },
+    {
+      "file": "screenshots/hero-cycle-16-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 32217,
+      "sha256": "b3191fc4ac599b5a7117bfde58a8e93f22055aeb7ae6da722a1f1ebde26bd69e"
+    },
+    {
+      "file": "screenshots/hero-warm-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 31251,
+      "sha256": "150c29acbf1eb238bf50af3bf88490b0b58b1f778ac74af29e7fb642d49d9560"
+    },
+    {
+      "file": "screenshots/hero-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 37562,
+      "sha256": "6a70bddffb73edea1637487017f53244e7e6f7ae5804a2f8b2133bcb6c141cae"
+    },
+    {
+      "file": "screenshots/portal-0.1-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 75804,
+      "sha256": "018b1dab32553c25835b3792b659f43faf01c849143f913a774fd0d07966d39a"
+    },
+    {
+      "file": "screenshots/portal-0.22-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 52996,
+      "sha256": "f5e4152ff613f00e161781b23cb60d53578f017e39894e7fe384706aad0082f6"
+    },
+    {
+      "file": "screenshots/portal-0.34-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 44570,
+      "sha256": "dac47f26c33e7f67399aa53681b620d4a869716722379dbeee02007727fa17e7"
+    },
+    {
+      "file": "screenshots/portal-0.5-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 2737,
+      "sha256": "b3e5a8ee09aabb518edfe9a512dc3830f291b55c6673b494f7fa01582fc34963"
+    },
+    {
+      "file": "screenshots/portal-0.9-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 94602,
+      "sha256": "751a0bc240777addfe3b98652f8200497b1042e98d35c79b8df4bac25c21edd6"
+    },
+    {
+      "file": "screenshots/meteor-0.04-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 59143,
+      "sha256": "316676492c409b77e264b40761a075440656f234b8a9bcdfafa40e7792c1d4d5"
+    },
+    {
+      "file": "screenshots/meteor-0.15-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 53087,
+      "sha256": "d36eeb603c80685d0fcd4cc307424198848c9de264a7502cb4e5bd3c52977bd3"
+    },
+    {
+      "file": "screenshots/meteor-0.32-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 54159,
+      "sha256": "c83ece3e90f90e48ce9407d35b84c383d31f77bf75b71f5c7b447706d581665c"
+    },
+    {
+      "file": "screenshots/meteor-0.5-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 41374,
+      "sha256": "5583d9afe5752c6a53fe50930b19c0ad62f6d73d23d5fa10518cb6391906d124"
+    },
+    {
+      "file": "screenshots/meteor-0.7-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 26565,
+      "sha256": "619651f517dc7adb60938eda954a24782c7256f4355ecfd1ed8ae9c2ba7b5b8b"
+    },
+    {
+      "file": "screenshots/meteor-0.92-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 17904,
+      "sha256": "f2c382f3ccd03af867d913981ce7f0dd99ead8eef14a323c8aee1344a56ba364"
+    },
+    {
+      "file": "screenshots/departure-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 36129,
+      "sha256": "60b24d38b698a4297e3e6811b4c5f2b727c96143ddee78ca3666856ce71378eb"
+    },
+    {
+      "file": "screenshots/skills-regression-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 50200,
+      "sha256": "3f8f53fc5a831cdfe5caf5a2d9e01205cddea667b7b471d656d45632396d5be0"
+    },
+    {
+      "file": "screenshots/education-regression-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 71132,
+      "sha256": "97fd35e03665ceb3c944cefd46fae13dbb3f324e3fbfd119c5d1e8ce235b2e7c"
+    },
+    {
+      "file": "screenshots/works-regression-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 63352,
+      "sha256": "103cbbe13d9f7c076971ca253b8e080b6c3ce9bfd42eaf4f01bac44603944dbf"
+    },
+    {
+      "file": "screenshots/edura-back-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 63245,
+      "sha256": "27ad76461a0d4a4006155ddad6b42725d3eaad08585f109c8bf02268d6697498"
+    },
+    {
+      "file": "screenshots/hero-768.png",
+      "width": 768,
+      "height": 1024,
+      "bytes": 108258,
+      "sha256": "2d8d42614da95b94b982fc161bec76f38a3f57e80508253693a34c4ce436f1f8"
+    },
+    {
+      "file": "screenshots/portal-0.1-768.png",
+      "width": 768,
+      "height": 1024,
+      "bytes": 192760,
+      "sha256": "9efc2e5af2eb4af8195dcc7ac388e55e4d9b0a5ea08224de7a794cd59cdbfec9"
+    },
+    {
+      "file": "screenshots/portal-0.22-768.png",
+      "width": 768,
+      "height": 1024,
+      "bytes": 245357,
+      "sha256": "b949af0bfc708ec25fd2991e37bd16bc3f1dc7740f80e0aec1046ba1442a13d8"
+    },
+    {
+      "file": "screenshots/portal-0.34-768.png",
+      "width": 768,
+      "height": 1024,
+      "bytes": 54308,
+      "sha256": "fc1dafa342edf0e8dcf439a001ff351cbc4715ccae700ea05fc80b94e2010f51"
+    },
+    {
+      "file": "screenshots/portal-0.5-768.png",
+      "width": 768,
+      "height": 1024,
+      "bytes": 4462,
+      "sha256": "eecc29e3b0f9b46300e223f7d8aebaa83b99eef11c0dd4e6c524bf39802ddc46"
+    },
+    {
+      "file": "screenshots/portal-0.9-768.png",
+      "width": 768,
+      "height": 1024,
+      "bytes": 201722,
+      "sha256": "e65d5ff295b4cd8f872eff641694aa59b61848e3c3918eb1bb0c94ee98afb0d0"
+    },
+    {
+      "file": "screenshots/meteor-0.04-768.png",
+      "width": 768,
+      "height": 1024,
+      "bytes": 114511,
+      "sha256": "76ecadfb72536d15e98550fbf8beca6c6bbce3615595a5848414029845c11312"
+    },
+    {
+      "file": "screenshots/meteor-0.15-768.png",
+      "width": 768,
+      "height": 1024,
+      "bytes": 125562,
+      "sha256": "5ab82b6949c6f44112e7d10eb2b598a9b6ef654ba195264e9d7ce8a7a1cb5d5d"
+    },
+    {
+      "file": "screenshots/meteor-0.32-768.png",
+      "width": 768,
+      "height": 1024,
+      "bytes": 108779,
+      "sha256": "e1f04a08823eef16b5d4a84ca3296c80d51e3029aaf7258409950f001f7faab6"
+    },
+    {
+      "file": "screenshots/meteor-0.5-768.png",
+      "width": 768,
+      "height": 1024,
+      "bytes": 91785,
+      "sha256": "97284fbb1d1f50221573b4019cad45f8084aa51064c000cf5f223a9e10be40c1"
+    },
+    {
+      "file": "screenshots/meteor-0.7-768.png",
+      "width": 768,
+      "height": 1024,
+      "bytes": 77833,
+      "sha256": "881128030cbc4907a68a822d096221067d4106f7a4c86a6656f62b8b980ec66b"
+    },
+    {
+      "file": "screenshots/meteor-0.92-768.png",
+      "width": 768,
+      "height": 1024,
+      "bytes": 77325,
+      "sha256": "7197fefd108d028fbcc5990ce38557ae5f6e7628063d0b2ee2b78e105b12ca37"
+    },
+    {
+      "file": "screenshots/departure-768.png",
+      "width": 768,
+      "height": 1024,
+      "bytes": 115109,
+      "sha256": "fe0d1de571b3cc326fb4cc638808967c55dc5380f3053914ec8e1ebaa34730df"
+    },
+    {
+      "file": "screenshots/skills-regression-768.png",
+      "width": 768,
+      "height": 1024,
+      "bytes": 127013,
+      "sha256": "e72eef728384f9739ba9cd95468771548b2a8a61c507b0665627cde0f4cbd71b"
+    },
+    {
+      "file": "screenshots/education-regression-768.png",
+      "width": 768,
+      "height": 1024,
+      "bytes": 137265,
+      "sha256": "590ebb1df01732f67ec21fafa3412a8d039136d7598ab4ec5714d0affced9cb3"
+    },
+    {
+      "file": "screenshots/works-regression-768.png",
+      "width": 768,
+      "height": 1024,
+      "bytes": 162291,
+      "sha256": "bead30c9c4a3fa176db1c6d9f97cec853ca643dc9117fb59a6b864e413a0e1c7"
+    },
+    {
+      "file": "screenshots/hero-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 205486,
+      "sha256": "ecd109824f87ddc9e38155e1d1a6d49dcf7c701e330e6f203fa6c6079fcec8f5"
+    },
+    {
+      "file": "screenshots/portal-0.1-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 346329,
+      "sha256": "51c056488bdf9cd050d312a88bb56f47f01a2197a9e3e4b6a630eb70c73e5a7e"
+    },
+    {
+      "file": "screenshots/portal-0.22-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 474366,
+      "sha256": "b5b5ce7c96a2258373ca3fe9fd48d2606a4cf58652a330fc0aa41205fee7585b"
+    },
+    {
+      "file": "screenshots/portal-0.34-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 43377,
+      "sha256": "6aceb92e75ec0865cdce995da3635857dcc2ff793ec3268d4b35da6b58aa4b88"
+    },
+    {
+      "file": "screenshots/portal-0.5-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 5848,
+      "sha256": "2b268b517759594de54f662ef2bf903882763489f0d7be03e58a708579cf305e"
+    },
+    {
+      "file": "screenshots/portal-0.9-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 312452,
+      "sha256": "7d36a8831d774cd59053ea757c2ec320e72415f9ae0f541239c531d3a1026d53"
+    },
+    {
+      "file": "screenshots/meteor-0.04-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 156124,
+      "sha256": "33df439700c9e59ca9a376b6756adbd03e6d65f9894ccce3aadf6960ada0817f"
+    },
+    {
+      "file": "screenshots/meteor-0.15-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 193032,
+      "sha256": "94072327883b0e00f87b8b287174d6e00ba908e553b15fe69b3a1534f8e24f2f"
+    },
+    {
+      "file": "screenshots/meteor-0.32-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 168036,
+      "sha256": "685bce7eea936656faa8b4264f167426857a026e0d0961fb480ad7d4305b3439"
+    },
+    {
+      "file": "screenshots/meteor-0.5-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 143605,
+      "sha256": "e62c4228b24a6df239e6a11f320e3fa42fcc4c63e11c27175bc606d1bf2f35bb"
+    },
+    {
+      "file": "screenshots/meteor-0.7-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 116494,
+      "sha256": "8c4de17be6e09d17d04ac3dcefafdb1d943ec35414025f74ae2f449c35a04f76"
+    },
+    {
+      "file": "screenshots/meteor-0.92-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 117966,
+      "sha256": "d42e655fa61da9ae3eef47858129f01d0db02980622021bc52060085d74b07b4"
+    },
+    {
+      "file": "screenshots/departure-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 198046,
+      "sha256": "2c7379557f1332b2fe3c3136fc0b0c9e01922317d56aee8481c299d556ebd0a8"
+    },
+    {
+      "file": "screenshots/skills-regression-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 146037,
+      "sha256": "e284765f737f019db0e12be54cc81f1b958be4c062c03d87fb50a1d8ce119f72"
+    },
+    {
+      "file": "screenshots/education-regression-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 219928,
+      "sha256": "86692dcdd5c316aa0fd229aa8b333a94208caf81038bbc74247c268e3cd3e96f"
+    },
+    {
+      "file": "screenshots/works-regression-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 234966,
+      "sha256": "dc04e4f60e2d9e9665eba47ffba6cb64b1349ac9690ff7d9b3d09905ba5756b4"
+    },
+    {
+      "file": "screenshots/hero-cycle-4-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 208103,
+      "sha256": "62c6fa79588403c66f196efb96e7ed3382102844a7acc59bd791d2598a8e3bb9"
+    },
+    {
+      "file": "screenshots/hero-cycle-8-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 208217,
+      "sha256": "d7165502669a3056091ae0eb34488e5ec651b56c8ecf38a9b72001108bf412ee"
+    },
+    {
+      "file": "screenshots/hero-cycle-12-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 204456,
+      "sha256": "39ff36641bb5b2989ca2157e00a204904c5aa04807dc8f06f2f597923d87b553"
+    },
+    {
+      "file": "screenshots/hero-cycle-16-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 210674,
+      "sha256": "9e51f176b66ee33454c35bf0cbdebd104a593146132c5f960105a39930d370f5"
+    },
+    {
+      "file": "screenshots/hero-warm-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 205357,
+      "sha256": "25bdc9207cb4ff3de27f50d8b61b68c171c55b0a3c31073c8e39599d5d0479da"
+    },
+    {
+      "file": "screenshots/edura-back-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 237440,
+      "sha256": "e11614f49b4796453c71f9b35b4fc3bc4e048215190c551714e55eef1065892e"
+    },
+    {
+      "file": "screenshots/hero-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 289971,
+      "sha256": "d5086f42c246dd867b4c351bd14378bb50ff6c82f1cf8462bd03f6e9afb74fd1"
+    },
+    {
+      "file": "screenshots/portal-0.1-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 472782,
+      "sha256": "6532282fc55a9aef1610d10af7c343b9a29f01705309b03639115f8259017f72"
+    },
+    {
+      "file": "screenshots/portal-0.22-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 615364,
+      "sha256": "e29adcc660e69e1e3d941097c11470aa23b4a6f14d31fbca6b9c747bc6f4a1cf"
+    },
+    {
+      "file": "screenshots/portal-0.34-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 57809,
+      "sha256": "4b04d9ac069f665ba8ab5164fbb7f4cd7d9d064e9521b5af2e3a161079dabd12"
+    },
+    {
+      "file": "screenshots/portal-0.5-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 8508,
+      "sha256": "82a2e41ba517809f5b58a7da95b52f22e165cd40afabe2fa4b082bc45388d894"
+    },
+    {
+      "file": "screenshots/portal-0.9-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 369024,
+      "sha256": "fac8393a1354988a4f38f15fa3f72ac8ea3ab72e47f6eec7a556f8992ae2868a"
+    },
+    {
+      "file": "screenshots/meteor-0.04-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 227052,
+      "sha256": "9f5076b8cac93b4e412290c1b78680759b27cf004c5d1b218e1afa6baa2118e8"
+    },
+    {
+      "file": "screenshots/meteor-0.15-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 221533,
+      "sha256": "9237577baa67464c877989d3f3fdf01e813054a262e5440b41e84f2f5cc26cac"
+    },
+    {
+      "file": "screenshots/meteor-0.32-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 198077,
+      "sha256": "1537d77cbb2d4b2ff42dad8099770d2f0f8bb6ad26addad4cb4cec329f61ab2a"
+    },
+    {
+      "file": "screenshots/meteor-0.5-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 172523,
+      "sha256": "e208110837b4d8bb4e9b4645fa2655b9d3e4455f823096a0104de6d0da372823"
+    },
+    {
+      "file": "screenshots/meteor-0.7-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 147970,
+      "sha256": "5a77321755c9bdc6f161b534716b36829d151e1080a65164f38af4592f1cee46"
+    },
+    {
+      "file": "screenshots/meteor-0.92-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 147728,
+      "sha256": "163e4b56bd23c150ccd5741c07566cdf385ac6c6798655738c9d6733961bb810"
+    },
+    {
+      "file": "screenshots/departure-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 258012,
+      "sha256": "3551a52f42fbad041937eacd0a024e65e2bdc28318791d6b3c2ef6c349e37748"
+    },
+    {
+      "file": "screenshots/skills-regression-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 227684,
+      "sha256": "010a7d855df043edf072dd559dca16019491b71a24f818146db3bb38442ec0a2"
+    },
+    {
+      "file": "screenshots/education-regression-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 295081,
+      "sha256": "eefc2466aae9b2f4dc909902a713820ec6992663f16d7da3d23c96442f523bca"
+    },
+    {
+      "file": "screenshots/works-regression-1920.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 278187,
+      "sha256": "10ccf43696195ebdd5d31abd3092a106689e76477b3419a0ebe8ddf22f442faf"
+    },
+    {
+      "file": "screenshots/motion-resumed.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 164616,
+      "sha256": "b2edf7271b4a21f4d425dd5c47ece476fedd47152e85df77cb5401ab81fdb066"
+    },
+    {
+      "file": "screenshots/opening-slow-font-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 37720,
+      "sha256": "60aa767f90f5326d3829d7edb024c8785e42b8f55dce999f150473278613a09e"
+    },
+    {
+      "file": "screenshots/opening-slow-font-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 206043,
+      "sha256": "ecf045aa16744fc1d4413cfeb7e770dc84863a9b97d60a89278c1b1e37576aea"
+    },
+    {
+      "file": "screenshots/opening-watchdog-font-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 37690,
+      "sha256": "3bfa6043a435c2dd5aaa731f5dec41e674a3c4640c020aa10ba6a375862fb46b"
+    },
+    {
+      "file": "screenshots/opening-failed-font-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 36472,
+      "sha256": "ea677b6fc52e68b21d26abb180b9ccef3df7dba0427c14f0e72578e5340e4b75"
+    },
+    {
+      "file": "screenshots/opening-no-webgl-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 41728,
+      "sha256": "84ad445d7a0cd5d33cc4203c993f50e6bd6f55da0beee7a0bfc0b484b6078027"
+    },
+    {
+      "file": "screenshots/opening-no-webgl-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 110192,
+      "sha256": "2679e3f692a2820ea27e39cc27a1371e393cc91271c2b1a74f73bbf28038a7f2"
+    },
+    {
+      "file": "screenshots/opening-reduced-390.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 37645,
+      "sha256": "b416399b701c8a2acd18112beed9c6535b2376b103e95eb4589e665bb0eea7f9"
+    },
+    {
+      "file": "screenshots/portal-en-390.png",
+      "width": 390,
+      "height": 900,
+      "bytes": 76034,
+      "sha256": "11b0d081fea6ab031259c3dffa4f518a857899d44cceab83214a392f32afcc3f"
+    },
+    {
+      "file": "screenshots/portal-en-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 348385,
+      "sha256": "84e800397b0512f3e0ddd77fca69d540fa2489311aa15b3cf87cde65f061031b"
+    },
+    {
+      "file": "screenshots/portal-vi-390.png",
+      "width": 390,
+      "height": 900,
+      "bytes": 78528,
+      "sha256": "0089cee78a77231e6c95a7ff75c8727194687f3975ccb01218f63427f149cdbe"
+    },
+    {
+      "file": "screenshots/portal-vi-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 351902,
+      "sha256": "7fb08051ce3c88441d04d3921d5514b433702915d862e79d8d1d87d709444383"
+    },
+    {
+      "file": "screenshots/portal-resize-390.png",
+      "width": 390,
+      "height": 900,
+      "bytes": 82436,
+      "sha256": "7526f87239e300ead907d462c03a6b20c9aecdc886d00715ca7240792e4e30bd"
+    },
+    {
+      "file": "screenshots/portal-resize-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 337431,
+      "sha256": "1e113c2efdd55b55541024e919fbe532245b585a959d58cb8e8e1d02d0c2ee58"
+    },
+    {
+      "file": "screenshots/lab-experience-390.png",
+      "width": 390,
+      "height": 900,
+      "bytes": 62415,
+      "sha256": "6de30e04850b3a845092eaca8a69b4de88ff952a8e70d9824a793113057ce787"
+    },
+    {
+      "file": "screenshots/lab-experience-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 147077,
+      "sha256": "42a6bce152e0ccdc5f75fbcf402e8d0b56944f146a12c9ad4df4f727062c0734"
+    },
+    {
+      "file": "intake/final-images/portal-0.05-forward-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 69719,
+      "sha256": "9c772273faa4a64d8f78f6eb551d10acc94ea9ca9849ab48671c786c95b84a86"
+    },
+    {
+      "file": "intake/final-images/portal-0.10-forward-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 63328,
+      "sha256": "0b83861559a1e4030ada358ff61b5eb249a2a9ba1e03bf7c4b9093f326745fdb"
+    },
+    {
+      "file": "intake/final-images/portal-0.16-forward-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 30672,
+      "sha256": "fdeee9c07eb3812de1465785d652510bbd97b697495b3d34f29b98a31dc16156"
+    },
+    {
+      "file": "intake/final-images/portal-0.22-forward-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 42383,
+      "sha256": "a82317c52170a0e655f02d0554c863d15a701adc6df09796b795958573ab78d0"
+    },
+    {
+      "file": "intake/final-images/portal-0.28-forward-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 107768,
+      "sha256": "fa9e0bb5e3e68053143857127388d3aa1a784d7b25cda7c315d92cf530cabf8b"
+    },
+    {
+      "file": "intake/final-images/portal-0.10-reverse-320.png",
+      "width": 320,
+      "height": 760,
+      "bytes": 63328,
+      "sha256": "0b83861559a1e4030ada358ff61b5eb249a2a9ba1e03bf7c4b9093f326745fdb"
+    },
+    {
+      "file": "intake/final-images/portal-0.05-forward-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 361322,
+      "sha256": "ced00c7efaf1e8f7973e840f5d4ce35fb8235193c5f3190063d791eb787500e7"
+    },
+    {
+      "file": "intake/final-images/portal-0.10-forward-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 352506,
+      "sha256": "3344772ee82e5b850533796dc99d729b8cb067b274e72a4e4a4cdc0b934bdd81"
+    },
+    {
+      "file": "intake/final-images/portal-0.16-forward-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 321894,
+      "sha256": "12343417734c6fb878f44a338eee3a2011ea1fe20fe0f9edee4067d38663824d"
+    },
+    {
+      "file": "intake/final-images/portal-0.22-forward-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 479538,
+      "sha256": "feacb7bb62af543255726ff4956064a4e84663cc572641588f3c198f36c8df22"
+    },
+    {
+      "file": "intake/final-images/portal-0.28-forward-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 308010,
+      "sha256": "824d025ecba30dfaad501d4a682b63dbef51afde495f9a1d2c8ff7c8c64fc412"
+    },
+    {
+      "file": "intake/final-images/portal-0.10-reverse-1440.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 352355,
+      "sha256": "8e1aab39b3940a273dd5517e70b480850fc140392664f3dcd7e721ccb099305c"
+    },
+    {
+      "file": "comet/pixel-calibration/final-frozen-source/comet-390-company-1-lit.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 58667,
+      "sha256": "fa0297ddfb417284d7f9cd2ef8fdf52638ec63f9a74579898e6e91090bb3985b"
+    },
+    {
+      "file": "comet/pixel-calibration/final-frozen-source/comet-390-company-1-background.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 54377,
+      "sha256": "02725676a760e615028960f16bea33afdf89afd9045cdb50362e529b3492c24a"
+    },
+    {
+      "file": "comet/pixel-calibration/final-frozen-source/comet-390-company-2-lit.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 64380,
+      "sha256": "3fcf658897fe209046c346193624c1e9360a24109c6e4204e5c3ed4b014516a7"
+    },
+    {
+      "file": "comet/pixel-calibration/final-frozen-source/comet-390-company-2-background.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 60625,
+      "sha256": "350503253f8345eb8362b2bfeee9e22fa9d994a94dc018f270b5a1411a024448"
+    },
+    {
+      "file": "comet/pixel-calibration/final-frozen-source/comet-390-company-3-lit.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 54947,
+      "sha256": "52675c25e6e6cf46e39f8e81a5d67e4c54c11e7ebf3ec7cd7291f71ae2cccdbe"
+    },
+    {
+      "file": "comet/pixel-calibration/final-frozen-source/comet-390-company-3-background.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 50663,
+      "sha256": "4120d6fe49876a9962500a5a310d40cf34854d58fa6cbcdbb5d671cbf92ca13a"
+    },
+    {
+      "file": "comet/pixel-calibration/final-frozen-source/comet-1440-company-1-lit.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 181383,
+      "sha256": "c1252d91c843d2bf475a10c02b9a0802891aa4aee61a133da875185b1221d339"
+    },
+    {
+      "file": "comet/pixel-calibration/final-frozen-source/comet-1440-company-1-background.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 171804,
+      "sha256": "d11a9dcfd1f80ba2b4a7d09fac71a9b16c52aec2b4b4d59b609c9fa1dd333a36"
+    },
+    {
+      "file": "comet/pixel-calibration/final-frozen-source/comet-1440-company-2-lit.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 191729,
+      "sha256": "af6db7889aea2007d60b74d882dd289b0d59e15eeb5a73ee9331f2e147329c67"
+    },
+    {
+      "file": "comet/pixel-calibration/final-frozen-source/comet-1440-company-2-background.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 181338,
+      "sha256": "ffdf3940e23d1d3d6b58ed0a71ae723106f657305bf3ce2a7dfb21120607361c"
+    },
+    {
+      "file": "comet/pixel-calibration/final-frozen-source/comet-1440-company-3-lit.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 164728,
+      "sha256": "9e13016278eeef845867f46c58f1f90cd07b22a1e38f6b6dc35daf999ed7da58"
+    },
+    {
+      "file": "comet/pixel-calibration/final-frozen-source/comet-1440-company-3-background.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 161183,
+      "sha256": "df2ce7e649824a239681d2a802401e3e358603d124c562e62192dd062f11df12"
+    },
+    {
+      "file": "clips/opening-portal-current.webm",
+      "bytes": 6455214,
+      "sha256": "ea641394b7d92620b149684b9e435979e39593ffd6d9798c0ff97dce54ff9623",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 1440,
+            "height": 900
+          }
+        ],
+        "format": {
+          "duration": "9.633000"
+        }
+      }
+    },
+    {
+      "file": "clips/experience-departure-current.webm",
+      "bytes": 3014308,
+      "sha256": "02e6a76422ec867a016e09296a083ae2f1025b46286d6f332b3bf2ae90c751c4",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp9",
+            "width": 1440,
+            "height": 900
+          }
+        ],
+        "format": {
+          "duration": "9.733000"
+        }
+      }
+    },
+    {
+      "file": "clips/opening-portal-current.mp4",
+      "bytes": 8122546,
+      "sha256": "ea61eaf1c54f64ab23545ca1ba3b1b2fab2455870a180a03cc7b1cf4ac173c66",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900
+          }
+        ],
+        "format": {
+          "duration": "9.633333"
+        }
+      }
+    },
+    {
+      "file": "clips/experience-departure-current.mp4",
+      "bytes": 4436300,
+      "sha256": "de4d236968760b5e04341c2e33d71b474691be9bbe758e24454fcf67dc3adedd",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1440,
+            "height": 900
+          }
+        ],
+        "format": {
+          "duration": "9.733333"
+        }
+      }
+    }
+  ],
+  "notes": [
+    "Canonical final-source evidence only. Earlier failures/profile/dev images are diagnostics.",
+    "PNG decoded including data integrity; WEBM/MP4 ffprobe and full ffmpeg decode pass; native Edge gallery uses MP4."
+  ]
+}

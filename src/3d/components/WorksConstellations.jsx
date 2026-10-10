@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
-import { BufferAttribute, BufferGeometry, DynamicDrawUsage, Matrix4, Quaternion, Vector3 } from 'three';
+import { BufferAttribute, BufferGeometry, DynamicDrawUsage, Matrix4, Quaternion, SRGBColorSpace, TextureLoader, Vector3 } from 'three';
 import data from '@/3d/data/worksConstellations.json';
 import { BLACK_HOLE_CENTER, storyCameraPath } from '@/3d/utils/cameraPath';
-import { advanceWorksOrbit, WORKS_IDS } from '@/3d/utils/worksOrbit';
-import { finaleFigure, finaleState } from '@/3d/utils/finale';
+import { advanceWorksOrbit, worksBounds, worksStage, worksFigure, WORKS_IDS } from '@/3d/utils/worksOrbit';
+import { finaleState } from '@/3d/utils/finale';
 import { worksArrival } from '@/3d/utils/storyMeteor';
 import { useScrollStore } from '@/stores/useScrollStore';
 
@@ -14,21 +14,24 @@ const STAR_VERT = /* glsl */ `
   attribute float aSize;
   attribute float aRole;
   uniform float uPixelRatio;
+  uniform float uActive;
   varying float vRole;
   void main() {
     vRole = aRole;
-    gl_PointSize = aSize * uPixelRatio;
+    gl_PointSize = aSize * uPixelRatio * (1.0 + uActive * 0.7);
     gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
   }
 `;
 const STAR_FRAG = /* glsl */ `
   uniform float uStrength;
+  uniform float uActive;
   varying float vRole;
   void main() {
     float d = length(gl_PointCoord - 0.5);
-    float core = 1.0 - smoothstep(0.05, 0.5, d);
+    float core = 1.0 - smoothstep(0.02, 0.3, d);
+    float halo = (1.0 - smoothstep(0.05, 0.5, d)) * 0.35 * uActive;
     if (d > 0.5) discard;
-    gl_FragColor = vec4(vec3(1.0), core * core * vRole * uStrength);
+    gl_FragColor = vec4(vec3(1.0), (core * core + halo) * vRole * uStrength);
   }
 `;
 
@@ -43,7 +46,28 @@ const TRAIL_FRAG = /* glsl */ `
   void main() { gl_FragColor = vec4(vec3(1.0), vFade * uOpacity); }
 `;
 
-export function WorksConstellations({ frozen = false, quality = 'high' }) {
+function projectWorks(layoutRef, root, camera, figures, groups, size, basis, ready) {
+  const data = layoutRef?.current;
+  if (!data) return;
+  data.width = size.width; data.height = size.height; data.basis = basis; data.ready = ready;
+  if (ready) {
+    root.updateWorldMatrix(true, true);
+    camera.updateMatrixWorld();
+    for (let i = 0; i < figures.length; i++) {
+      const box = data.figures[i], figure = figures[i];
+      box.left = box.top = Infinity; box.right = box.bottom = -Infinity;
+      for (const corner of figure.corners) {
+        const point = figure.projected.copy(corner).applyMatrix4(groups[i].matrixWorld).project(camera);
+        const x = (point.x + 1) * size.width / 2, y = (1 - point.y) * size.height / 2;
+        box.left = Math.min(box.left, x); box.right = Math.max(box.right, x);
+        box.top = Math.min(box.top, y); box.bottom = Math.max(box.bottom, y);
+      }
+    }
+  }
+  data.onChange?.();
+}
+
+export function WorksConstellations({ frozen = false, quality = 'high', layoutRef }) {
   const root = useRef(null);
   const trailMesh = useRef(null);
   const phaseState = useRef({});
@@ -55,11 +79,15 @@ export function WorksConstellations({ frozen = false, quality = 'high' }) {
     const byId = new Map(item.geometry.stars.map(star => [star.id, star.position]));
     const points = new BufferGeometry();
     points.setAttribute('position', new BufferAttribute(new Float32Array(stars.flatMap(star => star.position)), 3));
-    points.setAttribute('aSize', new BufferAttribute(new Float32Array(stars.map((star, i) => i < item.geometry.stars.length ? Math.max(5, 10 - star.vmag) : 2.5)), 1));
+    points.setAttribute('aSize', new BufferAttribute(new Float32Array(stars.map((star, i) => i < item.geometry.stars.length ? Math.max(8, 14 - star.vmag) : 2.5)), 1));
     points.setAttribute('aRole', new BufferAttribute(new Float32Array(stars.map((_, i) => i < item.geometry.stars.length ? 1 : 0.25)), 1));
     const lines = new BufferGeometry();
     lines.setAttribute('position', new BufferAttribute(new Float32Array(item.geometry.edges.flatMap(edge => edge.flatMap(id => byId.get(id)))), 3));
-    return { points, lines, uniforms: { uPixelRatio: { value: 1 }, uStrength: { value: 1 } } };
+    const bounds = worksBounds(item);
+    const corners = [new Vector3(bounds.left, bounds.top, 0), new Vector3(bounds.right, bounds.top, 0),
+      new Vector3(bounds.right, bounds.bottom, 0), new Vector3(bounds.left, bounds.bottom, 0)];
+    return { points, lines, bounds, corners, projected: new Vector3(),
+      uniforms: { uPixelRatio: { value: 1 }, uStrength: { value: 1 }, uActive: { value: 0 } } };
   }), []);
   const trails = useMemo(() => {
     const samples = quality === 'low' ? 12 : quality === 'medium' ? 18 : 24;
@@ -83,13 +111,27 @@ export function WorksConstellations({ frozen = false, quality = 'high' }) {
     const width = height * aspect;
     const center = target.sub(eye).normalize().multiplyScalar(distance).add(eye);
     const hole = new Vector3(...BLACK_HOLE_CENTER).sub(center).applyQuaternion(rotation.clone().invert());
-    return { center, rotation, hole,
-      radiusX: width * 0.28, radiusY: height * (aspect < 1 ? 0.17 : 0.13), scale: Math.min(width * 0.15, height * 0.13), offsetY: height * 0.04 };
-  }, [size.width, size.height]);
+    const stage = worksStage(size.width, size.height, figures.map(figure => figure.bounds));
+    const units = width / size.width;
+    return { center, rotation, hole, scale: stage.scale * units, drift: stage.drift * units,
+      centers: stage.centers.map(([x, y]) => [(x - size.width / 2) * units, (size.height / 2 - y) * units]) };
+  }, [size.width, size.height, figures]);
   useEffect(() => () => figures.forEach(figure => { figure.points.dispose(); figure.lines.dispose(); }), [figures]);
   useEffect(() => () => trails.geometry.dispose(), [trails]);
+  useEffect(() => {
+    let alive = true;
+    const loader = new TextureLoader();
+    const textures = data.constellations.map((item, i) => loader.load(import.meta.env.BASE_URL + item.artwork.url.replace(/^\//, ''), texture => {
+      if (!alive) { texture.dispose(); return; }
+      texture.colorSpace = SRGBColorSpace;
+      const material = groups.current[i]?.children[2]?.material;
+      if (material) { material.map = texture; material.needsUpdate = true; }
+    }, undefined, () => { /* Stars and semantic targets remain usable if artwork fails. */ }));
+    return () => { alive = false; textures.forEach(texture => texture.dispose()); };
+  }, []);
+  useEffect(() => () => { const data = layoutRef?.current; if (data) { data.ready = false; data.onChange?.(); } }, [layoutRef]);
 
-  useFrame(({ gl }, delta) => {
+  useFrame(({ gl, camera }, delta) => {
     if (!root.current) return;
     const state = useScrollStore.getState();
     const active = state.storyChapter === 'works';
@@ -101,21 +143,26 @@ export function WorksConstellations({ frozen = false, quality = 'high' }) {
     root.current.visible = active || arriving && arrival > 0 || !frozen && finale && p < 0.55;
     const selected = finale ? state.worksFinaleSelection : state.worksSelection ?? state.worksFocus ?? state.worksHover;
     advanceWorksOrbit(state.worksOrbit, delta, Boolean(selected), frozen, active && !document.hidden);
-    if (!root.current.visible) return;
+    if (!root.current.visible) { projectWorks(layoutRef, root.current, camera, figures, groups.current, size, basis, false); return; }
     const phase = state.worksOrbit.latched ? state.worksOrbit.origin : state.worksOrbit.phase;
     root.current.userData.phase = phase;
     root.current.userData.progress = p;
     for (let i = 0; i < groups.current.length; i++) {
       const group = groups.current[i];
       if (!group) continue;
-      const pose = finaleFigure(p, phase, i, basis, sampled.current);
+      const pose = worksFigure(p, phase, i, basis, sampled.current);
       group.position.set(pose.x, pose.y, pose.z);
       group.scale.setScalar(pose.scale);
-      const strength = (selected ? selected === WORKS_IDS[i] ? 1.2 : 0.35 : 1) * authored.stars * arrival;
-      group.children[0].material.opacity = 0.13 * strength;
+      const highlighted = selected === WORKS_IDS[i];
+      const strength = (highlighted ? 1.6 : selected ? 0.65 : 1) * authored.stars * arrival;
+      group.children[0].material.opacity = (highlighted ? 0.65 : 0.16) * authored.stars * arrival;
       group.children[1].material.uniforms.uStrength.value = strength;
+      group.children[1].material.uniforms.uActive.value = highlighted ? 1 : 0;
       group.children[1].material.uniforms.uPixelRatio.value = gl.getPixelRatio();
+      const art = group.children[2].material;
+      art.opacity = art.map ? (highlighted ? 0.3 : 0.1) * authored.stars * arrival : 0;
     }
+    projectWorks(layoutRef, root.current, camera, figures, groups.current, size, basis, active);
     trailMesh.current.visible = finale && authored.trails > 0;
     trailMesh.current.material.uniforms.uOpacity.value = authored.trails * 0.16;
     if (trailMesh.current.visible) {
@@ -127,7 +174,7 @@ export function WorksConstellations({ frozen = false, quality = 'high' }) {
         const star = trails.stars[i];
         for (let j = 0; j < trails.samples; j++) for (let end = 0; end < 2; end++) {
           const q = Math.max(0, p - (j + end) / trails.samples * 0.055);
-          const pose = finaleFigure(q, phase, star.index, basis, sampled.current);
+          const pose = worksFigure(q, phase, star.index, basis, sampled.current);
           array[cursor++] = pose.x + star.position[0] * pose.scale;
           array[cursor++] = pose.y + star.position[1] * pose.scale;
           array[cursor++] = pose.z + star.position[2] * pose.scale;
@@ -145,6 +192,10 @@ export function WorksConstellations({ frozen = false, quality = 'high' }) {
       <points geometry={figure.points} frustumCulled={false}>
         <shaderMaterial vertexShader={STAR_VERT} fragmentShader={STAR_FRAG} uniforms={figure.uniforms} transparent depthWrite={false} toneMapped={false} />
       </points>
+      <mesh name={`works-art-${WORKS_IDS[i]}`} position={[...data.constellations[i].artwork.plane.center.slice(0, 2), data.constellations[i].artwork.plane.localZ]}>
+        <planeGeometry args={[data.constellations[i].artwork.plane.width, data.constellations[i].artwork.plane.height]} />
+        <meshBasicMaterial transparent opacity={0} depthWrite={false} toneMapped={false} />
+      </mesh>
     </group>)}
     <lineSegments ref={trailMesh} name="finale-trails" geometry={trails.geometry} frustumCulled={false}>
       <shaderMaterial vertexShader={TRAIL_VERT} fragmentShader={TRAIL_FRAG} uniforms={trails.uniforms}

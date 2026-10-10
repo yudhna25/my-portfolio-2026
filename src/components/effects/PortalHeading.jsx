@@ -1,9 +1,11 @@
-import { useId, useRef } from 'react';
+import { useRef } from 'react';
 import '@fontsource-variable/unbounded';
 import { gsap, useGSAPSetup } from '@/hooks/useGSAPSetup';
 import { useScrollStore } from '@/stores/useScrollStore';
+import { useLoadingStore } from '@/stores/useLoadingStore';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
-import { portalProgress, portalState, portalIntake } from '@/3d/utils/portal';
+import { portalProgress, portalState } from '@/3d/utils/portal';
+import { createPortalTrails } from '@/components/effects/portalTrails';
 import '@/styles/hero.css';
 
 // Contours baked from the installed Unbounded 800; glyph advances stay unchanged.
@@ -18,10 +20,27 @@ const YEAR_STARS = Array.from({ length: 12 }, (_, group) => Array.from({ length:
   const random = n => { const value = Math.sin(seed * n) * 43758.5453; return value - Math.floor(value); };
   return { x: random(12.9898) * 3502, y: random(78.233) * 832, r: 1.5 + random(45.164) * 2.5 };
 }));
+const YEAR_INK = { '2': [31, 33, 776, 767], '0': [39, 33, 857, 784], '6': [41, 33, 788, 784], '7': [15, 50, 727, 750] };
+// Rasterize the unchanged stars once; this detached 2D cache is never a scene/DOM Canvas.
+function createYearStarImages() {
+  const canvas = document.createElement('canvas'), context = canvas.getContext('2d');
+  return [0, 850, 1785, 2635].map((offset, index) => Object.fromEntries((index === 3 ? ['6', '7'] : [index === 1 ? '0' : '2']).map(digit => {
+    const [x, y, width, height] = YEAR_INK[digit];
+    canvas.width = width; canvas.height = height;
+    return [digit, YEAR_STARS.map(group => {
+      context.clearRect(0, 0, width, height); context.save(); context.translate(-x, -y);
+      context.clip(new Path2D(YEAR_CONTOURS[digit])); context.fillStyle = context.strokeStyle = 'white'; context.lineWidth = 0.5;
+      context.beginPath();
+      for (const star of group) { context.moveTo(star.x - offset + star.r, star.y); context.arc(star.x - offset, star.y, star.r, 0, Math.PI * 2); }
+      context.fill(); context.stroke(); context.restore();
+      return canvas.toDataURL('image/png');
+    })];
+  })));
+}
+const YEAR_STAR_IMAGES = createYearStarImages();
 
 export function PortalHeading({ label, name, year, role, visible = true, glitch = false, children }) {
   const scope = useRef(null);
-  const starsId = useId();
   const reduced = useReducedMotion();
   const fallback = useScrollStore(state => state.sceneFallback);
   const frozen = reduced || fallback;
@@ -32,18 +51,22 @@ export function PortalHeading({ label, name, year, role, visible = true, glitch 
     const phase = {};
     gsap.set(stage, { opacity: 0 });
     const opacity = gsap.quickSetter(stage, 'opacity');
-    const layers = [stage.querySelector('[data-hero-year]'), ...chars.slice(0, -1),
-      ...stage.querySelectorAll('[data-hero-layer="identity"], [data-hero-layer="intro"], [data-hero-layer="indicator"]')];
-    gsap.set(layers, { transform: 'none', opacity: 1 });
-    const intake = layers.map(node => ({ node, layout: {}, pose: {},
-      transform: value => { node.style.transform = value; }, opacity: gsap.quickSetter(node, 'opacity') }));
+    const contours = stage.querySelector('[data-year-contours]');
+    gsap.set(contours, { opacity: 1 });
+    const contourOpacity = gsap.quickSetter(contours, 'opacity');
+    const sources = [
+      ...stage.querySelectorAll('[data-portal-year-glyph]'), ...chars.slice(0, -1),
+      ...stage.querySelectorAll('[data-hero-decode], [data-hero-role], [data-hero-layer="intro"], [data-hero-layer="indicator"]'),
+    ];
+    const trails = !frozen ? createPortalTrails(sources.map(node => ({ node,
+      words: node.matches('[data-hero-decode], [data-hero-role], [data-hero-layer="intro"], [data-hero-layer="indicator"]'),
+    }))) : null;
     const measure = () => {
       if (!active) return;
-      intake.forEach(item => item.transform('none'));
-      intake.forEach(item => { const rect = item.node.getBoundingClientRect(); item.layout.x = rect.left + rect.width / 2; item.layout.y = rect.top + rect.height / 2; });
+      trails?.measure();
       draw();
     };
-    const digit = stage.querySelector('[data-year-digit]');
+    const digit = stage.querySelectorAll('[data-year-digit]');
     const noise = stage.querySelector('[data-year-noise]');
     const glyphs = stage.querySelectorAll('[data-year-glyph]');
     const changeDigit = value => {
@@ -51,7 +74,12 @@ export function PortalHeading({ label, name, year, role, visible = true, glitch 
         if (glyph.tagName === 'path') glyph.setAttribute('d', YEAR_CONTOURS[value]);
         else glyph.textContent = value;
       });
-      digit.dataset.digit = value;
+      digit.forEach(node => { node.dataset.digit = value; });
+      stage.querySelectorAll('[data-year-last-star]').forEach(image => {
+        const [x, y, width, height] = YEAR_INK[value];
+        image.setAttribute('href', YEAR_STAR_IMAGES[3][value][+image.dataset.yearLastStar]);
+        for (const [key, number] of Object.entries({ x, y, width, height })) image.setAttribute(key, number);
+      });
     };
     const resetDigit = () => changeDigit(year.slice(-1));
     const meteors = !frozen ? gsap.timeline({ id: 'hero-year-meteors', paused: true }) : null;
@@ -59,7 +87,7 @@ export function PortalHeading({ label, name, year, role, visible = true, glitch 
     stage.querySelectorAll('[data-year-meteor]').forEach((meteor, index) => {
       const paths = meteor.querySelectorAll('path');
       gsap.set(paths, { strokeDashoffset: -index * 197 });
-      meteors?.to(paths, { strokeDashoffset: -index * 197 - 1000, duration: 4 + index * 0.3, repeat: -1, ease: 'none' }, 0);
+      meteors?.to(paths, { strokeDashoffset: -index * 197 - 1000, duration: 10 + index, repeat: -1, ease: 'none' }, 0);
     });
     stage.querySelectorAll('[data-year-twinkle]').forEach((group, index) => {
       twinkle?.to(group, { opacity: 0.95, duration: 1.4 + index % 4 * 0.25, repeat: -1, yoyo: true, repeatDelay: 1.8 + index % 3 * 0.6, ease: 'sine.inOut' }, index * 0.37);
@@ -87,29 +115,31 @@ export function PortalHeading({ label, name, year, role, visible = true, glitch 
       const p = portalProgress(state.storyChapter, state.chapterProgress, frozen);
       portalState(p, phase);
       opacity(visible && p < 0.44 ? 1 : 0);
-      intake.forEach((item, index) => {
-        portalIntake(frozen ? 0 : p, item.layout, state.storyAnchor, window.innerWidth, window.innerHeight, index, item.pose);
-        const value = item.pose;
-        item.transform(`translate(${value.x}px, ${value.y}px) rotate(${value.rotation}deg) scale(${value.scaleX}, ${value.scaleY})`);
-        item.opacity(value.opacity);
-      });
+      contourOpacity(p > 0 && p < 0.5 ? 0 : 1);
+      if (p > 0 && running) {
+        flash?.pause(0);
+        gsap.set(noise, { opacity: 0, x: 0, y: 0 });
+        decode?.pause(0); decoded.textContent = name; resetDigit();
+      }
+      trails?.draw(p, state.storyAnchor, visible);
       const hidden = !visible || phase.textOpacity === 0;
       stage.setAttribute('aria-hidden', hidden ? 'true' : 'false');
       stage.inert = hidden;
-      const idle = visible && !document.hidden && p === 0;
+      const opening = useLoadingStore.getState().isLoading && document.querySelector('[data-preloader]');
+      const idle = visible && !opening && !document.hidden && p === 0;
       if (idle === running) return;
       running = idle;
       stage.dataset.heroIdle = String(idle);
       nameNode.tabIndex = idle ? 0 : -1;
       if (idle) {
-        meteors?.restart();
-        twinkle?.restart();
-        flash?.restart();
+        meteors?.play();
+        twinkle?.play();
+        flash?.play();
         decode?.restart();
       } else {
-        meteors?.pause(0);
-        twinkle?.pause(0);
-        flash?.pause(0);
+        meteors?.pause();
+        twinkle?.pause();
+        flash?.pause();
         decode?.pause(0);
         resetDigit();
         decoded.textContent = name;
@@ -118,6 +148,7 @@ export function PortalHeading({ label, name, year, role, visible = true, glitch 
     };
     measure();
     const unsubscribe = useScrollStore.subscribe(draw);
+    const unsubscribeLoading = useLoadingStore.subscribe(draw);
     document.addEventListener('visibilitychange', draw);
     window.addEventListener('resize', measure);
     document.fonts?.addEventListener('loadingdone', measure);
@@ -126,7 +157,9 @@ export function PortalHeading({ label, name, year, role, visible = true, glitch 
     nameNode.addEventListener('focus', replay);
     return () => {
       active = false;
+      trails?.dispose();
       unsubscribe();
+      unsubscribeLoading();
       document.removeEventListener('visibilitychange', draw);
       window.removeEventListener('resize', measure);
       document.fonts?.removeEventListener('loadingdone', measure);
@@ -139,42 +172,46 @@ export function PortalHeading({ label, name, year, role, visible = true, glitch 
 
   const prefix = year.slice(0, -1);
   const lastDigit = year.slice(-1);
-  return <header ref={scope} data-portal-stage className="portal-heading pointer-events-none fixed inset-0 z-20 flex items-center overflow-hidden text-white">
+  return <header ref={scope} data-portal-stage data-static-motion={frozen} className="portal-heading pointer-events-none fixed inset-0 z-20 flex items-center overflow-hidden text-white">
     <div data-hero-content className="relative isolate mx-4 w-[calc(100%-2rem)] md:ml-[14vw] md:mr-0 md:w-[72vw]">
       <div data-hero-layer="year" data-hero-year className="relative z-0 -mb-[0.24em]">
         <span className="sr-only">{year}</span>
-        <svg aria-hidden="true" focusable="false" viewBox="0 0 3502 832" className="hero-year-svg" fill="none" stroke="white" strokeWidth="2">
-          <defs>
-            <pattern id={starsId} width="3502" height="832" patternUnits="userSpaceOnUse">
-              {YEAR_STARS.map((group, index) => <g key={index} data-year-twinkle className="hero-year-stars">
-                {group.map((star, point) => <circle key={point} cx={star.x} cy={star.y} r={star.r} />)}
+        {[true, false].map(stars => <svg key={String(stars)} data-year-contours={stars ? undefined : true} aria-hidden="true" focusable="false" viewBox="0 0 3502 832"
+          className={`hero-year-svg${stars ? '' : ' absolute left-0 top-0'}`} fill="none" stroke="white" strokeWidth="2">
+          {Array.from(prefix, (char, index) => <g key={index} data-portal-year-glyph={stars ? index : undefined}
+            data-year-contour-glyph={stars ? undefined : index} transform={`translate(${[0, 850, 1785][index]} 0)`}>
+            {stars && <>
+              <path d={YEAR_CONTOURS[char]} className="hero-year-base" />
+              {YEAR_STAR_IMAGES[index][char].map((image, group) => <g key={group} data-year-twinkle className="hero-year-stars">
+                <image href={image} x={YEAR_INK[char][0]} y={YEAR_INK[char][1]} width={YEAR_INK[char][2]} height={YEAR_INK[char][3]} />
               </g>)}
-            </pattern>
-            {[0, 850, 1785, 2635].map((offset, index) => <pattern key={index} id={`${starsId}-${index}`} href={`#${starsId}`} patternTransform={`translate(${-offset} 0)`} />)}
-          </defs>
-          {Array.from(prefix, (char, index) => <g key={index} transform={`translate(${[0, 850, 1785][index]} 0)`}>
-            <path d={YEAR_CONTOURS[char]} className="hero-year-base" fill={`url(#${starsId}-${index})`} />
-            {(char === '0' ? YEAR_CONTOURS[char].match(/M[^M]+/g) : [YEAR_CONTOURS[char]]).map((path, contour) => <g key={contour} data-year-meteor>
+            </>}
+            {!stars && (char === '0' ? YEAR_CONTOURS[char].match(/M[^M]+/g) : [YEAR_CONTOURS[char]]).map((path, contour) => <g key={contour} data-year-meteor>
               <path d={path} pathLength="1000" className="hero-year-tail" />
               <path d={path} pathLength="1000" className="hero-year-wake" />
               <path d={path} pathLength="1000" className="hero-year-head" />
             </g>)}
           </g>)}
-          <g data-year-digit data-digit={lastDigit}>
+          <g data-year-digit data-portal-year-glyph={stars ? 3 : undefined} data-year-contour-glyph={stars ? undefined : 3} data-digit={lastDigit}>
             <g transform="translate(2635 0)">
-              <path data-year-glyph d={YEAR_CONTOURS[lastDigit]} className="hero-year-base" fill={`url(#${starsId}-3)`} />
-              <g data-year-meteor>
+              {stars && <>
+                <path data-year-glyph d={YEAR_CONTOURS[lastDigit]} className="hero-year-base" />
+                {YEAR_STAR_IMAGES[3][lastDigit].map((image, group) => <g key={group} data-year-twinkle className="hero-year-stars">
+                  <image data-year-last-star={group} href={image} x={YEAR_INK[lastDigit][0]} y={YEAR_INK[lastDigit][1]} width={YEAR_INK[lastDigit][2]} height={YEAR_INK[lastDigit][3]} />
+                </g>)}
+              </>}
+              {!stars && <g data-year-meteor>
                 <path data-year-glyph d={YEAR_CONTOURS[lastDigit]} pathLength="1000" className="hero-year-tail" />
                 <path data-year-glyph d={YEAR_CONTOURS[lastDigit]} pathLength="1000" className="hero-year-wake" />
                 <path data-year-glyph d={YEAR_CONTOURS[lastDigit]} pathLength="1000" className="hero-year-head" />
-              </g>
+              </g>}
             </g>
           </g>
-          <g data-year-noise className="opacity-0">
+          {stars && <g data-year-noise className="opacity-0">
             <text x="0" y="800" vectorEffect="non-scaling-stroke" className="hero-noise-cyan"><tspan stroke="none">{prefix}</tspan><tspan data-year-glyph>{lastDigit}</tspan></text>
             <text x="0" y="800" vectorEffect="non-scaling-stroke" className="hero-noise-orange"><tspan stroke="none">{prefix}</tspan><tspan data-year-glyph>{lastDigit}</tspan></text>
-          </g>
-        </svg>
+          </g>}
+        </svg>)}
       </div>
       <h1 id="hero-heading" data-hero-layer="heading" aria-label={label} className="relative z-10 whitespace-nowrap font-display leading-none font-extrabold tracking-[-0.035em]">
         {Array.from(label, (char, index) => <span key={index} aria-hidden="true" data-portal-char className={`relative inline-block${index === label.length - 1 && !fallback ? ' text-transparent' : ''}`}>

@@ -1,0 +1,135 @@
+{
+  "capturedAt": "2026-10-10T01:57:34.1177993+07:00",
+  "protectedFilesVerified": 120,
+  "v8MediaVerified": 76,
+  "mismatches": [],
+  "protectedSetDifference": [],
+  "agentsPrefixIntact": true,
+  "agentsPrefixBytes": 61288,
+  "progressRowsAdded": 1,
+  "planningLinksVerified": 17,
+  "links": [
+    {
+      "from": "docs/ke-hoach-tinh-chinh-g1-g2-2026-10-10.md",
+      "target": "../prompts.md",
+      "exists": true
+    },
+    {
+      "from": "docs/ke-hoach-tinh-chinh-g1-g2-2026-10-10.md",
+      "target": "../outputs/visual-revision-2026-10-09/v8/verification.md",
+      "exists": true
+    },
+    {
+      "from": "docs/ke-hoach-tinh-chinh-g1-g2-2026-10-10.md",
+      "target": "../outputs/visual-revision-2026-10-09/v8/handoff.md",
+      "exists": true
+    },
+    {
+      "from": "docs/ke-hoach-tinh-chinh-g1-g2-2026-10-10.md",
+      "target": "../outputs/visual-revision-2026-10-09/g1-g2-refinement/verification.md",
+      "exists": true
+    },
+    {
+      "from": "outputs/visual-revision-2026-10-09/g1-g2-refinement/verification.md",
+      "target": "../../../docs/ke-hoach-tinh-chinh-g1-g2-2026-10-10.md",
+      "exists": true
+    },
+    {
+      "from": "outputs/visual-revision-2026-10-09/g1-g2-refinement/verification.md",
+      "target": "baseline.json",
+      "exists": true
+    },
+    {
+      "from": "prompts.md",
+      "target": "docs/ke-hoach-tinh-chinh-g1-g2-2026-10-10.md",
+      "exists": true
+    },
+    {
+      "from": "docs/ke-hoach-nang-cap-thi-giac-2026-10-07.md",
+      "target": "../prompts.md",
+      "exists": true
+    },
+    {
+      "from": "docs/ke-hoach-nang-cap-thi-giac-2026-10-07.md",
+      "target": "ke-hoach-tinh-chinh-g1-g2-2026-10-10.md",
+      "exists": true
+    },
+    {
+      "from": "outputs/project-status-2026-10-09/status.md",
+      "target": "../visual-revision-2026-10-09/v8/verification.md",
+      "exists": true
+    },
+    {
+      "from": "outputs/project-status-2026-10-09/status.md",
+      "target": "../../docs/ke-hoach-tinh-chinh-g1-g2-2026-10-10.md",
+      "exists": true
+    },
+    {
+      "from": "outputs/visual-revision-2026-10-09/v8/verification.md",
+      "target": "../../../docs/ke-hoach-tinh-chinh-g1-g2-2026-10-10.md",
+      "exists": true
+    },
+    {
+      "from": "outputs/visual-revision-2026-10-09/v8/handoff.md",
+      "target": "../../../docs/ke-hoach-tinh-chinh-g1-g2-2026-10-10.md",
+      "exists": true
+    },
+    {
+      "from": "outputs/visual-revision-2026-10-09/v3/verification.md",
+      "target": "../../../docs/ke-hoach-tinh-chinh-g1-g2-2026-10-10.md",
+      "exists": true
+    },
+    {
+      "from": "outputs/visual-revision-2026-10-09/v3/verification.md",
+      "target": "../v8/verification.md",
+      "exists": true
+    },
+    {
+      "from": "outputs/visual-revision-2026-10-09/v3/handoff.md",
+      "target": "../../../docs/ke-hoach-tinh-chinh-g1-g2-2026-10-10.md",
+      "exists": true
+    },
+    {
+      "from": "outputs/visual-revision-2026-10-09/v3/handoff.md",
+      "target": "../v8/handoff.md",
+      "exists": true
+    }
+  ],
+  "selectedChoicesConsistent": true,
+  "staleQ12States": [],
+  "gitDiffCheckExitCode": 0,
+  "gitDiffCheckOutput": [
+    "warning: in the working copy of 'AGENTS.md', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'docs/ke-hoach-nang-cap-thi-giac-2026-10-07.md', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'outputs/project-status-2026-10-09/status.md', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'outputs/visual-revision-2026-10-09/v3/handoff.md', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'outputs/visual-revision-2026-10-09/v3/review.html', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'outputs/visual-revision-2026-10-09/v3/verification.md', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'prompts.md', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'src/3d-lab.jsx', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'src/3d/components/SkillsSymbols.jsx', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'src/3d/components/StoryMeteor.jsx', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'src/3d/components/SymbolStars.jsx', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'src/3d/components/WorksConstellations.jsx', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'src/3d/data/symbolTargets.json', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'src/3d/data/worksConstellations.json', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'src/3d/utils/storyMeteor.js', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'src/3d/utils/symbolMorph.js', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'src/3d/utils/worksOrbit.js', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'src/App.jsx', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'src/components/Education.jsx', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'src/components/Work.jsx', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'src/components/sections/Experience.jsx', LF will be replaced by CRLF the next time Git touches it",
+    "warning: in the working copy of 'src/data/education.js', LF will be replaced by CRLF the next time Git touches it"
+  ],
+  "preexistingHistoricalMissingFiles": [
+    "outputs/project-status-2026-10-09/build.log",
+    "outputs/project-status-2026-10-09/lint.log"
+  ],
+  "planningOnly": true,
+  "implementationVerified": false,
+  "g1": "reopened",
+  "g2": "changes requested, not approved",
+  "v9": "not started",
+  "consolidatedConfirmation": "confirmed: planning only, no code"
+}

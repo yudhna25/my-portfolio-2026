@@ -1,0 +1,167 @@
+{
+  "status": "pass",
+  "assertions": 12851,
+  "anchors": [
+    {
+      "constellation": "Orion",
+      "hip": 27913,
+      "localError": 5.551115123125783e-17
+    },
+    {
+      "constellation": "Orion",
+      "hip": 27366,
+      "localError": 2.6645352591003757e-15
+    },
+    {
+      "constellation": "Orion",
+      "hip": 22449,
+      "localError": 1.4988010832439613e-15
+    },
+    {
+      "constellation": "Scorpius",
+      "hip": 78820,
+      "localError": 2.220446049250313e-16
+    },
+    {
+      "constellation": "Scorpius",
+      "hip": 85927,
+      "localError": 3.0531133177191805e-16
+    },
+    {
+      "constellation": "Scorpius",
+      "hip": 82729,
+      "localError": 2.220446049250313e-16
+    },
+    {
+      "constellation": "Leo",
+      "hip": 57632,
+      "localError": 2.220446049250313e-16
+    },
+    {
+      "constellation": "Leo",
+      "hip": 49669,
+      "localError": 5.551115123125783e-17
+    },
+    {
+      "constellation": "Leo",
+      "hip": 47908,
+      "localError": 1.1102230246251565e-16
+    }
+  ],
+  "changed": [
+    "src/3d/components/SkillsSymbols.jsx",
+    "src/3d/components/SymbolStars.jsx",
+    "src/3d/data/symbolTargets.json",
+    "src/3d/utils/symbolMorph.js",
+    "src/components/Education.jsx",
+    "src/data/education.js"
+  ],
+  "protectedFiles": 102,
+  "skillsExactMath": 7,
+  "source": {
+    "id": "I/239/hip_main",
+    "frame": "ICRS",
+    "positionEpoch": "J1991.25",
+    "magnitudeBand": "Johnson V",
+    "coordinatesUnit": "degree",
+    "properMotionApplied": false,
+    "note": "RAICRS/DEICRS are J1991.25 positions. They are not relabelled as J2000 or current-date positions."
+  },
+  "concurrent": [
+    {
+      "path": "src/3d/components/StoryMeteor.jsx",
+      "before": "e80e47efac1a7b957bd9c79975f23fb0e6d9be23889ee008d72c8e7272c39466",
+      "current": "6a760690b766dc3ddc307dbff0725220a71eed923ea6242ac72d8dc8585d13a0"
+    },
+    {
+      "path": "src/3d/components/WorksConstellations.jsx",
+      "before": "cdfe0eb115b53b56b0e63e092322201b7acf495023dce804f07cfc3804ae0707",
+      "current": "9b023247f2295c2ca3bc0de016a891eec0a27afdc4f4168e2fc087ac5c81b55f"
+    },
+    {
+      "path": "src/3d/data/worksConstellations.json",
+      "before": "133dcb33d88f35e2522cba0a040ae760d9767e71bef344404c117f73f6adf699",
+      "current": "9a15065151553f677e7c6dff6b946d5b4a95b3f36984da66a59a3d603be029d1"
+    },
+    {
+      "path": "src/3d/utils/storyMeteor.js",
+      "before": "31637a15c422f228781295af21bd1a70e35ada9030e76d98304478c96236b450",
+      "current": "4765d339c4fcce73367717d75355aa5131a8d02ffc0a7ac45ed89846becc65a7"
+    },
+    {
+      "path": "src/3d/utils/worksOrbit.js",
+      "before": "3b357d6392ac8cd7370fae9670f90b5611f13a8969c9ca05422d0186d508e9f3",
+      "current": "a53fd7d31c939cd1e93110f27d042003343a1bede0bd863ae60db71a9bfeb2ff"
+    },
+    {
+      "path": "src/components/Work.jsx",
+      "before": "db7a4075beaff94625309a41bbd9ef30f69e54bda90cc16c174dd140aa11e1f4",
+      "current": "7d6a3b06e160ba1117e096115fd8160ddb27b5475a86032e3fdcc955ce696a93"
+    }
+  ],
+  "logoReceipts": [
+    {
+      "id": "figma",
+      "rawHash": "d170a900bcc350e9661df0d553b8d6d4157c88792d3553c5a63604ad4b58873d",
+      "sourceHash": "1fb4457376aa18c0801c415cfc242f6e1a457be43f34c08f11f4e243e43e8a19",
+      "metadataHash": "1fb4457376aa18c0801c415cfc242f6e1a457be43f34c08f11f4e243e43e8a19",
+      "crlfCheckout": true
+    },
+    {
+      "id": "photoshop",
+      "rawHash": "8f2a154d340093c54ebb6d5ada6c7810c6d398f8dc7f91f4e42983e881d45dfb",
+      "sourceHash": "a0f02efe3c5f02f45b615e19e09c727a44e10c6f5246f1c07ad80ae674dfebec",
+      "metadataHash": "8f2a154d340093c54ebb6d5ada6c7810c6d398f8dc7f91f4e42983e881d45dfb",
+      "crlfCheckout": true
+    },
+    {
+      "id": "illustrator",
+      "rawHash": "3b8ecf9a2edc3bb532bbd2709e6042ac2c7a6144aee5534fb5de6d6a1df49654",
+      "sourceHash": "0116ed7e9174cac12eadc373ae6a3a3ed243e38e0d6b9308072156f48098d949",
+      "metadataHash": "3b8ecf9a2edc3bb532bbd2709e6042ac2c7a6144aee5534fb5de6d6a1df49654",
+      "crlfCheckout": true
+    },
+    {
+      "id": "after-effects",
+      "rawHash": "22ddf748011151ace0418f26ca4a061b5aafe2e3b1dbbbff1c2cbac16cfc4f98",
+      "sourceHash": "3c21b6dc8965ff4e50263462b2e73644bc89c2a97f9fd644071eecb057862d2c",
+      "metadataHash": "22ddf748011151ace0418f26ca4a061b5aafe2e3b1dbbbff1c2cbac16cfc4f98",
+      "crlfCheckout": true
+    },
+    {
+      "id": "premiere-pro",
+      "rawHash": "4f246aee08da3112643f37898bbf0de1c546c654851c40365b36fa7f5a5d1626",
+      "sourceHash": "9dc83138edb4204e8853143f097503efdad1a6c38756ac9d491d60d8aec64187",
+      "metadataHash": "4f246aee08da3112643f37898bbf0de1c546c654851c40365b36fa7f5a5d1626",
+      "crlfCheckout": true
+    },
+    {
+      "id": "davinci-resolve",
+      "rawHash": "eafe92dded33f19395885cb80e1128ad0ec54e77ea792abfbe4077d3250e22b1",
+      "sourceHash": "eafe92dded33f19395885cb80e1128ad0ec54e77ea792abfbe4077d3250e22b1",
+      "metadataHash": "eafe92dded33f19395885cb80e1128ad0ec54e77ea792abfbe4077d3250e22b1",
+      "crlfCheckout": false
+    },
+    {
+      "id": "chatgpt",
+      "rawHash": "11e545d4e3ee51d3aa6235477c99b2f8445fa5c46c55b7d5f19de9a8d8d26fb0",
+      "sourceHash": "fc6ec9f1f85555cb530253b7753f5ecc44bee0952c29d105d18b35c0535f5d01",
+      "metadataHash": "fc6ec9f1f85555cb530253b7753f5ecc44bee0952c29d105d18b35c0535f5d01",
+      "crlfCheckout": true
+    },
+    {
+      "id": "claude",
+      "rawHash": "27fe1b1bd0ba34ad10142cb4e5e293c3861971581ec03ef832c986a35e500e88",
+      "sourceHash": "cef9c6658c9bf62ce26b2eec549d9faa4a3d548ef2c0d240ddfdce859c68ff63",
+      "metadataHash": "cef9c6658c9bf62ce26b2eec549d9faa4a3d548ef2c0d240ddfdce859c68ff63",
+      "crlfCheckout": true
+    },
+    {
+      "id": "google-antigravity",
+      "rawHash": "b19664975ecee44944ccfc74ad952d1033a92635cf61c8820709aa28e643ffd6",
+      "sourceHash": "70b0196da133a4bd7f9b224acaa35f9aa97e0acaeeedd296ad9323de3919014e",
+      "metadataHash": "70b0196da133a4bd7f9b224acaa35f9aa97e0acaeeedd296ad9323de3919014e",
+      "crlfCheckout": true
+    }
+  ]
+}

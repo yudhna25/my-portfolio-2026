@@ -4,7 +4,7 @@ import { useGSAP } from '@gsap/react';
 import { gsap, ScrollTrigger } from '@/hooks/useGSAPSetup';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { useScrollStore } from '@/stores/useScrollStore';
-import { createMeteorLayout, meteorEmphasis } from '@/3d/utils/storyMeteor';
+import { createMeteorLayout, meteorEmphasis, meteorWake } from '@/3d/utils/storyMeteor';
 import { PORTFOLIO_DATA } from '@/data';
 
 const placement = ['lg:col-start-1', 'lg:col-start-5', 'lg:col-start-8'];
@@ -20,11 +20,14 @@ export default function Experience({ onLayout }) {
     const section = root.current;
     const labels = [...section.querySelectorAll('[data-meteor-label]')];
     const setters = labels.map(label => gsap.quickSetter(label, 'opacity'));
+    const wakes = [...section.querySelectorAll('[data-meteor-wake]')];
+    const wakeSetters = wakes.map(wake => gsap.quickSetter(wake, 'opacity'));
     const draw = () => {
       const state = useScrollStore.getState();
       labels.forEach((label, i) => {
         const strength = state.storyChapter === 'experience' ? meteorEmphasis(layout, i, state.chapterProgress) : 0;
         setters[i](reduced ? 1 : 0.72 + strength * 0.28);
+        wakeSetters[i](!reduced && !document.hidden && state.storyChapter === 'experience' ? meteorWake(layout, i, state.chapterProgress) : 0);
         label.dataset.active = strength > 0.5 ? 'true' : 'false';
       });
     };
@@ -35,7 +38,7 @@ export default function Experience({ onLayout }) {
       layout.width = width; layout.height = height;
       layout.range = departure.top - rect.top;
       const points = layout.points;
-      points[0] = 0.08; points[1] = 0.12 * height;
+      points[0] = -0.22; points[1] = 0.22 * height;
       labels.forEach((label, i) => {
         const box = label.getBoundingClientRect();
         const y = box.top - rect.top - 24;
@@ -51,14 +54,17 @@ export default function Experience({ onLayout }) {
     const observer = new ResizeObserver(measure);
     observer.observe(section);
     window.addEventListener('resize', measure);
+    document.addEventListener('visibilitychange', draw);
     ScrollTrigger.addEventListener('refresh', measure);
     const unsubscribe = useScrollStore.subscribe(draw);
     ScrollTrigger.refresh(true);
     return () => {
       observer.disconnect(); unsubscribe();
       window.removeEventListener('resize', measure);
+      document.removeEventListener('visibilitychange', draw);
       ScrollTrigger.removeEventListener('refresh', measure);
       gsap.set(labels, { clearProps: 'opacity' });
+      gsap.set(wakes, { clearProps: 'opacity' });
     };
   }, { scope: root, dependencies: [reduced, i18n.resolvedLanguage, onLayout], revertOnUpdate: true });
 
@@ -72,7 +78,10 @@ export default function Experience({ onLayout }) {
         {PORTFOLIO_DATA.experience.map(({ id }, index) => {
           const position = t(`experience.positions.${id}`, { returnObjects: true });
           return <li key={id} data-experience-item={id} className="grid grid-cols-1 lg:grid-cols-12">
-            <article aria-labelledby={`experience-${id}`} className={`min-w-0 lg:col-span-5 ${placement[index]}`}>
+            <article aria-labelledby={`experience-${id}`} className={`relative min-w-0 lg:col-span-5 ${placement[index]}`}>
+              <span data-meteor-wake aria-hidden="true" className={`pointer-events-none absolute -top-10 h-20 w-40 -translate-x-1/2 opacity-0 [background:radial-gradient(ellipse_at_50%_40%,rgb(250_250_250/0.14),rgb(155_220_232/0.07)_35%,transparent_72%)] ${index === 1 ? 'left-[72%]' : 'left-[35%]'}`}>
+                <span className="absolute inset-x-6 top-4 h-px bg-linear-to-r from-transparent via-white/70 to-transparent" />
+              </span>
               <div data-meteor-label>
                 <h3 id={`experience-${id}`} className="font-display text-[clamp(1.25rem,2.2vw,2rem)] font-semibold leading-tight tracking-[-0.035em] [overflow-wrap:anywhere]">{position.company}</h3>
                 <p lang="en" className="mt-3 font-mono text-sm leading-relaxed">{position.role}</p>

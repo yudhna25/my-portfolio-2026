@@ -1,0 +1,30 @@
+{
+  "status": "pass",
+  "records": [
+    {
+      "width": 390,
+      "before": {
+        "canvas": 0,
+        "fallback": true,
+        "width": 390,
+        "client": 390,
+        "figures": 3,
+        "images": 3
+      },
+      "backFocus": "work-target-edura"
+    },
+    {
+      "width": 1440,
+      "before": {
+        "canvas": 0,
+        "fallback": true,
+        "width": 1440,
+        "client": 1440,
+        "figures": 3,
+        "images": 3
+      },
+      "backFocus": "work-target-edura"
+    }
+  ],
+  "errors": []
+}

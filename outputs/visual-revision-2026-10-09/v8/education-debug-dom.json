@@ -1,0 +1,38 @@
+[
+  {
+    "tag": "svg",
+    "id": "",
+    "cls": "pointer-events-none absolute inset-0 h-full w-full overflow-visible",
+    "rect": {
+      "x": 24,
+      "y": 262.09375,
+      "width": 314.625,
+      "height": 286.953125,
+      "top": 262.09375,
+      "right": 338.625,
+      "bottom": 549.046875,
+      "left": 24
+    },
+    "fill": "rgb(0, 0, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "highlight": "rgba(0, 0, 0, 0)"
+  },
+  {
+    "tag": "svg",
+    "id": "",
+    "cls": "pointer-events-none absolute inset-0 h-full w-full overflow-visible",
+    "rect": {
+      "x": 65.046875,
+      "y": 776.25,
+      "width": 300.953125,
+      "height": 286.953125,
+      "top": 776.25,
+      "right": 366,
+      "bottom": 1063.203125,
+      "left": 65.046875
+    },
+    "fill": "rgb(0, 0, 0)",
+    "background": "rgba(0, 0, 0, 0)",
+    "highlight": "rgba(0, 0, 0, 0)"
+  }
+]

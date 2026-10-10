@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "records": [
+    {
+      "name": "opening-portal-current",
+      "file": "outputs/visual-revision-2026-10-09/g1-g2-implementation/clips/opening-portal-current.mp4",
+      "source": "outputs/visual-revision-2026-10-09/g1-g2-implementation/clips/opening-portal-current.webm",
+      "sourceSha": "ea641394b7d92620b149684b9e435979e39593ffd6d9798c0ff97dce54ff9623",
+      "sha256": "ea61eaf1c54f64ab23545ca1ba3b1b2fab2455870a180a03cc7b1cf4ac173c66",
+      "bytes": 8122546
+    },
+    {
+      "name": "experience-departure-current",
+      "file": "outputs/visual-revision-2026-10-09/g1-g2-implementation/clips/experience-departure-current.mp4",
+      "source": "outputs/visual-revision-2026-10-09/g1-g2-implementation/clips/experience-departure-current.webm",
+      "sourceSha": "02e6a76422ec867a016e09296a083ae2f1025b46286d6f332b3bf2ae90c751c4",
+      "sha256": "de4d236968760b5e04341c2e33d71b474691be9bbe758e24454fcf67dc3adedd",
+      "bytes": 4436300
+    }
+  ],
+  "note": "H264 MP4 from original captured frames; WEBM retained. Native Edge GPU seek exposed PIPELINE_ERROR_DECODE for WEBM, so gallery uses MP4. Encoding FPS is not the R3F performance metric."
+}

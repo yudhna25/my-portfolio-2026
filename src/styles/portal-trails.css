@@ -1,0 +1,20 @@
+@layer components {
+  .portal-trails {
+    position: fixed;
+    inset: 0;
+    z-index: 22;
+    pointer-events: none;
+    overflow: clip;
+    color: var(--text-primary);
+  }
+  .portal-trails[hidden] { display: none; }
+  .portal-trails--nav { z-index: 71; }
+  .portal-trails--cursor { z-index: 9998; }
+  .portal-trail-copy { position: absolute; opacity: 0; transform-origin: center; }
+  .portal-trail-image { display: block; white-space: nowrap; overflow: visible; }
+  .portal-trail-year path { vector-effect: non-scaling-stroke; }
+  .portal-trail-year .hero-year-base { stroke: none; }
+  .portal-trail-ribbons { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .portal-trail-ribbon { fill: var(--text-primary); stroke: none; }
+  @media (prefers-reduced-motion: reduce) { .portal-trails { display: none; } }
+}

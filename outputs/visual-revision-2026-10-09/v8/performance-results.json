@@ -1,0 +1,66 @@
+{
+  "status": "pass",
+  "method": "One passive negative-priority R3F frame subscription; scene render passes counted separately; current production source/build. Not video FPS.",
+  "samples": [
+    {
+      "chapter": "education",
+      "frames": 408,
+      "passes": 816,
+      "elapsed": 2500.10000000149,
+      "fps": 163.1934722610123,
+      "dpr": 1,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "memory": {
+        "geometries": 9,
+        "textures": 25
+      },
+      "subscribers": 18,
+      "meteorLayers": [
+        1,
+        1,
+        1
+      ],
+      "diskLayers": 1025
+    },
+    {
+      "chapter": "experience",
+      "frames": 413,
+      "passes": 826,
+      "elapsed": 2501.5,
+      "fps": 165.1009394363382,
+      "dpr": 1,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "memory": {
+        "geometries": 11,
+        "textures": 25
+      },
+      "subscribers": 18,
+      "meteorLayers": [
+        1,
+        1,
+        1
+      ],
+      "diskLayers": 1025
+    },
+    {
+      "chapter": "works",
+      "frames": 414,
+      "passes": 828,
+      "elapsed": 2506.60000000149,
+      "fps": 165.1639671266871,
+      "dpr": 1,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "memory": {
+        "geometries": 20,
+        "textures": 28
+      },
+      "subscribers": 18,
+      "meteorLayers": [
+        1,
+        1,
+        1
+      ],
+      "diskLayers": 1025
+    }
+  ]
+}

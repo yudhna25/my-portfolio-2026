@@ -1,0 +1,16 @@
+{
+  "build": {
+    "command": "npm run build",
+    "exitCode": 0,
+    "viteSeconds": 5.05,
+    "modules": 1864,
+    "meteorChunkKB": 5.55,
+    "meteorGzipKB": 2.1,
+    "pwaEntries": 40,
+    "warning": "Existing chunks >500KB"
+  },
+  "lint": {
+    "command": "npx eslint src/3d/components/StoryMeteor.jsx src/3d/utils/storyMeteor.js src/components/sections/Experience.jsx",
+    "exitCode": 0
+  }
+}

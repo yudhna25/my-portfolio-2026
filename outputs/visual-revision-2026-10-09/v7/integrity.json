@@ -1,0 +1,171 @@
+{
+  "owned": [
+    {
+      "file": "src/components/Work.jsx",
+      "sha256": "60084ee8f360218999c2e3502d0ff0e99d7eb266122c7ee9e61c0e933659c38a"
+    },
+    {
+      "file": "src/3d/components/WorksConstellations.jsx",
+      "sha256": "7efcf2c89de494aa8f684135fb755112a54d137807272547035db1c4ebe3cab1"
+    },
+    {
+      "file": "src/3d/utils/worksOrbit.js",
+      "sha256": "d59fbd598f538def0612a9f2f886a8a313957f95e1cd8128d5124588d644ece8"
+    },
+    {
+      "file": "src/3d/data/worksConstellations.json",
+      "sha256": "9a15065151553f677e7c6dff6b946d5b4a95b3f36984da66a59a3d603be029d1"
+    }
+  ],
+  "protected": [
+    {
+      "file": "src/App.jsx",
+      "baseline": "55e36cfdd4c2065ac490822c9f6bfb7791bd0e5e0042039af1e5b9d5309c8017",
+      "current": "55e36cfdd4c2065ac490822c9f6bfb7791bd0e5e0042039af1e5b9d5309c8017",
+      "unchanged": true
+    },
+    {
+      "file": "src/3d/GalaxyScene.jsx",
+      "baseline": "3adecca63b3de4598619abc0267559bab132529951520db2129fcf9db1df92ab",
+      "current": "3adecca63b3de4598619abc0267559bab132529951520db2129fcf9db1df92ab",
+      "unchanged": true
+    },
+    {
+      "file": "src/3d/components/CameraRig.jsx",
+      "baseline": "fd01fb40484b7f14f4eb893d07cd486a68b41c1729e9a61193a9bc8de84d816f",
+      "current": "fd01fb40484b7f14f4eb893d07cd486a68b41c1729e9a61193a9bc8de84d816f",
+      "unchanged": true
+    },
+    {
+      "file": "src/3d/utils/cameraPath.js",
+      "baseline": "93b6ed5a8488aab7b840a4db5e5d75528aa467df9d40183245a6573e44c8e376",
+      "current": "93b6ed5a8488aab7b840a4db5e5d75528aa467df9d40183245a6573e44c8e376",
+      "unchanged": true
+    },
+    {
+      "file": "src/3d/utils/finale.js",
+      "baseline": "59e5f731f13eacb7f950739ef1e1ebfd98fa7fd3e9d9c0ba2d8693b10b2bbe1d",
+      "current": "59e5f731f13eacb7f950739ef1e1ebfd98fa7fd3e9d9c0ba2d8693b10b2bbe1d",
+      "unchanged": true
+    },
+    {
+      "file": "src/stores/useScrollStore.js",
+      "baseline": "0331d852280994a400c2bf9a649d54a8cf40fcd9287dfdfad7f4eb7efacd817b",
+      "current": "0331d852280994a400c2bf9a649d54a8cf40fcd9287dfdfad7f4eb7efacd817b",
+      "unchanged": true
+    },
+    {
+      "file": "src/stores/useRouteStore.js",
+      "baseline": "07598bd2c0d9adf00f0f832895f2124b79894fecc166970a842191ab34085b5d",
+      "current": "07598bd2c0d9adf00f0f832895f2124b79894fecc166970a842191ab34085b5d",
+      "unchanged": true
+    },
+    {
+      "file": "src/3d-lab.jsx",
+      "baseline": "bbdeb9fab645b45fcd9cd17d2b763ea1cc2ab8affc41f9b187512c7404145f2b",
+      "current": "bbdeb9fab645b45fcd9cd17d2b763ea1cc2ab8affc41f9b187512c7404145f2b",
+      "unchanged": true
+    },
+    {
+      "file": "package.json",
+      "baseline": "e21571db76af9cddd6d3296ac10464f7f6c8ba83eaff6234c0cfde9cce59b632",
+      "current": "e21571db76af9cddd6d3296ac10464f7f6c8ba83eaff6234c0cfde9cce59b632",
+      "unchanged": true
+    },
+    {
+      "file": "src/i18n/locales/vi.json",
+      "baseline": "502ee94030f9bcc04812bd600396c40006385111b798b8dceada4bb411c8c390",
+      "current": "502ee94030f9bcc04812bd600396c40006385111b798b8dceada4bb411c8c390",
+      "unchanged": true
+    },
+    {
+      "file": "src/i18n/locales/en.json",
+      "baseline": "d58585c97c57aca25c72aa75c323d117b94996946a63dc334a3496634bda6641",
+      "current": "d58585c97c57aca25c72aa75c323d117b94996946a63dc334a3496634bda6641",
+      "unchanged": true
+    },
+    {
+      "file": "src/3d/components/BlackHole.jsx",
+      "baseline": "b757f8ff046b2ead03e43806ff9c3e5d943268a9189fb290a64f627a5c78e1d3",
+      "current": "b757f8ff046b2ead03e43806ff9c3e5d943268a9189fb290a64f627a5c78e1d3",
+      "unchanged": true
+    },
+    {
+      "file": "src/3d/components/BlackHoleBloomMask.jsx",
+      "baseline": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c",
+      "current": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c",
+      "unchanged": true
+    },
+    {
+      "file": "src/3d/components/BlackHoleSystem.jsx",
+      "baseline": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+      "current": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643",
+      "unchanged": true
+    },
+    {
+      "file": "src/3d/shaders/blackHole.js",
+      "baseline": "ec58f14414ff84b3d50e71f55b03da2e89c1038abec0d2add272924bc52c4c2d",
+      "current": "ec58f14414ff84b3d50e71f55b03da2e89c1038abec0d2add272924bc52c4c2d",
+      "unchanged": true
+    },
+    {
+      "file": "public/constellations/ATTRIBUTION.md",
+      "baseline": "6de4459ce515f9bf4cd7687e48b8935fc997a6d9a7af2a5113b4df9b75ff10ee",
+      "current": "6de4459ce515f9bf4cd7687e48b8935fc997a6d9a7af2a5113b4df9b75ff10ee",
+      "unchanged": true
+    },
+    {
+      "file": "public/constellations/centaurus.svg",
+      "baseline": "717ce7d895f3408e95dd0b1e313fd5eeae24b706353154195d6df7346c60ab17",
+      "current": "717ce7d895f3408e95dd0b1e313fd5eeae24b706353154195d6df7346c60ab17",
+      "unchanged": true
+    },
+    {
+      "file": "public/constellations/cygnus.svg",
+      "baseline": "d27f0e299bffbc52a6f2ac7dab9a0926082eef373e8dfdf95dc9d71e79ffdc37",
+      "current": "d27f0e299bffbc52a6f2ac7dab9a0926082eef373e8dfdf95dc9d71e79ffdc37",
+      "unchanged": true
+    },
+    {
+      "file": "public/constellations/gemini.svg",
+      "baseline": "ea4ad1fbd4155d823b0890af68221cfe638f18f6e59b1d3303f07649c6b62273",
+      "current": "ea4ad1fbd4155d823b0890af68221cfe638f18f6e59b1d3303f07649c6b62273",
+      "unchanged": true
+    },
+    {
+      "file": "public/constellations/leo.svg",
+      "baseline": "fff19ee2dd7345c30fdc8a801f3b2a9a13bbafafd8e921d71ea04ed2fb75b829",
+      "current": "fff19ee2dd7345c30fdc8a801f3b2a9a13bbafafd8e921d71ea04ed2fb75b829",
+      "unchanged": true
+    },
+    {
+      "file": "public/constellations/manifest.json",
+      "baseline": "751e44452b742ac08c3a48bff7ecaf11a9f2ade5cec002ba36f2946c623e27d8",
+      "current": "751e44452b742ac08c3a48bff7ecaf11a9f2ade5cec002ba36f2946c623e27d8",
+      "unchanged": true
+    },
+    {
+      "file": "public/constellations/orion.svg",
+      "baseline": "7fea1ced47cfb586e03f03404e01f6a419066f597322dcf31b5b5e8ee1a2684f",
+      "current": "7fea1ced47cfb586e03f03404e01f6a419066f597322dcf31b5b5e8ee1a2684f",
+      "unchanged": true
+    },
+    {
+      "file": "public/constellations/scorpius.svg",
+      "baseline": "2b720432b3a77bb670b124c3dea66a1faa7fbbaf3150cab0f7f67071ed5032a5",
+      "current": "2b720432b3a77bb670b124c3dea66a1faa7fbbaf3150cab0f7f67071ed5032a5",
+      "unchanged": true
+    }
+  ],
+  "otherChanges": [
+    "src/3d/components/SkillsSymbols.jsx",
+    "src/3d/components/StoryMeteor.jsx",
+    "src/3d/components/SymbolStars.jsx",
+    "src/3d/data/symbolTargets.json",
+    "src/3d/utils/storyMeteor.js",
+    "src/3d/utils/symbolMorph.js",
+    "src/components/Education.jsx",
+    "src/data/education.js"
+  ],
+  "note": "Other changes are concurrent V5/V6; V7 did not write these files."
+}

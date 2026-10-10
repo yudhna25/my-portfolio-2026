@@ -1,0 +1,408 @@
+{
+  "status": "pass",
+  "url": "http://127.0.0.1:5211/outputs/visual-revision-2026-10-09/g1-g2-implementation/review.html",
+  "sourceBuild": "2026-10-10T06:06:06.028Z",
+  "htmlHash": "7053324ac15b2d4b007362f65adc0deb41cb5e6d568ee8cd881098c5aebd0c26",
+  "images": [
+    {
+      "src": "screenshots/hero-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "screenshots/portal-0.1-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "screenshots/portal-0.22-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "screenshots/portal-0.34-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "screenshots/meteor-0.15-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "screenshots/meteor-0.5-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "screenshots/meteor-0.92-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "screenshots/skills-regression-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "screenshots/education-regression-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "screenshots/works-regression-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "screenshots/hero-390.png",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "screenshots/portal-0.1-390.png",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "screenshots/portal-0.22-390.png",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "screenshots/portal-0.34-390.png",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "screenshots/meteor-0.15-390.png",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "screenshots/meteor-0.5-390.png",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "screenshots/meteor-0.92-390.png",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "screenshots/skills-regression-390.png",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "screenshots/education-regression-390.png",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "screenshots/works-regression-390.png",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "screenshots/hero-768.png",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "src": "screenshots/portal-0.1-768.png",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "src": "screenshots/portal-0.22-768.png",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "src": "screenshots/portal-0.34-768.png",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "src": "screenshots/meteor-0.15-768.png",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "src": "screenshots/meteor-0.5-768.png",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "src": "screenshots/meteor-0.92-768.png",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "src": "screenshots/skills-regression-768.png",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "src": "screenshots/education-regression-768.png",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "src": "screenshots/works-regression-768.png",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "src": "screenshots/hero-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/portal-0.1-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/portal-0.22-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/portal-0.34-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/meteor-0.15-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/meteor-0.5-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/meteor-0.92-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/skills-regression-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/education-regression-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/works-regression-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/hero-1920.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "src": "screenshots/portal-0.1-1920.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "src": "screenshots/portal-0.22-1920.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "src": "screenshots/portal-0.34-1920.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "src": "screenshots/meteor-0.15-1920.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "src": "screenshots/meteor-0.5-1920.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "src": "screenshots/meteor-0.92-1920.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "src": "screenshots/skills-regression-1920.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "src": "screenshots/education-regression-1920.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "src": "screenshots/works-regression-1920.png",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "src": "screenshots/hero-cycle-4-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "screenshots/hero-cycle-8-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "screenshots/hero-cycle-12-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "screenshots/hero-cycle-16-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "screenshots/hero-cycle-4-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/hero-cycle-8-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/hero-cycle-12-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/hero-cycle-16-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "intake/final-images/portal-0.05-forward-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "intake/final-images/portal-0.10-forward-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "intake/final-images/portal-0.16-forward-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "intake/final-images/portal-0.22-forward-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "intake/final-images/portal-0.28-forward-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "intake/final-images/portal-0.10-reverse-320.png",
+      "width": 320,
+      "height": 760
+    },
+    {
+      "src": "intake/final-images/portal-0.05-forward-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "intake/final-images/portal-0.10-forward-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "intake/final-images/portal-0.16-forward-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "intake/final-images/portal-0.22-forward-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "intake/final-images/portal-0.28-forward-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "intake/final-images/portal-0.10-reverse-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "comet/pixel-calibration/final-frozen-source/comet-390-company-1-lit.png",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "comet/pixel-calibration/final-frozen-source/comet-390-company-2-lit.png",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "comet/pixel-calibration/final-frozen-source/comet-390-company-3-lit.png",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "comet/pixel-calibration/final-frozen-source/comet-1440-company-1-lit.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "comet/pixel-calibration/final-frozen-source/comet-1440-company-2-lit.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "comet/pixel-calibration/final-frozen-source/comet-1440-company-3-lit.png",
+      "width": 1440,
+      "height": 900
+    }
+  ],
+  "videos": [
+    {
+      "src": "clips/opening-portal-current.mp4",
+      "duration": 9.633333,
+      "width": 1440,
+      "height": 900,
+      "seek": 2,
+      "error": null
+    },
+    {
+      "src": "clips/experience-departure-current.mp4",
+      "duration": 9.733333,
+      "width": 1440,
+      "height": 900,
+      "seek": 2,
+      "error": null
+    }
+  ],
+  "errors": [],
+  "failures": []
+}

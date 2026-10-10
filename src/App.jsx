@@ -7,6 +7,7 @@ import { useLoadingStore } from '@/stores/useLoadingStore';
 import { useScrollStore } from '@/stores/useScrollStore';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { portalProgress } from '@/3d/utils/portal';
+import { createWorksLayout } from '@/3d/utils/worksOrbit';
 import { EDURA_ROUTE, useRouteStore, returnToWorks } from '@/stores/useRouteStore';
 import Edura from '@/components/pages/Edura';
 
@@ -22,6 +23,7 @@ import Education from '@/components/Education';
 import Experience from '@/components/sections/Experience';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/Footer';
+import { ConstellationCredits } from '@/components/ui/ConstellationCredits';
 
 const SkillsSymbols = lazy(() => import('@/3d/components/SkillsSymbols').then((module) => ({ default: module.SkillsSymbols })));
 const StoryMeteor = lazy(() => import('@/3d/components/StoryMeteor').then((module) => ({ default: module.StoryMeteor })));
@@ -33,6 +35,7 @@ function Portfolio({ restore }) {
   const reading = useRef(null);
   const skillsStage = useRef(null);
   const meteorLayout = useRef(null);
+  const [worksLayout] = useState(() => ({ current: createWorksLayout() }));
   const captureMeteorLayout = useCallback(layout => { meteorLayout.current = layout; }, []);
   const [educationStages] = useState(() => ({ saigonUniversity: { current: null }, greenAcademy: { current: null }, arenaMultimedia: { current: null } }));
   const { i18n } = useTranslation();
@@ -69,11 +72,17 @@ function Portfolio({ restore }) {
         trigger.animation.progress(trigger.progress);
       }
       frame = requestAnimationFrame(() => {
-        if (!active) return;
-        const target = document.getElementById(restore.chapter === 'works' ? 'work-target-edura'
-          : restore.chapter === 'contact' ? 'transmission' : restore.chapter);
-        target?.setAttribute('tabindex', target.matches('button,a') ? '0' : '-1');
-        target?.focus({ preventScroll: true });
+        const focus = () => {
+          if (!active) return;
+          // Projection is published after the restored camera pose has rendered.
+          if (restore.chapter === 'works' && !useScrollStore.getState().sceneFallback
+            && !worksLayout.current.ready && tries++ < 120) { frame = requestAnimationFrame(focus); return; }
+          const target = document.getElementById(restore.chapter === 'works' ? 'work-target-edura'
+            : restore.chapter === 'contact' ? 'transmission' : restore.chapter);
+          target?.setAttribute('tabindex', target.matches('button,a') ? '0' : '-1');
+          target?.focus({ preventScroll: true });
+        };
+        focus();
       });
     };
     document.fonts.ready.then(() => { if (active) frame = requestAnimationFrame(settle); });
@@ -132,10 +141,10 @@ function Portfolio({ restore }) {
         <GalaxyScene story freezeAmbient={false}>{quality => <>
           <SkillsSymbols anchor={skillsStage} educationAnchors={educationStages} />
           <StoryMeteor layout={meteorLayout} frozen={reduced} />
-          <WorksConstellations frozen={reduced} quality={quality} />
+          <WorksConstellations frozen={reduced} quality={quality} layoutRef={worksLayout} />
         </>}</GalaxyScene>
       </Suspense>
-      <Hero active={!loading} />
+      <Hero active />
 
       <div id="smooth-wrapper" className="z-10">
         <main id="smooth-content" tabIndex={-1}>
@@ -148,7 +157,7 @@ function Portfolio({ restore }) {
             <div data-story-chapter="skills"><Skills stageRef={skillsStage} /></div>
             <div data-story-chapter="education"><Education stageRefs={educationStages} /></div>
             <div data-story-chapter="experience"><Experience onLayout={captureMeteorLayout} /></div>
-            <div data-story-chapter="works"><Work /></div>
+            <div data-story-chapter="works"><Work layoutRef={worksLayout} /></div>
             <div data-story-chapter="finale" aria-hidden="true" className={staticMotion ? 'min-h-0' : 'min-h-[225vh]'} />
             <div data-story-chapter="contact"><Contact /></div>
             <Footer />
@@ -188,6 +197,7 @@ export default function App() {
   return <>
     <Nav reader={reader} menuOpen={menuOpen} onMenuClick={() => setMenuOpen(true)} />
     <MenuOverlay key={route} reader={reader} open={menuOpen} onClose={() => setMenuOpen(false)} />
+    <ConstellationCredits />
     {reader ? <Edura onReturn={returnToWorks} /> : <Portfolio restore={restore} />}
   </>;
 }

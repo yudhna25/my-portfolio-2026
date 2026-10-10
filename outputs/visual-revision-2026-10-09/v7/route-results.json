@@ -1,0 +1,356 @@
+{
+  "scope": "Existing production fallback controls + R6.2 route; projected-figure wiring remains V8",
+  "cases": [
+    {
+      "width": 390,
+      "passed": true,
+      "before": {
+        "url": "/",
+        "chapter": "works",
+        "p": 0.02838370311342806,
+        "selection": null,
+        "orbit": {
+          "phase": 0,
+          "origin": 0,
+          "velocity": 0,
+          "latched": false,
+          "visited": true,
+          "captures": 0,
+          "resumePending": false
+        },
+        "y": 10847.000969,
+        "focus": "work-target-edura",
+        "canvas": 1,
+        "smoother": true,
+        "history": null
+      },
+      "reader": {
+        "url": "/projects/edura",
+        "chapter": "works",
+        "p": 0.02838370311342806,
+        "selection": null,
+        "orbit": {
+          "phase": 0,
+          "origin": 0,
+          "velocity": 0,
+          "latched": false,
+          "visited": true,
+          "captures": 0,
+          "resumePending": false
+        },
+        "y": 0,
+        "focus": "edura-title",
+        "canvas": 0,
+        "smoother": false,
+        "history": {
+          "stellar": {
+            "id": "e1d7b951-f337-4c29-9b6f-03d1c775878c",
+            "from": "66d45693-e92a-40e1-9adf-262947b7a003"
+          }
+        }
+      },
+      "after": {
+        "url": "/",
+        "chapter": "works",
+        "p": 0.028383692134613635,
+        "selection": "edura",
+        "orbit": {
+          "phase": 0,
+          "origin": 0,
+          "velocity": 0,
+          "latched": false,
+          "visited": true,
+          "captures": 0,
+          "resumePending": false
+        },
+        "y": 10847.000961587157,
+        "focus": "work-target-edura",
+        "canvas": 1,
+        "smoother": true,
+        "history": {
+          "stellar": {
+            "id": "66d45693-e92a-40e1-9adf-262947b7a003",
+            "snapshot": {
+              "y": 10847.000969,
+              "width": 390,
+              "height": 844,
+              "chapter": "works",
+              "p": 0.02838370311342806,
+              "scrollProgress": 0.727157,
+              "selection": "edura",
+              "orbit": {
+                "phase": 0,
+                "origin": 0,
+                "velocity": 0,
+                "latched": false,
+                "visited": true,
+                "captures": 0,
+                "resumePending": false
+              },
+              "pose": [
+                0,
+                4,
+                -160,
+                75.60000000000001,
+                0,
+                -210
+              ],
+              "focus": "work-case-edura"
+            }
+          }
+        }
+      }
+    },
+    {
+      "width": 1440,
+      "passed": true,
+      "before": {
+        "url": "/",
+        "chapter": "works",
+        "p": 0.00006276388888863949,
+        "selection": null,
+        "orbit": {
+          "phase": 0,
+          "origin": 0,
+          "velocity": 0,
+          "latched": false,
+          "visited": true,
+          "captures": 0,
+          "resumePending": false
+        },
+        "y": 9765.99663,
+        "focus": "work-target-edura",
+        "canvas": 1,
+        "smoother": true,
+        "history": null
+      },
+      "reader": {
+        "url": "/projects/edura",
+        "chapter": "works",
+        "p": 0.00006276388888863949,
+        "selection": null,
+        "orbit": {
+          "phase": 0,
+          "origin": 0,
+          "velocity": 0,
+          "latched": false,
+          "visited": true,
+          "captures": 0,
+          "resumePending": false
+        },
+        "y": 0,
+        "focus": "edura-title",
+        "canvas": 0,
+        "smoother": false,
+        "history": {
+          "stellar": {
+            "id": "74480f5e-db9d-43c1-b906-a88a2c8368b3",
+            "from": "ccb086f1-f404-44d5-90dc-66fb1fac64cb"
+          }
+        }
+      },
+      "after": {
+        "url": "/",
+        "chapter": "works",
+        "p": 0.00006276388888863949,
+        "selection": "edura",
+        "orbit": {
+          "phase": 0,
+          "origin": 0,
+          "velocity": 0,
+          "latched": false,
+          "visited": true,
+          "captures": 0,
+          "resumePending": false
+        },
+        "y": 9765.99663,
+        "focus": "work-target-edura",
+        "canvas": 1,
+        "smoother": true,
+        "history": {
+          "stellar": {
+            "id": "ccb086f1-f404-44d5-90dc-66fb1fac64cb",
+            "snapshot": {
+              "y": 9765.99663,
+              "width": 1440,
+              "height": 900,
+              "chapter": "works",
+              "p": 0.00006276388888863949,
+              "scrollProgress": 0.692133,
+              "selection": "edura",
+              "orbit": {
+                "phase": 0,
+                "origin": 0,
+                "velocity": 0,
+                "latched": false,
+                "visited": true,
+                "captures": 0,
+                "resumePending": false
+              },
+              "pose": [
+                0,
+                4,
+                -160,
+                120.96000000000001,
+                0,
+                -210
+              ],
+              "focus": "work-case-edura"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "diagnostic": {
+    "width": 1440,
+    "before": {
+      "url": "/",
+      "chapter": "works",
+      "p": 0.00006276388888863949,
+      "selection": null,
+      "orbit": {
+        "phase": 0,
+        "origin": 0,
+        "velocity": 0,
+        "latched": false,
+        "visited": true,
+        "captures": 0,
+        "resumePending": false
+      },
+      "y": 9765.99663,
+      "focus": "work-target-edura",
+      "canvas": 1,
+      "smoother": true,
+      "history": null
+    },
+    "reader": {
+      "url": "/projects/edura",
+      "chapter": "works",
+      "p": 0.00006276388888863949,
+      "selection": null,
+      "orbit": {
+        "phase": 0,
+        "origin": 0,
+        "velocity": 0,
+        "latched": false,
+        "visited": true,
+        "captures": 0,
+        "resumePending": false
+      },
+      "y": 0,
+      "focus": "edura-title",
+      "canvas": 0,
+      "smoother": false,
+      "history": {
+        "stellar": {
+          "id": "74480f5e-db9d-43c1-b906-a88a2c8368b3",
+          "from": "ccb086f1-f404-44d5-90dc-66fb1fac64cb"
+        }
+      }
+    },
+    "after": {
+      "url": "/",
+      "chapter": "works",
+      "p": 0.00006276388888863949,
+      "selection": "edura",
+      "orbit": {
+        "phase": 0,
+        "origin": 0,
+        "velocity": 0,
+        "latched": false,
+        "visited": true,
+        "captures": 0,
+        "resumePending": false
+      },
+      "y": 9765.99663,
+      "focus": "work-target-edura",
+      "canvas": 1,
+      "smoother": true,
+      "history": {
+        "stellar": {
+          "id": "ccb086f1-f404-44d5-90dc-66fb1fac64cb",
+          "snapshot": {
+            "y": 9765.99663,
+            "width": 1440,
+            "height": 900,
+            "chapter": "works",
+            "p": 0.00006276388888863949,
+            "scrollProgress": 0.692133,
+            "selection": "edura",
+            "orbit": {
+              "phase": 0,
+              "origin": 0,
+              "velocity": 0,
+              "latched": false,
+              "visited": true,
+              "captures": 0,
+              "resumePending": false
+            },
+            "pose": [
+              0,
+              4,
+              -160,
+              120.96000000000001,
+              0,
+              -210
+            ],
+            "focus": "work-case-edura"
+          }
+        }
+      }
+    },
+    "settled": {
+      "url": "/",
+      "chapter": "works",
+      "p": 0.00006510416666666667,
+      "selection": "edura",
+      "orbit": {
+        "phase": 0,
+        "origin": 0,
+        "velocity": 0,
+        "latched": false,
+        "visited": true,
+        "captures": 0,
+        "resumePending": false
+      },
+      "y": 9766,
+      "focus": "work-target-edura",
+      "canvas": 1,
+      "smoother": true,
+      "history": {
+        "stellar": {
+          "id": "ccb086f1-f404-44d5-90dc-66fb1fac64cb",
+          "snapshot": {
+            "y": 9765.99663,
+            "width": 1440,
+            "height": 900,
+            "chapter": "works",
+            "p": 0.00006276388888863949,
+            "scrollProgress": 0.692133,
+            "selection": "edura",
+            "orbit": {
+              "phase": 0,
+              "origin": 0,
+              "velocity": 0,
+              "latched": false,
+              "visited": true,
+              "captures": 0,
+              "resumePending": false
+            },
+            "pose": [
+              0,
+              4,
+              -160,
+              120.96000000000001,
+              0,
+              -210
+            ],
+            "focus": "work-case-edura"
+          }
+        }
+      }
+    }
+  }
+}

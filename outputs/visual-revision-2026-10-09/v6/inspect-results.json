@@ -1,0 +1,92 @@
+[
+  {
+    "chapter": "experience",
+    "p": 0.06883928348301849,
+    "viewport": [
+      1440,
+      900
+    ],
+    "visible": true,
+    "tail": 89.7025108344178,
+    "span": 0.06883928348301849,
+    "core": 16,
+    "halo": 80,
+    "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "glError": 0
+  },
+  {
+    "chapter": "experience",
+    "p": 0.2364927163917936,
+    "viewport": [
+      1440,
+      900
+    ],
+    "visible": true,
+    "tail": 604.8510304542988,
+    "span": 0.1484978275520263,
+    "core": 16,
+    "halo": 80,
+    "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "glError": 0
+  },
+  {
+    "chapter": "experience",
+    "p": 0.39283632739750507,
+    "viewport": [
+      1440,
+      900
+    ],
+    "visible": true,
+    "tail": 604.8556539521255,
+    "span": 0.26737961359937973,
+    "core": 16,
+    "halo": 80,
+    "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "glError": 0
+  },
+  {
+    "chapter": "experience",
+    "p": 0.04991882846001472,
+    "viewport": [
+      390,
+      844
+    ],
+    "visible": true,
+    "tail": 56.924643513713484,
+    "span": 0.04991882846001472,
+    "core": 10,
+    "halo": 52,
+    "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "glError": 0
+  },
+  {
+    "chapter": "experience",
+    "p": 0.24508432785944434,
+    "viewport": [
+      390,
+      844
+    ],
+    "visible": true,
+    "tail": 163.79027467947174,
+    "span": 0.22890584678821013,
+    "core": 10,
+    "halo": 52,
+    "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "glError": 0
+  },
+  {
+    "chapter": "experience",
+    "p": 0.4266650631564075,
+    "viewport": [
+      390,
+      844
+    ],
+    "visible": true,
+    "tail": 163.80970020336167,
+    "span": 0.22598331283928802,
+    "core": 10,
+    "halo": 52,
+    "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "glError": 0
+  }
+]

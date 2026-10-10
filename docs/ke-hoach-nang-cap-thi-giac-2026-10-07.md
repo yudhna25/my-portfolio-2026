@@ -1,5 +1,7 @@
 # Stellar Odyssey — Kế hoạch nâng cấp thị giác
 
+> **Cập nhật triển khai 10/10/2026:** P1–P4 đã hoàn tất code và kiểm kỹ thuật/local theo lệnh “bắt đầu kế hoạch tinh chỉnh g1-g2”. Opening tâm→O, năm lớn/contour chậm dài, intake chuỗi+dải và comet lớn/S liên tục đã có trong bản tích hợp. **G1/G2 vẫn chờ người dùng duyệt visual lại; V9/G3 chưa bắt đầu.** Bộ V0–V11 trong [prompts.md](../prompts.md) và [phương án G1/G2](ke-hoach-tinh-chinh-g1-g2-2026-10-10.md) ưu tiên phạm vi hiện tại. [Verification mới](../outputs/visual-revision-2026-10-09/g1-g2-implementation/verification.md) · [Gallery](../outputs/visual-revision-2026-10-09/g1-g2-implementation/review.html). Nội dung 07/10 dưới đây là lịch sử; không chạy R7.2 cũ hoặc viết lại Contact/Footer.
+
 Ngày chốt: **07/10/2026**. Nguồn quyết định: phỏng vấn `grill-me`, Q1–Q23 và các trả lời cuối của người dùng.
 
 **Trạng thái: đã thống nhất hướng thiết kế; chưa triển khai code ứng dụng.** Tài liệu này là kế hoạch thực hiện, không phải báo cáo tính năng đã hoàn thành. Việc tải tài liệu EDURA được người dùng cho phép riêng. Các thông số nhỏ sẽ được tinh chỉnh trong prototype; các quyết định đã chốt dưới đây phải được giữ.

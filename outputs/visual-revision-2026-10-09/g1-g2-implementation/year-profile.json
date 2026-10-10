@@ -1,0 +1,20 @@
+[
+  {
+    "id": "baseline",
+    "frames": 45,
+    "elapsed": 1814.800000000745,
+    "fps": 24.794754531925044
+  },
+  {
+    "id": "hero-year-twinkle",
+    "frames": 46,
+    "elapsed": 1814.699999999255,
+    "fps": 25.348542458819026
+  },
+  {
+    "id": "hero-year-meteors",
+    "frames": 285,
+    "elapsed": 1817,
+    "fps": 156.85195376995046
+  }
+]

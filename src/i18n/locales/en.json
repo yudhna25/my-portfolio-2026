@@ -162,11 +162,12 @@
     "mapNote": "Three overlapping paths of study, shaping one design practice.",
     "interactionHint": "Hover or use Tab to awaken a constellation. Tap to select; tap the background or press Escape to clear.",
     "clearSelection": "Return to the star field",
-    "constellations": {
-      "saigonUniversity": "Circinus",
-      "greenAcademy": "Telescopium",
-      "arenaMultimedia": "Pictor"
-    }
+    "constellationNames": {
+      "Orion": "Orion",
+      "Scorpius": "Scorpius",
+      "Leo": "Leo"
+    },
+    "figureLabel": "{{school}} — {{constellation}}"
   },
   "experience": {
     "sectionLabel": "Voyage Log",
@@ -353,5 +354,17 @@
         "name": "Proposed solution"
       }
     }
+  },
+  "constellationCredits": {
+    "label": "Constellation credits",
+    "title": "Sources & licenses",
+    "close": "Close constellation credits",
+    "illustrations": "Original illustrations:",
+    "adaptation": "Monochrome adaptation, vector tracing and three-star calibration: Trần Vũ Anh Duy portfolio / Codex. Modified works distributed under Free Art License 1.3.",
+    "source": "Pinned Stellarium source",
+    "patterns": "Line patterns: Stellarium team, licensed under",
+    "catalog": "Star positions:",
+    "attribution": "Full attribution",
+    "manifest": "Asset manifest"
   }
 }

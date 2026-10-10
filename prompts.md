@@ -1,5 +1,11 @@
 # Bộ prompts chỉnh visual Stellar Odyssey — V0–V11
 
+> **Cập nhật triển khai 10/10/2026:** P1–P4 đã hoàn tất code và kiểm kỹ thuật/local theo lệnh “bắt đầu kế hoạch tinh chỉnh g1-g2”. Opening tâm→O, năm lớn/contour chậm dài, intake chuỗi+dải và comet lớn/S liên tục đã có trong bản tích hợp. **G1/G2 vẫn chờ người dùng duyệt visual lại; V9/G3 chưa bắt đầu.** [Verification](outputs/visual-revision-2026-10-09/g1-g2-implementation/verification.md) · [Gallery](outputs/visual-revision-2026-10-09/g1-g2-implementation/review.html).
+
+> **Lịch sử phiên Q12 — G1 mở lại, G2 yêu cầu cải thiện, chưa duyệt.** Người dùng yêu cầu chỉ lên phương án trước khi sửa code. Đọc [kế hoạch tinh chỉnh G1/G2](docs/ke-hoach-tinh-chinh-g1-g2-2026-10-10.md): Q1–Q11 đã chọn, Q12 đã xác nhận **“Chốt phương án, chưa sửa code”**. V8 đã kiểm kỹ thuật/local; kết quả đó không thay duyệt thẩm mỹ. **V9/G3 chưa bắt đầu và phải chờ G1/G2 được duyệt lại trên bản sửa.**
+>
+> Trong phạm vi mới, không khôi phục viền cố định 2026 theo V1: năm lớn hơn, meteor contour 10–14s/vòng, đuôi 30–40%. Opening nối vòng sáng từ tâm màn hình vào O. Intake V3 cần chuỗi sau ảnh + dải xoắn, từng mục Nav nhập phễu chung. Experience V6 chọn comet rất lớn (lõi nhìn thấy 48–56px, halo 200–240px desktop), đường S liên tục và đuôi đã dài từ entry; hạn chế giữ nguyên curve/birth cũ được thay thế đúng phạm vi này. Giữ sao intake, camera/producer đơn nhất, BH sắc nét, V4/Skills/Education/Works/EDURA và phần khác không được yêu cầu sửa. Các prompt bên dưới là lịch sử/spec gốc 09/10; không thực thi lại hoặc tự mở worker trong phiên lập phương án.
+
 Ngày soạn: **09/10/2026**. Dự án: **Portfolio Trần Vũ Anh Duy**.
 
 **12 nhiệm vụ cho AI Agent, chưa thực thi trong lần soạn tài liệu này.** Bộ prompts này cụ thể hóa bảy yêu cầu visual đã thống nhất, dựa trên kiến trúc hiện có và `outputs/prompts-redesign-r0-r8.md`. Không chạy lại toàn bộ R0–R8.

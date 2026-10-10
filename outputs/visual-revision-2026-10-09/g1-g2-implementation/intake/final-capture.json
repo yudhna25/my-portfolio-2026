@@ -1,0 +1,3605 @@
+{
+  "base": "http://127.0.0.1:5212",
+  "started": "2026-10-10T06:16:27.102Z",
+  "build": "4afce68a6b04c44ee4301ec1d259755a89fd9032d2eabe59ee51f9e7c8a753ad",
+  "cases": [
+    {
+      "width": 320,
+      "height": 760,
+      "direction": "forward",
+      "requested": 0.05,
+      "actual": 0.05,
+      "file": "outputs/visual-revision-2026-10-09/g1-g2-implementation/intake/final-images/portal-0.05-forward-320.png",
+      "sha256": "9c772273faa4a64d8f78f6eb551d10acc94ea9ca9849ab48671c786c95b84a86",
+      "chapter": "portal",
+      "manual": false,
+      "overflow": 0,
+      "canvas": 1,
+      "glError": 0,
+      "anchor": {
+        "x": 208.453125,
+        "y": 316.015625,
+        "width": 28.46875,
+        "height": 24.546875,
+        "opacity": 1,
+        "transform": "none",
+        "inert": false
+      },
+      "resources": {
+        "geometries": 5,
+        "textures": 1
+      },
+      "copies": {
+        "count": 270,
+        "focusable": 0,
+        "layers": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.05,
+            "sources": 9,
+            "declared": 54,
+            "actual": 54,
+            "ribbons": 9,
+            "commonRibbons": 0,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(7.76192px, 11.7288px) rotate(0deg) scale(0.958029, 0.958029)",
+                "opacity": 1
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(20.6911px, 36.3981px) rotate(0deg) scale(0.887307, 0.887307)",
+                "opacity": 0.0337038
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(42.8961px, 77.6165px) rotate(1.67257deg) scale(0.817313, 0.817313)",
+                "opacity": 0.0263926
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(85.6441px, 125.234px) rotate(13.2181deg) scale(0.748755, 0.748093)",
+                "opacity": 0.0186984
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(138.869px, 170.164px) rotate(29.7748deg) scale(0.601344, 0.678922)",
+                "opacity": 0.0103736
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(184.149px, 215.712px) rotate(52.3003deg) scale(0.360849, 0.599673)",
+                "opacity": 0
+              },
+              {
+                "transform": "",
+                "opacity": 0
+              },
+              {
+                "transform": "",
+                "opacity": 0
+              }
+            ]
+          },
+          {
+            "className": "portal-trails ",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.05,
+            "sources": 36,
+            "declared": 216,
+            "actual": 216,
+            "ribbons": 36,
+            "commonRibbons": 1,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(9.05253px, 1.69697px) rotate(0deg) scale(0.958029, 0.958029)",
+                "opacity": 1
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(25.2915px, 3.52084px) rotate(0deg) scale(0.887307, 0.887307)",
+                "opacity": 0.0337038
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(48.2197px, -3.26069px) rotate(-0.782505deg) scale(0.817313, 0.817313)",
+                "opacity": 0.0263926
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(84.8215px, -22.4443px) rotate(-7.99895deg) scale(0.748755, 0.748093)",
+                "opacity": 0.0186984
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(138.77px, -39.0726px) rotate(-4.59676deg) scale(0.649297, 0.678922)",
+                "opacity": 0.0103736
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(196.872px, -28.1316px) rotate(29.8533deg) scale(0.458775, 0.599673)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(5.07804px, 1.64086px) rotate(0deg) scale(0.958737, 0.958737)",
+                "opacity": 1
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(13.4635px, 3.95361px) rotate(0deg) scale(0.887963, 0.887963)",
+                "opacity": 0.0337038
+              }
+            ]
+          }
+        ]
+      },
+      "decoration": {
+        "nav": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "backdrop": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "absorbing": "true",
+          "inert": true
+        },
+        "pools": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 222.496px 328.331px, transparent 11.6179px, black 13.855px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 54,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(7.76192px, 11.7288px) rotate(0deg) scale(0.958029, 0.958029)",
+                "opacity": "1"
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1.21469px, 10.3687px) rotate(0deg) scale(0.962905, 0.962905)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-2.21636px, 10.1789px) rotate(0deg) scale(0.963585, 0.963585)",
+                "opacity": "1"
+              }
+            ],
+            "common": null,
+            "ids": 0,
+            "handlers": 0
+          },
+          {
+            "className": "portal-trails ",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 222.496px 328.331px, transparent 11.6179px, black 13.855px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 216,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(9.05253px, 1.69697px) rotate(0deg) scale(0.958029, 0.958029)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(5.07804px, 1.64086px) rotate(0deg) scale(0.958737, 0.958737)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1.2844px, 1.63995px) rotate(0deg) scale(0.959441, 0.959441)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-2.29717px, 1.58509px) rotate(0deg) scale(0.960142, 0.960142)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(9.53382px, 0.000981373px) rotate(0deg) scale(0.960839, 0.960839)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(8.05781px, 0.000964049px) rotate(0deg) scale(0.961531, 0.961531)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(6.6012px, 0.000946825px) rotate(0deg) scale(0.96222, 0.96222)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(5.29603px, 0.000929704px) rotate(0deg) scale(0.962905, 0.962905)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(4.0934px, 0.000912685px) rotate(0deg) scale(0.963585, 0.963585)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(2.83272px, 0.000895771px) rotate(0deg) scale(0.964261, 0.964261)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1.62305px, 0.000878963px) rotate(0deg) scale(0.964933, 0.964933)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(0.870095px, 0.000862261px) rotate(0deg) scale(0.965601, 0.965601)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(7.83005px, -1.71699px) rotate(0deg) scale(0.966265, 0.966265)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(6.43237px, -1.68352px) rotate(0deg) scale(0.966924, 0.966924)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(5.24504px, -1.65027px) rotate(0deg) scale(0.967579, 0.967579)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(3.91081px, -1.61725px) rotate(0deg) scale(0.968229, 0.968229)",
+                "opacity": "1"
+              }
+            ],
+            "common": "M265.04,281.62L274.72,301.65L276.61,323.21L270.83,343.30L258.20,359.06L241.07,367.88L223.00,368.68L207.58,362.29L197.38,351.12L193.33,338.29L194.74,326.61L199.86,317.95L206.65,312.94L213.37,311.22L218.91,311.91L222.82,313.99L225.15,316.63L226.19,319.28L226.28,321.66L225.77,323.69L224.92,325.34L223.98,326.65L223.12,327.65L222.54,328.29L222.54,328.29L223.17,327.70L224.13,326.78L225.24,325.57L226.34,323.96L227.21,321.84L227.47,319.12L226.66,315.86L224.26,312.41L219.85,309.46L213.34,308.06L205.21,309.48L196.75,314.88L190.03,324.81L187.60,338.62L191.66,354.18L203.23,368.13L221.38,376.62L243.16,376.60L264.28,366.84L280.34,348.44L288.03,324.40L285.97,298.58L274.65,274.71Z",
+            "ids": 0,
+            "handlers": 0
+          }
+        ]
+      }
+    },
+    {
+      "width": 320,
+      "height": 760,
+      "direction": "forward",
+      "requested": 0.1,
+      "actual": 0.1,
+      "file": "outputs/visual-revision-2026-10-09/g1-g2-implementation/intake/final-images/portal-0.10-forward-320.png",
+      "sha256": "0b83861559a1e4030ada358ff61b5eb249a2a9ba1e03bf7c4b9093f326745fdb",
+      "chapter": "portal",
+      "manual": false,
+      "overflow": 0,
+      "canvas": 1,
+      "glError": 0,
+      "anchor": {
+        "x": 208.453125,
+        "y": 316.015625,
+        "width": 28.46875,
+        "height": 24.546875,
+        "opacity": 1,
+        "transform": "none",
+        "inert": false
+      },
+      "resources": {
+        "geometries": 5,
+        "textures": 1
+      },
+      "copies": {
+        "count": 270,
+        "focusable": 0,
+        "layers": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.1,
+            "sources": 9,
+            "declared": 54,
+            "actual": 54,
+            "ribbons": 9,
+            "commonRibbons": 0,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(29.2883px, 58.5993px) rotate(0.0956596deg) scale(0.847237, 0.847237)",
+                "opacity": 0.997188
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(134.007px, 171.922px) rotate(30.357deg) scale(0.599277, 0.678518)",
+                "opacity": 0.0913047
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(201.093px, 292.619px) rotate(99.6924deg) scale(0.188106, 0.459507)",
+                "opacity": 0.0714982
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(115.345px, 321.424px) rotate(236.458deg) scale(0.118669, 0.222421)",
+                "opacity": 0.0367032
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(135.281px, 275.65px) rotate(369.029deg) scale(0.0612087, 0.0870711)",
+                "opacity": 0.00525416
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(145.013px, 289.807px) rotate(476.794deg) scale(0.0588145, 0.0297873)",
+                "opacity": 0
+              },
+              {
+                "transform": "",
+                "opacity": 0
+              },
+              {
+                "transform": "",
+                "opacity": 0
+              }
+            ]
+          },
+          {
+            "className": "portal-trails ",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.1,
+            "sources": 36,
+            "declared": 216,
+            "actual": 216,
+            "ribbons": 36,
+            "commonRibbons": 1,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(35.6728px, 1.83748px) rotate(-0.0259834deg) scale(0.847237, 0.847237)",
+                "opacity": 0.997188
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(134.033px, -36.9987px) rotate(-4.69278deg) scale(0.64439, 0.678518)",
+                "opacity": 0.0913047
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(225.511px, 42.079px) rotate(98.6571deg) scale(0.299328, 0.459507)",
+                "opacity": 0.0714982
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(139.869px, 70.9606px) rotate(236.458deg) scale(0.189745, 0.222421)",
+                "opacity": 0.0367032
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(159.804px, 25.1872px) rotate(369.029deg) scale(0.0978691, 0.0870711)",
+                "opacity": 0.00525416
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(169.537px, 39.3437px) rotate(476.794deg) scale(0.094041, 0.0297873)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(16.8855px, 3.85641px) rotate(-0.0253005deg) scale(0.847677, 0.847677)",
+                "opacity": 0.997406
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(69.5223px, -26.33px) rotate(-10.5667deg) scale(0.573604, 0.678892)",
+                "opacity": 0.0913047
+              }
+            ]
+          }
+        ]
+      },
+      "decoration": {
+        "nav": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "backdrop": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "absorbing": "true",
+          "inert": true
+        },
+        "pools": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 216.552px 329.631px, transparent 12.5431px, black 14.7991px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 54,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(29.2883px, 58.5993px) rotate(0.0956596deg) scale(0.847237, 0.847237)",
+                "opacity": "0.997188"
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-4.59332px, 54.9471px) rotate(0.0618682deg) scale(0.851421, 0.851421)",
+                "opacity": "0.998833"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-24.4959px, 52.3158px) rotate(0.0617716deg) scale(0.852207, 0.852207)",
+                "opacity": "0.999045"
+              }
+            ],
+            "common": null,
+            "ids": 0,
+            "handlers": 0
+          },
+          {
+            "className": "portal-trails ",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 216.552px 329.631px, transparent 12.5431px, black 14.7991px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 216,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(35.6728px, 1.83748px) rotate(-0.0259834deg) scale(0.847237, 0.847237)",
+                "opacity": "0.997188"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(16.8855px, 3.85641px) rotate(-0.0253005deg) scale(0.847677, 0.847677)",
+                "opacity": "0.997406"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(0.784246px, 3.33529px) rotate(0.289993deg) scale(0.848174, 0.848174)",
+                "opacity": "0.997639"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-10.8425px, 0.974512px) rotate(0.251002deg) scale(0.848725, 0.848725)",
+                "opacity": "0.99788"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(38.4416px, -8.26105px) rotate(-0.0367532deg) scale(0.849327, 0.849327)",
+                "opacity": "0.998125"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(31.7127px, -6.95938px) rotate(-0.0343043deg) scale(0.849979, 0.849979)",
+                "opacity": "0.998369"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(24.7125px, -5.68315px) rotate(-0.0333026deg) scale(0.850677, 0.850677)",
+                "opacity": "0.998606"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(18.3541px, -4.53932px) rotate(-0.0335714deg) scale(0.851421, 0.851421)",
+                "opacity": "0.998833"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(12.4072px, -3.49189px) rotate(-0.0366148deg) scale(0.852207, 0.852207)",
+                "opacity": "0.999045"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(6.03749px, -2.41902px) rotate(-0.0456033deg) scale(0.853034, 0.853034)",
+                "opacity": "0.999239"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(0.0241285px, -1.45002px) rotate(-0.0472389deg) scale(0.853899, 0.853899)",
+                "opacity": "0.999413"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-3.79865px, -1.05528px) rotate(-0.0379221deg) scale(0.8548, 0.8548)",
+                "opacity": "0.999564"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(31.5418px, -17.4631px) rotate(0.0495356deg) scale(0.855735, 0.855735)",
+                "opacity": "0.999691"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(24.3882px, -15.7934px) rotate(0.0321168deg) scale(0.856701, 0.856701)",
+                "opacity": "0.999794"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(18.2923px, -14.2651px) rotate(0.0190497deg) scale(0.857697, 0.857697)",
+                "opacity": "0.999873"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(11.4577px, -12.4529px) rotate(0.00981692deg) scale(0.858721, 0.858721)",
+                "opacity": "0.99993"
+              }
+            ],
+            "common": "M259.05,283.08L268.74,302.99L270.66,324.52L264.88,344.60L252.26,360.36L235.12,369.18L217.05,369.98L201.64,363.59L191.44,352.42L187.39,339.59L188.79,327.91L193.92,319.25L200.71,314.24L207.42,312.52L212.96,313.21L216.88,315.29L219.21,317.93L220.24,320.58L220.34,322.96L219.82,324.99L218.98,326.64L218.03,327.95L217.18,328.95L216.60,329.59L216.60,329.59L217.23,329.00L218.18,328.08L219.29,326.87L220.40,325.26L221.26,323.14L221.53,320.42L220.72,317.16L218.31,313.71L213.90,310.76L207.39,309.36L199.26,310.78L190.80,316.18L184.09,326.11L181.65,339.92L185.72,355.48L197.29,369.43L215.43,377.92L237.21,377.90L258.33,368.14L274.40,349.74L282.08,325.70L279.99,299.90L268.64,276.13Z",
+            "ids": 0,
+            "handlers": 0
+          }
+        ]
+      }
+    },
+    {
+      "width": 320,
+      "height": 760,
+      "direction": "forward",
+      "requested": 0.16,
+      "actual": 0.15986842105263158,
+      "file": "outputs/visual-revision-2026-10-09/g1-g2-implementation/intake/final-images/portal-0.16-forward-320.png",
+      "sha256": "fdeee9c07eb3812de1465785d652510bbd97b697495b3d34f29b98a31dc16156",
+      "chapter": "portal",
+      "manual": false,
+      "overflow": 0,
+      "canvas": 1,
+      "glError": 0,
+      "anchor": {
+        "x": 208.453125,
+        "y": 316.015625,
+        "width": 28.46875,
+        "height": 24.546875,
+        "opacity": 1,
+        "transform": "none",
+        "inert": false
+      },
+      "resources": {
+        "geometries": 5,
+        "textures": 1
+      },
+      "copies": {
+        "count": 270,
+        "focusable": 0,
+        "layers": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.15986842105263158,
+            "sources": 9,
+            "declared": 54,
+            "actual": 54,
+            "ribbons": 9,
+            "commonRibbons": 0,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(136.779px, 190.21px) rotate(37.9665deg) scale(0.514659, 0.654228)",
+                "opacity": 0.0126006
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(186.212px, 296.665px) rotate(100.387deg) scale(0.187453, 0.457907)",
+                "opacity": 0.0992676
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(108.425px, 333.224px) rotate(219.079deg) scale(0.126434, 0.247238)",
+                "opacity": 0.0610237
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(110.44px, 280.148px) rotate(337.928deg) scale(0.074493, 0.110161)",
+                "opacity": 0.0171264
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(131.128px, 288.1px) rotate(442.082deg) scale(0.0588145, 0.0483938)",
+                "opacity": 0.000153108
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(127.551px, 296.607px) rotate(494.309deg) scale(0.0219227, 0.00796561)",
+                "opacity": 0
+              },
+              {
+                "transform": "",
+                "opacity": 0
+              },
+              {
+                "transform": "",
+                "opacity": 0
+              }
+            ]
+          },
+          {
+            "className": "portal-trails ",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.15986842105263158,
+            "sources": 36,
+            "declared": 216,
+            "actual": 216,
+            "ribbons": 36,
+            "commonRibbons": 1,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(140.005px, -32.4853px) rotate(2.70271deg) scale(0.571931, 0.654228)",
+                "opacity": 0.0126006
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(210.637px, 46.1334px) rotate(99.3838deg) scale(0.298421, 0.457907)",
+                "opacity": 0.0992676
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(132.949px, 82.7608px) rotate(219.079deg) scale(0.20216, 0.247238)",
+                "opacity": 0.0610237
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(134.964px, 29.6854px) rotate(337.928deg) scale(0.11911, 0.110161)",
+                "opacity": 0.0171264
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(155.652px, 37.6371px) rotate(442.082deg) scale(0.094041, 0.0483938)",
+                "opacity": 0.000153108
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(152.074px, 46.1439px) rotate(494.309deg) scale(0.0219227, 0.00796561)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(78.1343px, -24.0671px) rotate(1.42294deg) scale(0.485818, 0.643848)",
+                "opacity": 0.00375811
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(135.7px, 51.2137px) rotate(104.872deg) scale(0.265825, 0.44658)",
+                "opacity": 0.0992676
+              }
+            ]
+          }
+        ]
+      },
+      "decoration": {
+        "nav": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "backdrop": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "absorbing": "true",
+          "inert": true
+        },
+        "pools": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 201.818px 332.854px, transparent 17.7717px, black 20.1344px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 54,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(136.779px, 190.21px) rotate(37.9665deg) scale(0.514659, 0.654228)",
+                "opacity": "0.0126006"
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(52.4063px, 235.031px) rotate(61.2282deg) scale(0.360836, 0.576974)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-17.8295px, 241.428px) rotate(66.3566deg) scale(0.522619, 0.565163)",
+                "opacity": "0"
+              }
+            ],
+            "common": null,
+            "ids": 0,
+            "handlers": 0
+          },
+          {
+            "className": "portal-trails ",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 201.818px 332.854px, transparent 17.7717px, black 20.1344px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 216,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(140.005px, -32.4853px) rotate(2.70271deg) scale(0.571931, 0.654228)",
+                "opacity": "0.0126006"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(78.1343px, -24.0671px) rotate(1.42294deg) scale(0.485818, 0.643848)",
+                "opacity": "0.00375811"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(23.5209px, -16.1425px) rotate(7.62871deg) scale(0.473099, 0.633243)",
+                "opacity": "0.000426448"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-30.4649px, -13.858px) rotate(32.6465deg) scale(0.465917, 0.622411)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(188.874px, -70.6748px) rotate(20.6511deg) scale(0.707746, 0.611357)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(168.397px, -64.6601px) rotate(24.8678deg) scale(0.71107, 0.60009)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(146.993px, -59.8483px) rotate(29.2433deg) scale(0.714994, 0.588623)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(127.366px, -55.0669px) rotate(34.2187deg) scale(0.719439, 0.576974)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(108.595px, -50.1322px) rotate(39.6978deg) scale(0.724327, 0.565163)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(87.1357px, -44.8487px) rotate(45.481deg) scale(0.729578, 0.553213)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(64.6081px, -38.2901px) rotate(51.8621deg) scale(0.735113, 0.541148)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(53.2301px, -30.6248px) rotate(61.7974deg) scale(0.740854, 0.528994)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(220.801px, -81.8895px) rotate(429.907deg) scale(0.605256, 0.516778)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(192.897px, -75.142px) rotate(435.43deg) scale(0.752657, 0.504529)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(168.319px, -68.3896px) rotate(441.312deg) scale(0.743596, 0.492273)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(137.25px, -61.4483px) rotate(447.234deg) scale(0.722447, 0.480039)",
+                "opacity": "0"
+              }
+            ],
+            "common": "M244.23,286.68L253.94,306.33L255.92,327.75L250.15,347.83L237.52,363.58L220.39,372.41L202.32,373.20L186.90,366.82L176.71,355.65L172.65,342.81L174.06,331.14L179.18,322.47L185.97,317.46L192.69,315.75L198.23,316.44L202.15,318.52L204.48,321.15L205.51,323.80L205.60,326.18L205.09,328.21L204.24,329.86L203.30,331.17L202.45,332.17L201.86,332.81L201.86,332.81L202.49,332.22L203.45,331.31L204.56,330.09L205.67,328.48L206.53,326.36L206.79,323.64L205.98,320.38L203.58,316.93L199.17,313.98L192.66,312.58L184.53,314.00L176.07,319.41L169.36,329.33L166.92,343.14L170.98,358.71L182.55,372.65L200.70,381.14L222.48,381.13L243.60,371.36L259.67,352.96L267.33,328.92L265.17,303.19L253.76,279.65Z",
+            "ids": 0,
+            "handlers": 0
+          }
+        ]
+      }
+    },
+    {
+      "width": 320,
+      "height": 760,
+      "direction": "forward",
+      "requested": 0.22,
+      "actual": 0.22006578947368421,
+      "file": "outputs/visual-revision-2026-10-09/g1-g2-implementation/intake/final-images/portal-0.22-forward-320.png",
+      "sha256": "a82317c52170a0e655f02d0554c863d15a701adc6df09796b795958573ab78d0",
+      "chapter": "portal",
+      "manual": false,
+      "overflow": 0,
+      "canvas": 1,
+      "glError": 0,
+      "anchor": {
+        "x": 208.453125,
+        "y": 316.015625,
+        "width": 28.46875,
+        "height": 24.546875,
+        "opacity": 1,
+        "transform": "none",
+        "inert": false
+      },
+      "resources": {
+        "geometries": 5,
+        "textures": 1
+      },
+      "copies": {
+        "count": 270,
+        "focusable": 0,
+        "layers": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.22006578947368421,
+            "sources": 9,
+            "declared": 54,
+            "actual": 54,
+            "ribbons": 9,
+            "commonRibbons": 0,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(132.067px, 344.176px) rotate(162.019deg) scale(0.153038, 0.339374)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(78.854px, 321.246px) rotate(249.573deg) scale(0.112873, 0.204741)",
+                "opacity": 0.0671006
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(90.6612px, 284.899px) rotate(332.827deg) scale(0.0766909, 0.114443)",
+                "opacity": 0.0258365
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(110.7px, 287.021px) rotate(408.133deg) scale(0.0588145, 0.064497)",
+                "opacity": 0.00347261
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(112.546px, 296.368px) rotate(472.683deg) scale(0.0588145, 0.0325032)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(109.249px, 300.842px) rotate(494.75deg) scale(0.0143305, 0.00535178)",
+                "opacity": 0
+              },
+              {
+                "transform": "",
+                "opacity": 0
+              },
+              {
+                "transform": "",
+                "opacity": 0
+              }
+            ]
+          },
+          {
+            "className": "portal-trails ",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.22006578947368421,
+            "sources": 36,
+            "declared": 216,
+            "actual": 216,
+            "ribbons": 36,
+            "commonRibbons": 1,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(156.59px, 93.7126px) rotate(162.019deg) scale(0.244698, 0.339374)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(103.378px, 70.7832px) rotate(249.573deg) scale(0.180478, 0.204741)",
+                "opacity": 0.0671006
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(115.185px, 34.4358px) rotate(332.827deg) scale(0.122624, 0.114443)",
+                "opacity": 0.0258365
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(135.223px, 36.5578px) rotate(408.133deg) scale(0.094041, 0.064497)",
+                "opacity": 0.00347261
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(137.069px, 45.9048px) rotate(472.683deg) scale(0.094041, 0.0325032)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(133.773px, 50.3788px) rotate(494.75deg) scale(0.0143305, 0.00535178)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(77.847px, 94.4591px) rotate(168.085deg) scale(0.217962, 0.328869)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(28.5111px, 67.2928px) rotate(254.511deg) scale(0.160666, 0.19835)",
+                "opacity": 0.0652331
+              }
+            ]
+          }
+        ]
+      },
+      "decoration": {
+        "nav": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "backdrop": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "absorbing": "true",
+          "inert": true
+        },
+        "pools": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 183.807px 336.793px, transparent 38.2583px, black 41.039px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 54,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(132.067px, 344.176px) rotate(162.019deg) scale(0.153038, 0.339374)",
+                "opacity": "0"
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-22.7231px, 342.598px) rotate(205.313deg) scale(0.163567, 0.268061)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-101.393px, 340.516px) rotate(211.652deg) scale(0.266969, 0.258413)",
+                "opacity": "0"
+              }
+            ],
+            "common": null,
+            "ids": 0,
+            "handlers": 0
+          },
+          {
+            "className": "portal-trails ",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 183.807px 336.793px, transparent 38.2583px, black 41.039px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 216,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(156.59px, 93.7126px) rotate(162.019deg) scale(0.244698, 0.339374)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(77.847px, 94.4591px) rotate(168.085deg) scale(0.217962, 0.328869)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(0.012487px, 96.0666px) rotate(174.202deg) scale(0.236703, 0.318448)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-76.153px, 95.7348px) rotate(180.367deg) scale(0.22911, 0.308124)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(158.964px, 53.9211px) rotate(186.575deg) scale(0.587373, 0.297912)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(127.068px, 52.6145px) rotate(192.719deg) scale(0.480621, 0.287822)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(94.7942px, 51.4393px) rotate(199.001deg) scale(0.533082, 0.277868)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(64.9644px, 49.793px) rotate(205.313deg) scale(0.545396, 0.268061)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(36.693px, 47.7109px) rotate(211.652deg) scale(0.569154, 0.258413)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(6.527px, 45.2346px) rotate(218.012deg) scale(0.445241, 0.248936)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-22.8639px, 41.9826px) rotate(224.286deg) scale(0.546339, 0.239638)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-42.5394px, 38.9114px) rotate(230.677deg) scale(0.794777, 0.230531)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(119.679px, -17.7336px) rotate(597.078deg) scale(0.345005, 0.221623)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(87.5908px, -21.2235px) rotate(603.483deg) scale(0.659313, 0.212923)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(59.8847px, -24.8366px) rotate(609.888deg) scale(0.425256, 0.204439)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(28.2259px, -28.7052px) rotate(616.185deg) scale(0.41287, 0.196177)",
+                "opacity": "0"
+              }
+            ],
+            "common": "M205.67,375.33L191.24,377.77L177.65,375.35L166.50,368.91L158.84,359.83L155.04,349.67L154.86,339.90L157.53,331.62L162.08,325.47L167.49,321.62L172.91,319.88L177.72,319.81L181.59,320.91L184.42,322.69L186.27,324.78L187.28,326.90L187.64,328.89L187.51,330.68L187.04,332.23L186.38,333.56L185.64,334.66L184.91,335.57L184.28,336.28L183.85,336.75L183.85,336.75L184.32,336.32L185.01,335.66L185.84,334.83L186.73,333.80L187.61,332.51L188.34,330.90L188.76,328.93L188.66,326.57L187.79,323.93L185.88,321.19L182.73,318.71L178.24,316.97L172.52,316.57L165.94,318.17L159.21,322.30L153.35,329.27L149.60,338.94L149.20,350.59L153.13,362.94L161.78,374.24L174.80,382.57L190.99,386.21L208.48,384.02Z",
+            "ids": 0,
+            "handlers": 0
+          }
+        ]
+      }
+    },
+    {
+      "width": 320,
+      "height": 760,
+      "direction": "forward",
+      "requested": 0.28,
+      "actual": 0.2799342105263158,
+      "file": "outputs/visual-revision-2026-10-09/g1-g2-implementation/intake/final-images/portal-0.28-forward-320.png",
+      "sha256": "fa9e0bb5e3e68053143857127388d3aa1a784d7b25cda7c315d92cf530cabf8b",
+      "chapter": "portal",
+      "manual": false,
+      "overflow": 0,
+      "canvas": 1,
+      "glError": 0,
+      "anchor": {
+        "x": 208.453125,
+        "y": 316.015625,
+        "width": 28.46875,
+        "height": 24.546875,
+        "opacity": 1,
+        "transform": "none",
+        "inert": false
+      },
+      "resources": {
+        "geometries": 5,
+        "textures": 1
+      },
+      "copies": {
+        "count": 270,
+        "focusable": 0,
+        "layers": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.2799342105263158,
+            "sources": 9,
+            "declared": 54,
+            "actual": 54,
+            "ribbons": 9,
+            "commonRibbons": 0,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(79.0415px, 286.74px) rotate(344.464deg) scale(0.0716824, 0.104884)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(91.8552px, 287.918px) rotate(389.095deg) scale(0.0588145, 0.0747123)",
+                "opacity": 0.0116436
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(97.1297px, 293.988px) rotate(432.016deg) scale(0.0588145, 0.0530516)",
+                "opacity": 0.00126128
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(97.1003px, 299.26px) rotate(468.962deg) scale(0.0588145, 0.0347618)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(95.1343px, 302.608px) rotate(489.792deg) scale(0.0588145, 0.0177769)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(93.3622px, 304.505px) rotate(494.947deg) scale(0.00773282, 0.00292704)",
+                "opacity": 0
+              },
+              {
+                "transform": "",
+                "opacity": 0
+              },
+              {
+                "transform": "",
+                "opacity": 0
+              }
+            ]
+          },
+          {
+            "className": "portal-trails ",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.2799342105263158,
+            "sources": 36,
+            "declared": 216,
+            "actual": 216,
+            "ribbons": 36,
+            "commonRibbons": 1,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(103.565px, 36.2766px) rotate(344.464deg) scale(0.114616, 0.104884)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(116.379px, 37.4554px) rotate(389.095deg) scale(0.094041, 0.0747123)",
+                "opacity": 0.0116436
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(121.653px, 43.525px) rotate(432.016deg) scale(0.094041, 0.0530516)",
+                "opacity": 0.00126128
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(121.624px, 48.7966px) rotate(468.962deg) scale(0.094041, 0.0347618)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(119.658px, 52.1452px) rotate(489.792deg) scale(0.0598576, 0.0177769)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(117.886px, 54.0418px) rotate(494.947deg) scale(0.00773282, 0.00292704)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(30.7447px, 35.2784px) rotate(347.64deg) scale(0.101998, 0.102421)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(42.9953px, 37.0212px) rotate(391.557deg) scale(0.0851508, 0.0733314)",
+                "opacity": 0.0108835
+              }
+            ]
+          }
+        ]
+      },
+      "decoration": {
+        "nav": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "backdrop": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "absorbing": "true",
+          "inert": true
+        },
+        "pools": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 168.159px 340.215px, transparent 119.985px, black 124.434px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 54,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(79.0415px, 286.74px) rotate(344.464deg) scale(0.0716824, 0.104884)",
+                "opacity": "0"
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-35.2513px, 286.076px) rotate(366.569deg) scale(0.0765915, 0.0887498)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-108.949px, 286.178px) rotate(369.748deg) scale(0.124915, 0.0866462)",
+                "opacity": "0"
+              }
+            ],
+            "common": null,
+            "ids": 0,
+            "handlers": 0
+          },
+          {
+            "className": "portal-trails ",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 168.159px 340.215px, transparent 119.985px, black 124.434px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 216,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(103.565px, 36.2766px) rotate(344.464deg) scale(0.114616, 0.104884)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(30.7447px, 35.2784px) rotate(347.64deg) scale(0.101998, 0.102421)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-41.0976px, 35.743px) rotate(350.816deg) scale(0.110669, 0.100012)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-111.269px, 34.8727px) rotate(353.992deg) scale(0.107029, 0.0976571)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(129.777px, -6.88103px) rotate(357.167deg) scale(0.274168, 0.0953541)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(103.732px, -6.78108px) rotate(360.216deg) scale(0.225424, 0.0931026)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(76.9879px, -6.78087px) rotate(363.392deg) scale(0.249819, 0.0909015)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(52.4362px, -6.72844px) rotate(366.569deg) scale(0.255385, 0.0887498)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(29.1369px, -6.62669px) rotate(369.748deg) scale(0.266307, 0.0866462)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(3.58745px, -6.47861px) rotate(372.929deg) scale(0.208178, 0.0845895)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-21.8216px, -6.15035px) rotate(375.985deg) scale(0.258935, 0.0825784)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-37.7505px, -5.92287px) rotate(379.173deg) scale(0.502517, 0.0806116)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(127.761px, -58.9945px) rotate(742.365deg) scale(0.170515, 0.0786875)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(98.4929px, -58.6965px) rotate(745.561deg) scale(0.333044, 0.0768047)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(73.1239px, -58.3679px) rotate(748.763deg) scale(0.21968, 0.0749615)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(42.9555px, -57.8968px) rotate(751.843deg) scale(0.220817, 0.0731564)",
+                "opacity": "0"
+              }
+            ],
+            "common": "M154.53,323.95L157.64,323.24L160.54,323.10L163.13,323.41L165.38,324.09L167.27,325.03L168.80,326.14L169.99,327.35L170.87,328.60L171.47,329.85L171.83,331.07L171.99,332.22L171.97,333.30L171.82,334.31L171.55,335.23L171.21,336.08L170.81,336.84L170.38,337.53L169.94,338.15L169.51,338.70L169.10,339.18L168.73,339.60L168.43,339.93L168.20,340.17L168.21,340.17L168.44,339.95L168.78,339.64L169.18,339.26L169.64,338.82L170.14,338.31L170.66,337.74L171.19,337.09L171.71,336.35L172.19,335.51L172.61,334.55L172.94,333.46L173.12,332.24L173.13,330.89L172.90,329.42L172.37,327.86L171.51,326.25L170.26,324.64L168.58,323.13L166.44,321.78L163.84,320.72L160.79,320.07L157.34,319.96L153.57,320.53Z",
+            "ids": 0,
+            "handlers": 0
+          }
+        ]
+      }
+    },
+    {
+      "width": 320,
+      "height": 760,
+      "direction": "reverse",
+      "requested": 0.1,
+      "actual": 0.1,
+      "file": "outputs/visual-revision-2026-10-09/g1-g2-implementation/intake/final-images/portal-0.10-reverse-320.png",
+      "sha256": "0b83861559a1e4030ada358ff61b5eb249a2a9ba1e03bf7c4b9093f326745fdb",
+      "chapter": "portal",
+      "manual": false,
+      "overflow": 0,
+      "canvas": 1,
+      "glError": 0,
+      "anchor": {
+        "x": 208.453125,
+        "y": 316.015625,
+        "width": 28.46875,
+        "height": 24.546875,
+        "opacity": 1,
+        "transform": "none",
+        "inert": false
+      },
+      "resources": {
+        "geometries": 5,
+        "textures": 1
+      },
+      "copies": {
+        "count": 270,
+        "focusable": 0,
+        "layers": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.1,
+            "sources": 9,
+            "declared": 54,
+            "actual": 54,
+            "ribbons": 9,
+            "commonRibbons": 0,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(29.2883px, 58.5993px) rotate(0.0956596deg) scale(0.847237, 0.847237)",
+                "opacity": 0.997188
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(134.007px, 171.922px) rotate(30.357deg) scale(0.599277, 0.678518)",
+                "opacity": 0.0913047
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(201.093px, 292.619px) rotate(99.6924deg) scale(0.188106, 0.459507)",
+                "opacity": 0.0714982
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(115.345px, 321.424px) rotate(236.458deg) scale(0.118669, 0.222421)",
+                "opacity": 0.0367032
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(135.281px, 275.65px) rotate(369.029deg) scale(0.0612087, 0.0870711)",
+                "opacity": 0.00525416
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(145.013px, 289.807px) rotate(476.794deg) scale(0.0588145, 0.0297873)",
+                "opacity": 0
+              },
+              {
+                "transform": "",
+                "opacity": 0
+              },
+              {
+                "transform": "",
+                "opacity": 0
+              }
+            ]
+          },
+          {
+            "className": "portal-trails ",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.1,
+            "sources": 36,
+            "declared": 216,
+            "actual": 216,
+            "ribbons": 36,
+            "commonRibbons": 1,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(35.6728px, 1.83748px) rotate(-0.0259834deg) scale(0.847237, 0.847237)",
+                "opacity": 0.997188
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(134.033px, -36.9987px) rotate(-4.69278deg) scale(0.64439, 0.678518)",
+                "opacity": 0.0913047
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(225.511px, 42.079px) rotate(98.6571deg) scale(0.299328, 0.459507)",
+                "opacity": 0.0714982
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(139.869px, 70.9606px) rotate(236.458deg) scale(0.189745, 0.222421)",
+                "opacity": 0.0367032
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(159.804px, 25.1872px) rotate(369.029deg) scale(0.0978691, 0.0870711)",
+                "opacity": 0.00525416
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(169.537px, 39.3437px) rotate(476.794deg) scale(0.094041, 0.0297873)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(16.8855px, 3.85641px) rotate(-0.0253005deg) scale(0.847677, 0.847677)",
+                "opacity": 0.997406
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(69.5223px, -26.33px) rotate(-10.5667deg) scale(0.573604, 0.678892)",
+                "opacity": 0.0913047
+              }
+            ]
+          }
+        ]
+      },
+      "decoration": {
+        "nav": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "backdrop": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "absorbing": "true",
+          "inert": true
+        },
+        "pools": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 216.552px 329.631px, transparent 12.5431px, black 14.7991px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 54,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(29.2883px, 58.5993px) rotate(0.0956596deg) scale(0.847237, 0.847237)",
+                "opacity": "0.997188"
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "",
+                "opacity": ""
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-4.59332px, 54.9471px) rotate(0.0618682deg) scale(0.851421, 0.851421)",
+                "opacity": "0.998833"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-24.4959px, 52.3158px) rotate(0.0617716deg) scale(0.852207, 0.852207)",
+                "opacity": "0.999045"
+              }
+            ],
+            "common": null,
+            "ids": 0,
+            "handlers": 0
+          },
+          {
+            "className": "portal-trails ",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 216.552px 329.631px, transparent 12.5431px, black 14.7991px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 216,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(35.6728px, 1.83748px) rotate(-0.0259834deg) scale(0.847237, 0.847237)",
+                "opacity": "0.997188"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(16.8855px, 3.85641px) rotate(-0.0253005deg) scale(0.847677, 0.847677)",
+                "opacity": "0.997406"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(0.784246px, 3.33529px) rotate(0.289993deg) scale(0.848174, 0.848174)",
+                "opacity": "0.997639"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-10.8425px, 0.974512px) rotate(0.251002deg) scale(0.848725, 0.848725)",
+                "opacity": "0.99788"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(38.4416px, -8.26105px) rotate(-0.0367532deg) scale(0.849327, 0.849327)",
+                "opacity": "0.998125"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(31.7127px, -6.95938px) rotate(-0.0343043deg) scale(0.849979, 0.849979)",
+                "opacity": "0.998369"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(24.7125px, -5.68315px) rotate(-0.0333026deg) scale(0.850677, 0.850677)",
+                "opacity": "0.998606"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(18.3541px, -4.53932px) rotate(-0.0335714deg) scale(0.851421, 0.851421)",
+                "opacity": "0.998833"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(12.4072px, -3.49189px) rotate(-0.0366148deg) scale(0.852207, 0.852207)",
+                "opacity": "0.999045"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(6.03749px, -2.41902px) rotate(-0.0456033deg) scale(0.853034, 0.853034)",
+                "opacity": "0.999239"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(0.0241285px, -1.45002px) rotate(-0.0472389deg) scale(0.853899, 0.853899)",
+                "opacity": "0.999413"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-3.79865px, -1.05528px) rotate(-0.0379221deg) scale(0.8548, 0.8548)",
+                "opacity": "0.999564"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(31.5418px, -17.4631px) rotate(0.0495356deg) scale(0.855735, 0.855735)",
+                "opacity": "0.999691"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(24.3882px, -15.7934px) rotate(0.0321168deg) scale(0.856701, 0.856701)",
+                "opacity": "0.999794"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(18.2923px, -14.2651px) rotate(0.0190497deg) scale(0.857697, 0.857697)",
+                "opacity": "0.999873"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(11.4577px, -12.4529px) rotate(0.00981692deg) scale(0.858721, 0.858721)",
+                "opacity": "0.99993"
+              }
+            ],
+            "common": "M259.05,283.08L268.74,302.99L270.66,324.52L264.88,344.60L252.26,360.36L235.12,369.18L217.05,369.98L201.64,363.59L191.44,352.42L187.39,339.59L188.79,327.91L193.92,319.25L200.71,314.24L207.42,312.52L212.96,313.21L216.88,315.29L219.21,317.93L220.24,320.58L220.34,322.96L219.82,324.99L218.98,326.64L218.03,327.95L217.18,328.95L216.60,329.59L216.60,329.59L217.23,329.00L218.18,328.08L219.29,326.87L220.40,325.26L221.26,323.14L221.53,320.42L220.72,317.16L218.31,313.71L213.90,310.76L207.39,309.36L199.26,310.78L190.80,316.18L184.09,326.11L181.65,339.92L185.72,355.48L197.29,369.43L215.43,377.92L237.21,377.90L258.33,368.14L274.40,349.74L282.08,325.70L279.99,299.90L268.64,276.13Z",
+            "ids": 0,
+            "handlers": 0
+          }
+        ]
+      },
+      "sameDecorationAtReverse": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "direction": "forward",
+      "requested": 0.05,
+      "actual": 0.04995331986790399,
+      "file": "outputs/visual-revision-2026-10-09/g1-g2-implementation/intake/final-images/portal-0.05-forward-1440.png",
+      "sha256": "ced00c7efaf1e8f7973e840f5d4ce35fb8235193c5f3190063d791eb787500e7",
+      "chapter": "portal",
+      "manual": false,
+      "overflow": 0,
+      "canvas": 1,
+      "glError": 0,
+      "anchor": {
+        "x": 1102.140625,
+        "y": 458.984375,
+        "width": 133.265625,
+        "height": 114.890625,
+        "opacity": 1,
+        "transform": "none",
+        "inert": false
+      },
+      "resources": {
+        "geometries": 6,
+        "textures": 23
+      },
+      "copies": {
+        "count": 376,
+        "focusable": 0,
+        "layers": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.04995331986790399,
+            "sources": 9,
+            "declared": 72,
+            "actual": 72,
+            "ribbons": 9,
+            "commonRibbons": 0,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(56.9683px, 19.2149px) rotate(0deg) scale(0.958104, 0.958104)",
+                "opacity": 1
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(131.162px, 43.0636px) rotate(0deg) scale(0.907598, 0.907598)",
+                "opacity": 0.0356784
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(239.565px, 65.0735px) rotate(0.000488541deg) scale(0.857456, 0.857456)",
+                "opacity": 0.0305564
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(400.339px, 70.1989px) rotate(-0.0567255deg) scale(0.807693, 0.807693)",
+                "opacity": 0.0252771
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(607.117px, 64.7921px) rotate(-0.117747deg) scale(0.758476, 0.758328)",
+                "opacity": 0.0197938
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(832.88px, 78.221px) rotate(4.83645deg) scale(0.718544, 0.709368)",
+                "opacity": 0.0140234
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1034.24px, 137.357px) rotate(21.5678deg) scale(0.702044, 0.658475)",
+                "opacity": 0.00777995
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1173.27px, 239.326px) rotate(47.4231deg) scale(0.710945, 0.600482)",
+                "opacity": 0
+              }
+            ]
+          },
+          {
+            "className": "portal-trails portal-trails--cursor",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.04995331986790399,
+            "sources": 2,
+            "declared": 16,
+            "actual": 16,
+            "ribbons": 2,
+            "commonRibbons": 0,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(37.1634px, 3.04231px) rotate(0deg) scale(0.958104, 0.958104)",
+                "opacity": 1
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(84.0598px, 4.49282px) rotate(0deg) scale(0.907598, 0.907598)",
+                "opacity": 0.0356784
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(144.558px, -9.11585px) rotate(-0.00160905deg) scale(0.857456, 0.857456)",
+                "opacity": 0.0305564
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(228.107px, -51.7018px) rotate(-1.52583deg) scale(0.807693, 0.807693)",
+                "opacity": 0.0252771
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(342.719px, -115.733px) rotate(-6.73913deg) scale(0.758476, 0.758328)",
+                "opacity": 0.0197938
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(488.261px, -171.746px) rotate(-7.91433deg) scale(0.718544, 0.709368)",
+                "opacity": 0.0140234
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(644.493px, -184.373px) rotate(5.43901deg) scale(0.702044, 0.658475)",
+                "opacity": 0.00777995
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(776.945px, -137.327px) rotate(33.5863deg) scale(0.710945, 0.600482)",
+                "opacity": 0
+              }
+            ]
+          },
+          {
+            "className": "portal-trails ",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.04995331986790399,
+            "sources": 36,
+            "declared": 288,
+            "actual": 288,
+            "ribbons": 36,
+            "commonRibbons": 1,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(50.4317px, 7.90801px) rotate(0deg) scale(0.958104, 0.958104)",
+                "opacity": 1
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(115.373px, 15.5347px) rotate(0deg) scale(0.907598, 0.907598)",
+                "opacity": 0.0356784
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(205.725px, 8.6288px) rotate(-0.000845333deg) scale(0.857456, 0.857456)",
+                "opacity": 0.0305564
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(335.211px, -28.6915px) rotate(-0.954833deg) scale(0.807693, 0.807693)",
+                "opacity": 0.0252771
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(506.131px, -84.8277px) rotate(-4.04165deg) scale(0.758476, 0.758328)",
+                "opacity": 0.0197938
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(704.914px, -122.779px) rotate(-2.36821deg) scale(0.709833, 0.709368)",
+                "opacity": 0.0140234
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(895.642px, -106.669px) rotate(13.0754deg) scale(0.527829, 0.658475)",
+                "opacity": 0.00777995
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1037.85px, -31.976px) rotate(40.6597deg) scale(0.357135, 0.600482)",
+                "opacity": 0
+              }
+            ]
+          }
+        ]
+      },
+      "decoration": {
+        "nav": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "backdrop": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "absorbing": "true",
+          "inert": true
+        },
+        "pools": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 1167.41px 516.092px, transparent 54.3763px, black 57.486px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 72,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(56.9852px, 19.2206px) rotate(0deg) scale(0.958091, 0.958091)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(37.3161px, 18.8965px) rotate(0deg) scale(0.958799, 0.958799)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(33.0184px, 18.5742px) rotate(0deg) scale(0.959503, 0.959503)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(28.3887px, 18.2537px) rotate(0deg) scale(0.960203, 0.960203)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(23.111px, 17.9349px) rotate(0deg) scale(0.960899, 0.960899)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(18.4673px, 17.618px) rotate(0deg) scale(0.961592, 0.961592)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(14.9407px, 17.303px) rotate(0deg) scale(0.96228, 0.96228)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-3.06162px, 16.9898px) rotate(0deg) scale(0.962964, 0.962964)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-8.66978px, 16.6785px) rotate(0deg) scale(0.963644, 0.963644)",
+                "opacity": "1"
+              }
+            ],
+            "common": null,
+            "ids": 0,
+            "handlers": 0
+          },
+          {
+            "className": "portal-trails portal-trails--cursor",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 1167.41px 516.092px, transparent 54.3763px, black 57.486px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 16,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(37.1743px, 3.0432px) rotate(0deg) scale(0.958091, 0.958091)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(36.55px, 2.99188px) rotate(0deg) scale(0.958799, 0.958799)",
+                "opacity": "1"
+              }
+            ],
+            "common": null,
+            "ids": 0,
+            "handlers": 0
+          },
+          {
+            "className": "portal-trails ",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 1167.41px 516.092px, transparent 54.3763px, black 57.486px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 288,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(50.4466px, 7.91036px) rotate(0deg) scale(0.958091, 0.958091)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(31.7354px, 7.64837px) rotate(0deg) scale(0.958799, 0.958799)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(13.8707px, 7.64432px) rotate(0deg) scale(0.959503, 0.959503)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-3.00165px, 7.38816px) rotate(0deg) scale(0.960203, 0.960203)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(44.5212px, -0.0128964px) rotate(0deg) scale(0.960899, 0.960899)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(37.6249px, -0.0126685px) rotate(0deg) scale(0.961592, 0.961592)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(30.819px, -0.012442px) rotate(0deg) scale(0.96228, 0.96228)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(24.7205px, -0.0122168px) rotate(0deg) scale(0.962964, 0.962964)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(19.1026px, -0.0119929px) rotate(0deg) scale(0.963644, 0.963644)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(13.214px, -0.0117704px) rotate(0deg) scale(0.96432, 0.96432)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(7.56412px, -0.0115494px) rotate(0deg) scale(0.964992, 0.964992)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(4.04803px, -0.0113297px) rotate(0deg) scale(0.965659, 0.965659)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(39.7052px, -3.59319px) rotate(0deg) scale(0.966322, 0.966322)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(37.3336px, -3.52307px) rotate(0deg) scale(0.966981, 0.966981)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(35.2357px, -3.45343px) rotate(0deg) scale(0.967635, 0.967635)",
+                "opacity": "1"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(32.9534px, -3.38426px) rotate(0deg) scale(0.968285, 0.968285)",
+                "opacity": "1"
+              }
+            ],
+            "common": "M1301.19,369.79L1325.27,436.57L1328.01,502.30L1309.64,561.60L1271.51,607.22L1220.77,632.04L1168.07,633.28L1123.81,613.83L1095.17,581.06L1084.44,544.14L1089.21,511.21L1103.75,486.90L1122.85,472.79L1141.74,467.98L1157.32,469.92L1168.34,475.77L1174.89,483.18L1177.80,490.63L1178.06,497.34L1176.61,503.03L1174.23,507.67L1171.58,511.37L1169.18,514.18L1167.54,515.96L1167.54,515.97L1169.31,514.31L1172.00,511.74L1175.12,508.32L1178.24,503.80L1180.66,497.84L1181.41,490.18L1179.13,481.01L1172.37,471.31L1159.97,463.01L1141.65,459.07L1118.79,463.07L1094.99,478.27L1076.24,506.24L1070.21,544.97L1082.31,587.94L1114.89,625.79L1165.03,648.21L1224.40,647.15L1281.25,619.70L1323.82,569.25L1344.28,504.33L1341.62,433.36L1316.13,361.85Z",
+            "ids": 0,
+            "handlers": 0
+          }
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "direction": "forward",
+      "requested": 0.1,
+      "actual": 0.09996935084745069,
+      "file": "outputs/visual-revision-2026-10-09/g1-g2-implementation/intake/final-images/portal-0.10-forward-1440.png",
+      "sha256": "3344772ee82e5b850533796dc99d729b8cb067b274e72a4e4a4cdc0b934bdd81",
+      "chapter": "portal",
+      "manual": false,
+      "overflow": 0,
+      "canvas": 1,
+      "glError": 0,
+      "anchor": {
+        "x": 1102.140625,
+        "y": 458.984375,
+        "width": 133.265625,
+        "height": 114.890625,
+        "opacity": 1,
+        "transform": "none",
+        "inert": false
+      },
+      "resources": {
+        "geometries": 6,
+        "textures": 23
+      },
+      "copies": {
+        "count": 376,
+        "focusable": 0,
+        "layers": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.09996935084745069,
+            "sources": 9,
+            "declared": 72,
+            "actual": 72,
+            "ribbons": 9,
+            "commonRibbons": 0,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(256.637px, 66.7271px) rotate(0.00698753deg) scale(0.847321, 0.847321)",
+                "opacity": 0.997231
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(720.581px, 69.023px) rotate(1.89969deg) scale(0.730658, 0.726898)",
+                "opacity": 0.0967951
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1137.8px, 240.42px) rotate(48.8525deg) scale(0.712571, 0.595529)",
+                "opacity": 0.082899
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1193.3px, 515.333px) rotate(116.728deg) scale(0.495772, 0.423362)",
+                "opacity": 0.0684886
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(995.004px, 574.628px) rotate(215.974deg) scale(0.359532, 0.251836)",
+                "opacity": 0.0427082
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(974.067px, 436.295px) rotate(314.803deg) scale(0.237588, 0.130724)",
+                "opacity": 0.0155542
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1045.29px, 427.91px) rotate(403.186deg) scale(0.132562, 0.0670321)",
+                "opacity": 0.00160096
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1051.66px, 457.833px) rotate(476.704deg) scale(0.0588145, 0.0298495)",
+                "opacity": 0
+              }
+            ]
+          },
+          {
+            "className": "portal-trails portal-trails--cursor",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.09996935084745069,
+            "sources": 2,
+            "declared": 16,
+            "actual": 16,
+            "ribbons": 2,
+            "commonRibbons": 0,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(148.084px, -15.9951px) rotate(-0.0379664deg) scale(0.847321, 0.847321)",
+                "opacity": 0.997231
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(400.959px, -154.374px) rotate(-9.44958deg) scale(0.730658, 0.726898)",
+                "opacity": 0.0967951
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(741.801px, -139.42px) rotate(34.9687deg) scale(0.712571, 0.595529)",
+                "opacity": 0.082899
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(816.308px, 110.833px) rotate(116.723deg) scale(0.789358, 0.423362)",
+                "opacity": 0.0684886
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(618.012px, 170.128px) rotate(215.974deg) scale(0.573092, 0.251836)",
+                "opacity": 0.0427082
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(597.074px, 31.7954px) rotate(314.803deg) scale(0.378713, 0.130724)",
+                "opacity": 0.0155542
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(668.295px, 23.4101px) rotate(403.186deg) scale(0.211303, 0.0670321)",
+                "opacity": 0.00160096
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(674.665px, 53.3332px) rotate(476.704deg) scale(0.09375, 0.0298495)",
+                "opacity": 0
+              }
+            ]
+          },
+          {
+            "className": "portal-trails ",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.09996935084745069,
+            "sources": 36,
+            "declared": 288,
+            "actual": 288,
+            "ribbons": 36,
+            "commonRibbons": 1,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(217.397px, 2.79648px) rotate(-0.0207923deg) scale(0.847321, 0.847321)",
+                "opacity": 0.997231
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(600.282px, -113.6px) rotate(-4.54902deg) scale(0.730658, 0.726898)",
+                "opacity": 0.0967951
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1002.77px, -32.304px) rotate(42.1027deg) scale(0.342871, 0.595529)",
+                "opacity": 0.082899
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1068.87px, 232.531px) rotate(116.726deg) scale(0.169375, 0.423362)",
+                "opacity": 0.0684886
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(870.578px, 291.826px) rotate(215.974deg) scale(0.12283, 0.251836)",
+                "opacity": 0.0427082
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(849.64px, 153.494px) rotate(314.803deg) scale(0.081169, 0.130724)",
+                "opacity": 0.0155542
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(920.861px, 145.108px) rotate(403.186deg) scale(0.0452882, 0.0670321)",
+                "opacity": 0.00160096
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(927.231px, 175.031px) rotate(476.704deg) scale(0.0200933, 0.0298495)",
+                "opacity": 0
+              }
+            ]
+          }
+        ]
+      },
+      "decoration": {
+        "nav": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "backdrop": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "absorbing": "true",
+          "inert": true
+        },
+        "pools": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 1124.88px 505.53px, transparent 58.7036px, black 61.9017px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 72,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(256.694px, 66.7318px) rotate(0.00700886deg) scale(0.8473, 0.8473)",
+                "opacity": "0.99722"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(161.182px, 78.5317px) rotate(0.0249094deg) scale(0.847742, 0.847742)",
+                "opacity": "0.997437"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(141.444px, 80.0965px) rotate(0.0280104deg) scale(0.84824, 0.84824)",
+                "opacity": "0.997668"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(119.416px, 81.5338px) rotate(0.0316889deg) scale(0.848792, 0.848792)",
+                "opacity": "0.997908"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(93.394px, 82.756px) rotate(0.0368133deg) scale(0.849396, 0.849396)",
+                "opacity": "0.998152"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(70.4904px, 83.5483px) rotate(0.0409445deg) scale(0.850048, 0.850048)",
+                "opacity": "0.998394"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(52.71px, 83.2514px) rotate(0.0421386deg) scale(0.850748, 0.850748)",
+                "opacity": "0.998629"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-43.7286px, 75.9598px) rotate(0.0795929deg) scale(0.851493, 0.851493)",
+                "opacity": "0.998854"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-74.43px, 70.0208px) rotate(0.0738618deg) scale(0.85228, 0.85228)",
+                "opacity": "0.999064"
+              }
+            ],
+            "common": null,
+            "ids": 0,
+            "handlers": 0
+          },
+          {
+            "className": "portal-trails portal-trails--cursor",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 1124.88px 505.53px, transparent 58.7036px, black 61.9017px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 16,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(148.111px, -16.0095px) rotate(-0.0381255deg) scale(0.8473, 0.8473)",
+                "opacity": "0.99722"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(147.376px, -15.7357px) rotate(-0.0350489deg) scale(0.847742, 0.847742)",
+                "opacity": "0.997437"
+              }
+            ],
+            "common": null,
+            "ids": 0,
+            "handlers": 0
+          },
+          {
+            "className": "portal-trails ",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 1124.88px 505.53px, transparent 58.7036px, black 61.9017px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 288,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(217.442px, 2.7844px) rotate(-0.0208817deg) scale(0.8473, 0.8473)",
+                "opacity": "0.99722"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(128.381px, 15.5578px) rotate(-0.0124439deg) scale(0.847742, 0.847742)",
+                "opacity": "0.997437"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(42.329px, 24.7307px) rotate(0.0150197deg) scale(0.84824, 0.84824)",
+                "opacity": "0.997668"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-27.5041px, 17.0873px) rotate(0.20955deg) scale(0.848792, 0.848792)",
+                "opacity": "0.997908"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(190.767px, -41.0158px) rotate(0.325743deg) scale(0.849396, 0.849396)",
+                "opacity": "0.998152"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(158.781px, -34.8994px) rotate(0.281636deg) scale(0.850048, 0.850048)",
+                "opacity": "0.998394"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(125.911px, -28.8388px) rotate(0.238171deg) scale(0.850748, 0.850748)",
+                "opacity": "0.998629"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(96.0242px, -23.3616px) rotate(0.196358deg) scale(0.851493, 0.851493)",
+                "opacity": "0.998854"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(68.0511px, -18.2694px) rotate(0.156305deg) scale(0.85228, 0.85228)",
+                "opacity": "0.999064"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(38.0758px, -12.8457px) rotate(0.115077deg) scale(0.853108, 0.853108)",
+                "opacity": "0.999255"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(9.35442px, -7.26021px) rotate(0.0694897deg) scale(0.853973, 0.853973)",
+                "opacity": "0.999427"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-8.75126px, -2.31058px) rotate(0.0430565deg) scale(0.854875, 0.854875)",
+                "opacity": "0.999575"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(181.429px, -59.7391px) rotate(0.0512138deg) scale(0.85581, 0.85581)",
+                "opacity": "0.9997"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(170.868px, -56.9969px) rotate(0.0338942deg) scale(0.856778, 0.856778)",
+                "opacity": "0.999801"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(161.619px, -54.4933px) rotate(0.0206513deg) scale(0.857774, 0.857774)",
+                "opacity": "0.999878"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(151.629px, -51.8588px) rotate(0.0111839deg) scale(0.858798, 0.858798)",
+                "opacity": "0.999934"
+              }
+            ],
+            "common": "M1257.92,360.12L1282.43,426.21L1285.43,491.75L1267.10,551.04L1228.98,596.66L1178.24,621.48L1125.53,622.72L1081.27,603.27L1052.64,570.50L1041.90,533.58L1046.68,500.65L1061.22,476.33L1080.31,462.23L1099.20,457.42L1114.79,459.36L1125.80,465.21L1132.36,472.62L1135.26,480.06L1135.53,486.77L1134.08,492.47L1131.70,497.11L1129.04,500.81L1126.64,503.62L1125.00,505.40L1125.01,505.41L1126.78,503.75L1129.46,501.18L1132.59,497.76L1135.70,493.24L1138.13,487.28L1138.87,479.62L1136.59,470.45L1129.83,460.75L1117.43,452.45L1099.12,448.51L1076.26,452.50L1052.46,467.71L1033.71,495.68L1027.68,534.41L1039.77,577.37L1072.35,615.23L1122.49,637.65L1181.86,636.59L1238.72,609.14L1281.29,558.69L1301.70,493.75L1298.76,422.90L1272.77,352.00Z",
+            "ids": 0,
+            "handlers": 0
+          }
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "direction": "forward",
+      "requested": 0.16,
+      "actual": 0.1599642874671452,
+      "file": "outputs/visual-revision-2026-10-09/g1-g2-implementation/intake/final-images/portal-0.16-forward-1440.png",
+      "sha256": "12343417734c6fb878f44a338eee3a2011ea1fe20fe0f9edee4067d38663824d",
+      "chapter": "portal",
+      "manual": false,
+      "overflow": 0,
+      "canvas": 1,
+      "glError": 0,
+      "anchor": {
+        "x": 1102.140625,
+        "y": 458.984375,
+        "width": 133.265625,
+        "height": 114.890625,
+        "opacity": 1,
+        "transform": "none",
+        "inert": false
+      },
+      "resources": {
+        "geometries": 6,
+        "textures": 23
+      },
+      "copies": {
+        "count": 376,
+        "focusable": 0,
+        "layers": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.1599642874671452,
+            "sources": 9,
+            "declared": 72,
+            "actual": 72,
+            "ribbons": 9,
+            "commonRibbons": 0,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(905.139px, 129.907px) rotate(21.8624deg) scale(0.701863, 0.65385)",
+                "opacity": 0.012153
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1099.38px, 346.674px) rotate(75.9874deg) scale(0.605568, 0.519461)",
+                "opacity": 0.105263
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1030.79px, 551.031px) rotate(148.892deg) scale(0.448642, 0.362767)",
+                "opacity": 0.0870473
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(861.962px, 519.754px) rotate(236.977deg) scale(0.333109, 0.221704)",
+                "opacity": 0.0538961
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(874.882px, 404.246px) rotate(322.065deg) scale(0.228758, 0.123947)",
+                "opacity": 0.0220705
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(937.659px, 399.998px) rotate(398.881deg) scale(0.137425, 0.0693025)",
+                "opacity": 0.00363083
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(947.544px, 427.584px) rotate(466.806deg) scale(0.0621029, 0.0360043)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(938.245px, 441.685px) rotate(494.31deg) scale(0.0219104, 0.00796155)",
+                "opacity": 0
+              }
+            ]
+          },
+          {
+            "className": "portal-trails portal-trails--cursor",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.1599642874671452,
+            "sources": 2,
+            "declared": 16,
+            "actual": 16,
+            "ribbons": 2,
+            "commonRibbons": 0,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(510.783px, -196.959px) rotate(2.51228deg) scale(0.701863, 0.65385)",
+                "opacity": 0.012153
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(717.132px, -56.486px) rotate(70.1421deg) scale(0.745431, 0.519461)",
+                "opacity": 0.105263
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(653.799px, 146.531px) rotate(148.892deg) scale(0.715133, 0.362767)",
+                "opacity": 0.0870473
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(484.97px, 115.254px) rotate(236.977deg) scale(0.530974, 0.221704)",
+                "opacity": 0.0538961
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(497.89px, -0.253613px) rotate(322.065deg) scale(0.36464, 0.123947)",
+                "opacity": 0.0220705
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(560.666px, -4.50194px) rotate(398.881deg) scale(0.219055, 0.0693025)",
+                "opacity": 0.00363083
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(570.552px, 23.0837px) rotate(466.806deg) scale(0.0989916, 0.0360043)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(561.253px, 37.1846px) rotate(494.31deg) scale(0.0219104, 0.00796155)",
+                "opacity": 0
+              }
+            ]
+          },
+          {
+            "className": "portal-trails ",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.1599642874671452,
+            "sources": 36,
+            "declared": 288,
+            "actual": 288,
+            "ribbons": 36,
+            "commonRibbons": 1,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(764.992px, -116.643px) rotate(11.9772deg) scale(0.493601, 0.65385)",
+                "opacity": 0.012153
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(972.46px, 64.1544px) rotate(73.2458deg) scale(0.219556, 0.519461)",
+                "opacity": 0.105263
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(906.365px, 268.229px) rotate(148.892deg) scale(0.153273, 0.362767)",
+                "opacity": 0.0870473
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(737.535px, 236.953px) rotate(236.977deg) scale(0.113803, 0.221704)",
+                "opacity": 0.0538961
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(750.456px, 121.445px) rotate(322.065deg) scale(0.0781526, 0.123947)",
+                "opacity": 0.0220705
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(813.232px, 117.196px) rotate(398.881deg) scale(0.0469497, 0.0693025)",
+                "opacity": 0.00363083
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(823.118px, 144.782px) rotate(466.806deg) scale(0.0212167, 0.0360043)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(813.819px, 158.883px) rotate(494.31deg) scale(0.0200933, 0.00796155)",
+                "opacity": 0
+              }
+            ]
+          }
+        ]
+      },
+      "decoration": {
+        "nav": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "backdrop": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "absorbing": "true",
+          "inert": true
+        },
+        "pools": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 1019.15px 479.28px, transparent 83.2578px, black 86.9569px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 72,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(905.211px, 129.948px) rotate(21.8751deg) scale(0.701862, 0.653819)",
+                "opacity": "0.0121169"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(584.783px, 183.397px) rotate(23.8456deg) scale(0.702125, 0.643418)",
+                "opacity": "0.00352873"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(535.918px, 200.301px) rotate(27.3686deg) scale(0.703256, 0.63279)",
+                "opacity": "0.000370423"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(475.699px, 217.108px) rotate(31.0216deg) scale(0.705196, 0.621933)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(397.752px, 234.01px) rotate(34.9362deg) scale(0.707881, 0.610854)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(325.879px, 252.608px) rotate(39.5534deg) scale(0.71124, 0.59956)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(273.516px, 266.648px) rotate(44.2188deg) scale(0.715197, 0.588065)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-84.1806px, 286.406px) rotate(55.9886deg) scale(0.542925, 0.576388)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-196.225px, 299.004px) rotate(62.4019deg) scale(0.66901, 0.564547)",
+                "opacity": "0"
+              }
+            ],
+            "common": null,
+            "ids": 0,
+            "handlers": 0
+          },
+          {
+            "className": "portal-trails portal-trails--cursor",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 1019.15px 479.28px, transparent 83.2578px, black 86.9569px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 16,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(510.843px, -196.957px) rotate(2.52478deg) scale(0.701862, 0.653819)",
+                "opacity": "0.0121169"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(535.926px, -195.233px) rotate(7.11111deg) scale(0.702125, 0.643418)",
+                "opacity": "0.00352873"
+              }
+            ],
+            "common": null,
+            "ids": 0,
+            "handlers": 0
+          },
+          {
+            "className": "portal-trails ",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 1019.15px 479.28px, transparent 83.2578px, black 86.9569px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 288,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(765.064px, -116.623px) rotate(11.9901deg) scale(0.493501, 0.653819)",
+                "opacity": "0.0121169"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(457.494px, -70.2245px) rotate(9.38006deg) scale(0.406547, 0.643418)",
+                "opacity": "0.00352873"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(159.112px, -28.801px) rotate(8.08655deg) scale(0.370528, 0.63279)",
+                "opacity": "0.000370423"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-106.08px, -14.5575px) rotate(36.3795deg) scale(0.351042, 0.621933)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(805.714px, -269.532px) rotate(376.286deg) scale(0.707881, 0.610854)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(697.796px, -245.687px) rotate(384.427deg) scale(0.579098, 0.59956)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(585.227px, -226.901px) rotate(390.594deg) scale(0.598489, 0.588065)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(481.436px, -209.923px) rotate(395.899deg) scale(0.588149, 0.576388)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(382.334px, -193.886px) rotate(400.742deg) scale(0.595297, 0.564547)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(271.117px, -178.202px) rotate(405.196deg) scale(0.469048, 0.552566)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(154.396px, -163.449px) rotate(408.787deg) scale(0.556395, 0.54047)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(103.576px, -126.39px) rotate(68.2246deg) scale(0.741193, 0.528285)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(953.421px, -241.745px) rotate(433.626deg) scale(0.747084, 0.516038)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(920.01px, -222.075px) rotate(438.848deg) scale(0.753031, 0.503757)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(889.854px, -202.593px) rotate(444.245deg) scale(0.758965, 0.491469)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(848.799px, -182.794px) rotate(449.687deg) scale(0.764821, 0.479203)",
+                "opacity": "0"
+              }
+            ],
+            "common": "M1150.40,336.06L1175.97,400.45L1179.60,465.55L1161.38,524.79L1123.25,570.41L1072.51,595.23L1019.81,596.47L975.55,577.02L946.91,544.24L936.18,507.33L940.95,474.40L955.49,450.08L974.59,435.98L993.48,431.17L1009.06,433.11L1020.08,438.96L1026.63,446.37L1029.54,453.81L1029.81,460.52L1028.35,466.21L1025.97,470.86L1023.32,474.55L1020.92,477.37L1019.28,479.15L1019.28,479.16L1021.05,477.50L1023.74,474.93L1026.87,471.51L1029.98,466.99L1032.41,461.03L1033.15,453.37L1030.87,444.20L1024.11,434.49L1011.71,426.20L993.39,422.26L970.53,426.25L946.73,441.46L927.99,469.43L921.95,508.16L934.05,551.12L966.63,588.98L1016.77,611.40L1076.14,610.34L1133.00,582.89L1175.56,532.44L1195.88,467.47L1192.24,396.87L1164.99,327.51Z",
+            "ids": 0,
+            "handlers": 0
+          }
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "direction": "forward",
+      "requested": 0.22,
+      "actual": 0.21995922408683968,
+      "file": "outputs/visual-revision-2026-10-09/g1-g2-implementation/intake/final-images/portal-0.22-forward-1440.png",
+      "sha256": "feacb7bb62af543255726ff4956064a4e84663cc572641588f3c198f36c8df22",
+      "chapter": "portal",
+      "manual": false,
+      "overflow": 0,
+      "canvas": 1,
+      "glError": 0,
+      "anchor": {
+        "x": 1102.140625,
+        "y": 458.984375,
+        "width": 133.265625,
+        "height": 114.890625,
+        "opacity": 1,
+        "transform": "none",
+        "inert": false
+      },
+      "resources": {
+        "geometries": 6,
+        "textures": 23
+      },
+      "copies": {
+        "count": 376,
+        "focusable": 0,
+        "layers": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.21995922408683968,
+            "sources": 9,
+            "declared": 72,
+            "actual": 72,
+            "ribbons": 9,
+            "commonRibbons": 0,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(873.862px, 532.228px) rotate(161.679deg) scale(0.430884, 0.339968)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(748.447px, 506.088px) rotate(224.278deg) scale(0.34903, 0.239651)",
+                "opacity": 0.080786
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(720.723px, 411.213px) rotate(286.02deg) scale(0.272674, 0.160486)",
+                "opacity": 0.0478151
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(767.339px, 361.495px) rotate(343.817deg) scale(0.202388, 0.105396)",
+                "opacity": 0.0213692
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(808.509px, 367.588px) rotate(397.546deg) scale(0.138942, 0.0700194)",
+                "opacity": 0.00534867
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(820.005px, 388.317px) rotate(448.199deg) scale(0.0834407, 0.0455218)",
+                "opacity": 0.0000488485
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(815.569px, 402.837px) rotate(483.889deg) scale(0.0588145, 0.024223)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(808.916px, 410.603px) rotate(494.749deg) scale(0.0143433, 0.00535638)",
+                "opacity": 0
+              }
+            ]
+          },
+          {
+            "className": "portal-trails portal-trails--cursor",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.21995922408683968,
+            "sources": 2,
+            "declared": 16,
+            "actual": 16,
+            "ribbons": 2,
+            "commonRibbons": 0,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(496.87px, 127.728px) rotate(161.679deg) scale(0.686826, 0.339968)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(371.455px, 101.588px) rotate(224.278deg) scale(0.556352, 0.239651)",
+                "opacity": 0.080786
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(343.731px, 6.71251px) rotate(286.02deg) scale(0.434641, 0.160486)",
+                "opacity": 0.0478151
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(390.346px, -43.0055px) rotate(343.817deg) scale(0.322606, 0.105396)",
+                "opacity": 0.0213692
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(431.517px, -36.9123px) rotate(397.546deg) scale(0.221472, 0.0700194)",
+                "opacity": 0.00534867
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(443.013px, -16.1832px) rotate(448.199deg) scale(0.133004, 0.0455218)",
+                "opacity": 0.0000488485
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(438.577px, -1.6635px) rotate(483.889deg) scale(0.09375, 0.024223)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(431.923px, 6.10337px) rotate(494.749deg) scale(0.0143433, 0.00535638)",
+                "opacity": 0
+              }
+            ]
+          },
+          {
+            "className": "portal-trails ",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.21995922408683968,
+            "sources": 36,
+            "declared": 288,
+            "actual": 288,
+            "ribbons": 36,
+            "commonRibbons": 1,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(749.435px, 249.426px) rotate(161.679deg) scale(0.147206, 0.339968)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(624.021px, 223.286px) rotate(224.278deg) scale(0.119242, 0.239651)",
+                "opacity": 0.080786
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(596.297px, 128.411px) rotate(286.02deg) scale(0.0931558, 0.160486)",
+                "opacity": 0.0478151
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(642.912px, 78.6928px) rotate(343.817deg) scale(0.0691436, 0.105396)",
+                "opacity": 0.0213692
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(684.082px, 84.7859px) rotate(397.546deg) scale(0.0474677, 0.0700194)",
+                "opacity": 0.00534867
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(695.578px, 105.515px) rotate(448.199deg) scale(0.0285065, 0.0455218)",
+                "opacity": 0.0000488485
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(691.143px, 120.035px) rotate(483.889deg) scale(0.0200933, 0.024223)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(684.489px, 127.802px) rotate(494.749deg) scale(0.0143433, 0.00535638)",
+                "opacity": 0
+              }
+            ]
+          }
+        ]
+      },
+      "decoration": {
+        "nav": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "backdrop": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "absorbing": "true",
+          "inert": true
+        },
+        "pools": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 890.64px 447.37px, transparent 178.778px, black 184.426px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 72,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(873.788px, 532.242px) rotate(161.704deg) scale(0.43085, 0.339925)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(497.933px, 536.389px) rotate(167.773deg) scale(0.813943, 0.329406)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(411.876px, 539.024px) rotate(173.894deg) scale(0.652387, 0.318971)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(316.523px, 540.133px) rotate(180.062deg) scale(0.637255, 0.308633)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(205.142px, 539.725px) rotate(186.273deg) scale(0.421165, 0.298406)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(103.706px, 536.114px) rotate(192.42deg) scale(0.813561, 0.288301)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(23.2508px, 532.87px) rotate(198.707deg) scale(0.688001, 0.278331)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-370.61px, 528.294px) rotate(205.023deg) scale(0.29199, 0.268508)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-506.258px, 522.485px) rotate(211.366deg) scale(0.371735, 0.258845)",
+                "opacity": "0"
+              }
+            ],
+            "common": null,
+            "ids": 0,
+            "handlers": 0
+          },
+          {
+            "className": "portal-trails portal-trails--cursor",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 890.64px 447.37px, transparent 178.778px, black 184.426px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 16,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(496.796px, 127.742px) rotate(161.704deg) scale(0.686772, 0.339925)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(483.105px, 131.889px) rotate(167.773deg) scale(0.813943, 0.329406)",
+                "opacity": "0"
+              }
+            ],
+            "common": null,
+            "ids": 0,
+            "handlers": 0
+          },
+          {
+            "className": "portal-trails ",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 890.64px 447.37px, transparent 178.778px, black 184.426px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 288,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(749.362px, 249.441px) rotate(161.704deg) scale(0.147195, 0.339925)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(389.921px, 250.316px) rotate(167.773deg) scale(0.131112, 0.329406)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(34.8724px, 256.222px) rotate(173.894deg) scale(0.142385, 0.318971)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-312.345px, 254.06px) rotate(180.062deg) scale(0.137819, 0.308633)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(641.665px, 58.7872px) rotate(546.273deg) scale(0.353368, 0.298406)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(501.307px, 55.1769px) rotate(552.42deg) scale(0.289192, 0.288301)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(358.774px, 51.9323px) rotate(558.707deg) scale(0.320649, 0.278331)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(227.242px, 47.3564px) rotate(565.023deg) scale(0.328132, 0.268508)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(102.508px, 41.5475px) rotate(571.366deg) scale(0.342513, 0.258845)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-31.6932px, 34.6225px) rotate(577.731deg) scale(0.267905, 0.249351)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-163.453px, 25.5021px) rotate(224.01deg) scale(0.328819, 0.240037)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-250.045px, 16.8878px) rotate(230.407deg) scale(0.725899, 0.230914)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(588.067px, -103.809px) rotate(596.812deg) scale(0.755564, 0.22199)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(543.552px, -113.617px) rotate(603.222deg) scale(0.783559, 0.213274)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(505.353px, -123.778px) rotate(609.634deg) scale(0.776831, 0.204773)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(463.317px, -134.669px) rotate(615.936deg) scale(0.769429, 0.196495)",
+                "opacity": "0"
+              }
+            ],
+            "common": "M954.35,560.34L912.06,566.83L872.62,559.14L840.63,539.96L818.99,513.42L808.66,484.14L808.68,456.34L816.63,433.06L829.40,415.68L844.61,404.78L859.85,399.81L873.40,399.58L884.33,402.66L892.32,407.68L897.55,413.55L900.41,419.52L901.42,425.13L901.05,430.16L899.75,434.53L897.88,438.26L895.79,441.37L893.75,443.93L891.98,445.93L890.76,447.24L890.77,447.25L892.07,446.03L894.02,444.19L896.36,441.85L898.88,438.94L901.33,435.31L903.39,430.79L904.58,425.21L904.29,418.58L901.81,411.13L896.42,403.43L887.53,396.46L874.88,391.59L858.75,390.51L840.21,395.06L821.28,406.77L804.83,426.48L794.85,453.86L794.52,486.43L806.21,520.47L830.83,551.14L867.14,573.22L911.69,582.19L959.24,575.15Z",
+            "ids": 0,
+            "handlers": 0
+          }
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "direction": "forward",
+      "requested": 0.28,
+      "actual": 0.2799619995954895,
+      "file": "outputs/visual-revision-2026-10-09/g1-g2-implementation/intake/final-images/portal-0.28-forward-1440.png",
+      "sha256": "824d025ecba30dfaad501d4a682b63dbef51afde495f9a1d2c8ff7c8c64fc412",
+      "chapter": "portal",
+      "manual": false,
+      "overflow": 0,
+      "canvas": 1,
+      "glError": 0,
+      "anchor": {
+        "x": 1102.140625,
+        "y": 458.984375,
+        "width": 133.265625,
+        "height": 114.890625,
+        "opacity": 1,
+        "transform": "none",
+        "inert": false
+      },
+      "resources": {
+        "geometries": 6,
+        "textures": 23
+      },
+      "copies": {
+        "count": 376,
+        "focusable": 0,
+        "layers": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.2799619995954895,
+            "sources": 9,
+            "declared": 72,
+            "actual": 72,
+            "ribbons": 9,
+            "commonRibbons": 0,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(655.748px, 333.417px) rotate(344.537deg) scale(0.201519, 0.104826)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(683.547px, 333.33px) rotate(376.614deg) scale(0.163183, 0.0821839)",
+                "opacity": 0.0167758
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(700.571px, 343.7px) rotate(407.758deg) scale(0.127442, 0.0646866)",
+                "opacity": 0.00576889
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(707.21px, 356.273px) rotate(437.938deg) scale(0.0945608, 0.0503148)",
+                "opacity": 0.000666325
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(706.999px, 366.887px) rotate(464.509deg) scale(0.0648955, 0.0372839)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(703.508px, 374.617px) rotate(483.163deg) scale(0.0588145, 0.0248662)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(699.271px, 379.97px) rotate(492.506deg) scale(0.0399706, 0.0132323)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(695.955px, 383.401px) rotate(494.947deg) scale(0.0077301, 0.00292602)",
+                "opacity": 0
+              }
+            ]
+          },
+          {
+            "className": "portal-trails portal-trails--cursor",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.2799619995954895,
+            "sources": 2,
+            "declared": 16,
+            "actual": 16,
+            "ribbons": 2,
+            "commonRibbons": 0,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(278.756px, -71.0831px) rotate(704.537deg) scale(0.32122, 0.104826)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(306.555px, -71.1695px) rotate(736.614deg) scale(0.260113, 0.0821839)",
+                "opacity": 0.0167758
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(323.579px, -60.7998px) rotate(767.758deg) scale(0.203142, 0.0646866)",
+                "opacity": 0.00576889
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(330.218px, -48.2271px) rotate(797.938deg) scale(0.150729, 0.0503148)",
+                "opacity": 0.000666325
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(330.006px, -37.6131px) rotate(824.509deg) scale(0.103443, 0.0372839)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(326.516px, -29.8831px) rotate(843.163deg) scale(0.09375, 0.0248662)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(322.279px, -24.5299px) rotate(852.506deg) scale(0.0399706, 0.0132323)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(318.962px, -21.0988px) rotate(854.947deg) scale(0.0077301, 0.00292602)",
+                "opacity": 0
+              }
+            ]
+          },
+          {
+            "className": "portal-trails ",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.2799619995954895,
+            "sources": 36,
+            "declared": 288,
+            "actual": 288,
+            "ribbons": 36,
+            "commonRibbons": 1,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(531.322px, 50.6151px) rotate(344.537deg) scale(0.0688464, 0.104826)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(559.12px, 50.5287px) rotate(376.614deg) scale(0.0557495, 0.0821839)",
+                "opacity": 0.0167758
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(576.145px, 60.8985px) rotate(407.758deg) scale(0.043539, 0.0646866)",
+                "opacity": 0.00576889
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(582.783px, 73.4711px) rotate(437.938deg) scale(0.0323056, 0.0503148)",
+                "opacity": 0.000666325
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(582.572px, 84.0851px) rotate(464.509deg) scale(0.0221708, 0.0372839)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(579.082px, 91.8151px) rotate(483.163deg) scale(0.0200933, 0.0248662)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(574.845px, 97.1683px) rotate(492.506deg) scale(0.0200933, 0.0132323)",
+                "opacity": 0
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(571.528px, 100.599px) rotate(494.947deg) scale(0.0077301, 0.00292602)",
+                "opacity": 0
+              }
+            ]
+          }
+        ]
+      },
+      "decoration": {
+        "nav": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "backdrop": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "absorbing": "true",
+          "inert": true
+        },
+        "pools": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 778.359px 419.49px, transparent 562.009px, black 575.479px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 72,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(655.756px, 333.408px) rotate(344.557deg) scale(0.201494, 0.10481)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(296.555px, 332.573px) rotate(347.732deg) scale(0.428982, 0.10235)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(227.356px, 331.919px) rotate(350.907deg) scale(0.304544, 0.0999442)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(148.876px, 331.442px) rotate(354.08deg) scale(0.297227, 0.0975915)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(54.19px, 331.135px) rotate(357.254deg) scale(0.196279, 0.0952912)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-30.7492px, 331.42px) rotate(360.302deg) scale(0.401582, 0.0930422)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-95.6178px, 331.425px) rotate(363.476deg) scale(0.321917, 0.0908436)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-474.592px, 331.576px) rotate(366.652deg) scale(0.136513, 0.0886942)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-596.21px, 331.865px) rotate(369.829deg) scale(0.173663, 0.0865929)",
+                "opacity": "0"
+              }
+            ],
+            "common": null,
+            "ids": 0,
+            "handlers": 0
+          },
+          {
+            "className": "portal-trails portal-trails--cursor",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 778.359px 419.49px, transparent 562.009px, black 575.479px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 16,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(278.764px, -71.0915px) rotate(704.557deg) scale(0.32118, 0.10481)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(281.727px, -71.9275px) rotate(707.732deg) scale(0.589756, 0.10235)",
+                "opacity": "0"
+              }
+            ],
+            "common": null,
+            "ids": 0,
+            "handlers": 0
+          },
+          {
+            "className": "portal-trails ",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 778.359px 419.49px, transparent 562.009px, black 575.479px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 288,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(531.33px, 50.6067px) rotate(344.557deg) scale(0.0688379, 0.10481)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(188.543px, 46.4999px) rotate(347.732deg) scale(0.0612595, 0.10235)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-149.647px, 49.1172px) rotate(350.907deg) scale(0.0664676, 0.0999442)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-479.992px, 45.3693px) rotate(354.08deg) scale(0.064281, 0.0975915)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(490.713px, -149.803px) rotate(717.254deg) scale(0.164683, 0.0952912)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(366.852px, -149.517px) rotate(720.302deg) scale(0.135427, 0.0930422)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(239.906px, -149.513px) rotate(723.476deg) scale(0.150032, 0.0908436)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(123.26px, -149.362px) rotate(726.652deg) scale(0.15341, 0.0886942)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(12.5557px, -149.072px) rotate(729.829deg) scale(0.160011, 0.0865929)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-108.611px, -148.653px) rotate(733.009deg) scale(0.125066, 0.0845384)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-229.115px, -147.727px) rotate(376.063deg) scale(0.154195, 0.0825294)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-305.118px, -147.085px) rotate(379.249deg) scale(0.340144, 0.0805646)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(542.309px, -257.746px) rotate(742.44deg) scale(0.353792, 0.0786425)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(505.78px, -256.907px) rotate(745.635deg) scale(0.483964, 0.0767615)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(474.205px, -255.981px) rotate(748.835deg) scale(0.435535, 0.0749202)",
+                "opacity": "0"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(436.409px, -254.655px) rotate(751.913deg) scale(0.424695, 0.0731168)",
+                "opacity": "0"
+              }
+            ],
+            "common": "M740.10,373.73L748.86,371.74L756.98,371.34L764.27,372.25L770.59,374.16L775.90,376.80L780.19,379.93L783.54,383.34L786.00,386.86L787.69,390.37L788.69,393.77L789.13,397.02L789.08,400.07L788.64,402.89L787.91,405.49L786.94,407.86L785.82,410.00L784.61,411.94L783.37,413.68L782.16,415.22L781.01,416.58L779.97,417.75L779.11,418.70L778.48,419.36L778.49,419.37L779.15,418.74L780.09,417.86L781.23,416.80L782.52,415.56L783.92,414.14L785.38,412.53L786.87,410.71L788.33,408.63L789.69,406.26L790.88,403.56L791.79,400.50L792.32,397.07L792.33,393.28L791.68,389.15L790.23,384.76L787.81,380.23L784.30,375.73L779.58,371.45L773.58,367.67L766.28,364.69L757.71,362.85L748.02,362.53L737.43,364.09Z",
+            "ids": 0,
+            "handlers": 0
+          }
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "direction": "reverse",
+      "requested": 0.1,
+      "actual": 0.10002422307013807,
+      "file": "outputs/visual-revision-2026-10-09/g1-g2-implementation/intake/final-images/portal-0.10-reverse-1440.png",
+      "sha256": "8e1aab39b3940a273dd5517e70b480850fc140392664f3dcd7e721ccb099305c",
+      "chapter": "portal",
+      "manual": false,
+      "overflow": 0,
+      "canvas": 1,
+      "glError": 0,
+      "anchor": {
+        "x": 1102.140625,
+        "y": 458.984375,
+        "width": 133.265625,
+        "height": 114.890625,
+        "opacity": 1,
+        "transform": "none",
+        "inert": false
+      },
+      "resources": {
+        "geometries": 6,
+        "textures": 23
+      },
+      "copies": {
+        "count": 376,
+        "focusable": 0,
+        "layers": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.10002422307013807,
+            "sources": 9,
+            "declared": 72,
+            "actual": 72,
+            "ribbons": 9,
+            "commonRibbons": 0,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(257.036px, 66.7596px) rotate(0.00713738deg) scale(0.84717, 0.84717)",
+                "opacity": 0.997154
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(721.341px, 69.0842px) rotate(1.9214deg) scale(0.730517, 0.726715)",
+                "opacity": 0.0968384
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1138.15px, 240.908px) rotate(48.9678deg) scale(0.712666, 0.595248)",
+                "opacity": 0.0829361
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1192.98px, 515.807px) rotate(116.924deg) scale(0.495469, 0.422977)",
+                "opacity": 0.0685144
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(994.538px, 574.324px) rotate(216.22deg) scale(0.35922, 0.25147)",
+                "opacity": 0.042684
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(974.212px, 436.056px) rotate(315.056deg) scale(0.23728, 0.130483)",
+                "opacity": 0.0155201
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1045.32px, 427.992px) rotate(403.44deg) scale(0.132276, 0.0669002)",
+                "opacity": 0.00158733
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1051.55px, 457.882px) rotate(476.865deg) scale(0.0588145, 0.0297382)",
+                "opacity": 0
+              }
+            ]
+          },
+          {
+            "className": "portal-trails portal-trails--cursor",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.10002422307013807,
+            "sources": 2,
+            "declared": 16,
+            "actual": 16,
+            "ribbons": 2,
+            "commonRibbons": 0,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(148.273px, -16.0959px) rotate(-0.0390896deg) scale(0.84717, 0.84717)",
+                "opacity": 0.997154
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(401.429px, -154.578px) rotate(-9.45316deg) scale(0.730517, 0.726715)",
+                "opacity": 0.0968384
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(742.193px, -139.1px) rotate(35.1104deg) scale(0.712666, 0.595248)",
+                "opacity": 0.0829361
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(815.985px, 111.307px) rotate(116.92deg) scale(0.78951, 0.422977)",
+                "opacity": 0.0685144
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(617.546px, 169.824px) rotate(216.22deg) scale(0.572595, 0.25147)",
+                "opacity": 0.042684
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(597.22px, 31.5562px) rotate(315.056deg) scale(0.378222, 0.130483)",
+                "opacity": 0.0155201
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(668.327px, 23.4916px) rotate(403.44deg) scale(0.210848, 0.0669002)",
+                "opacity": 0.00158733
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(674.557px, 53.3818px) rotate(476.865deg) scale(0.09375, 0.0297382)",
+                "opacity": 0
+              }
+            ]
+          },
+          {
+            "className": "portal-trails ",
+            "inert": true,
+            "ariaHidden": "true",
+            "hidden": false,
+            "progress": 0.10002422307013807,
+            "sources": 36,
+            "declared": 288,
+            "actual": 288,
+            "ribbons": 36,
+            "commonRibbons": 1,
+            "identities": 0,
+            "samples": [
+              {
+                "transform": "translate(-50%, -50%) translate(217.711px, 2.71182px) rotate(-0.0214239deg) scale(0.84717, 0.84717)",
+                "opacity": 0.997154
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(600.947px, -113.73px) rotate(-4.54037deg) scale(0.730517, 0.726715)",
+                "opacity": 0.0968384
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1003.16px, -31.8915px) rotate(42.2325deg) scale(0.342231, 0.595248)",
+                "opacity": 0.0829361
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(1068.55px, 233.005px) rotate(116.922deg) scale(0.169271, 0.422977)",
+                "opacity": 0.0685144
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(870.112px, 291.522px) rotate(216.22deg) scale(0.122723, 0.25147)",
+                "opacity": 0.042684
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(849.786px, 153.254px) rotate(315.056deg) scale(0.0810637, 0.130483)",
+                "opacity": 0.0155201
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(920.893px, 145.19px) rotate(403.44deg) scale(0.0451907, 0.0669002)",
+                "opacity": 0.00158733
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(927.123px, 175.08px) rotate(476.865deg) scale(0.0200933, 0.0297382)",
+                "opacity": 0
+              }
+            ]
+          }
+        ]
+      },
+      "decoration": {
+        "nav": {
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgba(0, 0, 0, 0)",
+          "backdrop": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "absorbing": "true",
+          "inert": true
+        },
+        "pools": [
+          {
+            "className": "portal-trails portal-trails--nav",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 1124.82px 505.517px, transparent 58.7106px, black 61.9087px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 72,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(256.979px, 66.755px) rotate(0.0071159deg) scale(0.847192, 0.847192)",
+                "opacity": "0.997165"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(161.358px, 78.592px) rotate(0.0253975deg) scale(0.847631, 0.847631)",
+                "opacity": "0.997384"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(141.599px, 80.1645px) rotate(0.0285992deg) scale(0.848127, 0.848127)",
+                "opacity": "0.997617"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(119.546px, 81.6095px) rotate(0.0324047deg) scale(0.848676, 0.848676)",
+                "opacity": "0.997859"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(93.4933px, 82.8394px) rotate(0.0377091deg) scale(0.849278, 0.849278)",
+                "opacity": "0.998106"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(70.5614px, 83.6384px) rotate(0.0420196deg) scale(0.849928, 0.849928)",
+                "opacity": "0.998351"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(52.7581px, 83.3448px) rotate(0.0433343deg) scale(0.850626, 0.850626)",
+                "opacity": "0.99859"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-43.8141px, 76.0422px) rotate(0.0820681deg) scale(0.851369, 0.851369)",
+                "opacity": "0.998818"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-74.5614px, 70.0907px) rotate(0.0763638deg) scale(0.852155, 0.852155)",
+                "opacity": "0.999032"
+              }
+            ],
+            "common": null,
+            "ids": 0,
+            "handlers": 0
+          },
+          {
+            "className": "portal-trails portal-trails--cursor",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 1124.82px 505.517px, transparent 58.7106px, black 61.9087px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 16,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(148.246px, -16.0815px) rotate(-0.0389278deg) scale(0.847192, 0.847192)",
+                "opacity": "0.997165"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(147.514px, -15.809px) rotate(-0.035827deg) scale(0.847631, 0.847631)",
+                "opacity": "0.997384"
+              }
+            ],
+            "common": null,
+            "ids": 0,
+            "handlers": 0
+          },
+          {
+            "className": "portal-trails ",
+            "hidden": false,
+            "mask": "radial-gradient(circle at 1124.82px 505.517px, transparent 58.7106px, black 61.9087px)",
+            "inert": true,
+            "ariaHidden": "true",
+            "copies": 288,
+            "primarySamples": [
+              {
+                "transform": "translate(-50%, -50%) translate(217.666px, 2.72393px) rotate(-0.0213328deg) scale(0.847192, 0.847192)",
+                "opacity": "0.997165"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(128.504px, 15.5348px) rotate(-0.0127511deg) scale(0.847631, 0.847631)",
+                "opacity": "0.997384"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(42.3513px, 24.7359px) rotate(0.0152546deg) scale(0.848127, 0.848127)",
+                "opacity": "0.997617"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-27.5481px, 17.0787px) rotate(0.214537deg) scale(0.848676, 0.848676)",
+                "opacity": "0.997859"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(190.966px, -41.1465px) rotate(0.333868deg) scale(0.849278, 0.849278)",
+                "opacity": "0.998106"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(158.943px, -35.0134px) rotate(0.28915deg) scale(0.849928, 0.849928)",
+                "opacity": "0.998351"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(126.032px, -28.9353px) rotate(0.245deg) scale(0.850626, 0.850626)",
+                "opacity": "0.99859"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(96.1061px, -23.4417px) rotate(0.202441deg) scale(0.851369, 0.851369)",
+                "opacity": "0.998818"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(68.0955px, -18.3334px) rotate(0.161568deg) scale(0.852155, 0.852155)",
+                "opacity": "0.999032"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(38.0786px, -12.8914px) rotate(0.119317deg) scale(0.852981, 0.852981)",
+                "opacity": "0.999228"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(9.31698px, -7.28555px) rotate(0.0723442deg) scale(0.853845, 0.853845)",
+                "opacity": "0.999403"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(-8.81471px, -2.31423px) rotate(0.0450458deg) scale(0.854746, 0.854746)",
+                "opacity": "0.999556"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(181.634px, -59.9175px) rotate(0.0538988deg) scale(0.85568, 0.85568)",
+                "opacity": "0.999684"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(171.06px, -57.1682px) rotate(0.0359589deg) scale(0.856646, 0.856646)",
+                "opacity": "0.999789"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(161.8px, -54.6582px) rotate(0.022154deg) scale(0.857642, 0.857642)",
+                "opacity": "0.999869"
+              },
+              {
+                "transform": "translate(-50%, -50%) translate(151.797px, -52.0162px) rotate(0.0121958deg) scale(0.858666, 0.858666)",
+                "opacity": "0.999928"
+              }
+            ],
+            "common": "M1257.87,360.10L1282.38,426.20L1285.38,491.74L1267.05,551.03L1228.92,596.65L1178.18,621.46L1125.48,622.71L1081.22,603.26L1052.58,570.48L1041.85,533.57L1046.62,500.64L1061.16,476.32L1080.26,462.22L1099.15,457.40L1114.73,459.35L1125.75,465.20L1132.30,472.61L1135.21,480.05L1135.48,486.76L1134.02,492.45L1131.64,497.10L1128.99,500.79L1126.59,503.61L1124.95,505.39L1124.95,505.39L1126.72,503.74L1129.41,501.17L1132.54,497.74L1135.65,493.23L1138.08,487.26L1138.82,479.60L1136.54,470.44L1129.78,460.73L1117.38,452.44L1099.06,448.49L1076.20,452.49L1052.40,467.70L1033.66,495.67L1027.62,534.39L1039.72,577.36L1072.30,615.22L1122.44,637.63L1181.81,636.57L1238.67,609.13L1281.23,558.68L1301.65,493.74L1298.71,422.88L1272.72,351.99Z",
+            "ids": 0,
+            "handlers": 0
+          }
+        ]
+      },
+      "sameDecorationAtReverse": false
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "Service Worker registration blocked by Playwright",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "Service Worker registration blocked by Playwright",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ],
+  "missing": []
+}

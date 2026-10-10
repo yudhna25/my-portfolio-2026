@@ -1,0 +1,48 @@
+{
+  "status": "pass",
+  "changed": [
+    "src/3d/components/StoryMeteor.jsx",
+    "src/3d/GalaxyScene.jsx",
+    "src/3d/utils/portal.js",
+    "src/3d/utils/storyMeteor.js",
+    "src/App.jsx",
+    "src/components/Cursor.jsx",
+    "src/components/effects/PortalHeading.jsx",
+    "src/components/layout/Nav.jsx",
+    "src/components/Preloader.jsx",
+    "src/components/sections/Experience.jsx",
+    "src/styles/hero.css"
+  ],
+  "added": [
+    "src/components/effects/portalTrails.js",
+    "src/styles/opening.css",
+    "src/styles/portal-trails.css"
+  ],
+  "baselineFiles": 119,
+  "unchanged": 108,
+  "sourceFiles": 118,
+  "buildAt": "2026-10-10T06:06:06.028Z",
+  "agentsPrefixBytes": 61967,
+  "parity": [
+    {
+      "vi": "src/i18n/locales/vi.json",
+      "en": "src/i18n/locales/en.json",
+      "keys": 254
+    },
+    {
+      "vi": "src/i18n/locales/vi/lab.json",
+      "en": "src/i18n/locales/en/lab.json",
+      "keys": 93
+    },
+    {
+      "vi": "src/i18n/locales/vi/scene.json",
+      "en": "src/i18n/locales/en/scene.json",
+      "keys": 2
+    }
+  ],
+  "protected": {
+    "status": "pass",
+    "protected": 56,
+    "changed": []
+  }
+}

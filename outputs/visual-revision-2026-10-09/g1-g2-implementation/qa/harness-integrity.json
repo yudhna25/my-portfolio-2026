@@ -1,0 +1,20 @@
+{
+  "outputs/visual-revision-2026-10-09/g1-g2-implementation/qa/build-production.mjs": "e795908e79e5cc48bbca1a8f20599b8458bc37dd74c7341a4a4df952f1937473",
+  "outputs/visual-revision-2026-10-09/g1-g2-implementation/qa/capture-clips.mjs": "1271a61e5e4303ec69e65f313068af14d4cc147ba694c72a61ae7882d60e0222",
+  "outputs/visual-revision-2026-10-09/g1-g2-implementation/qa/check-final.mjs": "7989aee34e4b87386ee8c102fa1f7bcc4c80460daaab7c904e10966bfd752521",
+  "outputs/visual-revision-2026-10-09/g1-g2-implementation/qa/check-gallery.mjs": "f1f4bb9cae56a4a5b26528453a417bdf27c86e36942bd9e087c9f9d841638bd6",
+  "outputs/visual-revision-2026-10-09/g1-g2-implementation/qa/check-observer.mjs": "9cd7d5112334ea8a03ea3f38eb65521f4ade58c7c76603a416379ba9f5730586",
+  "outputs/visual-revision-2026-10-09/g1-g2-implementation/qa/common.mjs": "d1b0364ae25314cbb2b37972db26639f4454a379a79bd10ddb128b7a8e47e726",
+  "outputs/visual-revision-2026-10-09/g1-g2-implementation/qa/encode-review.mjs": "9c4c1c3981915cdead3dce7db45d4fea60b17ae01beb03391060015255d06930",
+  "outputs/visual-revision-2026-10-09/g1-g2-implementation/qa/measure-performance.mjs": "3354a9b5b7319ff2116e7a181a51032d514119e688492900a92a13f1702ed2a5",
+  "outputs/visual-revision-2026-10-09/g1-g2-implementation/qa/probe-menu.mjs": "e40ed01aaf91e1b272a34f96af0c8711dbb0d9e74de7e6f955496da1c00132ea",
+  "outputs/visual-revision-2026-10-09/g1-g2-implementation/qa/probe-motion.mjs": "1d99e276905ee22397bdfeaba1cf0b25be710d461d26b4a946c433755a48f705",
+  "outputs/visual-revision-2026-10-09/g1-g2-implementation/qa/profile-paint.mjs": "285df63d160b104d987e21b30e9463f479175006e5b4fbb837e236b9454fb064",
+  "outputs/visual-revision-2026-10-09/g1-g2-implementation/qa/profile-year.mjs": "4e07dce1821dfe710eff47a4b7b6b8fce44ade45d891f592b1bdeb4f0b337311",
+  "outputs/visual-revision-2026-10-09/g1-g2-implementation/qa/protected-source.mjs": "e50555718fadc7dd64a79a2340806d1e22769edc797aa20c7c948e6f5c2fd7c6",
+  "outputs/visual-revision-2026-10-09/g1-g2-implementation/qa/update-status.mjs": "494a92871ab8d859e49b12d1ab4a47ad0d283309866f67adffd0c36aae8f8817",
+  "outputs/visual-revision-2026-10-09/g1-g2-implementation/qa/verify-browser.mjs": "f0122673d442a21eafee0950f8419481986e808a8d973bf53fb9f245c9f3b3b6",
+  "outputs/visual-revision-2026-10-09/g1-g2-implementation/qa/verify-extras.mjs": "e9d0bfa9c440264e30c49371873358a70569b92d0116698de4208923d85bebae",
+  "outputs/visual-revision-2026-10-09/g1-g2-implementation/qa/verify-opening-fallback.mjs": "39298b1194582cb3e5a1d6f77cc2497b6c7d0423b3ac0ca299a2eb64f69427e9",
+  "outputs/visual-revision-2026-10-09/g1-g2-implementation/qa/write-review.mjs": "6113220251ef07e866abe37f000be381cb3ef3bee5c3e1e5a6ab2f817eec1b46"
+}

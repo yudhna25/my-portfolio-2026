@@ -1,0 +1,745 @@
+{
+  "status": "pass",
+  "records": [
+    {
+      "width": 390,
+      "height": 1440,
+      "y": 11592.015625,
+      "grace": "edura",
+      "closed": {
+        "chapter": "works",
+        "p": 0.3,
+        "selection": null,
+        "hover": null,
+        "focus": null,
+        "orbit": {
+          "phase": 0.03946888785479305,
+          "origin": 0,
+          "velocity": 0.035436672871241935,
+          "latched": false,
+          "visited": true,
+          "captures": 0,
+          "resumePending": false
+        },
+        "camera": [
+          0,
+          4,
+          -160
+        ],
+        "quaternion": [
+          -0.01942139637313905,
+          -0.47336075178448217,
+          -0.010439931316870618,
+          0.8805926503594307
+        ],
+        "arts": [
+          {
+            "name": "education-art-anchor-saigonUniversity",
+            "visible": false,
+            "parent": true,
+            "loaded": false
+          },
+          {
+            "name": "education-art-saigonUniversity",
+            "visible": false,
+            "parent": false,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "education-art-anchor-greenAcademy",
+            "visible": false,
+            "parent": true,
+            "loaded": false
+          },
+          {
+            "name": "education-art-greenAcademy",
+            "visible": false,
+            "parent": false,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "education-art-anchor-arenaMultimedia",
+            "visible": false,
+            "parent": true,
+            "loaded": false
+          },
+          {
+            "name": "education-art-arenaMultimedia",
+            "visible": false,
+            "parent": false,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "works-art-edura",
+            "visible": true,
+            "parent": true,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "works-art-veris",
+            "visible": true,
+            "parent": true,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "works-art-vie",
+            "visible": true,
+            "parent": true,
+            "opacity": 0.1,
+            "loaded": true
+          }
+        ],
+        "width": 390,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "boxes": [
+          {
+            "id": "edura",
+            "x": 113.5761947631836,
+            "y": 144.00311279296875,
+            "w": 163.15625,
+            "h": 157.171875
+          },
+          {
+            "id": "veris",
+            "x": 27.38248634338379,
+            "y": 336.1624450683594,
+            "w": 174.375,
+            "h": 176.12503051757812
+          },
+          {
+            "id": "vie",
+            "x": 206.84674072265625,
+            "y": 329.0404968261719,
+            "w": 155.609375,
+            "h": 189.82815551757812
+          }
+        ],
+        "active": "",
+        "canvas": 1,
+        "smoother": true,
+        "triggers": 3,
+        "resources": {
+          "geometries": 15,
+          "textures": 4
+        },
+        "calls": 14,
+        "y": 11592.015625,
+        "pool": {
+          "target": null,
+          "formation": 0
+        }
+      },
+      "rapid": [
+        {
+          "id": "edura",
+          "selection": "edura"
+        },
+        {
+          "id": "veris",
+          "selection": "veris"
+        },
+        {
+          "id": "vie",
+          "selection": "vie"
+        },
+        {
+          "id": "edura",
+          "selection": "edura"
+        },
+        {
+          "id": "veris",
+          "selection": "veris"
+        },
+        {
+          "id": "vie",
+          "selection": "vie"
+        },
+        {
+          "id": "edura",
+          "selection": "edura"
+        },
+        {
+          "id": "veris",
+          "selection": "veris"
+        },
+        {
+          "id": "vie",
+          "selection": "vie"
+        },
+        {
+          "id": "edura",
+          "selection": "edura"
+        },
+        {
+          "id": "veris",
+          "selection": "veris"
+        },
+        {
+          "id": "vie",
+          "selection": "vie"
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "height": 1440,
+      "y": 10857.421875,
+      "grace": "edura",
+      "closed": {
+        "chapter": "works",
+        "p": 0.3,
+        "selection": null,
+        "hover": null,
+        "focus": null,
+        "orbit": {
+          "phase": 0.019268719197261266,
+          "origin": 0,
+          "velocity": 0.036667684815761804,
+          "latched": false,
+          "visited": true,
+          "captures": 0,
+          "resumePending": false
+        },
+        "camera": [
+          0,
+          4,
+          -160
+        ],
+        "quaternion": [
+          -0.01942139637313905,
+          -0.47336075178448217,
+          -0.010439931316870618,
+          0.8805926503594307
+        ],
+        "arts": [
+          {
+            "name": "education-art-anchor-saigonUniversity",
+            "visible": false,
+            "parent": true,
+            "loaded": false
+          },
+          {
+            "name": "education-art-saigonUniversity",
+            "visible": false,
+            "parent": false,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "education-art-anchor-greenAcademy",
+            "visible": false,
+            "parent": true,
+            "loaded": false
+          },
+          {
+            "name": "education-art-greenAcademy",
+            "visible": false,
+            "parent": false,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "education-art-anchor-arenaMultimedia",
+            "visible": false,
+            "parent": true,
+            "loaded": false
+          },
+          {
+            "name": "education-art-arenaMultimedia",
+            "visible": false,
+            "parent": false,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "works-art-edura",
+            "visible": true,
+            "parent": true,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "works-art-veris",
+            "visible": true,
+            "parent": true,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "works-art-vie",
+            "visible": true,
+            "parent": true,
+            "opacity": 0.1,
+            "loaded": true
+          }
+        ],
+        "width": 768,
+        "scrollWidth": 768,
+        "clientWidth": 768,
+        "boxes": [
+          {
+            "id": "edura",
+            "x": 271.6997985839844,
+            "y": 144.00074768066406,
+            "w": 224.75,
+            "h": 216.49998474121094
+          },
+          {
+            "id": "veris",
+            "x": 27.424922943115234,
+            "y": 398.0111083984375,
+            "w": 240.203125,
+            "h": 242.609375
+          },
+          {
+            "id": "vie",
+            "x": 526.1439208984375,
+            "y": 388.4438781738281,
+            "w": 214.34375,
+            "h": 261.4843444824219
+          }
+        ],
+        "active": "",
+        "canvas": 1,
+        "smoother": true,
+        "triggers": 3,
+        "resources": {
+          "geometries": 16,
+          "textures": 26
+        },
+        "calls": 1,
+        "y": 10857.421875,
+        "pool": {
+          "target": null,
+          "formation": 0
+        }
+      },
+      "rapid": [
+        {
+          "id": "edura",
+          "selection": "edura"
+        },
+        {
+          "id": "veris",
+          "selection": "veris"
+        },
+        {
+          "id": "vie",
+          "selection": "vie"
+        },
+        {
+          "id": "edura",
+          "selection": "edura"
+        },
+        {
+          "id": "veris",
+          "selection": "veris"
+        },
+        {
+          "id": "vie",
+          "selection": "vie"
+        },
+        {
+          "id": "edura",
+          "selection": "edura"
+        },
+        {
+          "id": "veris",
+          "selection": "veris"
+        },
+        {
+          "id": "vie",
+          "selection": "vie"
+        },
+        {
+          "id": "edura",
+          "selection": "edura"
+        },
+        {
+          "id": "veris",
+          "selection": "veris"
+        },
+        {
+          "id": "vie",
+          "selection": "vie"
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 1440,
+      "y": 10197.90625,
+      "grace": "edura",
+      "closed": {
+        "chapter": "works",
+        "p": 0.3,
+        "selection": null,
+        "hover": null,
+        "focus": null,
+        "orbit": {
+          "phase": 0.013054686300890218,
+          "origin": 0,
+          "velocity": 0.036871882194658624,
+          "latched": false,
+          "visited": true,
+          "captures": 0,
+          "resumePending": false
+        },
+        "camera": [
+          0,
+          4,
+          -160
+        ],
+        "quaternion": [
+          -0.012697642456594214,
+          -0.5558083969169416,
+          -0.008490989369735549,
+          0.8311700781983113
+        ],
+        "arts": [
+          {
+            "name": "education-art-anchor-saigonUniversity",
+            "visible": false,
+            "parent": true,
+            "loaded": false
+          },
+          {
+            "name": "education-art-saigonUniversity",
+            "visible": false,
+            "parent": false,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "education-art-anchor-greenAcademy",
+            "visible": false,
+            "parent": true,
+            "loaded": false
+          },
+          {
+            "name": "education-art-greenAcademy",
+            "visible": false,
+            "parent": false,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "education-art-anchor-arenaMultimedia",
+            "visible": false,
+            "parent": true,
+            "loaded": false
+          },
+          {
+            "name": "education-art-arenaMultimedia",
+            "visible": false,
+            "parent": false,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "works-art-edura",
+            "visible": true,
+            "parent": true,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "works-art-veris",
+            "visible": true,
+            "parent": true,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "works-art-vie",
+            "visible": true,
+            "parent": true,
+            "opacity": 0.1,
+            "loaded": true
+          }
+        ],
+        "width": 1440,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "boxes": [
+          {
+            "id": "edura",
+            "x": 48.104434967041016,
+            "y": 184.7461700439453,
+            "w": 347.234375,
+            "h": 334.5
+          },
+          {
+            "id": "veris",
+            "x": 1027.7435302734375,
+            "y": 176.6652374267578,
+            "w": 371.125,
+            "h": 374.84375
+          },
+          {
+            "id": "vie",
+            "x": 547.431884765625,
+            "y": 467.9092102050781,
+            "w": 331.171875,
+            "h": 403.9999694824219
+          }
+        ],
+        "active": "",
+        "canvas": 1,
+        "smoother": true,
+        "triggers": 3,
+        "resources": {
+          "geometries": 16,
+          "textures": 26
+        },
+        "calls": 1,
+        "y": 10197.90625,
+        "pool": {
+          "target": null,
+          "formation": 0
+        }
+      },
+      "rapid": [
+        {
+          "id": "edura",
+          "selection": "edura"
+        },
+        {
+          "id": "veris",
+          "selection": "veris"
+        },
+        {
+          "id": "vie",
+          "selection": "vie"
+        },
+        {
+          "id": "edura",
+          "selection": "edura"
+        },
+        {
+          "id": "veris",
+          "selection": "veris"
+        },
+        {
+          "id": "vie",
+          "selection": "vie"
+        },
+        {
+          "id": "edura",
+          "selection": "edura"
+        },
+        {
+          "id": "veris",
+          "selection": "veris"
+        },
+        {
+          "id": "vie",
+          "selection": "vie"
+        },
+        {
+          "id": "edura",
+          "selection": "edura"
+        },
+        {
+          "id": "veris",
+          "selection": "veris"
+        },
+        {
+          "id": "vie",
+          "selection": "vie"
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "height": 1440,
+      "y": 10210.578125,
+      "grace": "edura",
+      "closed": {
+        "chapter": "works",
+        "p": 0.3,
+        "selection": null,
+        "hover": null,
+        "focus": null,
+        "orbit": {
+          "phase": 0.018587926731395976,
+          "origin": 0,
+          "velocity": 0.03656743961229458,
+          "latched": false,
+          "visited": true,
+          "captures": 0,
+          "resumePending": false
+        },
+        "camera": [
+          0,
+          4,
+          -160
+        ],
+        "quaternion": [
+          -0.010994079945302996,
+          -0.5759963316189463,
+          -0.007747739182419645,
+          0.8173416230103754
+        ],
+        "arts": [
+          {
+            "name": "education-art-anchor-saigonUniversity",
+            "visible": false,
+            "parent": true,
+            "loaded": false
+          },
+          {
+            "name": "education-art-saigonUniversity",
+            "visible": false,
+            "parent": false,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "education-art-anchor-greenAcademy",
+            "visible": false,
+            "parent": true,
+            "loaded": false
+          },
+          {
+            "name": "education-art-greenAcademy",
+            "visible": false,
+            "parent": false,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "education-art-anchor-arenaMultimedia",
+            "visible": false,
+            "parent": true,
+            "loaded": false
+          },
+          {
+            "name": "education-art-arenaMultimedia",
+            "visible": false,
+            "parent": false,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "works-art-edura",
+            "visible": true,
+            "parent": true,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "works-art-veris",
+            "visible": true,
+            "parent": true,
+            "opacity": 0.1,
+            "loaded": true
+          },
+          {
+            "name": "works-art-vie",
+            "visible": true,
+            "parent": true,
+            "opacity": 0.1,
+            "loaded": true
+          }
+        ],
+        "width": 1920,
+        "scrollWidth": 1920,
+        "clientWidth": 1920,
+        "boxes": [
+          {
+            "id": "edura",
+            "x": 48.1486930847168,
+            "y": 184.7468719482422,
+            "w": 347.234375,
+            "h": 334.5
+          },
+          {
+            "id": "veris",
+            "x": 1507.7208251953125,
+            "y": 176.70321655273438,
+            "w": 371.125,
+            "h": 374.8437805175781
+          },
+          {
+            "id": "vie",
+            "x": 787.4103393554688,
+            "y": 467.87054443359375,
+            "w": 331.17193603515625,
+            "h": 404
+          }
+        ],
+        "active": "",
+        "canvas": 1,
+        "smoother": true,
+        "triggers": 3,
+        "resources": {
+          "geometries": 16,
+          "textures": 26
+        },
+        "calls": 1,
+        "y": 10210.578125,
+        "pool": {
+          "target": null,
+          "formation": 0
+        }
+      },
+      "rapid": [
+        {
+          "id": "edura",
+          "selection": "edura"
+        },
+        {
+          "id": "veris",
+          "selection": "veris"
+        },
+        {
+          "id": "vie",
+          "selection": "vie"
+        },
+        {
+          "id": "edura",
+          "selection": "edura"
+        },
+        {
+          "id": "veris",
+          "selection": "veris"
+        },
+        {
+          "id": "vie",
+          "selection": "vie"
+        },
+        {
+          "id": "edura",
+          "selection": "edura"
+        },
+        {
+          "id": "veris",
+          "selection": "veris"
+        },
+        {
+          "id": "vie",
+          "selection": "vie"
+        },
+        {
+          "id": "edura",
+          "selection": "edura"
+        },
+        {
+          "id": "veris",
+          "selection": "veris"
+        },
+        {
+          "id": "vie",
+          "selection": "vie"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "status": "measured",
+  "records": [
+    {
+      "label": "opening-observed-remainder",
+      "elapsed": 1413.8999999999069,
+      "frames": 44,
+      "fps": 31.11959827427887,
+      "frameMs": {
+        "p50": 26.399999999906868,
+        "p95": 41.200000000186265,
+        "p99": 245.10000000009313,
+        "maximum": 245.10000000009313,
+        "over16": 35
+      },
+      "dpr": 1,
+      "resources": {
+        "geometries": 6,
+        "textures": 23
+      },
+      "subscribers": 19,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "glError": 0
+    },
+    {
+      "label": "intake-native-scroll",
+      "elapsed": 5774.700000000186,
+      "frames": 11,
+      "fps": 1.9048608585726783,
+      "frameMs": {
+        "p50": 571.8000000002794,
+        "p95": 824.7999999998137,
+        "p99": 824.7999999998137,
+        "maximum": 824.7999999998137,
+        "over16": 10
+      },
+      "dpr": 1,
+      "resources": {
+        "geometries": 6,
+        "textures": 23
+      },
+      "subscribers": 19,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "glError": 0
+    },
+    {
+      "label": "meteor-flare-native-scroll",
+      "elapsed": 2536.100000000093,
+      "frames": 418,
+      "fps": 164.81999921138151,
+      "frameMs": {
+        "p50": 6.099999999627471,
+        "p95": 7,
+        "p99": 8.5,
+        "maximum": 9.800000000279397,
+        "over16": 0
+      },
+      "dpr": 1,
+      "resources": {
+        "geometries": 12,
+        "textures": 26
+      },
+      "subscribers": 19,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 4060 (0x00002882) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "glError": 0
+    }
+  ]
+}

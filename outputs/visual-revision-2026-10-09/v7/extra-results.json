@@ -1,0 +1,227 @@
+{
+  "cases": [
+    {
+      "name": "3 Canvas lifecycle/disposal cycles",
+      "passed": true,
+      "cycles": [
+        {
+          "before": {
+            "memory": {
+              "geometries": 15,
+              "textures": 26
+            },
+            "ready": true
+          },
+          "after": {
+            "memory": {
+              "geometries": 0,
+              "textures": 0
+            },
+            "canvas": 0,
+            "ready": false,
+            "subscriber": "function"
+          },
+          "restored": {
+            "geometries": 15,
+            "textures": 26
+          }
+        },
+        {
+          "before": {
+            "memory": {
+              "geometries": 15,
+              "textures": 26
+            },
+            "ready": true
+          },
+          "after": {
+            "memory": {
+              "geometries": 0,
+              "textures": 0
+            },
+            "canvas": 0,
+            "ready": false,
+            "subscriber": "function"
+          },
+          "restored": {
+            "geometries": 15,
+            "textures": 26
+          }
+        },
+        {
+          "before": {
+            "memory": {
+              "geometries": 15,
+              "textures": 26
+            },
+            "ready": true
+          },
+          "after": {
+            "memory": {
+              "geometries": 0,
+              "textures": 0
+            },
+            "canvas": 0,
+            "ready": false,
+            "subscriber": "function"
+          },
+          "restored": {
+            "geometries": 15,
+            "textures": 26
+          }
+        }
+      ]
+    },
+    {
+      "name": "semantic fallback clears projected transforms and restores them",
+      "passed": true,
+      "fallbackDOM": [
+        {
+          "rect": {
+            "x": 327.09375,
+            "y": 203.6571502685547,
+            "width": 81.8125,
+            "height": 53.14060974121094,
+            "top": 203.6571502685547,
+            "right": 408.90625,
+            "bottom": 256.7977600097656,
+            "left": 327.09375
+          },
+          "hidden": false,
+          "transform": "",
+          "width": "",
+          "height": ""
+        },
+        {
+          "rect": {
+            "x": 683.671875,
+            "y": 203.6571502685547,
+            "width": 72.65625,
+            "height": 53.14060974121094,
+            "top": 203.6571502685547,
+            "right": 756.328125,
+            "bottom": 256.7977600097656,
+            "left": 683.671875
+          },
+          "hidden": false,
+          "transform": "",
+          "width": "",
+          "height": ""
+        },
+        {
+          "rect": {
+            "x": 1026.375,
+            "y": 203.6571502685547,
+            "width": 91.234375,
+            "height": 53.14060974121094,
+            "top": 203.6571502685547,
+            "right": 1117.609375,
+            "bottom": 256.7977600097656,
+            "left": 1026.375
+          },
+          "hidden": false,
+          "transform": "",
+          "width": "",
+          "height": ""
+        }
+      ]
+    },
+    {
+      "name": "native keyboard entry from preceding chapter",
+      "passed": true,
+      "entry": {
+        "focus": "work-target-edura",
+        "chapter": "works",
+        "p": 0,
+        "target": "edura"
+      }
+    },
+    {
+      "name": "actual GL draw-backed frame counter",
+      "passed": true,
+      "value": {
+        "frames": 413,
+        "empty": 0,
+        "totalDraws": 13662,
+        "duration": 2500.5,
+        "fps": 165.16696660667867,
+        "drawsPerFrame": 33.07990314769976
+      }
+    },
+    {
+      "name": "deterministic fresh finale seed/reverse",
+      "passed": true,
+      "deep": {
+        "orbit": {
+          "phase": 0,
+          "origin": 0,
+          "velocity": 0,
+          "latched": true,
+          "visited": false,
+          "captures": 1,
+          "resumePending": false
+        },
+        "positions": [
+          [
+            -19.47701499992432,
+            3.808041764346305,
+            3.106440099753337
+          ],
+          [
+            -5.790247650969445,
+            -3.5134171816620565,
+            3.106440099753337
+          ],
+          [
+            -15.038689128478845,
+            -4.329351198991567,
+            3.106440099753337
+          ]
+        ]
+      }
+    },
+    {
+      "name": "fresh reduced boot",
+      "passed": true,
+      "pose": {
+        "phase": 0,
+        "positions": [
+          [
+            0.35467645110805407,
+            14.538600383694073,
+            0
+          ],
+          [
+            -5.9498998468145405,
+            0.0038778650448169916,
+            0
+          ],
+          [
+            6.359477812489547,
+            -0.11643627108359225,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "artwork 404 leaves stars/semantic controls usable",
+      "passed": true,
+      "expected404": true,
+      "fallback": {
+        "visible": true,
+        "opacity": [
+          0,
+          0,
+          0
+        ],
+        "targets": [
+          true,
+          true,
+          true
+        ]
+      }
+    }
+  ],
+  "errors": []
+}

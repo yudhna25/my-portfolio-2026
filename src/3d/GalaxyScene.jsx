@@ -36,6 +36,15 @@ function isHidden() {
   return typeof document !== 'undefined' && document.hidden;
 }
 
+function SceneReady() {
+  const frames = useRef(0);
+  useFrame(({ gl }) => {
+    // Observe completed frames including the HDR image, rather than Canvas creation.
+    if (++frames.current === 3) gl.domElement.closest('[data-galaxy-scene]')?.setAttribute('data-scene-ready', 'true');
+  }, -0.25);
+  return null;
+}
+
 export function GalaxyScene({ children, count, quality: chosenQuality, rayQuality, enableBloom = true, story = false, freezeAmbient = story }) {
   const host = useRef(null);
   const [contextLost, setContextLost] = useState(false);
@@ -77,6 +86,7 @@ export function GalaxyScene({ children, count, quality: chosenQuality, rayQualit
                 <Nebula position={[-16, 5, -270]} scale={[50, 30, 1]} colorA="#262626" colorB="#5A5A5A" frozen={ambientFrozen} quality={quality} story={story} />
               </PortalBackdrop>
               <BlackHoleSystem frozen={ambientFrozen} reduced={frozen} story={story} quality={quality} enableBloom={enableBloom} />
+              <SceneReady />
               {!hidden && !ambientFrozen && <ShootingStars frozen={frozen} story={story} />}
               {typeof children === 'function' ? children(quality) : children}
             </Selection>

@@ -1,5 +1,7 @@
 # V3 → G1 — Bản tích hợp Hero / O / portal
 
+> **Cập nhật 10/10/2026 — G1 mở lại; phương án mới đã chốt, chưa sửa code.** Đọc [kế hoạch G1/G2](../../../docs/ke-hoach-tinh-chinh-g1-g2-2026-10-10.md): opening vòng sáng tâm→O, năm chủ đạo không border/vệt chậm dài, text/Nav chuỗi+dải xoắn. Giữ stars intake và O/BH; G1 phải được review lại trên bản sửa. G2 cũng chưa duyệt, V9/G3 chưa bắt đầu. Bàn giao và gallery bên dưới là lịch sử V3; baseline tích hợp hiện tại là [V8 handoff](../v8/handoff.md), không chạy lại V5/V6/V7 theo trạng thái cũ.
+
 09/10/2026. **Chỉ thực hiện V3. Chờ người dùng duyệt G1; chưa thực hiện V5/V6/V7.** V4 giữ quyền làm độc lập. Đường dẫn trong tài liệu tính từ gốc repo.
 
 ## Bản review

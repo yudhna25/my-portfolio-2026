@@ -1,0 +1,156 @@
+{
+  "scope": "Existing production fallback controls + R6.2 route; projected-figure wiring remains V8",
+  "cases": [],
+  "errors": [],
+  "diagnostic": {
+    "width": 390,
+    "before": {
+      "url": "/",
+      "chapter": "hero",
+      "p": 0,
+      "selection": null,
+      "orbit": {
+        "phase": 0,
+        "origin": 0,
+        "velocity": 0,
+        "latched": false,
+        "visited": false,
+        "captures": 0,
+        "resumePending": false
+      },
+      "y": 10809.00737,
+      "focus": "work-target-edura",
+      "canvas": 1,
+      "smoother": true,
+      "history": null
+    },
+    "reader": {
+      "url": "/projects/edura",
+      "chapter": "hero",
+      "p": 0,
+      "selection": null,
+      "orbit": {
+        "phase": 0,
+        "origin": 0,
+        "velocity": 0,
+        "latched": false,
+        "visited": false,
+        "captures": 0,
+        "resumePending": false
+      },
+      "y": 0,
+      "focus": "edura-title",
+      "canvas": 0,
+      "smoother": false,
+      "history": {
+        "stellar": {
+          "id": "bdb8ac3d-6c72-4bd0-a6f7-9192ef5e1e0c",
+          "from": "49855a8d-d784-42f7-8233-de236d00a4f2"
+        }
+      }
+    },
+    "after": {
+      "url": "/",
+      "chapter": "hero",
+      "p": 0,
+      "selection": null,
+      "orbit": {
+        "phase": 0,
+        "origin": 0,
+        "velocity": 0,
+        "latched": false,
+        "visited": false,
+        "captures": 0,
+        "resumePending": false
+      },
+      "y": 10809.006903290277,
+      "focus": "work-target-edura",
+      "canvas": 1,
+      "smoother": true,
+      "history": {
+        "stellar": {
+          "id": "49855a8d-d784-42f7-8233-de236d00a4f2",
+          "snapshot": {
+            "y": 10809.00737,
+            "width": 390,
+            "height": 844,
+            "chapter": "works",
+            "p": 0.00024809731649136515,
+            "scrollProgress": 0.72461,
+            "selection": "edura",
+            "orbit": {
+              "phase": 0,
+              "origin": 0,
+              "velocity": 0,
+              "latched": false,
+              "visited": true,
+              "captures": 0,
+              "resumePending": false
+            },
+            "pose": [
+              0,
+              4,
+              -160,
+              75.60000000000001,
+              0,
+              -210
+            ],
+            "focus": "work-case-edura"
+          }
+        }
+      }
+    },
+    "settled": {
+      "url": "/",
+      "chapter": "hero",
+      "p": 0,
+      "selection": null,
+      "orbit": {
+        "phase": 0,
+        "origin": 0,
+        "velocity": 0,
+        "latched": false,
+        "visited": false,
+        "captures": 0,
+        "resumePending": false
+      },
+      "y": 10809,
+      "focus": "work-target-edura",
+      "canvas": 1,
+      "smoother": true,
+      "history": {
+        "stellar": {
+          "id": "49855a8d-d784-42f7-8233-de236d00a4f2",
+          "snapshot": {
+            "y": 10809.00737,
+            "width": 390,
+            "height": 844,
+            "chapter": "works",
+            "p": 0.00024809731649136515,
+            "scrollProgress": 0.72461,
+            "selection": "edura",
+            "orbit": {
+              "phase": 0,
+              "origin": 0,
+              "velocity": 0,
+              "latched": false,
+              "visited": true,
+              "captures": 0,
+              "resumePending": false
+            },
+            "pose": [
+              0,
+              4,
+              -160,
+              75.60000000000001,
+              0,
+              -210
+            ],
+            "focus": "work-case-edura"
+          }
+        }
+      }
+    }
+  },
+  "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n'hero' !== 'works'\n\n    at file:///D:/Projects/my-portfolio-2026/outputs/visual-revision-2026-10-09/v7/verify-route.mjs:16:10"
+}

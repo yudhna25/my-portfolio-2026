@@ -1,5 +1,5 @@
 export const educationInstitutions = [
-  { id: 'saigonUniversity', constellation: 'Circinus' },
-  { id: 'greenAcademy', constellation: 'Telescopium' },
-  { id: 'arenaMultimedia', constellation: 'Pictor' },
+  { id: 'saigonUniversity', constellation: 'Orion' },
+  { id: 'greenAcademy', constellation: 'Scorpius' },
+  { id: 'arenaMultimedia', constellation: 'Leo' },
 ];

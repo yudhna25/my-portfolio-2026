@@ -20,7 +20,10 @@ export const SYMBOL_TARGETS = Object.fromEntries([
   }),
   ...data.education.map(item => {
     const indices = Object.fromEntries(item.geometry.stars.map((star, index) => [star.id, index]));
-    return [item.id, { id: item.id, geometry: item.geometry,
+    const plane = item.artwork?.plane;
+    const radius = plane ? Math.max(1, Math.abs(plane.center[0]) + plane.width / 2,
+      Math.abs(plane.center[1]) + plane.height / 2, ...item.geometry.stars.flatMap(star => star.position.slice(0, 2).map(Math.abs))) : 1;
+    return [item.id, { id: item.id, geometry: item.geometry, artwork: item.artwork, radius,
       edges: item.geometry.edges.map(([a, b]) => [indices[a], indices[b]]) }];
   }),
 ]);

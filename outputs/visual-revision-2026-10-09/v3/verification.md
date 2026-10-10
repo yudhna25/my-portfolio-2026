@@ -1,5 +1,7 @@
 # V3 — Kiểm chứng bản tích hợp và G1
 
+> **Cập nhật review 10/10/2026 — G1 mở lại để tinh chỉnh.** Người dùng đã chốt [phương án opening/năm/intake mới](../../../docs/ke-hoach-tinh-chinh-g1-g2-2026-10-10.md) ở Q12, **chưa sửa code và chưa duyệt lại visual**. G2 yêu cầu cải thiện meteor; V9/G3 chưa bắt đầu. Source/build/ảnh/check bên dưới là lịch sử V3 ngày 09/10, không phải bằng chứng animation mới đã được sửa hoặc nghiệm thu. V5–V8 sau đó đã được tích hợp; xem [V8 verification](../v8/verification.md) cho baseline hiện tại.
+
 09/10/2026. **V3 đã tích hợp; G1 chờ người dùng duyệt thẩm mỹ.** Chỉ thay Hero→About và các consumer cần tham gia. V4 không bị chỉnh; V5/V6/V7 chưa chạy.
 
 ## Kết quả hiện tại

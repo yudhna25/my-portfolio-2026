@@ -1,0 +1,990 @@
+{
+  "scope": "Documentation-only G1/G2 refinement planning",
+  "capturedAt": "2026-10-10T01:39:25.2077774+07:00",
+  "protectedFiles": [
+    {
+      "path": ".gitignore",
+      "bytes": 277,
+      "sha256": "d50ab07e11fa4bf3b1c7c3312e1d7baeab56cca756832ccf40476823ad2a38b7"
+    },
+    {
+      "path": "3d-lab.html",
+      "bytes": 443,
+      "sha256": "0985426c7b495d24d6a786edc33c9f6b1a694ad5ca7c618a6aa18ae5501d0a87"
+    },
+    {
+      "path": "eslint.config.js",
+      "bytes": 837,
+      "sha256": "0e765a818ff4c77decab96743525b1c91151b5b48aab88a5240d52ca539d1cee"
+    },
+    {
+      "path": "index.html",
+      "bytes": 6930,
+      "sha256": "2328876f2109702b0985231501c7b547cd337ee87beb19848602f00c67a432e7"
+    },
+    {
+      "path": "jsconfig.json",
+      "bytes": 103,
+      "sha256": "7a8452e291290b1b38dcafab7682494b1d40c2df7791326ae4ae73309662b98b"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 422076,
+      "sha256": "824609c3123813427ea27548c5622e471b9aa9e7d8d249cfc50cdad48b11996c"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1456,
+      "sha256": "e21571db76af9cddd6d3296ac10464f7f6c8ba83eaff6234c0cfde9cce59b632"
+    },
+    {
+      "path": "postcss.config.js",
+      "bytes": 74,
+      "sha256": "725980494aa651bb44b5bcfef02fa9d20af03700c1e3f1d178b39c339dceb9b5"
+    },
+    {
+      "path": "public/avatar-cutout.webp",
+      "bytes": 66084,
+      "sha256": "6b2fea6dcbd2bd204fc0aa6c545cbe7a696670fc4532c992378c3393d53b511f"
+    },
+    {
+      "path": "public/avatar.webp",
+      "bytes": 112382,
+      "sha256": "e6c0bac02737f8beb0bd25ca08793e552cc801b54d88464c9ae761a15dd90bd2"
+    },
+    {
+      "path": "public/constellations/ATTRIBUTION.md",
+      "bytes": 4175,
+      "sha256": "6de4459ce515f9bf4cd7687e48b8935fc997a6d9a7af2a5113b4df9b75ff10ee"
+    },
+    {
+      "path": "public/constellations/centaurus.svg",
+      "bytes": 62044,
+      "sha256": "717ce7d895f3408e95dd0b1e313fd5eeae24b706353154195d6df7346c60ab17"
+    },
+    {
+      "path": "public/constellations/cygnus.svg",
+      "bytes": 68020,
+      "sha256": "d27f0e299bffbc52a6f2ac7dab9a0926082eef373e8dfdf95dc9d71e79ffdc37"
+    },
+    {
+      "path": "public/constellations/gemini.svg",
+      "bytes": 37711,
+      "sha256": "ea4ad1fbd4155d823b0890af68221cfe638f18f6e59b1d3303f07649c6b62273"
+    },
+    {
+      "path": "public/constellations/leo.svg",
+      "bytes": 79122,
+      "sha256": "fff19ee2dd7345c30fdc8a801f3b2a9a13bbafafd8e921d71ea04ed2fb75b829"
+    },
+    {
+      "path": "public/constellations/manifest.json",
+      "bytes": 38233,
+      "sha256": "751e44452b742ac08c3a48bff7ecaf11a9f2ade5cec002ba36f2946c623e27d8"
+    },
+    {
+      "path": "public/constellations/orion.svg",
+      "bytes": 105067,
+      "sha256": "7fea1ced47cfb586e03f03404e01f6a419066f597322dcf31b5b5e8ee1a2684f"
+    },
+    {
+      "path": "public/constellations/scorpius.svg",
+      "bytes": 76034,
+      "sha256": "2b720432b3a77bb670b124c3dea66a1faa7fbbaf3150cab0f7f67071ed5032a5"
+    },
+    {
+      "path": "public/favicon.svg",
+      "bytes": 1042,
+      "sha256": "59b453e9ccaefde87745b96561282b6ecf48f2dca482898d2fedcae064d18aa7"
+    },
+    {
+      "path": "public/icons/ae.png",
+      "bytes": 4553,
+      "sha256": "13df4673f9bd262a1376c488e1cbfc67bd1cd0500555c05677edfa15128069af"
+    },
+    {
+      "path": "public/icons/ai.png",
+      "bytes": 3381,
+      "sha256": "7a9e921269cb9257010d22f61694268d14c171b245413134e7cd3244fcc56331"
+    },
+    {
+      "path": "public/icons/figma.png",
+      "bytes": 2217,
+      "sha256": "79036c1f608b11eb14a711ec02bab4cc162a2406e7fb89ae5f02a456d4918f48"
+    },
+    {
+      "path": "public/icons/pr.png",
+      "bytes": 16211,
+      "sha256": "6af65c63d2f8a59fc54f49f5bc76b9938777789a04f36b625433409d9803efab"
+    },
+    {
+      "path": "public/icons/ps.png",
+      "bytes": 3871,
+      "sha256": "f3083bd3ed5ac24d94d45907a1fa4ab1713f1d8fc6361d2e9ebfc960c5b85862"
+    },
+    {
+      "path": "public/og-image.jpg",
+      "bytes": 62445,
+      "sha256": "bc898f6ebda22f5920af9bcf5bc01c7aa3ebb7a53e01434a787283c4598e9e2f"
+    },
+    {
+      "path": "public/project1.webp",
+      "bytes": 51014,
+      "sha256": "2e9d8cee3c4c3584bb74bdeffcf384dcfabeb7d74bb165fd48d5094e38ad359b"
+    },
+    {
+      "path": "public/project2.webp",
+      "bytes": 62292,
+      "sha256": "1032b163b247f7d528b313f093abf6bc29eade6b39d98b5acbbd5b068056de9b"
+    },
+    {
+      "path": "public/project3.webp",
+      "bytes": 43608,
+      "sha256": "03117079520095b5dab4cd53a4b8c2a8495fe174efc1aa4d9b9d998447dad6fc"
+    },
+    {
+      "path": "public/projects/edura/overview.webp",
+      "bytes": 92204,
+      "sha256": "cc792c5dfb8d3acaf30925372969711e6b18a19ca831e6cc9baa8e63900d9b23"
+    },
+    {
+      "path": "public/projects/edura/problem.webp",
+      "bytes": 135960,
+      "sha256": "11e86ff9ffe00bf747a3b50db209e68658b08fcaa2989e4cb6300146b2fc1c4d"
+    },
+    {
+      "path": "public/projects/edura/solution.webp",
+      "bytes": 96112,
+      "sha256": "7714b0840765fecc8a397c5c3a03eb97da448d752090821752998948f8ba47a8"
+    },
+    {
+      "path": "public/pwa-192x192.png",
+      "bytes": 5958,
+      "sha256": "6e838d4b2412cb88c71f6befcc441b984efc2c73e1974c4c1a244bd7d7e9f724"
+    },
+    {
+      "path": "public/pwa-512x512.png",
+      "bytes": 21440,
+      "sha256": "ac06e97bda0b1a82b5fe7f8cbcedbef0bb7a9ac1de1c1d988ad9833091470f97"
+    },
+    {
+      "path": "public/pwa-maskable-192x192.png",
+      "bytes": 4912,
+      "sha256": "d848d131a9c68bb1469c201ad41c923a4f10cc79890719b86e21cccdda13a3b6"
+    },
+    {
+      "path": "public/pwa-maskable-512x512.png",
+      "bytes": 18479,
+      "sha256": "9894d4a3820f39bb8456e5881ecb9c9aa3006a774beefb774e619e18bd97f834"
+    },
+    {
+      "path": "public/theme-init.js",
+      "bytes": 484,
+      "sha256": "b4b82e9564cbbf346b6c924d262b8b741cb2eeac29c46ece0e7d387dd14d6b57"
+    },
+    {
+      "path": "src/3d-lab.jsx",
+      "bytes": 12413,
+      "sha256": "f821add1f90557ff50eaa01c0e355e748178ff3a95d3c4c243f7970ac27adae7"
+    },
+    {
+      "path": "src/3d/components/BlackHole.jsx",
+      "bytes": 7358,
+      "sha256": "b757f8ff046b2ead03e43806ff9c3e5d943268a9189fb290a64f627a5c78e1d3"
+    },
+    {
+      "path": "src/3d/components/BlackHoleBloomMask.jsx",
+      "bytes": 1312,
+      "sha256": "a4a53edc528f200545b09bb9fe84477633c959310f86f54431061e1e6019049c"
+    },
+    {
+      "path": "src/3d/components/BlackHoleSystem.jsx",
+      "bytes": 1985,
+      "sha256": "d62adcb2517b7728553907e48550947e35080e1e64f01f737364ebed79988643"
+    },
+    {
+      "path": "src/3d/components/CameraRig.jsx",
+      "bytes": 3464,
+      "sha256": "fd01fb40484b7f14f4eb893d07cd486a68b41c1729e9a61193a9bc8de84d816f"
+    },
+    {
+      "path": "src/3d/components/LabTelemetry.jsx",
+      "bytes": 2626,
+      "sha256": "b53dde5f806c82d8dccc40b4bd4c9e0531464de98505959294e44809a7f81b14"
+    },
+    {
+      "path": "src/3d/components/Nebula.jsx",
+      "bytes": 4887,
+      "sha256": "eebb3e1f5bb13a2ee379bb98bf95547d6f7b428d05a9211bcd35dd157de7d874"
+    },
+    {
+      "path": "src/3d/components/SceneBoundary.jsx",
+      "bytes": 433,
+      "sha256": "ee1c3710e1f289a7686c65da0e0845f244ba9838ee9bf8abdffb8b51c587b815"
+    },
+    {
+      "path": "src/3d/components/SceneFallback.jsx",
+      "bytes": 1188,
+      "sha256": "c08f7799f5c5109fac1bcbd8bcdf4523aa11e8fd412b945c9e5a89ed0a647b1c"
+    },
+    {
+      "path": "src/3d/components/ShootingStars.jsx",
+      "bytes": 3077,
+      "sha256": "705bbbf35b0e6d9cbe1fb57cb96ec8ab86144bfbce6c359d26ee99052a7fa595"
+    },
+    {
+      "path": "src/3d/components/SkillsSymbols.jsx",
+      "bytes": 1728,
+      "sha256": "a2b65eed6e10e5903e6b760ebc7ba992353e9cb4eea91211a9d57efba13e8370"
+    },
+    {
+      "path": "src/3d/components/StarField.jsx",
+      "bytes": 6373,
+      "sha256": "07fb658d4495d01d02ea71981d1c368a02933618231104651c3a577deee8fa01"
+    },
+    {
+      "path": "src/3d/components/StoryMeteor.jsx",
+      "bytes": 8263,
+      "sha256": "6a760690b766dc3ddc307dbff0725220a71eed923ea6242ac72d8dc8585d13a0"
+    },
+    {
+      "path": "src/3d/components/SymbolStars.jsx",
+      "bytes": 12532,
+      "sha256": "32bab130a67c903567850fdf9a15fb4a9d952220b6a5e06033f32af3b80c1ce0"
+    },
+    {
+      "path": "src/3d/components/WorksConstellations.jsx",
+      "bytes": 11962,
+      "sha256": "3714666d8828087e527a7d6ea9923ad8080f0c95f662e2388b8ecfe7f52d61b7"
+    },
+    {
+      "path": "src/3d/data/symbolTargets.json",
+      "bytes": 75052,
+      "sha256": "ef4f695079db19305e3b8fa550750cf4ed7a296293f9b50439500a629852446a"
+    },
+    {
+      "path": "src/3d/data/worksConstellations.json",
+      "bytes": 45563,
+      "sha256": "9a15065151553f677e7c6dff6b946d5b4a95b3f36984da66a59a3d603be029d1"
+    },
+    {
+      "path": "src/3d/GalaxyScene.jsx",
+      "bytes": 4488,
+      "sha256": "3adecca63b3de4598619abc0267559bab132529951520db2129fcf9db1df92ab"
+    },
+    {
+      "path": "src/3d/hooks/useLabScroll.js",
+      "bytes": 234,
+      "sha256": "a3828ab0ba03cb6fec3d494f5c304f10e576accbbbd8f4db9b25c8f0911efe29"
+    },
+    {
+      "path": "src/3d/hooks/useMediaQuery.js",
+      "bytes": 530,
+      "sha256": "c9873dab37c19e4aad975f7c9ac2b43aaa6565606fb6b91d60d2c5a1eb8671b0"
+    },
+    {
+      "path": "src/3d/hooks/useScrollProgress.js",
+      "bytes": 9128,
+      "sha256": "efbbdfa55462c06d850777f45bd2b7626cf9d973378e5ad07d82c3205b689a7e"
+    },
+    {
+      "path": "src/3d/hooks/useSectionAnchor.js",
+      "bytes": 2736,
+      "sha256": "c60a591a4243e31af603bcdee47e74df38fe826271b5b1af17d06e47d88e0418"
+    },
+    {
+      "path": "src/3d/quality.js",
+      "bytes": 245,
+      "sha256": "729c42d6e83d1931dbdaf3e4891f908c0904993dc599ce1c3935b7d485251401"
+    },
+    {
+      "path": "src/3d/shaders/blackHole.js",
+      "bytes": 10820,
+      "sha256": "ec58f14414ff84b3d50e71f55b03da2e89c1038abec0d2add272924bc52c4c2d"
+    },
+    {
+      "path": "src/3d/utils/buildStarGeometry.js",
+      "bytes": 1603,
+      "sha256": "35d7cf2aa82b6fa93c5465cc5e97e4c12155c6e5a40afe8363c2c8da4067b150"
+    },
+    {
+      "path": "src/3d/utils/cameraPath.js",
+      "bytes": 4013,
+      "sha256": "93b6ed5a8488aab7b840a4db5e5d75528aa467df9d40183245a6573e44c8e376"
+    },
+    {
+      "path": "src/3d/utils/finale.js",
+      "bytes": 1913,
+      "sha256": "59e5f731f13eacb7f950739ef1e1ebfd98fa7fd3e9d9c0ba2d8693b10b2bbe1d"
+    },
+    {
+      "path": "src/3d/utils/portal.js",
+      "bytes": 2227,
+      "sha256": "1dcdda7416a6f85b1da751cf39a9461d359df894d5e853a40a0ec8fcfe8f702e"
+    },
+    {
+      "path": "src/3d/utils/shootingStars.js",
+      "bytes": 2495,
+      "sha256": "620bea9b207bb1cceff2a8defbb894f431083fcbd8f12153a8f00a1633035fce"
+    },
+    {
+      "path": "src/3d/utils/storyMeteor.js",
+      "bytes": 6710,
+      "sha256": "4765d339c4fcce73367717d75355aa5131a8d02ffc0a7ac45ed89846becc65a7"
+    },
+    {
+      "path": "src/3d/utils/symbolMorph.js",
+      "bytes": 6039,
+      "sha256": "45717165d6d014c64a630cd11a03c5ec87689c887025983d3079ed05c6f95d10"
+    },
+    {
+      "path": "src/3d/utils/worksOrbit.js",
+      "bytes": 5721,
+      "sha256": "d59fbd598f538def0612a9f2f886a8a313957f95e1cd8128d5124588d644ece8"
+    },
+    {
+      "path": "src/App.jsx",
+      "bytes": 9847,
+      "sha256": "5475216b1ea42744efe8bb6d831bcdbce810f10966ec9d1bc8b4792268871b70"
+    },
+    {
+      "path": "src/assets/react.svg",
+      "bytes": 4126,
+      "sha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5"
+    },
+    {
+      "path": "src/components/About.jsx",
+      "bytes": 8058,
+      "sha256": "18a37d89e8bdf672056ded7c197188bd8a22fae1131a778816dedb009a9ab188"
+    },
+    {
+      "path": "src/components/Aurora.jsx",
+      "bytes": 6452,
+      "sha256": "c03e2396d0f975a4371705ba60a0176896aa1f22396e7f8153981592f8d4589b"
+    },
+    {
+      "path": "src/components/Cursor.jsx",
+      "bytes": 15861,
+      "sha256": "1ce1b9802e2d2c275dc1c56b2644e204b0af19c29e297d8fe786c8b0032e24b1"
+    },
+    {
+      "path": "src/components/Education.jsx",
+      "bytes": 7967,
+      "sha256": "8db4e6cf74601f2c120db5294c1396602cd7bbfa0999ab4161bee94317554b59"
+    },
+    {
+      "path": "src/components/effects/PortalHeading.jsx",
+      "bytes": 14287,
+      "sha256": "f30e8d7b3a25e855bec7fad836d1ec48212811ef9c7f267e6c7fe1c558ac85bc"
+    },
+    {
+      "path": "src/components/EvilEye.jsx",
+      "bytes": 8917,
+      "sha256": "c76bebce7c93608d982fc18579bd404cf204d0b1d068c1b3c14817406dd74f11"
+    },
+    {
+      "path": "src/components/Footer.jsx",
+      "bytes": 7514,
+      "sha256": "79a993376661c8189e8b52a2bea2d166f97d63b001dde2922e61b0b77ba1b14c"
+    },
+    {
+      "path": "src/components/Hero.jsx",
+      "bytes": 753,
+      "sha256": "85f11e17c90b3cfc306439f2a5ed8fbc46e5cd72fa3c54ee19861c0f49f5e9d1"
+    },
+    {
+      "path": "src/components/layout/MenuOverlay.jsx",
+      "bytes": 13795,
+      "sha256": "46fefbee0fe26ec884aa023d5e67d6bf949ee55002cf702e6a6f82459bf7d897"
+    },
+    {
+      "path": "src/components/layout/Nav.jsx",
+      "bytes": 10039,
+      "sha256": "3acd091707f89d046fa5de1349eb389bfc526653085ac6ba54eeeea7e7e9dbea"
+    },
+    {
+      "path": "src/components/pages/Edura.jsx",
+      "bytes": 8656,
+      "sha256": "7183a1653928fd8a0150a1dd6b690756446ec66850963a25a11a3fcc528908a7"
+    },
+    {
+      "path": "src/components/Preloader.jsx",
+      "bytes": 5539,
+      "sha256": "80d50c244b8c1749804c16f30ab6831b399fd3771ab3f1029d659588c5ed4fcd"
+    },
+    {
+      "path": "src/components/sections/Contact.jsx",
+      "bytes": 11333,
+      "sha256": "c5e7b77cd8c1943aa043ca69bc051e2a00734c3e778e5c96b726fe3150b44226"
+    },
+    {
+      "path": "src/components/sections/Experience.jsx",
+      "bytes": 5734,
+      "sha256": "c463874179135d435879a67f1e69009921b51cebe52c4d8947ee70a66a87a654"
+    },
+    {
+      "path": "src/components/sections/Skills.jsx",
+      "bytes": 11325,
+      "sha256": "07300c842058d37e78f97683a376b5d1cd0646edf7cfc17f0030cd5780fa9d28"
+    },
+    {
+      "path": "src/components/SplashCursor.jsx",
+      "bytes": 36078,
+      "sha256": "95a4982d97e49e892788b9847cd41843f084fe9f2a39c10ae0ae88944280d8ec"
+    },
+    {
+      "path": "src/components/ui/ConstellationCredits.jsx",
+      "bytes": 3923,
+      "sha256": "a969378504c14027d371c6ed914cba7aed1c5fd490d0e651d5705e4f46f64e06"
+    },
+    {
+      "path": "src/components/ui/SoundToggle.jsx",
+      "bytes": 2001,
+      "sha256": "29e29630680251960b789c247be30465b0f6571230183e67b656d698f20c80fa"
+    },
+    {
+      "path": "src/components/Work.jsx",
+      "bytes": 15058,
+      "sha256": "395e7a5de2cee597c03a5655b73a3d9ddbda98bdcda813da15961f2d32049659"
+    },
+    {
+      "path": "src/data.js",
+      "bytes": 4138,
+      "sha256": "909413a8e834e1a0998cf20d3228de4e67e74c6460968d82a8c16eee9a6a9680"
+    },
+    {
+      "path": "src/data/education.js",
+      "bytes": 202,
+      "sha256": "5872a9387ff9d1fcabf5b2fc57af5b0eddd59ca70ef4e6840b784bf3b8abe0f6"
+    },
+    {
+      "path": "src/data/navigation.js",
+      "bytes": 305,
+      "sha256": "6e23b91b93c8bc0c57ca9d7afca9f5dd27e70226cd17469f319aaed762c03a0f"
+    },
+    {
+      "path": "src/data/skills.js",
+      "bytes": 904,
+      "sha256": "189cd6619cbf59b0ccd36d796c0d8b10a2e106567951cad4e0f95ebbed5e8e1d"
+    },
+    {
+      "path": "src/hooks/useGSAPSetup.js",
+      "bytes": 2125,
+      "sha256": "3e01127b4d73fd0e8c4f6c6af569b8d58fac8bc3f0d9aaa3ab577d4691f86b02"
+    },
+    {
+      "path": "src/hooks/useReducedMotion.js",
+      "bytes": 549,
+      "sha256": "91bc0b684c97ee1b951fc43516a4c18697e32f17dbd7bae5482207083228b947"
+    },
+    {
+      "path": "src/hooks/useSmoothScroll.js",
+      "bytes": 1251,
+      "sha256": "3386776d0ae6ecc61d7674f997b0acd999fd930268b98c5b37a38ce17815383e"
+    },
+    {
+      "path": "src/i18n/config.js",
+      "bytes": 2831,
+      "sha256": "3a7c679af690a23ffd0e0f8e66e2c1a1fc8303d0f4b7dd30df53bef14dd971d3"
+    },
+    {
+      "path": "src/i18n/locales/en.json",
+      "bytes": 15682,
+      "sha256": "1578cdae4fb0d4b3c4f3494564367fc56572b87ba0379ab5db8e24a847cfe081"
+    },
+    {
+      "path": "src/i18n/locales/en/lab.json",
+      "bytes": 5387,
+      "sha256": "28b2ee9bada3280fe4731920b0ebc2a9ceabbd6b7d3bc260c3b91ded24cba79e"
+    },
+    {
+      "path": "src/i18n/locales/en/scene.json",
+      "bytes": 155,
+      "sha256": "0cb051ca2ec3bf29329d42b39e2c62b151922e0b3599aa02f82b780a6606a1cf"
+    },
+    {
+      "path": "src/i18n/locales/vi.json",
+      "bytes": 17563,
+      "sha256": "a860442004b4269ce60188db00f80d36847bd995a79594a5bbd6833bc7a7b554"
+    },
+    {
+      "path": "src/i18n/locales/vi/lab.json",
+      "bytes": 5708,
+      "sha256": "f33ea5cf0a38e223afaaa4d24d28a5cc8e3ec212e9d51f1de5d752c21c2dfd25"
+    },
+    {
+      "path": "src/i18n/locales/vi/scene.json",
+      "bytes": 189,
+      "sha256": "26897416254dd3c9a75e4f739ed751d975d99460744251469f800d976b6f38ae"
+    },
+    {
+      "path": "src/index.css",
+      "bytes": 4613,
+      "sha256": "ec90e0abfb7970145ff020105e43dda0ab4d28bf12457769f5c9079c009639a0"
+    },
+    {
+      "path": "src/lib/audioEngine.js",
+      "bytes": 4841,
+      "sha256": "b5725a71c0e893e898fcc0e277ed464237f47bc12328a15ea9b34f432307dc77"
+    },
+    {
+      "path": "src/lib/utils.js",
+      "bytes": 25,
+      "sha256": "478739b1eed969267a388fc17db539b53aa66cf15a9467e475274b36de8783f2"
+    },
+    {
+      "path": "src/main.jsx",
+      "bytes": 368,
+      "sha256": "147df528e244299aa66772bafbf3412a6641c0e2ab75431ff539a59c7839206f"
+    },
+    {
+      "path": "src/stores/useAudioStore.js",
+      "bytes": 1751,
+      "sha256": "7e7188de8cd1e260029c3ebd113f64c8b5cdcf1bb6c8d553d6757bf4b1a0c7ca"
+    },
+    {
+      "path": "src/stores/useEducationStore.js",
+      "bytes": 880,
+      "sha256": "8d968968c314f3fc0b90fe8db1e5e0c44908c4c6c22e282235030bcfb29a6c49"
+    },
+    {
+      "path": "src/stores/useLangStore.js",
+      "bytes": 192,
+      "sha256": "9ca61fd05c9ab48a081072d55d59c4fc8949affe630fc97bc26404810005d09f"
+    },
+    {
+      "path": "src/stores/useLoadingStore.js",
+      "bytes": 164,
+      "sha256": "8f9cc13ab4fc969edb440d662b15d48f793497025817acf0224ab0ad3f8c9a67"
+    },
+    {
+      "path": "src/stores/useRouteStore.js",
+      "bytes": 4557,
+      "sha256": "07598bd2c0d9adf00f0f832895f2124b79894fecc166970a842191ab34085b5d"
+    },
+    {
+      "path": "src/stores/useScrollStore.js",
+      "bytes": 2871,
+      "sha256": "0331d852280994a400c2bf9a649d54a8cf40fcd9287dfdfad7f4eb7efacd817b"
+    },
+    {
+      "path": "src/stores/useSkillsStore.js",
+      "bytes": 684,
+      "sha256": "cf06593de4261c5e0a571b2a07e9d50243f99f20a8ad7b5e52aa0c2ceaafaac5"
+    },
+    {
+      "path": "src/stores/useThemeStore.js",
+      "bytes": 820,
+      "sha256": "52e649ab76b03c676f2c423e2ef3e274ebb97a8b435392fe4bf1b006df4f8624"
+    },
+    {
+      "path": "src/styles/globals.css",
+      "bytes": 4267,
+      "sha256": "9032e46e8ea120948d32fbe835fc13cb3cbb315152db19c2a4843d30f4b048e5"
+    },
+    {
+      "path": "src/styles/hero.css",
+      "bytes": 2947,
+      "sha256": "1704ebed20ac8abfa57b05404c997e9b8a6250535881a14f1419cf8bc0d2d74a"
+    },
+    {
+      "path": "src/styles/menu.css",
+      "bytes": 138,
+      "sha256": "dd777575640babba2a136b5584153b688fe0b2cf0e0b13071029cfa0d7c7d947"
+    },
+    {
+      "path": "vercel.json",
+      "bytes": 164,
+      "sha256": "4480bfa95f8d1d9b876258883eec48e39e1a4234c4f917e0e2b5f6d0501df6bb"
+    },
+    {
+      "path": "vite.config.js",
+      "bytes": 2602,
+      "sha256": "44c8e05e4635de03d3f86eb0fb38488131e45f6fbf725b90e40a4ab892fc2b99"
+    }
+  ],
+  "v8Media": [
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/departure-1440.png",
+      "bytes": 170695,
+      "sha256": "d79a2934848455f94c84d5dca24e97ee9807ca398095dc113b287723e993b566"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/departure-1920.png",
+      "bytes": 215006,
+      "sha256": "acaf3bbef4da6779f6601e7efb14f3e7ad41727037513463c587dda894dd9912"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/departure-390.png",
+      "bytes": 37163,
+      "sha256": "372abc7aeacbe8de9ea7deede9fc48d0624d9d024363867adf2ff8d5a256775e"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/departure-768.png",
+      "bytes": 106015,
+      "sha256": "dddc278b493ef456710609a590cd692a60a2a5ea6b160f587901345ca8b370bd"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/education-arenaMultimedia-1440.png",
+      "bytes": 181749,
+      "sha256": "86edb2bd07fb586e37ecec8fc2c24e5a1be74dbc75de5dba5f379b5a6f4a71e2"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/education-arenaMultimedia-1920.png",
+      "bytes": 236543,
+      "sha256": "49dab5cdbf05cbdb656ffd6ccca88b584d8928bb93a0ca9a71dea41a32624fd9"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/education-arenaMultimedia-390.png",
+      "bytes": 62878,
+      "sha256": "64ff64d31ec3737066beb0590f4c224fed8a2578226cfdfe1f47d7f6b22a16da"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/education-arenaMultimedia-768.png",
+      "bytes": 114102,
+      "sha256": "b49f698f78966ce78b65573384da68462995fab0169e522959d6c508ac6f8ca4"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/education-en-1440.png",
+      "bytes": 223151,
+      "sha256": "eee7961f86e8c1f79f3e48a4f6e28f6f84418d883ec7e112340f98d6780a1309"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/education-en-320.png",
+      "bytes": 59564,
+      "sha256": "f1499581a002675e1df6de715ce9840bffb482a210ae41233ffbd427a48f3eb5"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/education-en-390.png",
+      "bytes": 68384,
+      "sha256": "1be3c9f2a755b8682666b52c3a2e7ac6337cb4f48e0cf1240e5136d74679fbc9"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/education-greenAcademy-1440.png",
+      "bytes": 194740,
+      "sha256": "3d1c08b95ec602ae78bb20b68247011298a6de998454813a874af8e46735b154"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/education-greenAcademy-1920.png",
+      "bytes": 250779,
+      "sha256": "17ef0420321c93186ce9234ccf31f1f98b9b8200e33507500565d99f3553b393"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/education-greenAcademy-390.png",
+      "bytes": 61696,
+      "sha256": "bf9fec8590800d5b5115709a272fcc46ed7d2e02746fd49e6d915674fd6d9c7a"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/education-greenAcademy-768.png",
+      "bytes": 120624,
+      "sha256": "7e11dd24d7a1298d81f09d06f58f8fa0f3bd0dfd5cc81edc38c63ba7b848380a"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/education-saigonUniversity-1440.png",
+      "bytes": 220402,
+      "sha256": "f542e872792fcc32d8e97f78b648d85c462a32697fb522ca6b6c825e10204866"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/education-saigonUniversity-1920.png",
+      "bytes": 302253,
+      "sha256": "e87ed0a749fa2d9190ea7e4454481c207bd6e67a3b4cc4bcdef9893debcca3fd"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/education-saigonUniversity-390.png",
+      "bytes": 68126,
+      "sha256": "0770f522f35d678f97332cf0f30108683c836176a794972dc5c816f427013e58"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/education-saigonUniversity-768.png",
+      "bytes": 137499,
+      "sha256": "16e8fe9f190c0ad2cc29eecff2147145962bdd1a04b801e635903c6838c44427"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/education-vi-1440.png",
+      "bytes": 212015,
+      "sha256": "4ba51ccbf2a9f1675328e77e6f7a6b79d2bb88020e8633376327bc3ebd937b49"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/education-vi-320.png",
+      "bytes": 61052,
+      "sha256": "858498b3a4da4cf046beb194dbae9624c9635a7c0510190450adaee2fcf3e168"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/education-vi-390.png",
+      "bytes": 67268,
+      "sha256": "3ae30155425c7ead7c724212ee3e6c2e38d23cccde40804e1eed1541a1a51d4c"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/edura-back-1440.png",
+      "bytes": 239875,
+      "sha256": "a09162cd7b4a4a6d9340b8143f39f892be26269fb51617420cdc3ac88b62be10"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/edura-back-390.png",
+      "bytes": 64979,
+      "sha256": "2864749850134baaca77c85471cd7a0b7b30ebfba3697bfe38a7cddf0c15db83"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/experience-0.2-1440.png",
+      "bytes": 185203,
+      "sha256": "51142eafd89efe875b3031e53b96b3aa1d548097b3ed9fae97f8eb4c1e698116"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/experience-0.2-1920.png",
+      "bytes": 212648,
+      "sha256": "b4d280d023ed5d4c9aab0e60027bd054f3ca2c7b9241d18b5f61ee6f3789dde0"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/experience-0.2-390.png",
+      "bytes": 52919,
+      "sha256": "7c2aa9ec8d07e3d0db9fb82146c566664662970d70bb40a8ed675ce26506c3f8"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/experience-0.2-768.png",
+      "bytes": 110115,
+      "sha256": "82ef097aa1662b66e5233684a495a7cbd5fc465ccc1965add54f840d77d212ca"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/experience-0.45-1440.png",
+      "bytes": 142962,
+      "sha256": "3a033b9491eac2d02c6deba98f03980bd92d77b255da407042af10a452af8ee6"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/experience-0.45-1920.png",
+      "bytes": 180487,
+      "sha256": "2cb0b24e3c4f756d8dc6c01a0fd33417facc270d67f78ab9dc0a4e0dc358bbda"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/experience-0.45-390.png",
+      "bytes": 47750,
+      "sha256": "4d0f33d57295ab60b4e615969ea90136eb23517586dda2abafa8e533b652a166"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/experience-0.45-768.png",
+      "bytes": 94571,
+      "sha256": "7be8161b061ac15321c5452bd42abfc4c3abeaf1584a48a94bee0375c70ba3cf"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/experience-0.7-1440.png",
+      "bytes": 110141,
+      "sha256": "a14e721aa85f401a147db85bfc64a7906dade753992ded61d886bbac3fc273b9"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/experience-0.7-1920.png",
+      "bytes": 136728,
+      "sha256": "f7f264283d6c06979db3cac4388c9c119b3b315a4355233983a04e56da9f6afa"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/experience-0.7-390.png",
+      "bytes": 23412,
+      "sha256": "e8c3b5cbdc62ffc99559d52686e4ef6c18e0747559cba509456dba4669698d55"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/experience-0.7-768.png",
+      "bytes": 66869,
+      "sha256": "b9765dd7d7970707052ebc47d1da9369677d94e5aeddc3dc9cde58978de1acf1"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/experience-en-1440.png",
+      "bytes": 148299,
+      "sha256": "41adc7bca2d699dff8ccbfcb2894a5032e0a3d1e9199ce5d122c7e45edb12403"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/experience-en-320.png",
+      "bytes": 43651,
+      "sha256": "83978559e9505a82c62f26b5786a7f544fced3738962110f403a72116c902315"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/experience-en-390.png",
+      "bytes": 48019,
+      "sha256": "39c3f9d89e03fa548658b60e2190d358cbdc056bfa5c807f32c7c709f5a37748"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/experience-vi-1440.png",
+      "bytes": 145657,
+      "sha256": "f91fa47e65879a364387e0409b26ebbb3608d717d9f04a6ae4038ae583d50c2d"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/experience-vi-320.png",
+      "bytes": 43271,
+      "sha256": "ee3d043544a4687161f2958f822c27d558d25de9b9b73d7f28376141928eeb90"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/experience-vi-390.png",
+      "bytes": 47204,
+      "sha256": "732da3c3a8c749c77c18e6d9abf3e8e08ae7e1a48426203f35ea399b95bbaf04"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/fallback-back-1440.png",
+      "bytes": 106734,
+      "sha256": "d9a1c3f04f4dfced2f47ffea7998d13bd0d77ec61c7197c418085f3fd51eca0e"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/fallback-back-390.png",
+      "bytes": 58824,
+      "sha256": "246953ca0d4fe429921806daf64fa250a94cdc1359c3db7fa3ca3462cb809722"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/lab-education-1440.png",
+      "bytes": 202108,
+      "sha256": "9a5221fbc670005322a7481ccbadcd1ecf5855af8ef69e5e9db0ecf7a5ef348c"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/lab-education-390.png",
+      "bytes": 75782,
+      "sha256": "b00f61c53af2a420e5b80514e57dd235dd034e3a7741d220478af726811d4752"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/lab-works-1440.png",
+      "bytes": 237035,
+      "sha256": "94ea2de0f66ee3110ac1f2bcd05c897d9c86628036822446c23e9888112fa5fe"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/lab-works-390.png",
+      "bytes": 67139,
+      "sha256": "de1161d5a12d8478da2fe1727e78973ddbb2d0e3890c381058a7eeefaef6f37b"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/motion-resumed.png",
+      "bytes": 138062,
+      "sha256": "5094a16391d97a7712e731b37c6e763818a5e0325906a68458fde8e8826bdd59"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/portal-1440.png",
+      "bytes": 196265,
+      "sha256": "9fd03e31e0cdab9cf7d87c328017ee65ccca5e7da976bcd44805351dbcd5aad2"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/portal-1920.png",
+      "bytes": 264523,
+      "sha256": "62df8152281c8d672ee3000674a67af947ee0d98dba681e6ce418213cf63a933"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/portal-390.png",
+      "bytes": 42606,
+      "sha256": "de5b10954c1d9e329666677b0686d7d2a5851a991819eb670e999755f95215d4"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/portal-768.png",
+      "bytes": 105076,
+      "sha256": "5f77e813925b96e70ebf399bf3f0c4e66b5e18713ccb1d1fbf9922882e0066f3"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/skills-1440.png",
+      "bytes": 204044,
+      "sha256": "d6371aa6c72e77e42457d38f3c0156b0f0ff00d6f3f7e26fcf86314fd8d8308b"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/skills-1920.png",
+      "bytes": 251314,
+      "sha256": "795ae4d55b030892eb3d79d8a1fddda4b8ee246536e49ccf32d8fec284f57745"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/skills-390.png",
+      "bytes": 39665,
+      "sha256": "05e4ada4a65d7dfcd19815244ea532385120baf797c8de1a90f172c6c969e2e6"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/skills-768.png",
+      "bytes": 127328,
+      "sha256": "5ec3b984bb59260f379117d3411ef658245862e473aed61371ec747f653107b8"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/works-edura-1440.png",
+      "bytes": 236614,
+      "sha256": "3f9425349736a19f939228d4e4b9e6e3b06c76ef07554ec8dcf61c21bf797d70"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/works-edura-1920.png",
+      "bytes": 278142,
+      "sha256": "2976a7f6d539ac289afb13821df7da8d53ffb05e6c3e51405b898f7903d994dd"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/works-edura-390.png",
+      "bytes": 63620,
+      "sha256": "93b17d3501e7bbb4cca439a837917aedde1de6b65934e2fce42a34a49ca02ef4"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/works-edura-768.png",
+      "bytes": 162122,
+      "sha256": "ee90b1161047432ef6ff59c043e6ee33a4a590168fbb3c6c6670b9950afee372"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/works-en-1440.png",
+      "bytes": 155059,
+      "sha256": "3e68d1a138901a59254e3a13189c023f73d005c3d0c6a4c1a3d4958611d41a81"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/works-en-320.png",
+      "bytes": 33625,
+      "sha256": "73e41d30efefe3df436b9f7bc61fbaffbc7f50ac4ee2fe2c4569f289e1050c32"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/works-en-390.png",
+      "bytes": 40281,
+      "sha256": "cb7c73aef940b9e76eb5a12b1166b571180981b3ac132bac3c7ae3b3fb09c7ba"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/works-veris-1440.png",
+      "bytes": 225224,
+      "sha256": "0db472ad853b77d9f79fd47016be55de174fdfab6f38bd56d06ba21879e8db88"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/works-veris-1920.png",
+      "bytes": 267281,
+      "sha256": "6e7704a19fd5f92ab87546af4b431c38e8a32594bb99211c794efd84480a63f1"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/works-veris-390.png",
+      "bytes": 60919,
+      "sha256": "0c32003519b757219b5c814b2704a074f8a9c3eddc990a914e670397a9d9ae3f"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/works-veris-768.png",
+      "bytes": 154668,
+      "sha256": "ac92522d60b87c121debc5cdefc6509ee314b5b90b21d1b39c7e9bad660e77f2"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/works-vi-1440.png",
+      "bytes": 155382,
+      "sha256": "9add6b569c6d54fccd3d3beace49d53381e895bc0bbbf497c68300873c674600"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/works-vi-320.png",
+      "bytes": 33202,
+      "sha256": "fc5b91dabcec7c8c168ad288858e717032633a7dea870cbab47b6d573b371590"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/works-vi-390.png",
+      "bytes": 40263,
+      "sha256": "e6ec38ee22388e272fa835fbc9b9ef1e6432950be584054fcfd9e3313789f4dd"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/works-vie-1440.png",
+      "bytes": 236743,
+      "sha256": "0d80ce53e3d8b477cb6373216595448fda0de3fcb4968e2761053b09b0b424de"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/works-vie-1920.png",
+      "bytes": 280836,
+      "sha256": "beabe2afd4d3ba477ceaafe0d1ec97f8d5114a4784f79c2873d32e1c26ea2f25"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/works-vie-390.png",
+      "bytes": 62926,
+      "sha256": "1a65c509ce479ee8bf178666c7a54244e044fea6537c198ba06fda006cfe7d40"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/screenshots/works-vie-768.png",
+      "bytes": 166640,
+      "sha256": "651df9bbc6ae996683a6b9897dddfc9ea710d348d28b2ffd5c4fdb12e7ed504e"
+    },
+    {
+      "path": "outputs/visual-revision-2026-10-09/v8/clips/integrated-education-experience-works.webm",
+      "bytes": 413411,
+      "sha256": "0eb58345d63025569b16f3ee33096db2f5e6770599d28b815795cc4d2852477e"
+    }
+  ],
+  "agentsPrefixBytes": 61288,
+  "agentsPrefixSha256": "8db856af3f6d759a7e97fd96001acb100fe7a07e181a8f00fa848290ce0726a9"
+}

@@ -162,11 +162,12 @@
     "mapNote": "Ba hướng học tập song song, cùng nuôi dưỡng tư duy thiết kế.",
     "interactionHint": "Di chuột hoặc dùng Tab để đánh thức một chòm sao. Chạm để chọn; chạm nền hoặc Escape để bỏ chọn.",
     "clearSelection": "Tan về nền sao",
-    "constellations": {
-      "saigonUniversity": "Circinus",
-      "greenAcademy": "Telescopium",
-      "arenaMultimedia": "Pictor"
-    }
+    "constellationNames": {
+      "Orion": "Orion",
+      "Scorpius": "Scorpius",
+      "Leo": "Leo"
+    },
+    "figureLabel": "{{school}} — {{constellation}}"
   },
   "experience": {
     "sectionLabel": "Voyage Log",
@@ -353,5 +354,17 @@
         "name": "Định hướng giải pháp"
       }
     }
+  },
+  "constellationCredits": {
+    "label": "Nguồn hình sao",
+    "title": "Nguồn & giấy phép",
+    "close": "Đóng nguồn hình sao",
+    "illustrations": "Hình minh họa gốc:",
+    "adaptation": "Chuyển thể đơn sắc, vector hóa và căn chỉnh theo ba sao: portfolio Trần Vũ Anh Duy / Codex. Tác phẩm đã chỉnh sửa, phân phối theo Free Art License 1.3.",
+    "source": "Nguồn Stellarium đã ghim",
+    "patterns": "Nét nối: nhóm Stellarium, giấy phép",
+    "catalog": "Vị trí sao:",
+    "attribution": "Ghi công đầy đủ",
+    "manifest": "Danh mục tài sản"
   }
 }

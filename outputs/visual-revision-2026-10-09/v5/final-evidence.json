@@ -1,0 +1,207 @@
+{
+  "at": "2026-10-09T15:55:31.042Z",
+  "ownedSource": {
+    "src/components/Education.jsx": "107288df6967ad2cd617838bcc623021f413fc0089497fcef84eef7dbc48ad81",
+    "src/data/education.js": "5872a9387ff9d1fcabf5b2fc57af5b0eddd59ca70ef4e6840b784bf3b8abe0f6",
+    "src/3d/components/SkillsSymbols.jsx": "4fd9bd1e520249be89db42067a9054ca28e04db474cc7ad0e5ae2de58041c72c",
+    "src/3d/components/SymbolStars.jsx": "32bab130a67c903567850fdf9a15fb4a9d952220b6a5e06033f32af3b80c1ce0",
+    "src/3d/utils/symbolMorph.js": "45717165d6d014c64a630cd11a03c5ec87689c887025983d3079ed05c6f95d10",
+    "src/3d/data/symbolTargets.json": "ef4f695079db19305e3b8fa550750cf4ed7a296293f9b50439500a629852446a"
+  },
+  "sourceStableSinceBrowser": true,
+  "buildLog": "build-final.log",
+  "scopedLintLog": "scoped-lint.log",
+  "dist": {
+    "dist/assets/davinci-resolve-DTEn20Mv.webp": {
+      "bytes": 30488,
+      "sha256": "eafe92dded33f19395885cb80e1128ad0ec54e77ea792abfbe4077d3250e22b1"
+    },
+    "dist/assets/events-9ce18a08.esm-DER5u7kD.js": {
+      "bytes": 920251,
+      "sha256": "d380f80f378214167a4eae4048edc23034fe489316f51c26139196a7ce7fe271"
+    },
+    "dist/assets/GalaxyScene-Buc6MpeJ.js": {
+      "bytes": 128232,
+      "sha256": "5d0a5d9fc74c303e5dab907a7c00646e53744bfaf749b47bfe8a7a0b948ca9b0"
+    },
+    "dist/assets/index-BFr9ersd.js": {
+      "bytes": 654345,
+      "sha256": "63dc1c464c402ead96f147ec88ffdb13984f908dbb19d31b16fe9dcfbf1cba32"
+    },
+    "dist/assets/index-FKcBB9ko.css": {
+      "bytes": 98381,
+      "sha256": "96c03a0ef50f98cc7dff06c2c708ad4055d5dc4862c8e1e40ec040a0d8031e62"
+    },
+    "dist/assets/SkillsSymbols-naa9PZRF.js": {
+      "bytes": 25168,
+      "sha256": "b22c51f127d049e4998fef0444bb13b50d142d1a7cfb66f49e0ea11331bf01d5"
+    },
+    "dist/assets/StoryMeteor-DyDD101M.js": {
+      "bytes": 5548,
+      "sha256": "cec2adbb73bcb30519626c83502763b701137d07e9aa07c33157aedcb0fde855"
+    },
+    "dist/assets/unbounded-cyrillic-wght-normal-C627f1f8.woff2": {
+      "bytes": 31424,
+      "sha256": "e30bf6a6063b6a47232bbd657e24c7cf4fdaf76fc2c50d92d9ee63e2ad2087cf"
+    },
+    "dist/assets/unbounded-latin-ext-wght-normal-D6H-S6MW.woff2": {
+      "bytes": 118348,
+      "sha256": "845e1c9fe2e9a7bfbedfeb447fbeba4bc1b5ecd6246277910ccdaad35a7a532c"
+    },
+    "dist/assets/unbounded-latin-wght-normal-D5afBTBx.woff2": {
+      "bytes": 50904,
+      "sha256": "22f9b928aa3928a896340422b54d690fbb5875c30eae4c106f029c61f2289fd6"
+    },
+    "dist/assets/unbounded-vietnamese-wght-normal-rat7GD3o.woff2": {
+      "bytes": 13884,
+      "sha256": "aa6b9cba3768a781df88a462a85ca40c6644662bb7d59ab4375ad1ff64f51251"
+    },
+    "dist/assets/workbox-window.prod.es5-BBnX5xw4.js": {
+      "bytes": 5748,
+      "sha256": "cadd21be4a88598a4dec91a26a025df0a5790ff6baec54a884e401c3f5c95557"
+    },
+    "dist/assets/WorksConstellations-CiGgLLgZ.js": {
+      "bytes": 27192,
+      "sha256": "824ad7450c31e72ec00999d38db5622ee082302b7c0a13d852279ae72de1a51d"
+    },
+    "dist/index.html": {
+      "bytes": 7026,
+      "sha256": "a81ac24448a6315e479e006040f7e2444524058ee82ecc9dd49177771364df40"
+    },
+    "dist/sw.js": {
+      "bytes": 4261,
+      "sha256": "052ca0b1365ee338e391afb09b76cb600ba111a77acfc20b6dda967ad112ca6f"
+    },
+    "dist/manifest.webmanifest": {
+      "bytes": 673,
+      "sha256": "b859feed1968ceb37e959eeaf4ea1a27e3b2d7d13804a564b37fd7c659a83f1c"
+    }
+  },
+  "artifacts": {
+    "verification.md": {
+      "bytes": 11065,
+      "sha256": "5cb3d45eb320157dcd59a6b2db173de540656eb657e389a92782c01c905fa259"
+    },
+    "handoff.md": {
+      "bytes": 7161,
+      "sha256": "011bfe1dde44180c155bda4112666ff89571ba8683e938fd6c619082bc9cf299"
+    },
+    "data-results.json": {
+      "bytes": 6032,
+      "sha256": "b14a23741ea97c9c82fcc2a7482c49589c6183167b069f2eb328b19eaa1369c8"
+    },
+    "browser-results.json": {
+      "bytes": 204696,
+      "sha256": "5f7e42ba87d8a43fd817abd3b8c35fd00ed4ff8729ce38efc37bc6be186f8b8d"
+    },
+    "extras-results.json": {
+      "bytes": 106187,
+      "sha256": "21b613d70bb5584bd68fa763c0bf554cd0496efa49e601876c3606881f609d6b"
+    },
+    "screenshots/1440-arenaMultimedia-active.png": {
+      "bytes": 177745,
+      "sha256": "977386f93b26b258692311176c32703494f948c48adec25c754caf004225f523"
+    },
+    "screenshots/1440-arenaMultimedia-idle.png": {
+      "bytes": 175290,
+      "sha256": "a81ef1d7da4a62915c6b58a0b10bdda70049fd57d2f3d0cf97c475ee91515292"
+    },
+    "screenshots/1440-greenAcademy-active.png": {
+      "bytes": 198395,
+      "sha256": "724f9085c2f398d038825d42376e9de2c7250c93efcc11ac7a01fffb9d80e930"
+    },
+    "screenshots/1440-greenAcademy-idle.png": {
+      "bytes": 195909,
+      "sha256": "4fa6e0e8612d6190e540d068a5f74d0dacae0f7115e506159b24a0cf109513dd"
+    },
+    "screenshots/1440-saigonUniversity-active.png": {
+      "bytes": 203081,
+      "sha256": "1b384f45c96d93a3d9366fa05642038219693403db8499d5d4b1c376757fc7c4"
+    },
+    "screenshots/1440-saigonUniversity-idle.png": {
+      "bytes": 199592,
+      "sha256": "361dbcf3cbe5b2479aa0fb3e7657aaf50032d5a4c36b5870e58883ec628332c1"
+    },
+    "screenshots/390-arenaMultimedia-active.png": {
+      "bytes": 60899,
+      "sha256": "b2f2eb208a8960e2e5cd5932add8345e7efb3d0394c718ed902881e4def84ef0"
+    },
+    "screenshots/390-arenaMultimedia-idle.png": {
+      "bytes": 57307,
+      "sha256": "672b09cff662c62990ac2121fea54cd5b9b52a225e455438abf5e149fc2c2737"
+    },
+    "screenshots/390-greenAcademy-active.png": {
+      "bytes": 61761,
+      "sha256": "6395a4d4b3a12790a713545ac60cd6df5e1214fa5e94bd503363670715fde613"
+    },
+    "screenshots/390-greenAcademy-idle.png": {
+      "bytes": 58204,
+      "sha256": "22813695f48eb2e95c882d4728f821d73c6cdde0abf7f01ddff9c2c6b23e71b2"
+    },
+    "screenshots/390-saigonUniversity-active.png": {
+      "bytes": 58693,
+      "sha256": "370f84b5f427dfcb1d81399b03a53e31370d7caaa20f43c896f9b38d5c513df1"
+    },
+    "screenshots/390-saigonUniversity-idle.png": {
+      "bytes": 54856,
+      "sha256": "d918f020b02d6c404b14a3704fb06437bab1d9b68d7561fab14f16314de8caf6"
+    },
+    "screenshots/768-arenaMultimedia-active.png": {
+      "bytes": 113732,
+      "sha256": "5928a0d90df1d72103b8bccfb5d0cdf6d70a5bad728500d4236cc3048b6c51ce"
+    },
+    "screenshots/768-arenaMultimedia-idle.png": {
+      "bytes": 110552,
+      "sha256": "14be467d3b0705a41257ebb0ac7674d11b57ef52866cd134ac98987cfae90933"
+    },
+    "screenshots/768-greenAcademy-active.png": {
+      "bytes": 114193,
+      "sha256": "7792e6f5da9deff7efc096b9b1e1359d58477819f4ec67504567b43bf4b4e0c0"
+    },
+    "screenshots/768-greenAcademy-idle.png": {
+      "bytes": 110933,
+      "sha256": "fc95aff8f282598b3df228de6ed54103f7ee723b2bf6684ff0e782142a3808bb"
+    },
+    "screenshots/768-saigonUniversity-active.png": {
+      "bytes": 103431,
+      "sha256": "dac3a65b5a8b418ff51befc5a2af5c5cc42ba848cf64732ef7b2f20ac6bbf2bb"
+    },
+    "screenshots/768-saigonUniversity-idle.png": {
+      "bytes": 100622,
+      "sha256": "2dc53daa4f1d356f8aafd67f48078b91272289a4cbf0414e0378d24501260368"
+    },
+    "screenshots/fallback-390.png": {
+      "bytes": 72274,
+      "sha256": "55dbf14ca1db2c1e0594342c5ab0febe57422e89003ea14ae9ad7828e2ddb7ff"
+    },
+    "screenshots/skills-after-after-effects.png": {
+      "bytes": 146643,
+      "sha256": "afbede4106bb8e21bdb267abb27a194e8d6d251418fe5058a5dc3b5c3ec8639e"
+    },
+    "screenshots/skills-after-ai.png": {
+      "bytes": 160208,
+      "sha256": "6f1bd903c0fb6fd31f504f67f10f8c8d38335bddc4880d39d373d8922e08c580"
+    },
+    "screenshots/skills-after-davinci-resolve.png": {
+      "bytes": 167209,
+      "sha256": "6992246816a4678d456dd92e4f2acbbe1fb5434e1d43d4881409ece10d0dc60b"
+    },
+    "screenshots/skills-after-figma.png": {
+      "bytes": 154381,
+      "sha256": "ecb5326331bc62c3380ae843b4b57626d1a202d7bf7af57a5d4df985d244962f"
+    },
+    "screenshots/skills-after-illustrator.png": {
+      "bytes": 144500,
+      "sha256": "e666f4f6e92f9f0b7f0fb6ade2965f3a8c9273e2d0b3fdfc535c6452004bcdcf"
+    },
+    "screenshots/skills-after-photoshop.png": {
+      "bytes": 144638,
+      "sha256": "6fe0fc63e977279f1cdf06ec26d01a07dcdfe67eb2e48b4618b5ba98947ab608"
+    },
+    "screenshots/skills-after-premiere-pro.png": {
+      "bytes": 141592,
+      "sha256": "6a5442d2ecef2664ceb4602b449ffed50e22904ccda1bc79fa391f632d5e36ca"
+    }
+  },
+  "handoffCheckedAt": "2026-10-09T16:04:13.300Z"
+}

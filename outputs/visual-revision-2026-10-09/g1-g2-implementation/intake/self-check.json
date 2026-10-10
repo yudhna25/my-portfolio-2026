@@ -1,0 +1,23 @@
+{
+  "checks": 33272,
+  "result": "PASS",
+  "viewports": [
+    320,
+    390,
+    768,
+    1440,
+    1920
+  ],
+  "coverage": [
+    "rest identity",
+    "early readability/no large X stretch",
+    "joined source width cap",
+    "true analytic curve tangents",
+    "finite bounded poses",
+    "forward/reverse/direct determinism",
+    "end at measured O convergence center",
+    "continuous branch joins",
+    "unchanged portal phase boundaries"
+  ],
+  "browser": "Root integration will verify actual appearance, focus, DOM pools and FPS."
+}

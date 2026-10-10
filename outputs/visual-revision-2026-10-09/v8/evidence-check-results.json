@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "decodedPNG": 75,
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "vp9",
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "format": {
+      "duration": "7.267000",
+      "size": "413411"
+    }
+  },
+  "gallery": {
+    "groups": 4,
+    "images": 32,
+    "videoDuration": 7.267
+  }
+}

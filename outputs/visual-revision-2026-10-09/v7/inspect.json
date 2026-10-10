@@ -1,0 +1,162 @@
+{
+  "browser": "154.0.4258.62",
+  "record": {
+    "layout": {
+      "ready": true,
+      "width": 1440,
+      "height": 900,
+      "figures": [
+        {
+          "id": "edura",
+          "left": 51.71801951222676,
+          "top": 200.56583033671953,
+          "right": 368.02069018704117,
+          "bottom": 505.2671190306765
+        },
+        {
+          "id": "veris",
+          "left": 1058.2147909895546,
+          "top": 196.03802680042165,
+          "right": 1396.2755031161525,
+          "bottom": 537.4852972145919
+        },
+        {
+          "id": "vie",
+          "left": 561.1735567658923,
+          "top": 482.32186330879506,
+          "right": 862.8393979773427,
+          "bottom": 850.3218633087953
+        }
+      ]
+    },
+    "store": {
+      "scrollProgress": 0,
+      "currentSection": "work",
+      "storyChapter": "works",
+      "chapterProgress": 0,
+      "storyManual": false,
+      "storyAnchor": null,
+      "sceneFallback": false,
+      "worksOrbit": {
+        "phase": 0.4833550000004456,
+        "origin": 0,
+        "velocity": 0.07499999999999982,
+        "latched": false,
+        "visited": true,
+        "captures": 0,
+        "resumePending": false
+      },
+      "worksSelection": null,
+      "worksHover": null,
+      "worksFocus": null,
+      "worksFinaleSelection": null
+    },
+    "renderer": "WebKit WebGL",
+    "figures": [
+      {
+        "id": "edura",
+        "position": [
+          -15.410005980916857,
+          3.2991906372056232,
+          0
+        ],
+        "scale": [
+          5.906626527477295,
+          5.906626527477295,
+          5.906626527477295
+        ],
+        "art": "http://127.0.0.1:5173/constellations/centaurus.svg"
+      },
+      {
+        "id": "veris",
+        "position": [
+          15.4167395603323,
+          2.6913480386782815,
+          0
+        ],
+        "scale": [
+          5.906626527477295,
+          5.906626527477295,
+          5.906626527477295
+        ],
+        "art": "http://127.0.0.1:5173/constellations/gemini.svg"
+      },
+      {
+        "id": "vie",
+        "position": [
+          -0.2600481577836406,
+          -6.633783265268737,
+          0
+        ],
+        "scale": [
+          5.906626527477295,
+          5.906626527477295,
+          5.906626527477295
+        ],
+        "art": "http://127.0.0.1:5173/constellations/cygnus.svg"
+      }
+    ],
+    "buttons": [
+      {
+        "id": "work-target-edura",
+        "rect": {
+          "x": 51.718021392822266,
+          "y": 200.56582641601562,
+          "width": 316.296875,
+          "height": 304.6875,
+          "top": 200.56582641601562,
+          "right": 368.01489639282227,
+          "bottom": 505.2533264160156,
+          "left": 51.718021392822266
+        },
+        "hidden": false
+      },
+      {
+        "id": "work-target-veris",
+        "rect": {
+          "x": 1058.21484375,
+          "y": 196.03802490234375,
+          "width": 338.046875,
+          "height": 341.4375,
+          "top": 196.03802490234375,
+          "right": 1396.26171875,
+          "bottom": 537.4755249023438,
+          "left": 1058.21484375
+        },
+        "hidden": false
+      },
+      {
+        "id": "work-target-vie",
+        "rect": {
+          "x": 561.173583984375,
+          "y": 482.3218688964844,
+          "width": 301.65625,
+          "height": 368.0000305175781,
+          "top": 482.3218688964844,
+          "right": 862.829833984375,
+          "bottom": 850.3218994140625,
+          "left": 561.173583984375
+        },
+        "hidden": false
+      }
+    ]
+  },
+  "messages": [
+    [
+      "debug",
+      "[vite] connecting..."
+    ],
+    [
+      "debug",
+      "[vite] connected."
+    ],
+    [
+      "info",
+      "%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"
+    ],
+    [
+      "warning",
+      "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+    ]
+  ]
+}

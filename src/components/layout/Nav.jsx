@@ -8,7 +8,8 @@ import { navigationSections } from '@/data/navigation';
 import { SoundToggle } from '@/components/ui/SoundToggle';
 import { playRadioClick } from '@/lib/audioEngine';
 import { navigateRoute, pushMainAnchor } from '@/stores/useRouteStore';
-import { portalProgress, portalState, portalIntake } from '@/3d/utils/portal';
+import { portalProgress, portalState } from '@/3d/utils/portal';
+import { createPortalTrails } from '@/components/effects/portalTrails';
 
 const focusRing = 'focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4';
 
@@ -49,8 +50,12 @@ export function Nav({ onMenuClick, menuOpen = false, reader = false }) {
     const revealOnFocus = (event) => {
       if (event.target.matches(':focus-visible')) hide.reverse().pause(0);
     };
+    // Apply the existing portal exception before its decoration measures the bar.
+    const syncPortal = () => { if (useScrollStore.getState().storyChapter === 'portal') hide.pause(0); };
+    const unsubscribe = useScrollStore.subscribe(syncPortal);
     bar.addEventListener('focusin', revealOnFocus);
     return () => {
+      unsubscribe();
       scrollTween.current?.kill();
       cancelAnimationFrame(focusFrame.current);
       bar.removeEventListener('focusin', revealOnFocus);
@@ -60,18 +65,17 @@ export function Nav({ onMenuClick, menuOpen = false, reader = false }) {
   useGSAP(() => {
     const stage = root.current.querySelector('[data-portal-controls]');
     let active = true;
-    const phase = {}, pose = {}, layout = {};
+    const phase = {};
     gsap.set(stage, { transform: 'none', opacity: 1 });
-    const transform = value => { stage.style.transform = value; };
     const opacity = gsap.quickSetter(stage, 'opacity');
+    const trails = !reader && !menuOpen && !reducedMotion && !fallback
+      ? createPortalTrails([...stage.querySelectorAll('nav a, nav button')].map(node => ({ node })), 'portal-trails--nav') : null;
     const draw = () => {
       const state = useScrollStore.getState();
       const p = reader || menuOpen ? 0 : portalProgress(state.storyChapter, state.chapterProgress, reducedMotion || fallback);
       portalState(p, phase);
-      portalIntake(p < 0.5 ? p : 0, layout, state.storyAnchor, window.innerWidth, window.innerHeight, 1, pose);
-      pose.opacity = phase.controlsOpacity;
-      transform(`translate(${pose.x}px, ${pose.y}px) rotate(${pose.rotation}deg) scale(${pose.scaleX}, ${pose.scaleY})`);
-      opacity(pose.opacity);
+      trails?.draw(p, state.storyAnchor);
+      opacity(phase.controlsOpacity);
       stage.inert = !phase.controlsInteractive;
       stage.dataset.absorbing = String(p > 0 && p < 0.5);
       stage.setAttribute('aria-hidden', phase.controlsOpacity === 0 ? 'true' : 'false');
@@ -80,15 +84,14 @@ export function Nav({ onMenuClick, menuOpen = false, reader = false }) {
     };
     const measure = () => {
       if (!active) return;
-      transform('none');
-      const rect = stage.getBoundingClientRect(); layout.x = rect.left + rect.width / 2; layout.y = rect.top + rect.height / 2;
+      trails?.measure();
       draw();
     };
     measure();
     const unsubscribe = useScrollStore.subscribe(draw);
     window.addEventListener('resize', measure);
     document.fonts?.ready.then(() => { if (active) measure(); });
-    return () => { active = false; unsubscribe(); window.removeEventListener('resize', measure); };
+    return () => { active = false; trails?.dispose(); unsubscribe(); window.removeEventListener('resize', measure); };
   }, { scope: root, dependencies: [reader, menuOpen, reducedMotion, fallback], revertOnUpdate: true });
 
   function navigate(event, id) {
