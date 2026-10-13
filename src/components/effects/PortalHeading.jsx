@@ -39,7 +39,7 @@ function createYearStarImages() {
 }
 const YEAR_STAR_IMAGES = createYearStarImages();
 
-export function PortalHeading({ label, name, year, role, visible = true, glitch = false, children }) {
+export function PortalHeading({ label, name, year, role, visible = true, opening, glitch = false, children }) {
   const scope = useRef(null);
   const reduced = useReducedMotion();
   const fallback = useScrollStore(state => state.sceneFallback);
@@ -87,20 +87,22 @@ export function PortalHeading({ label, name, year, role, visible = true, glitch 
     stage.querySelectorAll('[data-year-meteor]').forEach((meteor, index) => {
       const paths = meteor.querySelectorAll('path');
       gsap.set(paths, { strokeDashoffset: -index * 197 });
-      meteors?.to(paths, { strokeDashoffset: -index * 197 - 1000, duration: 10 + index, repeat: -1, ease: 'none' }, 0);
+      meteors?.to(paths, { strokeDashoffset: -index * 197 - 1000, duration: 6.5 + index * 0.35, repeat: -1, ease: 'none' }, 0);
     });
     stage.querySelectorAll('[data-year-twinkle]').forEach((group, index) => {
       twinkle?.to(group, { opacity: 0.95, duration: 1.4 + index % 4 * 0.25, repeat: -1, yoyo: true, repeatDelay: 1.8 + index % 3 * 0.6, ease: 'sine.inOut' }, index * 0.37);
     });
     const flash = glitch && !frozen ? gsap.timeline({ id: 'hero-year-glitch', paused: true, repeat: -1 }) : null;
     if (flash) {
-      for (const [start, next] of [[12, '7'], [15.4, year.slice(-1)]]) {
-        flash.set(noise, { opacity: 0.55 }, start)
-          .to(noise, { x: 20, y: -8, duration: 0.1, repeat: 3, yoyo: true, ease: 'steps(2)' }, start)
-          .to(digit, { x: -8, opacity: 0.75, duration: 0.1, repeat: 3, yoyo: true, ease: 'steps(2)' }, start)
-          .call(() => changeDigit(next), [], start + 0.2)
-          .set(noise, { opacity: 0, x: 0, y: 0 }, start + 0.4)
-          .set(digit, { opacity: 1, x: 0 }, start + 0.4);
+      for (const [start, next] of [[11, '7'], [17.8, year.slice(-1)]]) {
+        flash.to(noise, { opacity: 0.7, duration: 0.12 }, start)
+          .to(noise, { x: 42, scaleY: 0.86, duration: 0.18, ease: 'power4.in' }, start)
+          .to(digit, { x: -10, skewX: 5, opacity: 0.45, duration: 0.18, ease: 'power3.in' }, start)
+          .set(noise, { x: -26, scaleY: 1.08, opacity: 0.25 }, start + 0.18)
+          .call(() => changeDigit(next), [], start + 0.24)
+          .set(digit, { x: 7, skewX: -2, opacity: 0.85 }, start + 0.26)
+          .to(noise, { x: 0, scaleY: 1, opacity: 0, duration: 0.48, ease: 'expo.out' }, start + 0.28)
+          .to(digit, { x: 0, skewX: 0, opacity: 1, duration: 0.48, ease: 'expo.out' }, start + 0.28);
       }
     }
     const nameNode = stage.querySelector('[data-hero-name]');
@@ -114,19 +116,20 @@ export function PortalHeading({ label, name, year, role, visible = true, glitch 
       const state = useScrollStore.getState();
       const p = portalProgress(state.storyChapter, state.chapterProgress, frozen);
       portalState(p, phase);
-      opacity(visible && p < 0.44 ? 1 : 0);
+      opacity(visible && p < 0.44 ? opening?.current.active ? opening.current.reveal : 1 : 0);
       contourOpacity(p > 0 && p < 0.5 ? 0 : 1);
       if (p > 0 && running) {
         flash?.pause(0);
-        gsap.set(noise, { opacity: 0, x: 0, y: 0 });
+        gsap.set(noise, { opacity: 0, x: 0, y: 0, scaleY: 1 });
+        gsap.set(digit, { opacity: 1, x: 0, skewX: 0 });
         decode?.pause(0); decoded.textContent = name; resetDigit();
       }
       trails?.draw(p, state.storyAnchor, visible);
       const hidden = !visible || phase.textOpacity === 0;
       stage.setAttribute('aria-hidden', hidden ? 'true' : 'false');
       stage.inert = hidden;
-      const opening = useLoadingStore.getState().isLoading && document.querySelector('[data-preloader]');
-      const idle = visible && !opening && !document.hidden && p === 0;
+      const loadingOpening = useLoadingStore.getState().isLoading && document.querySelector('[data-preloader]');
+      const idle = visible && !loadingOpening && !document.hidden && p === 0;
       if (idle === running) return;
       running = idle;
       stage.dataset.heroIdle = String(idle);
@@ -149,6 +152,8 @@ export function PortalHeading({ label, name, year, role, visible = true, glitch 
     measure();
     const unsubscribe = useScrollStore.subscribe(draw);
     const unsubscribeLoading = useLoadingStore.subscribe(draw);
+    const drawOpening = () => { if (opening?.current.active) draw(); };
+    if (opening) gsap.ticker.add(drawOpening);
     document.addEventListener('visibilitychange', draw);
     window.addEventListener('resize', measure);
     document.fonts?.addEventListener('loadingdone', measure);
@@ -160,6 +165,7 @@ export function PortalHeading({ label, name, year, role, visible = true, glitch 
       trails?.dispose();
       unsubscribe();
       unsubscribeLoading();
+      if (opening) gsap.ticker.remove(drawOpening);
       document.removeEventListener('visibilitychange', draw);
       window.removeEventListener('resize', measure);
       document.fonts?.removeEventListener('loadingdone', measure);
@@ -168,13 +174,14 @@ export function PortalHeading({ label, name, year, role, visible = true, glitch 
       resetDigit();
       decoded.textContent = name;
     };
-  }, { scope, dependencies: [label, name, year, frozen, visible, glitch], revertOnUpdate: true });
+  }, { scope, dependencies: [label, name, year, frozen, visible, glitch, opening], revertOnUpdate: true });
 
   const prefix = year.slice(0, -1);
   const lastDigit = year.slice(-1);
   return <header ref={scope} data-portal-stage data-static-motion={frozen} className="portal-heading pointer-events-none fixed inset-0 z-20 flex items-center overflow-hidden text-white">
     <div data-hero-content className="relative isolate mx-4 w-[calc(100%-2rem)] md:ml-[14vw] md:mr-0 md:w-[72vw]">
-      <div data-hero-layer="year" data-hero-year className="relative z-0 -mb-[0.24em]">
+      <div data-hero-lockup className="relative shrink-0">
+      <div data-hero-layer="year" data-hero-year className="relative z-0">
         <span className="sr-only">{year}</span>
         {[true, false].map(stars => <svg key={String(stars)} data-year-contours={stars ? undefined : true} aria-hidden="true" focusable="false" viewBox="0 0 3502 832"
           className={`hero-year-svg${stars ? '' : ' absolute left-0 top-0'}`} fill="none" stroke="white" strokeWidth="2">
@@ -208,20 +215,24 @@ export function PortalHeading({ label, name, year, role, visible = true, glitch 
             </g>
           </g>
           {stars && <g data-year-noise className="opacity-0">
-            <text x="0" y="800" vectorEffect="non-scaling-stroke" className="hero-noise-cyan"><tspan stroke="none">{prefix}</tspan><tspan data-year-glyph>{lastDigit}</tspan></text>
-            <text x="0" y="800" vectorEffect="non-scaling-stroke" className="hero-noise-orange"><tspan stroke="none">{prefix}</tspan><tspan data-year-glyph>{lastDigit}</tspan></text>
+            <g transform="translate(2635 0)">
+              <path data-year-glyph d={YEAR_CONTOURS[lastDigit]} className="hero-noise-upper" />
+              <path data-year-glyph d={YEAR_CONTOURS[lastDigit]} className="hero-noise-lower" />
+              <path d="M90 232h650M180 474h540M70 650h610" className="hero-noise-signal" />
+            </g>
           </g>}
         </svg>)}
       </div>
-      <h1 id="hero-heading" data-hero-layer="heading" aria-label={label} className="relative z-10 whitespace-nowrap font-display leading-none font-extrabold tracking-[-0.035em]">
+      <h1 id="hero-heading" data-hero-layer="heading" aria-label={label} className="absolute left-0 top-1/2 z-10 -translate-y-1/2 whitespace-nowrap font-display leading-none font-extrabold tracking-[-0.035em]">
         {Array.from(label, (char, index) => <span key={index} aria-hidden="true" data-portal-char className={`relative inline-block${index === label.length - 1 && !fallback ? ' text-transparent' : ''}`}>
           {char}
           {index === label.length - 1 && <span data-story-anchor="portal" className="hero-o-anchor" />}
         </span>)}
       </h1>
+      </div>
       <div data-hero-details className="min-h-0 overflow-y-auto">
       <div data-hero-layer="identity" className="relative z-10 mt-[16px] flex flex-col items-start gap-[4px] font-body text-[clamp(0.875rem,1.25vw,1.5rem)] md:flex-row md:items-center md:gap-6">
-        <p data-hero-name tabIndex={0} className="relative inline-grid min-h-[44px] max-w-full items-center break-words rounded-sm px-[4px] leading-relaxed focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-white">
+        <p data-hero-name tabIndex={0} className="relative inline-grid min-h-[44px] max-w-full items-center whitespace-nowrap rounded-sm px-[4px] leading-relaxed focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-white">
           <span className="sr-only">{name}</span>
           <span aria-hidden="true" className="invisible col-start-1 row-start-1">{name}</span>
           <span aria-hidden="true" data-hero-decode className="absolute inset-x-[4px] inset-y-0 flex items-center">{name}</span>

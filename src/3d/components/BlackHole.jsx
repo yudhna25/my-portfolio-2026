@@ -10,13 +10,14 @@ import { finaleState } from '@/3d/utils/finale';
 
 const center = new Vector3(...BLACK_HOLE_CENTER);
 
-export function BlackHole({ target, frozen = false, quality = 'high', story = false, reduced = false, portal }) {
+export function BlackHole({ target, frozen = false, quality = 'high', story = false, reduced = false, portal, opening }) {
   const rendererRef = useRef(null);
   const phase = useRef({});
   const finale = useRef({});
   const copyDefines = useMemo(() => ({ FINALE_OCTAVES: quality === 'low' ? 2 : quality === 'medium' ? 3 : 4 }), [quality]);
   const projected = useMemo(() => new Vector3(), []);
   const bufferSize = useMemo(() => new Vector2(), []);
+  const diskTime = useRef(0);
   const renderer = useMemo(() => {
     const tier = RAY_QUALITY[quality];
     const material = new ShaderMaterial({
@@ -59,6 +60,8 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
     gl.getDrawingBufferSize(bufferSize);
     if (target.width !== bufferSize.x || target.height !== bufferSize.y) target.setSize(bufferSize.x, bufferSize.y);
     const state = useScrollStore.getState();
+    const intro = opening?.current.active && !reduced ? opening.current : null;
+    portal.uOpening.value.set(intro ? 1 : 0, intro?.p || 0, intro?.collapse || 0, intro?.shadow || 1);
     portal.uPortalEnabled.value = story ? 1 : 0;
     const ending = story && (state.storyChapter === 'finale' || state.storyChapter === 'contact');
     portal.uFinaleEnabled.value = ending ? 1 : 0;
@@ -66,6 +69,10 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
     portal.uFinaleHole.value = ending ? authored.hole : 1;
     portal.uFinaleOrigin.value = state.worksOrbit.origin;
     portal.uFinaleGas.value.set(authored.cloud, authored.collapse, authored.flare, authored.progress);
+    if (ending && !reduced) {
+      const q = authored.formation;
+      portal.uOpening.value.set(1, q, Math.max(0, Math.min(1, (q - 0.16) / 0.40)), window.innerHeight * 0.24);
+    }
     if (story) {
       const p = portalProgress(state.storyChapter, state.chapterProgress, reduced);
       portalState(p, phase.current);
@@ -84,6 +91,8 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
       const radius = Math.max(1.1, camera.position.distanceTo(center));
       const shadowAngle = Math.asin(Math.min(0.999, 2.598076 * Math.sqrt(1 - 1 / radius) / radius));
       const shadow = Math.tan(shadowAngle) * cssHeight / (2 * Math.tan(camera.fov * Math.PI / 360));
+      // Grow the actual photon/shadow diameter to about 55vh, before tracing each pixel.
+      portal.uFinaleScale.value = ending ? cssHeight * 0.27 * (0.12 + 0.88 * authored.collapse) / shadow : 1;
       // The anchor is the cap-height slot, not the counter of a visible O glyph.
       portal.uPortalScale.value = Math.max(0.001, height * 0.48 / shadow) * phase.current.growth;
       portal.uPortalRadius.value.set(height * 2.8 * phase.current.growth, height * 1.4 * phase.current.growth);
@@ -91,6 +100,13 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
       portal.uPortalVisibility.value = phase.current.visibility;
       portal.uPortalDust.value = phase.current.dust;
       portal.uPortalPull.value = phase.current.pull;
+      if (intro) {
+        portal.uPortalCenter.value.set(intro.x / cssWidth, 1 - intro.y / cssHeight);
+        portal.uPortalScale.value *= intro.shadow / (height * 0.48);
+        portal.uPortalRadius.value.set(intro.shadow * 2.8 / 0.48, intro.shadow * 1.4 / 0.48);
+        portal.uPortalVisibility.value = 1;
+        portal.uPortalDust.value = 0;
+      }
     }
     uniforms.uDiskIntensity.value = 1 + (ending ? 0.35 * authored.hole : 0);
     uniforms.uObserver.value.copy(camera.position).sub(center);
@@ -101,8 +117,9 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
     else if (observerRadius < 1.1) observer.multiplyScalar(1.1 / observerRadius);
     uniforms.uCameraMatrix.value.copy(camera.matrixWorld);
     uniforms.uInverseProjection.value.copy(camera.projectionMatrixInverse);
-    if (story) uniforms.uTime.value = ending ? authored.collapse * 3 : 0;
-    else if (!frozen) uniforms.uTime.value += Math.min(delta, 0.1);
+    // Gas has an ambient clock; camera, lensing and collapse keep their scroll clock.
+    if (!frozen && !reduced) diskTime.current += Math.min(delta, 0.05);
+    uniforms.uTime.value = diskTime.current + (intro ? -8 * Math.pow(1 - Math.min(1, intro.p / 0.88), 2) : 0);
     // Preserve R3F/composer state: the HDR ray image is rendered exactly once.
     const previousTarget = gl.getRenderTarget();
     const autoClear = gl.autoClear;

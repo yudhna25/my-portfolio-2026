@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "groups": [
+    {
+      "vi": "src/i18n/locales/vi.json",
+      "en": "src/i18n/locales/en.json",
+      "keys": 254
+    },
+    {
+      "vi": "src/i18n/locales/vi/lab.json",
+      "en": "src/i18n/locales/en/lab.json",
+      "keys": 93
+    },
+    {
+      "vi": "src/i18n/locales/vi/scene.json",
+      "en": "src/i18n/locales/en/scene.json",
+      "keys": 2
+    }
+  ],
+  "total": 349
+}

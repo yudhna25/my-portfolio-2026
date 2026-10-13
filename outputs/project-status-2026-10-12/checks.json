@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-12",
+  "head": "3dc0b91179397f9b62d584cc66ba949d7fdc5e9a",
+  "remoteMain": "3dc0b91179397f9b62d584cc66ba949d7fdc5e9a",
+  "applicationChanged": false,
+  "install": { "command": "npm ci", "exitCode": 0, "packages": 750 },
+  "build": { "command": "npm run build", "exitCode": 0, "viteSeconds": 6.38, "pwaEntries": 40, "precacheKiB": 3228.48 },
+  "lint": { "command": "npm run lint", "exitCode": 0, "errors": 0, "warnings": 2, "warningComponent": "src/components/SplashCursor.jsx" },
+  "locale": { "status": "PASS", "main": 254, "lab": 93, "scene": 2, "totalPerLanguage": 349 },
+  "priorSourceFingerprint": { "files": 118, "rawMatch": 92, "rawMismatch": 26, "lineEndingOnly": 6, "unresolvedHashMismatch": 20, "status": "Not exact-source verified for current build" },
+  "currentBrowserRun": false,
+  "currentFpsMeasurement": false,
+  "phoneVerified": false,
+  "httpsDeploymentVerified": false,
+  "technicalImplementation": "V0-V8 and G1/G2 refinements P1-P4",
+  "pending": ["G1/G2 human visual approval", "V9/G3", "V10", "V11", "Separate release checklist"],
+  "priorEvidence": "outputs/visual-revision-2026-10-09/g1-g2-implementation/verification.md"
+}

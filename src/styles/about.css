@@ -1,0 +1,6 @@
+@layer components {
+  [data-portrait][data-stars-ready='true'] .avatar-img { opacity: 0; }
+  @media (prefers-reduced-motion: reduce) {
+    [data-portrait][data-stars-ready='true'] .avatar-img { opacity: 1; }
+  }
+}

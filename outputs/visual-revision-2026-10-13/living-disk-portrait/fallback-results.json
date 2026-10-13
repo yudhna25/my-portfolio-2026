@@ -1,0 +1,58 @@
+{
+  "status": "pass",
+  "records": [
+    {
+      "mode": "no-webgl",
+      "width": 390,
+      "canvas": 0,
+      "opacity": 1,
+      "loaded": true,
+      "visible": "visible",
+      "focus": true,
+      "inert": false,
+      "portal": 900,
+      "viewport": 900,
+      "overflow": 0
+    },
+    {
+      "mode": "no-webgl",
+      "width": 1440,
+      "canvas": 0,
+      "opacity": 1,
+      "loaded": true,
+      "visible": "visible",
+      "focus": true,
+      "inert": false,
+      "portal": 900,
+      "viewport": 900,
+      "overflow": 0
+    },
+    {
+      "mode": "reduced",
+      "width": 390,
+      "canvas": 1,
+      "opacity": 1,
+      "loaded": true,
+      "visible": "visible",
+      "focus": true,
+      "inert": false,
+      "portal": 900,
+      "viewport": 900,
+      "overflow": 0
+    },
+    {
+      "mode": "reduced",
+      "width": 1440,
+      "canvas": 1,
+      "opacity": 1,
+      "loaded": true,
+      "visible": "visible",
+      "focus": true,
+      "inert": false,
+      "portal": 900,
+      "viewport": 900,
+      "overflow": 0
+    }
+  ],
+  "errors": []
+}

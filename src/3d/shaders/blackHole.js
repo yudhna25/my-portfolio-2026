@@ -3,6 +3,8 @@
 // See Bruneton 2020, equation 8: https://arxiv.org/abs/2010.08735.
 // Finite RK4 integration and procedural emission are approximations; this is
 // not NASA's offline simulation or its original fluid/temperature data.
+import { FORMATION_GLSL } from './formation';
+
 export const BLACK_HOLE_VERT = /* glsl */ `
   varying vec2 vUv;
   void main() {
@@ -15,9 +17,11 @@ export const BLACK_HOLE_VERT = /* glsl */ `
 export const PORTAL_IMAGE_GLSL = /* glsl */ `
   uniform float uPortalEnabled, uPortalMini, uPortalScale, uPortalVisibility, uPortalDust, uPortalPull;
   uniform vec2 uPortalCenter, uRayCenter, uPortalRadius, uPortalViewport;
-  uniform float uFinaleEnabled, uFinaleHole, uFinaleOrigin;
+  uniform float uFinaleEnabled, uFinaleHole, uFinaleOrigin, uFinaleScale;
   uniform vec4 uFinaleGas;
+  uniform vec4 uOpening;
   vec2 portalRayUV(vec2 uv) {
+    if (uFinaleEnabled > 0.5) return uRayCenter + (uv - uRayCenter) / max(uFinaleScale, 0.001);
     return uPortalEnabled > 0.5 && uPortalMini > 0.5
       ? uRayCenter + (uv - uPortalCenter) / max(uPortalScale, 0.001) : uv;
   }
@@ -59,17 +63,21 @@ export const BLACK_HOLE_FRAG = /* glsl */ `
   float turbulence(vec3 p) {
     return noise(p) * 0.55 + noise(p * 2.03) * 0.3 + noise(p * 4.01) * 0.15;
   }
+  ${FORMATION_GLSL}
   float diskEmission(vec3 p, vec3 ray) {
     float r = length(p.xz);
     float angle = atan(p.z, p.x);
     // Keplerian shear: inner lanes move faster, bright knots are stretched.
-    float phase = angle - uTime * 0.42 * pow(3.0 / r, 1.5);
-    vec3 domain = vec3(r * 0.9, cos(phase) * 6.0, sin(phase) * 6.0);
+    float phase = angle + uTime * 0.65 * pow(3.0 / r, 1.5);
+    vec3 domain = vec3(r * 1.35, cos(phase) * 8.0, sin(phase) * 8.0);
     float knots = turbulence(domain);
-    float lane = sin(r * 12.0 + knots * 8.0);
-    float fine = sin(r * 28.0 + noise(domain * 2.7) * 5.0);
-    float bands = 0.12 + 0.75 * pow(0.5 + 0.5 * lane, 2.0)
-      + 0.13 * pow(0.5 + 0.5 * fine, 3.0);
+    float lanePhase = r * 13.0 + knots * 9.0 + sin(phase * 3.0 + r) * 0.7;
+    float finePhase = r * 38.0 + noise(domain * 2.7) * 7.0;
+    // Filter only subpixel frequencies; preserve resolved detail during the approach.
+    float lane = sin(lanePhase) * (1.0 - smoothstep(0.8, 3.0, fwidth(lanePhase)));
+    float fine = sin(finePhase) * (1.0 - smoothstep(0.8, 3.0, fwidth(finePhase)));
+    float bands = 0.10 + 0.64 * pow(0.5 + 0.5 * lane, 2.0)
+      + 0.26 * pow(0.5 + 0.5 * fine, 3.0);
     float profile = pow(3.0 / r, 3.2) * smoothstep(3.0, 3.25, r)
       * (1.0 - smoothstep(5.5, 9.0, r));
     float speed = sqrt(0.5 / (r - 1.0));
@@ -97,10 +105,14 @@ export const BLACK_HOLE_FRAG = /* glsl */ `
     v += h / 6.0 * (a1 + 2.0 * a2 + 2.0 * a3 + a4);
   }
   void main() {
+    vec4 formation = stellarFormation(vUv);
+    float birth = uFinaleEnabled > 0.5 ? smoothstep(0.0, 0.4, uFinaleHole)
+      : uOpening.x > 0.5 ? smoothstep(0.28, 0.60, uOpening.y) : 1.0;
+    if (birth <= 0.00001) { gl_FragColor = formation; return; }
     float aperture = portalCoverage(vUv);
     if ((uPortalEnabled > 0.5 && uPortalVisibility <= 0.00001)
       || (uFinaleEnabled > 0.5 && uFinaleHole <= 0.00001)) discard;
-    if (aperture <= 0.0) discard;
+    if (aperture <= 0.0) { gl_FragColor = formation; return; }
     vec4 view = uInverseProjection * vec4(portalRayUV(vUv) * 2.0 - 1.0, 1.0, 1.0);
     vec3 direction = normalize(mat3(uCameraMatrix) * (view.xyz / view.w));
     vec3 p = uObserver;
@@ -112,11 +124,11 @@ export const BLACK_HOLE_FRAG = /* glsl */ `
     vec3 momentum = cross(p, v);
     float momentum2 = dot(momentum, momentum);
     // No emission beyond r=9: b=9/sqrt(1-1/9)=9.546 cannot reach the disk.
-    if (sqrt(momentum2) > 9.6 || (observerRadius > 9.0 && dot(p, v) > 0.0)) discard;
+    if (sqrt(momentum2) > 9.6 || (observerRadius > 9.0 && dot(p, v) > 0.0)) { gl_FragColor = formation; return; }
     float light = 0.0;
     float coverage = 0.0;
     float impact = sqrt(momentum2);
-    float rimWidth = max(fwidth(impact) * 1.25, 0.008);
+    float rimWidth = max(fwidth(impact), 0.0005);
     vec3 diskNormal = vec3(uDiskFrame[0].y, uDiskFrame[1].y, uDiskFrame[2].y);
     for (int i = 0; i < TRACE_STEPS; i++) {
       vec3 previous = p;
@@ -130,7 +142,16 @@ export const BLACK_HOLE_FRAG = /* glsl */ `
       float previousPlane = dot(diskNormal, previous), plane = dot(diskNormal, p);
       if (previousPlane * plane <= 0.0 && abs(previousPlane - plane) > 0.000001) {
         float t = previousPlane / (previousPlane - plane);
-        vec3 hit = mix(previous, p, t);
+        // Hermite refinement resolves curved disk intersections without tracing extra rays.
+        vec3 c1 = previousVelocity * h;
+        vec3 c2 = 3.0 * (p - previous) - 2.0 * c1 - v * h;
+        vec3 c3 = 2.0 * (previous - p) + c1 + v * h;
+        for (int refine = 0; refine < 2; refine++) {
+          vec3 point = previous + t * (c1 + t * (c2 + t * c3));
+          float slope = dot(diskNormal, c1 + t * (2.0 * c2 + t * 3.0 * c3));
+          if (abs(slope) > 0.000001) t = clamp(t - dot(diskNormal, point) / slope, 0.0, 1.0);
+        }
+        vec3 hit = previous + t * (c1 + t * (c2 + t * c3));
         float diskRadius = length(hit);
         if (diskRadius >= 3.0 && diskRadius <= 9.0) {
           light = diskEmission(uDiskFrame * hit, uDiskFrame * mix(previousVelocity, v, t));
@@ -150,7 +171,11 @@ export const BLACK_HOLE_FRAG = /* glsl */ `
       * step(dot(direction, radial), 0.0);
     light += rim * 1.65 * uDiskIntensity;
     coverage = max(coverage, rim);
-    gl_FragColor = vec4(vec3(light), coverage * aperture);
+    float holeAlpha = coverage * aperture * birth;
+    if (uOpening.x > 0.5 && light < 0.00001) holeAlpha = coverage * aperture
+      * (uFinaleEnabled > 0.5 ? smoothstep(0.0, 0.2, uFinaleHole) : smoothstep(0.28, 0.41, uOpening.y));
+    float a = holeAlpha + formation.a * (1.0 - holeAlpha);
+    gl_FragColor = vec4((vec3(light) * holeAlpha + formation.rgb * formation.a * (1.0 - holeAlpha)) / max(a, 0.00001), a);
   }
 `;
 
@@ -158,8 +183,7 @@ export const BLACK_HOLE_COPY = /* glsl */ `
   uniform sampler2D uImage;
   varying vec2 vUv;
   ${PORTAL_IMAGE_GLSL}
-  // Two depth layers of the existing value-noise recipe, not a volumetric engine.
-  // Every coordinate is authored progress + the captured Works origin.
+  // Authored depth slices share the captured origin and the real projected BH center.
   float gasHash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
   float gasNoise(vec2 p) {
     vec2 i = floor(p), f = fract(p), u = f * f * (3.0 - 2.0 * f);
@@ -174,30 +198,75 @@ export const BLACK_HOLE_COPY = /* glsl */ `
   vec4 finaleGas(vec2 uv) {
     if (uFinaleGas.x + uFinaleGas.z < 0.00001) return vec4(0.0);
     vec2 p = (uv - uRayCenter) * uPortalViewport / uPortalViewport.y;
+    float progress = uFinaleGas.w;
     float collapse = uFinaleGas.y;
-    float growth = smoothstep(0.44, 0.70, uFinaleGas.w);
-    float radius = mix(mix(0.07, 1.3, growth), 0.08, collapse);
-    float angle = atan(p.y, p.x) + uFinaleOrigin + growth * 1.2 + collapse * (2.5 + 1.5 * exp(-length(p) * 5.0));
-    vec2 q = vec2(cos(angle), sin(angle)) * length(p) / radius;
-    q.y /= mix(0.8, 0.17, collapse);
-    float warp = gasFbm(q * 2.7 + vec2(13.7, 8.4));
-    float nearGas = gasFbm(q * 5.4 + warp * 1.6 + vec2(31.0, growth * 0.8));
-    float farGas = gasFbm(q * 2.4 - warp * 0.6 + vec2(8.0, 27.0));
-    float envelope = exp(-dot(q, q) * 0.8);
-    float strands = smoothstep(0.27, 0.65, nearGas) * 0.7 + smoothstep(0.3, 0.7, farGas) * 0.3;
-    // Dark lanes and a left reading pocket prevent a flat white/full-screen flash.
-    float lanes = smoothstep(0.19, 0.40, warp);
-    float pocket = 1.0 - 0.65 * exp(-dot((uv - vec2(0.17, 0.58)) * vec2(3.0, 3.5), (uv - vec2(0.17, 0.58)) * vec2(3.0, 3.5)));
-    float density = strands * envelope * lanes * pocket * uFinaleGas.x;
-    float flare = exp(-dot(p, p) * 1800.0) * uFinaleGas.z;
-    float alpha = clamp(density * 1.8 + flare, 0.0, 0.9);
-    // Gas stays below the bloom threshold; only the compact collision/disk emits HDR.
-    return vec4(vec3(mix(0.18, 0.82, strands) * alpha + flare * 1.7), alpha);
+    float growth = smoothstep(0.44, 0.70, progress);
+    float aspect = uPortalViewport.x / uPortalViewport.y;
+    float sweep = max(1.3, aspect) * 1.18;
+    float waveRadius = 0.018 + sweep * growth;
+    float r = length(p), angle = atan(p.y, p.x);
+    float ridge = r - waveRadius * (1.0 + 0.017 * sin(angle * 7.0 + uFinaleOrigin));
+    float wave = exp(-pow(ridge / (0.003 + 0.008 * growth), 2.0));
+    float wake = exp(-pow((ridge + 0.018) / 0.024, 2.0)) * 0.13;
+    float arcs = 0.25 + 0.75 * pow(0.5 + 0.5 * sin(angle * 3.0 + 0.5 * sin(angle * 11.0)), 2.0);
+    wave = (wave + wake) * arcs * smoothstep(0.44, 0.46, progress) * (1.0 - smoothstep(0.64, 0.72, progress));
+    // A second inclined shock shell crosses the first, without a fullscreen flash.
+    vec2 tilted = mat2(0.573576, -0.819152, 0.819152, 0.573576) * p;
+    float shell = exp(-pow((length(tilted / vec2(1.0, 0.64)) - waveRadius * 0.83) / 0.005, 2.0))
+      * smoothstep(0.445, 0.47, progress) * (1.0 - smoothstep(0.65, 0.74, progress)) * 0.32;
+    vec3 rgb = vec3(0.61, 0.85, 0.91) * (wave * 0.75 + shell);
+    float alpha = clamp(wave * 0.68 + shell, 0.0, 0.82);
+    for (int layer = 0; layer < 3; layer++) {
+      float depth = float(layer);
+      float perspective = 0.76 + depth * 0.27;
+      float radius = mix(0.035 + growth * (0.66 + depth * 0.17), 0.64, collapse);
+      vec2 q = tilted / perspective;
+      q.y /= mix(0.86 - depth * 0.1, 0.18 + depth * 0.025, collapse);
+      float distance = length(q) / radius;
+      float turn = atan(q.y, q.x) + uFinaleOrigin + growth * (0.55 + depth * 0.2)
+        + collapse * (4.5 + 2.0 / (0.3 + distance));
+      vec2 flow = vec2(cos(turn), sin(turn)) * distance;
+      float warp = gasFbm(flow * 3.0 + vec2(depth * 17.1, 9.4));
+      float grain = gasFbm(flow * 7.0 + warp * 1.9 + depth * 21.0);
+      float lanes = pow(smoothstep(0.30, 0.72, grain), 1.7) * smoothstep(0.28, 0.52, warp);
+      float envelope = exp(-pow((distance - mix(0.68, 0.78, collapse)) / 0.46, 2.0));
+      float filaments = 0.38 + 0.62 * pow(0.5 + 0.5 * sin(distance * 39.0 + warp * 11.0), 2.0);
+      float density = lanes * envelope * filaments * uFinaleGas.x * 0.16;
+      vec3 color = mix(vec3(0.38), vec3(0.24, 0.39, 0.44), smoothstep(0.85, 1.2, distance) * (1.0 - collapse) * 0.36);
+      rgb += color * density * (1.0 - alpha);
+      alpha += density * (1.0 - alpha);
+    }
+    float core = exp(-pow(r / (0.013 + uFinaleGas.z * 0.024), 2.0)) * uFinaleGas.z;
+    float spikes = exp(-min(abs(tilted.x), abs(tilted.y)) * 550.0) * exp(-r * 9.0) * uFinaleGas.z * 0.20;
+    rgb += vec3(core * 2.2 + spikes);
+    alpha = max(alpha, clamp(core + spikes, 0.0, 1.0));
+    return vec4(rgb, alpha);
+  }
+  // Authored photon echoes bracket the dark crossing; their clock is scroll, not time.
+  float portalEcho(vec2 uv) {
+    float p = uPortalPull;
+    float pull = smoothstep(0.06, 0.18, p) * (1.0 - smoothstep(0.35, 0.43, p));
+    float release = smoothstep(0.50, 0.56, p) * (1.0 - smoothstep(0.75, 0.88, p));
+    if (pull + release < 0.0001 || uOpening.x > 0.5) return 0.0;
+    vec2 px = (uv - uPortalCenter) * uPortalViewport;
+    float r = length(px), angle = atan(px.y, px.x);
+    float core = uPortalRadius.x * (0.48 / 2.8);
+    float eject = clamp((p - 0.50) / 0.38, 0.0, 1.0);
+    float light = 0.0;
+    for (int i = 0; i < 3; i++) {
+      float lane = float(i);
+      float radius = p < 0.5 ? core * (1.22 + lane * 0.32) + 12.0
+        : uPortalViewport.y * (0.035 + pow(eject, 0.8) * (0.6 + lane * 0.15));
+      float wave = sin(angle * 3.0 + p * 18.0 + lane) * radius * 0.012;
+      float line = exp(-pow((r - radius - wave) / max(fwidth(r), 1.1), 2.0));
+      float arc = pow(max(0.0, sin(angle * 2.0 - p * 12.0 + lane * 1.7)), 6.0);
+      light += line * arc / (1.0 + lane);
+    }
+    return light * (pull * 0.32 + release * 0.55);
   }
   void main() {
     vec4 image = portalImage(uImage, vUv);
     if (uFinaleEnabled > 0.5) {
-      image.a *= uFinaleHole;
       vec4 gas = finaleGas(vUv);
       float a = image.a + gas.a * (1.0 - image.a);
       if (a < 0.00001) discard;
@@ -217,6 +286,9 @@ export const BLACK_HOLE_COPY = /* glsl */ `
         * exp(-length(dustPx) / 100.0) * uPortalDust * (1.0 - image.a);
       a = max(a, dust);
       rgb += vec3(dust * 0.7);
+      float echo = portalEcho(vUv) * (1.0 - image.a);
+      a = max(a, echo);
+      rgb += vec3(echo * 0.85);
       gl_FragColor = vec4(rgb / max(a, 0.00001), a);
       return;
     }

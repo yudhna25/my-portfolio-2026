@@ -36,8 +36,8 @@
       "Teamwork",
       "Attention to Detail"
     ],
-    "portraitToggle": "Keep portrait in color",
-    "portraitHint": "Hover or use Tab to reveal color. Tap to keep or turn off color."
+    "portraitToggle": "Keep the stars assembled as a portrait",
+    "portraitHint": "Scroll into view or hover to gather the stars. Use Tab or tap to hold the portrait."
   },
   "works": {
     "sectionLabel": "Constellation of Projects",

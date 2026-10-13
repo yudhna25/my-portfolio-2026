@@ -1,0 +1,58 @@
+{
+  "records": [
+    {
+      "i": 0,
+      "focus": [
+        {
+          "t": 969,
+          "id": "",
+          "inert": false,
+          "visible": true,
+          "active": "",
+          "stack": "Error\n    at HTMLElement.focus (<anonymous>:2:304)\n    at Nt.scope (http://127.0.0.1:5215/assets/index-BZI3Dwwj.js:12:77267)\n    at f (http://127.0.0.1:5215/assets/index-BZI3Dwwj.js:10:159434)\n    at t.add (http://127.0.0.1:5215/assets/index-BZI3Dwwj.js:10:159533)\n    at http://127.0.0.1:5215/assets/index-BZI3Dwwj.js:10:184949\n    at Uo (http://127.0.0.1:5215/assets/index-BZI3Dwwj.js:9:93038)\n    at Hm (http://127.0.0.1:5215/assets/index-BZI3Dwwj.js:9:97587)\n    at Ga (http://127.0.0.1:5215/asse"
+        },
+        {
+          "out": true,
+          "t": 9255.199999928474,
+          "connected": true,
+          "inert": false,
+          "chapter": "works",
+          "p": 0.30006684027777814,
+          "visible": true,
+          "style": "translate: none; rotate: none; scale: none; transform: translate(48.5645px, 184.765px); width: 347.245px; height: 334.509px;",
+          "stack": "Error\n    at HTMLDocument.<anonymous> (<anonymous>:2:472)"
+        },
+        {
+          "t": 9351,
+          "id": "edura-title",
+          "inert": false,
+          "visible": true,
+          "active": "edura-title",
+          "stack": "Error\n    at HTMLElement.focus (<anonymous>:2:304)\n    at eo.dependencies (http://127.0.0.1:5215/assets/index-BZI3Dwwj.js:21:178303)\n    at f (http://127.0.0.1:5215/assets/index-BZI3Dwwj.js:10:159434)\n    at t.add (http://127.0.0.1:5215/assets/index-BZI3Dwwj.js:10:159533)\n    at http://127.0.0.1:5215/assets/index-BZI3Dwwj.js:10:184949\n    at Uo (http://127.0.0.1:5215/assets/index-BZI3Dwwj.js:9:93038)\n    at Hm (http://127.0.0.1:5215/assets/index-BZI3Dwwj.js:9:97587)\n    at Ga (http://127.0.0.1:5"
+        },
+        {
+          "t": 11144.399999976158,
+          "id": "work-target-edura",
+          "inert": false,
+          "visible": true,
+          "active": "work-target-edura",
+          "stack": "Error\n    at HTMLElement.focus (<anonymous>:2:304)\n    at O (http://127.0.0.1:5215/assets/index-BZI3Dwwj.js:21:175275)"
+        },
+        {
+          "out": true,
+          "t": 11410.5,
+          "connected": true,
+          "inert": true,
+          "ancestor": "<div data-story-content=\"true\" class=\"invisible\" aria-hidden=\"true\" inert=\"\" style=\"opacity: 0; visibility: hidden;\"><div data-story-chapter=\"skills\"><section id=\"skills\" lang=\"vi\" data-theme=\"dark\" aria-labelledby=\"skills-heading\" class=\"relative border-y border-white/[0.06] px-6 py-20 text-(--text",
+          "chapter": "portal",
+          "p": 0.2644841111111111,
+          "visible": true,
+          "style": "translate: none; rotate: none; scale: none; transform: translate(48.5645px, 184.765px); width: 347.245px; height: 334.509px;",
+          "stack": "Error\n    at HTMLDocument.<anonymous> (<anonymous>:2:472)"
+        }
+      ],
+      "active": "",
+      "chapter": "works"
+    }
+  ]
+}

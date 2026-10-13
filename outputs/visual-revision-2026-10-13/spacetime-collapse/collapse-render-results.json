@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "records": [
+    {
+      "p": 0.62,
+      "first": "c72a92e6ff31d108076d8177465dc8da22853686b8b53e31172062e1425ccc37",
+      "hold": "c72a92e6ff31d108076d8177465dc8da22853686b8b53e31172062e1425ccc37",
+      "reverse": "c72a92e6ff31d108076d8177465dc8da22853686b8b53e31172062e1425ccc37"
+    },
+    {
+      "p": 0.8,
+      "first": "37b03f4e930bf3cd43c69dc329ae0acc59cf4c6588f031871f15be2ba05db5b8",
+      "hold": "37b03f4e930bf3cd43c69dc329ae0acc59cf4c6588f031871f15be2ba05db5b8",
+      "reverse": "37b03f4e930bf3cd43c69dc329ae0acc59cf4c6588f031871f15be2ba05db5b8"
+    },
+    {
+      "p": 0.86,
+      "first": "f69d6ac7d3905ed8346a4cd86f0c0382eb8a295be2fc76b4b338c4393be23ae2",
+      "hold": "f69d6ac7d3905ed8346a4cd86f0c0382eb8a295be2fc76b4b338c4393be23ae2",
+      "reverse": "f69d6ac7d3905ed8346a4cd86f0c0382eb8a295be2fc76b4b338c4393be23ae2"
+    }
+  ]
+}

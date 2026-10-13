@@ -8,6 +8,7 @@ import { LabTelemetry } from '@/3d/components/LabTelemetry';
 import { WorksConstellations } from '@/3d/components/WorksConstellations';
 import { SkillsSymbols } from '@/3d/components/SkillsSymbols';
 import { StoryMeteor } from '@/3d/components/StoryMeteor';
+import { PortraitStars } from '@/3d/components/PortraitStars';
 import { createWorksLayout } from '@/3d/utils/worksOrbit';
 import Work from '@/components/Work';
 import Skills from '@/components/sections/Skills';
@@ -16,6 +17,7 @@ import Experience from '@/components/sections/Experience';
 import { ConstellationCredits } from '@/components/ui/ConstellationCredits';
 import { PortalHeading } from '@/components/effects/PortalHeading';
 import About from '@/components/About';
+import Contact from '@/components/sections/Contact';
 import { useLabScroll } from '@/3d/hooks/useLabScroll';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
 import { useScrollStore } from '@/stores/useScrollStore';
@@ -37,6 +39,7 @@ export default function Lab() {
   const [bloom, setBloom] = useState(true);
   const skillsAnchor = useRef(null);
   const meteorLayout = useRef(null);
+  const portrait = useRef({ intent: 0 });
   const captureMeteorLayout = useCallback(layout => { meteorLayout.current = layout; }, []);
   const [worksLayout] = useState(() => ({ current: createWorksLayout() }));
   const [educationStages] = useState(() => ({ saigonUniversity: { current: null }, greenAcademy: { current: null }, arenaMultimedia: { current: null } }));
@@ -61,6 +64,7 @@ export default function Lab() {
         {story && <WorksConstellations frozen={frozen} quality={tier} layoutRef={worksLayout} />}
         {story && <SkillsSymbols anchor={skillsAnchor} educationAnchors={educationStages} />}
         {story && <StoryMeteor layout={meteorLayout} frozen={frozen} />}
+        {story && <PortraitStars key={tier} layout={portrait} frozen={frozen || !showContent} quality={tier} />}
         <LabTelemetry story={story} frozen={frozen} />
       </>}</GalaxyScene>
       {story && <PortalHeading label={t('story.portfolioPrefix') + t('story.portalGlyph')} year={t('story.year')} name={i18n.t('hero.name')} role={i18n.t('hero.tagline')} visible={showContent} />}
@@ -72,8 +76,10 @@ export default function Lab() {
             : item.id === 'education' ? <div key={item.id} data-story-chapter="education" inert={entering && !staticMotion} className="pointer-events-auto"><Education stageRefs={educationStages} /></div>
             : item.id === 'experience' ? <div key={item.id} data-story-chapter="experience" inert={entering && !staticMotion} className="pointer-events-auto"><Experience onLayout={captureMeteorLayout} /></div>
             : item.id === 'works' ? <div key={item.id} data-story-chapter="works" inert={entering && !staticMotion} className="pointer-events-auto"><Work layoutRef={worksLayout} nativeNavigation /></div>
-            : item.id === 'about' ? <div key={item.id} id="lab-about" data-story-chapter="about" className="pointer-events-auto"><About /></div> : (
-            <section key={item.id} id={`lab-${item.id}`} data-story-chapter={item.id} className={`flex flex-col justify-start px-6 pt-28 pb-64 sm:px-12 lg:px-20 ${entering ? 'invisible' : ''} ${item.id === 'portal' ? staticMotion ? 'min-h-screen' : 'min-h-[400vh]' : item.id === 'finale' && staticMotion ? 'min-h-0' : item.height === 1.75 ? 'min-h-[175vh]' : item.height === 2.25 ? 'min-h-[225vh]' : item.height === 1.1 ? 'min-h-[110vh]' : 'min-h-screen'}`}>
+            : item.id === 'contact' ? <div key={item.id} data-story-chapter="contact" className="pointer-events-auto"><Contact /></div>
+            : item.id === 'finale' ? <div key={item.id} data-story-chapter="finale" aria-hidden="true" className={staticMotion ? 'min-h-0' : 'min-h-[400vh]'} />
+            : item.id === 'about' ? <div key={item.id} id="lab-about" data-story-chapter="about" className="pointer-events-auto"><About portrait={portrait} /></div> : (
+            <section key={item.id} id={`lab-${item.id}`} data-story-chapter={item.id} className={`flex flex-col justify-start px-6 pt-28 pb-64 sm:px-12 lg:px-20 ${entering ? 'invisible' : ''} ${item.id === 'portal' ? staticMotion ? 'min-h-screen' : 'min-h-[400vh]' : item.height === 1.75 ? 'min-h-[175vh]' : item.height === 1.1 ? 'min-h-[110vh]' : 'min-h-screen'}`}>
               <div className={`max-w-lg ${item.id === 'works' || chapter === 'works' ? 'invisible' : ''}`}>
                 <p className="font-mono text-xs uppercase tracking-widest text-secondary">{t('story.prototype')}</p>
                 <h2 className="mt-4 font-display text-3xl sm:text-5xl">{t(`story.chapters.${item.id}`)}</h2>

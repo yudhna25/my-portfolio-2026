@@ -14,7 +14,8 @@
   .portal-trail-image { display: block; white-space: nowrap; overflow: visible; }
   .portal-trail-year path { vector-effect: non-scaling-stroke; }
   .portal-trail-year .hero-year-base { stroke: none; }
+  .portal-trail-year .hero-year-tail, .portal-trail-year .hero-year-wake, .portal-trail-year .hero-year-head { vector-effect: none; }
   .portal-trail-ribbons { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-  .portal-trail-ribbon { fill: var(--text-primary); stroke: none; }
+  .portal-trail-particles { fill: none; stroke: var(--text-primary); stroke-width: 1.4; stroke-linecap: round; }
   @media (prefers-reduced-motion: reduce) { .portal-trails { display: none; } }
 }

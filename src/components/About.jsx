@@ -5,18 +5,27 @@ import { gsap, ScrollTrigger } from '@/hooks/useGSAPSetup';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { useScrollStore } from '@/stores/useScrollStore';
 import { portalProgress, portalState, portalSmooth } from '@/3d/utils/portal';
+import '@/styles/about.css';
 
-export default function About() {
+export default function About({ portrait }) {
   const root = useRef(null);
+  const portraitButton = useRef(null);
   const { t, i18n } = useTranslation();
   const reduced = useReducedMotion();
   const fallback = useScrollStore(state => state.sceneFallback);
   const frozen = reduced || fallback;
-  const [color, setColor] = useState(false);
+  const [held, setHeld] = useState(false);
+  const [hovered, setHovered] = useState(false);
+  const [focused, setFocused] = useState(false);
   const name = t('about.heading').split(' / ');
   const bio = t('about.bioFirst');
   const split = bio.indexOf('. ') + 1 || bio.length;
   const opening = bio.slice(0, split);
+
+  useGSAP(() => {
+    if (!portrait) return;
+    gsap.to(portrait.current, { intent: held || hovered || focused ? 1 : 0, duration: frozen ? 0 : 0.85, ease: 'power3.inOut', overwrite: true });
+  }, { scope: root, dependencies: [held, hovered, focused, frozen, portrait] });
 
   useGSAP(() => {
     const q = gsap.utils.selector(root);
@@ -56,6 +65,17 @@ export default function About() {
         item.opacity(portalSmooth(start, start + 0.09, p));
       });
       backdrop(phase.aboutOpacity);
+      if (portrait && portraitButton.current) {
+        const data = portrait.current;
+        data.node = portraitButton.current;
+        data.visible = false;
+        if (!visible || frozen) return;
+        const rect = portraitButton.current.getBoundingClientRect();
+        data.rect = rect;
+        data.visible = rect.bottom > 0 && rect.top < window.innerHeight;
+        data.morph = portalSmooth(0.76, 1, p);
+        data.opacity = portalSmooth(0.60, 0.74, p);
+      }
     };
     const measure = () => {
       if (!active) return;
@@ -83,10 +103,10 @@ export default function About() {
       window.removeEventListener('resize', measure);
       ScrollTrigger.removeEventListener('refresh', measure);
     };
-  }, { scope: root, dependencies: [frozen, i18n.resolvedLanguage], revertOnUpdate: true });
+  }, { scope: root, dependencies: [frozen, i18n.resolvedLanguage, portrait], revertOnUpdate: true });
 
   return <section ref={root} id="about" aria-labelledby="about-heading" className="relative isolate min-h-screen px-6 py-28 text-(--text-primary) sm:px-8 lg:px-16 lg:py-36">
-    <div data-about-motion data-about-backdrop aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_65%_62%,rgba(5,5,5,0.97)_15%,rgba(5,5,5,0.85)_42%,transparent_78%)]" />
+    <div data-about-motion data-about-backdrop aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_72%_62%,rgba(5,5,5,0.44)_15%,rgba(5,5,5,0.18)_42%,transparent_78%)]" />
     <div data-about-motion className="mx-auto grid max-w-7xl grid-cols-12 items-start gap-y-10 lg:gap-x-16 lg:gap-y-8">
       <header data-about-group="heading" className="col-span-12 min-w-0 lg:col-span-7 lg:col-start-6 lg:row-start-1">
         <p className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-(--text-secondary)">{t('about.sectionLabel')}</p>
@@ -101,11 +121,13 @@ export default function About() {
       </header>
 
       <figure data-about-group="avatar" className="col-span-12 m-0 min-w-0 lg:col-span-5 lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:self-center">
-        <button type="button" aria-label={t('about.portraitToggle')} aria-describedby="about-portrait-hint" aria-pressed={color}
-          onClick={() => setColor(value => !value)} onKeyDown={event => { if (event.key === 'Escape') setColor(false); }}
+        <button ref={portraitButton} data-portrait type="button" aria-label={t('about.portraitToggle')} aria-describedby="about-portrait-hint" aria-pressed={held}
+          onPointerEnter={() => setHovered(true)} onPointerLeave={() => setHovered(false)}
+          onFocus={() => setFocused(true)} onBlur={() => setFocused(false)}
+          onClick={() => setHeld(value => !value)} onKeyDown={event => { if (event.key === 'Escape') { setHeld(false); setFocused(false); } }}
           className="group relative mx-auto block w-full max-w-md cursor-pointer border-0 bg-transparent p-0 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-8">
-          <img src="/avatar-cutout.webp" alt={t('about.avatarAlt')} width="800" height="1000" loading="lazy" decoding="async"
-            className={`avatar-img block aspect-[4/5] h-auto w-full object-contain group-focus-visible:grayscale-0 [@media(hover:hover)]:group-hover:grayscale-0 ${color ? 'grayscale-0' : 'grayscale'}`} />
+          <img src={`${import.meta.env.BASE_URL}avatar-cutout.webp`} alt={t('about.avatarAlt')} width="800" height="1000" loading="lazy" decoding="async"
+            className="avatar-img block aspect-[4/5] h-auto w-full object-contain grayscale" />
         </button>
         <p id="about-portrait-hint" className="mx-auto mt-5 max-w-md text-center font-body text-xs leading-relaxed text-(--text-secondary)">{t('about.portraitHint')}</p>
       </figure>

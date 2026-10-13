@@ -4,7 +4,7 @@ import { BufferAttribute, BufferGeometry, DynamicDrawUsage, Matrix4, Quaternion,
 import data from '@/3d/data/worksConstellations.json';
 import { BLACK_HOLE_CENTER, storyCameraPath } from '@/3d/utils/cameraPath';
 import { advanceWorksOrbit, worksBounds, worksStage, worksFigure, WORKS_IDS } from '@/3d/utils/worksOrbit';
-import { finaleState } from '@/3d/utils/finale';
+import { finaleState, finaleSmooth } from '@/3d/utils/finale';
 import { worksArrival } from '@/3d/utils/storyMeteor';
 import { useScrollStore } from '@/stores/useScrollStore';
 
@@ -114,6 +114,8 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
     const stage = worksStage(size.width, size.height, figures.map(figure => figure.bounds));
     const units = width / size.width;
     return { center, rotation, hole, scale: stage.scale * units, drift: stage.drift * units,
+      orbit: { x: (stage.orbit.x - size.width / 2) * units, y: (size.height / 2 - stage.orbit.y) * units, rx: stage.orbit.rx * units, ry: stage.orbit.ry * units },
+      offsets: figures.map(({ bounds }) => [-(bounds.left + bounds.right) * stage.scale * units / 2, -(bounds.top + bounds.bottom) * stage.scale * units / 2]),
       centers: stage.centers.map(([x, y]) => [(x - size.width / 2) * units, (size.height / 2 - y) * units]) };
   }, [size.width, size.height, figures]);
   useEffect(() => () => figures.forEach(figure => { figure.points.dispose(); figure.lines.dispose(); }), [figures]);
@@ -154,17 +156,18 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
       group.position.set(pose.x, pose.y, pose.z);
       group.scale.setScalar(pose.scale);
       const highlighted = selected === WORKS_IDS[i];
-      const strength = (highlighted ? 1.6 : selected ? 0.65 : 1) * authored.stars * arrival;
+      const energy = finaleSmooth(0.34, 0.44, p);
+      const strength = (highlighted ? 1.6 : selected ? 0.65 : 1) * authored.stars * arrival * (1 + energy * 3);
       group.children[0].material.opacity = (highlighted ? 0.65 : 0.16) * authored.stars * arrival;
       group.children[1].material.uniforms.uStrength.value = strength;
-      group.children[1].material.uniforms.uActive.value = highlighted ? 1 : 0;
+      group.children[1].material.uniforms.uActive.value = (highlighted ? 1 : 0) + energy * 2;
       group.children[1].material.uniforms.uPixelRatio.value = gl.getPixelRatio();
       const art = group.children[2].material;
       art.opacity = art.map ? (highlighted ? 0.3 : 0.1) * authored.stars * arrival : 0;
     }
     projectWorks(layoutRef, root.current, camera, figures, groups.current, size, basis, active);
     trailMesh.current.visible = finale && authored.trails > 0;
-    trailMesh.current.material.uniforms.uOpacity.value = authored.trails * 0.16;
+    trailMesh.current.material.uniforms.uOpacity.value = authored.trails * 0.32;
     if (trailMesh.current.visible) {
       const attribute = trailMesh.current.geometry.attributes.position;
       const array = attribute.array;

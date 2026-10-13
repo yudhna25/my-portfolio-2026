@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "records": [
+    {
+      "mode": "hidden-resize",
+      "hold": {
+        "before": 0.150889,
+        "after": 0.150889
+      },
+      "summary": {
+        "frameCount": 390,
+        "firstLoaderMs": 306.00000002384184,
+        "firstPresentationMs": 2174.600000023842,
+        "releaseMs": 7897.0000000238415,
+        "duration": 4.5,
+        "ready": "scene-font",
+        "joinFrames": 3,
+        "maximumRevealAlignmentPx": 0.01742029862905859,
+        "minimumPhotonSizeRatio": 1.0000002083466677,
+        "maximumPhotonSizeRatio": 1.0001785114247312,
+        "final": {
+          "heroOpacity": 1,
+          "locked": false,
+          "fallback": false
+        }
+      }
+    },
+    {
+      "mode": "live-reduced",
+      "loader": 0
+    }
+  ],
+  "limits": [
+    "document.hidden and OS media preference were simulated in Edge."
+  ]
+}

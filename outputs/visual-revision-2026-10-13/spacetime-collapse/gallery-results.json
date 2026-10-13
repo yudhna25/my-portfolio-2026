@@ -1,0 +1,297 @@
+{
+  "status": "pass",
+  "browser": "155.0.4283.45",
+  "images": [
+    {
+      "src": "screenshots/finale-0.62-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/contact-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/contact-en-1920.png",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "src": "screenshots/hero-no-outline-390.png",
+      "width": 390,
+      "height": 900
+    },
+    {
+      "src": "screenshots/opening-0.36-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/hdr-core-detail.png",
+      "width": 1280,
+      "height": 1280
+    }
+  ],
+  "checkpoints": [
+    {
+      "src": "screenshots/finale-0-390.png",
+      "width": 390,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.12-390.png",
+      "width": 390,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.34-390.png",
+      "width": 390,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.44-390.png",
+      "width": 390,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.5-390.png",
+      "width": 390,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.56-390.png",
+      "width": 390,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.62-390.png",
+      "width": 390,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.68-390.png",
+      "width": 390,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.7-390.png",
+      "width": 390,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.74-390.png",
+      "width": 390,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.78-390.png",
+      "width": 390,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.8-390.png",
+      "width": 390,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.86-390.png",
+      "width": 390,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.92-390.png",
+      "width": 390,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.96-390.png",
+      "width": 390,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.999-390.png",
+      "width": 390,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.12-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.34-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.44-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.5-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.56-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.62-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.68-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.7-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.74-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.78-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.8-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.86-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.92-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.96-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.999-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0-1920.png",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.12-1920.png",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.34-1920.png",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.44-1920.png",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.5-1920.png",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.56-1920.png",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.62-1920.png",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.68-1920.png",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.7-1920.png",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.74-1920.png",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.78-1920.png",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.8-1920.png",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.86-1920.png",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.92-1920.png",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.96-1920.png",
+      "width": 1920,
+      "height": 900
+    },
+    {
+      "src": "screenshots/finale-0.999-1920.png",
+      "width": 1920,
+      "height": 900
+    }
+  ],
+  "videos": [
+    {
+      "time": 0.690651,
+      "duration": 9.233
+    },
+    {
+      "time": 0.681951,
+      "duration": 25.8
+    },
+    {
+      "time": 0.680785,
+      "duration": 6.466
+    },
+    {
+      "time": 0.698334,
+      "duration": 12.3
+    }
+  ],
+  "errors": []
+}

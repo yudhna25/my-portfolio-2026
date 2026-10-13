@@ -1,0 +1,42 @@
+{
+  "records": [
+    {
+      "p": 0.084889,
+      "duration": 4.5
+    },
+    {
+      "p": 0.200889,
+      "duration": 4.5
+    },
+    {
+      "p": 0.321333,
+      "duration": 4.5
+    },
+    {
+      "p": 0.426889,
+      "duration": 4.5
+    },
+    {
+      "p": 0.533556,
+      "duration": 4.5
+    },
+    {
+      "p": 0.651556,
+      "duration": 4.5
+    },
+    {
+      "p": 0.817111,
+      "duration": 4.5
+    },
+    {
+      "p": 0.901556,
+      "duration": 4.5
+    },
+    {
+      "p": 0.990444,
+      "duration": 4.5
+    }
+  ],
+  "errors": [],
+  "method": "Natural running presentation, no timeline seeking"
+}

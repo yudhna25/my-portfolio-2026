@@ -26,7 +26,7 @@ export function worksStage(width, height, bounds) {
   const heights = bounds.map(b => b.top - b.bottom);
   const drift = mobile ? 4 : 8;
   const desired = Math.min(width * 0.15, height * 0.13) * 1.8;
-  const scale = mobile ? Math.min(desired, (width - 60) / (widths[1] + widths[2]),
+  const scale = mobile ? Math.min(desired, (width - 48) / (Math.max(...widths) * 2.2),
     Math.max(44, height - 422) / (heights[0] + Math.max(heights[1], heights[2])))
     : Math.min(desired, (width - 144) / widths.reduce((a, b) => a + b, 0),
       (height * 0.52 - 64) / Math.max(...heights));
@@ -36,18 +36,22 @@ export function worksStage(width, height, bounds) {
     [width - 24 - widths[2] * scale / 2, 170 + heights[0] * scale + Math.max(heights[1], heights[2]) * scale / 2],
   ] : [[48 + widths[0] * scale / 2, height * 0.4],
     [width - 48 - widths[1] * scale / 2, height * 0.4], [width / 2, height * 0.74]];
-  return { scale, drift, centers: centers.map(([x, y], i) => [
+  const top = 148, bottom = mobile ? 220 : 48;
+  const orbit = { x: width / 2, y: (top + height - bottom) / 2,
+    rx: Math.max(12, (width - (mobile ? 48 : 96) - Math.max(...widths) * scale) / 2),
+    ry: Math.max(12, (height - top - bottom - Math.max(...heights) * scale) / 2) };
+  return { scale, drift, orbit, centers: centers.map(([x, y], i) => [
     x - (bounds[i].left + bounds[i].right) * scale / 2,
     y + (bounds[i].top + bounds[i].bottom) * scale / 2,
   ]) };
 }
 
-// Readable triangle at idle; the same captured pose contracts into the existing finale.
+// One slow shared orbit; the captured pose feeds the unchanged accelerating collapse.
 export function worksFigure(progress, origin, index, basis, out) {
   finaleState(progress, out);
-  const phase = origin + index * Math.PI * 2 / 3;
-  const x = basis.centers[index][0] + Math.sin(phase) * basis.drift;
-  const y = basis.centers[index][1] + Math.cos(phase) * basis.drift;
+  const phase = origin - index * Math.PI * 2 / 3 + Math.PI * 5 / 6;
+  const x = basis.orbit.x + Math.cos(phase) * basis.orbit.rx + basis.offsets[index][0];
+  const y = basis.orbit.y + Math.sin(phase) * basis.orbit.ry + basis.offsets[index][1];
   const cosine = Math.cos(out.angle), sine = Math.sin(out.angle);
   out.x = basis.hole.x * out.travel + (x * cosine - y * sine) * out.radius;
   out.y = basis.hole.y * out.travel + (x * sine + y * cosine) * out.radius;

@@ -22,7 +22,7 @@ export const STORY_CHAPTERS = Object.freeze([
   { id: 'about', height: 1 }, { id: 'skills', height: 1 },
   { id: 'education', height: 1.75 }, { id: 'experience', height: 1 },
   { id: 'departure', height: 1.1, transition: true },
-  { id: 'works', height: 1 }, { id: 'finale', height: 2.25, transition: true },
+  { id: 'works', height: 1 }, { id: 'finale', height: 4, transition: true },
   { id: 'contact', height: 1 },
 ]);
 export const STORY_SEED = 20261007;
@@ -36,7 +36,7 @@ const SKILLS = [2, 5, -145, -50, -35, -200];
 const EDUCATION = [2, 5, -110, -64, -42, -200];
 // Look away from the existing BH instead of moving its shader center to -420.
 const WORKS = [0, 4, -160, 140, 0, -210];
-const CONTACT = [2, 4, -160, -22, -5, -200];
+const CONTACT = [2, 4, -160, -12, -1, -200];
 
 export function clampStoryProgress(value) {
   return Number.isFinite(value) ? Math.min(1, Math.max(0, value)) : 0;
@@ -44,6 +44,12 @@ export function clampStoryProgress(value) {
 
 export function segmentProgress(scroll, start, end) {
   return end > start ? clampStoryProgress((scroll - start) / (end - start)) : 0;
+}
+
+// Accelerating fall; the terminal velocity is hidden inside the existing dark rebase.
+export function portalFall(progress) {
+  const q = clampStoryProgress(progress / 0.44);
+  return q * q * (0.25 + 0.75 * q);
 }
 
 export function storyCameraPath(chapter, progress, target = {}, frozen = false, aspect = 1) {
@@ -64,7 +70,7 @@ export function storyCameraPath(chapter, progress, target = {}, frozen = false, 
     // Reach the collision pose before the burst; stay in that same frame as gas forms the BH.
     case 'finale': from = WORKS; to = CONTACT; p = clampStoryProgress((p - 0.12) / 0.32); break;
   }
-  const ease = p * p * (3 - 2 * p);
+  const ease = chapter === 'portal' && progress < 0.47 && !frozen ? portalFall(progress) : p * p * (3 - 2 * p);
   target.x = from[0] + (to[0] - from[0]) * ease;
   target.y = from[1] + (to[1] - from[1]) * ease;
   target.z = from[2] + (to[2] - from[2]) * ease;
@@ -74,7 +80,7 @@ export function storyCameraPath(chapter, progress, target = {}, frozen = false, 
   // Portrait Contact reserves the lower reading area without clipping the disk to the side.
   const portraitContact = Math.min(1, Math.max(0, (1 - aspect) / 0.4)) * (chapter === 'contact' ? 1 : chapter === 'finale' ? ease : 0);
   target.lookX *= 1 - portraitContact;
-  target.lookY -= 23 * portraitContact;
+  target.lookY -= 12 * portraitContact;
   target.parallax = 0;
   if (chapter === 'portal' && !frozen) {
     const bend = Math.sin(ease * Math.PI);

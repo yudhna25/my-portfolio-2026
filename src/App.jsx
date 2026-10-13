@@ -27,6 +27,7 @@ import { ConstellationCredits } from '@/components/ui/ConstellationCredits';
 
 const SkillsSymbols = lazy(() => import('@/3d/components/SkillsSymbols').then((module) => ({ default: module.SkillsSymbols })));
 const StoryMeteor = lazy(() => import('@/3d/components/StoryMeteor').then((module) => ({ default: module.StoryMeteor })));
+const PortraitStars = lazy(() => import('@/3d/components/PortraitStars').then((module) => ({ default: module.PortraitStars })));
 const WorksConstellations = lazy(() => import('@/3d/components/WorksConstellations').then((module) => ({ default: module.WorksConstellations })));
 const GalaxyScene = lazy(() => import('@/3d/GalaxyScene').then((module) => ({ default: module.GalaxyScene })));
 
@@ -35,6 +36,8 @@ function Portfolio({ restore }) {
   const reading = useRef(null);
   const skillsStage = useRef(null);
   const meteorLayout = useRef(null);
+  const portrait = useRef({ intent: 0 });
+  const opening = useRef({ active: false, reveal: 0 });
   const [worksLayout] = useState(() => ({ current: createWorksLayout() }));
   const captureMeteorLayout = useCallback(layout => { meteorLayout.current = layout; }, []);
   const [educationStages] = useState(() => ({ saigonUniversity: { current: null }, greenAcademy: { current: null }, arenaMultimedia: { current: null } }));
@@ -117,7 +120,8 @@ function Portfolio({ restore }) {
 
   // refresh triggers once intro done + fonts ready (layout shifts)
   useGSAPSetup(() => {
-    if (loading) return;
+    // Route restore already refreshes before seeking; a delayed refresh replays its scrub.
+    if (loading || restore) return;
     let active = true;
     const refresh = () => {
       if (active) ScrollTrigger.refresh();
@@ -130,21 +134,22 @@ function Portfolio({ restore }) {
       window.clearTimeout(timer);
       window.removeEventListener('load', refresh);
     };
-  }, { scope: root, dependencies: [loading], revertOnUpdate: true });
+  }, { scope: root, dependencies: [loading, restore], revertOnUpdate: true });
 
   return (
     <div ref={root} className="bg-transparent text-(--text-primary) min-h-screen font-sans">
-      {loading && <Preloader onComplete={() => setLoading(false)} />}
+      {loading && <Preloader opening={opening} onComplete={() => setLoading(false)} />}
       <Cursor />
 
       <Suspense fallback={null}>
-        <GalaxyScene story freezeAmbient={false}>{quality => <>
+        <GalaxyScene story freezeAmbient={false} opening={opening}>{quality => <>
           <SkillsSymbols anchor={skillsStage} educationAnchors={educationStages} />
           <StoryMeteor layout={meteorLayout} frozen={reduced} />
+          <PortraitStars key={quality} layout={portrait} frozen={reduced} quality={quality} />
           <WorksConstellations frozen={reduced} quality={quality} layoutRef={worksLayout} />
         </>}</GalaxyScene>
       </Suspense>
-      <Hero active />
+      <Hero active opening={opening} />
 
       <div id="smooth-wrapper" className="z-10">
         <main id="smooth-content" tabIndex={-1}>
@@ -152,13 +157,13 @@ function Portfolio({ restore }) {
             <div data-story-chapter="hero" />
             <div data-story-chapter="portal" aria-hidden="true" className={staticMotion ? 'min-h-screen' : 'min-h-[400vh]'} />
           </section>
-          <div data-story-chapter="about"><About /></div>
+          <div data-story-chapter="about"><About portrait={portrait} /></div>
           <div ref={reading} data-story-content className="invisible">
             <div data-story-chapter="skills"><Skills stageRef={skillsStage} /></div>
             <div data-story-chapter="education"><Education stageRefs={educationStages} /></div>
             <div data-story-chapter="experience"><Experience onLayout={captureMeteorLayout} /></div>
             <div data-story-chapter="works"><Work layoutRef={worksLayout} /></div>
-            <div data-story-chapter="finale" aria-hidden="true" className={staticMotion ? 'min-h-0' : 'min-h-[225vh]'} />
+            <div data-story-chapter="finale" aria-hidden="true" className={staticMotion ? 'min-h-0' : 'min-h-[400vh]'} />
             <div data-story-chapter="contact"><Contact /></div>
             <Footer />
           </div>

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { AdditiveBlending, BufferAttribute, BufferGeometry, DynamicDrawUsage, PlaneGeometry, Vector2, Vector3 } from 'three';
 import { useScrollStore } from '@/stores/useScrollStore';
-import { meteorFlare, meteorVisibility, STORY_METEOR_SAMPLES, writeStoryRibbon } from '@/3d/utils/storyMeteor';
+import { meteorVisibility, STORY_METEOR_SAMPLES, writeStoryRibbon } from '@/3d/utils/storyMeteor';
 
 const RIBBON_VERTEX = /* glsl */ `
   attribute vec2 aNormal;
@@ -48,16 +48,41 @@ const HEAD_VERTEX = /* glsl */ `
   }
 `;
 const HEAD_FRAGMENT = /* glsl */ `
-  uniform float uOpacity, uCore, uHalo, uDiameter, uFlare;
+  uniform float uOpacity, uCore, uHalo, uDiameter;
   varying vec2 vPixel;
   void main() {
     float radius = length(vPixel);
     float core = 1.0 - smoothstep(uCore * 0.43, uCore * 0.5, radius);
-    float halo = exp(-1.322 * pow(radius / (uHalo * 0.5), 2.0)) * (0.30 + 0.01 * uFlare);
+    float halo = exp(-3.0 * pow(radius / (uHalo * 0.5), 2.0)) * 0.18;
     // Bound the visible light itself; the compositor can expose very faint tails.
     halo *= 1.0 - smoothstep(uHalo * 0.42, uHalo * 0.5, radius);
     vec3 light = vec3(1.0) * (core + halo * (1.0 - core));
     gl_FragColor = vec4(light, uOpacity);
+  }
+`;
+
+const SPARK_VERTEX = /* glsl */ `
+  attribute vec2 aNormal;
+  attribute float aAlong, aRank;
+  uniform vec2 uViewport;
+  uniform float uJourney, uDpr, uCount, uOpacity;
+  varying float vAlpha;
+  void main() {
+    vec4 clip = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+    float spread = sin(aRank * 8.3 + uJourney * 21.0) * (7.0 + aAlong * 18.0);
+    clip.xy += aNormal * spread / uViewport * clip.w;
+    gl_Position = clip;
+    gl_PointSize = (2.6 + mod(aRank, 3.0) * 0.9) * uDpr;
+    float pulse = pow(0.5 + 0.5 * sin(aRank * 17.0 + uJourney * 37.0), 4.0);
+    vAlpha = uOpacity * step(aRank, uCount) * pow(1.0 - aAlong, 0.6) * (0.40 + 0.60 * pulse);
+  }
+`;
+const SPARK_FRAGMENT = /* glsl */ `
+  varying float vAlpha;
+  void main() {
+    float r = length(gl_PointCoord - 0.5) * 2.0;
+    float light = exp(-r * r * 5.0) * (1.0 - smoothstep(0.7, 1.0, r));
+    gl_FragColor = vec4(mix(vec3(0.22, 0.85, 1.0), vec3(1.0), light * 0.25), light * vAlpha);
   }
 `;
 
@@ -83,26 +108,34 @@ export function StoryMeteor({ layout, frozen = false }) {
     geometry.setAttribute('aSide', new BufferAttribute(side, 1));
     geometry.setAttribute('aAlong', new BufferAttribute(along, 1));
     geometry.setIndex(new BufferAttribute(indices, 1));
+    const sparks = new BufferGeometry(), ranks = new Float32Array(count), sparkIndices = new Uint16Array(36);
+    // Interleaving keeps the smaller mobile pool distributed over the whole tail.
+    for (let i = 0; i < 36; i++) { const index = (4 + (i * 37 % 120)) * 2; sparkIndices[i] = index; ranks[index] = i + 1; }
+    for (const name of ['position', 'aNormal', 'aAlong']) sparks.setAttribute(name, geometry.getAttribute(name));
+    sparks.setAttribute('aRank', new BufferAttribute(ranks, 1)); sparks.setIndex(new BufferAttribute(sparkIndices, 1));
     const uniforms = () => ({ uOpacity: { value: 0 }, uViewport: { value: new Vector2(1, 1) },
       uWidth: { value: 76 }, uJourney: { value: 0 }, uWake: { value: 0 } });
     const ribbon = uniforms(), wake = uniforms();
     wake.uWake.value = 1;
-    return { geometry, head: new PlaneGeometry(2, 2), screen: new Float64Array(STORY_METEOR_SAMPLES * 2), ribbon, wake,
+    return { geometry, sparks, sparkUniforms: { uViewport: { value: new Vector2(1, 1) }, uJourney: { value: 0 },
+      uDpr: { value: 1 }, uCount: { value: 36 }, uOpacity: { value: 0 } },
+      head: new PlaneGeometry(2, 2), screen: new Float64Array(STORY_METEOR_SAMPLES * 2), ribbon, wake,
       headUniforms: { uHead: { value: new Vector3() }, uOpacity: { value: 0 }, uViewport: { value: new Vector2(1, 1) },
-        uCore: { value: 56 }, uHalo: { value: 208 }, uDiameter: { value: 332.8 }, uFlare: { value: 0 } } };
+        uCore: { value: 56 }, uHalo: { value: 84 }, uDiameter: { value: 134.4 } } };
   }, []);
   useEffect(() => {
     runtime.current = resources;
-    return () => { runtime.current = null; resources.geometry.dispose(); resources.head.dispose(); };
+    return () => { runtime.current = null; resources.geometry.dispose(); resources.head.dispose(); resources.sparks.dispose(); };
   }, [resources]);
 
-  useFrame(({ camera, size }) => {
+  useFrame(({ camera, size, gl }) => {
     const buffers = runtime.current;
     if (!buffers || !root.current) return;
     const state = useScrollStore.getState(), data = layout.current, cache = scratch.current;
     // R3F copies scalar uniform wrappers; update the live material maps.
     const wake = root.current.children[0].material.uniforms, ribbon = root.current.children[1].material.uniforms;
     const head = root.current.children[2].material.uniforms;
+    const sparks = root.current.children[3].material.uniforms;
     const opacity = meteorVisibility(state.storyChapter, state.chapterProgress);
     root.current.visible = !frozen && !document.hidden && data?.range > 0 && opacity > 0;
     if (!root.current.visible) { cache.journey = -1; return; }
@@ -120,7 +153,6 @@ export function StoryMeteor({ layout, frozen = false }) {
       cache.points.set(data.points);
     }
     const mobile = size.width < 768;
-    const flare = state.storyChapter === 'experience' ? meteorFlare(data, state.chapterProgress) : 0;
     ribbon.uViewport.value.set(size.width, size.height);
     ribbon.uWidth.value = mobile ? 68 : 112;
     ribbon.uJourney.value = journey; ribbon.uOpacity.value = opacity;
@@ -129,14 +161,16 @@ export function StoryMeteor({ layout, frozen = false }) {
     wake.uJourney.value = journey; wake.uOpacity.value = opacity;
     head.uViewport.value.set(size.width, size.height);
     head.uCore.value = mobile ? 34 : 56;
-    head.uHalo.value = (mobile ? 116 : 208) + flare * (mobile ? 20 : 24);
+    head.uHalo.value = mobile ? 51 : 84;
     head.uDiameter.value = head.uHalo.value * 1.6;
-    head.uFlare.value = flare;
     head.uOpacity.value = opacity;
     root.current.userData.journey = journey;
     root.current.userData.tailPixels = cache.metrics.tailPixels;
     root.current.userData.span = cache.metrics.span;
-    root.current.userData.flare = flare;
+    sparks.uViewport.value.set(size.width, size.height);
+    sparks.uJourney.value = journey; sparks.uDpr.value = gl.getPixelRatio();
+    sparks.uCount.value = mobile ? 18 : 36; sparks.uOpacity.value = opacity;
+    root.current.userData.sparkCount = mobile ? 18 : 36;
   });
 
   return <group ref={root} name="story-meteor" visible={false}>
@@ -149,5 +183,9 @@ export function StoryMeteor({ layout, frozen = false }) {
     <mesh name="story-meteor-head" geometry={resources.head} frustumCulled={false} renderOrder={22}>
       <shaderMaterial vertexShader={HEAD_VERTEX} fragmentShader={HEAD_FRAGMENT} uniforms={resources.headUniforms} transparent blending={AdditiveBlending} depthWrite={false} depthTest={false} toneMapped={false} />
     </mesh>
+    <points name="story-meteor-sparks" geometry={resources.sparks} frustumCulled={false} renderOrder={23}>
+      <shaderMaterial vertexShader={SPARK_VERTEX} fragmentShader={SPARK_FRAGMENT} uniforms={resources.sparkUniforms}
+        transparent blending={AdditiveBlending} depthWrite={false} depthTest={false} toneMapped={false} />
+    </points>
   </group>;
 }

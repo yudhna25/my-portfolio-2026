@@ -1,0 +1,36 @@
+{
+  "opening": [
+    1,
+    0.13501257613455456,
+    0,
+    216
+  ],
+  "finaleHole": 0,
+  "gas": [
+    1,
+    0,
+    0,
+    0.6200167697419086
+  ],
+  "center": [
+    0.6374498934555701,
+    0.5139822867755063
+  ],
+  "viewport": [
+    1440,
+    900
+  ],
+  "sample": [
+    14931,
+    14931,
+    14931,
+    15360
+  ],
+  "copy": [
+    1,
+    0.13501257613455456,
+    0,
+    216
+  ],
+  "shader": "\n  uniform float uTime;\n  uniform float uDiskIntensity;\n  uniform vec3 uObserver;\n  uniform mat4 uCa"
+}

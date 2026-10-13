@@ -1,0 +1,45 @@
+{
+  "records": [
+    {
+      "p": 0.011111,
+      "t": 2123.4000000953674
+    },
+    {
+      "p": 0.252,
+      "t": 3206.7000000476837
+    },
+    {
+      "p": 0.503333,
+      "t": 4336.5
+    },
+    {
+      "p": 0.703111,
+      "t": 5235.200000047684
+    },
+    {
+      "p": 0.900889,
+      "t": 6127.400000095367
+    },
+    {
+      "p": 0.993556,
+      "t": 6543.5
+    }
+  ],
+  "summary": {
+    "frameCount": 267,
+    "firstLoaderMs": 255.49999990463255,
+    "firstPresentationMs": 2040.6999999046325,
+    "releaseMs": 6545.199999904633,
+    "duration": 4.5,
+    "ready": "scene-font",
+    "joinFrames": 2,
+    "maximumRevealAlignmentPx": 0.02246485551579419,
+    "minimumPhotonSizeRatio": 1.0000059855315888,
+    "maximumPhotonSizeRatio": 1.0000860707931842,
+    "final": {
+      "heroOpacity": 1,
+      "locked": false,
+      "fallback": false
+    }
+  }
+}

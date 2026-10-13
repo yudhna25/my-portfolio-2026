@@ -1,0 +1,77 @@
+{
+  "status": "pass",
+  "browser": "155.0.4283.45",
+  "images": [
+    {
+      "src": "screenshots/year-2026.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/year-2027.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/portal-0.25-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/portal-0.34-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/portal-0.47-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/portal-0.7-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/portrait-hover-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/portrait-assembled-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/reverse-0.25-1440.png",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "src": "screenshots/portrait-assembled-390.png",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "screenshots/portal-0.34-390.png",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "screenshots/portrait-fallback-reduced-390.png",
+      "width": 390,
+      "height": 900
+    }
+  ],
+  "videos": [
+    {
+      "time": 0.708393,
+      "duration": 36.266
+    },
+    {
+      "time": 0.69155,
+      "duration": 24.833
+    }
+  ],
+  "errors": []
+}
