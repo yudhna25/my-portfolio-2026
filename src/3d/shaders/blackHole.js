@@ -189,21 +189,36 @@ export const BLACK_HOLE_COPY = /* glsl */ `
   uniform sampler2D uImage;
   uniform sampler2D uOpeningText;
   uniform vec4 uOpeningLens;
+  uniform float uOpeningReach;
+  uniform vec4 uOpeningRect;
   uniform float uFinaleZoom;
   varying vec2 vUv;
   ${PORTAL_IMAGE_GLSL}
-  // Opening only: a raster of the Hero lockup, bent by a point lens of Einstein radius
+  vec4 openingSample(vec2 uv) {
+    vec2 local = (uv - uOpeningRect.xy) / uOpeningRect.zw;
+    // Sample first: mip selection needs derivatives from every pixel of the quad.
+    vec4 color = texture2D(uOpeningText, local);
+    vec2 inside = step(vec2(0.0), local) * step(local, vec2(1.0));
+    return color * inside.x * inside.y;
+  }
+  // Opening: a raster of the Hero lockup, bent by a point lens of Einstein radius
   // uOpeningLens.y (CSS px) around the O. Rays inside the ring sample the far side.
+  // Idle Hero (uOpeningReach > 0): a mirror of the year in uOpeningRect, with a lens bounded
+  // to that reach so its outer band is undeflected and crossfades into the masked DOM copy.
   vec4 openingText(vec2 uv) {
     if (uOpeningLens.x < 0.5 || uOpeningLens.w <= 0.0) return vec4(0.0);
     vec2 d = (uv - uPortalCenter) * uPortalViewport;
     float r = max(length(d), 1.0);
-    vec2 shift = d / r * (uOpeningLens.y * uOpeningLens.y / r) / uPortalViewport;
-    vec4 red = texture2D(uOpeningText, uv - shift * (1.0 + uOpeningLens.z));
-    vec4 green = texture2D(uOpeningText, uv - shift);
-    vec4 blue = texture2D(uOpeningText, uv - shift * (1.0 - uOpeningLens.z));
+    float bound = uOpeningReach > 0.0 ? 1.0 - smoothstep(0.45, 0.8, r / uOpeningReach) : 1.0;
+    // Linear, like the CSS radial-gradient mask it complements.
+    float fade = uOpeningReach > 0.0 ? clamp((1.0 - r / uOpeningReach) / 0.2, 0.0, 1.0) : 1.0;
+    if (fade <= 0.0) return vec4(0.0);
+    vec2 shift = d / r * (uOpeningLens.y * uOpeningLens.y / r) * bound / uPortalViewport;
+    vec4 red = openingSample(uv - shift * (1.0 + uOpeningLens.z));
+    vec4 green = openingSample(uv - shift);
+    vec4 blue = openingSample(uv - shift * (1.0 - uOpeningLens.z));
     vec3 rgb = vec3(red.r * red.a, green.g * green.a, blue.b * blue.a);
-    return vec4(rgb, max(green.a, max(red.a, blue.a))) * uOpeningLens.w;
+    return vec4(rgb, max(green.a, max(red.a, blue.a))) * uOpeningLens.w * fade;
   }
   // Kilonova: a raymarched fireball in screen-height units around the projected BH,
   // radius uFireball.x, heat .y (1 = blue-white, 0.2 = embers), density .z, flattening .w.

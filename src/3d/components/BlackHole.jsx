@@ -8,6 +8,7 @@ import { useScrollStore } from '@/stores/useScrollStore';
 import { portalProgress, portalState } from '@/3d/utils/portal';
 import { finaleScreenScale, finaleState } from '@/3d/utils/finale';
 import { createLockupRaster } from '@/3d/utils/openingLockup';
+import { createYearMirror } from '@/3d/utils/yearMirror';
 
 const center = new Vector3(...BLACK_HOLE_CENTER);
 
@@ -20,7 +21,28 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
   const bufferSize = useMemo(() => new Vector2(), []);
   const diskTime = useRef(0);
   const lockup = useRef(null);
-  useEffect(() => () => { lockup.current?.dispose(); lockup.current = null; }, []);
+  const year = useRef(null);
+  const yearPull = useRef(0);
+  const yearMask = useRef('');
+  useEffect(() => () => {
+    lockup.current?.dispose(); lockup.current = null;
+    year.current?.dispose(); year.current = null;
+    const node = document.querySelector('[data-hero-year]');
+    if (node) node.style.maskImage = node.style.webkitMaskImage = '';
+  }, []);
+  // Complement of the lensed copy's fade (0.8..1 of reach), in the year layer's own box.
+  const maskYear = target => {
+    const node = document.querySelector('[data-hero-year]');
+    if (!node) return;
+    let next = '';
+    if (target) {
+      const box = node.getBoundingClientRect();
+      next = `radial-gradient(circle at ${(target.x - box.left).toFixed(1)}px ${(target.y - box.top).toFixed(1)}px, transparent ${(target.reach * 0.8).toFixed(1)}px, black ${target.reach.toFixed(1)}px)`;
+    }
+    if (next === yearMask.current) return;
+    yearMask.current = next;
+    node.style.maskImage = node.style.webkitMaskImage = next;
+  };
   const renderer = useMemo(() => {
     const tier = RAY_QUALITY[quality];
     const material = new ShaderMaterial({
@@ -117,12 +139,31 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
       }
       // Bend a raster of the Hero lockup until the DOM copy is revealed in place.
       const lens = portal.uOpeningLens.value;
+      const idleHero = !intro && !reduced && quality !== 'low' && p === 0 && state.storyChapter === 'hero' && !document.querySelector('[data-preloader]');
+      // The pull eases in after the opening, or after scrolling back to the top.
+      yearPull.current = idleHero ? Math.min(1, yearPull.current + delta / 1.4) : 0;
       if (intro && intro.text > 0) {
         lockup.current ??= createLockupRaster();
         const ready = lockup.current.update(cssWidth, cssHeight, Math.min(2, window.devicePixelRatio || 1));
         portal.uOpeningText.value = lockup.current.texture;
+        portal.uOpeningReach.value = 0;
+        portal.uOpeningRect.value.set(0, 0, 1, 1);
         lens.set(ready ? 1 : 0, intro.shadow * intro.lens, intro.chroma, intro.text);
-      } else lens.x = 0;
+        maskYear(null);
+      } else if (yearPull.current > 0) {
+        // 2026 behind the hole: a bounded point lens bends the digits nearest the O into
+        // arcs, and the DOM copy is masked out exactly where the lensed mirror is drawn.
+        year.current ??= createYearMirror();
+        const x = left + width / 2, y = top + height / 2, reach = height * 4.2;
+        const ready = year.current.update(cssWidth, cssHeight, x, y, reach, Math.min(1.5, window.devicePixelRatio || 1));
+        const pull = yearPull.current * yearPull.current * (3 - 2 * yearPull.current);
+        const einstein = height * 0.95 * pull * (1 + 0.04 * Math.sin(diskTime.current * 0.6));
+        portal.uOpeningText.value = year.current.texture;
+        portal.uOpeningReach.value = reach;
+        portal.uOpeningRect.value.copy(year.current.rect);
+        lens.set(ready ? 1 : 0, einstein, 0.008 * pull, 1);
+        maskYear(ready ? { x, y, reach } : null);
+      } else { lens.x = 0; maskYear(null); }
     }
     uniforms.uDiskIntensity.value = 1 + (ending ? 0.35 * authored.hole : 0);
     portal.uDiskWarm.value = ending ? authored.warm : 0;

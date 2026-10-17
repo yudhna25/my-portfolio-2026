@@ -30,6 +30,8 @@ export function createLockupRaster() {
     // CSS classes do not reach an SVG drawn as an image; inline the two that matter.
     clone.querySelectorAll('.hero-year-base').forEach(path => path.setAttribute('stroke', 'none'));
     clone.querySelectorAll('.hero-year-stars').forEach(group => group.setAttribute('opacity', '0.42'));
+    // The glitch layer is hidden by a utility class, which an image cannot see either.
+    clone.querySelectorAll('[data-year-noise]').forEach(group => group.remove());
     const image = new Image();
     image.onload = () => { if (!disposed && yearKey === id) { year = image; key = ''; } };
     image.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(new XMLSerializer().serializeToString(clone))}`;

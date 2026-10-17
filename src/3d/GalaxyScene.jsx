@@ -11,6 +11,7 @@ import { Nebula } from '@/3d/components/Nebula';
 import { BlackHoleSystem } from '@/3d/components/BlackHoleSystem';
 import { CameraRig } from '@/3d/components/CameraRig';
 import { FinaleParticles } from '@/3d/components/FinaleParticles';
+import { YearDust } from '@/3d/components/YearDust';
 import { QUALITY } from '@/3d/quality';
 import { INITIAL_CAMERA_POSITION } from '@/3d/utils/cameraPath';
 import { portalProgress, portalState } from '@/3d/utils/portal';
@@ -87,7 +88,7 @@ export function GalaxyScene({ children, count, quality: chosenQuality, rayQualit
                 <Nebula position={[-16, 5, -270]} scale={[50, 30, 1]} colorA="#262626" colorB="#5A5A5A" frozen={ambientFrozen} quality={quality} story={story} />
               </PortalBackdrop>
               <BlackHoleSystem frozen={ambientFrozen} reduced={frozen} story={story} quality={quality} enableBloom={enableBloom} opening={opening} />
-              {story && <Select enabled><FinaleParticles quality={quality} reduced={frozen} /></Select>}
+              {story && <Select enabled><FinaleParticles quality={quality} reduced={frozen} /><YearDust quality={quality} reduced={frozen} /></Select>}
               <SceneReady />
               {!hidden && !ambientFrozen && <ShootingStars frozen={frozen} story={story} />}
               {typeof children === 'function' ? children(quality) : children}

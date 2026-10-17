@@ -103,7 +103,8 @@ export function createPortalTrails(definitions, className = '') {
       const rect = item.range ? item.range.getBoundingClientRect() : item.node.getBoundingClientRect();
       Object.assign(item.layout, { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2, width: rect.width, height: rect.height });
       item.available = rect.width > 0 && rect.height > 0;
-      item.particles = item.available ? samplePortalParticles(item.node, item.text ?? item.node.textContent, rect, raster, window.innerWidth < 768 ? 80 : 150) : [];
+      // The year's dust is drawn by the scene (YearDust); only words keep DOM particles.
+      item.particles = item.available && !(item.node instanceof SVGElement) ? samplePortalParticles(item.node, item.text ?? item.node.textContent, rect, raster, window.innerWidth < 768 ? 80 : 150) : [];
       let visual;
       if (item.text) {
         visual = document.createElement('span'); visual.textContent = item.text;
