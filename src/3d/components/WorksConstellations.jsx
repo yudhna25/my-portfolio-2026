@@ -6,7 +6,7 @@ import data from '@/3d/data/worksConstellations.json';
 import { BLACK_HOLE_CENTER, storyCameraPath } from '@/3d/utils/cameraPath';
 import { advanceWorksOrbit, worksBounds, worksStage, worksFigure, WORKS_IDS } from '@/3d/utils/worksOrbit';
 import { finaleState, finaleSmooth } from '@/3d/utils/finale';
-import { worksArrival } from '@/3d/utils/storyMeteor';
+import { meteorTargets, worksArrival } from '@/3d/utils/storyMeteor';
 import { useScrollStore } from '@/stores/useScrollStore';
 
 // Stellarium Modern / CC BY-SA 4.0; Hipparcos ICRS J1991.25.
@@ -200,6 +200,17 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
     const p = finale ? state.chapterProgress : 0;
     const authored = finaleState(p, phaseState.current);
     const arrival = frozen ? 1 : worksArrival(state.storyChapter, state.chapterProgress);
+    if (arriving) {
+      // Rest-pose figure centres in world space, the comet fragments' destinations.
+      const phase = state.worksOrbit.latched ? state.worksOrbit.origin : state.worksOrbit.phase;
+      for (let i = 0; i < figures.length; i++) {
+        const pose = worksFigure(0, phase, i, basis, sampled.current), bounds = figures[i].bounds;
+        const local = figures[i].projected.set(pose.x + (bounds.left + bounds.right) / 2 * pose.scale,
+          pose.y + (bounds.top + bounds.bottom) / 2 * pose.scale, pose.z).applyQuaternion(basis.rotation).add(basis.center);
+        meteorTargets.points[i].x = local.x; meteorTargets.points[i].y = local.y; meteorTargets.points[i].z = local.z;
+      }
+      meteorTargets.ready = true;
+    }
     root.current.visible = active || arriving && arrival > 0 || !frozen && finale && p < 0.55;
     const selected = finale ? state.worksFinaleSelection : state.worksSelection ?? state.worksFocus ?? state.worksHover;
     advanceWorksOrbit(state.worksOrbit, delta, Boolean(selected), frozen, active && !document.hidden);
