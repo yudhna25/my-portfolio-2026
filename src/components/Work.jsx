@@ -36,6 +36,8 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
   const target = finaleSelection === undefined ? selection ?? focus ?? hover : finaleSelection;
   const project = projects.find(item => item.id === target);
   const path = project ? `works.projects.${project.key}` : null;
+  // A held selection is the open project: its card flies out of the ring (WorksConstellations).
+  const open = Boolean(project) && selection === project.id && !fallback;
   const cancelClose = () => clearTimeout(closeTimer.current);
   const leave = () => {
     cancelClose();
@@ -153,7 +155,8 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
       }
       if (target && data.ready && (measuredWidth !== data.width || measuredHeight !== data.height)) {
         const panel = preview.getBoundingClientRect();
-        placeWorksPreview(data, target, panel.width, panel.height, position);
+        if (open && data.width >= 1024) { position.x = 48; position.y = Math.max(132, (data.height - panel.height) / 2); }
+        else placeWorksPreview(data, target, panel.width, panel.height, position);
         previewX(position.x - rect.left); previewY(position.y - rect.top);
         measuredWidth = data.width; measuredHeight = data.height;
       }
@@ -165,20 +168,42 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
       if (data.onChange === draw) data.onChange = null;
       observer.disconnect();
     };
-  }, { scope: root, dependencies: [layoutRef, fallback, target, i18n.resolvedLanguage], revertOnUpdate: true });
+  }, { scope: root, dependencies: [layoutRef, fallback, target, open, i18n.resolvedLanguage], revertOnUpdate: true });
   useGSAP(() => { ScrollTrigger.refresh(true); }, {
     scope: section, dependencies: [i18n.resolvedLanguage, reduced], revertOnUpdate: true,
   });
 
-  const preview = <div id="work-preview" data-work-preview data-active={target ?? 'empty'}
+  const index = project ? projects.indexOf(project) : -1;
+  const preview = <div id="work-preview" data-work-preview data-active={target ?? 'empty'} data-open={open || undefined}
         className={`absolute top-0 left-0 z-30 w-[calc(100%-2rem)] lg:w-72 xl:w-80 ${fallback ? 'top-auto! bottom-6! left-4! lg:left-[calc(50%-9rem)]!' : ''}`}>
-        {project ? <div data-work-content key={project.id}
+        {project && open ? <div data-work-content key={`${project.id}-open`}
+          onPointerEnter={cancelClose} onFocusCapture={event => focusProject(event, project.id)} onBlurCapture={leave}
+          className="works-open-column rounded-sm border border-(--border-glass-subtle) bg-(--color-glass-surface) p-4 text-left backdrop-blur-md lg:border-0 lg:bg-transparent lg:p-0 lg:backdrop-blur-none">
+          <p className="font-mono text-[10px] tracking-[0.18em] text-white/55 uppercase">{t('works.voyage', { number: `0${index + 1}` })} · {t(`${path}.category`)}</p>
+          <h3 className="mt-3 font-display text-xl leading-tight font-bold tracking-[-0.03em] lg:text-3xl">{t(`${path}.title`)}</h3>
+          <p className="mt-3 font-body text-xs leading-relaxed text-white/70 lg:text-[13px]">{t(`${path}.description`)}</p>
+          <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-1 font-mono text-[10px] text-white/50" aria-label={t('works.tagsLabel')}>
+            {t(`${path}.tags`, { returnObjects: true }).map(tag => <li key={tag}>{tag}</li>)}
+          </ul>
+          <div className="mt-4 flex flex-wrap items-center gap-x-5">
+            {project.id === 'edura' ? <>
+              <a id="work-case-edura" href={EDURA_ROUTE} data-work-action onClick={event => { playRadioClick(); if (!nativeNavigation) navigateRoute(event, EDURA_ROUTE); }}
+                className={`inline-flex min-h-11 min-w-11 items-center font-mono text-[11px] text-(--color-amber,#FFB45A) underline underline-offset-4 ${focusRing}`}>{t('works.viewCaseStudy')} <span aria-hidden="true" className="ml-2">→</span></a>
+              <a href={project.link} data-work-behance onClick={playRadioClick} target="_blank" rel="noopener noreferrer"
+                aria-label={`${t('works.behanceReference')} (${t('common.opensInNewTab')})`}
+                className={`inline-flex min-h-11 min-w-11 items-center font-mono text-[10px] text-white/70 underline decoration-white/25 underline-offset-4 ${focusRing}`}>{t('works.behanceReference')} <span aria-hidden="true" className="ml-2">↗</span></a>
+            </> : <p className="min-h-11 py-3 font-mono text-[10px] text-white/55">{t('works.comingSoon')}</p>}
+          </div>
+          <button type="button" data-work-close onClick={dismiss}
+            className={`mt-2 inline-flex min-h-11 min-w-11 items-center font-mono text-[11px] text-white/80 hover:text-white ${focusRing}`}>
+            <span aria-hidden="true" className="mr-2">←</span>{t('works.backToOrbit')}</button>
+        </div> : project ? <div data-work-content key={project.id}
           onPointerEnter={event => { cancelClose(); if (event.pointerType === 'mouse') interact('Hover', project.id); }} onPointerLeave={leave}
           onFocusCapture={event => focusProject(event, project.id)}
           onBlurCapture={leave}
           className="grid h-48 grid-cols-[minmax(0,.6fr)_minmax(0,1fr)] items-center gap-3 rounded-sm border border-(--border-glass-subtle) bg-(--color-glass-surface) p-3 backdrop-blur-md lg:h-auto lg:grid-cols-1 lg:gap-2">
           <img data-project-image src={project.imageUrl} alt={t(`${path}.previewAlt`)} width="1600" height={project.id === 'edura' ? 1131 : 900} loading="lazy" decoding="async"
-            className="aspect-[16/10] w-full object-contain" />
+            className={`aspect-[16/10] w-full object-contain ${fallback ? '' : 'lg:hidden'}`} />
           <div className="min-w-0">
             <h3 className="font-display text-sm leading-tight font-bold tracking-[-0.03em] lg:text-base">{t(`${path}.title`)}</h3>
             <p className="mt-2 font-body text-[11px] leading-relaxed text-white/70">{t(`${path}.category`)}</p>
@@ -199,9 +224,11 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
       onClick={event => { if (!event.target.closest('button,a,[data-work-content]')) dismiss(); }}
       className="absolute inset-x-0 top-0 z-20 h-screen px-4 pt-20 text-(--text-primary) sm:px-8 lg:px-12">
       <header className="mx-auto max-w-5xl text-center">
+        <div className={`transition-opacity duration-500 ${open ? 'pointer-events-none opacity-0' : ''}`}>
         <ConstellationCreditButton compact className="absolute top-20 left-4 sm:left-8 lg:left-12" />
         <h2 id="works-heading" className="font-display text-[clamp(1rem,2.6vw,2.5rem)] leading-[1.3] font-bold tracking-[-0.04em]">{t('works.heading')}</h2>
         <p id="works-hint" className="pointer-events-none mx-auto mt-3 max-w-sm font-body text-xs leading-relaxed text-white/60">{t('works.interactionHint')}</p>
+        </div>
         <div role="group" aria-label={t('works.selectLabel')} className={fallback ? 'mt-6 grid grid-cols-3 gap-3 sm:gap-8' : ''}>
           {projects.map(item => <div key={item.id}><button id={`work-target-${item.id}`} type="button" data-work-target={item.id}
             aria-label={`${t(`works.projects.${item.key}.title`)} · ${t(`works.constellations.${item.id}`)}`}
@@ -219,7 +246,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
               pointer.current = '';
             }}
             className={`min-h-11 min-w-11 cursor-pointer rounded-sm text-center ${focusRing} ${fallback ? 'border-b border-white/25 px-1 py-2' : 'absolute top-0 left-0'} ${target === item.id ? 'text-white' : 'text-white/65 hover:text-white'}`}>
-            <span className={fallback ? 'block' : 'absolute inset-x-0 -bottom-6 block'}>
+            <span className={`${fallback ? 'block' : 'absolute inset-x-0 -bottom-6 block'} transition-opacity duration-500 ${open && item.id !== project.id ? 'opacity-0' : ''}`}>
               <span className="block font-body text-[clamp(.65rem,1vw,.85rem)] font-medium">{t(`works.projects.${item.key}.title`)}</span>
               <span className="block font-mono text-[9px] text-white/55">{t(`works.constellations.${item.id}`)}</span>
             </span>
