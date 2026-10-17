@@ -19,7 +19,37 @@ export const SPACETIME_GLSL = /* glsl */ `
 
 // shortcut: procedural plasma and authored collapse, not radiation hydrodynamics; use offline simulation data for scientific visualization.
 export const FORMATION_GLSL = /* glsl */ `
+  // First Light (opening only): a pulse at the O, an inhale, then a burst with an
+  // anamorphic streak and one shock ring. Clock: p = uOpening.y, burst at 0.40.
+  vec4 firstLight(vec2 uv) {
+    float p = uOpening.y;
+    vec2 d = (uv - uPortalCenter) * uPortalViewport;
+    float r = length(d), width = uPortalViewport.x;
+    float load = smoothstep(0.0, 0.33, p);
+    float inhale = smoothstep(0.33, 0.40, p);
+    float pre = 1.0 - step(0.40, p);
+    float pulse = 0.72 + 0.28 * sin(p * 33.0);
+    float size = mix(2.2, 1.1, inhale);
+    float energy = (0.35 + 1.4 * load) * pulse * (1.0 - inhale) + 4.0 * inhale;
+    vec3 light = pre * energy * vec3(1.0, 0.97, 0.92)
+      * (2.2 * exp(-r * r / (size * size * 3.0)) + 0.22 * exp(-r / 26.0));
+    float spike = (12.0 + 70.0 * load) * (1.0 - 0.6 * inhale);
+    light += pre * energy * 0.35 * vec3(0.86, 0.91, 1.0) * (exp(-abs(d.y) / 0.7) * exp(-abs(d.x) / spike)
+      + exp(-abs(d.x) / 0.7) * exp(-abs(d.y) / spike));
+    // Seconds after the burst at the nominal 4.4s; the warm 2s replay compresses it.
+    float b = (p - 0.40) * 4.4;
+    float on = step(0.0, b);
+    light += on * exp(-b * 9.0) * (0.12 + exp(-r / (width * 0.22))) * vec3(5.0, 4.8, 4.5);
+    float sweep = on * exp(-b * 2.6);
+    light += sweep * exp(-abs(d.y) / (1.2 + b * 7.0)) * exp(-abs(d.x) / (width * 0.42)) * vec3(1.6, 2.24, 3.2);
+    light += sweep * exp(-abs(d.y) / 0.6) * exp(-abs(d.x) / (width * 0.18)) * 2.0;
+    light += on * exp(-b * 3.6) * exp(-pow((r - b * width * 0.85) / (4.0 + b * 22.0), 2.0)) * vec3(0.9, 0.74, 0.58);
+    light += on * exp(-b * 3.0) * exp(-r / 55.0) * vec3(2.5, 2.25, 2.0);
+    float a = clamp(max(light.r, max(light.g, light.b)), 0.0, 1.0);
+    return vec4(light / max(a, 0.00001), a);
+  }
   vec4 stellarFormation(vec2 uv) {
+    if (uOpening.x > 0.5 && uFinaleEnabled < 0.5) return firstLight(uv);
     if (uOpening.x < 0.5 || uOpening.y >= 0.72) return vec4(0.0);
     float time = uOpening.y;
     float collapse = uOpening.z;
@@ -78,6 +108,9 @@ export const FORMATION_GLSL = /* glsl */ `
     corona *= arrive;
     float a = clamp(surface * life + corona + gas, 0.0, 1.0);
     vec3 light = vec3(luminance) * surface * life + vec3(1.05) * corona + vec3(0.72) * gas;
+    // Hot plasma grade: dim filaments burn orange, the brightest knots stay white-gold.
+    float heat = smoothstep(0.25, 1.1, dot(light, vec3(0.333)));
+    light *= mix(vec3(1.0), mix(vec3(1.35, 0.62, 0.26), vec3(1.08, 0.98, 0.86), heat), uDiskWarm);
     return vec4(light / max(a, 0.00001), a);
   }
 `;

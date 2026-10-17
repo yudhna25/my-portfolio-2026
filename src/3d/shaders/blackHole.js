@@ -44,7 +44,13 @@ export const BLACK_HOLE_FRAG = /* glsl */ `
   uniform mat4 uCameraMatrix;
   uniform mat4 uInverseProjection;
   uniform mat3 uDiskFrame;
+  uniform float uDiskWarm;
   ${PORTAL_IMAGE_GLSL}
+  // Finale/Contact grade: dim gas glows amber, the hottest lanes stay near white.
+  vec3 diskColor(float light) {
+    vec3 warm = light * mix(vec3(1.7, 0.86, 0.32), vec3(1.3, 1.14, 0.94), smoothstep(0.2, 1.4, light));
+    return mix(vec3(light), warm, uDiskWarm);
+  }
   varying vec2 vUv;
 
   float hash(vec3 p) {
@@ -107,7 +113,7 @@ export const BLACK_HOLE_FRAG = /* glsl */ `
   void main() {
     vec4 formation = stellarFormation(vUv);
     float birth = uFinaleEnabled > 0.5 ? smoothstep(0.0, 0.4, uFinaleHole)
-      : uOpening.x > 0.5 ? smoothstep(0.28, 0.60, uOpening.y) : 1.0;
+      : uOpening.x > 0.5 ? smoothstep(0.40, 0.50, uOpening.y) : 1.0;
     if (birth <= 0.00001) { gl_FragColor = formation; return; }
     float aperture = portalCoverage(vUv);
     if ((uPortalEnabled > 0.5 && uPortalVisibility <= 0.00001)
@@ -173,16 +179,32 @@ export const BLACK_HOLE_FRAG = /* glsl */ `
     coverage = max(coverage, rim);
     float holeAlpha = coverage * aperture * birth;
     if (uOpening.x > 0.5 && light < 0.00001) holeAlpha = coverage * aperture
-      * (uFinaleEnabled > 0.5 ? smoothstep(0.0, 0.2, uFinaleHole) : smoothstep(0.28, 0.41, uOpening.y));
+      * (uFinaleEnabled > 0.5 ? smoothstep(0.0, 0.2, uFinaleHole) : smoothstep(0.40, 0.44, uOpening.y));
     float a = holeAlpha + formation.a * (1.0 - holeAlpha);
-    gl_FragColor = vec4((vec3(light) * holeAlpha + formation.rgb * formation.a * (1.0 - holeAlpha)) / max(a, 0.00001), a);
+    gl_FragColor = vec4((diskColor(light) * holeAlpha + formation.rgb * formation.a * (1.0 - holeAlpha)) / max(a, 0.00001), a);
   }
 `;
 
 export const BLACK_HOLE_COPY = /* glsl */ `
   uniform sampler2D uImage;
+  uniform sampler2D uOpeningText;
+  uniform vec4 uOpeningLens;
+  uniform float uFinaleZoom;
   varying vec2 vUv;
   ${PORTAL_IMAGE_GLSL}
+  // Opening only: a raster of the Hero lockup, bent by a point lens of Einstein radius
+  // uOpeningLens.y (CSS px) around the O. Rays inside the ring sample the far side.
+  vec4 openingText(vec2 uv) {
+    if (uOpeningLens.x < 0.5 || uOpeningLens.w <= 0.0) return vec4(0.0);
+    vec2 d = (uv - uPortalCenter) * uPortalViewport;
+    float r = max(length(d), 1.0);
+    vec2 shift = d / r * (uOpeningLens.y * uOpeningLens.y / r) / uPortalViewport;
+    vec4 red = texture2D(uOpeningText, uv - shift * (1.0 + uOpeningLens.z));
+    vec4 green = texture2D(uOpeningText, uv - shift);
+    vec4 blue = texture2D(uOpeningText, uv - shift * (1.0 - uOpeningLens.z));
+    vec3 rgb = vec3(red.r * red.a, green.g * green.a, blue.b * blue.a);
+    return vec4(rgb, max(green.a, max(red.a, blue.a))) * uOpeningLens.w;
+  }
   // Authored depth slices share the captured origin and the real projected BH center.
   float gasHash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
   float gasNoise(vec2 p) {
@@ -196,9 +218,11 @@ export const BLACK_HOLE_COPY = /* glsl */ `
     return v;
   }
   vec4 finaleGas(vec2 uv) {
-    if (uFinaleGas.x + uFinaleGas.z < 0.00001) return vec4(0.0);
-    vec2 p = (uv - uRayCenter) * uPortalViewport / uPortalViewport.y;
     float progress = uFinaleGas.w;
+    float ripple = smoothstep(0.14, 0.30, progress) * (1.0 - smoothstep(0.42, 0.50, progress));
+    float burst = progress - 0.44;
+    if (uFinaleGas.x + uFinaleGas.z + ripple < 0.00001 && (burst < 0.0 || burst > 0.3)) return vec4(0.0);
+    vec2 p = (uv - uRayCenter) * uPortalViewport / uPortalViewport.y / max(uFinaleZoom, 0.001);
     float collapse = uFinaleGas.y;
     float growth = smoothstep(0.44, 0.70, progress);
     float aspect = uPortalViewport.x / uPortalViewport.y;
@@ -214,8 +238,23 @@ export const BLACK_HOLE_COPY = /* glsl */ `
     vec2 tilted = mat2(0.573576, -0.819152, 0.819152, 0.573576) * p;
     float shell = exp(-pow((length(tilted / vec2(1.0, 0.64)) - waveRadius * 0.83) / 0.005, 2.0))
       * smoothstep(0.445, 0.47, progress) * (1.0 - smoothstep(0.65, 0.74, progress)) * 0.32;
-    vec3 rgb = vec3(0.61, 0.85, 0.91) * (wave * 0.75 + shell);
+    vec3 rgb = vec3(1.0, 0.84, 0.62) * (wave * 0.75 + shell);
     float alpha = clamp(wave * 0.68 + shell, 0.0, 0.82);
+    // Gravitational-wave ripples, same chirp clock as the constellations' inspiral.
+    float chirp = -log(1.0 - 0.985 * clamp((progress - 0.12) / 0.32, 0.0, 1.0));
+    float rings = ripple * pow(max(sin(r * 34.0 - chirp * 9.0), 0.0), 24.0) * exp(-r * 2.4) * 0.14;
+    rgb += vec3(0.75, 0.85, 1.0) * rings;
+    alpha = max(alpha, rings);
+    // Collision flash and an anamorphic streak across the screen.
+    // Gated as a branch: before the collision the exponentials would overflow to NaN.
+    if (burst >= 0.0) {
+      float flare = exp(-burst * 22.0);
+      float streak = flare * (exp(-abs(p.y) / (0.0015 + burst * 0.05)) * exp(-abs(p.x) / 0.8) * 1.4
+        + exp(-abs(p.y) / 0.0009) * exp(-abs(p.x) / 0.3) * 1.2);
+      float flash = exp(-burst * 60.0) * (0.2 + exp(-r / 0.3));
+      rgb += vec3(0.6, 0.78, 1.0) * streak + vec3(1.0, 0.95, 0.88) * flash * 2.0;
+      alpha = max(alpha, clamp(streak + flash, 0.0, 1.0));
+    }
     for (int layer = 0; layer < 3; layer++) {
       float depth = float(layer);
       float perspective = 0.76 + depth * 0.27;
@@ -232,13 +271,13 @@ export const BLACK_HOLE_COPY = /* glsl */ `
       float envelope = exp(-pow((distance - mix(0.68, 0.78, collapse)) / 0.46, 2.0));
       float filaments = 0.38 + 0.62 * pow(0.5 + 0.5 * sin(distance * 39.0 + warp * 11.0), 2.0);
       float density = lanes * envelope * filaments * uFinaleGas.x * 0.16;
-      vec3 color = mix(vec3(0.38), vec3(0.24, 0.39, 0.44), smoothstep(0.85, 1.2, distance) * (1.0 - collapse) * 0.36);
+      vec3 color = mix(vec3(0.66, 0.36, 0.17), vec3(0.42, 0.19, 0.36), smoothstep(0.85, 1.2, distance) * (1.0 - collapse) * 0.6);
       rgb += color * density * (1.0 - alpha);
       alpha += density * (1.0 - alpha);
     }
     float core = exp(-pow(r / (0.013 + uFinaleGas.z * 0.024), 2.0)) * uFinaleGas.z;
     float spikes = exp(-min(abs(tilted.x), abs(tilted.y)) * 550.0) * exp(-r * 9.0) * uFinaleGas.z * 0.20;
-    rgb += vec3(core * 2.2 + spikes);
+    rgb += vec3(1.0, 0.9, 0.76) * (core * 2.2 + spikes);
     alpha = max(alpha, clamp(core + spikes, 0.0, 1.0));
     return vec4(rgb, alpha);
   }
@@ -277,6 +316,10 @@ export const BLACK_HOLE_COPY = /* glsl */ `
     if (uPortalEnabled > 0.5) {
       float a = 1.0 - uPortalVisibility + image.a * uPortalVisibility;
       vec3 rgb = image.rgb * image.a * uPortalVisibility;
+      // The lockup sits behind the hole and its disk.
+      vec4 text = openingText(vUv);
+      rgb += text.rgb * (1.0 - a);
+      a += text.a * (1.0 - a);
       vec2 dustPx = (vUv - uPortalCenter) * uPortalViewport;
       float twist = uPortalPull * 0.5 * exp(-length(dustPx) / 120.0);
       dustPx = mat2(cos(twist), -sin(twist), sin(twist), cos(twist)) * dustPx * (1.0 + uPortalPull * 2.0);

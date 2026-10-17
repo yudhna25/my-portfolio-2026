@@ -15,6 +15,8 @@ export function BlackHoleSystem({ frozen = false, quality = 'high', enableBloom 
     uFinaleEnabled: { value: 0 }, uFinaleHole: { value: 1 }, uFinaleOrigin: { value: 0 }, uFinaleScale: { value: 1 },
     uFinaleGas: { value: new Vector4() },
     uOpening: { value: new Vector4() },
+    uOpeningText: { value: null }, uOpeningLens: { value: new Vector4() },
+    uFinaleZoom: { value: 1 }, uDiskWarm: { value: 0 },
   }), []);
   const target = useMemo(() => new WebGLRenderTarget(1, 1, {
     type: HalfFloatType, minFilter: LinearFilter, magFilter: LinearFilter,

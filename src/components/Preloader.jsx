@@ -48,7 +48,7 @@ export function Preloader({ onComplete, opening }) {
       if ((!ready && !forced) || !measure()?.height) return;
       const reload = performance.getEntriesByType('navigation')[0]?.type === 'reload';
       const warm = (openingSeen || reload) && performance.now() - started.current < 1800 && !forced;
-      const duration = warm ? 2 : 4.5;
+      const duration = warm ? 2 : 4.4;
       root.current.dataset.openingDuration = String(duration);
       root.current.dataset.openingReady = forced ? 'watchdog' : 'scene-font';
       timeline = gsap.timeline({ id: 'preloader-intro', onComplete: complete })

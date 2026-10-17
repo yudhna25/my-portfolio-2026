@@ -7,6 +7,7 @@ import { BLACK_HOLE_VERT, BLACK_HOLE_FRAG, BLACK_HOLE_COPY } from '@/3d/shaders/
 import { useScrollStore } from '@/stores/useScrollStore';
 import { portalProgress, portalState } from '@/3d/utils/portal';
 import { finaleState } from '@/3d/utils/finale';
+import { createLockupRaster } from '@/3d/utils/openingLockup';
 
 const center = new Vector3(...BLACK_HOLE_CENTER);
 
@@ -18,6 +19,8 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
   const projected = useMemo(() => new Vector3(), []);
   const bufferSize = useMemo(() => new Vector2(), []);
   const diskTime = useRef(0);
+  const lockup = useRef(null);
+  useEffect(() => () => { lockup.current?.dispose(); lockup.current = null; }, []);
   const renderer = useMemo(() => {
     const tier = RAY_QUALITY[quality];
     const material = new ShaderMaterial({
@@ -92,7 +95,8 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
       const shadowAngle = Math.asin(Math.min(0.999, 2.598076 * Math.sqrt(1 - 1 / radius) / radius));
       const shadow = Math.tan(shadowAngle) * cssHeight / (2 * Math.tan(camera.fov * Math.PI / 360));
       // Grow the actual photon/shadow diameter to about 55vh, before tracing each pixel.
-      portal.uFinaleScale.value = ending ? cssHeight * 0.27 * (0.12 + 0.88 * authored.collapse) / shadow : 1;
+      portal.uFinaleScale.value = ending ? cssHeight * 0.27 * (0.12 + 0.88 * authored.collapse) * authored.zoom / shadow : 1;
+      portal.uFinaleZoom.value = ending ? authored.zoom : 1;
       // The anchor is the cap-height slot, not the counter of a visible O glyph.
       portal.uPortalScale.value = Math.max(0.001, height * 0.48 / shadow) * phase.current.growth;
       portal.uPortalRadius.value.set(height * 2.8 * phase.current.growth, height * 1.4 * phase.current.growth);
@@ -107,8 +111,17 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
         portal.uPortalVisibility.value = 1;
         portal.uPortalDust.value = 0;
       }
+      // Bend a raster of the Hero lockup until the DOM copy is revealed in place.
+      const lens = portal.uOpeningLens.value;
+      if (intro && intro.text > 0) {
+        lockup.current ??= createLockupRaster();
+        const ready = lockup.current.update(cssWidth, cssHeight, Math.min(2, window.devicePixelRatio || 1));
+        portal.uOpeningText.value = lockup.current.texture;
+        lens.set(ready ? 1 : 0, intro.shadow * intro.lens, intro.chroma, intro.text);
+      } else lens.x = 0;
     }
     uniforms.uDiskIntensity.value = 1 + (ending ? 0.35 * authored.hole : 0);
+    portal.uDiskWarm.value = ending ? authored.warm : 0;
     uniforms.uObserver.value.copy(camera.position).sub(center);
     const observer = uniforms.uObserver.value;
     const observerRadius = observer.length();
@@ -118,7 +131,8 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
     uniforms.uCameraMatrix.value.copy(camera.matrixWorld);
     uniforms.uInverseProjection.value.copy(camera.projectionMatrixInverse);
     // Gas has an ambient clock; camera, lensing and collapse keep their scroll clock.
-    if (!frozen && !reduced) diskTime.current += Math.min(delta, 0.05);
+    // The finale disk streams faster so its Keplerian lanes read as motion.
+    if (!frozen && !reduced) diskTime.current += Math.min(delta, 0.05) * (1 + (ending ? 1.2 * authored.warm : 0));
     uniforms.uTime.value = diskTime.current + (intro ? -8 * Math.pow(1 - Math.min(1, intro.p / 0.88), 2) : 0);
     // Preserve R3F/composer state: the HDR ray image is rendered exactly once.
     const previousTarget = gl.getRenderTarget();

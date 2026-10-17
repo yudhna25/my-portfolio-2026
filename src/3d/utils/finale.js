@@ -10,7 +10,9 @@ export function finaleState(progress, out = {}) {
   out.progress = p;
   out.label = 1 - finaleSmooth(0, 0.12, p);
   out.travel = finaleSmooth(0.12, 0.44, p);
-  out.angle = 10.5 * Math.pow(clamp((p - 0.12) / 0.32), 2);
+  // Inspiral chirp: the shared turn accelerates without bound toward the collision.
+  out.angle = -2.4 * Math.log(1 - 0.985 * clamp((p - 0.12) / 0.32));
+  out.ripple = finaleSmooth(0.14, 0.30, p) * (1 - finaleSmooth(0.42, 0.50, p));
   out.radius = (1 - 0.76 * finaleSmooth(0.12, 0.34, p)) * (1 - finaleSmooth(0.34, 0.44, p));
   out.figure = (1 - 0.7 * finaleSmooth(0.12, 0.34, p)) * (1 - finaleSmooth(0.34, 0.44, p));
   out.stars = 1 - finaleSmooth(0.43, 0.47, p);
@@ -21,6 +23,13 @@ export function finaleState(progress, out = {}) {
   out.formation = 0.16 * finaleSmooth(0.44, 0.68, p) + 0.56 * finaleSmooth(0.68, 0.96, p);
   out.flare = finaleSmooth(0.34, 0.44, p) * (1 - finaleSmooth(0.44, 0.56, p));
   out.contact = finaleSmooth(0.96, 1, p);
+  // Push in on the newborn disk, then settle on the unchanged Contact framing.
+  out.zoom = 1 + 0.38 * finaleSmooth(0.64, 0.84, p) * (1 - finaleSmooth(0.90, 1, p));
+  // Black-sun grade: amber disk and a faster stream during the transition, handed back
+  // to the unchanged Contact black hole at p = 1.
+  out.warm = finaleSmooth(0.40, 0.52, p) * (1 - finaleSmooth(0.92, 1, p));
+  // Strange dawn: a planet limb and warm sky rise under the hole, then dim for Contact.
+  out.dawn = finaleSmooth(0.62, 0.86, p) * (1 - finaleSmooth(0.93, 1, p));
   out.phase = p < 0.12 ? 'retract' : p < 0.34 ? 'orbit' : p < 0.44 ? 'compress' : p < 0.70 ? 'nebula' : 'accrete';
   return out;
 }

@@ -150,7 +150,7 @@ export function StarField({ count = QUALITY.high, frozen = false, story = false,
     const intro = !reduced && opening?.current.active ? opening.current : null;
     const warpedFinale = !reduced && story && scroll.storyChapter === 'finale';
     const authored = finaleState(scroll.chapterProgress, finale.current);
-    values.uSpacetime.value.set(intro ? intro.p : authored.formation, intro ? intro.shadow / state.size.height : 0.24, intro || warpedFinale ? 1 : 0);
+    values.uSpacetime.value.set(intro ? intro.clock : authored.formation, intro ? intro.shadow / state.size.height : 0.24, intro || warpedFinale ? 1 : 0);
     if (intro) values.uWarpCenter.value.set(intro.x / state.size.width * 2 - 1, 1 - intro.y / state.size.height * 2);
     else { projected.set(...BLACK_HOLE_CENTER).project(state.camera); values.uWarpCenter.value.set(projected.x, projected.y); }
     const progress = frozen ? 0 : scroll.scrollProgress;
