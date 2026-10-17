@@ -51,6 +51,7 @@ export function CameraRig({ frozen = false, story = false, opening }) {
       }
       activeCamera.position.set(pose.x, pose.y, pose.z);
       activeCamera.lookAt(pose.lookX, pose.lookY, pose.lookZ);
+      if (pose.roll) activeCamera.rotateZ(pose.roll);
       return;
     }
     if (frozen) {

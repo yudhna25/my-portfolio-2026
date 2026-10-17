@@ -6,7 +6,7 @@ import { BLACK_HOLE_CENTER } from '@/3d/utils/cameraPath';
 import { BLACK_HOLE_VERT, BLACK_HOLE_FRAG, BLACK_HOLE_COPY } from '@/3d/shaders/blackHole';
 import { useScrollStore } from '@/stores/useScrollStore';
 import { portalProgress, portalState } from '@/3d/utils/portal';
-import { finaleState } from '@/3d/utils/finale';
+import { finaleScreenScale, finaleState } from '@/3d/utils/finale';
 import { createLockupRaster } from '@/3d/utils/openingLockup';
 
 const center = new Vector3(...BLACK_HOLE_CENTER);
@@ -15,7 +15,7 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
   const rendererRef = useRef(null);
   const phase = useRef({});
   const finale = useRef({});
-  const copyDefines = useMemo(() => ({ FINALE_OCTAVES: quality === 'low' ? 2 : quality === 'medium' ? 3 : 4 }), [quality]);
+  const copyDefines = useMemo(() => ({ FINALE_OCTAVES: quality === 'low' ? 2 : 3, FIRE_STEPS: quality === 'low' ? 10 : quality === 'medium' ? 16 : 22 }), [quality]);
   const projected = useMemo(() => new Vector3(), []);
   const bufferSize = useMemo(() => new Vector2(), []);
   const diskTime = useRef(0);
@@ -91,11 +91,15 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
       projected.copy(center).project(camera);
       portal.uRayCenter.value.set(Number.isFinite(projected.x) ? projected.x * 0.5 + 0.5 : 0.5,
         Number.isFinite(projected.y) ? projected.y * 0.5 + 0.5 : 0.5);
-      const radius = Math.max(1.1, camera.position.distanceTo(center));
+      const distance = camera.position.distanceTo(center);
+      const radius = Math.max(1.1, distance);
       const shadowAngle = Math.asin(Math.min(0.999, 2.598076 * Math.sqrt(1 - 1 / radius) / radius));
       const shadow = Math.tan(shadowAngle) * cssHeight / (2 * Math.tan(camera.fov * Math.PI / 360));
       // Grow the actual photon/shadow diameter to about 55vh, before tracing each pixel.
-      portal.uFinaleScale.value = ending ? cssHeight * 0.27 * (0.12 + 0.88 * authored.collapse) * authored.zoom / shadow : 1;
+      portal.uFinaleScale.value = ending ? finaleScreenScale(distance, camera.fov, cssHeight, authored.collapse, authored.zoom) : 1;
+      // The fireball lives in world units; express its radius in screen heights at this distance.
+      const screenRadius = authored.fireRadius / (2 * Math.max(1, distance) * Math.tan(camera.fov * Math.PI / 360));
+      portal.uFireball.value.set(ending ? screenRadius : 0, authored.fireHeat, authored.fireDensity, authored.flatten);
       portal.uFinaleZoom.value = ending ? authored.zoom : 1;
       // The anchor is the cap-height slot, not the counter of a visible O glyph.
       portal.uPortalScale.value = Math.max(0.001, height * 0.48 / shadow) * phase.current.growth;
@@ -133,6 +137,7 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
     // Gas has an ambient clock; camera, lensing and collapse keep their scroll clock.
     // The finale disk streams faster so its Keplerian lanes read as motion.
     if (!frozen && !reduced) diskTime.current += Math.min(delta, 0.05) * (1 + (ending ? 1.2 * authored.warm : 0));
+    portal.uFireTime.value = diskTime.current;
     uniforms.uTime.value = diskTime.current + (intro ? -8 * Math.pow(1 - Math.min(1, intro.p / 0.88), 2) : 0);
     // Preserve R3F/composer state: the HDR ray image is rendered exactly once.
     const previousTarget = gl.getRenderTarget();

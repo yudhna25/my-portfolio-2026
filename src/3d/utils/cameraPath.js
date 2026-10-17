@@ -37,6 +37,15 @@ const EDUCATION = [2, 5, -110, -64, -42, -200];
 // Look away from the existing BH instead of moving its shader center to -420.
 const WORKS = [0, 4, -160, 140, 0, -210];
 const CONTACT = [2, 4, -160, -12, -1, -200];
+// Finale flight: dive in on the merger, get thrown back by the blast, then crane down
+// onto the unchanged Contact framing before the new disk is fully formed.
+const DIVE = [5, 2.4, -177, 0, 0, -200];
+const BLAST = [-8, 8, -143, -3, -0.5, -200];
+
+function smootherStep(a, b, value) {
+  const t = clampStoryProgress((value - a) / (b - a));
+  return t * t * t * (t * (t * 6 - 15) + 10);
+}
 
 export function clampStoryProgress(value) {
   return Number.isFinite(value) ? Math.min(1, Math.max(0, value)) : 0;
@@ -67,10 +76,15 @@ export function storyCameraPath(chapter, progress, target = {}, frozen = false, 
     case 'experience': from = to = EDUCATION; break;
     case 'departure': from = EDUCATION; to = WORKS; break;
     case 'works': from = to = WORKS; break;
-    // Reach the collision pose before the burst; stay in that same frame as gas forms the BH.
-    case 'finale': from = WORKS; to = CONTACT; p = clampStoryProgress((p - 0.12) / 0.32); break;
+    case 'finale':
+      if (frozen) { from = to = CONTACT; break; }
+      if (p < 0.44) { from = WORKS; to = DIVE; p = clampStoryProgress((p - 0.12) / 0.32); }
+      else if (p < 0.64) { from = DIVE; to = BLAST; p = 1 - Math.pow(1 - (p - 0.44) / 0.20, 3); }
+      else { from = BLAST; to = CONTACT; p = clampStoryProgress((p - 0.64) / 0.22); }
+      break;
   }
-  const ease = chapter === 'portal' && progress < 0.47 && !frozen ? portalFall(progress) : p * p * (3 - 2 * p);
+  const ease = chapter === 'portal' && progress < 0.47 && !frozen ? portalFall(progress)
+    : chapter === 'finale' && progress >= 0.44 && progress < 0.64 ? p : p * p * (3 - 2 * p);
   target.x = from[0] + (to[0] - from[0]) * ease;
   target.y = from[1] + (to[1] - from[1]) * ease;
   target.z = from[2] + (to[2] - from[2]) * ease;
@@ -78,10 +92,23 @@ export function storyCameraPath(chapter, progress, target = {}, frozen = false, 
   target.lookY = from[4] + (to[4] - from[4]) * ease;
   target.lookZ = from[5] + (to[5] - from[5]) * ease;
   // Portrait Contact reserves the lower reading area without clipping the disk to the side.
-  const portraitContact = Math.min(1, Math.max(0, (1 - aspect) / 0.4)) * (chapter === 'contact' ? 1 : chapter === 'finale' ? ease : 0);
+  const towardContact = chapter === 'contact' || frozen && chapter === 'finale' ? 1 : chapter === 'finale' && progress >= 0.64 ? ease : 0;
+  const portraitContact = Math.min(1, Math.max(0, (1 - aspect) / 0.4)) * towardContact;
   target.lookX *= 1 - portraitContact;
   target.lookY -= 12 * portraitContact;
   target.parallax = 0;
+  target.roll = 0;
+  if (chapter === 'finale' && !frozen) {
+    const q = clampStoryProgress(progress);
+    // Bank into the spiral, swing back with the blast, level out before the disk forms.
+    target.roll = 0.10 * smootherStep(0.16, 0.44, q) * (1 - smootherStep(0.44, 0.58, q))
+      - 0.05 * smootherStep(0.48, 0.60, q) * (1 - smootherStep(0.66, 0.82, q));
+    // Collision shake on the scroll clock, so scrubbing back replays it.
+    const shake = q < 0.44 ? 0 : 0.9 * Math.exp(-(q - 0.44) * 45);
+    target.x += Math.sin(q * 731) * shake;
+    target.y += Math.cos(q * 913) * shake * 0.7;
+    target.roll += Math.sin(q * 1103) * shake * 0.03;
+  }
   if (chapter === 'portal' && !frozen) {
     const bend = Math.sin(ease * Math.PI);
     target.x += 2.4 * bend * (progress < 0.47 ? -1 : 1);

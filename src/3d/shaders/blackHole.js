@@ -205,46 +205,96 @@ export const BLACK_HOLE_COPY = /* glsl */ `
     vec3 rgb = vec3(red.r * red.a, green.g * green.a, blue.b * blue.a);
     return vec4(rgb, max(green.a, max(red.a, blue.a))) * uOpeningLens.w;
   }
-  // Authored depth slices share the captured origin and the real projected BH center.
-  float gasHash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
-  float gasNoise(vec2 p) {
-    vec2 i = floor(p), f = fract(p), u = f * f * (3.0 - 2.0 * f);
-    return mix(mix(gasHash(i), gasHash(i + vec2(1.0, 0.0)), u.x),
-      mix(gasHash(i + vec2(0.0, 1.0)), gasHash(i + vec2(1.0, 1.0)), u.x), u.y);
+  // Kilonova: a raymarched fireball in screen-height units around the projected BH,
+  // radius uFireball.x, heat .y (1 = blue-white, 0.2 = embers), density .z, flattening .w.
+  uniform vec4 uFireball;
+  uniform float uFireTime;
+  float fireHash(vec3 p) {
+    p = fract(p * 0.3183099 + 0.1) * 17.0;
+    return fract(p.x * p.y * p.z * (p.x + p.y + p.z));
   }
-  float gasFbm(vec2 p) {
+  float fireNoise(vec3 x) {
+    vec3 i = floor(x), f = fract(x);
+    f = f * f * (3.0 - 2.0 * f);
+    return mix(mix(mix(fireHash(i), fireHash(i + vec3(1.0, 0.0, 0.0)), f.x),
+        mix(fireHash(i + vec3(0.0, 1.0, 0.0)), fireHash(i + vec3(1.0, 1.0, 0.0)), f.x), f.y),
+      mix(mix(fireHash(i + vec3(0.0, 0.0, 1.0)), fireHash(i + vec3(1.0, 0.0, 1.0)), f.x),
+        mix(fireHash(i + vec3(0.0, 1.0, 1.0)), fireHash(i + vec3(1.0, 1.0, 1.0)), f.x), f.y), f.z);
+  }
+  float fireFbm(vec3 p) {
     float v = 0.0, a = 0.5;
-    for (int i = 0; i < FINALE_OCTAVES; i++) { v += a * gasNoise(p); p = p * 2.03 + vec2(1.7, 9.2); a *= 0.5; }
+    for (int i = 0; i < FINALE_OCTAVES; i++) { v += a * fireNoise(p); p = p * 2.02 + vec3(3.1, 1.7, 5.3); a *= 0.5; }
     return v;
+  }
+  // Approximate blackbody ramp: embers, orange, yellow-white, white, blue-white.
+  vec3 blackbody(float t) {
+    vec3 c = mix(vec3(0.32, 0.03, 0.01), vec3(1.0, 0.30, 0.06), smoothstep(0.0, 0.35, t));
+    c = mix(c, vec3(1.0, 0.72, 0.40), smoothstep(0.30, 0.60, t));
+    c = mix(c, vec3(1.0, 0.95, 0.88), smoothstep(0.55, 0.85, t));
+    return mix(c, vec3(0.70, 0.82, 1.0), smoothstep(0.85, 1.2, t));
+  }
+  vec4 kilonova(vec2 tilted) {
+    float radius = uFireball.x, heat = uFireball.y, density = uFireball.z, squash = uFireball.w;
+    if (radius <= 0.0 || density <= 0.0) return vec4(0.0);
+    vec2 q = tilted / radius;
+    float q2 = dot(q, q);
+    if (q2 > 1.3) return vec4(0.0);
+    // March front to back along the view axis through the bounding sphere.
+    float chord = sqrt(1.3 - q2), dz = 2.0 * chord / float(FIRE_STEPS);
+    vec3 rgb = vec3(0.0);
+    float alpha = 0.0;
+    for (int i = 0; i < FIRE_STEPS; i++) {
+      vec3 pos = vec3(q.x, q.y * (1.0 + 6.0 * squash), -chord + (float(i) + 0.5) * dz);
+      // As the remnant flattens it shears into the disk plane: inner gas turns faster.
+      float plane = length(pos.xz);
+      float turn = squash * (1.8 / (0.22 + plane) + uFireTime * 0.25);
+      pos.xz = mat2(cos(turn), -sin(turn), sin(turn), cos(turn)) * pos.xz;
+      float r = length(pos);
+      float shell = smoothstep(1.0, mix(0.70, 0.35, squash), r) * mix(1.0, smoothstep(0.12, 0.6, r), 0.7 * (1.0 - heat))
+        // The flattened remnant opens a gap where the new hole forms.
+        * mix(1.0, smoothstep(0.06, 0.28, plane), squash);
+      float n = fireFbm(pos * 2.6 + vec3(heat * 1.7, 0.0, uFireTime * 0.06));
+      // Filaments burn hot; the gaps between them read as cooler, darker dust.
+      float d = shell * smoothstep(0.42, 0.74, n + 0.2 * (1.0 - r)) * density * (1.0 - 0.6 * squash);
+      float temperature = heat * (1.25 - 0.85 * r) + (n - 0.5) * 0.6;
+      float absorbed = 1.0 - exp(-d * dz * 10.0);
+      rgb += (1.0 - alpha) * blackbody(temperature) * (0.35 + 2.6 * temperature * temperature) * absorbed;
+      alpha += (1.0 - alpha) * absorbed;
+      if (alpha > 0.97) break;
+    }
+    // Unresolved hot core and a thin limb glow.
+    float core = exp(-q2 * 16.0) * heat * heat * density * 1.8;
+    float limb = exp(-abs(sqrt(q2) - 0.9) * 14.0) * 0.12 * density * heat * (1.0 - squash) * (1.0 - squash);
+    rgb += blackbody(1.1) * core + blackbody(heat) * limb;
+    alpha = max(alpha, clamp(core + limb, 0.0, 1.0));
+    return vec4(rgb, alpha);
   }
   vec4 finaleGas(vec2 uv) {
     float progress = uFinaleGas.w;
-    float ripple = smoothstep(0.14, 0.30, progress) * (1.0 - smoothstep(0.42, 0.50, progress));
     float burst = progress - 0.44;
-    if (uFinaleGas.x + uFinaleGas.z + ripple < 0.00001 && (burst < 0.0 || burst > 0.3)) return vec4(0.0);
+    if (uFireball.z + uFinaleGas.z < 0.00001 && (burst < 0.0 || burst > 0.3)) return vec4(0.0);
     vec2 p = (uv - uRayCenter) * uPortalViewport / uPortalViewport.y / max(uFinaleZoom, 0.001);
-    float collapse = uFinaleGas.y;
     float growth = smoothstep(0.44, 0.70, progress);
     float aspect = uPortalViewport.x / uPortalViewport.y;
     float sweep = max(1.3, aspect) * 1.18;
-    float waveRadius = 0.018 + sweep * growth;
     float r = length(p), angle = atan(p.y, p.x);
-    float ridge = r - waveRadius * (1.0 + 0.017 * sin(angle * 7.0 + uFinaleOrigin));
-    float wave = exp(-pow(ridge / (0.003 + 0.008 * growth), 2.0));
-    float wake = exp(-pow((ridge + 0.018) / 0.024, 2.0)) * 0.13;
-    float arcs = 0.25 + 0.75 * pow(0.5 + 0.5 * sin(angle * 3.0 + 0.5 * sin(angle * 11.0)), 2.0);
-    wave = (wave + wake) * arcs * smoothstep(0.44, 0.46, progress) * (1.0 - smoothstep(0.64, 0.72, progress));
-    // A second inclined shock shell crosses the first, without a fullscreen flash.
+    // Screen axes of the tilted disk: x runs along its 55 degree diagonal.
     vec2 tilted = mat2(0.573576, -0.819152, 0.819152, 0.573576) * p;
-    float shell = exp(-pow((length(tilted / vec2(1.0, 0.64)) - waveRadius * 0.83) / 0.005, 2.0))
-      * smoothstep(0.445, 0.47, progress) * (1.0 - smoothstep(0.65, 0.74, progress)) * 0.32;
-    vec3 rgb = vec3(1.0, 0.84, 0.62) * (wave * 0.75 + shell);
-    float alpha = clamp(wave * 0.68 + shell, 0.0, 0.82);
-    // Gravitational-wave ripples, same chirp clock as the constellations' inspiral.
-    float chirp = -log(1.0 - 0.985 * clamp((progress - 0.12) / 0.32, 0.0, 1.0));
-    float rings = ripple * pow(max(sin(r * 34.0 - chirp * 9.0), 0.0), 24.0) * exp(-r * 2.4) * 0.14;
-    rgb += vec3(0.75, 0.85, 1.0) * rings;
-    alpha = max(alpha, rings);
+    vec4 fire = kilonova(tilted);
+    vec3 rgb = fire.rgb;
+    float alpha = fire.a;
+    // One shock front races ahead of the fireball across the frame.
+    float waveRadius = 0.018 + sweep * growth;
+    float ridge = r - waveRadius * (1.0 + 0.017 * sin(angle * 7.0 + uFinaleOrigin));
+    float wave = exp(-pow(ridge / (0.003 + 0.008 * growth), 2.0)) + exp(-pow((ridge + 0.018) / 0.024, 2.0)) * 0.13;
+    float arcs = 0.25 + 0.75 * pow(0.5 + 0.5 * sin(angle * 3.0 + 0.5 * sin(angle * 11.0)), 2.0);
+    wave *= arcs * smoothstep(0.44, 0.46, progress) * (1.0 - smoothstep(0.62, 0.70, progress)) * 0.55;
+    rgb += vec3(0.85, 0.9, 1.0) * wave * (1.0 - alpha);
+    alpha = max(alpha, clamp(wave, 0.0, 0.8));
+    // The streams' point of convergence brightens before the merger.
+    float core = exp(-pow(r / (0.010 + uFinaleGas.z * 0.026), 2.0)) * uFinaleGas.z;
+    rgb += vec3(0.8, 0.88, 1.0) * core * 2.4;
+    alpha = max(alpha, clamp(core, 0.0, 1.0));
     // Collision flash and an anamorphic streak across the screen.
     // Gated as a branch: before the collision the exponentials would overflow to NaN.
     if (burst >= 0.0) {
@@ -255,30 +305,6 @@ export const BLACK_HOLE_COPY = /* glsl */ `
       rgb += vec3(0.6, 0.78, 1.0) * streak + vec3(1.0, 0.95, 0.88) * flash * 2.0;
       alpha = max(alpha, clamp(streak + flash, 0.0, 1.0));
     }
-    for (int layer = 0; layer < 3; layer++) {
-      float depth = float(layer);
-      float perspective = 0.76 + depth * 0.27;
-      float radius = mix(0.035 + growth * (0.66 + depth * 0.17), 0.64, collapse);
-      vec2 q = tilted / perspective;
-      q.y /= mix(0.86 - depth * 0.1, 0.18 + depth * 0.025, collapse);
-      float distance = length(q) / radius;
-      float turn = atan(q.y, q.x) + uFinaleOrigin + growth * (0.55 + depth * 0.2)
-        + collapse * (4.5 + 2.0 / (0.3 + distance));
-      vec2 flow = vec2(cos(turn), sin(turn)) * distance;
-      float warp = gasFbm(flow * 3.0 + vec2(depth * 17.1, 9.4));
-      float grain = gasFbm(flow * 7.0 + warp * 1.9 + depth * 21.0);
-      float lanes = pow(smoothstep(0.30, 0.72, grain), 1.7) * smoothstep(0.28, 0.52, warp);
-      float envelope = exp(-pow((distance - mix(0.68, 0.78, collapse)) / 0.46, 2.0));
-      float filaments = 0.38 + 0.62 * pow(0.5 + 0.5 * sin(distance * 39.0 + warp * 11.0), 2.0);
-      float density = lanes * envelope * filaments * uFinaleGas.x * 0.16;
-      vec3 color = mix(vec3(0.66, 0.36, 0.17), vec3(0.42, 0.19, 0.36), smoothstep(0.85, 1.2, distance) * (1.0 - collapse) * 0.6);
-      rgb += color * density * (1.0 - alpha);
-      alpha += density * (1.0 - alpha);
-    }
-    float core = exp(-pow(r / (0.013 + uFinaleGas.z * 0.024), 2.0)) * uFinaleGas.z;
-    float spikes = exp(-min(abs(tilted.x), abs(tilted.y)) * 550.0) * exp(-r * 9.0) * uFinaleGas.z * 0.20;
-    rgb += vec3(1.0, 0.9, 0.76) * (core * 2.2 + spikes);
-    alpha = max(alpha, clamp(core + spikes, 0.0, 1.0));
     return vec4(rgb, alpha);
   }
   // Authored photon echoes bracket the dark crossing; their clock is scroll, not time.

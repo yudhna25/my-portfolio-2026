@@ -52,7 +52,8 @@ export const FORMATION_GLSL = /* glsl */ `
   }
   vec4 stellarFormation(vec2 uv) {
     if (uOpening.x > 0.5 && uFinaleEnabled < 0.5) return firstLight(uv);
-    if (uOpening.x < 0.5 || uOpening.y >= 0.72) return vec4(0.0);
+    // The finale's plasma is the kilonova fireball in the copy pass.
+    if (uFinaleEnabled > 0.5 || uOpening.x < 0.5 || uOpening.y >= 0.72) return vec4(0.0);
     float time = uOpening.y;
     float collapse = uOpening.z;
     vec2 center = uFinaleEnabled > 0.5 ? uRayCenter : uPortalCenter;

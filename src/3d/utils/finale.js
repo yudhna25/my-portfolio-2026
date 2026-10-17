@@ -5,6 +5,13 @@ export function finaleSmooth(a, b, p) {
   const t = clamp((p - a) / (b - a));
   return t * t * (3 - 2 * t);
 }
+// Apparent BH scale: the shadow grows to about 55vh whatever the camera distance.
+export function finaleScreenScale(distance, fov, cssHeight, collapse, zoom) {
+  const radius = Math.max(1.1, distance);
+  const shadowAngle = Math.asin(Math.min(0.999, 2.598076 * Math.sqrt(1 - 1 / radius) / radius));
+  const shadow = Math.tan(shadowAngle) * cssHeight / (2 * Math.tan(fov * Math.PI / 360));
+  return cssHeight * 0.27 * (0.12 + 0.88 * collapse) * zoom / shadow;
+}
 export function finaleState(progress, out = {}) {
   const p = clamp(progress);
   out.progress = p;
@@ -12,7 +19,8 @@ export function finaleState(progress, out = {}) {
   out.travel = finaleSmooth(0.12, 0.44, p);
   // Inspiral chirp: the shared turn accelerates without bound toward the collision.
   out.angle = -2.4 * Math.log(1 - 0.985 * clamp((p - 0.12) / 0.32));
-  out.ripple = finaleSmooth(0.14, 0.30, p) * (1 - finaleSmooth(0.42, 0.50, p));
+  // Luminous tidal streams shed behind each constellation, poured into the collision.
+  out.streams = finaleSmooth(0.12, 0.22, p) * (1 - finaleSmooth(0.44, 0.50, p));
   out.radius = (1 - 0.76 * finaleSmooth(0.12, 0.34, p)) * (1 - finaleSmooth(0.34, 0.44, p));
   out.figure = (1 - 0.7 * finaleSmooth(0.12, 0.34, p)) * (1 - finaleSmooth(0.34, 0.44, p));
   out.stars = 1 - finaleSmooth(0.43, 0.47, p);
@@ -28,8 +36,16 @@ export function finaleState(progress, out = {}) {
   // Black-sun grade: amber disk and a faster stream during the transition, handed back
   // to the unchanged Contact black hole at p = 1.
   out.warm = finaleSmooth(0.40, 0.52, p) * (1 - finaleSmooth(0.92, 1, p));
-  // Strange dawn: a planet limb and warm sky rise under the hole, then dim for Contact.
-  out.dawn = finaleSmooth(0.62, 0.86, p) * (1 - finaleSmooth(0.93, 1, p));
+  // Kilonova: the fireball (world radius, heat, density) and its flattening into the disk.
+  const blast = Math.max(0, p - FINALE_PHASES.collision);
+  out.fireRadius = p < FINALE_PHASES.collision ? 0 : 0.6 + 23 * (1 - Math.exp(-blast * 10));
+  out.fireHeat = 0.2 + 0.9 * Math.exp(-blast * 9);
+  out.fireDensity = finaleSmooth(0.44, 0.47, p) * (1 - finaleSmooth(0.74, 0.88, p));
+  out.flatten = finaleSmooth(0.60, 0.88, p);
+  // Ejecta captured onto Keplerian orbits; the particle disk hands over to the ray-traced one.
+  out.capture = finaleSmooth(0.56, 0.86, p);
+  // Finale-only film grade (grain, fringing, vignette); zero on Contact.
+  out.grade = finaleSmooth(0.10, 0.30, p) * (1 - finaleSmooth(0.90, 1, p));
   out.phase = p < 0.12 ? 'retract' : p < 0.34 ? 'orbit' : p < 0.44 ? 'compress' : p < 0.70 ? 'nebula' : 'accrete';
   return out;
 }

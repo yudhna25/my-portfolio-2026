@@ -3,6 +3,7 @@ import { EffectComposer, Select, SelectiveBloom } from '@react-three/postprocess
 import { HalfFloatType, LinearFilter, Vector2, Vector4, WebGLRenderTarget } from 'three';
 import { BlackHole } from '@/3d/components/BlackHole';
 import { BlackHoleBloomMask } from '@/3d/components/BlackHoleBloomMask';
+import { FinaleGrade } from '@/3d/components/FinaleGrade';
 
 export function BlackHoleSystem({ frozen = false, quality = 'high', enableBloom = true, story = false, reduced = false, opening }) {
   const light = useRef(null);
@@ -17,6 +18,7 @@ export function BlackHoleSystem({ frozen = false, quality = 'high', enableBloom 
     uOpening: { value: new Vector4() },
     uOpeningText: { value: null }, uOpeningLens: { value: new Vector4() },
     uFinaleZoom: { value: 1 }, uDiskWarm: { value: 0 },
+    uFireball: { value: new Vector4() }, uFireTime: { value: 0 },
   }), []);
   const target = useMemo(() => new WebGLRenderTarget(1, 1, {
     type: HalfFloatType, minFilter: LinearFilter, magFilter: LinearFilter,
@@ -32,6 +34,7 @@ export function BlackHoleSystem({ frozen = false, quality = 'high', enableBloom 
         <SelectiveBloom lights={lights} ignoreBackground mipmapBlur intensity={quality === 'medium' ? 0.15 : 0.3}
           luminanceThreshold={1.0} luminanceSmoothing={0.15} radius={0.55} />
         <BlackHoleBloomMask texture={target.texture} portal={portal} />
+        {story && <FinaleGrade reduced={reduced} />}
       </EffectComposer>
     </>}
   </>;
