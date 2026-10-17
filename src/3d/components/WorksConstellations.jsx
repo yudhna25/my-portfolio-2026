@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
-import { BufferAttribute, BufferGeometry, DynamicDrawUsage, Matrix4, Quaternion, SRGBColorSpace, TextureLoader, Vector3 } from 'three';
+import { Select } from '@react-three/postprocessing';
+import { AdditiveBlending, BufferAttribute, BufferGeometry, DynamicDrawUsage, Matrix4, Quaternion, SRGBColorSpace, TextureLoader, Vector3, Vector4 } from 'three';
 import data from '@/3d/data/worksConstellations.json';
 import { BLACK_HOLE_CENTER, storyCameraPath } from '@/3d/utils/cameraPath';
 import { advanceWorksOrbit, worksBounds, worksStage, worksFigure, WORKS_IDS } from '@/3d/utils/worksOrbit';
 import { finaleState, finaleSmooth } from '@/3d/utils/finale';
-import { worksArrival } from '@/3d/utils/storyMeteor';
+import { meteorTargets, worksArrival } from '@/3d/utils/storyMeteor';
 import { useScrollStore } from '@/stores/useScrollStore';
 
 // Stellarium Modern / CC BY-SA 4.0; Hipparcos ICRS J1991.25.
@@ -46,6 +47,41 @@ const TRAIL_FRAG = /* glsl */ `
   void main() { gl_FragColor = vec4(vec3(1.0), vFade * uOpacity); }
 `;
 
+// Tidal streams: stars stripped from each figure trail along its own authored history
+// (the chirped inspiral), fanning out with age and pouring into the collision point.
+const STREAM_SAMPLES = 24;
+const STREAM_LAG = 0.07;
+const STREAM_VERT = /* glsl */ `
+  #define SAMPLES ${STREAM_SAMPLES}
+  uniform vec4 uHistory[SAMPLES * 3];
+  uniform float uOpacity, uPixelRatio;
+  attribute vec4 aSeed;
+  attribute float aSpread;
+  varying float vAlpha;
+  varying vec3 vColor;
+  void main() {
+    int figure = int(aSeed.x + 0.5);
+    float index = aSeed.y * float(SAMPLES - 1);
+    int k = int(floor(index));
+    vec4 h = mix(uHistory[figure * SAMPLES + k], uHistory[figure * SAMPLES + min(k + 1, SAMPLES - 1)], fract(index));
+    vec3 fan = vec3(aSeed.z - 0.5, aSeed.w - 0.5, fract(aSeed.z * 7.13) - 0.5) * aSpread * (0.15 + aSeed.y * 3.2);
+    vec4 view = modelViewMatrix * vec4(h.xyz + (position + fan) * h.w, 1.0);
+    gl_Position = projectionMatrix * view;
+    gl_PointSize = clamp((1.0 + 2.0 * fract(aSeed.w * 5.31)) * uPixelRatio * 24.0 / max(-view.z, 1.0), 1.0, 5.0);
+    float head = 1.0 - aSeed.y;
+    vAlpha = uOpacity * pow(head, 1.4) * (0.35 + 0.65 * fract(aSeed.z * 3.7));
+    vColor = mix(vec3(0.55, 0.7, 1.0), vec3(1.0, 0.97, 0.92), pow(head, 3.0)) * (0.8 + 1.6 * pow(head, 4.0));
+  }
+`;
+const STREAM_FRAG = /* glsl */ `
+  varying float vAlpha;
+  varying vec3 vColor;
+  void main() {
+    float r = length(gl_PointCoord - 0.5);
+    gl_FragColor = vec4(vColor, pow(1.0 - smoothstep(0.0, 0.5, r), 1.8) * vAlpha);
+  }
+`;
+
 function projectWorks(layoutRef, root, camera, figures, groups, size, basis, ready) {
   const data = layoutRef?.current;
   if (!data) return;
@@ -70,6 +106,7 @@ function projectWorks(layoutRef, root, camera, figures, groups, size, basis, rea
 export function WorksConstellations({ frozen = false, quality = 'high', layoutRef }) {
   const root = useRef(null);
   const trailMesh = useRef(null);
+  const streamMesh = useRef(null);
   const phaseState = useRef({});
   const sampled = useRef({});
   const groups = useRef([]);
@@ -100,6 +137,26 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
     geometry.setAttribute('aFade', new BufferAttribute(fades, 1));
     return { geometry, stars, samples, uniforms: { uOpacity: { value: 0 } } };
   }, [quality]);
+  const streams = useMemo(() => {
+    const count = quality === 'low' ? 10000 : quality === 'medium' ? 24000 : 48000;
+    const positions = new Float32Array(count * 3), seeds = new Float32Array(count * 4), spreads = new Float32Array(count);
+    const random = index => { const value = Math.sin((index + 1) * 78.233 + 20261017) * 43758.5453; return value - Math.floor(value); };
+    for (let i = 0; i < count; i++) {
+      const figure = i % 3, item = data.constellations[figure], stars = item.geometry.stars;
+      const star = stars[Math.floor(random(i * 5) * stars.length)].position;
+      positions.set(star, i * 3);
+      // Bias toward the head so the stream reads as bright near each figure.
+      seeds.set([figure, Math.pow(random(i * 5 + 1), 1.6), random(i * 5 + 2), random(i * 5 + 3)], i * 4);
+      const bounds = worksBounds(item);
+      spreads[i] = (bounds.right - bounds.left) * 0.08;
+    }
+    const geometry = new BufferGeometry();
+    geometry.setAttribute('position', new BufferAttribute(positions, 3));
+    geometry.setAttribute('aSeed', new BufferAttribute(seeds, 4));
+    geometry.setAttribute('aSpread', new BufferAttribute(spreads, 1));
+    return { geometry, uniforms: { uHistory: { value: Array.from({ length: STREAM_SAMPLES * 3 }, () => new Vector4()) },
+      uOpacity: { value: 0 }, uPixelRatio: { value: 1 } } };
+  }, [quality]);
   const basis = useMemo(() => {
     const aspect = size.width / size.height;
     const pose = storyCameraPath('works', 0, {}, false, aspect);
@@ -120,6 +177,7 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
   }, [size.width, size.height, figures]);
   useEffect(() => () => figures.forEach(figure => { figure.points.dispose(); figure.lines.dispose(); }), [figures]);
   useEffect(() => () => trails.geometry.dispose(), [trails]);
+  useEffect(() => () => streams.geometry.dispose(), [streams]);
   useEffect(() => {
     let alive = true;
     const loader = new TextureLoader();
@@ -142,6 +200,17 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
     const p = finale ? state.chapterProgress : 0;
     const authored = finaleState(p, phaseState.current);
     const arrival = frozen ? 1 : worksArrival(state.storyChapter, state.chapterProgress);
+    if (arriving) {
+      // Rest-pose figure centres in world space, the comet fragments' destinations.
+      const phase = state.worksOrbit.latched ? state.worksOrbit.origin : state.worksOrbit.phase;
+      for (let i = 0; i < figures.length; i++) {
+        const pose = worksFigure(0, phase, i, basis, sampled.current), bounds = figures[i].bounds;
+        const local = figures[i].projected.set(pose.x + (bounds.left + bounds.right) / 2 * pose.scale,
+          pose.y + (bounds.top + bounds.bottom) / 2 * pose.scale, pose.z).applyQuaternion(basis.rotation).add(basis.center);
+        meteorTargets.points[i].x = local.x; meteorTargets.points[i].y = local.y; meteorTargets.points[i].z = local.z;
+      }
+      meteorTargets.ready = true;
+    }
     root.current.visible = active || arriving && arrival > 0 || !frozen && finale && p < 0.55;
     const selected = finale ? state.worksFinaleSelection : state.worksSelection ?? state.worksFocus ?? state.worksHover;
     advanceWorksOrbit(state.worksOrbit, delta, Boolean(selected), frozen, active && !document.hidden);
@@ -166,8 +235,18 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
       art.opacity = art.map ? (highlighted ? 0.3 : 0.1) * authored.stars * arrival : 0;
     }
     projectWorks(layoutRef, root.current, camera, figures, groups.current, size, basis, active);
+    streamMesh.current.visible = finale && authored.streams > 0;
+    if (streamMesh.current.visible) {
+      const values = streamMesh.current.material.uniforms;
+      values.uOpacity.value = authored.streams;
+      values.uPixelRatio.value = gl.getPixelRatio();
+      for (let f = 0; f < 3; f++) for (let k = 0; k < STREAM_SAMPLES; k++) {
+        const pose = worksFigure(Math.max(0, p - k / (STREAM_SAMPLES - 1) * STREAM_LAG), phase, f, basis, sampled.current);
+        values.uHistory.value[f * STREAM_SAMPLES + k].set(pose.x, pose.y, pose.z, pose.scale);
+      }
+    }
     trailMesh.current.visible = finale && authored.trails > 0;
-    trailMesh.current.material.uniforms.uOpacity.value = authored.trails * 0.32;
+    trailMesh.current.material.uniforms.uOpacity.value = authored.trails * 0.2;
     if (trailMesh.current.visible) {
       const attribute = trailMesh.current.geometry.attributes.position;
       const array = attribute.array;
@@ -200,6 +279,12 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
         <meshBasicMaterial transparent opacity={0} depthWrite={false} toneMapped={false} />
       </mesh>
     </group>)}
+    <Select enabled>
+      <points ref={streamMesh} name="finale-streams" geometry={streams.geometry} frustumCulled={false} renderOrder={6} visible={false}>
+        <shaderMaterial vertexShader={STREAM_VERT} fragmentShader={STREAM_FRAG} uniforms={streams.uniforms}
+          onUpdate={material => { material.uniforms = streams.uniforms; }} transparent depthTest={false} depthWrite={false} toneMapped={false} blending={AdditiveBlending} />
+      </points>
+    </Select>
     <lineSegments ref={trailMesh} name="finale-trails" geometry={trails.geometry} frustumCulled={false}>
       <shaderMaterial vertexShader={TRAIL_VERT} fragmentShader={TRAIL_FRAG} uniforms={trails.uniforms}
         onUpdate={material => { material.uniforms = trails.uniforms; }} transparent depthWrite={false} toneMapped={false} />

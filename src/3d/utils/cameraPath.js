@@ -37,6 +37,15 @@ const EDUCATION = [2, 5, -110, -64, -42, -200];
 // Look away from the existing BH instead of moving its shader center to -420.
 const WORKS = [0, 4, -160, 140, 0, -210];
 const CONTACT = [2, 4, -160, -12, -1, -200];
+// Finale flight: dive in on the merger, get thrown back by the blast, then crane down
+// onto the unchanged Contact framing before the new disk is fully formed.
+const DIVE = [5, 2.4, -177, 0, 0, -200];
+const BLAST = [-8, 8, -143, -3, -0.5, -200];
+
+function smootherStep(a, b, value) {
+  const t = clampStoryProgress((value - a) / (b - a));
+  return t * t * t * (t * (t * 6 - 15) + 10);
+}
 
 export function clampStoryProgress(value) {
   return Number.isFinite(value) ? Math.min(1, Math.max(0, value)) : 0;
@@ -50,6 +59,53 @@ export function segmentProgress(scroll, start, end) {
 export function portalFall(progress) {
   const q = clampStoryProgress(progress / 0.44);
   return q * q * (0.25 + 0.75 * q);
+}
+
+// Rotates a point about the BH centre: yaw about world up, then pitch about the horizontal
+// axis across the BH→camera direction (ax, az).
+function orbitPoint(target, keyX, keyY, keyZ, cosYaw, sinYaw, cosPitch, sinPitch, ax, az) {
+  const [cx, cy, cz] = BLACK_HOLE_CENTER;
+  const x = target[keyX] - cx, y = target[keyY] - cy, z = target[keyZ] - cz;
+  const yx = x * cosYaw + z * sinYaw, yz = -x * sinYaw + z * cosYaw;
+  // Rodrigues about the unit axis (ax, 0, az).
+  const along = ax * yx + az * yz;
+  target[keyX] = cx + yx * cosPitch + -az * y * sinPitch + ax * along * (1 - cosPitch);
+  target[keyY] = cy + y * cosPitch + (az * yx - ax * yz) * sinPitch;
+  target[keyZ] = cz + yz * cosPitch + ax * y * sinPitch + az * along * (1 - cosPitch);
+}
+
+// Reading-chapter drift around the BH, continuous across chapter joins: About pushes in
+// (the rack focus is a separate pass), Skills orbits, Education cranes up, Experience
+// spirals inward along the arm, and departure releases it all before Works' fixed basis.
+// Orbiting the BH keeps it composed where each chapter frames it; the sky turns behind it.
+function storyDrift(chapter, progress, target) {
+  const s = progress * progress * (3 - 2 * progress);
+  let dolly = 0, yaw = 0, pitch = 0;
+  if (chapter === 'about') dolly = 2.5 * s;
+  else if (chapter === 'skills') { dolly = 2.5; yaw = 0.10 * s; }
+  else if (chapter === 'education') { dolly = 2.5; yaw = 0.10; pitch = 0.08 * s; }
+  else if (chapter === 'experience') { dolly = 2.5 + 8 * s; yaw = 0.10 + 0.12 * s; pitch = 0.08; }
+  else if (chapter === 'departure') {
+    const release = 1 - smootherStep(0, 0.7, progress);
+    dolly = 10.5 * release; yaw = 0.22 * release; pitch = 0.08 * release;
+  }
+  if (!dolly && !yaw && !pitch) return;
+  const [cx, , cz] = BLACK_HOLE_CENTER;
+  const hx = target.x - cx, hz = target.z - cz, length = Math.hypot(hx, hz) || 1;
+  const cosYaw = Math.cos(yaw), sinYaw = Math.sin(yaw);
+  // Pitch axis: horizontal, across the yawed BH→camera direction (positive raises the camera).
+  const dx = (hx * cosYaw + hz * sinYaw) / length, dz = (-hx * sinYaw + hz * cosYaw) / length;
+  const ax = -dz, az = dx, cosPitch = Math.cos(pitch), sinPitch = Math.sin(pitch);
+  orbitPoint(target, 'x', 'y', 'z', cosYaw, sinYaw, cosPitch, sinPitch, ax, az);
+  orbitPoint(target, 'lookX', 'lookY', 'lookZ', cosYaw, sinYaw, cosPitch, sinPitch, ax, az);
+  // Dolly toward the BH; the aim moves with it, so only the BH and near layers grow.
+  const fx = BLACK_HOLE_CENTER[0] - target.x, fy = BLACK_HOLE_CENTER[1] - target.y, fz = BLACK_HOLE_CENTER[2] - target.z;
+  const reach = Math.hypot(fx, fy, fz) || 1;
+  for (const [key, delta] of [['x', fx], ['y', fy], ['z', fz]]) {
+    const step = delta / reach * dolly;
+    target[key] += step;
+    target['look' + key.toUpperCase()] += step;
+  }
 }
 
 export function storyCameraPath(chapter, progress, target = {}, frozen = false, aspect = 1) {
@@ -67,10 +123,15 @@ export function storyCameraPath(chapter, progress, target = {}, frozen = false, 
     case 'experience': from = to = EDUCATION; break;
     case 'departure': from = EDUCATION; to = WORKS; break;
     case 'works': from = to = WORKS; break;
-    // Reach the collision pose before the burst; stay in that same frame as gas forms the BH.
-    case 'finale': from = WORKS; to = CONTACT; p = clampStoryProgress((p - 0.12) / 0.32); break;
+    case 'finale':
+      if (frozen) { from = to = CONTACT; break; }
+      if (p < 0.44) { from = WORKS; to = DIVE; p = clampStoryProgress((p - 0.12) / 0.32); }
+      else if (p < 0.64) { from = DIVE; to = BLAST; p = 1 - Math.pow(1 - (p - 0.44) / 0.20, 3); }
+      else { from = BLAST; to = CONTACT; p = clampStoryProgress((p - 0.64) / 0.22); }
+      break;
   }
-  const ease = chapter === 'portal' && progress < 0.47 && !frozen ? portalFall(progress) : p * p * (3 - 2 * p);
+  const ease = chapter === 'portal' && progress < 0.47 && !frozen ? portalFall(progress)
+    : chapter === 'finale' && progress >= 0.44 && progress < 0.64 ? p : p * p * (3 - 2 * p);
   target.x = from[0] + (to[0] - from[0]) * ease;
   target.y = from[1] + (to[1] - from[1]) * ease;
   target.z = from[2] + (to[2] - from[2]) * ease;
@@ -78,10 +139,24 @@ export function storyCameraPath(chapter, progress, target = {}, frozen = false, 
   target.lookY = from[4] + (to[4] - from[4]) * ease;
   target.lookZ = from[5] + (to[5] - from[5]) * ease;
   // Portrait Contact reserves the lower reading area without clipping the disk to the side.
-  const portraitContact = Math.min(1, Math.max(0, (1 - aspect) / 0.4)) * (chapter === 'contact' ? 1 : chapter === 'finale' ? ease : 0);
+  const towardContact = chapter === 'contact' || frozen && chapter === 'finale' ? 1 : chapter === 'finale' && progress >= 0.64 ? ease : 0;
+  const portraitContact = Math.min(1, Math.max(0, (1 - aspect) / 0.4)) * towardContact;
   target.lookX *= 1 - portraitContact;
   target.lookY -= 12 * portraitContact;
   target.parallax = 0;
+  target.roll = 0;
+  if (chapter === 'finale' && !frozen) {
+    const q = clampStoryProgress(progress);
+    // Bank into the spiral, swing back with the blast, level out before the disk forms.
+    target.roll = 0.10 * smootherStep(0.16, 0.44, q) * (1 - smootherStep(0.44, 0.58, q))
+      - 0.05 * smootherStep(0.48, 0.60, q) * (1 - smootherStep(0.66, 0.82, q));
+    // Collision shake on the scroll clock, so scrubbing back replays it.
+    const shake = q < 0.44 ? 0 : 0.9 * Math.exp(-(q - 0.44) * 45);
+    target.x += Math.sin(q * 731) * shake;
+    target.y += Math.cos(q * 913) * shake * 0.7;
+    target.roll += Math.sin(q * 1103) * shake * 0.03;
+  }
+  if (!frozen) storyDrift(chapter, clampStoryProgress(progress), target);
   if (chapter === 'portal' && !frozen) {
     const bend = Math.sin(ease * Math.PI);
     target.x += 2.4 * bend * (progress < 0.47 ? -1 : 1);

@@ -8,6 +8,7 @@ import { portalProgress, portalState } from '@/3d/utils/portal';
 import { finaleState } from '@/3d/utils/finale';
 import { BLACK_HOLE_CENTER } from '@/3d/utils/cameraPath';
 import { SPACETIME_GLSL } from '@/3d/shaders/formation';
+import { cameraMotion } from '@/3d/utils/cameraMotion';
 
 const STAR_VERT = /* glsl */ `
   attribute float aSize;
@@ -24,8 +25,11 @@ const STAR_VERT = /* glsl */ `
   uniform vec2 uViewport;
   uniform vec2 uWarpCenter;
   uniform vec3 uSpacetime;
+  uniform float uFlow;
+  uniform float uDefocus;
   ${SPACETIME_GLSL}
   varying float vAlpha;
+  varying float vBokeh;
   varying float vSeed;
   varying vec2 vTrailAxis;
   varying float vStretch;
@@ -66,9 +70,17 @@ const STAR_VERT = /* glsl */ `
       vTrailAxis = tangent / max(0.00001, length(tangent));
       trail = max(trail, stretch * 1.45);
     }
+    if (uFlow > 0.001 && clip.w > 0.0) {
+      // Scroll speed: the sky streams radially out of the frame centre.
+      vec2 radial = clip.xy / clip.w * vec2(uViewport.x / max(1.0, uViewport.y), 1.0);
+      float flow = uFlow * 0.55 * smoothstep(0.05, 1.2, length(radial));
+      if (flow > trail) { vTrailAxis = vec2(radial.x, -radial.y) / max(0.00001, length(radial)); trail = flow; }
+    }
     vStretch = 1.0 + trail * (8.0 + aSeed * 6.0);
+    // About's rack focus opens each star into a bokeh disc, nearer stars a little wider.
+    vBokeh = uDefocus * (0.6 + 0.4 * aSeed);
     // Apparent size of distant stars is independent of the camera's translation.
-    gl_PointSize = max(1.0, aSize * uPixelRatio * (1.0 + 0.08 * uApproach)) * vStretch;
+    gl_PointSize = max(1.0, aSize * uPixelRatio * (1.0 + 0.08 * uApproach) * (1.0 + 2.6 * vBokeh)) * vStretch;
     gl_Position = clip;
     vAlpha = 0.85 + 0.15 * sin(uTime * (0.3 + aSeed * 0.5) + aSeed * 60.0);
     vVisibility = visibility;
@@ -84,6 +96,7 @@ const STAR_FRAG = /* glsl */ `
   varying vec2 vTrailAxis;
   varying float vStretch;
   varying float vVisibility;
+  varying float vBokeh;
   void main() {
     vec2 c = gl_PointCoord - 0.5;
     vec2 streak = vec2(dot(c, vTrailAxis), dot(c, vec2(-vTrailAxis.y, vTrailAxis.x)) * vStretch);
@@ -91,6 +104,11 @@ const STAR_FRAG = /* glsl */ `
     // Quadratic falloff: sharp core, no soft neon halo.
     float a = 1.0 - smoothstep(0.15, 0.5, d);
     a *= a;
+    if (vBokeh > 0.0) {
+      // A lens-shaped disc with a brighter rim; spreading keeps most of the star's light.
+      float disc = (1.0 - smoothstep(0.40, 0.5, d)) * (0.55 + 0.45 * smoothstep(0.2, 0.45, d));
+      a = mix(a, disc * 1.4 / pow(1.0 + 2.6 * vBokeh, 1.5), smoothstep(0.0, 0.3, vBokeh));
+    }
     vec3 col = mix(uColorA, uColorB, step(0.7, vSeed));
     gl_FragColor = vec4(col, a * (0.30 + 0.50 * vAlpha) * vVisibility);
   }
@@ -114,6 +132,8 @@ export function StarField({ count = QUALITY.high, frozen = false, story = false,
     uOpeningZoom: { value: 1 },
     uWarpCenter: { value: new Vector2() },
     uSpacetime: { value: new Vector3() },
+    uFlow: { value: 0 },
+    uDefocus: { value: 0 },
     uPortalCenter: { value: new Vector2() },
     uViewport: { value: new Vector2(1, 1) },
     uColorA: { value: new Color('#FFFFFF') },
@@ -141,6 +161,8 @@ export function StarField({ count = QUALITY.high, frozen = false, story = false,
     values.uEject.value = eject * eject * (3 - 2 * eject);
     values.uEjecting.value = p >= 0.50 ? 1 : 0;
     values.uViewport.value.set(state.size.width, state.size.height);
+    values.uFlow.value = story && !reduced ? cameraMotion.speed : 0;
+    values.uDefocus.value = story && !reduced ? cameraMotion.defocus : 0;
     const anchor = scroll.storyAnchor;
     const center = phase.current.center;
     const x = anchor ? (anchor.left + anchor.width * 0.5) / state.size.width : 0.5;
@@ -150,7 +172,7 @@ export function StarField({ count = QUALITY.high, frozen = false, story = false,
     const intro = !reduced && opening?.current.active ? opening.current : null;
     const warpedFinale = !reduced && story && scroll.storyChapter === 'finale';
     const authored = finaleState(scroll.chapterProgress, finale.current);
-    values.uSpacetime.value.set(intro ? intro.p : authored.formation, intro ? intro.shadow / state.size.height : 0.24, intro || warpedFinale ? 1 : 0);
+    values.uSpacetime.value.set(intro ? intro.clock : authored.formation, intro ? intro.shadow / state.size.height : 0.24, intro || warpedFinale ? 1 : 0);
     if (intro) values.uWarpCenter.value.set(intro.x / state.size.width * 2 - 1, 1 - intro.y / state.size.height * 2);
     else { projected.set(...BLACK_HOLE_CENTER).project(state.camera); values.uWarpCenter.value.set(projected.x, projected.y); }
     const progress = frozen ? 0 : scroll.scrollProgress;
