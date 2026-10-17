@@ -87,6 +87,8 @@
     "interactionHint": "Hover or Tab to preview. Tap / press to keep a selection; tap again, tap the background or press Escape to clear.",
     "behanceReference": "Reference on Behance",
     "comingSoon": "Case study coming soon",
+    "voyage": "Voyage {{number}}",
+    "backToOrbit": "Back to orbit",
     "constellations": {
       "edura": "Centaurus",
       "veris": "Gemini",
