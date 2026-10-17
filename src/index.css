@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=JetBrains+Mono:wght@400&family=Fraunces:ital,opsz,wght@1,9..144,300..600&display=swap');
 
 @import 'tailwindcss';
 
@@ -58,7 +58,7 @@
 
   ::selection {
 
-    background: var(--color-foreground);
+    background: var(--accent-amber);
 
     color: var(--color-background);
 
@@ -157,6 +157,46 @@
 
 
 .split-line { overflow: clip; display: block; }
+.starlight-line { display: block; }
+
+/* Chapter title cards: the extreme end of the type scale. */
+.chapter-title { font-size: clamp(3rem, 11.5vw, 13rem); color: rgb(237 235 227 / 0.16); }
+.chapter-title .mix-em { font-weight: 300; letter-spacing: -0.035em; color: rgb(255 178 91 / 0.62); }
+
+/* Comet line reveal: a mask front travels with a small amber head (see lib/textReveal). */
+.comet-line {
+  --sweep: 115%;
+  --comet: 0;
+  position: relative;
+  display: block;
+  -webkit-mask-image: linear-gradient(90deg, #000 calc(var(--sweep) - 14%), transparent var(--sweep));
+  mask-image: linear-gradient(90deg, #000 calc(var(--sweep) - 14%), transparent var(--sweep));
+}
+.comet-line::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  left: calc(var(--sweep) - 15%);
+  width: 2px;
+  border-radius: 2px;
+  background: var(--accent-amber);
+  box-shadow: 0 0 14px 3px var(--accent-amber-soft), 0 0 4px 1px var(--accent-amber);
+  opacity: var(--comet);
+  pointer-events: none;
+}
+
+/* Two voices in one line: Unbounded carries the statement, an editorial italic
+ * in Hawking amber carries the feeling. */
+.mix-em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-variation-settings: 'opsz' 144;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  color: var(--accent-amber);
+}
 
 .split-char { display: inline-block; }
 
@@ -170,9 +210,11 @@
 
 :focus-visible {
 
-  @apply outline-2 outline-solid outline-white outline-offset-4;
+  @apply outline-2 outline-solid outline-offset-4;
 
-  box-shadow: 0 0 0 6px #050505;
+  outline-color: var(--accent-amber);
+
+  box-shadow: 0 0 0 6px var(--bg-void);
 
   scroll-margin-block: 6rem 2rem;
 
