@@ -61,6 +61,53 @@ export function portalFall(progress) {
   return q * q * (0.25 + 0.75 * q);
 }
 
+// Rotates a point about the BH centre: yaw about world up, then pitch about the horizontal
+// axis across the BH→camera direction (ax, az).
+function orbitPoint(target, keyX, keyY, keyZ, cosYaw, sinYaw, cosPitch, sinPitch, ax, az) {
+  const [cx, cy, cz] = BLACK_HOLE_CENTER;
+  const x = target[keyX] - cx, y = target[keyY] - cy, z = target[keyZ] - cz;
+  const yx = x * cosYaw + z * sinYaw, yz = -x * sinYaw + z * cosYaw;
+  // Rodrigues about the unit axis (ax, 0, az).
+  const along = ax * yx + az * yz;
+  target[keyX] = cx + yx * cosPitch + -az * y * sinPitch + ax * along * (1 - cosPitch);
+  target[keyY] = cy + y * cosPitch + (az * yx - ax * yz) * sinPitch;
+  target[keyZ] = cz + yz * cosPitch + ax * y * sinPitch + az * along * (1 - cosPitch);
+}
+
+// Reading-chapter drift around the BH, continuous across chapter joins: About pushes in
+// (the rack focus is a separate pass), Skills orbits, Education cranes up, Experience
+// spirals inward along the arm, and departure releases it all before Works' fixed basis.
+// Orbiting the BH keeps it composed where each chapter frames it; the sky turns behind it.
+function storyDrift(chapter, progress, target) {
+  const s = progress * progress * (3 - 2 * progress);
+  let dolly = 0, yaw = 0, pitch = 0;
+  if (chapter === 'about') dolly = 2.5 * s;
+  else if (chapter === 'skills') { dolly = 2.5; yaw = 0.10 * s; }
+  else if (chapter === 'education') { dolly = 2.5; yaw = 0.10; pitch = 0.08 * s; }
+  else if (chapter === 'experience') { dolly = 2.5 + 8 * s; yaw = 0.10 + 0.12 * s; pitch = 0.08; }
+  else if (chapter === 'departure') {
+    const release = 1 - smootherStep(0, 0.7, progress);
+    dolly = 10.5 * release; yaw = 0.22 * release; pitch = 0.08 * release;
+  }
+  if (!dolly && !yaw && !pitch) return;
+  const [cx, , cz] = BLACK_HOLE_CENTER;
+  const hx = target.x - cx, hz = target.z - cz, length = Math.hypot(hx, hz) || 1;
+  const cosYaw = Math.cos(yaw), sinYaw = Math.sin(yaw);
+  // Pitch axis: horizontal, across the yawed BH→camera direction (positive raises the camera).
+  const dx = (hx * cosYaw + hz * sinYaw) / length, dz = (-hx * sinYaw + hz * cosYaw) / length;
+  const ax = -dz, az = dx, cosPitch = Math.cos(pitch), sinPitch = Math.sin(pitch);
+  orbitPoint(target, 'x', 'y', 'z', cosYaw, sinYaw, cosPitch, sinPitch, ax, az);
+  orbitPoint(target, 'lookX', 'lookY', 'lookZ', cosYaw, sinYaw, cosPitch, sinPitch, ax, az);
+  // Dolly toward the BH; the aim moves with it, so only the BH and near layers grow.
+  const fx = BLACK_HOLE_CENTER[0] - target.x, fy = BLACK_HOLE_CENTER[1] - target.y, fz = BLACK_HOLE_CENTER[2] - target.z;
+  const reach = Math.hypot(fx, fy, fz) || 1;
+  for (const [key, delta] of [['x', fx], ['y', fy], ['z', fz]]) {
+    const step = delta / reach * dolly;
+    target[key] += step;
+    target['look' + key.toUpperCase()] += step;
+  }
+}
+
 export function storyCameraPath(chapter, progress, target = {}, frozen = false, aspect = 1) {
   let p = frozen ? 1 : clampStoryProgress(progress);
   let from = HERO, to = HERO;
@@ -109,6 +156,7 @@ export function storyCameraPath(chapter, progress, target = {}, frozen = false, 
     target.y += Math.cos(q * 913) * shake * 0.7;
     target.roll += Math.sin(q * 1103) * shake * 0.03;
   }
+  if (!frozen) storyDrift(chapter, clampStoryProgress(progress), target);
   if (chapter === 'portal' && !frozen) {
     const bend = Math.sin(ease * Math.PI);
     target.x += 2.4 * bend * (progress < 0.47 ? -1 : 1);

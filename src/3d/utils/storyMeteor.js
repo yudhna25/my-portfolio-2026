@@ -88,7 +88,7 @@ export function sampleStoryMeteor(layout, q, out, pose) {
   const aspect = layout.width / layout.height;
   if (q <= 1) {
     const contentY = q * (layout.range + 0.60 * layout.height) + 0.20 * layout.height;
-    storyCameraPath('experience', 1, pose, false, aspect);
+    storyCameraPath('experience', Math.max(0, q), pose, false, aspect);
     return worldPoint(curveX(layout.points, contentY, -0.12 / Math.max(1, layout.range + 0.60 * layout.height)),
       0.20 + 0.60 * q, 24, aspect, out, pose);
   }
