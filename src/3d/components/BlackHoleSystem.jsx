@@ -4,6 +4,7 @@ import { HalfFloatType, LinearFilter, Vector2, Vector4, WebGLRenderTarget } from
 import { BlackHole } from '@/3d/components/BlackHole';
 import { BlackHoleBloomMask } from '@/3d/components/BlackHoleBloomMask';
 import { FinaleGrade } from '@/3d/components/FinaleGrade';
+import { ChapterWaveEffect } from '@/3d/components/ChapterWave';
 
 export function BlackHoleSystem({ frozen = false, quality = 'high', enableBloom = true, story = false, reduced = false, opening }) {
   const light = useRef(null);
@@ -34,6 +35,7 @@ export function BlackHoleSystem({ frozen = false, quality = 'high', enableBloom 
         <SelectiveBloom lights={lights} ignoreBackground mipmapBlur intensity={quality === 'medium' ? 0.15 : 0.3}
           luminanceThreshold={1.0} luminanceSmoothing={0.15} radius={0.55} />
         <BlackHoleBloomMask texture={target.texture} portal={portal} />
+        {story && !reduced && <ChapterWaveEffect />}
         {story && <FinaleGrade reduced={reduced} />}
       </EffectComposer>
     </>}

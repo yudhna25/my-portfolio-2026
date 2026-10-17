@@ -9,6 +9,7 @@ import { finaleState } from '@/3d/utils/finale';
 import { BLACK_HOLE_CENTER } from '@/3d/utils/cameraPath';
 import { SPACETIME_GLSL } from '@/3d/shaders/formation';
 import { cameraMotion } from '@/3d/utils/cameraMotion';
+import { waveFrame } from '@/3d/utils/chapterWave';
 
 const STAR_VERT = /* glsl */ `
   attribute float aSize;
@@ -27,6 +28,8 @@ const STAR_VERT = /* glsl */ `
   uniform vec3 uSpacetime;
   uniform float uFlow;
   uniform float uDefocus;
+  uniform float uSpiral;
+  uniform vec2 uSpiralCenter;
   ${SPACETIME_GLSL}
   varying float vAlpha;
   varying float vBokeh;
@@ -75,6 +78,20 @@ const STAR_VERT = /* glsl */ `
       vec2 radial = clip.xy / clip.w * vec2(uViewport.x / max(1.0, uViewport.y), 1.0);
       float flow = uFlow * 0.55 * smoothstep(0.05, 1.2, length(radial));
       if (flow > trail) { vTrailAxis = vec2(radial.x, -radial.y) / max(0.00001, length(radial)); trail = flow; }
+    }
+    if (uSpiral > 0.001 && clip.w > 0.0) {
+      // Chapter wave: the sky swirls around the BH and streaks spiral into it.
+      float aspect = uViewport.x / max(1.0, uViewport.y);
+      vec2 rel = (clip.xy / clip.w - uSpiralCenter) * vec2(aspect, 1.0);
+      float r = length(rel);
+      float swirl = uSpiral * (0.22 + 0.1 * aSeed) / (0.3 + r);
+      mat2 turn = mat2(cos(swirl), sin(swirl), -sin(swirl), cos(swirl));
+      vec2 bent = turn * rel * (1.0 - 0.06 * uSpiral / (0.5 + r));
+      clip.xy = (uSpiralCenter + bent / vec2(aspect, 1.0)) * clip.w;
+      vec2 axis = vec2(-bent.y, bent.x) * 0.85 - bent * 0.5;
+      axis.y *= -1.0;
+      float spiral = uSpiral * (0.55 + 0.45 * aSeed) * smoothstep(0.02, 0.35, r);
+      if (spiral > trail) { vTrailAxis = axis / max(0.00001, length(axis)); trail = spiral; }
     }
     vStretch = 1.0 + trail * (8.0 + aSeed * 6.0);
     // About's rack focus opens each star into a bokeh disc, nearer stars a little wider.
@@ -134,6 +151,8 @@ export function StarField({ count = QUALITY.high, frozen = false, story = false,
     uSpacetime: { value: new Vector3() },
     uFlow: { value: 0 },
     uDefocus: { value: 0 },
+    uSpiral: { value: 0 },
+    uSpiralCenter: { value: new Vector2() },
     uPortalCenter: { value: new Vector2() },
     uViewport: { value: new Vector2(1, 1) },
     uColorA: { value: new Color('#FFFFFF') },
@@ -163,6 +182,8 @@ export function StarField({ count = QUALITY.high, frozen = false, story = false,
     values.uViewport.value.set(state.size.width, state.size.height);
     values.uFlow.value = story && !reduced ? cameraMotion.speed : 0;
     values.uDefocus.value = story && !reduced ? cameraMotion.defocus : 0;
+    values.uSpiral.value = story && !reduced ? 0.6 * waveFrame.strength : 0;
+    values.uSpiralCenter.value.set(waveFrame.center.x * 2 - 1, waveFrame.center.y * 2 - 1);
     const anchor = scroll.storyAnchor;
     const center = phase.current.center;
     const x = anchor ? (anchor.left + anchor.width * 0.5) / state.size.width : 0.5;

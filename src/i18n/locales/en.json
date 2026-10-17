@@ -242,6 +242,10 @@
     "hero": "Home",
     "missionProgress": "Mission progress"
   },
+  "starMap": {
+    "label": "Voyage index",
+    "jump": "Chapter {{index}}: fly to {{name}}"
+  },
   "footer": {
     "label": "Site footer",
     "copyright": "© 2026 Tran Vu Anh Duy — Built among the stars.",

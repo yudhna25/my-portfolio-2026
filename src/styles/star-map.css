@@ -1,0 +1,21 @@
+/* The current chapter's name in the Star Map index flashes on arrival, then steps aside. */
+@keyframes star-map-flash {
+  0% { opacity: 0; translate: -0.25rem 0; }
+  12%, 70% { opacity: 1; translate: 0 0; }
+  100% { opacity: 0; translate: -0.25rem 0; }
+}
+
+.star-map-label[data-flash] {
+  animation: star-map-flash 2.8s ease forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star-map-label[data-flash] { animation: none; }
+}
+
+.group:hover .star-map-label[data-flash],
+.group:focus-visible .star-map-label[data-flash] {
+  animation: none;
+  opacity: 1;
+  translate: 0 0;
+}
