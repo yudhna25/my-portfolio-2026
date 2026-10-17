@@ -1,0 +1,79 @@
+{
+  "records": [
+    {
+      "width": 390,
+      "height": 900,
+      "dpr": 1,
+      "buffer": [
+        390,
+        900
+      ],
+      "target": [
+        390,
+        900
+      ],
+      "frames": 67,
+      "passes": 67,
+      "finite": true,
+      "mono": true,
+      "halfMaximum": 17419,
+      "distinctRadianceLevels": 14708,
+      "canvas": 1,
+      "memory": {
+        "geometries": 6,
+        "textures": 1
+      },
+      "gl": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "dpr": 1,
+      "buffer": [
+        1440,
+        900
+      ],
+      "target": [
+        1440,
+        900
+      ],
+      "frames": 17,
+      "passes": 17,
+      "finite": true,
+      "mono": true,
+      "halfMaximum": 17538,
+      "distinctRadianceLevels": 16956,
+      "canvas": 1,
+      "memory": {
+        "geometries": 6,
+        "textures": 23
+      },
+      "gl": 0
+    },
+    {
+      "width": 1920,
+      "height": 900,
+      "dpr": 1.75,
+      "buffer": [
+        3360,
+        1575
+      ],
+      "target": [
+        3360,
+        1575
+      ],
+      "frames": 6,
+      "passes": 6,
+      "finite": true,
+      "mono": true,
+      "halfMaximum": 17461,
+      "distinctRadianceLevels": 17302,
+      "canvas": 1,
+      "memory": {
+        "geometries": 6,
+        "textures": 23
+      },
+      "gl": 0
+    }
+  ]
+}

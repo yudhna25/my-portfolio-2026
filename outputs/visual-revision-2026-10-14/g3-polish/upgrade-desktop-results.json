@@ -1,0 +1,254 @@
+{
+  "checks": 25,
+  "records": [
+    {
+      "width": 1440,
+      "chapter": "hero",
+      "before": {
+        "frame": 13,
+        "time": 4.807699999928472,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      },
+      "after": {
+        "frame": 50,
+        "time": 5.423600000023838,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "chapter": "portal",
+      "before": {
+        "frame": 74,
+        "time": 6.350499999999995,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      },
+      "after": {
+        "frame": 86,
+        "time": 6.936300000071521,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "chapter": "about",
+      "before": {
+        "frame": 147,
+        "time": 8.468699999928472,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      },
+      "after": {
+        "frame": 164,
+        "time": 8.968299999833107,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "chapter": "skills",
+      "before": {
+        "frame": 198,
+        "time": 10.114899999737744,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      },
+      "after": {
+        "frame": 212,
+        "time": 10.667399999618539,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "chapter": "education",
+      "before": {
+        "frame": 262,
+        "time": 11.882799999594697,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      },
+      "after": {
+        "frame": 296,
+        "time": 12.48009999966622,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "chapter": "experience",
+      "before": {
+        "frame": 345,
+        "time": 13.649799999594691,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      },
+      "after": {
+        "frame": 372,
+        "time": 14.251599999547013,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "chapter": "works",
+      "before": {
+        "frame": 431,
+        "time": 15.407599999547012,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      },
+      "after": {
+        "frame": 464,
+        "time": 16.013399999499324,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "chapter": "contact",
+      "before": {
+        "frame": 488,
+        "time": 16.88489999949933,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      },
+      "after": {
+        "frame": 495,
+        "time": 17.234899999499333,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "scattered": {
+        "visible": true,
+        "count": 8207,
+        "morph": 0.37615641155501695,
+        "time": 4.03849999952316,
+        "pressed": "false",
+        "img": 0,
+        "filter": "none",
+        "starsOpacity": 1,
+        "canvas": 1,
+        "overflow": 0
+      },
+      "hovered": {
+        "visible": true,
+        "count": 8207,
+        "morph": 1,
+        "time": 5.168099999547,
+        "pressed": "false",
+        "img": 1,
+        "filter": "none",
+        "starsOpacity": 0,
+        "canvas": 1,
+        "overflow": 0
+      },
+      "assembled": {
+        "visible": true,
+        "count": 8207,
+        "morph": 1,
+        "time": 9.45189999973775,
+        "pressed": "false",
+        "img": 1,
+        "filter": "none",
+        "starsOpacity": 0,
+        "canvas": 1,
+        "overflow": 0
+      }
+    },
+    {
+      "width": 1440,
+      "restoredPortrait": {
+        "visible": false,
+        "count": 8207,
+        "morph": 1,
+        "time": 10.003799999713914,
+        "pressed": "false",
+        "img": 1,
+        "filter": "none",
+        "starsOpacity": 0,
+        "canvas": 1,
+        "overflow": 0
+      }
+    }
+  ],
+  "errors": [],
+  "status": "fail",
+  "failure": "AssertionError [ERR_ASSERTION]: Live motion restores assembled color photo {\"visible\":false,\"count\":8207,\"morph\":1,\"time\":10.003799999713914,\"pressed\":\"false\",\"img\":1,\"filter\":\"none\",\"starsOpacity\":0,\"canvas\":1,\"overflow\":0}\n    at check (file:///C:/Users/duytva/my-portfolio-2026/outputs/visual-revision-2026-10-14/g3-polish/qa/verify-polish-desktop.mjs:5:45)\n    at file:///C:/Users/duytva/my-portfolio-2026/outputs/visual-revision-2026-10-14/g3-polish/qa/verify-polish-desktop.mjs:49:143"
+}

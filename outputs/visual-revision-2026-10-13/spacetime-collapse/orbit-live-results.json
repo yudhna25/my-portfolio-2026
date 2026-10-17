@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "before": {
+    "phase": 0.04779627949181946,
+    "origin": 0,
+    "velocity": 0.07439232305981211,
+    "latched": false,
+    "visited": true,
+    "captures": 0,
+    "resumePending": false
+  },
+  "after": {
+    "phase": 1.547679999998211,
+    "origin": 0,
+    "velocity": 0.07499999999999994,
+    "latched": false,
+    "visited": true,
+    "captures": 0,
+    "resumePending": false
+  }
+}

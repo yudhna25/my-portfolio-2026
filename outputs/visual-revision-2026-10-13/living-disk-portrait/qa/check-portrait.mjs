@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {buildPortraitGeometry} from '../../../../src/3d/utils/portrait.js';
+const pixels=new Uint8ClampedArray([255,255,255,255, 0,0,0,0, 255,0,0,255, 0,0,0,255]);
+const a=buildPortraitGeometry(pixels,2,2),b=buildPortraitGeometry(pixels,2,2);
+assert.equal(a.attributes.position.count,3);
+assert.deepEqual(a.attributes.position.array,b.attributes.position.array);
+assert.deepEqual(a.attributes.aSeed.array,b.attributes.aSeed.array);
+assert(a.attributes.position.array.every(x=>Number.isFinite(x)&&Math.abs(x)<=.5));
+assert(a.attributes.aSeed.array.every(x=>x>=0&&x<1));
+assert(Math.abs(a.attributes.aTone.array[1]-.2126)<1e-6);
+assert.equal(a.attributes.aTone.array[2],0);
+assert.equal(a.attributes.aTone.array[0],1);
+const empty=buildPortraitGeometry(new Uint8ClampedArray(16),2,2);assert.equal(empty.attributes.position.count,0);
+const vi=JSON.parse(fs.readFileSync('src/i18n/locales/vi.json')),en=JSON.parse(fs.readFileSync('src/i18n/locales/en.json'));
+assert.deepEqual(Object.keys(vi.about),Object.keys(en.about));
+a.dispose();b.dispose();empty.dispose();console.log('Portrait sampling: 10 assertions pass');

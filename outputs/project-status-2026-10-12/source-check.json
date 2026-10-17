@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-12",
+  "referencedEvidence": "outputs/visual-revision-2026-10-09/g1-g2-implementation/build-source.json",
+  "files": 118,
+  "lineEndingOnly": [
+    "src/3d/data/symbolTargets.json",
+    "src/3d/data/worksConstellations.json",
+    "src/components/effects/portalTrails.js",
+    "src/components/ui/ConstellationCredits.jsx",
+    "src/styles/opening.css",
+    "src/styles/portal-trails.css"
+  ],
+  "unresolvedHashDifferences": [
+    "src/3d-lab.jsx",
+    "src/3d/GalaxyScene.jsx",
+    "src/3d/components/SkillsSymbols.jsx",
+    "src/3d/components/StoryMeteor.jsx",
+    "src/3d/components/SymbolStars.jsx",
+    "src/3d/components/WorksConstellations.jsx",
+    "src/3d/utils/portal.js",
+    "src/3d/utils/storyMeteor.js",
+    "src/3d/utils/symbolMorph.js",
+    "src/3d/utils/worksOrbit.js",
+    "src/App.jsx",
+    "src/components/Cursor.jsx",
+    "src/components/Education.jsx",
+    "src/components/Preloader.jsx",
+    "src/components/Work.jsx",
+    "src/components/effects/PortalHeading.jsx",
+    "src/components/layout/Nav.jsx",
+    "src/components/sections/Experience.jsx",
+    "src/data/education.js",
+    "src/styles/hero.css"
+  ],
+  "note": "Hash mismatch alone does not establish a semantic source change. Current Browser/FPS were not re-measured."
+}

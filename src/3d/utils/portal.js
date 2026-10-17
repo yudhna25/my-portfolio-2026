@@ -1,4 +1,4 @@
-import { clampStoryProgress } from './cameraPath.js';
+import { clampStoryProgress, portalFall } from './cameraPath.js';
 
 export const portalSmooth = (a, b, value) => {
   const t = clampStoryProgress((value - a) / (b - a));
@@ -12,13 +12,13 @@ export function portalProgress(chapter, progress, frozen = false) {
 export function portalState(progress, out = {}) {
   const p = clampStoryProgress(progress);
   out.pull = p;
-  out.intake = portalSmooth(0, 0.44, p);
+  out.intake = portalFall(p);
   out.eject = portalSmooth(0.50, 0.94, p);
   out.center = portalSmooth(0.04, 0.35, p);
   // Rebase the exterior observer only while every composed layer is black.
   out.mini = p < 0.47 ? 1 : 0;
   out.visibility = p < 0.47 ? 1 - portalSmooth(0.425, 0.44, p) : portalSmooth(0.50, 0.56, p);
-  out.growth = Math.exp(Math.log(120) * out.intake * out.intake);
+  out.growth = Math.exp(Math.log(120) * out.intake);
   out.textOpacity = 1 - portalSmooth(0.34, 0.44, p);
   out.backdrop = p < 0.44 || p > 0.50;
   out.aboutOpacity = portalSmooth(0.54, 0.66, p);
@@ -29,9 +29,23 @@ export function portalState(progress, out = {}) {
   return out;
 }
 
+// Seeded offsets sample the scroll clock, so disintegration can be reversed exactly.
+export function portalParticle(p, x, y, seed, cx, cy, out = {}) {
+  const fall = portalFall(p);
+  const t = Math.min(1, fall + seed * 0.16 * portalSmooth(0.01, 0.22, p) * (1 - fall));
+  const dx = x - cx, dy = y - cy;
+  const r = Math.hypot(dx, dy) * Math.pow(1 - t, 0.72);
+  const angle = Math.atan2(dy, dx) + (5.2 + seed * 2.4) * t * t;
+  const scatter = Math.sin(seed * 113 + t * 13) * Math.sin(t * Math.PI) * (4 + seed * 14);
+  out.x = cx + Math.cos(angle) * r + Math.cos(angle + 1.57) * scatter;
+  out.y = cy + Math.sin(angle) * r * (1 - 0.18 * t) + Math.sin(angle + 1.57) * scatter;
+  out.t = t;
+  return out;
+}
+
 // Layout is cached without transforms; motion never changes the measured O slot.
 export function portalIntake(p, layout, anchor, width, height, index = 0, out = {}) {
-  let t = portalSmooth(Math.min(index, 50) * 0.0005, 0.435, p);
+  let t = funnelSmooth(Math.min(index, 50) * 0.0005, 0.435, p);
   // Stagger arrival along the same funnel instead of stacking opaque glyphs at its join.
   t += (index % 16) * 0.015 * funnelSmooth(0.08, 0.38, t) * (1 - t);
   return portalIntakeSample(p, t, layout, anchor, width, height, index, out);

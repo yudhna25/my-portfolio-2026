@@ -1,4 +1,5 @@
-import { portalIntake, portalIntakeSample, portalSmooth, portalState } from '@/3d/utils/portal';
+import { portalIntake, portalParticle, portalSmooth, portalState } from '@/3d/utils/portal';
+import { samplePortalParticles } from './portalParticles';
 import '@/styles/portal-trails.css';
 
 const SVG = 'http://www.w3.org/2000/svg';
@@ -12,6 +13,8 @@ function visualClone(node, width, height) {
     clone.setAttribute('viewBox', `${box.x} ${box.y} ${box.width} ${box.height}`);
     const glyph = node.cloneNode(true);
     glyph.removeAttribute('transform');
+    const base = node.querySelector('.hero-year-base');
+    if (base) glyph.querySelector('.hero-year-base').style.stroke = getComputedStyle(base).stroke;
     const contour = node.ownerSVGElement.parentElement.querySelector(`[data-year-contour-glyph="${node.dataset.portalYearGlyph}"]`);
     if (contour) glyph.append(...[...contour.childNodes].map(child => child.cloneNode(true)));
     clone.append(glyph);
@@ -60,24 +63,6 @@ function textFragments(node) {
   return fragments;
 }
 
-function ribbonPath(item, p, start, end, anchor, width, height, thickness, branch) {
-  if (end <= start) return '';
-  const points = item.points;
-  for (let sample = 0; sample < 24; sample++) {
-    const t = start + (end - start) * sample / 23;
-    const pose = portalIntakeSample(p, t, item.layout, anchor, width, height, 0, item.sample);
-    const taper = Math.pow(1 - t, 0.35) * (branch ? 1 - portalSmooth(0.34, 0.5, t) : 1);
-    const half = Math.min(thickness, pose.radius * 0.12) * taper;
-    const x = item.layout.x + pose.x, y = item.layout.y + pose.y;
-    const nx = -Math.sin(pose.tangent) * half, ny = Math.cos(pose.tangent) * half;
-    points[sample * 2] = x + nx; points[sample * 2 + 1] = y + ny;
-    points[94 - sample * 2] = x - nx; points[95 - sample * 2] = y - ny;
-  }
-  let d = '';
-  for (let point = 0; point < 48; point++) d += `${point ? 'L' : 'M'}${points[point * 2].toFixed(2)},${points[point * 2 + 1].toFixed(2)}`;
-  return `${d}Z`;
-}
-
 // Snapshots have no controls or IDs. This is one decoration pool, never a new renderer/progress owner.
 export function createPortalTrails(definitions, className = '') {
   const layer = document.createElement('div');
@@ -88,24 +73,22 @@ export function createPortalTrails(definitions, className = '') {
   ribbon.setAttribute('aria-hidden', 'true'); ribbon.setAttribute('focusable', 'false');
   layer.append(ribbon);
   document.body.append(layer);
-  const count = window.innerWidth < 768 ? 6 : 8;
+  const count = 1;
+  const raster = document.createElement('canvas');
   const sources = definitions.flatMap(definition => definition.words
     ? textFragments(definition.node).map((fragment, wordIndex) => ({ ...fragment, wordIndex, source: definition.node }))
     : [{ ...definition, source: definition.node }]);
   const originals = definitions.map(({ node }) => ({ node, opacity: node.style.opacity }));
   const items = sources.map(source => {
     const path = document.createElementNS(SVG, 'path');
-    path.classList.add('portal-trail-ribbon');
+    path.classList.add('portal-trail-particles');
     ribbon.append(path);
     const images = Array.from({ length: count }, () => {
       const image = document.createElement('div');
       image.className = 'portal-trail-copy'; layer.append(image); return image;
     });
-    return { ...source, images, path, layout: {}, pose: {}, sample: {}, points: new Float64Array(96), t: 0 };
+    return { ...source, images, path, layout: {}, pose: {}, sample: {}, previous: {}, particles: [] };
   });
-  // Only Hero paints the joined funnel; controls contribute their individual entry branches.
-  const common = className ? null : document.createElementNS(SVG, 'path');
-  if (common) { common.classList.add('portal-trail-ribbon', 'portal-trail-common'); ribbon.prepend(common); }
   layer.dataset.portalTrails = '';
   layer.dataset.sourceCount = String(items.length);
   layer.dataset.copyCount = String(items.length * count);
@@ -120,6 +103,7 @@ export function createPortalTrails(definitions, className = '') {
       const rect = item.range ? item.range.getBoundingClientRect() : item.node.getBoundingClientRect();
       Object.assign(item.layout, { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2, width: rect.width, height: rect.height });
       item.available = rect.width > 0 && rect.height > 0;
+      item.particles = item.available ? samplePortalParticles(item.node, item.text ?? item.node.textContent, rect, raster, window.innerWidth < 768 ? 80 : 150) : [];
       let visual;
       if (item.text) {
         visual = document.createElement('span'); visual.textContent = item.text;
@@ -134,6 +118,7 @@ export function createPortalTrails(definitions, className = '') {
         image.style.left = `${item.layout.x}px`; image.style.top = `${item.layout.y}px`;
       });
     });
+    layer.dataset.particleCount = String(items.reduce((total, item) => total + item.particles.length, 0));
   };
   const draw = (p, anchor, enabled = true) => {
     const next = enabled && p > 0 && p < 0.435 && !document.hidden;
@@ -155,32 +140,27 @@ export function createPortalTrails(definitions, className = '') {
     // Match BlackHole's projected shadow radius; decorations disappear inside its horizon.
     const core = (anchor?.height || 40) * 0.48 * phase.growth;
     layer.style.maskImage = `radial-gradient(circle at ${cx}px ${cy}px, transparent ${core * 0.98}px, black ${core + 2}px)`;
-    const stretch = portalSmooth(0.005, 0.12, p);
+    const dissolve = portalSmooth(0.015, 0.09, p);
     const fade = 1 - portalSmooth(0.34, 0.435, p);
-    let first = null;
     items.forEach((item, index) => {
       if (!item.available) return;
       portalIntake(p, item.layout, anchor, width, height, index, item.pose);
-      item.t = item.pose.t;
-      if (!first) first = item;
-      item.path.setAttribute('d', ribbonPath(item, p, item.t, Math.min(0.5, item.t + (1 - item.t) * stretch),
-        anchor, width, height, Math.min(12, Math.max(1.5, item.layout.height * 0.14)), true));
-      item.path.style.opacity = String(0.1 * stretch * fade);
-      item.images.forEach((image, copy) => {
-        const u = copy / (count - 1);
-        portalIntakeSample(p, item.t + (1 - item.t) * stretch * u * 0.95,
-          item.layout, anchor, width, height, index, item.sample);
-        const pose = item.sample;
+      let dots = '';
+      for (const particle of item.particles) {
+        const pose = portalParticle(p, particle.x, particle.y, particle.seed, cx, cy, item.sample);
+        const tail = portalParticle(Math.max(0, p - 0.002 - 0.006 * pose.t), particle.x, particle.y, particle.seed, cx, cy, item.previous);
+        const dx = tail.x - pose.x, dy = tail.y - pose.y;
+        const length = Math.hypot(dx, dy), ratio = Math.min(1, 16 / Math.max(0.001, length));
+        dots += `M${pose.x.toFixed(2)},${pose.y.toFixed(2)}l${(dx * ratio + 0.01).toFixed(2)},${(dy * ratio).toFixed(2)}`;
+      }
+      item.path.setAttribute('d', dots);
+      item.path.style.opacity = String(dissolve * fade * 0.8);
+      item.images.forEach(image => {
+        const pose = item.pose;
         image.style.transform = `translate(-50%, -50%) translate(${pose.x}px, ${pose.y}px) rotate(${pose.rotation}deg) scale(${pose.scaleX}, ${pose.scaleY})`;
-        image.style.opacity = String(copy === 0 ? pose.opacity
-          : fade * 0.12 * stretch * Math.pow(1 - u, 0.85) * (1 - portalSmooth(0.45, 0.85, pose.t)));
+        image.style.opacity = String(1 - dissolve);
       });
     });
-    if (common && first) {
-      common.setAttribute('d', ribbonPath(first, p, Math.max(0.38, first.t), 0.995,
-        anchor, width, height, width < 768 ? 7 : 10, false));
-      common.style.opacity = String(0.18 * stretch * fade);
-    }
   };
   measure();
   return { measure, draw, dispose: () => {

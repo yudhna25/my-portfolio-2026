@@ -10,7 +10,7 @@ function trackMouse(event) {
   mouse.y = (event.clientY / window.innerHeight) * 2 - 1;
 }
 
-export function CameraRig({ frozen = false, story = false }) {
+export function CameraRig({ frozen = false, story = false, opening }) {
   const camera = useThree((state) => state.camera);
   const size = useThree((state) => state.size);
   const cameraRef = useRef(null);
@@ -43,6 +43,12 @@ export function CameraRig({ frozen = false, story = false }) {
     if (story) {
       const state = useScrollStore.getState();
       const pose = storyCameraPath(state.storyChapter, state.chapterProgress, pathRef.current, frozen, size.width / size.height);
+      if (!frozen && opening?.current.active) {
+        const approach = 1 - opening.current.move;
+        pose.z -= 9 * approach;
+        pose.y += 1.5 * approach;
+        pose.lookX += 1.2 * approach;
+      }
       activeCamera.position.set(pose.x, pose.y, pose.z);
       activeCamera.lookAt(pose.lookX, pose.lookY, pose.lookZ);
       return;

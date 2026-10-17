@@ -1,0 +1,90 @@
+{
+  "status": "pass",
+  "method": "Contiguous near-white row through the actual projected head in CSS-viewport screenshots; halo field is reported separately as a uniform, not a measured glow radius.",
+  "records": [
+    {
+      "width": 390,
+      "progress": 0.04,
+      "whiteCorePixels": 30,
+      "haloUniformCssPx": 51,
+      "sparkPool": 12
+    },
+    {
+      "width": 390,
+      "progress": 0.15,
+      "whiteCorePixels": 30,
+      "haloUniformCssPx": 51,
+      "sparkPool": 12
+    },
+    {
+      "width": 390,
+      "progress": 0.32,
+      "whiteCorePixels": 30,
+      "haloUniformCssPx": 51,
+      "sparkPool": 12
+    },
+    {
+      "width": 390,
+      "progress": 0.5,
+      "whiteCorePixels": 30,
+      "haloUniformCssPx": 51,
+      "sparkPool": 12
+    },
+    {
+      "width": 390,
+      "progress": 0.7,
+      "whiteCorePixels": 30,
+      "haloUniformCssPx": 51,
+      "sparkPool": 12
+    },
+    {
+      "width": 390,
+      "progress": 0.92,
+      "whiteCorePixels": 31,
+      "haloUniformCssPx": 51,
+      "sparkPool": 12
+    },
+    {
+      "width": 1440,
+      "progress": 0.04,
+      "whiteCorePixels": 50,
+      "haloUniformCssPx": 84,
+      "sparkPool": 24
+    },
+    {
+      "width": 1440,
+      "progress": 0.15,
+      "whiteCorePixels": 51,
+      "haloUniformCssPx": 84,
+      "sparkPool": 24
+    },
+    {
+      "width": 1440,
+      "progress": 0.32,
+      "whiteCorePixels": 50,
+      "haloUniformCssPx": 84,
+      "sparkPool": 24
+    },
+    {
+      "width": 1440,
+      "progress": 0.5,
+      "whiteCorePixels": 50,
+      "haloUniformCssPx": 84,
+      "sparkPool": 24
+    },
+    {
+      "width": 1440,
+      "progress": 0.7,
+      "whiteCorePixels": 50,
+      "haloUniformCssPx": 84,
+      "sparkPool": 24
+    },
+    {
+      "width": 1440,
+      "progress": 0.92,
+      "whiteCorePixels": 51,
+      "haloUniformCssPx": 84,
+      "sparkPool": 24
+    }
+  ]
+}

@@ -65,7 +65,7 @@ export default function Contact() {
       aria-labelledby="transmission-heading"
       className="relative px-6 py-24 text-(--text-primary) sm:px-8 lg:px-12 lg:py-36"
     >
-      <div data-contact-content className="invisible mx-auto max-w-7xl bg-(--bg-void) border border-(--bg-elevated) hover:border-white/30 transition-colors p-5 sm:p-8 lg:p-12">
+      <div data-contact-content className="invisible mx-auto max-w-7xl bg-[linear-gradient(110deg,rgba(5,5,5,0.94),rgba(5,5,5,0.70)_48%,rgba(5,5,5,0.18))] border border-(--bg-elevated) hover:border-white/30 transition-colors p-5 sm:p-8 lg:p-12">
         <p data-contact-copy lang="en" className="mb-10 flex items-center gap-4 font-mono text-xs tracking-[0.2em] text-(--text-primary)">
           <span aria-hidden="true" className="h-px w-10 bg-white/30" />
           {t('contact.sectionLabel')}

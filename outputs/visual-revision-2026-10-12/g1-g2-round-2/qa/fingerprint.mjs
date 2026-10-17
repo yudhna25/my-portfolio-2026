@@ -1,0 +1,1 @@
+import {inventory,hashes,save} from './common.mjs';const source=hashes([...inventory('src'),...inventory('public'),'package.json','package-lock.json','vite.config.js','index.html','3d-lab.html']);save('build-source.json',{source,dist:hashes(inventory('dist')),built:new Date().toISOString()});

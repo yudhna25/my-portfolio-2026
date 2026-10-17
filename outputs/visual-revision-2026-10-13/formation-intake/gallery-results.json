@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "images": 14,
+  "records": [
+    {
+      "duration": 18.2,
+      "time": 6,
+      "width": 1440,
+      "height": 900,
+      "error": null
+    },
+    {
+      "duration": 10.033,
+      "time": 5.0165,
+      "width": 1440,
+      "height": 900,
+      "error": null
+    }
+  ],
+  "errors": []
+}

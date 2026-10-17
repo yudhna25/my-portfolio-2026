@@ -10,6 +10,7 @@ import { ShootingStars } from '@/3d/components/ShootingStars';
 import { Nebula } from '@/3d/components/Nebula';
 import { BlackHoleSystem } from '@/3d/components/BlackHoleSystem';
 import { CameraRig } from '@/3d/components/CameraRig';
+import { FinaleParticles } from '@/3d/components/FinaleParticles';
 import { QUALITY } from '@/3d/quality';
 import { INITIAL_CAMERA_POSITION } from '@/3d/utils/cameraPath';
 import { portalProgress, portalState } from '@/3d/utils/portal';
@@ -45,7 +46,7 @@ function SceneReady() {
   return null;
 }
 
-export function GalaxyScene({ children, count, quality: chosenQuality, rayQuality, enableBloom = true, story = false, freezeAmbient = story }) {
+export function GalaxyScene({ children, count, quality: chosenQuality, rayQuality, enableBloom = true, story = false, freezeAmbient = story, opening }) {
   const host = useRef(null);
   const [contextLost, setContextLost] = useState(false);
   const hidden = useSyncExternalStore(subscribeToVisibility, isHidden, () => false);
@@ -79,13 +80,14 @@ export function GalaxyScene({ children, count, quality: chosenQuality, rayQualit
           <color attach="background" args={['#050505']} />
           <Suspense fallback={null}>
             <Selection>
-              <CameraRig frozen={frozen} story={story} />
+              <CameraRig opening={opening} frozen={frozen} story={story} />
               <PortalBackdrop story={story} reduced={frozen}>
-                <StarField count={count ?? QUALITY[quality]} frozen={ambientFrozen} story={story} />
+                <StarField reduced={frozen} opening={opening} count={count ?? QUALITY[quality]} frozen={ambientFrozen} story={story} />
                 <Nebula position={[0, 0, -240]} scale={[80, 40, 1]} colorA="#202020" colorB="#4A4A4A" frozen={ambientFrozen} quality={quality} story={story} />
                 <Nebula position={[-16, 5, -270]} scale={[50, 30, 1]} colorA="#262626" colorB="#5A5A5A" frozen={ambientFrozen} quality={quality} story={story} />
               </PortalBackdrop>
-              <BlackHoleSystem frozen={ambientFrozen} reduced={frozen} story={story} quality={quality} enableBloom={enableBloom} />
+              <BlackHoleSystem frozen={ambientFrozen} reduced={frozen} story={story} quality={quality} enableBloom={enableBloom} opening={opening} />
+              {story && <FinaleParticles quality={quality} reduced={frozen} />}
               <SceneReady />
               {!hidden && !ambientFrozen && <ShootingStars frozen={frozen} story={story} />}
               {typeof children === 'function' ? children(quality) : children}

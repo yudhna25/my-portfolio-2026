@@ -1,10 +1,13 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { AdditiveBlending, Color, Vector2 } from 'three';
+import { AdditiveBlending, Color, Vector2, Vector3 } from 'three';
 import { QUALITY } from '@/3d/quality';
 import { buildStarGeometry } from '@/3d/utils/buildStarGeometry';
 import { useScrollStore } from '@/stores/useScrollStore';
 import { portalProgress, portalState } from '@/3d/utils/portal';
+import { finaleState } from '@/3d/utils/finale';
+import { BLACK_HOLE_CENTER } from '@/3d/utils/cameraPath';
+import { SPACETIME_GLSL } from '@/3d/shaders/formation';
 
 const STAR_VERT = /* glsl */ `
   attribute float aSize;
@@ -16,8 +19,12 @@ const STAR_VERT = /* glsl */ `
   uniform float uIntake;
   uniform float uEject;
   uniform float uEjecting;
+  uniform float uOpeningZoom;
   uniform vec2 uPortalCenter;
   uniform vec2 uViewport;
+  uniform vec2 uWarpCenter;
+  uniform vec3 uSpacetime;
+  ${SPACETIME_GLSL}
   varying float vAlpha;
   varying float vSeed;
   varying vec2 vTrailAxis;
@@ -26,6 +33,7 @@ const STAR_VERT = /* glsl */ `
   void main() {
     vec4 mv = modelViewMatrix * vec4(position, 1.0);
     vec4 clip = projectionMatrix * mv;
+    clip.xy *= uOpeningZoom;
     float trail = 0.0;
     float visibility = 1.0;
     vTrailAxis = vec2(1.0, 0.0);
@@ -34,9 +42,9 @@ const STAR_VERT = /* glsl */ `
       vec2 radial = (clip.xy / clip.w - uPortalCenter) * vec2(aspect, 1.0);
       float radius = length(radial);
       float pull = pow(uIntake, 1.25);
-      float release = smoothstep(aSeed * 0.15, 1.0, uEject);
+      float release = smoothstep(aSeed * 0.28, 1.0, uEject);
       float angle = uEjecting > 0.5
-        ? (1.0 - release) * (0.55 + aSeed * 0.6) / (1.0 + radius)
+        ? (1.0 - release) * (1.15 + aSeed * 0.8) / (0.65 + radius)
         : pull * (0.65 + aSeed * 0.75) / (0.45 + radius);
       mat2 turn = mat2(cos(angle), sin(angle), -sin(angle), cos(angle));
       vec2 bent = turn * radial;
@@ -44,8 +52,19 @@ const STAR_VERT = /* glsl */ `
       clip.xy = (uPortalCenter + bent * scale / vec2(aspect, 1.0)) * clip.w;
       vec2 axis = vec2(bent.x, -bent.y);
       vTrailAxis = axis / max(0.00001, length(axis));
-      trail = uEjecting > 0.5 ? sin(release * 3.14159265) * 0.7 : sin(pull * 3.14159265);
+      trail = uEjecting > 0.5 ? sin(release * 3.14159265) * (0.65 + aSeed * 0.35) : sin(pull * 3.14159265);
       visibility = uEjecting > 0.5 ? smoothstep(0.0, 0.16, release) : 1.0 - smoothstep(0.78, 1.0, pull);
+    }
+    if (uSpacetime.z > 0.5 && clip.w > 0.0) {
+      float aspect = uViewport.x / max(1.0, uViewport.y);
+      vec2 point = (clip.xy / clip.w - uWarpCenter) * vec2(aspect, 1.0) * 0.5;
+      float stretch;
+      vec2 warped = spacetimeWarp(point, uSpacetime.x, uSpacetime.y, stretch);
+      clip.xy = (uWarpCenter + warped * 2.0 / vec2(aspect, 1.0)) * clip.w;
+      vec2 tangent = uSpacetime.x < 0.16 ? warped : vec2(-warped.y, warped.x);
+      tangent.y *= -1.0;
+      vTrailAxis = tangent / max(0.00001, length(tangent));
+      trail = max(trail, stretch * 1.45);
     }
     vStretch = 1.0 + trail * (8.0 + aSeed * 6.0);
     // Apparent size of distant stars is independent of the camera's translation.
@@ -77,10 +96,12 @@ const STAR_FRAG = /* glsl */ `
   }
 `;
 
-export function StarField({ count = QUALITY.high, frozen = false, story = false }) {
+export function StarField({ count = QUALITY.high, frozen = false, story = false, opening, reduced = false }) {
   const stars = useRef(null);
   const material = useRef(null);
   const phase = useRef({});
+  const finale = useRef({});
+  const projected = useMemo(() => new Vector3(), []);
   const geometry = useMemo(() => buildStarGeometry(count), [count]);
   const uniforms = useMemo(() => ({
     uTime: { value: 0 },
@@ -90,6 +111,9 @@ export function StarField({ count = QUALITY.high, frozen = false, story = false 
     uIntake: { value: 0 },
     uEject: { value: 0 },
     uEjecting: { value: 0 },
+    uOpeningZoom: { value: 1 },
+    uWarpCenter: { value: new Vector2() },
+    uSpacetime: { value: new Vector3() },
     uPortalCenter: { value: new Vector2() },
     uViewport: { value: new Vector2(1, 1) },
     uColorA: { value: new Color('#FFFFFF') },
@@ -110,9 +134,10 @@ export function StarField({ count = QUALITY.high, frozen = false, story = false 
     const p = portalProgress(scroll.storyChapter, scroll.chapterProgress, frozen);
     portalState(p, phase.current);
     const values = material.current.uniforms;
+    values.uOpeningZoom.value = !frozen && opening?.current.active ? 1 + 0.65 * (1 - opening.current.move) : 1;
     values.uPortal.value = portal ? 1 : 0;
     values.uIntake.value = phase.current.intake;
-    const eject = Math.min(1, Math.max(0, (p - 0.50) / 0.20));
+    const eject = Math.min(1, Math.max(0, (p - 0.50) / 0.32));
     values.uEject.value = eject * eject * (3 - 2 * eject);
     values.uEjecting.value = p >= 0.50 ? 1 : 0;
     values.uViewport.value.set(state.size.width, state.size.height);
@@ -122,6 +147,12 @@ export function StarField({ count = QUALITY.high, frozen = false, story = false 
     const y = anchor ? 1 - (anchor.top + anchor.height * 0.5) / state.size.height : 0.55;
     values.uPortalCenter.value.set((x + (0.5 - x) * center) * 2 - 1, (y + (0.55 - y) * center) * 2 - 1);
     const ending = story && (scroll.storyChapter === 'finale' || scroll.storyChapter === 'contact');
+    const intro = !reduced && opening?.current.active ? opening.current : null;
+    const warpedFinale = !reduced && story && scroll.storyChapter === 'finale';
+    const authored = finaleState(scroll.chapterProgress, finale.current);
+    values.uSpacetime.value.set(intro ? intro.p : authored.formation, intro ? intro.shadow / state.size.height : 0.24, intro || warpedFinale ? 1 : 0);
+    if (intro) values.uWarpCenter.value.set(intro.x / state.size.width * 2 - 1, 1 - intro.y / state.size.height * 2);
+    else { projected.set(...BLACK_HOLE_CENTER).project(state.camera); values.uWarpCenter.value.set(projected.x, projected.y); }
     const progress = frozen ? 0 : scroll.scrollProgress;
     if (frozen) material.current.uniforms.uApproach.value = 0;
     else if (story) material.current.uniforms.uApproach.value = progress;

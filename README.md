@@ -1,16 +1,52 @@
-# React + Vite
+# Stellar Odyssey
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cinematic, galaxy-themed personal portfolio. Built as a React single-page app with a persistent 3D scene, scroll-driven motion and full Vietnamese / English content.
 
-Currently, two official plugins are available:
+## Tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **UI:** React 19 + Vite 7, Tailwind CSS 4
+- **3D:** React Three Fiber, drei, postprocessing and custom GLSL shaders, with quality tiers in `src/3d/quality.js`
+- **Motion:** GSAP + ScrollSmoother (`@gsap/react`)
+- **State:** Zustand stores in `src/stores/`
+- **i18n:** i18next. Vietnamese is the default and English is the fallback. Locales live in `src/i18n/locales/`
+- **SEO:** react-helmet-async
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+| Script            | What it does                       |
+| ----------------- | ---------------------------------- |
+| `npm run dev`     | Start the Vite dev server with HMR |
+| `npm run build`   | Production build to `dist/`        |
+| `npm run preview` | Serve the production build locally |
+| `npm run lint`    | Run ESLint                         |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project structure
+
+```
+src/
+  3d/          R3F galaxy scene, shaders, quality tiers
+  components/  Page sections, layout, effects, UI primitives
+  data/        Navigation, skills and education content
+  hooks/       GSAP setup, smooth scroll, reduced-motion
+  i18n/        i18next config and vi/en locales
+  stores/      Zustand stores (language, theme, audio, scroll…)
+tools/         QA scripts (i18n parity, SEO metadata, CLS checks)
+docs/          Planning and design notes
+```
+
+## Quality checks
+
+```bash
+node tools/check-i18n-parity.mjs
+```
+
+This script checks that every Vietnamese key has a matching English key. The other scripts in `tools/` cover SEO metadata, image CLS and visual QA.
+
+## Deployment
+
+The site deploys to Vercel. `vercel.json` rewrites `/projects/edura` to the SPA entry so that deep links resolve.

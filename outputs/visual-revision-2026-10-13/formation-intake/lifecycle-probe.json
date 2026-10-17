@@ -1,0 +1,31 @@
+{
+  "records": [
+    {
+      "cycle": 0,
+      "memory": {
+        "geometries": 14,
+        "textures": 4
+      },
+      "chapter": "portal",
+      "p": 0.11996343305687204
+    },
+    {
+      "cycle": 1,
+      "memory": {
+        "geometries": 13,
+        "textures": 4
+      },
+      "chapter": "portal",
+      "p": 0.11996343305687204
+    },
+    {
+      "cycle": 2,
+      "memory": {
+        "geometries": 13,
+        "textures": 4
+      },
+      "chapter": "portal",
+      "p": 0.11996343305687204
+    }
+  ]
+}

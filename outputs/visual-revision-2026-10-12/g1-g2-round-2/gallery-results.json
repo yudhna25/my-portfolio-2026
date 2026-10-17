@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "videos": [
+    {
+      "src": "clips/opening-portal-current.webm",
+      "width": 1440,
+      "height": 900,
+      "duration": 17.333,
+      "decoded": 147
+    },
+    {
+      "src": "clips/experience-departure-current.webm",
+      "width": 1440,
+      "height": 900,
+      "duration": 10.066,
+      "decoded": 133
+    }
+  ],
+  "errors": []
+}

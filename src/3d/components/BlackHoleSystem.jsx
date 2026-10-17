@@ -4,7 +4,7 @@ import { HalfFloatType, LinearFilter, Vector2, Vector4, WebGLRenderTarget } from
 import { BlackHole } from '@/3d/components/BlackHole';
 import { BlackHoleBloomMask } from '@/3d/components/BlackHoleBloomMask';
 
-export function BlackHoleSystem({ frozen = false, quality = 'high', enableBloom = true, story = false, reduced = false }) {
+export function BlackHoleSystem({ frozen = false, quality = 'high', enableBloom = true, story = false, reduced = false, opening }) {
   const light = useRef(null);
   const lights = useMemo(() => [light], []);
   const portal = useMemo(() => ({
@@ -12,8 +12,9 @@ export function BlackHoleSystem({ frozen = false, quality = 'high', enableBloom 
     uPortalCenter: { value: new Vector2(0.5, 0.5) }, uRayCenter: { value: new Vector2(0.5, 0.5) },
     uPortalScale: { value: 1 }, uPortalRadius: { value: new Vector2(1, 1) },
     uPortalVisibility: { value: 1 }, uPortalDust: { value: 0 }, uPortalPull: { value: 0 }, uPortalViewport: { value: new Vector2(1, 1) },
-    uFinaleEnabled: { value: 0 }, uFinaleHole: { value: 1 }, uFinaleOrigin: { value: 0 },
+    uFinaleEnabled: { value: 0 }, uFinaleHole: { value: 1 }, uFinaleOrigin: { value: 0 }, uFinaleScale: { value: 1 },
     uFinaleGas: { value: new Vector4() },
+    uOpening: { value: new Vector4() },
   }), []);
   const target = useMemo(() => new WebGLRenderTarget(1, 1, {
     type: HalfFloatType, minFilter: LinearFilter, magFilter: LinearFilter,
@@ -22,7 +23,7 @@ export function BlackHoleSystem({ frozen = false, quality = 'high', enableBloom 
   useEffect(() => () => target.dispose(), [target]);
 
   return <>
-    <Select enabled><BlackHole target={target} frozen={frozen} quality={quality} story={story} reduced={reduced} portal={portal} /></Select>
+    <Select enabled><BlackHole target={target} frozen={frozen} quality={quality} story={story} reduced={reduced} portal={portal} opening={opening} /></Select>
     {enableBloom && quality !== 'low' && <>
       <ambientLight ref={light} color="#FFFFFF" />
       <EffectComposer multisampling={0}>

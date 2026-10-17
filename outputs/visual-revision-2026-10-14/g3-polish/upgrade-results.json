@@ -1,0 +1,757 @@
+{
+  "checks": 81,
+  "records": [
+    {
+      "width": 390,
+      "chapter": "hero",
+      "before": {
+        "frame": 12,
+        "time": 4.837200000047683,
+        "width": 390,
+        "height": 844,
+        "buffer": [
+          390,
+          844
+        ]
+      },
+      "after": {
+        "frame": 49,
+        "time": 5.454899999976157,
+        "width": 390,
+        "height": 844,
+        "buffer": [
+          390,
+          844
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "chapter": "portal",
+      "before": {
+        "frame": 109,
+        "time": 6.497999999999999,
+        "width": 390,
+        "height": 844,
+        "buffer": [
+          390,
+          844
+        ]
+      },
+      "after": {
+        "frame": 146,
+        "time": 7.11160000002384,
+        "width": 390,
+        "height": 844,
+        "buffer": [
+          390,
+          844
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "chapter": "about",
+      "before": {
+        "frame": 229,
+        "time": 8.495999999999993,
+        "width": 390,
+        "height": 844,
+        "buffer": [
+          390,
+          844
+        ]
+      },
+      "after": {
+        "frame": 266,
+        "time": 9.112700000047676,
+        "width": 390,
+        "height": 844,
+        "buffer": [
+          390,
+          844
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "chapter": "skills",
+      "before": {
+        "frame": 337,
+        "time": 10.315299999952314,
+        "width": 390,
+        "height": 844,
+        "buffer": [
+          390,
+          844
+        ]
+      },
+      "after": {
+        "frame": 373,
+        "time": 10.91510000002384,
+        "width": 390,
+        "height": 844,
+        "buffer": [
+          390,
+          844
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "chapter": "education",
+      "before": {
+        "frame": 443,
+        "time": 12.083399999976155,
+        "width": 390,
+        "height": 844,
+        "buffer": [
+          390,
+          844
+        ]
+      },
+      "after": {
+        "frame": 480,
+        "time": 12.700100000023834,
+        "width": 390,
+        "height": 844,
+        "buffer": [
+          390,
+          844
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "chapter": "experience",
+      "before": {
+        "frame": 554,
+        "time": 13.965499999999992,
+        "width": 390,
+        "height": 844,
+        "buffer": [
+          390,
+          844
+        ]
+      },
+      "after": {
+        "frame": 591,
+        "time": 14.576899999976153,
+        "width": 390,
+        "height": 844,
+        "buffer": [
+          390,
+          844
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "chapter": "works",
+      "before": {
+        "frame": 662,
+        "time": 15.778899999976144,
+        "width": 390,
+        "height": 844,
+        "buffer": [
+          390,
+          844
+        ]
+      },
+      "after": {
+        "frame": 698,
+        "time": 16.378700000047676,
+        "width": 390,
+        "height": 844,
+        "buffer": [
+          390,
+          844
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "chapter": "contact",
+      "before": {
+        "frame": 771,
+        "time": 17.646799999952318,
+        "width": 390,
+        "height": 844,
+        "buffer": [
+          390,
+          844
+        ]
+      },
+      "after": {
+        "frame": 807,
+        "time": 18.24739999997616,
+        "width": 390,
+        "height": 844,
+        "buffer": [
+          390,
+          844
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "scattered": {
+        "visible": true,
+        "count": 2099,
+        "morph": 0.3755101583017107,
+        "time": 3.886499999999997,
+        "pressed": "false",
+        "img": 0,
+        "filter": "none",
+        "starsOpacity": 1,
+        "canvas": 1,
+        "overflow": 0
+      },
+      "hovered": {
+        "visible": true,
+        "count": 2099,
+        "morph": 1,
+        "time": 4.970999999999995,
+        "pressed": "false",
+        "img": 1,
+        "filter": "none",
+        "starsOpacity": 0,
+        "canvas": 1,
+        "overflow": 0
+      },
+      "assembled": {
+        "visible": true,
+        "count": 2099,
+        "morph": 1,
+        "time": 9.36039999997615,
+        "pressed": "false",
+        "img": 1,
+        "filter": "none",
+        "starsOpacity": 0,
+        "canvas": 1,
+        "overflow": 0
+      }
+    },
+    {
+      "width": 390,
+      "restoredPortrait": {
+        "visible": true,
+        "count": 2099,
+        "morph": 1,
+        "time": 12.040600000023838,
+        "pressed": "false",
+        "img": 1,
+        "filter": "none",
+        "starsOpacity": 0,
+        "canvas": 1,
+        "overflow": 0
+      }
+    },
+    {
+      "width": 1440,
+      "chapter": "hero",
+      "before": {
+        "frame": 13,
+        "time": 4.503499999880788,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      },
+      "after": {
+        "frame": 50,
+        "time": 5.119599999904627,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "chapter": "portal",
+      "before": {
+        "frame": 72,
+        "time": 5.97239999985694,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      },
+      "after": {
+        "frame": 84,
+        "time": 6.553999999880781,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "chapter": "about",
+      "before": {
+        "frame": 149,
+        "time": 8.281999999761569,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      },
+      "after": {
+        "frame": 181,
+        "time": 8.901199999809247,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "chapter": "skills",
+      "before": {
+        "frame": 259,
+        "time": 10.29909999990461,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      },
+      "after": {
+        "frame": 296,
+        "time": 10.917599999904608,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "chapter": "education",
+      "before": {
+        "frame": 366,
+        "time": 12.11569999992845,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      },
+      "after": {
+        "frame": 403,
+        "time": 12.729099999904607,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "chapter": "experience",
+      "before": {
+        "frame": 471,
+        "time": 13.89599999988076,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      },
+      "after": {
+        "frame": 508,
+        "time": 14.512299999833072,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "chapter": "works",
+      "before": {
+        "frame": 581,
+        "time": 15.749599999904598,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      },
+      "after": {
+        "frame": 618,
+        "time": 16.366499999880762,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "chapter": "contact",
+      "before": {
+        "frame": 652,
+        "time": 17.382399999856922,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      },
+      "after": {
+        "frame": 661,
+        "time": 17.83239999985693,
+        "width": 1440,
+        "height": 900,
+        "buffer": [
+          1440,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "scattered": {
+        "visible": true,
+        "count": 8207,
+        "morph": 0.37615641155501695,
+        "time": 4.1678000000715265,
+        "pressed": "false",
+        "img": 0,
+        "filter": "none",
+        "starsOpacity": 1,
+        "canvas": 1,
+        "overflow": 0
+      },
+      "hovered": {
+        "visible": true,
+        "count": 8207,
+        "morph": 1,
+        "time": 5.295900000095368,
+        "pressed": "false",
+        "img": 1,
+        "filter": "none",
+        "starsOpacity": 0,
+        "canvas": 1,
+        "overflow": 0
+      },
+      "assembled": {
+        "visible": true,
+        "count": 8207,
+        "morph": 1,
+        "time": 9.99860000002384,
+        "pressed": "false",
+        "img": 1,
+        "filter": "none",
+        "starsOpacity": 0,
+        "canvas": 1,
+        "overflow": 0
+      }
+    },
+    {
+      "width": 1440,
+      "restoredPortrait": {
+        "visible": true,
+        "count": 8207,
+        "morph": 1,
+        "time": 12.529600000143052,
+        "pressed": "false",
+        "img": 1,
+        "filter": "none",
+        "starsOpacity": 0,
+        "canvas": 1,
+        "overflow": 0
+      }
+    },
+    {
+      "width": 1920,
+      "chapter": "hero",
+      "before": {
+        "frame": 11,
+        "time": 4.6885999999046275,
+        "width": 1920,
+        "height": 900,
+        "buffer": [
+          1920,
+          900
+        ]
+      },
+      "after": {
+        "frame": 36,
+        "time": 5.300499999999995,
+        "width": 1920,
+        "height": 900,
+        "buffer": [
+          1920,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1920,
+      "chapter": "portal",
+      "before": {
+        "frame": 55,
+        "time": 6.05129999995231,
+        "width": 1920,
+        "height": 900,
+        "buffer": [
+          1920,
+          900
+        ]
+      },
+      "after": {
+        "frame": 64,
+        "time": 6.501299999952308,
+        "width": 1920,
+        "height": 900,
+        "buffer": [
+          1920,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1920,
+      "chapter": "about",
+      "before": {
+        "frame": 117,
+        "time": 7.98410000026225,
+        "width": 1920,
+        "height": 900,
+        "buffer": [
+          1920,
+          900
+        ]
+      },
+      "after": {
+        "frame": 142,
+        "time": 8.609200000166883,
+        "width": 1920,
+        "height": 900,
+        "buffer": [
+          1920,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1920,
+      "chapter": "skills",
+      "before": {
+        "frame": 206,
+        "time": 10.105100000262258,
+        "width": 1920,
+        "height": 900,
+        "buffer": [
+          1920,
+          900
+        ]
+      },
+      "after": {
+        "frame": 232,
+        "time": 10.709000000238412,
+        "width": 1920,
+        "height": 900,
+        "buffer": [
+          1920,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1920,
+      "chapter": "education",
+      "before": {
+        "frame": 287,
+        "time": 11.863900000214565,
+        "width": 1920,
+        "height": 900,
+        "buffer": [
+          1920,
+          900
+        ]
+      },
+      "after": {
+        "frame": 314,
+        "time": 12.462400000214567,
+        "width": 1920,
+        "height": 900,
+        "buffer": [
+          1920,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1920,
+      "chapter": "experience",
+      "before": {
+        "frame": 385,
+        "time": 13.711400000214566,
+        "width": 1920,
+        "height": 900,
+        "buffer": [
+          1920,
+          900
+        ]
+      },
+      "after": {
+        "frame": 422,
+        "time": 14.32780000030993,
+        "width": 1920,
+        "height": 900,
+        "buffer": [
+          1920,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1920,
+      "chapter": "works",
+      "before": {
+        "frame": 493,
+        "time": 15.538300000190729,
+        "width": 1920,
+        "height": 900,
+        "buffer": [
+          1920,
+          900
+        ]
+      },
+      "after": {
+        "frame": 529,
+        "time": 16.138800000190734,
+        "width": 1920,
+        "height": 900,
+        "buffer": [
+          1920,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1920,
+      "chapter": "contact",
+      "before": {
+        "frame": 560,
+        "time": 17.08590000021458,
+        "width": 1920,
+        "height": 900,
+        "buffer": [
+          1920,
+          900
+        ]
+      },
+      "after": {
+        "frame": 567,
+        "time": 17.435900000214584,
+        "width": 1920,
+        "height": 900,
+        "buffer": [
+          1920,
+          900
+        ]
+      }
+    },
+    {
+      "width": 1920,
+      "scattered": {
+        "visible": true,
+        "count": 8207,
+        "morph": 0.37616342304091555,
+        "time": 4.206500000119207,
+        "pressed": "false",
+        "img": 0,
+        "filter": "none",
+        "starsOpacity": 1,
+        "canvas": 1,
+        "overflow": 0
+      },
+      "hovered": {
+        "visible": true,
+        "count": 8207,
+        "morph": 1,
+        "time": 5.370200000166891,
+        "pressed": "false",
+        "img": 1,
+        "filter": "none",
+        "starsOpacity": 0,
+        "canvas": 1,
+        "overflow": 0
+      },
+      "assembled": {
+        "visible": true,
+        "count": 8207,
+        "morph": 1,
+        "time": 10.051700000166889,
+        "pressed": "false",
+        "img": 1,
+        "filter": "none",
+        "starsOpacity": 0,
+        "canvas": 1,
+        "overflow": 0
+      }
+    },
+    {
+      "width": 1920,
+      "restoredPortrait": {
+        "visible": true,
+        "count": 8207,
+        "morph": 1,
+        "time": 12.596299999952318,
+        "pressed": "false",
+        "img": 1,
+        "filter": "none",
+        "starsOpacity": 0,
+        "canvas": 1,
+        "overflow": 0
+      }
+    },
+    {
+      "seven": {
+        "digit": "7",
+        "base": "0.1",
+        "runner": "1",
+        "colors": [
+          "rgb(255, 255, 255)",
+          "rgb(255, 255, 255)",
+          "rgb(255, 255, 255)"
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "status": "pass"
+}

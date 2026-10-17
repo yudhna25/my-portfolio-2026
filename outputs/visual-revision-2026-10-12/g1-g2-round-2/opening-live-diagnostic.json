@@ -1,0 +1,39 @@
+{
+  "records": [
+    {
+      "mode": "hidden-resize",
+      "hold": {
+        "before": 0.151778,
+        "after": 0.151778
+      },
+      "summary": {
+        "frameCount": 391,
+        "firstLoaderMs": 239.29999995231628,
+        "firstPresentationMs": 2124.499999952316,
+        "releaseMs": 7830.299999952316,
+        "duration": 4.5,
+        "ready": "scene-font",
+        "joinFrames": 2,
+        "maximumRevealAlignmentPx": 0.012034464830807704,
+        "minimumPhotonSizeRatio": 1.0000102923253755,
+        "maximumPhotonSizeRatio": 1.0001230495418374,
+        "final": {
+          "heroOpacity": 1,
+          "locked": false,
+          "fallback": false
+        }
+      }
+    },
+    {
+      "error": "Cannot read properties of null (reading 'offsetWidth')"
+    },
+    {
+      "error": "Cannot read properties of null (reading 'offsetWidth')"
+    }
+  ],
+  "dom": {
+    "canvas": 0,
+    "body": ""
+  },
+  "error": "Error: Current production exports/Fiber root did not become observable\n    at ready (file:///C:/Users/duytva/my-portfolio-2026/outputs/visual-revision-2026-10-12/g1-g2-round-2/qa/common.mjs:57:9)\n    at async file:///C:/Users/duytva/my-portfolio-2026/outputs/visual-revision-2026-10-12/g1-g2-round-2/qa/opening-lifecycle.mjs:19:65"
+}
