@@ -56,7 +56,7 @@ export function createLockupRaster() {
     }
 
     const chars = [...stage.querySelectorAll('[data-portal-char]')];
-    context.fillStyle = '#ffffff';
+    context.fillStyle = '#EDEBE3';
     context.textBaseline = 'alphabetic';
     chars.forEach((span, index) => {
       // The last O is the black hole itself.
@@ -74,7 +74,7 @@ export function createLockupRaster() {
       const box = node.getBoundingClientRect(), style = getComputedStyle(node);
       context.font = fontOf(style);
       context.textBaseline = 'middle';
-      context.fillStyle = `rgba(255,255,255,${alpha})`;
+      context.fillStyle = `rgba(237,235,227,${alpha})`;
       context.fillText(node.textContent, box.left, box.top + box.height / 2);
     }
     texture.needsUpdate = true;

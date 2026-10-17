@@ -310,7 +310,7 @@ function DesktopCursor() {
           {t('works.cursorCta')}
         </span>
       </div>
-      <div className="gsap-cursor-dot fixed top-0 left-0 size-1 rounded-full bg-white mix-blend-difference" aria-hidden="true" />
+      <div className="gsap-cursor-dot fixed top-0 left-0 size-1.5 rounded-full bg-amber shadow-[0_0_10px_2px_rgba(255,178,91,0.55)]" aria-hidden="true" />
       </div>
     </div>
   );

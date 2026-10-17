@@ -106,7 +106,7 @@ export default function About({ portrait }) {
   }, { scope: root, dependencies: [frozen, i18n.resolvedLanguage, portrait], revertOnUpdate: true });
 
   return <section ref={root} id="about" aria-labelledby="about-heading" className="relative isolate min-h-screen px-6 py-28 text-(--text-primary) sm:px-8 lg:px-16 lg:py-36">
-    <div data-about-motion data-about-backdrop aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_72%_62%,rgba(5,5,5,0.44)_15%,rgba(5,5,5,0.18)_42%,transparent_78%)]" />
+    <div data-about-motion data-about-backdrop aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_72%_62%,rgba(7,8,13,0.44)_15%,rgba(7,8,13,0.18)_42%,transparent_78%)]" />
     <div data-about-motion className="mx-auto grid max-w-7xl grid-cols-12 items-start gap-y-10 lg:gap-x-16 lg:gap-y-8">
       <header data-about-group="heading" className="col-span-12 min-w-0 lg:col-span-7 lg:col-start-6 lg:row-start-1">
         <p className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-(--text-secondary)">{t('about.sectionLabel')}</p>

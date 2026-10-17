@@ -1,14 +1,20 @@
-/* Stellar Odyssey — fixed monochrome dark palette. */
+/* Stellar Odyssey: tinted off-black + ivory, with one signature accent (Hawking amber). */
 @layer base {
   /* 1. Primitives. */
   :root {
-    --bg-void: #050505;
-    --bg-nebula: #0A0A0A;
-    --bg-surface: #111111;
-    --bg-elevated: #1A1A1A;
-    --text-primary: #FAFAFA;
-    --text-secondary: #999999;
-    --text-muted: #555555;
+    /* Deep blue-black, never #000: the sky has a temperature. */
+    --bg-void: #07080D;
+    --bg-nebula: #0B0C12;
+    --bg-surface: #12131A;
+    --bg-elevated: #1C1D25;
+    /* Ivory, never #FFF. */
+    --text-primary: #EDEBE3;
+    --text-secondary: #9D9B94;
+    --text-muted: #5C5B57;
+    /* Hawking amber: the hot inner disk. One accent, used with discipline:
+     * years, active marks, focus, the cursor's mass, chapter numerals, emphasis. */
+    --accent-amber: #FFB25B;
+    --accent-amber-soft: rgb(255 178 91 / 0.18);
 
     /* Button/CTA only. No card, text, or ambient glow tokens. */
     --glow-button: 0 0 30px rgba(255,255,255,0.35);
@@ -28,7 +34,7 @@
     --foreground-secondary: var(--text-secondary);
     --foreground-muted: var(--text-muted);
     --border-default: var(--bg-elevated);
-    --accent-default: var(--text-primary);
+    --accent-default: var(--accent-amber);
     --glow-button: 0 0 30px rgba(255,255,255,0.35);
     --glow-button-strong: 0 0 50px rgba(255,255,255,0.55);
   }
@@ -68,6 +74,10 @@
   --font-body: 'Space Grotesk', sans-serif;
   --font-sans: var(--font-body);
   --font-mono: 'JetBrains Mono', monospace;
+  /* Editorial italic for emphasis inside display lines (Vietnamese subset included). */
+  --font-serif: 'Fraunces', 'Times New Roman', serif;
+  --color-white: #EDEBE3;
+  --color-amber: var(--accent-amber);
 
   /* Section 4.2 defines ranges, not individual h1–h6 sizes. These steps stay
    * within the display range (4rem–12vw); WIP utilities override base rules.

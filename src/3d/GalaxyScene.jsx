@@ -79,7 +79,7 @@ export function GalaxyScene({ children, count, quality: chosenQuality, rayQualit
           frameloop={hidden ? 'never' : 'always'}
           fallback={<SceneFallback />}
         >
-          <color attach="background" args={['#050505']} />
+          <color attach="background" args={['#07080D']} />
           <Suspense fallback={null}>
             <Selection>
               <CameraRig opening={opening} frozen={frozen} story={story} />
