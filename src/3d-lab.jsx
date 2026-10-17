@@ -20,6 +20,7 @@ import About from '@/components/About';
 import Contact from '@/components/sections/Contact';
 import { useLabScroll } from '@/3d/hooks/useLabScroll';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
+import { useChapterReveal } from '@/hooks/useChapterReveal';
 import { useScrollStore } from '@/stores/useScrollStore';
 import { STORY_CHAPTERS, STORY_SEED, STORY_IDLE_PHASE } from '@/3d/utils/cameraPath';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
@@ -55,6 +56,7 @@ export default function Lab() {
   const manual = useScrollStore(state => state.storyManual);
   const entering = story && (chapter === 'hero' || chapter === 'portal');
   useSmoothScroll({ scope });
+  useChapterReveal({ scope, disabled: staticMotion || !story });
   const controls = useLabScroll({ scope, story, locale: i18n.language, staticMotion });
   useEffect(() => { document.title = t('title'); }, [t]);
 
