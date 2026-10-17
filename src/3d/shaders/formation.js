@@ -1,3 +1,5 @@
+import { OPENING_SECONDS } from '@/3d/utils/opening';
+
 // shortcut: cinematic screen-space lensing, not a metric solver; use geodesic background tracing for scientific visualization.
 export const SPACETIME_GLSL = /* glsl */ `
   vec2 spacetimeWarp(vec2 point, float clock, float size, out float streak) {
@@ -36,8 +38,8 @@ export const FORMATION_GLSL = /* glsl */ `
     float spike = (12.0 + 70.0 * load) * (1.0 - 0.6 * inhale);
     light += pre * energy * 0.35 * vec3(0.86, 0.91, 1.0) * (exp(-abs(d.y) / 0.7) * exp(-abs(d.x) / spike)
       + exp(-abs(d.x) / 0.7) * exp(-abs(d.y) / spike));
-    // Seconds after the burst at the nominal 4.4s; the warm 2s replay compresses it.
-    float b = (p - 0.40) * 4.4;
+    // Seconds after the burst on a first visit; the warm 2s replay compresses it.
+    float b = (p - 0.40) * ${OPENING_SECONDS.toFixed(2)};
     float on = step(0.0, b);
     light += on * exp(-b * 9.0) * (0.12 + exp(-r / (width * 0.22))) * vec3(5.0, 4.8, 4.5);
     float sweep = on * exp(-b * 2.6);

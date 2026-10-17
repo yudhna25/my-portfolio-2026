@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { gsap } from '@/hooks/useGSAPSetup';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { useScrollStore } from '@/stores/useScrollStore';
-import { openingPose } from '@/3d/utils/opening';
+import { OPENING_SECONDS, openingPose } from '@/3d/utils/opening';
 import '@/styles/opening.css';
 
 let openingSeen = false;
@@ -48,7 +48,7 @@ export function Preloader({ onComplete, opening }) {
       if ((!ready && !forced) || !measure()?.height) return;
       const reload = performance.getEntriesByType('navigation')[0]?.type === 'reload';
       const warm = (openingSeen || reload) && performance.now() - started.current < 1800 && !forced;
-      const duration = warm ? 2 : 4.4;
+      const duration = warm ? 2 : OPENING_SECONDS;
       root.current.dataset.openingDuration = String(duration);
       root.current.dataset.openingReady = forced ? 'watchdog' : 'scene-font';
       timeline = gsap.timeline({ id: 'preloader-intro', onComplete: complete })

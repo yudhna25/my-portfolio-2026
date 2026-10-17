@@ -6,6 +6,8 @@ const smooth = (a, b, p) => {
 // First Light: a pulse at the last O, a burst at BURST, then a large hole bends the
 // lockup and shrinks into the unchanged portal anchor. One clock, p = 0..1.
 export const OPENING_BURST = 0.40;
+// Full first-visit length in seconds; the shader's post-burst clock is authored against it.
+export const OPENING_SECONDS = 5.6;
 
 export function openingPose(p, anchor, width, height, out) {
   const settle = smooth(0.42, 0.96, p);
