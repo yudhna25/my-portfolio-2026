@@ -1,5 +1,7 @@
 # Bộ prompts chỉnh visual Stellar Odyssey — V0–V11
 
+> **14/10/2026 — G3 polish theo phản hồi:** About phải ngưng tụ thành ảnh cá nhân nguyên bản **đầy đủ màu**, không dừng ở chân dung chấm; runner số 7 sáng rõ, vẫn bỏ viền liên tục. Chỉnh chất liệu plasma dùng chung preloader/finale và tăng sức nặng biến dạng, giữ timing/camera/phase. [Review](outputs/visual-revision-2026-10-14/g3-polish/review.html) · [Handoff](outputs/visual-revision-2026-10-14/g3-polish/handoff.md). **G3 còn chờ người dùng duyệt; chưa V10.** Yêu cầu này thay thế mô tả chân dung chỉ bằng sao và runner số 7 mờ ở các mục lịch sử bên dưới.
+
 > **Ưu tiên mới nhất 13/10/2026 — V9 spacetime revision:** người dùng giữ đoạn đến p=.44, yêu cầu phần sau thành sóng biến dạng không gian → sao plasma lớn → co sụp thành cùng BH; áp dụng biến dạng vào preloader. Works xoay chậm quanh tâm chung trước khi scroll tăng tốc. **2026 bỏ viền liên tục, giữ sao và runner** (đã xác nhận). Đã triển khai tại [review](outputs/visual-revision-2026-10-13/spacetime-collapse/review.html), [handoff](outputs/visual-revision-2026-10-13/spacetime-collapse/handoff.md); 400vh, snapshot/reverse và Contact giữ contract. **G3 còn chờ duyệt**, G2 đã duyệt; chưa V10/release/deploy. Phần storyboard sau .44 và contour nền cũ dưới đây bị thay thế đúng phạm vi này.
 
 

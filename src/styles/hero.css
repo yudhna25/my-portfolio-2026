@@ -44,7 +44,7 @@
   .hero-noise-lower { stroke: white; stroke-opacity: 0.5; stroke-width: 1px; clip-path: polygon(0 36%,100% 36%,100% 43%,0 43%,0 70%,100% 70%,100% 88%,0 88%); }
   .hero-noise-signal { stroke: white; stroke-opacity: 0.35; stroke-width: 0.6px; stroke-dasharray: 2 13 1 7; }
   [data-year-digit][data-digit='7'] .hero-year-base { stroke-opacity: 0.1; }
-  [data-year-digit][data-digit='7'] [data-year-meteor] { opacity: 0.08; }
+  [data-year-digit][data-digit='7'] [data-year-meteor] { opacity: 1; }
 
   /* Unbounded 800: O ink bounds inside the unchanged glyph advance/line box. */
   .hero-o-anchor {

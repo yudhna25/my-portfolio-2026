@@ -127,7 +127,7 @@ export default function About({ portrait }) {
           onClick={() => setHeld(value => !value)} onKeyDown={event => { if (event.key === 'Escape') { setHeld(false); setFocused(false); } }}
           className="group relative mx-auto block w-full max-w-md cursor-pointer border-0 bg-transparent p-0 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-8">
           <img src={`${import.meta.env.BASE_URL}avatar-cutout.webp`} alt={t('about.avatarAlt')} width="800" height="1000" loading="lazy" decoding="async"
-            className="avatar-img block aspect-[4/5] h-auto w-full object-contain grayscale" />
+            className="avatar-img block aspect-[4/5] h-auto w-full object-contain" />
         </button>
         <p id="about-portrait-hint" className="mx-auto mt-5 max-w-md text-center font-body text-xs leading-relaxed text-(--text-secondary)">{t('about.portraitHint')}</p>
       </figure>

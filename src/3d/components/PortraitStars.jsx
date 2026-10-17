@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { AdditiveBlending, Vector2, Vector4 } from 'three';
+import { portalSmooth } from '@/3d/utils/portal';
 import { buildPortraitGeometry } from '@/3d/utils/portrait';
 
 const VERT = /* glsl */ `
@@ -59,12 +60,16 @@ export function PortraitStars({ layout, frozen = false, quality = 'high' }) {
   }, [quality]);
   useEffect(() => () => {
     layout.current?.node?.removeAttribute('data-stars-ready');
+    layout.current?.node?.style.removeProperty('--portrait-photo');
   }, [layout]);
   useFrame(({ gl }, delta) => {
     const data = layout.current;
     if (!points.current || !data) return;
     points.current.visible = !frozen && data.visible && Boolean(geometry);
-    if (frozen || !geometry) data.node?.removeAttribute('data-stars-ready');
+    if (frozen || !geometry) {
+      data.node?.removeAttribute('data-stars-ready');
+      data.node?.style.removeProperty('--portrait-photo');
+    }
     else if (data.node && !data.node.hasAttribute('data-stars-ready')) data.node.setAttribute('data-stars-ready', 'true');
     if (!points.current.visible) return;
     const rect = data.rect;
@@ -72,7 +77,10 @@ export function PortraitStars({ layout, frozen = false, quality = 'high' }) {
     values.uRect.value.set(rect.left, rect.top, rect.width, rect.height);
     values.uViewport.value.set(window.innerWidth, window.innerHeight);
     values.uMorph.value = Math.max(data.morph, data.intent || 0);
-    values.uOpacity.value = data.opacity;
+    // The same gather progress resolves the stars into the original full-color cutout.
+    const photo = portalSmooth(0.68, 1, values.uMorph.value);
+    data.node?.style.setProperty('--portrait-photo', String(photo));
+    values.uOpacity.value = data.opacity * (1 - photo);
     values.uSize.value = Math.max(1.2, rect.width / (quality === 'low' ? 72 : quality === 'medium' ? 104 : 144) * 1.35) * gl.getPixelRatio();
     values.uTime.value += Math.min(delta, 0.05);
   });

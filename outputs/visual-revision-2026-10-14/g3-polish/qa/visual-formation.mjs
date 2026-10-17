@@ -1,0 +1,7 @@
+import assert from 'node:assert/strict';
+import {chromium,edge,base,ready,scrollChapter,capture,save} from './common.mjs';
+const browser=await chromium.launch({executablePath:edge,headless:true}),records=[],errors=[];
+try{for(const width of [1440,390,1920]){const page=await browser.newPage({viewport:{width,height:900},serviceWorkers:'block'});page.on('pageerror',e=>errors.push(e.stack));page.on('console',m=>{if(m.type()==='error')errors.push(m.text())});await page.goto(base,{waitUntil:'domcontentloaded'});await ready(page);
+for(const p of [.44,.5,.56,.62,.70,.78,.80,.86,.92,.96]){await scrollChapter(page,'finale',p);await capture(page,'plasma-'+p+'-'+width);records.push(await page.evaluate(()=>{const r=motionQA.root.getState(),u=r.scene.getObjectByName('accretion-disk').material.uniforms,s=motionQA.store.getState();return{width:innerWidth,p:s.chapterProgress,opening:u.uOpening.value.toArray(),warp:r.scene.getObjectByName('star-field').material.uniforms.uSpacetime.value.toArray(),gl:r.gl.getContext().getError(),canvas:document.querySelectorAll('canvas').length}}))}await scrollChapter(page,'contact',0);await capture(page,'contact-'+width);await page.close()}
+save('formation-results.json',{status:errors.length?'fail':'pass',records,errors});assert(records.every(r=>r.gl===0&&r.canvas===1));assert.equal(errors.length,0);save('formation-results.json',{status:'pass',records,errors});console.log('Formation 30 poses passed')
+}finally{await browser.close()}

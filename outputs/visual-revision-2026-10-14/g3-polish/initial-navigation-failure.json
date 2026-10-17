@@ -1,0 +1,7 @@
+{
+  "checks": 0,
+  "records": [],
+  "errors": [],
+  "status": "fail",
+  "failure": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5215/\", waiting until \"domcontentloaded\"\u001b[22m\n\n    at C:\\Users\\duytva\\my-portfolio-2026\\outputs\\visual-revision-2026-10-14\\g3-polish\\qa\\verify-polish.mjs:10:16"
+}
