@@ -83,8 +83,6 @@ const FIGURE_SCALE = 0.9;
 const ART_PIXELS = 1536;
 // The phenomenon's light spills past the picture: its mesh is this much larger.
 const PHENOMENON_PAD = 1.7;
-// The star a phenomenon springs from, when it is not the picture's heart: the Geminids radiate from Castor.
-const PHENOMENON_ANCHORS = { Gem: 'HIP 36850' };
 const damp = (value, target, rate, delta) => target + (value - target) * Math.exp(-rate * delta);
 const smooth = t => t * t * (3 - 2 * t);
 
@@ -145,14 +143,12 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
     const rect = new Vector4(plane.center[0], plane.center[1], plane.width, plane.width / aspect);
     const bright = item.geometry.stars.reduce((a, b) => (b.vmag < a.vmag ? b : a));
     const toUv = (x, y, w, h, cx, cy) => new Vector2((x - cx) / w + 0.5, (y - cy) / h + 0.5);
-    // In picture heights from the picture's centre, as the phenomenon shader measures.
-    const anchor = item.geometry.stars.find(star => star.id === PHENOMENON_ANCHORS[item.id])?.position ?? [rect.x, rect.y];
     return { points, lines, bounds, corners, projected: new Vector3(), rect, plane,
       artUniforms: { uMap: { value: null }, uField: field.uniform, uViewport: { value: new Vector2(1, 1) },
         uOrigin: { value: toUv(...bright.position.slice(0, 2), plane.width, plane.height, plane.center[0], plane.center[1]) },
         uReveal: { value: 0 }, uDissolve: { value: 0 }, uTime: { value: 0 }, uOpacity: { value: 0 }, uIdle: { value: 0.1 } },
       phenomenonUniforms: { uMap: { value: null }, uField: field.uniform, uPulse: field.pulse, uViewport: { value: new Vector2(1, 1) }, uAspect: { value: aspect },
-        uAnchor: { value: new Vector2((anchor[0] - rect.x) / rect.w, (anchor[1] - rect.y) / rect.w) }, uKind: { value: index }, uPad: { value: PHENOMENON_PAD }, uGrain: { value: 90 }, uDraw: { value: 0 }, uOpen: { value: 0 }, uTime: { value: 0 }, uOpacity: { value: 0 } },
+        uKind: { value: index }, uPad: { value: PHENOMENON_PAD }, uGrain: { value: 90 }, uDraw: { value: 0 }, uOpen: { value: 0 }, uTime: { value: 0 }, uOpacity: { value: 0 } },
       uniforms: { uPixelRatio: { value: 1 }, uStrength: { value: 1 }, uActive: { value: 0 } } };
   }), [field]);
   const trails = useMemo(() => {
