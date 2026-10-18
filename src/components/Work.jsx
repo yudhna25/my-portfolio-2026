@@ -16,10 +16,6 @@ const projects = PORTFOLIO_DATA.projects.map((project, index) => ({
   ...project, id: ['edura', 'veris', 'vie'][index], key: ['eduraLms', 'verisApp', 'viePerfume'][index],
 }));
 const focusRing = 'focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4';
-// Brightest star of each figure (Hipparcos, J1991.25): the plate is engraved outward from it.
-const SOURCES = { edura: 'α Cen · HIP 71683 · RA 14h 40m · Dec −60° 50′', veris: 'β Gem · HIP 37826 · RA 7h 45m · Dec +28° 02′',
-  vie: 'α Cyg · HIP 102098 · RA 20h 41m · Dec +45° 17′' };
-const PLATES = ['I', 'II', 'III'];
 
 export default function Work({ layoutRef, nativeNavigation = false }) {
   const root = useRef(null);
@@ -41,7 +37,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
   const target = finaleSelection === undefined ? selection ?? focus ?? hover : finaleSelection;
   const project = projects.find(item => item.id === target);
   const path = project ? `works.projects.${project.key}` : null;
-  // A held selection is the open project: its atlas page turns (WorksConstellations).
+  // A held selection is the open project: its picture clears out of its phenomenon (WorksConstellations).
   const open = Boolean(project) && selection === project.id && !fallback;
   const cancelClose = () => clearTimeout(closeTimer.current);
   const leave = () => {
@@ -174,8 +170,8 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
       observer.disconnect();
     };
   }, { scope: root, dependencies: [layoutRef, fallback, target, open, i18n.resolvedLanguage], revertOnUpdate: true });
-  // Opening turns the atlas page: the legend is inked in line by line, while the title and
-  // its myth are born from starlight like every heading on the site.
+  // Opening: the title and its myth are born from starlight like every heading on the site,
+  // while the mono lines are drawn in along the light.
   useGSAP((context, contextSafe) => {
     if (!open || reduced) return;
     root.current.querySelectorAll('[data-work-ink]').forEach((node, i) => {
@@ -189,20 +185,16 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
     scope: section, dependencies: [i18n.resolvedLanguage, reduced], revertOnUpdate: true,
   });
 
-  const index = project ? projects.indexOf(project) : -1;
   const preview = <div id="work-preview" data-work-preview data-active={target ?? 'empty'} data-open={open || undefined}
         className={`absolute top-0 left-0 z-30 w-[calc(100%-2rem)] lg:w-72 xl:w-80 ${fallback ? 'top-auto! bottom-6! left-4! lg:left-[calc(50%-9rem)]!' : ''}`}>
         {project && open ? <div data-work-content key={`${project.id}-open-${i18n.resolvedLanguage}`}
           onPointerEnter={cancelClose} onFocusCapture={event => focusProject(event, project.id)} onBlurCapture={leave}
           className="works-open-column rounded-sm border border-(--border-glass-subtle) bg-(--color-glass-surface) p-4 text-left backdrop-blur-md lg:border-0 lg:bg-transparent lg:p-0 lg:backdrop-blur-none">
-          <p data-work-ink className="font-mono text-[10px] tracking-[0.18em] text-white/55 uppercase">{t('works.plate', { number: PLATES[index] })} · {t(`works.constellations.${project.id}`)}</p>
+          <p data-work-ink className="font-mono text-[10px] tracking-[0.18em] text-white/55 uppercase">{t(`works.constellations.${project.id}`)} · {t(`works.phenomena.${project.id}.name`)}</p>
           <h3 data-work-star className="mt-3 font-display text-xl leading-tight font-bold tracking-[-0.03em] lg:text-3xl">{t(`${path}.title`)}</h3>
           <p data-work-dust className="mt-2 font-serif text-sm text-white/80 italic lg:text-base">{t(`works.myths.${project.id}`)}</p>
-          <p data-work-ink className="mt-4 border-t border-white/15 pt-3 font-mono text-[10px] leading-relaxed text-white/45">
-            <span className="text-(--color-amber,#FFB25B)">{t('works.brightest')}</span><br />
-            <span>{SOURCES[project.id]}</span>
-          </p>
-          <p data-work-ink className="mt-3 font-mono text-[10px] tracking-[0.12em] text-white/55 uppercase">{t(`${path}.category`)}</p>
+          <p data-work-dust className="mt-4 font-serif text-[13px] leading-relaxed text-(--color-amber,#FFB25B) italic lg:text-sm">{t(`works.phenomena.${project.id}.line`)}</p>
+          <p data-work-ink className="mt-4 font-mono text-[10px] tracking-[0.12em] text-white/55 uppercase">{t(`${path}.category`)}</p>
           <p data-work-dust className="mt-2 font-body text-xs leading-relaxed text-white/70 lg:text-[13px]">{t(`${path}.description`)}</p>
           <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-1 font-mono text-[10px] text-white/50" aria-label={t('works.tagsLabel')}>
             {t(`${path}.tags`, { returnObjects: true }).map(tag => <li key={tag}>{tag}</li>)}
@@ -227,7 +219,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
           <img data-project-image src={project.imageUrl} alt={t(`${path}.previewAlt`)} width="1600" height={project.id === 'edura' ? 1131 : 900} loading="lazy" decoding="async"
             className={`aspect-[16/10] w-full object-contain ${fallback ? '' : 'lg:hidden'}`} />
           <div className="min-w-0">
-            <p className="mb-2 font-mono text-[9px] tracking-[0.18em] text-white/45 uppercase">{t('works.plate', { number: PLATES[index] })}</p>
+            <p className="mb-2 font-mono text-[9px] tracking-[0.18em] text-white/45 uppercase">{t(`works.phenomena.${project.id}.name`)}</p>
             <h3 className="font-display text-sm leading-tight font-bold tracking-[-0.03em] lg:text-base">{t(`${path}.title`)}</h3>
             <p className="mt-2 font-body text-[11px] leading-relaxed text-white/70">{t(`${path}.category`)}</p>
             {project.id === 'edura' ? <div className={`flex flex-wrap justify-center gap-x-4 ${fallback ? '' : 'lg:justify-start'}`}>

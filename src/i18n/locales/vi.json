@@ -84,21 +84,33 @@
     "tagsLabel": "Chuyên môn",
     "viewCaseStudy": "Xem case study",
     "selectLabel": "Chọn dự án",
-    "interactionHint": "Di chuột hoặc dùng Tab để đánh thức một chòm sao. Nhấn để mở trang atlas của nó; nhấn lại, chạm nền hoặc Escape để gấp trang.",
+    "interactionHint": "Lướt chuột qua bầu trời để thoáng thấy điều đang ẩn giấu. Dừng lại hoặc dùng Tab để đánh thức một chòm sao, nhấn để mở; nhấn lại, chạm nền hoặc Escape để trở về.",
     "behanceReference": "Tham khảo trên Behance",
     "comingSoon": "Case study sắp ra mắt",
-    "plate": "Bản khắc {{number}}",
-    "backToOrbit": "Gấp trang, về bầu trời",
+    "backToOrbit": "Trở về bầu trời",
     "constellations": {
       "edura": "Centaurus",
       "veris": "Gemini",
       "vie": "Cygnus"
     },
-    "brightest": "Sao sáng nhất · gốc bản khắc",
     "myths": {
       "edura": "Chiron, người thầy của các anh hùng",
       "veris": "Castor và Pollux, hai linh hồn không rời",
       "vie": "Thiên nga bay dọc dải Ngân Hà"
+    },
+    "phenomena": {
+      "edura": {
+        "name": "Omega Centauri",
+        "line": "Giữa thân nhân mã, mười triệu mặt trời tụ lại thành một tổ ong ánh sáng."
+      },
+      "veris": {
+        "name": "Tinh vân Eskimo",
+        "line": "Một ngôi sao hấp hối thở ra từng lớp khí, như khuôn mặt ẩn sau chiếc mũ trùm."
+      },
+      "vie": {
+        "name": "Tinh vân Mạng Che Mặt",
+        "line": "Tấm voan tơ còn lại sau khi một ngôi sao nổ tung, vẫn trôi trong gió vũ trụ."
+      }
     }
   },
   "skills": {

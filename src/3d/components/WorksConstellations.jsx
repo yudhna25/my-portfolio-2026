@@ -1,11 +1,11 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import { Select } from '@react-three/postprocessing';
-import { AdditiveBlending, BufferAttribute, BufferGeometry, CanvasTexture, DoubleSide, DynamicDrawUsage, Matrix4, Quaternion, SRGBColorSpace, TextureLoader, Vector2, Vector3, Vector4 } from 'three';
+import { AdditiveBlending, BufferAttribute, BufferGeometry, CanvasTexture, DynamicDrawUsage, Matrix4, Quaternion, SRGBColorSpace, TextureLoader, Vector2, Vector3, Vector4 } from 'three';
 import data from '@/3d/data/worksConstellations.json';
 import { PORTFOLIO_DATA } from '@/data';
 import { useGravityField } from '@/3d/field/useGravityField';
-import { ART_FRAG, ART_VERT, GRID_FRAG, GRID_VERT, PLATE_FRAG, PLATE_VERT } from '@/3d/shaders/worksAtlas';
+import { ART_FRAG, ART_VERT, PHENOMENON_FRAG, PHENOMENON_VERT } from '@/3d/shaders/worksPhenomena';
 import { BLACK_HOLE_CENTER, storyCameraPath } from '@/3d/utils/cameraPath';
 import { advanceWorksOrbit, worksBounds, worksStage, worksFigure, WORKS_IDS } from '@/3d/utils/worksOrbit';
 import { finaleState, finaleSmooth } from '@/3d/utils/finale';
@@ -76,47 +76,15 @@ const STREAM_VERT = /* glsl */ `
     vColor = mix(vec3(0.55, 0.7, 1.0), vec3(1.0, 0.97, 0.92), pow(head, 3.0)) * (0.8 + 1.6 * pow(head, 4.0));
   }
 `;
-// Each project is a plate in a night-sky star atlas (see worksAtlas.js).
+// Each figure hides a real phenomenon the project is made of (see worksPhenomena.js).
 const IMAGE_ASPECTS = [1600 / 1131, 16 / 9, 16 / 9];
 const OPEN_Z = 2;
 const FIGURE_SCALE = 0.9;
 const ART_PIXELS = 1536;
+// The phenomenon's light spills past the picture: its mesh is this much larger.
+const PHENOMENON_PAD = 1.7;
 const damp = (value, target, rate, delta) => target + (value - target) * Math.exp(-rate * delta);
 const smooth = t => t * t * (3 - 2 * t);
-
-// RA/Dec graticule in the figure's own gnomonic projection (x = celestial west right).
-function buildGraticule(item, origin, reach) {
-  const { raDeg, decDeg } = item.projection.origin;
-  const scale = item.projection.uniformScale, rad = Math.PI / 180;
-  const ra0 = raDeg * rad, dec0 = decDeg * rad;
-  const project = (ra, dec) => {
-    const a = ra * rad, d = dec * rad;
-    const c = Math.sin(dec0) * Math.sin(d) + Math.cos(dec0) * Math.cos(d) * Math.cos(a - ra0);
-    if (c < 0.2) return null;
-    return [-Math.cos(d) * Math.sin(a - ra0) / c * scale, (Math.cos(dec0) * Math.sin(d) - Math.sin(dec0) * Math.cos(d) * Math.cos(a - ra0)) / c * scale];
-  };
-  const positions = [], radii = [];
-  const segment = (from, to) => {
-    if (!from || !to) return;
-    const r0 = Math.hypot(from[0] - origin[0], from[1] - origin[1]) / reach, r1 = Math.hypot(to[0] - origin[0], to[1] - origin[1]) / reach;
-    if (r0 > 1 && r1 > 1) return;
-    positions.push(from[0], from[1], -0.02, to[0], to[1], -0.02);
-    radii.push(r0, r1);
-  };
-  const span = 40;
-  const decStart = Math.ceil((decDeg - span) / 5) * 5;
-  for (let dec = decStart; dec <= decDeg + span; dec += 5) {
-    for (let ra = raDeg - span * 2; ra < raDeg + span * 2; ra += 1) segment(project(ra, dec), project(ra + 1, dec));
-  }
-  const raStart = Math.ceil((raDeg - span * 2) / 7.5) * 7.5;
-  for (let ra = raStart; ra <= raDeg + span * 2; ra += 7.5) {
-    for (let dec = decDeg - span; dec < decDeg + span; dec += 1) segment(project(ra, dec), project(ra, dec + 1));
-  }
-  const geometry = new BufferGeometry();
-  geometry.setAttribute('position', new BufferAttribute(new Float32Array(positions), 3));
-  geometry.setAttribute('aRadius', new BufferAttribute(new Float32Array(radii), 1));
-  return geometry;
-}
 
 const STREAM_FRAG = /* glsl */ `
   varying float vAlpha;
@@ -176,14 +144,11 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
     const bright = item.geometry.stars.reduce((a, b) => (b.vmag < a.vmag ? b : a));
     const toUv = (x, y, w, h, cx, cy) => new Vector2((x - cx) / w + 0.5, (y - cy) / h + 0.5);
     return { points, lines, bounds, corners, projected: new Vector3(), rect, plane,
-      grid: buildGraticule(item, bright.position, plane.width * 0.62),
-      gridUniforms: { uReveal: { value: 0 }, uOpacity: { value: 0 } },
-      artUniforms: { uMap: { value: null }, uField: field.uniform, uViewport: { value: new Vector2(1, 1) }, uSize: { value: new Vector2(plane.width, plane.height) },
+      artUniforms: { uMap: { value: null }, uField: field.uniform, uViewport: { value: new Vector2(1, 1) },
         uOrigin: { value: toUv(...bright.position.slice(0, 2), plane.width, plane.height, plane.center[0], plane.center[1]) },
-        uReveal: { value: 0 }, uFlip: { value: 0 }, uTime: { value: 0 }, uOpacity: { value: 0 }, uIdle: { value: 0.1 } },
-      plateUniforms: { uMap: { value: null }, uField: field.uniform, uViewport: { value: new Vector2(1, 1) }, uAspect: { value: aspect },
-        uLines: { value: 96 }, uDraw: { value: 0 }, uOpen: { value: 0 }, uTime: { value: 0 }, uOpacity: { value: 0 },
-        uOrigin: { value: toUv(...bright.position.slice(0, 2), rect.z, rect.w, rect.x, rect.y) } },
+        uReveal: { value: 0 }, uDissolve: { value: 0 }, uTime: { value: 0 }, uOpacity: { value: 0 }, uIdle: { value: 0.1 } },
+      phenomenonUniforms: { uMap: { value: null }, uField: field.uniform, uPulse: field.pulse, uViewport: { value: new Vector2(1, 1) }, uAspect: { value: aspect },
+        uKind: { value: index }, uPad: { value: PHENOMENON_PAD }, uGrain: { value: 90 }, uDraw: { value: 0 }, uOpen: { value: 0 }, uTime: { value: 0 }, uOpacity: { value: 0 } },
       uniforms: { uPixelRatio: { value: 1 }, uStrength: { value: 1 }, uActive: { value: 0 } } };
   }), [field]);
   const trails = useMemo(() => {
@@ -244,14 +209,14 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
       offsets: figures.map(({ bounds }) => [-(bounds.left + bounds.right) * figureScale / 2, -(bounds.top + bounds.bottom) * figureScale / 2]),
       centers: stage.centers.map(([x, y]) => [(x - size.width / 2) * units, (size.height / 2 - y) * units]) };
   }, [size.width, size.height, figures]);
-  useEffect(() => () => figures.forEach(figure => { figure.points.dispose(); figure.lines.dispose(); figure.grid.dispose(); }), [figures]);
+  useEffect(() => () => figures.forEach(figure => { figure.points.dispose(); figure.lines.dispose(); }), [figures]);
   useEffect(() => {
     let alive = true;
     const loader = new TextureLoader();
     const textures = PORTFOLIO_DATA.projects.map((project, i) => loader.load(import.meta.env.BASE_URL + project.imageUrl.replace(/^\//, ''), texture => {
       if (!alive) { texture.dispose(); return; }
       texture.colorSpace = SRGBColorSpace;
-      figures[i].plateUniforms.uMap.value = texture;
+      figures[i].phenomenonUniforms.uMap.value = texture;
     }, undefined, () => { /* The constellation stays usable without its picture. */ }));
     return () => { alive = false; textures.forEach(texture => texture.dispose()); };
   }, [figures]);
@@ -314,7 +279,7 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
       const id = WORKS_IDS[i], held = motion.current[i];
       const highlighted = selected === id;
       held.open = frozen ? Number(opened === id) : damp(held.open, Number(opened === id), 2.6, dt);
-      // The engraving is cut while the figure is held, and fades faster than it was cut.
+      // The phenomenon blooms while the figure is held, and fades faster than it bloomed.
       const want = Number(highlighted && active);
       held.reveal = frozen ? want : damp(held.reveal, want, want > held.reveal ? 0.9 : 3, dt);
       const o = smooth(held.open);
@@ -331,19 +296,16 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
       const reveal = Math.max(held.reveal, o);
       // Through the materials, as for the star points; the memo stays read-only here.
       const art = group.children[2].material.uniforms;
-      art.uReveal.value = reveal; art.uFlip.value = o;
+      art.uReveal.value = reveal; art.uDissolve.value = o;
       art.uTime.value += frozen ? 0 : dt;
       art.uViewport.value.set(size.width, size.height);
       art.uOpacity.value = art.uMap.value ? authored.stars * arrival * dim : 0;
-      const plate = group.children[3].material.uniforms;
-      plate.uDraw.value = reveal; plate.uOpen.value = o; plate.uTime.value = art.uTime.value;
-      plate.uViewport.value.set(size.width, size.height);
-      // Engraved lines keep a steady spacing on screen, however large the plate is drawn.
-      plate.uLines.value = Math.min(120, Math.max(36, figures[i].rect.w * pose.scale / basis.units / (quality === 'low' ? 6 : 4.5)));
-      plate.uOpacity.value = plate.uMap.value ? authored.label * arrival * dim : 0;
-      const grid = group.children[4].material.uniforms;
-      grid.uReveal.value = reveal;
-      grid.uOpacity.value = authored.label * arrival * dim * (1 - 0.5 * o);
+      const phenomenon = group.children[3].material.uniforms;
+      phenomenon.uDraw.value = reveal; phenomenon.uOpen.value = o; phenomenon.uTime.value = art.uTime.value;
+      phenomenon.uViewport.value.set(size.width, size.height);
+      // Swarm stars keep a steady size on screen, however large the picture is drawn.
+      phenomenon.uGrain.value = Math.min(120, Math.max(30, figures[i].rect.w * pose.scale / basis.units / (quality === 'low' ? 8 : 6)));
+      phenomenon.uOpacity.value = phenomenon.uMap.value ? authored.label * arrival * dim : 0;
       const energy = finaleSmooth(0.34, 0.44, p);
       const strength = (highlighted ? 1.6 : selected ? 0.65 : 1) * authored.stars * arrival * (1 + energy * 3) * dim;
       group.children[0].material.opacity = (highlighted ? 0.55 : 0.16) * authored.stars * arrival * dim * (1 - 0.6 * o);
@@ -394,17 +356,13 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
       <mesh name={`works-art-${WORKS_IDS[i]}`} position={[figure.plane.center[0], figure.plane.center[1], figure.plane.localZ]} renderOrder={3}>
         <planeGeometry args={[figure.plane.width, figure.plane.height, 48, 1]} />
         <shaderMaterial vertexShader={ART_VERT} fragmentShader={ART_FRAG} uniforms={figure.artUniforms}
-          onUpdate={material => { material.uniforms = figure.artUniforms; }} transparent depthWrite={false} toneMapped={false} side={DoubleSide} />
+          onUpdate={material => { material.uniforms = figure.artUniforms; }} transparent depthWrite={false} toneMapped={false} />
       </mesh>
-      <mesh position={[figure.rect.x, figure.rect.y, figure.plane.localZ - 0.005]} renderOrder={1}>
-        <planeGeometry args={[figure.rect.z, figure.rect.w]} />
-        <shaderMaterial vertexShader={PLATE_VERT} fragmentShader={PLATE_FRAG} uniforms={figure.plateUniforms}
-          onUpdate={material => { material.uniforms = figure.plateUniforms; }} transparent depthWrite={false} toneMapped={false} />
+      <mesh name={`works-phenomenon-${WORKS_IDS[i]}`} position={[figure.rect.x, figure.rect.y, figure.plane.localZ - 0.005]} renderOrder={1}>
+        <planeGeometry args={[figure.rect.z * PHENOMENON_PAD, figure.rect.w * PHENOMENON_PAD]} />
+        <shaderMaterial vertexShader={PHENOMENON_VERT} fragmentShader={PHENOMENON_FRAG} uniforms={figure.phenomenonUniforms}
+          onUpdate={material => { material.uniforms = figure.phenomenonUniforms; }} transparent premultipliedAlpha depthWrite={false} toneMapped={false} />
       </mesh>
-      <lineSegments geometry={figure.grid} frustumCulled={false} renderOrder={2}>
-        <shaderMaterial vertexShader={GRID_VERT} fragmentShader={GRID_FRAG} uniforms={figure.gridUniforms}
-          onUpdate={material => { material.uniforms = figure.gridUniforms; }} transparent depthWrite={false} toneMapped={false} />
-      </lineSegments>
     </group>)}
     <Select enabled>
       <points ref={streamMesh} name="finale-streams" geometry={streams.geometry} frustumCulled={false} renderOrder={6} visible={false}>
