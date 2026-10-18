@@ -14,18 +14,27 @@ const center = new Vector3(...BLACK_HOLE_CENTER);
 const CONTOUR_OPACITY = 0.018;
 // Away from the Hero the window stays, quieter, so the cursor is one gesture site-wide.
 const SPECTRUM_AWAY = 0.45;
-// Aura gradient per chapter (inner, beside the hole -> outer), keyed to each chapter's sky
-// in "Không gian và chuyển chương": About gold cluster, Skills ringed planet, Education
-// pulsar cyan/violet, Experience spiral arm. Everything else keeps the ivory-amber signature.
-const AURA = {
-  hero: ['#F3E9D2', '#FFB25B'],
-  about: ['#FFD9A0', '#FF9C5B'],
-  skills: ['#E3D3B0', '#8FA8E0'],
-  education: ['#9FD8FF', '#8A6CFF'],
-  experience: ['#B9C9FF', '#FF7FA0'],
+// Aura gradient per chapter, from the chapter skies of "Không gian và chuyển chương"
+// (same shape and values as its CHAPTER_PALETTE, so the two can share one source once
+// merged). Inner = the chapter's light colour beside the hole; outer = its second haze
+// tone lifted to a visible brightness. Hero and the rest keep the ivory-amber signature.
+const CHAPTER_PALETTE = {
+  about: { haze: ['#2A1008', '#06202A'], light: '#FFC2A6' },
+  skills: { haze: ['#04242A', '#1E1A08'], light: '#A6F0E6' },
+  education: { haze: ['#140E34', '#061A34'], light: '#B4C2FF' },
+  experience: { haze: ['#2C0A26', '#180A30'], light: '#FFBCD8' },
 };
-AURA.departure = AURA.experience;
-const auraColors = Object.fromEntries(Object.entries(AURA).map(([key, pair]) => [key, pair.map(hex => new Color(hex))]));
+const lift = (hex, light) => {
+  const color = new Color(hex);
+  const peak = Math.max(color.r, color.g, color.b, 1e-4);
+  return color.multiplyScalar(0.55 / peak).lerp(light, 0.25);
+};
+const auraColors = { hero: [new Color('#F3E9D2'), new Color('#FFB25B')] };
+for (const [chapter, { haze, light }] of Object.entries(CHAPTER_PALETTE)) {
+  const inner = new Color(light);
+  auraColors[chapter] = [inner, lift(haze[1], inner)];
+}
+auraColors.departure = auraColors.experience;
 
 // Isopotential lines + the cursor's hidden spectrum, one convolution pass after bloom.
 export function GravitySpectrum({ portal, reduced = false }) {
@@ -44,8 +53,8 @@ export function GravitySpectrum({ portal, reduced = false }) {
       ['uViewport', new Uniform(new Vector2(1, 1))],
       ['uTime', new Uniform(0)],
       ['uPulse', new Uniform(new Vector4(0, 0, 9, 0))],
-      ['uAuraIn', new Uniform(new Color(AURA.hero[0]))],
-      ['uAuraOut', new Uniform(new Color(AURA.hero[1]))],
+      ['uAuraIn', new Uniform(auraColors.hero[0].clone())],
+      ['uAuraOut', new Uniform(auraColors.hero[1].clone())],
     ]),
   }), []);
   useEffect(() => () => effect.dispose(), [effect]);
