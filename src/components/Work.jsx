@@ -10,11 +10,16 @@ import { EDURA_ROUTE, navigateRoute } from '@/stores/useRouteStore';
 import { ConstellationCreditButton } from '@/components/ui/ConstellationCredits';
 import { finaleState } from '@/3d/utils/finale';
 import { placeWorksPreview } from '@/3d/utils/worksOrbit';
+import { revealDust, revealStarlight } from '@/lib/textReveal';
 
 const projects = PORTFOLIO_DATA.projects.map((project, index) => ({
   ...project, id: ['edura', 'veris', 'vie'][index], key: ['eduraLms', 'verisApp', 'viePerfume'][index],
 }));
 const focusRing = 'focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4';
+// Brightest star of each figure (Hipparcos, J1991.25): the plate is engraved outward from it.
+const SOURCES = { edura: 'α Cen · HIP 71683 · RA 14h 40m · Dec −60° 50′', veris: 'β Gem · HIP 37826 · RA 7h 45m · Dec +28° 02′',
+  vie: 'α Cyg · HIP 102098 · RA 20h 41m · Dec +45° 17′' };
+const PLATES = ['I', 'II', 'III'];
 
 export default function Work({ layoutRef, nativeNavigation = false }) {
   const root = useRef(null);
@@ -36,7 +41,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
   const target = finaleSelection === undefined ? selection ?? focus ?? hover : finaleSelection;
   const project = projects.find(item => item.id === target);
   const path = project ? `works.projects.${project.key}` : null;
-  // A held selection is the open project: its card flies out of the ring (WorksConstellations).
+  // A held selection is the open project: its atlas page turns (WorksConstellations).
   const open = Boolean(project) && selection === project.id && !fallback;
   const cancelClose = () => clearTimeout(closeTimer.current);
   const leave = () => {
@@ -169,6 +174,17 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
       observer.disconnect();
     };
   }, { scope: root, dependencies: [layoutRef, fallback, target, open, i18n.resolvedLanguage], revertOnUpdate: true });
+  // Opening turns the atlas page: the legend is inked in line by line, while the title and
+  // its myth are born from starlight like every heading on the site.
+  useGSAP((context, contextSafe) => {
+    if (!open || reduced) return;
+    root.current.querySelectorAll('[data-work-ink]').forEach((node, i) => {
+      gsap.fromTo(node, { clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0% 0 0)', duration: 0.9, delay: 0.3 + i * 0.16,
+        ease: 'power2.inOut', clearProps: 'clipPath' });
+    });
+    root.current.querySelectorAll('[data-work-star]').forEach(node => revealStarlight(node, contextSafe, false));
+    root.current.querySelectorAll('[data-work-dust]').forEach(node => revealDust(node, contextSafe, false));
+  }, { scope: root, dependencies: [open, target, reduced, i18n.resolvedLanguage], revertOnUpdate: true });
   useGSAP(() => { ScrollTrigger.refresh(true); }, {
     scope: section, dependencies: [i18n.resolvedLanguage, reduced], revertOnUpdate: true,
   });
@@ -176,12 +192,18 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
   const index = project ? projects.indexOf(project) : -1;
   const preview = <div id="work-preview" data-work-preview data-active={target ?? 'empty'} data-open={open || undefined}
         className={`absolute top-0 left-0 z-30 w-[calc(100%-2rem)] lg:w-72 xl:w-80 ${fallback ? 'top-auto! bottom-6! left-4! lg:left-[calc(50%-9rem)]!' : ''}`}>
-        {project && open ? <div data-work-content key={`${project.id}-open`}
+        {project && open ? <div data-work-content key={`${project.id}-open-${i18n.resolvedLanguage}`}
           onPointerEnter={cancelClose} onFocusCapture={event => focusProject(event, project.id)} onBlurCapture={leave}
           className="works-open-column rounded-sm border border-(--border-glass-subtle) bg-(--color-glass-surface) p-4 text-left backdrop-blur-md lg:border-0 lg:bg-transparent lg:p-0 lg:backdrop-blur-none">
-          <p className="font-mono text-[10px] tracking-[0.18em] text-white/55 uppercase">{t('works.voyage', { number: `0${index + 1}` })} · {t(`${path}.category`)}</p>
-          <h3 className="mt-3 font-display text-xl leading-tight font-bold tracking-[-0.03em] lg:text-3xl">{t(`${path}.title`)}</h3>
-          <p className="mt-3 font-body text-xs leading-relaxed text-white/70 lg:text-[13px]">{t(`${path}.description`)}</p>
+          <p data-work-ink className="font-mono text-[10px] tracking-[0.18em] text-white/55 uppercase">{t('works.plate', { number: PLATES[index] })} · {t(`works.constellations.${project.id}`)}</p>
+          <h3 data-work-star className="mt-3 font-display text-xl leading-tight font-bold tracking-[-0.03em] lg:text-3xl">{t(`${path}.title`)}</h3>
+          <p data-work-dust className="mt-2 font-serif text-sm text-white/80 italic lg:text-base">{t(`works.myths.${project.id}`)}</p>
+          <p data-work-ink className="mt-4 border-t border-white/15 pt-3 font-mono text-[10px] leading-relaxed text-white/45">
+            <span className="text-(--color-amber,#FFB25B)">{t('works.brightest')}</span><br />
+            <span>{SOURCES[project.id]}</span>
+          </p>
+          <p data-work-ink className="mt-3 font-mono text-[10px] tracking-[0.12em] text-white/55 uppercase">{t(`${path}.category`)}</p>
+          <p data-work-dust className="mt-2 font-body text-xs leading-relaxed text-white/70 lg:text-[13px]">{t(`${path}.description`)}</p>
           <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-1 font-mono text-[10px] text-white/50" aria-label={t('works.tagsLabel')}>
             {t(`${path}.tags`, { returnObjects: true }).map(tag => <li key={tag}>{tag}</li>)}
           </ul>
@@ -201,13 +223,14 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
           onPointerEnter={event => { cancelClose(); if (event.pointerType === 'mouse') interact('Hover', project.id); }} onPointerLeave={leave}
           onFocusCapture={event => focusProject(event, project.id)}
           onBlurCapture={leave}
-          className="grid h-48 grid-cols-[minmax(0,.6fr)_minmax(0,1fr)] items-center gap-3 rounded-sm border border-(--border-glass-subtle) bg-(--color-glass-surface) p-3 backdrop-blur-md lg:h-auto lg:grid-cols-1 lg:gap-2">
+          className={`grid h-48 grid-cols-[minmax(0,.6fr)_minmax(0,1fr)] items-center gap-3 rounded-sm border border-(--border-glass-subtle) bg-(--color-glass-surface) p-3 backdrop-blur-md lg:h-auto lg:grid-cols-1 lg:gap-2 ${fallback ? '' : 'lg:rounded-none lg:border-0 lg:border-l lg:border-white/20 lg:bg-black/60 lg:py-2 lg:pr-4 lg:pl-4 lg:text-left lg:backdrop-blur-sm'}`}>
           <img data-project-image src={project.imageUrl} alt={t(`${path}.previewAlt`)} width="1600" height={project.id === 'edura' ? 1131 : 900} loading="lazy" decoding="async"
             className={`aspect-[16/10] w-full object-contain ${fallback ? '' : 'lg:hidden'}`} />
           <div className="min-w-0">
+            <p className="mb-2 font-mono text-[9px] tracking-[0.18em] text-white/45 uppercase">{t('works.plate', { number: PLATES[index] })}</p>
             <h3 className="font-display text-sm leading-tight font-bold tracking-[-0.03em] lg:text-base">{t(`${path}.title`)}</h3>
             <p className="mt-2 font-body text-[11px] leading-relaxed text-white/70">{t(`${path}.category`)}</p>
-            {project.id === 'edura' ? <div className="flex flex-wrap justify-center gap-x-4">
+            {project.id === 'edura' ? <div className={`flex flex-wrap justify-center gap-x-4 ${fallback ? '' : 'lg:justify-start'}`}>
               <a id="work-case-edura" href={EDURA_ROUTE} data-work-action onClick={event => { playRadioClick(); if (!nativeNavigation) navigateRoute(event, EDURA_ROUTE); }}
                 className={`inline-flex min-h-11 min-w-11 items-center font-mono text-[10px] text-white underline underline-offset-4 ${focusRing}`}>{t('works.viewCaseStudy')} <span aria-hidden="true" className="ml-2">↗</span></a>
               <a href={project.link} data-work-behance onClick={playRadioClick} target="_blank" rel="noopener noreferrer"

@@ -84,15 +84,21 @@
     "tagsLabel": "Chuyên môn",
     "viewCaseStudy": "Xem case study",
     "selectLabel": "Chọn dự án",
-    "interactionHint": "Di chuột hoặc dùng Tab để xem. Chạm / nhấn để giữ lựa chọn; chạm lại, chạm nền hoặc Escape để bỏ chọn.",
+    "interactionHint": "Di chuột hoặc dùng Tab để đánh thức một chòm sao. Nhấn để mở trang atlas của nó; nhấn lại, chạm nền hoặc Escape để gấp trang.",
     "behanceReference": "Tham khảo trên Behance",
     "comingSoon": "Case study sắp ra mắt",
-    "voyage": "Hành trình {{number}}",
-    "backToOrbit": "Quay về quỹ đạo",
+    "plate": "Bản khắc {{number}}",
+    "backToOrbit": "Gấp trang, về bầu trời",
     "constellations": {
       "edura": "Centaurus",
       "veris": "Gemini",
       "vie": "Cygnus"
+    },
+    "brightest": "Sao sáng nhất · gốc bản khắc",
+    "myths": {
+      "edura": "Chiron, người thầy của các anh hùng",
+      "veris": "Castor và Pollux, hai linh hồn không rời",
+      "vie": "Thiên nga bay dọc dải Ngân Hà"
     }
   },
   "skills": {

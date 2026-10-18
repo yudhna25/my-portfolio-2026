@@ -84,15 +84,21 @@
     "tagsLabel": "Disciplines",
     "viewCaseStudy": "View case study",
     "selectLabel": "Select a project",
-    "interactionHint": "Hover or Tab to preview. Tap / press to keep a selection; tap again, tap the background or press Escape to clear.",
+    "interactionHint": "Hover or Tab to wake a constellation. Press to open its atlas page; press again, tap the background or Escape to close it.",
     "behanceReference": "Reference on Behance",
     "comingSoon": "Case study coming soon",
-    "voyage": "Voyage {{number}}",
-    "backToOrbit": "Back to orbit",
+    "plate": "Plate {{number}}",
+    "backToOrbit": "Close the page, back to the sky",
     "constellations": {
       "edura": "Centaurus",
       "veris": "Gemini",
       "vie": "Cygnus"
+    },
+    "brightest": "Brightest star · origin of the plate",
+    "myths": {
+      "edura": "Chiron, teacher of heroes",
+      "veris": "Castor and Pollux, two souls never apart",
+      "vie": "The swan flying along the Milky Way"
     }
   },
   "skills": {

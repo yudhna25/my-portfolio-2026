@@ -1,13 +1,11 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import { Select } from '@react-three/postprocessing';
-import { AdditiveBlending, BufferAttribute, BufferGeometry, DynamicDrawUsage, LinearFilter, Matrix4, Quaternion, Raycaster, SRGBColorSpace, TextureLoader, Vector2, Vector3, Vector4, WebGLRenderTarget } from 'three';
+import { AdditiveBlending, BufferAttribute, BufferGeometry, CanvasTexture, DoubleSide, DynamicDrawUsage, Matrix4, Quaternion, SRGBColorSpace, TextureLoader, Vector2, Vector3, Vector4 } from 'three';
 import data from '@/3d/data/worksConstellations.json';
 import { PORTFOLIO_DATA } from '@/data';
-import { i18n } from '@/i18n/config';
-import { WORKS_CARD_FRAG, WORKS_CARD_VERT, WORKS_LENS_FRAG, WORKS_LENS_VERT } from '@/3d/shaders/worksLens';
-import { clearTrail, createPointerTracker, createTrail, stepTrail } from '@/3d/utils/worksPointer';
-import { createRingText } from '@/3d/utils/worksRingText';
+import { useGravityField } from '@/3d/field/useGravityField';
+import { ART_FRAG, ART_VERT, GRID_FRAG, GRID_VERT, PLATE_FRAG, PLATE_VERT } from '@/3d/shaders/worksAtlas';
 import { BLACK_HOLE_CENTER, storyCameraPath } from '@/3d/utils/cameraPath';
 import { advanceWorksOrbit, worksBounds, worksStage, worksFigure, WORKS_IDS } from '@/3d/utils/worksOrbit';
 import { finaleState, finaleSmooth } from '@/3d/utils/finale';
@@ -78,19 +76,46 @@ const STREAM_VERT = /* glsl */ `
     vColor = mix(vec3(0.55, 0.7, 1.0), vec3(1.0, 0.97, 0.92), pow(head, 3.0)) * (0.8 + 1.6 * pow(head, 4.0));
   }
 `;
-// Cards behind the lens plane render only into the lens pass, on this layer.
-const BEHIND_LAYER = 5;
-const CARD_PAD = 1.12;
+// Each project is a plate in a night-sky star atlas (see worksAtlas.js).
+const IMAGE_ASPECTS = [1600 / 1131, 16 / 9, 16 / 9];
 const OPEN_Z = 2;
-const CARD_SCALE = 0.74;
-const CARD_KEYS = ['eduraLms', 'verisApp', 'viePerfume'];
+const FIGURE_SCALE = 0.9;
+const ART_PIXELS = 1536;
 const damp = (value, target, rate, delta) => target + (value - target) * Math.exp(-rate * delta);
 const smooth = t => t * t * (3 - 2 * t);
-function setLayer(group, behind, order) {
-  for (const child of group.children) {
-    if (behind) child.layers.set(BEHIND_LAYER); else child.layers.set(0);
-    child.renderOrder = order + (child.userData.order ?? 0);
+
+// RA/Dec graticule in the figure's own gnomonic projection (x = celestial west right).
+function buildGraticule(item, origin, reach) {
+  const { raDeg, decDeg } = item.projection.origin;
+  const scale = item.projection.uniformScale, rad = Math.PI / 180;
+  const ra0 = raDeg * rad, dec0 = decDeg * rad;
+  const project = (ra, dec) => {
+    const a = ra * rad, d = dec * rad;
+    const c = Math.sin(dec0) * Math.sin(d) + Math.cos(dec0) * Math.cos(d) * Math.cos(a - ra0);
+    if (c < 0.2) return null;
+    return [-Math.cos(d) * Math.sin(a - ra0) / c * scale, (Math.cos(dec0) * Math.sin(d) - Math.sin(dec0) * Math.cos(d) * Math.cos(a - ra0)) / c * scale];
+  };
+  const positions = [], radii = [];
+  const segment = (from, to) => {
+    if (!from || !to) return;
+    const r0 = Math.hypot(from[0] - origin[0], from[1] - origin[1]) / reach, r1 = Math.hypot(to[0] - origin[0], to[1] - origin[1]) / reach;
+    if (r0 > 1 && r1 > 1) return;
+    positions.push(from[0], from[1], -0.02, to[0], to[1], -0.02);
+    radii.push(r0, r1);
+  };
+  const span = 40;
+  const decStart = Math.ceil((decDeg - span) / 5) * 5;
+  for (let dec = decStart; dec <= decDeg + span; dec += 5) {
+    for (let ra = raDeg - span * 2; ra < raDeg + span * 2; ra += 1) segment(project(ra, dec), project(ra + 1, dec));
   }
+  const raStart = Math.ceil((raDeg - span * 2) / 7.5) * 7.5;
+  for (let ra = raStart; ra <= raDeg + span * 2; ra += 7.5) {
+    for (let dec = decDeg - span; dec < decDeg + span; dec += 1) segment(project(ra, dec), project(ra, dec + 1));
+  }
+  const geometry = new BufferGeometry();
+  geometry.setAttribute('position', new BufferAttribute(new Float32Array(positions), 3));
+  geometry.setAttribute('aRadius', new BufferAttribute(new Float32Array(radii), 1));
+  return geometry;
 }
 
 const STREAM_FRAG = /* glsl */ `
@@ -124,6 +149,8 @@ function projectWorks(layoutRef, root, camera, figures, groups, size, basis, rea
 }
 
 export function WorksConstellations({ frozen = false, quality = 'high', layoutRef }) {
+  const field = useGravityField();
+  const motion = useRef(WORKS_IDS.map(() => ({ reveal: 0, open: 0 })));
   const root = useRef(null);
   const trailMesh = useRef(null);
   const streamMesh = useRef(null);
@@ -143,16 +170,22 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
     const bounds = worksBounds(item);
     const corners = [new Vector3(bounds.left, bounds.top, 0), new Vector3(bounds.right, bounds.top, 0),
       new Vector3(bounds.right, bounds.bottom, 0), new Vector3(bounds.left, bounds.bottom, 0)];
-    const card = [(bounds.right - bounds.left) * CARD_PAD, (bounds.top - bounds.bottom) * CARD_PAD];
-    const trail = createTrail();
-    return { points, lines, bounds, corners, projected: new Vector3(), card,
-      cardCenter: [(bounds.left + bounds.right) / 2, (bounds.top + bounds.bottom) / 2, item.artwork.plane.localZ - 0.01],
-      trail, hover: 0, open: 0,
-      cardUniforms: { uMap: { value: null }, uMapReady: { value: 0 }, uImageAspect: { value: 1.6 }, uOpacity: { value: 0 },
-        uHover: { value: 0 }, uOpen: { value: 0 }, uTime: { value: 0 }, uRadius: { value: Math.min(...card) * 0.06 },
-        uSize: { value: new Vector2(...card) }, uTrail: { value: trail.samples } },
+    const index = data.constellations.indexOf(item), aspect = IMAGE_ASPECTS[index];
+    const { plane } = item.artwork;
+    const rect = new Vector4(plane.center[0], plane.center[1], plane.width, plane.width / aspect);
+    const bright = item.geometry.stars.reduce((a, b) => (b.vmag < a.vmag ? b : a));
+    const toUv = (x, y, w, h, cx, cy) => new Vector2((x - cx) / w + 0.5, (y - cy) / h + 0.5);
+    return { points, lines, bounds, corners, projected: new Vector3(), rect, plane,
+      grid: buildGraticule(item, bright.position, plane.width * 0.62),
+      gridUniforms: { uReveal: { value: 0 }, uOpacity: { value: 0 } },
+      artUniforms: { uMap: { value: null }, uField: field.uniform, uViewport: { value: new Vector2(1, 1) }, uSize: { value: new Vector2(plane.width, plane.height) },
+        uOrigin: { value: toUv(...bright.position.slice(0, 2), plane.width, plane.height, plane.center[0], plane.center[1]) },
+        uReveal: { value: 0 }, uFlip: { value: 0 }, uTime: { value: 0 }, uOpacity: { value: 0 }, uIdle: { value: 0.1 } },
+      plateUniforms: { uMap: { value: null }, uField: field.uniform, uViewport: { value: new Vector2(1, 1) }, uAspect: { value: aspect },
+        uLines: { value: 96 }, uDraw: { value: 0 }, uOpen: { value: 0 }, uTime: { value: 0 }, uOpacity: { value: 0 },
+        uOrigin: { value: toUv(...bright.position.slice(0, 2), rect.z, rect.w, rect.x, rect.y) } },
       uniforms: { uPixelRatio: { value: 1 }, uStrength: { value: 1 }, uActive: { value: 0 } } };
-  }), []);
+  }), [field]);
   const trails = useMemo(() => {
     const samples = quality === 'low' ? 12 : quality === 'medium' ? 18 : 24;
     const stars = data.constellations.flatMap((item, index) => item.geometry.stars.map(star => ({ position: star.position, index })));
@@ -198,68 +231,52 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
     const stage = worksStage(size.width, size.height, figures.map(figure => figure.bounds));
     const units = width / size.width;
     const mobile = size.width < 1024;
-    const orbitX = (stage.orbit.x - size.width / 2) * units, orbitY = (size.height / 2 - stage.orbit.y) * units;
-    // Open pose: the card flies forward in front of the lens, clear of the mono column.
-    const lensOpen = [orbitX + (mobile ? 0 : width * 0.09), mobile ? height * 0.1 : orbitY];
+    const figureScale = stage.scale * units * FIGURE_SCALE;
+    // Open: the figure comes forward, its received picture large, clear of the mono column.
+    const openCenter = [(stage.orbit.x - size.width / 2) * units + (mobile ? 0 : width * 0.12), mobile ? height * 0.21 : (size.height / 2 - stage.orbit.y) * units];
     const perspective = distance / (distance - OPEN_Z);
-    const open = figures.map(({ bounds }) => {
-      const w = (bounds.right - bounds.left) * CARD_PAD, h = (bounds.top - bounds.bottom) * CARD_PAD;
-      const scale = Math.min((mobile ? 0.34 : 0.44) * height / h, (mobile ? 0.86 : 0.42) * width / w) / perspective;
-      return { scale, x: lensOpen[0] - (bounds.left + bounds.right) / 2 * scale, y: lensOpen[1] - (bounds.top + bounds.bottom) / 2 * scale, z: OPEN_Z };
+    const open = figures.map(({ rect }) => {
+      const scale = Math.min((mobile ? 0.32 : 0.58) * height / rect.w, (mobile ? 0.9 : 0.5) * width / rect.z) / perspective;
+      return { scale, x: openCenter[0] - rect.x * scale, y: openCenter[1] - rect.y * scale, z: OPEN_Z };
     });
-    // Glass cards are heavier than bare figures: ride the same orbit a size smaller.
-    const figureScale = stage.scale * units * CARD_SCALE;
-    return { center, rotation, hole, scale: figureScale, drift: stage.drift * units, depth: distance * 0.12,
-      lens: [orbitX, orbitY], lensOpen, open, mobile,
+    return { center, rotation, hole, units, scale: figureScale, drift: stage.drift * units, depth: distance * 0.08, open,
       orbit: { x: (stage.orbit.x - size.width / 2) * units, y: (size.height / 2 - stage.orbit.y) * units, rx: stage.orbit.rx * units, ry: stage.orbit.ry * units },
       offsets: figures.map(({ bounds }) => [-(bounds.left + bounds.right) * figureScale / 2, -(bounds.top + bounds.bottom) * figureScale / 2]),
       centers: stage.centers.map(([x, y]) => [(x - size.width / 2) * units, (size.height / 2 - y) * units]) };
   }, [size.width, size.height, figures]);
-  useEffect(() => () => figures.forEach(figure => { figure.points.dispose(); figure.lines.dispose(); }), [figures]);
-  useEffect(() => () => trails.geometry.dispose(), [trails]);
-  useEffect(() => () => streams.geometry.dispose(), [streams]);
-  const lens = useMemo(() => ({
-    target: new WebGLRenderTarget(1, 1, { minFilter: LinearFilter, magFilter: LinearFilter, depthBuffer: false, stencilBuffer: false }),
-    buffer: new Vector2(), point: new Vector3(), pointer: new Vector2(), raycaster: new Raycaster(), strength: 0, open: 0, scroll: 0, time: 0,
-    uniforms: { uScene: { value: null }, uText: { value: null }, uResolution: { value: new Vector2(1, 1) }, uCenter: { value: new Vector2() },
-      uEinstein: { value: 1 }, uShadow: { value: 1 }, uStrength: { value: 0 }, uTime: { value: 0 }, uWarm: { value: 0 },
-      uTextAlpha: { value: 0 }, uTextScroll: { value: 0 }, uRing: { value: new Vector4(1, 0.5, -0.1, 1) } },
-  }), []);
-  const lensMesh = useRef(null);
-  const frontMesh = useRef(null);
-  useEffect(() => {
-    lens.uniforms.uScene.value = lens.target.texture;
-    lens.raycaster.layers.enableAll();
-    const ring = createRingText();
-    lens.ring = ring;
-    lens.uniforms.uText.value = ring.texture;
-    lens.tracker = createPointerTracker();
-    return () => { lens.target.dispose(); ring.dispose(); lens.tracker.dispose(); };
-  }, [lens]);
+  useEffect(() => () => figures.forEach(figure => { figure.points.dispose(); figure.lines.dispose(); figure.grid.dispose(); }), [figures]);
   useEffect(() => {
     let alive = true;
     const loader = new TextureLoader();
     const textures = PORTFOLIO_DATA.projects.map((project, i) => loader.load(import.meta.env.BASE_URL + project.imageUrl.replace(/^\//, ''), texture => {
       if (!alive) { texture.dispose(); return; }
       texture.colorSpace = SRGBColorSpace;
-      const values = figures[i]?.cardUniforms;
-      if (!values) return;
-      values.uMap.value = texture; values.uMapReady.value = 1;
-      values.uImageAspect.value = texture.image.width / texture.image.height;
-    }, undefined, () => { /* The glass card stays usable without its picture. */ }));
+      figures[i].plateUniforms.uMap.value = texture;
+    }, undefined, () => { /* The constellation stays usable without its picture. */ }));
     return () => { alive = false; textures.forEach(texture => texture.dispose()); };
   }, [figures]);
+  useEffect(() => () => trails.geometry.dispose(), [trails]);
+  useEffect(() => () => streams.geometry.dispose(), [streams]);
   useEffect(() => {
     let alive = true;
-    const loader = new TextureLoader();
-    const textures = data.constellations.map((item, i) => loader.load(import.meta.env.BASE_URL + item.artwork.url.replace(/^\//, ''), texture => {
-      if (!alive) { texture.dispose(); return; }
-      texture.colorSpace = SRGBColorSpace;
-      const material = groups.current[i]?.children[2]?.material;
-      if (material) { material.map = texture; material.needsUpdate = true; }
-    }, undefined, () => { /* Stars and semantic targets remain usable if artwork fails. */ }));
+    const textures = [];
+    // Rasterise the vector figures large: the open page fills a third of the screen.
+    data.constellations.forEach((item, i) => {
+      const image = new Image();
+      image.src = import.meta.env.BASE_URL + item.artwork.url.replace(/^\//, '');
+      image.decode().then(() => {
+        if (!alive) return;
+        const canvas = document.createElement('canvas');
+        canvas.width = canvas.height = ART_PIXELS;
+        canvas.getContext('2d').drawImage(image, 0, 0, ART_PIXELS, ART_PIXELS);
+        const texture = new CanvasTexture(canvas);
+        texture.colorSpace = SRGBColorSpace;
+        textures.push(texture);
+        figures[i].artUniforms.uMap.value = texture;
+      }).catch(() => { /* Stars and semantic targets remain usable if artwork fails. */ });
+    });
     return () => { alive = false; textures.forEach(texture => texture.dispose()); };
-  }, []);
+  }, [figures]);
   useEffect(() => () => { const data = layoutRef?.current; if (data) { data.ready = false; data.onChange?.(); } }, [layoutRef]);
 
   useFrame(({ gl, camera }, delta) => {
@@ -285,85 +302,54 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
     root.current.visible = active || arriving && arrival > 0 || !frozen && finale && p < 0.55;
     const selected = finale ? state.worksFinaleSelection : state.worksSelection ?? state.worksFocus ?? state.worksHover;
     advanceWorksOrbit(state.worksOrbit, delta, Boolean(selected), frozen, active && !document.hidden);
-    lens.strength = !root.current.visible ? 0 : active ? 1 : arriving ? arrival : finale ? 1 - finaleSmooth(0, 0.12, p) : 0;
     if (!root.current.visible) { projectWorks(layoutRef, root.current, camera, figures, groups.current, size, basis, false); return; }
     const dt = Math.min(0.05, Math.max(0, delta));
-    if (!frozen) lens.time += dt;
     const opened = active ? state.worksSelection : null;
-    const lensOn = lens.strength > 0.002;
-    // Swirl only under a real mouse; touch keeps tap-to-open.
-    let hit = null, hitCard = null;
-    if (active && !frozen && lens.tracker?.mouse) {
-      lens.pointer.set(lens.tracker.x / size.width * 2 - 1, 1 - lens.tracker.y / size.height * 2);
-      lens.raycaster.setFromCamera(lens.pointer, camera);
-      const found = lens.raycaster.intersectObjects(groups.current.map(group => group?.children[3]).filter(Boolean), false)[0];
-      if (found?.uv) { hit = found.uv; hitCard = found.object; }
-    }
-    let openAmount = 0, hoverAmount = 0;
     const phase = state.worksOrbit.latched ? state.worksOrbit.origin : state.worksOrbit.phase;
     root.current.userData.phase = phase;
     root.current.userData.progress = p;
     for (let i = 0; i < groups.current.length; i++) {
       const group = groups.current[i];
       if (!group) continue;
-      const figure = figures[i], id = WORKS_IDS[i];
-      figure.open = frozen ? Number(opened === id) : damp(figure.open, Number(opened === id), 3.4, dt);
-      const o = smooth(figure.open);
+      const id = WORKS_IDS[i], held = motion.current[i];
+      const highlighted = selected === id;
+      held.open = frozen ? Number(opened === id) : damp(held.open, Number(opened === id), 2.6, dt);
+      // The engraving is cut while the figure is held, and fades faster than it was cut.
+      const want = Number(highlighted && active);
+      held.reveal = frozen ? want : damp(held.reveal, want, want > held.reveal ? 0.9 : 3, dt);
+      const o = smooth(held.open);
       const pose = worksFigure(p, phase, i, basis, sampled.current);
       if (o > 0.0001) {
-        // Fly out of the ring toward the camera, arcing forward on the way.
         const flight = basis.open[i];
         pose.x += (flight.x - pose.x) * o; pose.y += (flight.y - pose.y) * o;
-        pose.z += (flight.z - pose.z) * o + Math.sin(o * Math.PI) * 2.5;
+        pose.z += (flight.z - pose.z) * o;
         pose.scale += (flight.scale - pose.scale) * o;
       }
       group.position.set(pose.x, pose.y, pose.z);
       group.scale.setScalar(pose.scale);
-      const behind = lensOn && pose.z < -0.05;
-      setLayer(group, behind, lensOn && !behind ? 11 : 0);
-      const highlighted = selected === id;
-      figure.hover = frozen ? Number(highlighted) : damp(figure.hover, Number(highlighted), 6, dt);
-      openAmount = Math.max(openAmount, o); hoverAmount = Math.max(hoverAmount, figure.hover);
-      const card = figure.cardUniforms;
-      // The glass gives way to the tidal streams as the finale's inspiral begins.
-      card.uOpacity.value = arrival * (1 - finaleSmooth(0.1, 0.26, p)) * (opened && opened !== id ? 0.3 : 1);
-      card.uHover.value = figure.hover; card.uOpen.value = o; card.uTime.value = lens.time;
-      if (hitCard === group.children[3]) stepTrail(figure.trail, hit, figure.card[0] / figure.card[1], dt);
-      else if (frozen || !active) clearTrail(figure.trail);
-      else stepTrail(figure.trail, null, 1, dt);
+      const dim = opened && opened !== id ? 0.12 : 1;
+      const reveal = Math.max(held.reveal, o);
+      // Through the materials, as for the star points; the memo stays read-only here.
+      const art = group.children[2].material.uniforms;
+      art.uReveal.value = reveal; art.uFlip.value = o;
+      art.uTime.value += frozen ? 0 : dt;
+      art.uViewport.value.set(size.width, size.height);
+      art.uOpacity.value = art.uMap.value ? authored.stars * arrival * dim : 0;
+      const plate = group.children[3].material.uniforms;
+      plate.uDraw.value = reveal; plate.uOpen.value = o; plate.uTime.value = art.uTime.value;
+      plate.uViewport.value.set(size.width, size.height);
+      // Engraved lines keep a steady spacing on screen, however large the plate is drawn.
+      plate.uLines.value = Math.min(120, Math.max(36, figures[i].rect.w * pose.scale / basis.units / (quality === 'low' ? 6 : 4.5)));
+      plate.uOpacity.value = plate.uMap.value ? authored.label * arrival * dim : 0;
+      const grid = group.children[4].material.uniforms;
+      grid.uReveal.value = reveal;
+      grid.uOpacity.value = authored.label * arrival * dim * (1 - 0.5 * o);
       const energy = finaleSmooth(0.34, 0.44, p);
-      const strength = (highlighted ? 1.6 : selected ? 0.65 : 1) * authored.stars * arrival * (1 + energy * 3);
-      group.children[0].material.opacity = (highlighted ? 0.65 : 0.16) * authored.stars * arrival;
+      const strength = (highlighted ? 1.6 : selected ? 0.65 : 1) * authored.stars * arrival * (1 + energy * 3) * dim;
+      group.children[0].material.opacity = (highlighted ? 0.55 : 0.16) * authored.stars * arrival * dim * (1 - 0.6 * o);
       group.children[1].material.uniforms.uStrength.value = strength;
       group.children[1].material.uniforms.uActive.value = (highlighted ? 1 : 0) + energy * 2;
       group.children[1].material.uniforms.uPixelRatio.value = gl.getPixelRatio();
-      const art = group.children[2].material;
-      art.opacity = art.map ? (highlighted ? 0.3 : 0.1) * (1 - 0.7 * o) * authored.stars * arrival : 0;
-    }
-    if (lensOn) {
-      const values = lens.uniforms;
-      const dpr = gl.getPixelRatio();
-      root.current.updateWorldMatrix(true, false);
-      lens.point.set(basis.lens[0] + (basis.lensOpen[0] - basis.lens[0]) * openAmount,
-        basis.lens[1] + (basis.lensOpen[1] - basis.lens[1]) * openAmount, 0).applyMatrix4(root.current.matrixWorld).project(camera);
-      values.uCenter.value.set((lens.point.x + 1) / 2 * size.width * dpr, (lens.point.y + 1) / 2 * size.height * dpr);
-      const short = Math.min(size.width, size.height) * dpr;
-      values.uEinstein.value = short * (0.075 + 0.105 * openAmount);
-      values.uShadow.value = values.uEinstein.value * (0.42 - 0.17 * openAmount);
-      values.uStrength.value = lens.strength;
-      values.uTime.value = lens.time;
-      values.uWarm.value = Math.max(openAmount, hoverAmount * 0.6);
-      // The open project's name rides a tilted ring: lifted through the lens behind, crossing in front.
-      const radius = basis.mobile ? size.width * 0.46 : Math.min(size.height * 0.5, size.width * 0.3);
-      values.uRing.value.set(radius * dpr, basis.mobile ? 0.62 : 0.5, -0.1, size.height * (basis.mobile ? 0.07 : 0.11) * dpr);
-      values.uTextAlpha.value = smooth(Math.max(0, Math.min(1, (openAmount - 0.3) / 0.7)));
-      if (!frozen) lens.scroll += dt * 0.012;
-      values.uTextScroll.value = lens.scroll;
-      const index = WORKS_IDS.indexOf(opened);
-      if (index >= 0 && lens.ring) {
-        const path = `works.projects.${CARD_KEYS[index]}`;
-        lens.ring.update(`${i18n.t(`${path}.title`)} • ${i18n.t('works.voyage', { number: `0${index + 1}` }).toUpperCase()} • ${i18n.t(`${path}.category`)} • `);
-      }
     }
     projectWorks(layoutRef, root.current, camera, figures, groups.current, size, basis, active);
     streamMesh.current.visible = finale && authored.streams > 0;
@@ -397,62 +383,28 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
     }
   }, -0.75);
 
-  useFrame(({ gl, scene, camera }) => {
-    const mesh = lensMesh.current;
-    if (!mesh) return;
-    mesh.visible = lens.strength > 0.002 && Boolean(root.current?.visible);
-    if (frontMesh.current) frontMesh.current.visible = mesh.visible && lens.uniforms.uTextAlpha.value > 0.001;
-    if (!mesh.visible) return;
-    gl.getDrawingBufferSize(lens.buffer);
-    if (lens.target.width !== lens.buffer.x || lens.target.height !== lens.buffer.y) lens.target.setSize(lens.buffer.x, lens.buffer.y);
-    lens.uniforms.uResolution.value.copy(lens.buffer);
-    // Cards behind the lens plane, alone, for the lens to bend; same camera, same frame.
-    const previous = gl.getRenderTarget(), autoClear = gl.autoClear, background = scene.background;
-    const mask = camera.layers.mask, clearAlpha = gl.getClearAlpha();
-    try {
-      scene.background = null;
-      camera.layers.set(BEHIND_LAYER);
-      gl.autoClear = true;
-      gl.setRenderTarget(lens.target);
-      gl.setClearAlpha(0);
-      gl.render(scene, camera);
-    } finally {
-      gl.setClearAlpha(clearAlpha);
-      gl.setRenderTarget(previous);
-      gl.autoClear = autoClear;
-      camera.layers.mask = mask;
-      scene.background = background;
-    }
-  }, -0.6);
-
-  return <>
-  <mesh ref={lensMesh} name="works-lens" frustumCulled={false} renderOrder={9} visible={false}>
-    <planeGeometry args={[2, 2]} />
-    <shaderMaterial vertexShader={WORKS_LENS_VERT} fragmentShader={WORKS_LENS_FRAG} uniforms={lens.uniforms}
-      onUpdate={material => { material.uniforms = lens.uniforms; }} transparent premultipliedAlpha depthTest={false} depthWrite={false} toneMapped={false} />
-  </mesh>
-  <mesh ref={frontMesh} name="works-lens-front" frustumCulled={false} renderOrder={12} visible={false}>
-    <planeGeometry args={[2, 2]} />
-    <shaderMaterial vertexShader={WORKS_LENS_VERT} fragmentShader={WORKS_LENS_FRAG} uniforms={lens.uniforms} defines={{ FRONT_PASS: 1 }}
-      onUpdate={material => { material.uniforms = lens.uniforms; }} transparent premultipliedAlpha depthTest={false} depthWrite={false} toneMapped={false} />
-  </mesh>
-  <group ref={root} name="works-constellations" position={basis.center} quaternion={basis.rotation}>
+  return <group ref={root} name="works-constellations" position={basis.center} quaternion={basis.rotation}>
     {figures.map((figure, i) => <group key={WORKS_IDS[i]} name={`works-${WORKS_IDS[i]}`} ref={group => { groups.current[i] = group; }}>
-      <lineSegments geometry={figure.lines} frustumCulled={false} userData={{ order: 0.2 }}>
+      <lineSegments geometry={figure.lines} frustumCulled={false} renderOrder={4}>
         <lineBasicMaterial color="#FFFFFF" transparent opacity={0.13} depthWrite={false} toneMapped={false} />
       </lineSegments>
-      <points geometry={figure.points} frustumCulled={false} userData={{ order: 0.3 }}>
+      <points geometry={figure.points} frustumCulled={false} renderOrder={5}>
         <shaderMaterial vertexShader={STAR_VERT} fragmentShader={STAR_FRAG} uniforms={figure.uniforms} transparent depthWrite={false} toneMapped={false} />
       </points>
-      <mesh name={`works-art-${WORKS_IDS[i]}`} userData={{ order: 0.1 }} position={[...data.constellations[i].artwork.plane.center.slice(0, 2), data.constellations[i].artwork.plane.localZ]}>
-        <planeGeometry args={[data.constellations[i].artwork.plane.width, data.constellations[i].artwork.plane.height]} />
-        <meshBasicMaterial transparent opacity={0} depthWrite={false} toneMapped={false} />
+      <mesh name={`works-art-${WORKS_IDS[i]}`} position={[figure.plane.center[0], figure.plane.center[1], figure.plane.localZ]} renderOrder={3}>
+        <planeGeometry args={[figure.plane.width, figure.plane.height, 48, 1]} />
+        <shaderMaterial vertexShader={ART_VERT} fragmentShader={ART_FRAG} uniforms={figure.artUniforms}
+          onUpdate={material => { material.uniforms = figure.artUniforms; }} transparent depthWrite={false} toneMapped={false} side={DoubleSide} />
       </mesh>
-      <mesh name={`works-card-${WORKS_IDS[i]}`} position={figure.cardCenter} frustumCulled={false}>
-        <planeGeometry args={figure.card} />
-        <shaderMaterial vertexShader={WORKS_CARD_VERT} fragmentShader={WORKS_CARD_FRAG} uniforms={figure.cardUniforms}
-          onUpdate={material => { material.uniforms = figure.cardUniforms; }} transparent depthWrite={false} toneMapped={false} />
+      <mesh position={[figure.rect.x, figure.rect.y, figure.plane.localZ - 0.005]} renderOrder={1}>
+        <planeGeometry args={[figure.rect.z, figure.rect.w]} />
+        <shaderMaterial vertexShader={PLATE_VERT} fragmentShader={PLATE_FRAG} uniforms={figure.plateUniforms}
+          onUpdate={material => { material.uniforms = figure.plateUniforms; }} transparent depthWrite={false} toneMapped={false} />
       </mesh>
+      <lineSegments geometry={figure.grid} frustumCulled={false} renderOrder={2}>
+        <shaderMaterial vertexShader={GRID_VERT} fragmentShader={GRID_FRAG} uniforms={figure.gridUniforms}
+          onUpdate={material => { material.uniforms = figure.gridUniforms; }} transparent depthWrite={false} toneMapped={false} />
+      </lineSegments>
     </group>)}
     <Select enabled>
       <points ref={streamMesh} name="finale-streams" geometry={streams.geometry} frustumCulled={false} renderOrder={6} visible={false}>
@@ -464,6 +416,5 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
       <shaderMaterial vertexShader={TRAIL_VERT} fragmentShader={TRAIL_FRAG} uniforms={trails.uniforms}
         onUpdate={material => { material.uniforms = trails.uniforms; }} transparent depthWrite={false} toneMapped={false} />
     </lineSegments>
-  </group>
-  </>;
+  </group>;
 }
