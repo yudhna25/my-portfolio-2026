@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { BlendFunction, Effect, EffectAttribute } from 'postprocessing';
-import { Texture, Uniform, Vector2, Vector3, Vector4 } from 'three';
+import { Color, Texture, Uniform, Vector2, Vector3, Vector4 } from 'three';
 import { useGravityField } from '@/3d/field/useGravityField';
 import { GRAVITY_SPECTRUM_FRAG } from '@/3d/shaders/gravitySpectrum';
 import { BLACK_HOLE_CENTER } from '@/3d/utils/cameraPath';
@@ -14,6 +14,18 @@ const center = new Vector3(...BLACK_HOLE_CENTER);
 const CONTOUR_OPACITY = 0.018;
 // Away from the Hero the window stays, quieter, so the cursor is one gesture site-wide.
 const SPECTRUM_AWAY = 0.45;
+// Aura gradient per chapter (inner, beside the hole -> outer), keyed to each chapter's sky
+// in "Không gian và chuyển chương": About gold cluster, Skills ringed planet, Education
+// pulsar cyan/violet, Experience spiral arm. Everything else keeps the ivory-amber signature.
+const AURA = {
+  hero: ['#F3E9D2', '#FFB25B'],
+  about: ['#FFD9A0', '#FF9C5B'],
+  skills: ['#E3D3B0', '#8FA8E0'],
+  education: ['#9FD8FF', '#8A6CFF'],
+  experience: ['#B9C9FF', '#FF7FA0'],
+};
+AURA.departure = AURA.experience;
+const auraColors = Object.fromEntries(Object.entries(AURA).map(([key, pair]) => [key, pair.map(hex => new Color(hex))]));
 
 // Isopotential lines + the cursor's hidden spectrum, one convolution pass after bloom.
 export function GravitySpectrum({ portal, reduced = false }) {
@@ -32,6 +44,8 @@ export function GravitySpectrum({ portal, reduced = false }) {
       ['uViewport', new Uniform(new Vector2(1, 1))],
       ['uTime', new Uniform(0)],
       ['uPulse', new Uniform(new Vector4(0, 0, 9, 0))],
+      ['uAuraIn', new Uniform(new Color(AURA.hero[0]))],
+      ['uAuraOut', new Uniform(new Color(AURA.hero[1]))],
     ]),
   }), []);
   useEffect(() => () => effect.dispose(), [effect]);
@@ -73,6 +87,11 @@ export function GravitySpectrum({ portal, reduced = false }) {
     const heroIdle = state.storyChapter === 'hero' && p === 0;
     const target = loading || reduced || finale > 0 || (state.storyChapter === 'portal' && p > 0) ? 0 : heroIdle ? 1 : SPECTRUM_AWAY;
     spectrum.current += (target - spectrum.current) * (1 - Math.exp(-Math.min(delta, 0.1) * 6));
+    // The aura's colour drifts to the chapter's sky rather than switching with it.
+    const [inner, outer] = auraColors[state.storyChapter] ?? auraColors.hero;
+    const blend = reduced ? 1 : 1 - Math.exp(-Math.min(delta, 0.1) * 1.4);
+    u.get('uAuraIn').value.lerp(inner, blend);
+    u.get('uAuraOut').value.lerp(outer, blend);
     contour.set(opacity, finaleSmooth(0.02, 0.3, finale), 7 * finaleSmooth(0.08, 0.46, finale), spectrum.current);
   });
 
