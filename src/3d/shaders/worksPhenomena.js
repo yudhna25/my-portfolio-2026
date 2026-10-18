@@ -1,5 +1,5 @@
 // Works as a sky full of hidden phenomena. Each constellation keeps a real one inside it
-// (Omega Centauri in the Centaur, the Eskimo Nebula in the Twins, the Veil Nebula in the
+// (Omega Centauri in the Centaur, the Eskimo Nebula in the Twins, Tabby's Star in the
 // Swan), and the project's picture is made of that phenomenon's light:
 //   rest   the cursor's trail lets you glimpse it behind the figure,
 //   hover  it blooms from the brightest star and the picture forms out of it,
@@ -171,16 +171,25 @@ export const PHENOMENON_FRAG = /* glsl */ `
       float star = exp(-r * r / 0.0005) * 1.8 + exp(-r * r / 0.012) * 0.3;
       emission = tint * (gas + halo) + mix(cool, amber, 0.6) * rim * 0.9 + mix(vec3(0.92, 0.96, 1.0), cool, 0.3) * star * bloom;
     } else {
-      // Veil Nebula: the silk a star left when it burst, hydrogen red beside oxygen teal.
-      vec2 w = q * 2.2 + vec2(fbm(q * 1.7 + uTime * 0.02), fbm(q * 1.7 + 4.1 - uTime * 0.02)) * 1.2;
-      float red = ridge(w * 3.0, 18.0) + ridge(w * 6.5 + 2.0, 22.0) * 0.5;
-      float teal = ridge(w * 3.0 + vec2(0.07, 0.04), 18.0);
-      float front = bloom * 1.8 - r + (fbm(q * 3.0) - 0.5) * 0.5;
-      float swept = smoothstep(0.0, 0.15, front);
-      float shock = exp(-front * front / 0.006) * (1.0 - uOpen) * smoothstep(0.0, 0.1, bloom);
-      float gas = glowAt(p, r) * swept * (0.2 + 1.5 * red);
-      vec3 rose = vec3(1.0, 0.36, 0.42), oxygen = vec3(0.32, 0.78, 0.9);
-      emission = rose * (gas * 0.9 + red * (swept * 0.3 + shock * 1.2)) + oxygen * teal * (swept * 0.3 + shock * 1.0);
+      // Tabby's Star: a star whose light sinks without warning. It shines through mist and a
+      // drifting swarm of dark shards, so the picture is lit, shadowed and lit again.
+      vec2 dir = q / max(r, 1e-4);
+      float reach = bloom * 1.7;
+      float lit = smoothstep(reach, reach - 0.3, r + (fbm(dir * 2.0 + uTime * 0.1) - 0.5) * 0.2);
+      // Irregular dimmings, deep and slow, never on a rhythm.
+      float dim = 1.0 - 0.45 * smoothstep(0.55, 0.9, noise(vec2(uTime * 0.3, 7.0))) - 0.2 * smoothstep(0.6, 0.95, noise(vec2(uTime * 1.1, 2.0)));
+      // Shards orbit the star, inner ones faster: dark clumps whose star-facing side catches light.
+      float turn = uTime * 0.12 / (0.3 + r);
+      mat2 spin = mat2(cos(turn), sin(turn), -sin(turn), cos(turn));
+      float band = smoothstep(0.08, 0.22, r) * (1.0 - smoothstep(0.75, 1.0, r));
+      float shard = smoothstep(0.5, 0.62, fbm(spin * q * 2.6 + 11.0)) * band;
+      float sunward = smoothstep(0.5, 0.62, fbm(spin * (q - dir * 0.025) * 2.6 + 11.0)) * band;
+      float lining = max(shard - sunward, 0.0);
+      float rays = pow(fbm(dir * 3.5 + vec2(r * 1.5 - uTime * 0.04, 0.0)), 3.0) * 2.0;
+      vec3 warm = vec3(1.0, 0.9, 0.74);
+      float light = (0.5 * (0.35 + rays * 0.8) / (1.0 + r * r / 0.02) + glowAt(p, r) * 1.4 / (1.0 + r * r / 0.3)) * lit * dim;
+      float star = exp(-r * r / 0.0004) * 2.0 + exp(-r * r / 0.008) * 0.4;
+      emission = warm * light * (1.0 - 0.92 * shard) + amber * lining * lit * dim * 0.8 + vec3(1.0, 0.97, 0.9) * star * bloom * dim;
     }
     // Once the picture is open the phenomenon steps back to frame it.
     emission *= shown * (1.0 + wave * 2.5) * (1.0 - 0.35 * uOpen);
