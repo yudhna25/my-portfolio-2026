@@ -21,28 +21,39 @@ const VERT = /* glsl */ `
   attribute vec3 aColor;
   attribute vec4 aShape; // size, kind (0 gas, 1 star), seed, unused
   uniform float uPixelRatio, uTime, uWeight, uProjection, uGain;
+  uniform vec3 uFlow; // the cloud's long axis, for light rippling along it
   varying vec3 vColor;
   varying float vAlpha, vKind, vSeed;
   void main() {
-    vec3 world = position;
-    // Gas billows very slowly in place.
-    world += (1.0 - aShape.y) * 0.35 * vec3(sin(uTime * 0.11 + aShape.z * 40.0), sin(uTime * 0.09 + aShape.z * 23.0), cos(uTime * 0.1 + aShape.z * 31.0));
+    vec3 p = position;
+    float t = uTime, gas = 1.0 - aShape.y;
+    // Alive at rest: a slow, coherent flow field, so neighbouring gas moves together and the
+    // ribbon undulates and churns instead of jittering. Stars inside it drift less.
+    vec3 field = vec3(
+      sin(p.y * 0.11 + t * 0.13) + 0.5 * sin(p.z * 0.23 - t * 0.07 + aShape.z * 6.0),
+      sin(p.z * 0.09 + t * 0.11) + 0.5 * sin(p.x * 0.21 + t * 0.09 + aShape.z * 5.0),
+      sin(p.x * 0.10 - t * 0.12) + 0.5 * sin(p.y * 0.19 - t * 0.08 + aShape.z * 4.0));
+    vec3 world = p + field * mix(0.3, 1.2, gas);
     vec4 view = viewMatrix * vec4(world, 1.0);
     float depth = -view.z;
     gl_Position = projectionMatrix * view;
-    float gas = 1.0 - aShape.y;
-    float pixels = aShape.x * uPixelRatio * uProjection / max(depth, 1.0);
+    // Puffs swell and settle, each on its own slow breath.
+    float breath = 1.0 + gas * 0.14 * sin(t * 0.28 + aShape.z * 20.0);
+    float pixels = aShape.x * breath * uPixelRatio * uProjection / max(depth, 1.0);
     gl_PointSize = clamp(pixels, 1.0, mix(6.0, 160.0, gas) * uPixelRatio);
     vColor = aColor;
     vKind = aShape.y;
     vSeed = aShape.z;
     float twinkle = mix(1.0, 0.8 + 0.2 * sin(uTime * (0.6 + aShape.z * 1.4) + aShape.z * 50.0), aShape.y);
+    // Slow waves of light travel down the ribbon, as if it were lit from within.
+    float ripple = 0.78 + 0.32 * sin(dot(p, uFlow) * 0.11 - t * 0.42 + aShape.z * 0.8);
     // Gas fades as it nears the lens instead of filling the frame; faint far puffs drop out.
     float nearFade = smoothstep(4.0, 14.0, depth);
-    vAlpha = uGain * uWeight * twinkle * nearFade * step(0.0, depth) * min(1.0, pixels);
+    vAlpha = uGain * uWeight * twinkle * mix(1.0, ripple, mix(0.4, 1.0, gas)) * nearFade * step(0.0, depth) * min(1.0, pixels);
   }
 `;
 const FRAG = /* glsl */ `
+  uniform float uTime;
   varying vec3 vColor;
   varying float vAlpha, vKind, vSeed;
   void main() {
@@ -52,8 +63,9 @@ const FRAG = /* glsl */ `
     if (vKind > 0.5) {
       a = pow(1.0 - smoothstep(0.0, 0.5, d), 2.6);
     } else {
-      // Gas puff: a soft, slightly offset core so overlapping puffs read as billows.
-      vec2 skew = c + 0.08 * vec2(sin(vSeed * 40.0), cos(vSeed * 57.0));
+      // Gas puff: a soft, offset core that slowly circles, so overlapping puffs churn.
+      float turn = vSeed * 40.0 + uTime * (0.12 + 0.1 * vSeed);
+      vec2 skew = c + 0.08 * vec2(sin(turn), cos(turn * 1.3));
       a = exp(-dot(skew, skew) * 14.0) * 0.15;
     }
     a *= vAlpha;
@@ -76,7 +88,10 @@ const BAND_VERT = /* glsl */ `
   void main() {
     float t = aBand.x;
     vec3 toCamera = normalize(cameraPosition - position);
-    vec3 side = normalize(cross(aTangent, toCamera));
+    // Where the band runs straight away from the lens the cross product vanishes; lean on a
+    // screen-horizontal side there so the strip never pinches to a notch.
+    vec3 across = cross(aTangent, toCamera);
+    vec3 side = normalize(across + cross(toCamera, vec3(0.0, 1.0, 0.0)) * 0.25 * (1.0 - smoothstep(0.0, 0.35, length(across))));
     // Wide where it leaves the nebula's tail, a river through Skills, an arm's width at the end.
     float width = mix(2.6, 1.1, smoothstep(0.0, 0.3, t)) * mix(1.0, 0.55, smoothstep(uArm - 0.04, uArm + 0.1, t));
     vec3 world = position + side * aBand.y * width * HALO;
@@ -111,12 +126,12 @@ const BAND_FRAG = /* glsl */ `
     vec3 color = mix(nebula, river, smoothstep(0.02, 0.22, t));
     color = mix(color, vec3(0.68, 0.8, 1.0), smoothstep(uArm - 0.12, uArm + 0.04, t));
     // Revealed behind the head, which glows as a brighter knot leading the way.
-    float reveal = 1.0 - smoothstep(uHead - 0.04, uHead, t);
+    float reveal = 1.0 - smoothstep(uHead - 0.06, uHead, t);
     float head = exp(-pow((t - uHead) * uLength / 3.0, 2.0)) * exp(-x * x * 1.5) * (1.0 - smoothstep(0.9, 0.97, uHead));
     float tail = uTail * uArm;
     float start = smoothstep(0.0, 0.14, t) * smoothstep(tail, tail + 0.12, t) * (1.0 - smoothstep(0.93, 1.0, t));
     float handover = 1.0 - 0.92 * uForm * smoothstep(uArm - 0.06, uArm + 0.06, t);
-    float a = (light * reveal + head * 1.1) * start * handover * uWeight * smoothstep(5.0, 20.0, vDepth);
+    float a = (light * reveal + head * 0.5) * start * handover * uWeight * smoothstep(5.0, 20.0, vDepth);
     if (a < 0.002) discard;
     // Max blending: where the strip folds on a tight curve it never doubles up into seams.
     gl_FragColor = vec4(color * a, a);
@@ -142,7 +157,8 @@ const MOTE_VERT = /* glsl */ `
   void main() {
     float t = fract(aFlow.x + uTime * aFlow.y);
     vec3 center = sampleAt(uPath, t), tangent = normalize(sampleAt(uSlope, t));
-    vec3 side = normalize(cross(tangent, normalize(cameraPosition - center)));
+    vec3 toCamera = normalize(cameraPosition - center), across = cross(tangent, toCamera);
+    vec3 side = normalize(across + cross(toCamera, vec3(0.0, 1.0, 0.0)) * 0.25 * (1.0 - smoothstep(0.0, 0.35, length(across))));
     vec3 lift = cross(tangent, side);
     float width = mix(2.6, 1.1, smoothstep(0.0, 0.3, t)) * mix(1.0, 0.55, smoothstep(uArm - 0.04, uArm + 0.1, t));
     vec3 world = center + (side * aFlow.z + lift * aFlow.w) * width;
@@ -171,7 +187,7 @@ const ARP_VERT = /* glsl */ `
   attribute float aForm; // when the star lights up as the band's light fills the disk
   uniform vec3 uCenter, uX, uY, uZ, uComp, uCX, uCY, uCZ;
   uniform vec2 uShift;
-  uniform float uPixelRatio, uTime, uWeight, uProjection, uRose, uBurst, uForm;
+  uniform float uPixelRatio, uTime, uWeight, uProjection, uRose, uBurst, uForm, uSpin;
   varying vec3 vColor;
   varying float vAlpha, vKind, vSeed;
   void main() {
@@ -186,6 +202,9 @@ const ARP_VERT = /* glsl */ `
         local = mix(position, aTarget, m);
       } else {
         vec3 polar = mix(position, aTarget, m);
+        // Once formed the disk turns, very slowly; the rose's petals breathe.
+        polar.y += uSpin;
+        polar.x *= 1.0 + 0.025 * m * sin(polar.y * 3.0 - uTime * 0.35);
         local = vec3(cos(polar.y) * polar.x, sin(polar.y) * polar.x, polar.z);
         // The near side is pulled toward the companion: the rings crowd off-centre.
         local.xy += uShift * m * pow(polar.x / 16.0, 1.4);
@@ -206,6 +225,8 @@ const ARP_VERT = /* glsl */ `
     vKind = aShape.y;
     vSeed = aShape.z;
     float twinkle = mix(1.0, 0.8 + 0.2 * sin(uTime * (0.6 + aShape.z * 1.4) + aShape.z * 50.0), aShape.y);
+    // Star-forming knots pulse softly, out of step with each other.
+    if (aGroup > 2.5) twinkle *= 0.75 + 0.45 * pow(0.5 + 0.5 * sin(uTime * 0.7 + aShape.z * 30.0), 3.0);
     vAlpha = uWeight * show * twinkle * smoothstep(4.0, 14.0, depth) * step(0.0, depth) * min(1.0, pixels);
   }
 `;
@@ -395,13 +416,13 @@ function useLayer(ref, layers, key, reduced, update) {
     values.uPixelRatio.value = gl.getPixelRatio();
     values.uProjection.value = projection(camera, size);
     if (!reduced) values.uTime.value += Math.min(delta, 0.1);
-    update?.(values, size);
+    update?.(values, size, Math.min(delta, 0.1));
   });
 }
 
-function Cloud({ geometry, layerKey, layers, reduced, order = 8 }) {
+function Cloud({ geometry, flow, layerKey, layers, reduced, order = 8 }) {
   const points = useRef(null);
-  const extra = useMemo(() => ({ uGain: { value: 1 } }), []);
+  const extra = useMemo(() => ({ uGain: { value: 1 }, uFlow: { value: flow } }), [flow]);
   const uniforms = useCloudMaterial(extra);
   useEffect(() => () => geometry.dispose(), [geometry]);
   useLayer(points, layers, layerKey, reduced);
@@ -504,6 +525,60 @@ function Motes({ geometry, band, layers, reduced }) {
   </points>;
 }
 
+// The band's leading light: a soft sprite at its head, drawn on its own so the strip folding
+// round a tight turn can never clip it.
+const HEAD_VERT = /* glsl */ `
+  uniform float uPixelRatio, uProjection;
+  varying float vDepth;
+  void main() {
+    vec4 view = modelViewMatrix * vec4(position, 1.0);
+    vDepth = -view.z;
+    gl_Position = projectionMatrix * view;
+    gl_PointSize = clamp(7.0 * uPixelRatio * uProjection / max(vDepth, 1.0), 2.0, 220.0 * uPixelRatio);
+  }
+`;
+const HEAD_FRAG = /* glsl */ `
+  uniform float uWeight, uTime;
+  varying float vDepth;
+  void main() {
+    vec2 c = gl_PointCoord - 0.5;
+    float d = dot(c, c);
+    float pulse = 0.85 + 0.15 * sin(uTime * 2.1);
+    float a = (exp(-d * 70.0) * 0.7 + exp(-d * 16.0) * 0.25) * (1.0 - smoothstep(0.12, 0.25, d)) * pulse * uWeight * smoothstep(4.0, 12.0, vDepth);
+    if (a < 0.002) discard;
+    gl_FragColor = vec4(vec3(0.85, 1.0, 0.96), a);
+  }
+`;
+
+function BandHead({ band, layers, reduced }) {
+  const points = useRef(null);
+  const geometry = useMemo(() => {
+    const result = new BufferGeometry();
+    result.setAttribute('position', new BufferAttribute(new Float32Array(3), 3));
+    return result;
+  }, []);
+  const uniforms = useMemo(() => ({ uPixelRatio: { value: 1 }, uProjection: { value: 700 }, uWeight: { value: 0 }, uTime: { value: 0 } }), []);
+  useEffect(() => () => geometry.dispose(), [geometry]);
+  useFrame(({ gl, camera, size }, delta) => {
+    if (!points.current) return;
+    const { band: weight, head } = layers.current;
+    // Out once the head has reached the bulge: the light has become the galaxy.
+    const shown = weight * Math.min(1, head / 0.02) * (1 - Math.min(1, Math.max(0, (head - 0.9) / 0.07)));
+    points.current.visible = shown > 0.002;
+    if (!points.current.visible) return;
+    band.at(head, points.current.position);
+    const values = points.current.material.uniforms;
+    values.uWeight.value = shown;
+    values.uPixelRatio.value = gl.getPixelRatio();
+    values.uProjection.value = projection(camera, size);
+    if (!reduced) values.uTime.value += Math.min(delta, 0.1);
+  });
+  return <points ref={points} name="sky-band-head" geometry={geometry} frustumCulled={false} renderOrder={9}>
+    <shaderMaterial uniforms={uniforms} vertexShader={HEAD_VERT} fragmentShader={HEAD_FRAG} transparent depthTest={false} depthWrite={false}
+      toneMapped={false} blending={AdditiveBlending} />
+  </points>;
+}
+
 function Arp({ geometry, frame, layers, reduced }) {
   const points = useRef(null);
   const extra = useMemo(() => {
@@ -514,13 +589,17 @@ function Arp({ geometry, frame, layers, reduced }) {
     return {
       uCenter: { value: frame.center }, uX: { value: frame.x }, uY: { value: frame.y }, uZ: { value: frame.normal },
       uComp: { value: new Vector3() }, uCX: { value: cx }, uCY: { value: new Vector3().crossVectors(cz, cx) }, uCZ: { value: cz },
-      uShift: { value: new Vector2(shift.x, shift.y) }, uRose: { value: 0 }, uBurst: { value: 0 }, uForm: { value: 0 },
+      uShift: { value: new Vector2(shift.x, shift.y) }, uRose: { value: 0 }, uBurst: { value: 0 }, uForm: { value: 0 }, uSpin: { value: 0 },
     };
   }, [frame]);
   const uniforms = useCloudMaterial(extra);
   useEffect(() => () => geometry.dispose(), [geometry]);
-  useLayer(points, layers, 'arp', reduced, values => {
-    const { approach, rose, form } = layers.current;
+  useLayer(points, layers, 'arp', reduced, (values, size, delta) => {
+    const { approach, rose, form, band } = layers.current;
+    // The disk turns only once the band has handed over to it; scrolling back eases it home
+    // so the arm meets the band again.
+    if (form > 0.999 && band < 0.01) { if (!reduced) values.uSpin.value += delta * 0.012; }
+    else values.uSpin.value *= Math.exp(-delta * 3);
     values.uRose.value = rose;
     values.uForm.value = form;
     values.uComp.value.copy(frame.toWorld(frame.companion(approach)));
@@ -570,7 +649,8 @@ export function ChapterBiomes({ quality = 'high', reduced = false }) {
   const scale = COUNTS[quality] ?? 1;
   const sky = useMemo(() => {
     const { ribbon, arp, band } = skyLayout();
-    return { nebula: buildNebula(scale, ribbon), band, bandGeometry: buildBand(band), motes: buildMotes(scale), arpFrame: arp, arp: buildArp(scale, arp) };
+    const flow = ribbon.center(1).sub(ribbon.center(0)).normalize();
+    return { nebula: buildNebula(scale, ribbon), flow, band, bandGeometry: buildBand(band), motes: buildMotes(scale), arpFrame: arp, arp: buildArp(scale, arp) };
   }, [scale]);
   useFrame(() => {
     const state = useScrollStore.getState();
@@ -578,9 +658,10 @@ export function ChapterBiomes({ quality = 'high', reduced = false }) {
   }, -0.75);
   return <group name="chapter-skies">
     <Haze />
-    <Cloud geometry={sky.nebula} layerKey="nebula" layers={layers} reduced={reduced} />
+    <Cloud geometry={sky.nebula} flow={sky.flow} layerKey="nebula" layers={layers} reduced={reduced} />
     <Band geometry={sky.bandGeometry} band={sky.band} layers={layers} reduced={reduced} />
     <Motes geometry={sky.motes} band={sky.band} layers={layers} reduced={reduced} />
+    <BandHead band={sky.band} layers={layers} reduced={reduced} />
     <Arp geometry={sky.arp} frame={sky.arpFrame} layers={layers} reduced={reduced} />
   </group>;
 }
