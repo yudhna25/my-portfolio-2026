@@ -1,3 +1,5 @@
+import { bandFollow } from './skyPath.js';
+
 // Scene units are Schwarzschild radii. The thin disk occupies r = 3..14, y = 0.
 export const BLACK_HOLE_CENTER = Object.freeze([0, 0, -200]);
 
@@ -109,8 +111,8 @@ function storyDrift(chapter, progress, target) {
 }
 
 // Each reading chapter has its own way of moving through its region of sky, layered on the
-// drift: About trucks straight into a star cluster, Skills arcs around the ringed world,
-// Education rises on a crane past the pulsar, Experience tracks sideways along the arm.
+// drift: About trucks in along the nebula, Skills arcs and Education cranes up (both mostly
+// under the light band ride, bandFollow), Experience tracks sideways past the rose.
 // Offsets are in the camera's own frame (right, up, forward; position and aim). A chapter's
 // final offset carries into the next and eases out while that one's move eases in, so the
 // path stays continuous across every join.
@@ -150,7 +152,7 @@ function chapterMove(chapter, progress, target) {
   target.roll += o.roll * Math.sin(Math.PI * Math.min(1, progress)) * (own?.roll ? 1 : 0);
 }
 
-export function storyCameraPath(chapter, progress, target = {}, frozen = false, aspect = 1) {
+export function storyCameraPath(chapter, progress, target = {}, frozen = false, aspect = 1, follow = true) {
   let p = frozen ? 1 : clampStoryProgress(progress);
   let from = HERO, to = HERO;
   switch (chapter) {
@@ -201,6 +203,8 @@ export function storyCameraPath(chapter, progress, target = {}, frozen = false, 
   if (!frozen) {
     storyDrift(chapter, clampStoryProgress(progress), target);
     chapterMove(chapter, clampStoryProgress(progress), target);
+    // From late About into Education the camera rides the light band instead.
+    if (follow) bandFollow(chapter, clampStoryProgress(progress), target);
   }
   if (chapter === 'portal' && !frozen) {
     const bend = Math.sin(ease * Math.PI);

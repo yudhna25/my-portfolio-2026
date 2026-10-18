@@ -1,18 +1,18 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { AdditiveBlending, BufferAttribute, BufferGeometry, Color, NormalBlending, Vector2, Vector3 } from 'three';
+import { AdditiveBlending, BufferAttribute, BufferGeometry, Color, CustomBlending, DataTexture, DoubleSide, FloatType, MaxEquation, RGBAFormat, Vector2, Vector3 } from 'three';
 import { useScrollStore } from '@/stores/useScrollStore';
-import { storyCameraPath } from '@/3d/utils/cameraPath';
 import { CHAPTER_PALETTE, PALETTE_CHAPTERS, paletteWeights, skyLayers } from '@/3d/utils/chapterWave';
+import { ARP_RADIUS as RADIUS, REST_PITCH, armAngle, skyLayout } from '@/3d/utils/skyPath';
 
 // One continuous sky across the reading chapters, after real Hubble and JWST plates. About
 // trucks along a nebula ribbon (Veil-like filaments: teal oxygen braided inside ember
-// hydrogen, a dark dust lane, young blue stars). Its lower end unravels into a stream of
-// light that flows through Skills and pours, in Education, into Arp 273: a large spiral and
-// its small companion falling toward it. The companion's pass winds the spiral into a rose
-// (tight petal arms, pink star-forming knots, a tidal arm reaching for the companion), and
-// the rose is Experience's sky. Everything is world-placed, so the camera's moves give real
-// parallax, and composed away from the BH, which stays the far landmark.
+// hydrogen, young blue stars). Its tail becomes a band of flowing light that the camera
+// rides through Skills (see bandFollow) until it winds into the arm of Arp 273's large
+// spiral in Education; the disk lights up around it while its small companion falls in.
+// The companion's pass winds the spiral into a rose (tight petal arms, pink star-forming
+// knots, a tidal arm reaching for the companion), and the rose is Experience's sky.
+// Everything is world-placed (layout in skyPath), so the camera's moves give real parallax.
 
 const COUNTS = { high: 1, medium: 0.6, low: 0.3 };
 
@@ -62,73 +62,102 @@ const FRAG = /* glsl */ `
   }
 `;
 
-// The stream of light: particles riding a cubic Bezier from the ribbon's tail into the galaxy
-// pair, braided around the path. Stars are drawn as short streaks along the flow.
-const STREAM_VERT = /* glsl */ `
-  attribute vec3 aColor;
-  attribute vec4 aShape; // size, kind, seed, twist rate
-  attribute vec4 aFlow; // start, speed, lateral u, lateral v
-  uniform vec3 uP0, uP1, uP2, uP3;
-  uniform float uPixelRatio, uTime, uWeight, uProjection, uAspect;
-  varying vec3 vColor;
-  varying float vAlpha, vKind, vSeed, vWidth;
-  varying vec2 vDir;
-  vec3 bezier(float t) {
-    float s = 1.0 - t;
-    return s * s * s * uP0 + 3.0 * s * s * t * uP1 + 3.0 * s * t * t * uP2 + t * t * t * uP3;
+// The band of light: a camera-facing strip whose width is measured in units of the band's
+// core. Light flows along it as drifting noise, with two thin strands braiding around the
+// core. It is revealed up to its head, which leads the camera, and once the galaxy has
+// formed around its last stretch that stretch hands its light over to the arm's stars.
+const BAND_VERT = /* glsl */ `
+  attribute vec3 aTangent;
+  attribute vec2 aBand; // t along the band, side -1..1
+  uniform float uArm;
+  varying vec2 vBand;
+  varying float vDepth;
+  const float HALO = 3.0;
+  void main() {
+    float t = aBand.x;
+    vec3 toCamera = normalize(cameraPosition - position);
+    vec3 side = normalize(cross(aTangent, toCamera));
+    // Wide where it leaves the nebula's tail, a river through Skills, an arm's width at the end.
+    float width = mix(2.6, 1.1, smoothstep(0.0, 0.3, t)) * mix(1.0, 0.55, smoothstep(uArm - 0.04, uArm + 0.1, t));
+    vec3 world = position + side * aBand.y * width * HALO;
+    vBand = vec2(t, aBand.y * HALO);
+    vec4 view = viewMatrix * vec4(world, 1.0);
+    vDepth = -view.z;
+    gl_Position = projectionMatrix * view;
   }
-  vec3 slope(float t) {
-    float s = 1.0 - t;
-    return 3.0 * s * s * (uP1 - uP0) + 6.0 * s * t * (uP2 - uP1) + 3.0 * t * t * (uP3 - uP2);
+`;
+const BAND_FRAG = /* glsl */ `
+  uniform float uTime, uWeight, uHead, uTail, uForm, uArm, uLength;
+  varying vec2 vBand;
+  varying float vDepth;
+  float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+  float noise(vec2 p) {
+    vec2 i = floor(p), f = fract(p);
+    f = f * f * (3.0 - 2.0 * f);
+    return mix(mix(hash(i), hash(i + vec2(1.0, 0.0)), f.x), mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), f.x), f.y);
+  }
+  void main() {
+    float t = vBand.x, x = vBand.y, s = t * uLength;
+    float flow = s * 0.3 - uTime * 0.8;
+    float n = 0.6 * noise(vec2(flow, x * 1.3)) + 0.4 * noise(vec2(flow * 2.4 + 7.0, x * 2.8 - uTime * 0.2));
+    float wave = s * 0.22 - uTime * 0.55;
+    float strands = exp(-pow(x - 0.75 * sin(wave), 2.0) * 9.0) + exp(-pow(x + 0.75 * sin(wave + 1.9), 2.0) * 9.0);
+    float light = 0.1 * exp(-x * x * 0.45) + 0.36 * exp(-x * x * 2.2) * (0.3 + 0.7 * n) + 0.3 * exp(-x * x * 12.0)
+      + 0.22 * strands * (0.4 + 0.6 * n);
+    light *= 1.0 - smoothstep(2.4, 3.0, abs(x));
+    // Colour along it: the nebula's own teal and ember, then aqua-white light, then the arm's blue.
+    vec3 nebula = mix(vec3(0.35, 0.85, 0.9), vec3(1.0, 0.52, 0.4), smoothstep(0.6, 1.8, abs(x)));
+    vec3 river = mix(vec3(0.55, 1.0, 0.92), vec3(1.0, 0.88, 0.62), 0.45 * n + 0.25 * strands);
+    vec3 color = mix(nebula, river, smoothstep(0.02, 0.22, t));
+    color = mix(color, vec3(0.68, 0.8, 1.0), smoothstep(uArm - 0.12, uArm + 0.04, t));
+    // Revealed behind the head, which glows as a brighter knot leading the way.
+    float reveal = 1.0 - smoothstep(uHead - 0.04, uHead, t);
+    float head = exp(-pow((t - uHead) * uLength / 3.0, 2.0)) * exp(-x * x * 1.5) * (1.0 - smoothstep(0.9, 0.97, uHead));
+    float tail = uTail * uArm;
+    float start = smoothstep(0.0, 0.14, t) * smoothstep(tail, tail + 0.12, t) * (1.0 - smoothstep(0.93, 1.0, t));
+    float handover = 1.0 - 0.92 * uForm * smoothstep(uArm - 0.06, uArm + 0.06, t);
+    float a = (light * reveal + head * 1.1) * start * handover * uWeight * smoothstep(5.0, 20.0, vDepth);
+    if (a < 0.002) discard;
+    // Max blending: where the strip folds on a tight curve it never doubles up into seams.
+    gl_FragColor = vec4(color * a, a);
+  }
+`;
+
+// Motes of light carried along the band: the path is sampled into a float texture so each
+// mote can ride it, scattered across the band's width and shown only where it is revealed.
+const MOTE_VERT = /* glsl */ `
+  attribute vec3 aColor;
+  attribute vec4 aShape; // size, kind, seed, unused
+  attribute vec4 aFlow; // start, speed, across, lift
+  uniform sampler2D uPath, uSlope;
+  uniform float uSamples, uPixelRatio, uTime, uWeight, uProjection, uHead, uTail, uArm;
+  varying vec3 vColor;
+  varying float vAlpha, vKind, vSeed;
+  vec3 sampleAt(sampler2D map, float t) {
+    float x = clamp(t, 0.0, 1.0) * (uSamples - 1.0), i = floor(x);
+    vec3 a = texture2D(map, vec2((i + 0.5) / uSamples, 0.5)).xyz;
+    vec3 b = texture2D(map, vec2((min(i + 1.0, uSamples - 1.0) + 0.5) / uSamples, 0.5)).xyz;
+    return mix(a, b, x - i);
   }
   void main() {
     float t = fract(aFlow.x + uTime * aFlow.y);
-    vec3 tangent = normalize(slope(t));
-    vec3 side = normalize(cross(tangent, vec3(0.0, 1.0, 0.0)));
-    vec3 lift = cross(side, tangent);
-    // Wide where it leaves the ribbon, a narrow river through Skills, fanning into the disk.
-    float width = mix(5.5, 1.6, smoothstep(0.0, 0.45, t)) * mix(1.0, 2.6, smoothstep(0.82, 1.0, t));
-    float twist = t * 11.0 + uTime * 0.2 * aShape.w;
-    vec2 lateral = mat2(cos(twist), -sin(twist), sin(twist), cos(twist)) * aFlow.zw;
-    vec3 world = bezier(t) + (side * lateral.x + lift * lateral.y) * width;
+    vec3 center = sampleAt(uPath, t), tangent = normalize(sampleAt(uSlope, t));
+    vec3 side = normalize(cross(tangent, normalize(cameraPosition - center)));
+    vec3 lift = cross(tangent, side);
+    float width = mix(2.6, 1.1, smoothstep(0.0, 0.3, t)) * mix(1.0, 0.55, smoothstep(uArm - 0.04, uArm + 0.1, t));
+    vec3 world = center + (side * aFlow.z + lift * aFlow.w) * width;
     vec4 view = viewMatrix * vec4(world, 1.0);
     float depth = -view.z;
     gl_Position = projectionMatrix * view;
-    vec4 ahead = projectionMatrix * viewMatrix * vec4(world + tangent, 1.0);
-    vec2 dir = (ahead.xy / ahead.w - gl_Position.xy / gl_Position.w) * vec2(uAspect, 1.0);
-    vDir = length(dir) > 1e-5 ? normalize(dir) : vec2(1.0, 0.0);
     float pixels = aShape.x * uPixelRatio * uProjection / max(depth, 1.0);
-    // Streaks need room for their length; gas stays round.
-    float size = aShape.y > 0.5 ? clamp(pixels * 7.0, 3.0, 26.0 * uPixelRatio) : clamp(pixels, 1.0, 120.0 * uPixelRatio);
-    gl_PointSize = size;
-    vWidth = aShape.y > 0.5 ? clamp(max(pixels, 1.3 * uPixelRatio) / size, 0.04, 0.5) : 1.0;
+    gl_PointSize = clamp(pixels, 1.0, mix(6.0, 60.0, 1.0 - aShape.y) * uPixelRatio);
     vColor = aColor;
     vKind = aShape.y;
     vSeed = aShape.z;
-    float ends = smoothstep(0.0, 0.08, t) * (1.0 - smoothstep(0.86, 1.0, t));
-    float pulse = 0.75 + 0.25 * sin(t * 40.0 - uTime * 1.6 + aShape.z * 6.0);
-    vAlpha = uWeight * ends * pulse * smoothstep(4.0, 12.0, depth) * step(0.0, depth);
-  }
-`;
-const STREAM_FRAG = /* glsl */ `
-  varying vec3 vColor;
-  varying float vAlpha, vKind, vSeed, vWidth;
-  varying vec2 vDir;
-  void main() {
-    vec2 c = gl_PointCoord - 0.5;
-    c.y = -c.y;
-    float a;
-    if (vKind > 0.5) {
-      float along = dot(c, vDir), across = dot(c, vec2(-vDir.y, vDir.x));
-      // Bright head, fading tail behind it.
-      float tail = smoothstep(-0.5, 0.0, along) * (1.0 - smoothstep(0.0, 0.08, along));
-      a = tail * exp(-pow(across / (0.5 * vWidth), 2.0)) * (0.35 + 0.65 * smoothstep(-0.5, 0.05, along));
-    } else {
-      a = exp(-dot(c, c) * 14.0) * 0.15;
-    }
-    a *= vAlpha;
-    if (a < 0.002) discard;
-    gl_FragColor = vec4(vColor, a);
+    float tail = uTail * uArm;
+    float shown = (1.0 - smoothstep(uHead - 0.03, uHead, t)) * smoothstep(tail, tail + 0.12, t) * smoothstep(0.02, 0.12, t) * (1.0 - smoothstep(0.92, 1.0, t));
+    float twinkle = 0.7 + 0.3 * sin(uTime * (1.5 + aShape.z * 3.0) + aShape.z * 40.0);
+    vAlpha = uWeight * shown * twinkle * smoothstep(3.0, 10.0, depth) * min(1.0, pixels);
   }
 `;
 
@@ -139,9 +168,10 @@ const ARP_VERT = /* glsl */ `
   attribute vec4 aShape; // size, kind, seed, delay
   attribute vec3 aTarget;
   attribute float aGroup; // 0 disk, 1 companion, 2 tidal arm, 3 star-forming knots
+  attribute float aForm; // when the star lights up as the band's light fills the disk
   uniform vec3 uCenter, uX, uY, uZ, uComp, uCX, uCY, uCZ;
   uniform vec2 uShift;
-  uniform float uPixelRatio, uTime, uWeight, uProjection, uRose, uBurst;
+  uniform float uPixelRatio, uTime, uWeight, uProjection, uRose, uBurst, uForm;
   varying vec3 vColor;
   varying float vAlpha, vKind, vSeed;
   void main() {
@@ -156,12 +186,12 @@ const ARP_VERT = /* glsl */ `
         local = mix(position, aTarget, m);
       } else {
         vec3 polar = mix(position, aTarget, m);
-        float angle = polar.y + uTime * 0.01;
-        local = vec3(cos(angle) * polar.x, sin(angle) * polar.x, polar.z);
+        local = vec3(cos(polar.y) * polar.x, sin(polar.y) * polar.x, polar.z);
         // The near side is pulled toward the companion: the rings crowd off-centre.
         local.xy += uShift * m * pow(polar.x / 16.0, 1.4);
       }
       if (aGroup > 1.5) show = m;
+      show *= smoothstep(aForm, aForm + 0.3, uForm);
       world = uCenter + uX * local.x + uY * local.y + uZ * local.z;
     }
     vec4 view = viewMatrix * vec4(world, 1.0);
@@ -213,18 +243,6 @@ function random(seed) {
 }
 const gaussian = rand => (rand() + rand() + rand() - 1.5) / 1.5;
 
-// Camera basis at a chapter's pose: where to put a region so it frames away from the BH.
-function chapterBasis(chapter, progress = 0.5) {
-  const pose = storyCameraPath(chapter, progress, {}, false, 16 / 9);
-  const eye = new Vector3(pose.x, pose.y, pose.z);
-  const forward = new Vector3(pose.lookX, pose.lookY, pose.lookZ).sub(eye).normalize();
-  const right = new Vector3().crossVectors(forward, new Vector3(0, 1, 0)).normalize();
-  const up = new Vector3().crossVectors(right, forward).normalize();
-  // A point in front of the camera: d ahead, x right, y up (world units).
-  const at = (d, x = 0, y = 0) => eye.clone().addScaledVector(forward, d).addScaledVector(right, x).addScaledVector(up, y);
-  return { eye, forward, right, up, at };
-}
-
 function createCloud(extra = {}) {
   const data = { position: [], color: [], shape: [], ...Object.fromEntries(Object.keys(extra).map(key => [key, []])) };
   const color = new Color();
@@ -246,42 +264,26 @@ function createCloud(extra = {}) {
   return data;
 }
 
-// About: the nebula ribbon, running from high in the far left down toward the lower frame,
-// where Skills will pick up its tail. Its width direction twists slowly along it, so the
-// truck-in sees it turn from a sheet into an edge-on filament.
-function ribbonFrame() {
-  const basis = chapterBasis('about');
-  const start = basis.at(84, -40, 32), end = basis.at(42, 2, -22);
-  const along = end.clone().sub(start);
-  const bow = basis.forward.clone().multiplyScalar(-1).addScaledVector(basis.right, -0.4).normalize();
-  const sway = new Vector3().crossVectors(along, bow).normalize();
-  const center = s => start.clone().addScaledVector(along, s).addScaledVector(bow, 14 * Math.sin(Math.PI * s))
-    .addScaledVector(sway, 3.5 * Math.sin(2.3 * Math.PI * s + 1));
-  const frame = s => {
-    const tangent = center(Math.min(1, s + 0.01)).sub(center(Math.max(0, s - 0.01))).normalize();
-    const flat = new Vector3().crossVectors(tangent, basis.forward).normalize();
-    const width = flat.clone().applyAxisAngle(tangent, 1.1 * s);
-    return { tangent, width, depth: new Vector3().crossVectors(tangent, width) };
-  };
-  return { center, frame, end: center(1), endTangent: frame(1).tangent };
-}
-
 function buildNebula(scale, ribbon) {
-  const rand = random(401), glow = createCloud(), dust = createCloud();
+  const rand = random(401), glow = createCloud();
   const point = new Vector3();
   const place = (s, w, d) => {
     const { width, depth } = ribbon.frame(s);
     return point.copy(ribbon.center(s)).addScaledVector(width, w).addScaledVector(depth, d);
   };
-  const breadth = s => 6 + 11 * Math.sin(Math.PI * Math.min(1, s * 1.15)) * (1 - 0.45 * s);
+  const { breadth } = ribbon;
   // Gas: teal oxygen in the middle, ember hydrogen and magenta at the edges, sulphur gold flecks.
+  // The tip past where the band peels away stays faint, so the band reads as the tail itself.
+  const tip = s => 1 - 0.75 * Math.max(0, (s - 0.84) / 0.16);
   for (let i = 0; i < 2600 * scale; i++) {
-    const s = rand(), half = breadth(s), w = gaussian(rand) * half * 1.7, edge = Math.min(1, Math.abs(w) / half);
+    let s = rand();
+    if (rand() > tip(s)) s *= 0.84;
+    const half = breadth(s), w = gaussian(rand) * half * 1.7, edge = Math.min(1, Math.abs(w) / half);
     const hue = rand();
     const color = edge < 0.3 ? (hue < 0.7 ? '#0A3840' : '#142650') : hue < 0.55 ? '#4C1A0C' : hue < 0.88 ? '#42102F' : '#3A2C0E';
     glow.push(place(s, w, gaussian(rand) * 2.2), color, 2.6 + rand() * 4.5, 0, rand());
   }
-  // Filaments: four braided strands of fine bright threads, the Veil's signature.
+  // Filaments: nine braided strands of fine bright threads, the Veil's signature.
   for (let strand = 0; strand < 9; strand++) {
     const teal = strand % 3 !== 0;
     for (let i = 0; i < 620 * scale; i++) {
@@ -299,43 +301,20 @@ function buildNebula(scale, ribbon) {
     glow.push(place(s, gaussian(rand) * half * 1.1, gaussian(rand) * 2), bright ? '#E6F0FF' : rand() < 0.7 ? '#A8C4FF' : '#FFE8D0',
       bright ? 0.32 + rand() * 0.2 : 0.06 + Math.pow(rand(), 3) * 0.14, 1, rand());
   }
-  // The dark lane that splits the glow, drawn opaque-ish so it eats the light behind it.
-  for (let i = 0; i < 700 * scale; i++) {
-    const s = 0.08 + rand() * 0.8, half = breadth(s);
-    dust.push(place(s, -0.1 * half + 0.3 * half * Math.sin(s * 9) + gaussian(rand) * half * 0.1, gaussian(rand) * 0.6), '#050308', 1.2 + rand() * 1.8, 0, rand());
-  }
-  return { glow: glow.build(), dust: dust.build() };
+  return glow.build();
 }
-
-// Arp 273's frame: the large disk nearly face on, left of the reading column.
-function arpFrame() {
-  const basis = chapterBasis('education', 0.6);
-  const center = basis.at(64, -9, -7);
-  const normal = basis.forward.clone().multiplyScalar(-1).applyAxisAngle(basis.right, -0.62).applyAxisAngle(basis.forward, 0.2).normalize();
-  const x = basis.right.clone().sub(normal.clone().multiplyScalar(basis.right.dot(normal))).normalize();
-  const y = new Vector3().crossVectors(normal, x);
-  const toWorld = local => center.clone().addScaledVector(x, local.x).addScaledVector(y, local.y).addScaledVector(normal, local.z);
-  // The companion's fall, in the disk's own frame: from high behind, past the rim, to below.
-  const path = [new Vector3(-30, 26, -16), new Vector3(-6, 6, -10), new Vector3(12, -20, 2)];
-  const companion = c => {
-    const s = 1 - c;
-    return path[0].clone().multiplyScalar(s * s).addScaledVector(path[1], 2 * s * c).addScaledVector(path[2], c * c);
-  };
-  return { center, x, y, normal, toWorld, companion, rest: path[2] };
-}
-
-const RADIUS = 16;
 
 function buildArp(scale, frame) {
-  const rand = random(273), cloud = createCloud({ aTarget: 3, aGroup: 1 });
+  const rand = random(273), cloud = createCloud({ aTarget: 3, aGroup: 1, aForm: 1 });
   const zero = new Vector3(), point = new Vector3();
-  const pushDisk = (rest, rose, hex, size, kind, delay, group = 0) =>
-    cloud.push(rest, hex, size, kind, rand(), delay, { aTarget: [rose.x, rose.y, rose.z], aGroup: [group] });
+  // Formation: the disk lights up from the rim inward, where the band of light enters it.
+  const pushDisk = (rest, rose, hex, size, kind, delay, group = 0, form = 0.55 * (1 - rest.x / RADIUS) + 0.08 * rand()) =>
+    cloud.push(rest, hex, size, kind, rand(), delay, { aTarget: [rose.x, rose.y, rose.z], aGroup: [group], aForm: [form] });
   const rest = new Vector3(), rose = new Vector3();
   // Polar (r, angle, height) for a star on arm `arm` at radius r: loose before, tight after.
-  const spiral = (r, arm, pitch, scatter) => arm * Math.PI + Math.log(r / 0.9) / Math.tan(pitch) + scatter;
+  const spiral = (r, arm, pitch, scatter) => armAngle(r, arm, pitch, frame.phase) + scatter;
   const disk = (r, arm, scatter, scatterRose) => {
-    rest.set(r, spiral(r, arm, 0.4, scatter), gaussian(rand) * 0.25);
+    rest.set(r, spiral(r, arm, REST_PITCH, scatter), gaussian(rand) * 0.25);
     // Tightly wound petals with a three-fold lumpiness, warped out of the plane at the rim.
     const angle = spiral(r, arm, 0.13, scatterRose);
     rose.set(r * (1 + 0.13 * Math.sin(3 * angle + arm) + 0.06 * Math.sin(5 * angle - arm)), angle, gaussian(rand) * 0.3 + 0.012 * r * r * Math.sin(angle - 0.6));
@@ -348,7 +327,7 @@ function buildArp(scale, frame) {
     const delay = disk(r, arm, field ? rand() * Math.PI * 2 : gaussian(rand) * 0.28, field ? rand() * Math.PI * 2 : gaussian(rand) * 0.13);
     const hue = rand();
     const color = field ? (hue < 0.6 ? '#FFE6C4' : '#C8D4FF') : hue < 0.55 ? '#AFC6FF' : hue < 0.85 ? '#E8EEFF' : '#FFD9B0';
-    pushDisk(rest, rose, color, 0.05 + Math.pow(rand(), 3) * 0.16, 1, delay);
+    pushDisk(rest, rose, color, 0.05 + Math.pow(rand(), 3) * 0.16, 1, delay, 0, field ? 0.25 + rand() * 0.5 : undefined);
   }
   // Blue gas along the arms and the warm bulge.
   for (let i = 0; i < 260 * scale; i++) {
@@ -359,15 +338,15 @@ function buildArp(scale, frame) {
   for (let i = 0; i < 70 * scale; i++) {
     const r = Math.abs(gaussian(rand)) * 2.2, angle = rand() * Math.PI * 2;
     rest.set(r, angle, gaussian(rand) * 0.5);
-    pushDisk(rest, rest, '#5C4630', 2.5 + rand() * 3, 0, 0);
+    pushDisk(rest, rest, '#5C4630', 2.5 + rand() * 3, 0, 0, 0, 0.5 + rand() * 0.2);
   }
   // Pink star-forming knots that light up along the petals as the collision compresses gas.
   for (let i = 0; i < 420 * scale; i++) {
     const r = 2.5 + rand() * (RADIUS - 2.5), arm = i % 2;
     const delay = disk(r, arm, gaussian(rand) * 0.2, gaussian(rand) * 0.06);
     const pink = rand() < 0.65;
-    pushDisk(rest, rose, pink ? '#FF8CC0' : '#B4D0FF', 0.14 + rand() * 0.2, 1, delay + 0.1, 3);
-    if (i % 3 === 0) pushDisk(rest, rose, pink ? '#5A1640' : '#18285A', 1.6 + rand() * 1.8, 0, delay + 0.1, 3);
+    pushDisk(rest, rose, pink ? '#FF8CC0' : '#B4D0FF', 0.14 + rand() * 0.2, 1, delay + 0.1, 3, 0);
+    if (i % 3 === 0) pushDisk(rest, rose, pink ? '#5A1640' : '#18285A', 1.6 + rand() * 1.8, 0, delay + 0.1, 3, 0);
   }
   // The tidal arm: a long stream drawn out of the rim toward the companion's final place,
   // and a faint bridge between them.
@@ -379,50 +358,20 @@ function buildArp(scale, frame) {
     point.copy(anchor).lerp(reach, s).add(new Vector3(-bend * 0.8, -bend * 0.5, gaussian(rand) * 0.4)).add(new Vector3(gaussian(rand), gaussian(rand), 0).multiplyScalar(bridge ? 0.5 : 1.1));
     rest.copy(anchor).add(new Vector3(gaussian(rand), gaussian(rand), 0));
     const delay = 0.35 + 0.25 * s;
-    if (rand() < 0.06) cloud.push(rest, bridge ? '#141A34' : '#1A2448', 1.6 + rand() * 1.8, 0, rand(), delay, { aTarget: [point.x, point.y, point.z], aGroup: [2] });
-    else cloud.push(rest, bridge ? '#9AA6D8' : '#B4C8FF', 0.04 + rand() * 0.06, 1, rand(), delay, { aTarget: [point.x, point.y, point.z], aGroup: [2] });
+    if (rand() < 0.06) cloud.push(rest, bridge ? '#141A34' : '#1A2448', 1.6 + rand() * 1.8, 0, rand(), delay, { aTarget: [point.x, point.y, point.z], aGroup: [2], aForm: [0] });
+    else cloud.push(rest, bridge ? '#9AA6D8' : '#B4C8FF', 0.04 + rand() * 0.06, 1, rand(), delay, { aTarget: [point.x, point.y, point.z], aGroup: [2], aForm: [0] });
   }
   // UGC 1813, the small companion: an elongated, nearly edge-on disk with a bright nucleus.
   for (let i = 0; i < 1300 * scale; i++) {
     const r = Math.pow(rand(), 1.4) * 6, angle = rand() * Math.PI * 2;
     point.set(Math.cos(angle) * r, Math.sin(angle) * r * 0.32, gaussian(rand) * 0.3);
-    cloud.push(point, rand() < 0.6 ? '#FFE4C0' : '#D8DEFF', 0.05 + Math.pow(rand(), 3) * 0.13, 1, rand(), 0, { aTarget: [0, 0, 0], aGroup: [1] });
+    cloud.push(point, rand() < 0.6 ? '#FFE4C0' : '#D8DEFF', 0.05 + Math.pow(rand(), 3) * 0.13, 1, rand(), 0, { aTarget: [0, 0, 0], aGroup: [1], aForm: [0] });
   }
   for (let i = 0; i < 40 * scale; i++) {
     point.set(gaussian(rand) * 2.2, gaussian(rand) * 0.6, gaussian(rand) * 0.4);
-    cloud.push(point, '#3E3024', 1.6 + rand() * 2, 0, rand(), 1, { aTarget: [0, 0, 0], aGroup: [1] });
+    cloud.push(point, '#3E3024', 1.6 + rand() * 2, 0, rand(), 1, { aTarget: [0, 0, 0], aGroup: [1], aForm: [0] });
   }
-  cloud.push(zero, '#FFF0D8', 0.6, 1, 0.5, 1, { aTarget: [0, 0, 0], aGroup: [1] });
-  return cloud.build();
-}
-
-function streamControls(ribbon, arp) {
-  const skills = chapterBasis('skills', 0.5);
-  // Leaves along the ribbon's own direction, sweeps through the Skills frame, enters the disk at its rim.
-  return [
-    ribbon.end.clone(),
-    ribbon.end.clone().addScaledVector(ribbon.endTangent, 22),
-    skills.at(60, -8, -14),
-    arp.toWorld(new Vector3(-RADIUS * 0.8, RADIUS * 0.5, 0)),
-  ];
-}
-
-function buildStream(scale) {
-  const rand = random(517), cloud = createCloud({ aFlow: 4 });
-  const zero = new Vector3();
-  for (let i = 0; i < 3800 * scale; i++) {
-    const radius = Math.pow(rand(), 0.6), angle = rand() * Math.PI * 2;
-    // Three braids, so the river reads as twisted cords of light rather than a tube.
-    const braid = Math.floor(rand() * 3) * Math.PI * 2 / 3;
-    const u = rand() < 0.7 ? Math.cos(braid) * 0.6 + gaussian(rand) * 0.22 : Math.cos(angle) * radius;
-    const v = rand() < 0.7 ? Math.sin(braid) * 0.6 + gaussian(rand) * 0.22 : Math.sin(angle) * radius;
-    const hue = rand();
-    const color = hue < 0.5 ? '#9FF2E8' : hue < 0.8 ? '#D8FFF6' : hue < 0.93 ? '#FFE2A8' : '#FF9EC0';
-    cloud.push(zero, color, 0.05 + Math.pow(rand(), 2) * 0.09, 1, rand(), 0.5 + rand(), { aFlow: [rand(), 0.018 + rand() * 0.016, u, v] });
-  }
-  for (let i = 0; i < 300 * scale; i++) {
-    cloud.push(zero, rand() < 0.7 ? '#0C3A3C' : '#2C260C', 1.6 + rand() * 2.4, 0, rand(), 0.5, { aFlow: [rand(), 0.01 + rand() * 0.006, gaussian(rand), gaussian(rand)] });
-  }
+  cloud.push(zero, '#FFF0D8', 0.6, 1, 0.5, 1, { aTarget: [0, 0, 0], aGroup: [1], aForm: [0] });
   return cloud.build();
 }
 
@@ -450,29 +399,107 @@ function useLayer(ref, layers, key, reduced, update) {
   });
 }
 
-function Cloud({ geometry, layerKey, layers, reduced, dark = false, order = 8 }) {
+function Cloud({ geometry, layerKey, layers, reduced, order = 8 }) {
   const points = useRef(null);
-  const extra = useMemo(() => ({ uGain: { value: dark ? 1.1 : 1 } }), [dark]);
+  const extra = useMemo(() => ({ uGain: { value: 1 } }), []);
   const uniforms = useCloudMaterial(extra);
   useEffect(() => () => geometry.dispose(), [geometry]);
   useLayer(points, layers, layerKey, reduced);
-  // Dark dust is drawn with normal blending, so it occludes the glow behind it.
-  return <points ref={points} name={`sky-${layerKey}${dark ? '-dust' : ''}`} geometry={geometry} frustumCulled={false} renderOrder={order}>
+  return <points ref={points} name={`sky-${layerKey}`} geometry={geometry} frustumCulled={false} renderOrder={order}>
     <shaderMaterial uniforms={uniforms} vertexShader={VERT} fragmentShader={FRAG} transparent depthTest={false} depthWrite={false} toneMapped={false}
-      blending={dark ? NormalBlending : AdditiveBlending} />
+      blending={AdditiveBlending} />
   </points>;
 }
 
-function Stream({ geometry, controls, layers, reduced }) {
-  const points = useRef(null);
-  const extra = useMemo(() => ({
-    uP0: { value: controls[0] }, uP1: { value: controls[1] }, uP2: { value: controls[2] }, uP3: { value: controls[3] }, uAspect: { value: 1 },
-  }), [controls]);
-  const uniforms = useCloudMaterial(extra);
+// A strip along the band's centre line, turned to face the camera at every point.
+function buildBand(band) {
+  const count = 700, point = new Vector3(), tangent = new Vector3();
+  const position = new Float32Array((count + 1) * 6), tangents = new Float32Array((count + 1) * 6), coords = new Float32Array((count + 1) * 4);
+  const index = [];
+  for (let i = 0; i <= count; i++) {
+    const t = i / count;
+    band.at(t, point, tangent);
+    for (let k = 0; k < 2; k++) {
+      position.set([point.x, point.y, point.z], i * 6 + k * 3);
+      tangents.set([tangent.x, tangent.y, tangent.z], i * 6 + k * 3);
+      coords.set([t, k ? 1 : -1], i * 4 + k * 2);
+    }
+    if (i < count) index.push(i * 2, i * 2 + 1, i * 2 + 2, i * 2 + 1, i * 2 + 3, i * 2 + 2);
+  }
+  const geometry = new BufferGeometry();
+  geometry.setAttribute('position', new BufferAttribute(position, 3));
+  geometry.setAttribute('aTangent', new BufferAttribute(tangents, 3));
+  geometry.setAttribute('aBand', new BufferAttribute(coords, 2));
+  geometry.setIndex(index);
+  return geometry;
+}
+
+function Band({ geometry, band, layers, reduced }) {
+  const mesh = useRef(null);
+  const uniforms = useMemo(() => ({
+    uTime: { value: 0 }, uWeight: { value: 0 }, uHead: { value: 0 }, uTail: { value: 0 }, uForm: { value: 0 }, uArm: { value: band.armStart }, uLength: { value: band.length },
+  }), [band]);
   useEffect(() => () => geometry.dispose(), [geometry]);
-  useLayer(points, layers, 'stream', reduced, (values, size) => { values.uAspect.value = size.width / Math.max(1, size.height); });
-  return <points ref={points} name="sky-stream" geometry={geometry} frustumCulled={false} renderOrder={8}>
-    <shaderMaterial uniforms={uniforms} vertexShader={STREAM_VERT} fragmentShader={STREAM_FRAG} transparent depthTest={false} depthWrite={false}
+  useFrame((_, delta) => {
+    if (!mesh.current) return;
+    const { band: weight, head, tail, form } = layers.current;
+    mesh.current.visible = weight > 0.002 && head > 0.001;
+    if (!mesh.current.visible) return;
+    const values = mesh.current.material.uniforms;
+    values.uWeight.value = weight;
+    values.uHead.value = head;
+    values.uTail.value = tail;
+    values.uForm.value = form;
+    if (!reduced) values.uTime.value += Math.min(delta, 0.1);
+  });
+  return <mesh ref={mesh} name="sky-band" geometry={geometry} frustumCulled={false} renderOrder={8}>
+    <shaderMaterial uniforms={uniforms} vertexShader={BAND_VERT} fragmentShader={BAND_FRAG} transparent depthTest={false} depthWrite={false}
+      toneMapped={false} blending={CustomBlending} blendEquation={MaxEquation} side={DoubleSide} />
+  </mesh>;
+}
+
+function buildMotes(scale) {
+  const rand = random(611), cloud = createCloud({ aFlow: 4 });
+  const zero = new Vector3();
+  for (let i = 0; i < 1800 * scale; i++) {
+    const hue = rand();
+    // Mostly in the core, thinning out toward the band's edges.
+    const across = gaussian(rand) * 1.1, lift = gaussian(rand) * 0.6;
+    cloud.push(zero, hue < 0.55 ? '#C8FFF6' : hue < 0.85 ? '#FFFFFF' : '#FFE0A8', 0.04 + Math.pow(rand(), 3) * 0.1, 1, rand(), 0,
+      { aFlow: [rand(), 0.006 + rand() * 0.008, across, lift] });
+  }
+  return cloud.build();
+}
+
+function pathTextures(band, samples = 1024) {
+  const points = new Float32Array(samples * 4), slopes = new Float32Array(samples * 4);
+  const point = new Vector3(), tangent = new Vector3();
+  for (let i = 0; i < samples; i++) {
+    band.at(i / (samples - 1), point, tangent);
+    points.set([point.x, point.y, point.z, 1], i * 4);
+    slopes.set([tangent.x, tangent.y, tangent.z, 0], i * 4);
+  }
+  return [points, slopes].map(data => {
+    const texture = new DataTexture(data, samples, 1, RGBAFormat, FloatType);
+    texture.needsUpdate = true;
+    return texture;
+  });
+}
+
+function Motes({ geometry, band, layers, reduced }) {
+  const points = useRef(null);
+  const [path, slope] = useMemo(() => pathTextures(band), [band]);
+  const extra = useMemo(() => ({
+    uPath: { value: path }, uSlope: { value: slope }, uSamples: { value: path.image.width }, uHead: { value: 0 }, uTail: { value: 0 }, uArm: { value: band.armStart },
+  }), [path, slope, band]);
+  const uniforms = useCloudMaterial(extra);
+  useEffect(() => () => { geometry.dispose(); path.dispose(); slope.dispose(); }, [geometry, path, slope]);
+  useLayer(points, layers, 'band', reduced, values => {
+    values.uHead.value = layers.current.head;
+    values.uTail.value = layers.current.tail;
+  });
+  return <points ref={points} name="sky-band-motes" geometry={geometry} frustumCulled={false} renderOrder={9}>
+    <shaderMaterial uniforms={uniforms} vertexShader={MOTE_VERT} fragmentShader={FRAG} transparent depthTest={false} depthWrite={false}
       toneMapped={false} blending={AdditiveBlending} />
   </points>;
 }
@@ -487,14 +514,15 @@ function Arp({ geometry, frame, layers, reduced }) {
     return {
       uCenter: { value: frame.center }, uX: { value: frame.x }, uY: { value: frame.y }, uZ: { value: frame.normal },
       uComp: { value: new Vector3() }, uCX: { value: cx }, uCY: { value: new Vector3().crossVectors(cz, cx) }, uCZ: { value: cz },
-      uShift: { value: new Vector2(shift.x, shift.y) }, uRose: { value: 0 }, uBurst: { value: 0 },
+      uShift: { value: new Vector2(shift.x, shift.y) }, uRose: { value: 0 }, uBurst: { value: 0 }, uForm: { value: 0 },
     };
   }, [frame]);
   const uniforms = useCloudMaterial(extra);
   useEffect(() => () => geometry.dispose(), [geometry]);
   useLayer(points, layers, 'arp', reduced, values => {
-    const { approach, rose } = layers.current;
+    const { approach, rose, form } = layers.current;
     values.uRose.value = rose;
+    values.uForm.value = form;
     values.uComp.value.copy(frame.toWorld(frame.companion(approach)));
     values.uBurst.value = Math.sin(Math.PI * Math.min(1, approach * 1.15)) * 0.6 + 0.4 * rose;
   });
@@ -541,14 +569,8 @@ export function ChapterBiomes({ quality = 'high', reduced = false }) {
   const layers = useRef(skyLayers('hero', 0));
   const scale = COUNTS[quality] ?? 1;
   const sky = useMemo(() => {
-    const ribbon = ribbonFrame(), arp = arpFrame();
-    return {
-      nebula: buildNebula(scale, ribbon),
-      stream: buildStream(scale),
-      controls: streamControls(ribbon, arp),
-      arpFrame: arp,
-      arp: buildArp(scale, arp),
-    };
+    const { ribbon, arp, band } = skyLayout();
+    return { nebula: buildNebula(scale, ribbon), band, bandGeometry: buildBand(band), motes: buildMotes(scale), arpFrame: arp, arp: buildArp(scale, arp) };
   }, [scale]);
   useFrame(() => {
     const state = useScrollStore.getState();
@@ -556,9 +578,9 @@ export function ChapterBiomes({ quality = 'high', reduced = false }) {
   }, -0.75);
   return <group name="chapter-skies">
     <Haze />
-    <Cloud geometry={sky.nebula.glow} layerKey="nebula" layers={layers} reduced={reduced} />
-    <Cloud geometry={sky.nebula.dust} layerKey="nebula" layers={layers} reduced={reduced} dark order={9} />
-    <Stream geometry={sky.stream} controls={sky.controls} layers={layers} reduced={reduced} />
+    <Cloud geometry={sky.nebula} layerKey="nebula" layers={layers} reduced={reduced} />
+    <Band geometry={sky.bandGeometry} band={sky.band} layers={layers} reduced={reduced} />
+    <Motes geometry={sky.motes} band={sky.band} layers={layers} reduced={reduced} />
     <Arp geometry={sky.arp} frame={sky.arpFrame} layers={layers} reduced={reduced} />
   </group>;
 }
