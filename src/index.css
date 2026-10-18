@@ -173,7 +173,7 @@
 
 /* Reading scrim over the live sky: a feathered pool of shadow with no edges, so text
  * stays legible without a dark box hiding the universe behind it. */
-.star-scrim { position: relative; isolation: isolate; }
+.star-scrim { position: relative; isolation: isolate; text-shadow: 0 1px 14px rgb(7 8 13 / 0.9); }
 .star-scrim::before {
   content: '';
   position: absolute;
@@ -192,6 +192,9 @@
 
 
 /* Keyboard focus stays visible on the dark background, including animated entrances. */
+
+/* Sections focused after a jump (Nav, hash) are not Tab stops: no full-screen ring. */
+section[tabindex="-1"]:focus-visible, [data-story-chapter][tabindex="-1"]:focus-visible { outline: none; box-shadow: none; }
 
 :focus-visible {
 
@@ -221,7 +224,10 @@
 
 @media (forced-colors: active) {
 
-  :focus-visible { outline-color: CanvasText; }
+  /* Sections focused after a jump (Nav, hash) are not Tab stops: no full-screen ring. */
+section[tabindex="-1"]:focus-visible, [data-story-chapter][tabindex="-1"]:focus-visible { outline: none; box-shadow: none; }
+
+:focus-visible { outline-color: CanvasText; }
 
 }
 
@@ -239,7 +245,10 @@
 
 .hover-card:focus-within,
 
-.cta-hover:focus-visible {
+.cta-hover/* Sections focused after a jump (Nav, hash) are not Tab stops: no full-screen ring. */
+section[tabindex="-1"]:focus-visible, [data-story-chapter][tabindex="-1"]:focus-visible { outline: none; box-shadow: none; }
+
+:focus-visible {
 
   border-color: rgb(250 250 250 / 0.35);
 
@@ -282,7 +291,10 @@
 
     .cta-hover:hover,
 
-    .cta-hover:focus-visible {
+    .cta-hover/* Sections focused after a jump (Nav, hash) are not Tab stops: no full-screen ring. */
+section[tabindex="-1"]:focus-visible, [data-story-chapter][tabindex="-1"]:focus-visible { outline: none; box-shadow: none; }
+
+:focus-visible {
 
       box-shadow: var(--glow-button-strong);
 

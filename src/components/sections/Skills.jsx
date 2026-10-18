@@ -19,6 +19,7 @@ export default function Skills({ stageRef }) {
   const target = useSkillsStore(activeSkill);
   const { interact, clear, setVisible } = useSkillsStore.getState();
   const active = useScrollStore((state) => state.storyChapter === 'skills');
+  const fallback = useScrollStore((state) => state.sceneFallback);
   const tool = skillTools.find((item) => item.id === target);
 
   useEffect(() => {
@@ -36,10 +37,10 @@ export default function Skills({ stageRef }) {
   }, { scope: root, dependencies: [anchor], revertOnUpdate: true });
 
   useGSAP((context, contextSafe) => {
-    const forget = reduced ? null : revealHeadings(root.current.querySelectorAll('h2'), contextSafe);
+    const forget = reduced || fallback ? null : revealHeadings(root.current.querySelectorAll('h2'), contextSafe);
     ScrollTrigger.refresh(true);
     return forget;
-  }, { scope: root, dependencies: [reduced, i18n.resolvedLanguage], revertOnUpdate: true });
+  }, { scope: root, dependencies: [reduced, fallback, i18n.resolvedLanguage], revertOnUpdate: true });
 
   useGSAP(() => {
     if (!tool) return;
@@ -73,7 +74,7 @@ export default function Skills({ stageRef }) {
     observer.observe(anchor.current);
     ScrollTrigger.addEventListener('refresh', measure);
     const tween = reduced ? null : gsap.fromTo(paths, { opacity: 0 }, {
-      opacity: 0.55, duration: 0.45, delay: 1.05, stagger: 0.07, ease: 'power3.out',
+      opacity: 0.55, duration: 0.45, delay: 0.4, stagger: 0.07, ease: 'power3.out',
     });
     if (reduced) gsap.set(paths, { opacity: 0.55 });
     const visibility = () => tween?.paused(document.hidden);

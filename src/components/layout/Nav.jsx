@@ -150,7 +150,7 @@ export function Nav({ onMenuClick, menuOpen = false, reader = false }) {
       <div data-portal-controls className="fixed inset-x-0 top-0 z-[70] origin-center [&[data-absorbing=true]>nav]:border-transparent [&[data-absorbing=true]>nav]:bg-transparent">
       <nav
         aria-label={t('nav.label')}
-        className="relative flex h-[calc(4.5rem+env(safe-area-inset-top))] items-center justify-between border-b border-white/[0.08] bg-(--bg-void) gap-3 px-[max(1.5rem,env(safe-area-inset-left),env(safe-area-inset-right))] pt-[env(safe-area-inset-top)] font-body lg:px-[max(2rem,env(safe-area-inset-left),env(safe-area-inset-right))]"
+        className="relative flex h-[calc(4.5rem+env(safe-area-inset-top))] items-center justify-between border-b border-white/[0.04] bg-linear-to-b from-(--bg-void)/85 to-(--bg-void)/0 gap-3 px-[max(1.5rem,env(safe-area-inset-left),env(safe-area-inset-right))] pt-[env(safe-area-inset-top)] font-body lg:px-[max(2rem,env(safe-area-inset-left),env(safe-area-inset-right))]"
       >
         <a
           href="/#hero"

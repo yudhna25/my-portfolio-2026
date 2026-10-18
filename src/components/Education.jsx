@@ -98,7 +98,7 @@ export default function Education({ stageRefs }) {
               </button>
               </h3>
               <p key={`degree-${i18n.resolvedLanguage}`} data-reveal="dust" className="mt-1 font-body text-base leading-relaxed text-white/85">{t(path + '.degree')}</p>
-              <p key={`description-${i18n.resolvedLanguage}`} data-reveal="dust" className="mt-2 max-w-[48ch] font-body text-sm leading-relaxed text-white/60">{t(path + '.description')}</p>
+              <p key={`description-${i18n.resolvedLanguage}`} data-reveal="dust" className="mt-2 max-w-[48ch] font-body text-sm leading-relaxed text-white/75">{t(path + '.description')}</p>
             </div>
           </li>;
         })}

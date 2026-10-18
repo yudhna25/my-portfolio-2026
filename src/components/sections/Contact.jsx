@@ -65,12 +65,12 @@ export default function Contact() {
       aria-labelledby="transmission-heading"
       className="relative px-6 py-24 text-(--text-primary) sm:px-8 lg:px-12 lg:py-36"
     >
-      <div data-contact-content className="invisible mx-auto max-w-7xl bg-[linear-gradient(110deg,rgba(7,8,13,0.94),rgba(7,8,13,0.70)_48%,rgba(7,8,13,0.18))] border border-(--bg-elevated) hover:border-white/30 transition-colors p-5 sm:p-8 lg:p-12">
+      <div data-contact-content className="invisible mx-auto max-w-7xl bg-[radial-gradient(ellipse_70%_80%_at_22%_45%,rgba(7,8,13,0.6),rgba(7,8,13,0.25)_55%,transparent_80%)] border border-white/[0.06] hover:border-white/20 transition-colors p-5 sm:p-8 lg:p-12">
         <p data-contact-copy lang="en" className="mb-10 flex items-center gap-4 font-mono text-xs tracking-[0.2em] text-(--text-primary)">
           <span aria-hidden="true" className="h-px w-10 bg-white/30" />
           {t('contact.sectionLabel')}
         </p>
-        <h2 key={language} aria-label={`${t('contact.heading')} ${t('contact.alternateHeading')}`} id="transmission-heading" className="font-display text-[clamp(1.15rem,6vw,7rem)] font-bold leading-[1.25] tracking-[-0.045em]">
+        <h2 key={language} aria-label={`${t('contact.heading')} ${t('contact.alternateHeading')}`} id="transmission-heading" className="[text-shadow:0_2px_30px_rgba(7,8,13,0.85)] font-display text-[clamp(1.15rem,6vw,7rem)] font-bold leading-[1.25] tracking-[-0.045em]">
           <span className="block overflow-clip">
             <span data-contact-line className="split-heading block whitespace-nowrap">{t('contact.heading')}</span>
           </span>
@@ -90,13 +90,13 @@ export default function Contact() {
               <span aria-hidden="true" className="size-2 rounded-full bg-(--text-primary)" />
               <span>{t('contact.telemetryFreq')}</span>
             </div>
-            <span className="hidden sm:inline-block text-(--text-muted)">[CARRIER: LOCKED]</span>
+            <span className="hidden sm:inline-block text-white/55">[CARRIER: LOCKED]</span>
           </div>
 
           {/* Transceiver Terminal Card */}
           <div
             data-transmission-terminal
-            className="rounded-xl border border-(--bg-elevated) p-5 transition-colors hover:border-(--text-primary)/30 sm:p-6"
+            className="rounded-xl border border-(--bg-elevated) bg-black/35 p-5 transition-colors hover:border-(--text-primary)/30 sm:p-6"
           >
             <div className="flex items-center justify-between border-b border-white/[0.08] pb-3 text-xs font-mono text-(--text-secondary)">
               <span className="flex items-center gap-2">

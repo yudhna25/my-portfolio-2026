@@ -135,11 +135,9 @@ function Portfolio({ restore }) {
     };
     document.fonts?.ready.then(refresh).catch(() => {});
     const timer = window.setTimeout(refresh, 300);
-    window.addEventListener('load', refresh);
     return () => {
       active = false;
       window.clearTimeout(timer);
-      window.removeEventListener('load', refresh);
     };
   }, { scope: root, dependencies: [loading, restore], revertOnUpdate: true });
 
