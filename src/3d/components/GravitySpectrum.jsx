@@ -94,7 +94,9 @@ export function GravitySpectrum({ portal, reduced = false }) {
     const opacity = loading ? 0 : CONTOUR_OPACITY * visible * (1 - finaleSmooth(0.40, 0.50, finale));
     const contour = u.get('uContour').value;
     const heroIdle = state.storyChapter === 'hero' && p === 0;
-    const target = loading || reduced || finale > 0 || (state.storyChapter === 'portal' && p > 0) ? 0 : heroIdle ? 1 : SPECTRUM_AWAY;
+    // Works has its own hidden layer (each figure's phenomenon), so the spectrum steps back there.
+    const target = loading || reduced || finale > 0 || (state.storyChapter === 'portal' && p > 0) || state.storyChapter === 'works' ? 0
+      : heroIdle ? 1 : SPECTRUM_AWAY;
     spectrum.current += (target - spectrum.current) * (1 - Math.exp(-Math.min(delta, 0.1) * 6));
     // The aura's colour drifts to the chapter's sky rather than switching with it.
     const [inner, outer] = auraColors[state.storyChapter] ?? auraColors.hero;
