@@ -2,6 +2,7 @@ import { lazy, Suspense, useCallback, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import { gsap, ScrollTrigger, ScrollSmoother, useGSAPSetup } from '@/hooks/useGSAPSetup';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
+import { useChapterReveal } from '@/hooks/useChapterReveal';
 import { useScrollProgress } from '@/3d/hooks/useScrollProgress';
 import { useLoadingStore } from '@/stores/useLoadingStore';
 import { useScrollStore } from '@/stores/useScrollStore';
@@ -24,6 +25,8 @@ import Experience from '@/components/sections/Experience';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/Footer';
 import { ConstellationCredits } from '@/components/ui/ConstellationCredits';
+import { revealWithin } from '@/lib/textReveal';
+import { StarMapIndex } from '@/components/ui/StarMapIndex';
 
 const SkillsSymbols = lazy(() => import('@/3d/components/SkillsSymbols').then((module) => ({ default: module.SkillsSymbols })));
 const StoryMeteor = lazy(() => import('@/3d/components/StoryMeteor').then((module) => ({ default: module.StoryMeteor })));
@@ -49,6 +52,7 @@ function Portfolio({ restore }) {
   const setLoading = useLoadingStore((state) => state.setLoading);
 
   useSmoothScroll({ scope: root, paused: loading });
+  useChapterReveal({ scope: root, disabled: staticMotion });
   const progress = useScrollProgress({ scope: root, story: true, locale: i18n.resolvedLanguage, ready: !loading, initialPosition: restore, historyManaged: true, staticMotion });
 
   useGSAPSetup(() => {
@@ -113,6 +117,12 @@ function Portfolio({ restore }) {
     return useScrollStore.subscribe(draw);
   }, { scope: root, dependencies: [staticMotion], revertOnUpdate: true });
 
+  // Headings and body copy born from starlight, signal-decoded labels, wired by data-reveal.
+  useGSAPSetup((context, contextSafe) => {
+    if (loading || staticMotion) return;
+    return revealWithin(reading.current, contextSafe);
+  }, { scope: root, dependencies: [loading, staticMotion, i18n.resolvedLanguage], revertOnUpdate: true });
+
   useEffect(() => {
     document.body.classList.toggle('loading-lock', loading);
     return () => document.body.classList.remove('loading-lock');
@@ -128,11 +138,9 @@ function Portfolio({ restore }) {
     };
     document.fonts?.ready.then(refresh).catch(() => {});
     const timer = window.setTimeout(refresh, 300);
-    window.addEventListener('load', refresh);
     return () => {
       active = false;
       window.clearTimeout(timer);
-      window.removeEventListener('load', refresh);
     };
   }, { scope: root, dependencies: [loading, restore], revertOnUpdate: true });
 
@@ -140,6 +148,7 @@ function Portfolio({ restore }) {
     <div ref={root} className="bg-transparent text-(--text-primary) min-h-screen font-sans">
       {loading && <Preloader opening={opening} onComplete={() => setLoading(false)} />}
       <Cursor />
+      {!loading && <StarMapIndex />}
 
       <Suspense fallback={null}>
         <GalaxyScene story freezeAmbient={false} opening={opening}>{quality => <>

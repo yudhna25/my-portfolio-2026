@@ -84,13 +84,33 @@
     "tagsLabel": "Disciplines",
     "viewCaseStudy": "View case study",
     "selectLabel": "Select a project",
-    "interactionHint": "Hover or Tab to preview. Tap / press to keep a selection; tap again, tap the background or press Escape to clear.",
+    "interactionHint": "Sweep across the sky to glimpse what hides there. Rest on a constellation or use Tab to wake it, press to open; press again, tap the background or press Escape to return.",
     "behanceReference": "Reference on Behance",
     "comingSoon": "Case study coming soon",
+    "backToOrbit": "Back to the sky",
     "constellations": {
       "edura": "Centaurus",
       "veris": "Gemini",
       "vie": "Cygnus"
+    },
+    "myths": {
+      "edura": "Chiron, teacher of heroes",
+      "veris": "Castor and Pollux, two souls never apart",
+      "vie": "The swan flying along the Milky Way"
+    },
+    "phenomena": {
+      "edura": {
+        "name": "Omega Centauri",
+        "line": "Inside the centaur, ten million suns swarm into a single hive of light."
+      },
+      "veris": {
+        "name": "Jellyfish Nebula",
+        "line": "A star that exploded thousands of years ago left a jellyfish of light drifting quietly at the twins' feet."
+      },
+      "vie": {
+        "name": "Albireo",
+        "line": "A gold star and a blue star lean together at the swan's beak; no one is yet sure they truly belong to each other."
+      }
     }
   },
   "skills": {
@@ -135,7 +155,8 @@
       "web": "Basic HTML/CSS/JS",
       "react": "React (learning)"
     },
-    "aiMembers": "ChatGPT · Claude · Antigravity"
+    "aiMembers": "ChatGPT · Claude · Antigravity",
+    "headingAccent": "Nebula"
   },
   "education": {
     "heading": "Star Map",
@@ -167,7 +188,8 @@
       "Scorpius": "Scorpius",
       "Leo": "Leo"
     },
-    "figureLabel": "{{school}} — {{constellation}}"
+    "figureLabel": "{{school}} — {{constellation}}",
+    "headingAccent": "Map"
   },
   "experience": {
     "sectionLabel": "Voyage Log",
@@ -194,7 +216,8 @@
         "type": "Internship",
         "description": "Conducted UX research via surveys. Designed brand-consistent UI, optimizing layout and typography. Handed off designs to development teams."
       }
-    }
+    },
+    "headingAccent": "Voyage"
   },
   "contact": {
     "sectionLabel": "Transmission",
@@ -241,6 +264,10 @@
     "contact": "Contact",
     "hero": "Home",
     "missionProgress": "Mission progress"
+  },
+  "starMap": {
+    "label": "Voyage index",
+    "jump": "Chapter {{index}}: fly to {{name}}"
   },
   "footer": {
     "label": "Site footer",

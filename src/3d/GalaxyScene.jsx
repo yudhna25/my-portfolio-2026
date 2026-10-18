@@ -1,6 +1,6 @@
 import { Suspense, useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Selection } from '@react-three/postprocessing';
+import { Select, Selection } from '@react-three/postprocessing';
 import { SceneBoundary } from '@/3d/components/SceneBoundary';
 import { SceneFallback } from '@/3d/components/SceneFallback';
 import { useMediaQuery } from '@/3d/hooks/useMediaQuery';
@@ -11,6 +11,10 @@ import { Nebula } from '@/3d/components/Nebula';
 import { BlackHoleSystem } from '@/3d/components/BlackHoleSystem';
 import { CameraRig } from '@/3d/components/CameraRig';
 import { FinaleParticles } from '@/3d/components/FinaleParticles';
+import { YearDust } from '@/3d/components/YearDust';
+import { SpaceDust } from '@/3d/components/SpaceDust';
+import { ChapterBiomes } from '@/3d/components/ChapterBiomes';
+import { ChapterWaveDriver } from '@/3d/components/ChapterWave';
 import { QUALITY } from '@/3d/quality';
 import { INITIAL_CAMERA_POSITION } from '@/3d/utils/cameraPath';
 import { portalProgress, portalState } from '@/3d/utils/portal';
@@ -77,17 +81,20 @@ export function GalaxyScene({ children, count, quality: chosenQuality, rayQualit
           frameloop={hidden ? 'never' : 'always'}
           fallback={<SceneFallback />}
         >
-          <color attach="background" args={['#050505']} />
+          <color attach="background" args={['#07080D']} />
           <Suspense fallback={null}>
             <Selection>
               <CameraRig opening={opening} frozen={frozen} story={story} />
+              {story && <ChapterWaveDriver reduced={frozen} />}
               <PortalBackdrop story={story} reduced={frozen}>
                 <StarField reduced={frozen} opening={opening} count={count ?? QUALITY[quality]} frozen={ambientFrozen} story={story} />
                 <Nebula position={[0, 0, -240]} scale={[80, 40, 1]} colorA="#202020" colorB="#4A4A4A" frozen={ambientFrozen} quality={quality} story={story} />
                 <Nebula position={[-16, 5, -270]} scale={[50, 30, 1]} colorA="#262626" colorB="#5A5A5A" frozen={ambientFrozen} quality={quality} story={story} />
+                {story && <ChapterBiomes quality={quality} reduced={frozen} />}
+                {story && <SpaceDust quality={quality} reduced={frozen} />}
               </PortalBackdrop>
               <BlackHoleSystem frozen={ambientFrozen} reduced={frozen} story={story} quality={quality} enableBloom={enableBloom} opening={opening} />
-              {story && <FinaleParticles quality={quality} reduced={frozen} />}
+              {story && <Select enabled><FinaleParticles quality={quality} reduced={frozen} /><YearDust quality={quality} reduced={frozen} /></Select>}
               <SceneReady />
               {!hidden && !ambientFrozen && <ShootingStars frozen={frozen} story={story} />}
               {typeof children === 'function' ? children(quality) : children}

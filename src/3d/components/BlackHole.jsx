@@ -6,7 +6,9 @@ import { BLACK_HOLE_CENTER } from '@/3d/utils/cameraPath';
 import { BLACK_HOLE_VERT, BLACK_HOLE_FRAG, BLACK_HOLE_COPY } from '@/3d/shaders/blackHole';
 import { useScrollStore } from '@/stores/useScrollStore';
 import { portalProgress, portalState } from '@/3d/utils/portal';
-import { finaleState } from '@/3d/utils/finale';
+import { finaleScreenScale, finaleState } from '@/3d/utils/finale';
+import { createLockupRaster } from '@/3d/utils/openingLockup';
+import { createYearMirror } from '@/3d/utils/yearMirror';
 
 const center = new Vector3(...BLACK_HOLE_CENTER);
 
@@ -14,10 +16,33 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
   const rendererRef = useRef(null);
   const phase = useRef({});
   const finale = useRef({});
-  const copyDefines = useMemo(() => ({ FINALE_OCTAVES: quality === 'low' ? 2 : quality === 'medium' ? 3 : 4 }), [quality]);
+  const copyDefines = useMemo(() => ({ FINALE_OCTAVES: quality === 'low' ? 2 : 3, FIRE_STEPS: quality === 'low' ? 10 : quality === 'medium' ? 16 : 22 }), [quality]);
   const projected = useMemo(() => new Vector3(), []);
   const bufferSize = useMemo(() => new Vector2(), []);
   const diskTime = useRef(0);
+  const lockup = useRef(null);
+  const year = useRef(null);
+  const yearPull = useRef(0);
+  const yearMask = useRef('');
+  useEffect(() => () => {
+    lockup.current?.dispose(); lockup.current = null;
+    year.current?.dispose(); year.current = null;
+    const node = document.querySelector('[data-hero-year]');
+    if (node) node.style.maskImage = node.style.webkitMaskImage = '';
+  }, []);
+  // Complement of the lensed copy's fade (0.8..1 of reach), in the year layer's own box.
+  const maskYear = target => {
+    const node = document.querySelector('[data-hero-year]');
+    if (!node) return;
+    let next = '';
+    if (target) {
+      const box = node.getBoundingClientRect();
+      next = `radial-gradient(circle at ${(target.x - box.left).toFixed(1)}px ${(target.y - box.top).toFixed(1)}px, transparent ${(target.reach * 0.8).toFixed(1)}px, black ${target.reach.toFixed(1)}px)`;
+    }
+    if (next === yearMask.current) return;
+    yearMask.current = next;
+    node.style.maskImage = node.style.webkitMaskImage = next;
+  };
   const renderer = useMemo(() => {
     const tier = RAY_QUALITY[quality];
     const material = new ShaderMaterial({
@@ -88,11 +113,16 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
       projected.copy(center).project(camera);
       portal.uRayCenter.value.set(Number.isFinite(projected.x) ? projected.x * 0.5 + 0.5 : 0.5,
         Number.isFinite(projected.y) ? projected.y * 0.5 + 0.5 : 0.5);
-      const radius = Math.max(1.1, camera.position.distanceTo(center));
+      const distance = camera.position.distanceTo(center);
+      const radius = Math.max(1.1, distance);
       const shadowAngle = Math.asin(Math.min(0.999, 2.598076 * Math.sqrt(1 - 1 / radius) / radius));
       const shadow = Math.tan(shadowAngle) * cssHeight / (2 * Math.tan(camera.fov * Math.PI / 360));
       // Grow the actual photon/shadow diameter to about 55vh, before tracing each pixel.
-      portal.uFinaleScale.value = ending ? cssHeight * 0.27 * (0.12 + 0.88 * authored.collapse) / shadow : 1;
+      portal.uFinaleScale.value = ending ? finaleScreenScale(distance, camera.fov, cssHeight, authored.collapse, authored.zoom) : 1;
+      // The fireball lives in world units; express its radius in screen heights at this distance.
+      const screenRadius = authored.fireRadius / (2 * Math.max(1, distance) * Math.tan(camera.fov * Math.PI / 360));
+      portal.uFireball.value.set(ending ? screenRadius : 0, authored.fireHeat, authored.fireDensity, authored.flatten);
+      portal.uFinaleZoom.value = ending ? authored.zoom : 1;
       // The anchor is the cap-height slot, not the counter of a visible O glyph.
       portal.uPortalScale.value = Math.max(0.001, height * 0.48 / shadow) * phase.current.growth;
       portal.uPortalRadius.value.set(height * 2.8 * phase.current.growth, height * 1.4 * phase.current.growth);
@@ -107,8 +137,36 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
         portal.uPortalVisibility.value = 1;
         portal.uPortalDust.value = 0;
       }
+      // Bend a raster of the Hero lockup until the DOM copy is revealed in place.
+      const lens = portal.uOpeningLens.value;
+      const idleHero = !intro && !reduced && quality !== 'low' && p === 0 && state.storyChapter === 'hero' && !document.querySelector('[data-preloader]');
+      // The pull eases in after the opening, or after scrolling back to the top.
+      yearPull.current = idleHero ? Math.min(1, yearPull.current + delta / 1.4) : 0;
+      if (intro && intro.text > 0) {
+        lockup.current ??= createLockupRaster();
+        const ready = lockup.current.update(cssWidth, cssHeight, Math.min(2, window.devicePixelRatio || 1));
+        portal.uOpeningText.value = lockup.current.texture;
+        portal.uOpeningReach.value = 0;
+        portal.uOpeningRect.value.set(0, 0, 1, 1);
+        lens.set(ready ? 1 : 0, intro.shadow * intro.lens, intro.chroma, intro.text);
+        maskYear(null);
+      } else if (yearPull.current > 0) {
+        // 2026 behind the hole: a bounded point lens bends the digits nearest the O into
+        // arcs, and the DOM copy is masked out exactly where the lensed mirror is drawn.
+        year.current ??= createYearMirror();
+        const x = left + width / 2, y = top + height / 2, reach = height * 4.2;
+        const ready = year.current.update(cssWidth, cssHeight, x, y, reach, Math.min(1.5, window.devicePixelRatio || 1));
+        const pull = yearPull.current * yearPull.current * (3 - 2 * yearPull.current);
+        const einstein = height * 0.95 * pull * (1 + 0.04 * Math.sin(diskTime.current * 0.6));
+        portal.uOpeningText.value = year.current.texture;
+        portal.uOpeningReach.value = reach;
+        portal.uOpeningRect.value.copy(year.current.rect);
+        lens.set(ready ? 1 : 0, einstein, 0.008 * pull, 1);
+        maskYear(ready ? { x, y, reach } : null);
+      } else { lens.x = 0; maskYear(null); }
     }
     uniforms.uDiskIntensity.value = 1 + (ending ? 0.35 * authored.hole : 0);
+    portal.uDiskWarm.value = ending ? authored.warm : 0;
     uniforms.uObserver.value.copy(camera.position).sub(center);
     const observer = uniforms.uObserver.value;
     const observerRadius = observer.length();
@@ -118,7 +176,9 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
     uniforms.uCameraMatrix.value.copy(camera.matrixWorld);
     uniforms.uInverseProjection.value.copy(camera.projectionMatrixInverse);
     // Gas has an ambient clock; camera, lensing and collapse keep their scroll clock.
-    if (!frozen && !reduced) diskTime.current += Math.min(delta, 0.05);
+    // The finale disk streams faster so its Keplerian lanes read as motion.
+    if (!frozen && !reduced) diskTime.current += Math.min(delta, 0.05) * (1 + (ending ? 1.2 * authored.warm : 0));
+    portal.uFireTime.value = diskTime.current;
     uniforms.uTime.value = diskTime.current + (intro ? -8 * Math.pow(1 - Math.min(1, intro.p / 0.88), 2) : 0);
     // Preserve R3F/composer state: the HDR ray image is rendered exactly once.
     const previousTarget = gl.getRenderTarget();

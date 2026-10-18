@@ -7,6 +7,7 @@ import { useEducationStore, activeEducation } from '@/stores/useEducationStore';
 import { useScrollStore } from '@/stores/useScrollStore';
 import { SYMBOL_TARGETS } from '@/3d/utils/symbolMorph';
 import { ConstellationCreditButton } from '@/components/ui/ConstellationCredits';
+import { MixedText } from '@/components/ui/MixedText';
 
 const regions = [
   'lg:col-start-1 lg:col-span-5 lg:row-start-1',
@@ -63,10 +64,10 @@ export default function Education({ stageRefs }) {
     onClick={event => { if (!event.target.closest('[data-education-item],[data-education-clear]')) clear(); }}
     className="relative isolate border-y border-white/[0.06] px-6 py-24 text-(--text-primary) sm:px-8 lg:min-h-[175vh] lg:px-12 lg:py-28">
     <div className="mx-auto max-w-7xl">
-      <header className="max-w-3xl bg-linear-to-r from-(--bg-void)/90 via-(--bg-void)/70 to-transparent">
-        <h2 id="education-heading" className="font-display text-[clamp(2rem,6vw,6rem)] font-bold uppercase leading-[1.2] tracking-[-0.04em]">{t('education.heading')}</h2>
-        <p className="mt-5 max-w-xl font-body text-sm leading-relaxed text-white/65">{t('education.mapNote')}</p>
-        <p id="education-hint" className="mt-3 max-w-xl font-mono text-xs leading-relaxed text-white/55">{t('education.interactionHint')}</p>
+      <header className="max-w-3xl star-scrim">
+        <h2 key={i18n.resolvedLanguage} id="education-heading" aria-label={t('education.heading')} data-reveal="starlight" className="font-display text-[clamp(2rem,6vw,6rem)] font-bold uppercase leading-[1.2] tracking-[-0.04em]"><MixedText text={t('education.heading')} accent={t('education.headingAccent')} /></h2>
+        <p key={`note-${i18n.resolvedLanguage}`} data-reveal="dust" className="mt-5 max-w-xl font-body text-sm leading-relaxed text-white/65">{t('education.mapNote')}</p>
+        <p key={`hint-${i18n.resolvedLanguage}`} id="education-hint" data-reveal="signal" className="mt-3 max-w-xl font-mono text-xs leading-relaxed text-white/55">{t('education.interactionHint')}</p>
         <button type="button" data-education-clear onClick={clear} className="mt-3 min-h-11 px-1 font-mono text-xs text-white/65 underline decoration-white/25 underline-offset-4 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4">{t('education.clearSelection')}</button>
         <ConstellationCreditButton className="ml-5" />
       </header>
@@ -87,17 +88,17 @@ export default function Education({ stageRefs }) {
                   vectorEffect="non-scaling-stroke" className="pointer-events-auto cursor-pointer fill-transparent stroke-transparent stroke-1 outline-none! shadow-none! focus-visible:stroke-white/75 focus-visible:stroke-2" />
               </svg>
             </div>
-            <div className="relative z-10 bg-linear-to-r from-(--bg-void)/90 via-(--bg-void)/70 to-transparent">
-              <p className="flex flex-wrap items-center gap-x-5 gap-y-1 font-mono text-xs text-white/65"><span>{t(path + '.period')}</span><span className="text-white/55">{t('education.constellationNames.' + constellation)}</span></p>
-              <h3 className="mt-2 font-display text-[clamp(1.2rem,2.3vw,2.25rem)] font-semibold leading-[1.3] tracking-[-0.03em]">
+            <div className="relative z-10 star-scrim">
+              <p data-reveal="items" className="flex flex-wrap items-center gap-x-5 gap-y-1 font-mono text-xs text-white/65"><span>{t(path + '.period')}</span><span className="text-white/55">{t('education.constellationNames.' + constellation)}</span></p>
+              <h3 data-reveal="items" className="mt-2 font-display text-[clamp(1.2rem,2.3vw,2.25rem)] font-semibold leading-[1.3] tracking-[-0.03em]">
               <button type="button" data-education-item={id} aria-pressed={target === id} aria-controls={'education-stage-' + id} aria-describedby="education-hint"
                 {...handlers(id)}
                 className={'block min-h-11 w-full py-3 text-left focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4 ' + (target === id ? 'underline decoration-white/50 underline-offset-8' : '')}>
                 {t(path + '.name')}
               </button>
               </h3>
-              <p className="mt-1 font-body text-base leading-relaxed text-white/85">{t(path + '.degree')}</p>
-              <p className="mt-2 max-w-[48ch] font-body text-sm leading-relaxed text-white/60">{t(path + '.description')}</p>
+              <p key={`degree-${i18n.resolvedLanguage}`} data-reveal="dust" className="mt-1 font-body text-base leading-relaxed text-white/85">{t(path + '.degree')}</p>
+              <p key={`description-${i18n.resolvedLanguage}`} data-reveal="dust" className="mt-2 max-w-[48ch] font-body text-sm leading-relaxed text-white/75">{t(path + '.description')}</p>
             </div>
           </li>;
         })}

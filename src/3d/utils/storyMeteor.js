@@ -27,9 +27,18 @@ export function meteorVisibility(chapter, progress) {
     : chapter === 'departure' ? 1 - smooth((p - 0.70) / 0.30) : 0;
 }
 
+// The constellations ignite as the comet's three fragments reach them.
 export function worksArrival(chapter, progress) {
-  return chapter === 'departure' ? smooth((progress - 0.30) / 0.70) : 1;
+  return chapter === 'departure' ? smooth((progress - 0.45) / 0.50) : 1;
 }
+
+// Departure: the comet breaks into three; each fragment flies to one Works figure.
+export function meteorSplit(chapter, progress) {
+  return chapter === 'departure' ? smoother((progress - 0.52) / 0.36) : 0;
+}
+
+// World centres of the three Works figures at rest, written by WorksConstellations.
+export const meteorTargets = { ready: false, points: [{ x: 0, y: 0, z: 0 }, { x: 0, y: 0, z: 0 }, { x: 0, y: 0, z: 0 }] };
 
 function curveSlope(points, index, exitSlope) {
   if (index === 4) return exitSlope;
@@ -79,7 +88,7 @@ export function sampleStoryMeteor(layout, q, out, pose) {
   const aspect = layout.width / layout.height;
   if (q <= 1) {
     const contentY = q * (layout.range + 0.60 * layout.height) + 0.20 * layout.height;
-    storyCameraPath('experience', 1, pose, false, aspect);
+    storyCameraPath('experience', Math.max(0, q), pose, false, aspect);
     return worldPoint(curveX(layout.points, contentY, -0.12 / Math.max(1, layout.range + 0.60 * layout.height)),
       0.20 + 0.60 * q, 24, aspect, out, pose);
   }

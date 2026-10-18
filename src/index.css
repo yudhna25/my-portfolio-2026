@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=JetBrains+Mono:wght@400&family=Fraunces:ital,opsz,wght@1,9..144,300..600&display=swap');
 
 @import 'tailwindcss';
 
@@ -58,7 +58,7 @@
 
   ::selection {
 
-    background: var(--color-foreground);
+    background: var(--accent-amber);
 
     color: var(--color-background);
 
@@ -157,6 +157,31 @@
 
 
 .split-line { overflow: clip; display: block; }
+.starlight-line { display: block; }
+
+/* Two voices in one line: Unbounded carries the statement, an editorial italic
+ * in Hawking amber carries the feeling. */
+.mix-em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-variation-settings: 'opsz' 144;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  color: var(--accent-amber);
+}
+
+/* Reading scrim over the live sky: a feathered pool of shadow with no edges, so text
+ * stays legible without a dark box hiding the universe behind it. */
+.star-scrim { position: relative; isolation: isolate; text-shadow: 0 1px 14px rgb(7 8 13 / 0.9); }
+.star-scrim::before {
+  content: '';
+  position: absolute;
+  inset: -2.5rem -3.5rem;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(closest-side, rgb(7 8 13 / 0.5), rgb(7 8 13 / 0.28) 55%, rgb(7 8 13 / 0));
+}
 
 .split-char { display: inline-block; }
 
@@ -168,11 +193,16 @@
 
 /* Keyboard focus stays visible on the dark background, including animated entrances. */
 
+/* Sections focused after a jump (Nav, hash) are not Tab stops: no full-screen ring. */
+section[tabindex="-1"]:focus-visible, [data-story-chapter][tabindex="-1"]:focus-visible { outline: none; box-shadow: none; }
+
 :focus-visible {
 
-  @apply outline-2 outline-solid outline-white outline-offset-4;
+  @apply outline-2 outline-solid outline-offset-4;
 
-  box-shadow: 0 0 0 6px #050505;
+  outline-color: var(--accent-amber);
+
+  box-shadow: 0 0 0 6px var(--bg-void);
 
   scroll-margin-block: 6rem 2rem;
 
@@ -194,7 +224,10 @@
 
 @media (forced-colors: active) {
 
-  :focus-visible { outline-color: CanvasText; }
+  /* Sections focused after a jump (Nav, hash) are not Tab stops: no full-screen ring. */
+section[tabindex="-1"]:focus-visible, [data-story-chapter][tabindex="-1"]:focus-visible { outline: none; box-shadow: none; }
+
+:focus-visible { outline-color: CanvasText; }
 
 }
 
@@ -212,7 +245,10 @@
 
 .hover-card:focus-within,
 
-.cta-hover:focus-visible {
+.cta-hover/* Sections focused after a jump (Nav, hash) are not Tab stops: no full-screen ring. */
+section[tabindex="-1"]:focus-visible, [data-story-chapter][tabindex="-1"]:focus-visible { outline: none; box-shadow: none; }
+
+:focus-visible {
 
   border-color: rgb(250 250 250 / 0.35);
 
@@ -255,7 +291,10 @@
 
     .cta-hover:hover,
 
-    .cta-hover:focus-visible {
+    .cta-hover/* Sections focused after a jump (Nav, hash) are not Tab stops: no full-screen ring. */
+section[tabindex="-1"]:focus-visible, [data-story-chapter][tabindex="-1"]:focus-visible { outline: none; box-shadow: none; }
+
+:focus-visible {
 
       box-shadow: var(--glow-button-strong);
 

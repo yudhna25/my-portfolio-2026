@@ -76,7 +76,7 @@ export default function Footer() {
 
             start: 'top 88%',
 
-            toggleActions: 'play none none reverse',
+            once: true,
 
           },
 
@@ -110,7 +110,7 @@ export default function Footer() {
 
             start: 'top 85%',
 
-            toggleActions: 'play none none reverse',
+            once: true,
 
           },
 

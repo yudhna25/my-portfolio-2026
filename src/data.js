@@ -1,9 +1,9 @@
 export const THEME = {
-  void: '#050505',
-  nebula: '#0A0A0A',
-  surface: '#111111',
+  void: '#07080D',
+  nebula: '#0B0C12',
+  surface: '#12131A',
   elevated: '#1A1A1A',
-  textPrimary: '#FAFAFA',
+  textPrimary: '#EDEBE3',
   textSecondary: '#999999',
 };
 
