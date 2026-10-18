@@ -6,6 +6,7 @@ import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { useSkillsStore, activeSkill } from '@/stores/useSkillsStore';
 import { useScrollStore } from '@/stores/useScrollStore';
 import { skillTools, appliedSkills, commonSkills, technicalSkills } from '@/data/skills';
+import { MixedText } from '@/components/ui/MixedText';
 
 export default function Skills({ stageRef }) {
   const root = useRef(null);
@@ -35,7 +36,7 @@ export default function Skills({ stageRef }) {
   }, { scope: root, dependencies: [anchor], revertOnUpdate: true });
 
   useGSAP((context, contextSafe) => {
-    if (!reduced) revealHeadings(root.current.querySelectorAll('h2,h3'), contextSafe);
+    if (!reduced) revealHeadings(root.current.querySelectorAll('h2'), contextSafe);
     ScrollTrigger.refresh(true);
   }, { scope: root, dependencies: [reduced, i18n.resolvedLanguage], revertOnUpdate: true });
 
@@ -94,13 +95,13 @@ export default function Skills({ stageRef }) {
       className="relative border-y border-white/[0.06] px-6 py-20 text-(--text-primary) sm:px-8 lg:px-12 lg:py-28">
       <div className="mx-auto max-w-7xl">
         <header className="mb-10 lg:mb-14">
-          <h2 key={i18n.resolvedLanguage} aria-label={t('skills.heading')} id="skills-heading" className="split-heading font-display text-[clamp(2rem,6vw,6rem)] font-bold uppercase leading-[1.2] tracking-[-0.04em]">{t('skills.heading')}</h2>
-          <p className="mt-5 max-w-2xl font-mono text-xs leading-relaxed text-white/55">{t('skills.interactionHint')}</p>
+          <h2 key={i18n.resolvedLanguage} aria-label={t('skills.heading')} id="skills-heading" className="split-heading font-display text-[clamp(2rem,6vw,6rem)] font-bold uppercase leading-[1.2] tracking-[-0.04em]"><MixedText text={t('skills.heading')} accent={t('skills.headingAccent')} /></h2>
+          <p key={`hint-${i18n.resolvedLanguage}`} data-reveal="signal" className="mt-5 max-w-2xl font-mono text-xs leading-relaxed text-white/55">{t('skills.interactionHint')}</p>
         </header>
         <div ref={region} className="relative grid gap-5 md:grid-cols-[minmax(0,1fr)_minmax(0,1.8fr)_minmax(0,1fr)] lg:gap-8">
           <div className="relative z-10 order-2 min-w-0 md:order-1">
-            <h3 className="mb-5 font-mono text-xs uppercase tracking-widest text-white/55">{t('skills.toolsLabel')}</h3>
-            <ul className="grid grid-cols-2 gap-x-5 md:grid-cols-1">
+            <h3 key={i18n.resolvedLanguage} data-reveal="signal" className="mb-5 font-mono text-xs uppercase tracking-widest text-white/55">{t('skills.toolsLabel')}</h3>
+            <ul data-reveal="items" className="grid grid-cols-2 gap-x-5 md:grid-cols-1">
               {skillTools.map(({ id }) => (
                 <li key={id} className="min-w-0">
                   <button type="button" data-skill-tool={id} aria-pressed={target === id} aria-controls="skills-stage"
@@ -136,8 +137,8 @@ export default function Skills({ stageRef }) {
             </figcaption>
           </figure>
           <div className="relative z-10 order-3 min-w-0 bg-linear-to-r from-(--bg-void)/90 via-(--bg-void)/80 to-transparent">
-            <h3 className="mb-5 font-mono text-xs uppercase tracking-widest text-white/55">{t('skills.competenciesLabel')}</h3>
-            <ul className="grid grid-cols-2 gap-x-5 md:grid-cols-1">
+            <h3 key={i18n.resolvedLanguage} data-reveal="signal" className="mb-5 font-mono text-xs uppercase tracking-widest text-white/55">{t('skills.competenciesLabel')}</h3>
+            <ul data-reveal="items" className="grid grid-cols-2 gap-x-5 md:grid-cols-1">
               {appliedSkills.map((id) => (
                 <li key={id} data-skill-ability={id} data-linked={tool?.competencies.includes(id) ? 'true' : 'false'} className={'flex min-h-9 items-center gap-3 py-2 font-body text-sm leading-snug transition-colors md:text-base ' + (tool?.competencies.includes(id) ? 'text-white' : 'text-white/55')}>
                   <span aria-hidden="true" className={'h-1 w-1 shrink-0 rounded-full ' + (tool?.competencies.includes(id) ? 'bg-white' : 'bg-white/20')} />
@@ -157,14 +158,14 @@ export default function Skills({ stageRef }) {
         </div>
         <div className="mt-12 grid gap-8 border-t border-white/10 pt-8 md:grid-cols-[2fr_1fr] lg:mt-16">
           <div>
-            <h3 className="mb-4 font-mono text-xs uppercase tracking-widest text-white/55">{t('skills.commonLabel')}</h3>
-            <ul className="flex flex-wrap gap-x-6 gap-y-3 font-body text-sm text-white/65">
+            <h3 key={i18n.resolvedLanguage} data-reveal="signal" className="mb-4 font-mono text-xs uppercase tracking-widest text-white/55">{t('skills.commonLabel')}</h3>
+            <ul data-reveal="items" className="flex flex-wrap gap-x-6 gap-y-3 font-body text-sm text-white/65">
               {commonSkills.map((id) => <li key={id}>{t('skills.abilityNames.' + id)}</li>)}
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 font-mono text-xs uppercase tracking-widest text-white/55">{t('skills.technicalLabel')}</h3>
-            <ul className="space-y-3 font-mono text-xs leading-relaxed text-white/65">
+            <h3 key={i18n.resolvedLanguage} data-reveal="signal" className="mb-4 font-mono text-xs uppercase tracking-widest text-white/55">{t('skills.technicalLabel')}</h3>
+            <ul data-reveal="items" className="space-y-3 font-mono text-xs leading-relaxed text-white/65">
               {technicalSkills.map((id) => <li key={id}>{t('skills.technicalNames.' + id)}</li>)}
             </ul>
           </div>

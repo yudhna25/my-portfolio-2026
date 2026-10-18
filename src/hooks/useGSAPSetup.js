@@ -7,6 +7,7 @@ import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { Flip } from 'gsap/Flip';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
+import { revealStarlight } from '@/lib/textReveal';
 
 // Module initialization runs once, before React's effects (including StrictMode).
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother, SplitText, ScrambleTextPlugin, ScrollToPlugin, Flip, DrawSVGPlugin);
@@ -29,20 +30,10 @@ export function splitText(source, opts = {}) {
   });
 }
 
-/** Call in the owning useGSAP context, after guarding reduced motion. */
+/** Call in the owning useGSAP context, after guarding reduced motion. Headings are born from starlight. */
 export function revealHeadings(targets, contextSafe, scroll = true) {
-  Array.from(targets).filter((target) => target.getClientRects().length).forEach((target) => {
-    const pending = !scroll || target.getBoundingClientRect().top >= window.innerHeight * 0.85;
-    splitText(target, {
-      type: 'lines,chars', autoSplit: true,
-      onSplit: contextSafe((split) => pending ? gsap.fromTo(split.chars,
-        { y: 40, opacity: 0 },
-        {
-          y: 0, opacity: 1, duration: 0.8, ease: 'expo.out', stagger: 0.03,
-          ...(scroll ? { scrollTrigger: { trigger: target, start: 'top 85%', once: true } } : {}),
-        }) : gsap.set(split.chars, { y: 0, opacity: 1 })),
-    });
-  });
+  Array.from(targets).filter((target) => target.getClientRects().length)
+    .forEach((target) => revealStarlight(target, contextSafe, scroll));
 }
 
 export { gsap, ScrollTrigger, ScrollSmoother, SplitText, ScrambleTextPlugin, ScrollToPlugin, Flip, DrawSVGPlugin };

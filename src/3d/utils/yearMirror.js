@@ -49,7 +49,7 @@ export function createYearMirror() {
       return Math.hypot(m.a, m.b) || 1;
     };
     let complete = true;
-    context.fillStyle = context.strokeStyle = '#ffffff';
+    context.fillStyle = context.strokeStyle = '#EDEBE3';
     for (const node of layer.querySelectorAll('.hero-year-stars image')) {
       const image = imageFor(node.getAttribute('href'));
       if (!image) { complete = false; continue; }

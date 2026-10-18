@@ -137,7 +137,8 @@
       "web": "HTML/CSS/JS cơ bản",
       "react": "React (đang học)"
     },
-    "aiMembers": "ChatGPT · Claude · Antigravity"
+    "aiMembers": "ChatGPT · Claude · Antigravity",
+    "headingAccent": "Tinh Vân"
   },
   "education": {
     "heading": "Bản Đồ Sao",
@@ -169,7 +170,8 @@
       "Scorpius": "Scorpius",
       "Leo": "Leo"
     },
-    "figureLabel": "{{school}} — {{constellation}}"
+    "figureLabel": "{{school}} — {{constellation}}",
+    "headingAccent": "Sao"
   },
   "experience": {
     "sectionLabel": "Voyage Log",
@@ -196,7 +198,8 @@
         "type": "Internship",
         "description": "Nghiên cứu UX qua khảo sát. Thiết kế UI nhất quán thương hiệu, tối ưu layout và typography. Bàn giao thiết kế cho đội ngũ phát triển."
       }
-    }
+    },
+    "headingAccent": "Hành Trình"
   },
   "contact": {
     "sectionLabel": "Transmission",
