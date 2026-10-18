@@ -3,9 +3,9 @@ import { useFrame } from '@react-three/fiber';
 import { AdditiveBlending, BufferAttribute, BufferGeometry, Color, Matrix4, Vector2, Vector3 } from 'three';
 import { useScrollStore } from '@/stores/useScrollStore';
 import { portalProgress } from '@/3d/utils/portal';
-import { BIOMES, biomeWeights } from '@/3d/utils/chapterWave';
+import { CHAPTER_PALETTE, PALETTE_CHAPTERS, paletteWeights } from '@/3d/utils/chapterWave';
 
-const TINTS = { cluster: new Color('#FFD6A0'), planetary: new Color('#B8C8FF'), pulsar: new Color('#A8E4FF'), arm: new Color('#FFC4B4') };
+const TINTS = Object.fromEntries(PALETTE_CHAPTERS.map(key => [key, new Color(CHAPTER_PALETTE[key].light)]));
 
 // Two parallax layers the far sky cannot give (it rides with the camera): drifting dust
 // right in front of the lens and a mid-distance star shell. Each lives in a box that wraps
@@ -135,10 +135,10 @@ function Layer({ layer, quality, reduced }) {
     if (points.current.visible) {
       if (!reduced) memory.time += Math.min(delta, 0.1);
       values.uOpacity.value = opacity;
-      biomeWeights(chapter, scroll.chapterProgress, memory.biomes);
+      paletteWeights(chapter, scroll.chapterProgress, memory.biomes);
       let mix = 0;
       values.uTint.value.setRGB(0, 0, 0);
-      for (const biome of BIOMES) {
+      for (const biome of PALETTE_CHAPTERS) {
         const weight = memory.biomes[biome];
         if (weight > 0) { values.uTint.value.r += TINTS[biome].r * weight; values.uTint.value.g += TINTS[biome].g * weight; values.uTint.value.b += TINTS[biome].b * weight; mix += weight; }
       }
