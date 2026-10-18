@@ -24,6 +24,7 @@ import Experience from '@/components/sections/Experience';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/Footer';
 import { ConstellationCredits } from '@/components/ui/ConstellationCredits';
+import { revealWithin } from '@/lib/textReveal';
 
 const SkillsSymbols = lazy(() => import('@/3d/components/SkillsSymbols').then((module) => ({ default: module.SkillsSymbols })));
 const StoryMeteor = lazy(() => import('@/3d/components/StoryMeteor').then((module) => ({ default: module.StoryMeteor })));
@@ -113,6 +114,12 @@ function Portfolio({ restore }) {
     return useScrollStore.subscribe(draw);
   }, { scope: root, dependencies: [staticMotion], revertOnUpdate: true });
 
+  // Headings and body copy born from starlight, signal-decoded labels, wired by data-reveal.
+  useGSAPSetup((context, contextSafe) => {
+    if (loading || staticMotion) return;
+    return revealWithin(reading.current, contextSafe);
+  }, { scope: root, dependencies: [loading, staticMotion, i18n.resolvedLanguage], revertOnUpdate: true });
+
   useEffect(() => {
     document.body.classList.toggle('loading-lock', loading);
     return () => document.body.classList.remove('loading-lock');
@@ -128,11 +135,9 @@ function Portfolio({ restore }) {
     };
     document.fonts?.ready.then(refresh).catch(() => {});
     const timer = window.setTimeout(refresh, 300);
-    window.addEventListener('load', refresh);
     return () => {
       active = false;
       window.clearTimeout(timer);
-      window.removeEventListener('load', refresh);
     };
   }, { scope: root, dependencies: [loading, restore], revertOnUpdate: true });
 

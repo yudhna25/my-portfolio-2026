@@ -17,7 +17,7 @@ export const useThemeStore = create((set) => ({
       meta.name = 'theme-color';
       document.head.append(meta);
     }
-    meta.content = '#050505';
+    meta.content = '#07080D';
     try {
       window.localStorage.setItem('stellar-theme', 'dark');
     } catch { /* Fixed dark also works without storage. */ }

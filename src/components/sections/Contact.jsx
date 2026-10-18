@@ -65,12 +65,12 @@ export default function Contact() {
       aria-labelledby="transmission-heading"
       className="relative px-6 py-24 text-(--text-primary) sm:px-8 lg:px-12 lg:py-36"
     >
-      <div data-contact-content className="invisible mx-auto max-w-7xl bg-[linear-gradient(110deg,rgba(5,5,5,0.94),rgba(5,5,5,0.70)_48%,rgba(5,5,5,0.18))] border border-(--bg-elevated) hover:border-white/30 transition-colors p-5 sm:p-8 lg:p-12">
+      <div data-contact-content className="invisible mx-auto max-w-7xl bg-[radial-gradient(ellipse_70%_80%_at_22%_45%,rgba(7,8,13,0.6),rgba(7,8,13,0.25)_55%,transparent_80%)] border border-white/[0.06] hover:border-white/20 transition-colors p-5 sm:p-8 lg:p-12">
         <p data-contact-copy lang="en" className="mb-10 flex items-center gap-4 font-mono text-xs tracking-[0.2em] text-(--text-primary)">
           <span aria-hidden="true" className="h-px w-10 bg-white/30" />
           {t('contact.sectionLabel')}
         </p>
-        <h2 key={language} aria-label={`${t('contact.heading')} ${t('contact.alternateHeading')}`} id="transmission-heading" className="font-display text-[clamp(1.15rem,6vw,7rem)] font-bold leading-[1.25] tracking-[-0.045em]">
+        <h2 key={language} aria-label={`${t('contact.heading')} ${t('contact.alternateHeading')}`} id="transmission-heading" className="[text-shadow:0_2px_30px_rgba(7,8,13,0.85)] font-display text-[clamp(1.15rem,6vw,7rem)] font-bold leading-[1.25] tracking-[-0.045em]">
           <span className="block overflow-clip">
             <span data-contact-line className="split-heading block whitespace-nowrap">{t('contact.heading')}</span>
           </span>
@@ -85,27 +85,27 @@ export default function Contact() {
         {/* Deep Space Transceiver / Radio Transmission Console */}
         <div data-contact-copy className="mt-10 max-w-2xl">
           {/* Telemetry Frequency Header */}
-          <div className="mb-3 flex items-center justify-between font-mono text-[11px] tracking-[0.18em] text-[#FAFAFA]/80 uppercase">
+          <div className="mb-3 flex items-center justify-between font-mono text-[11px] tracking-[0.18em] text-(--text-primary)/80 uppercase">
             <div className="flex items-center gap-2">
-              <span aria-hidden="true" className="size-2 rounded-full bg-[#FAFAFA]" />
+              <span aria-hidden="true" className="size-2 rounded-full bg-(--text-primary)" />
               <span>{t('contact.telemetryFreq')}</span>
             </div>
-            <span className="hidden sm:inline-block text-(--text-muted)">[CARRIER: LOCKED]</span>
+            <span className="hidden sm:inline-block text-white/55">[CARRIER: LOCKED]</span>
           </div>
 
           {/* Transceiver Terminal Card */}
           <div
             data-transmission-terminal
-            className="rounded-xl border border-(--bg-elevated) p-5 transition-colors hover:border-[#FAFAFA]/30 sm:p-6"
+            className="rounded-xl border border-(--bg-elevated) bg-black/35 p-5 transition-colors hover:border-(--text-primary)/30 sm:p-6"
           >
             <div className="flex items-center justify-between border-b border-white/[0.08] pb-3 text-xs font-mono text-(--text-secondary)">
               <span className="flex items-center gap-2">
-                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" className="h-4 w-4 stroke-[#FAFAFA] stroke-[1.5]">
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" className="h-4 w-4 stroke-(--text-primary) stroke-[1.5]">
                   <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.4M12 12h.01M16.2 7.8c2.3 2.3 2.3 6.1 0 8.4M19.1 4.9c3.9 3.9 3.9 10.3 0 14.2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 <span className="text-(--text-primary)">{t('contact.radioTerminal')}</span>
               </span>
-              <span className="border border-white/20 rounded px-2 py-0.5 text-[10px] uppercase tracking-wider text-[#FAFAFA]">
+              <span className="border border-white/20 rounded px-2 py-0.5 text-[10px] uppercase tracking-wider text-(--text-primary)">
                 RX // TX 100%
               </span>
             </div>
@@ -129,8 +129,8 @@ export default function Contact() {
                 aria-label={transmitted ? t('contact.signalTransmitted') : t('contact.copyDispatch')}
                 className={`group inline-flex min-h-11 shrink-0 items-center justify-center gap-2.5 rounded-lg border px-4 py-2.5 font-mono text-xs font-medium tracking-wider transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
                   transmitted
-                    ? 'border-[#FAFAFA] bg-[#FAFAFA]/15 text-[#FAFAFA] shadow-[0_0_20px_rgba(250,250,250,0.35)]'
-                    : 'border border-white/20 text-(--text-primary) hover:border-[#FAFAFA]/60 hover:text-[#FAFAFA]'
+                    ? 'border-(--text-primary) bg-(--text-primary)/15 text-(--text-primary) shadow-[0_0_20px_rgba(255,178,91,0.35)]'
+                    : 'border border-white/20 text-(--text-primary) hover:border-(--text-primary)/60 hover:text-(--text-primary)'
                 }`}
               >
                 <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" className="h-4 w-4 stroke-current stroke-[1.5]">
@@ -152,14 +152,14 @@ export default function Contact() {
               <div
                 role="status"
                 aria-live="polite"
-                className="mt-4 flex items-center gap-3 border-t border-[#FAFAFA]/20 pt-3 font-mono text-xs text-[#FAFAFA] motion-safe:animate-fade-in"
+                className="mt-4 flex items-center gap-3 border-t border-(--text-primary)/20 pt-3 font-mono text-xs text-(--text-primary) motion-safe:animate-fade-in"
               >
                 <div aria-hidden="true" className="flex h-3.5 items-end gap-1">
-                  <span className="w-0.5 rounded-full bg-[#FAFAFA] motion-safe:animate-[pulse_0.4s_ease-in-out_infinite] h-3" />
-                  <span className="w-0.5 rounded-full bg-[#FAFAFA] motion-safe:animate-[pulse_0.6s_ease-in-out_infinite] h-3.5" />
-                  <span className="w-0.5 rounded-full bg-[#FAFAFA] motion-safe:animate-[pulse_0.3s_ease-in-out_infinite] h-2" />
-                  <span className="w-0.5 rounded-full bg-[#FAFAFA] motion-safe:animate-[pulse_0.5s_ease-in-out_infinite] h-3.5" />
-                  <span className="w-0.5 rounded-full bg-[#FAFAFA] motion-safe:animate-[pulse_0.45s_ease-in-out_infinite] h-2.5" />
+                  <span className="w-0.5 rounded-full bg-(--text-primary) motion-safe:animate-[pulse_0.4s_ease-in-out_infinite] h-3" />
+                  <span className="w-0.5 rounded-full bg-(--text-primary) motion-safe:animate-[pulse_0.6s_ease-in-out_infinite] h-3.5" />
+                  <span className="w-0.5 rounded-full bg-(--text-primary) motion-safe:animate-[pulse_0.3s_ease-in-out_infinite] h-2" />
+                  <span className="w-0.5 rounded-full bg-(--text-primary) motion-safe:animate-[pulse_0.5s_ease-in-out_infinite] h-3.5" />
+                  <span className="w-0.5 rounded-full bg-(--text-primary) motion-safe:animate-[pulse_0.45s_ease-in-out_infinite] h-2.5" />
                 </div>
                 <span className="tracking-wider">{t('contact.signalTransmitted')}</span>
               </div>

@@ -135,7 +135,8 @@
       "web": "Basic HTML/CSS/JS",
       "react": "React (learning)"
     },
-    "aiMembers": "ChatGPT · Claude · Antigravity"
+    "aiMembers": "ChatGPT · Claude · Antigravity",
+    "headingAccent": "Nebula"
   },
   "education": {
     "heading": "Star Map",
@@ -167,7 +168,8 @@
       "Scorpius": "Scorpius",
       "Leo": "Leo"
     },
-    "figureLabel": "{{school}} — {{constellation}}"
+    "figureLabel": "{{school}} — {{constellation}}",
+    "headingAccent": "Map"
   },
   "experience": {
     "sectionLabel": "Voyage Log",
@@ -194,7 +196,8 @@
         "type": "Internship",
         "description": "Conducted UX research via surveys. Designed brand-consistent UI, optimizing layout and typography. Handed off designs to development teams."
       }
-    }
+    },
+    "headingAccent": "Voyage"
   },
   "contact": {
     "sectionLabel": "Transmission",
