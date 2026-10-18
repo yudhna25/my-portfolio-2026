@@ -1,13 +1,13 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { AdditiveBlending, BufferAttribute, BufferGeometry, Color, NormalBlending, Vector2, Vector3 } from 'three';
+import { AdditiveBlending, BufferAttribute, BufferGeometry, Color, DoubleSide, NormalBlending, Quaternion, Vector2, Vector3 } from 'three';
 import { useScrollStore } from '@/stores/useScrollStore';
 import { BLACK_HOLE_CENTER, storyCameraPath } from '@/3d/utils/cameraPath';
 import { biomeWeights } from '@/3d/utils/chapterWave';
 
-// One region of sky per reading chapter, all on the same continuous flight: About drifts
-// through a stellar nursery, Skills passes a ringed world and its moons, Education sits
-// inside an observatory's celestial grid, Experience flies along a spiral arm. Each is a
+// One region of sky per reading chapter, all on the same continuous flight: About trucks
+// into a globular star cluster, Skills arcs around a ringed world and its moons, Education
+// cranes up past a pulsar sweeping its beams, Experience tracks along a spiral arm. Each is a
 // world-placed cloud of gas puffs and stars, so the camera's drift gives real parallax.
 // The BH stays the far landmark: every region is composed away from it.
 
@@ -59,21 +59,6 @@ const FRAG = /* glsl */ `
     if (a < 0.002) discard;
     gl_FragColor = vec4(vColor, a);
   }
-`;
-
-const GRID_VERT = /* glsl */ `
-  varying float vDepthFade;
-  void main() {
-    vec4 view = modelViewMatrix * vec4(position, 1.0);
-    vDepthFade = smoothstep(0.0, 30.0, -view.z);
-    gl_Position = projectionMatrix * view;
-  }
-`;
-const GRID_FRAG = /* glsl */ `
-  uniform vec3 uColor;
-  uniform float uOpacity;
-  varying float vDepthFade;
-  void main() { gl_FragColor = vec4(uColor, uOpacity * vDepthFade); }
 `;
 
 const HAZE_VERT = /* glsl */ `
@@ -172,40 +157,27 @@ function createCloud() {
 
 const gaussian = rand => (rand() + rand() + rand() - 1.5) / 1.5;
 
-// About: three dark dust pillars silhouetted against a glowing emission nebula, their
-// ionised rims lit amber-rose and hot young stars breaking out at their tips.
-function buildNursery(scale) {
-  const rand = random(301), glow = createCloud(), dust = createCloud(), rim = createCloud(), basis = chapterBasis('about');
+// About: a globular cluster ahead of the camera's push. Thousands of old gold and blue
+// straggler stars, densest at the core, so the truck-in streams them past the lens.
+function buildCluster(scale) {
+  const rand = random(301), cloud = createCloud(), basis = chapterBasis('about', 0);
+  const center = basis.at(27, -5, -3);
   const point = new Vector3();
-  // The emission region behind the pillars, brightest low and to the right.
-  for (let i = 0; i < 260 * scale; i++) {
-    const x = -6 + rand() * 52, y = -36 + Math.pow(rand(), 1.4) * 40;
-    point.copy(basis.at(74 + rand() * 16, x, y));
-    glow.push(point, ['#6A3A48', '#7A4E3C', '#2E4060', '#5A3050'][Math.floor(rand() * 4)], 7 + rand() * 7, 0, rand());
+  for (let i = 0; i < 6500 * scale; i++) {
+    // King-like profile: a tight core and a long halo.
+    const radius = 30 * Math.pow(rand(), 1.9) + 1.2 * rand();
+    const theta = rand() * Math.PI * 2, phi = Math.acos(2 * rand() - 1);
+    point.set(Math.sin(phi) * Math.cos(theta), Math.cos(phi), Math.sin(phi) * Math.sin(theta)).multiplyScalar(radius).add(center);
+    const hue = rand();
+    const color = hue < 0.55 ? '#FFD9A0' : hue < 0.85 ? '#FFF1DC' : hue < 0.95 ? '#FFB27A' : '#A9C4FF';
+    cloud.push(point, color, 0.05 + Math.pow(rand(), 3) * 0.22, 1, rand());
   }
-  const pillars = [[14, -36, 6.5, 30, -0.08], [28, -35, 4.6, 22, 0.06], [2, -34, 4, 16, -0.16]];
-  for (const [x, y, width, height, lean] of pillars) {
-    const base = basis.at(56 + rand() * 4, x, y);
-    for (let i = 0; i < 300 * scale; i++) {
-      const t = Math.pow(rand(), 0.9), radius = width * (1 - 0.62 * t) * (0.25 + 0.75 * Math.abs(gaussian(rand)));
-      const angle = rand() * Math.PI * 2;
-      point.copy(base).addScaledVector(basis.up, t * height).addScaledVector(basis.right, lean * t * height + Math.cos(angle) * radius)
-        .addScaledVector(basis.forward, Math.sin(angle) * radius);
-      if (radius > width * (0.5 - 0.15 * t)) rim.push(point, rand() < 0.5 ? '#9A6048' : '#86486A', 1.1 + rand() * 1.4, 0, rand());
-      else dust.push(point, '#050407', 3.4 + rand() * 3.4, 0, rand());
-    }
-    const tip = base.clone().addScaledVector(basis.up, height).addScaledVector(basis.right, lean * height);
-    for (let i = 0; i < 18 * scale; i++) {
-      point.copy(tip).add(new Vector3(gaussian(rand), gaussian(rand), gaussian(rand)).multiplyScalar(5));
-      rim.push(point, rand() < 0.7 ? '#CFE0FF' : '#FFFFFF', 0.10 + rand() * 0.16, 1, rand());
-    }
+  // The unresolved glow of the core.
+  for (let i = 0; i < 70 * scale; i++) {
+    point.set(gaussian(rand), gaussian(rand), gaussian(rand)).multiplyScalar(3.2).add(center);
+    cloud.push(point, '#5A4024', 4 + rand() * 4, 0, rand());
   }
-  // A thin veil through the whole frame.
-  for (let i = 0; i < 90 * scale; i++) {
-    point.copy(basis.at(36 + rand() * 50, (rand() - 0.4) * 90, -34 + Math.pow(rand(), 1.6) * 50));
-    glow.push(point, ['#3E2A44', '#4E3036', '#232B44'][Math.floor(rand() * 3)], 5 + rand() * 6, 0, rand());
-  }
-  return { glow: glow.build(), dust: dust.build(), rim: rim.build() };
+  return cloud.build();
 }
 
 // Skills: a ringed world low in the left of the frame, its ring turning with real shear.
@@ -231,49 +203,38 @@ function buildPlanetary(scale) {
   return { geometry: cloud.build(), center, u, v };
 }
 
-// Education: inside an observatory's celestial sphere (right ascension and declination).
-function buildObservatoryGrid() {
-  const basis = chapterBasis('education');
-  const center = basis.eye.clone();
-  const radius = 70, points = [];
-  const add = (a, b) => points.push(a.x, a.y, a.z, b.x, b.y, b.z);
-  const at = (ra, dec) => new Vector3(Math.cos(dec) * Math.cos(ra), Math.sin(dec), Math.cos(dec) * Math.sin(ra)).multiplyScalar(radius).add(center);
-  const segments = 96;
-  for (let h = 0; h < 24; h += 2) {
-    const ra = h / 24 * Math.PI * 2;
-    for (let i = 0; i < segments / 2; i++) add(at(ra, -Math.PI / 2 + i / (segments / 2) * Math.PI), at(ra, -Math.PI / 2 + (i + 1) / (segments / 2) * Math.PI));
-  }
-  for (let d = -75; d <= 75; d += 15) {
-    const dec = d * Math.PI / 180;
-    for (let i = 0; i < segments; i++) add(at(i / segments * Math.PI * 2, dec), at((i + 1) / segments * Math.PI * 2, dec));
-    // Hour ticks along every parallel.
-    for (let h = 0; h < 24; h++) {
-      const ra = h / 24 * Math.PI * 2;
-      add(at(ra, dec - 0.012), at(ra, dec + 0.012));
-    }
-  }
-  const geometry = new BufferGeometry();
-  geometry.setAttribute('position', new BufferAttribute(new Float32Array(points), 3));
-  return { geometry, center };
-}
-
-function buildObservatory(scale) {
+// Education: a pulsar left of the reading column, its wind nebula in cyan and violet
+// wisps and dipole field lines looping out of the poles.
+function buildPulsar(scale) {
   const rand = random(919), cloud = createCloud(), basis = chapterBasis('education');
+  const center = basis.at(82, -6, -4);
+  const axis = basis.up.clone().applyAxisAngle(basis.forward, 0.42).applyAxisAngle(basis.right, 0.3).normalize();
+  const side = new Vector3().crossVectors(axis, basis.forward).normalize();
+  const third = new Vector3().crossVectors(axis, side).normalize();
   const point = new Vector3();
-  // Cold blue dust lanes and tight clusters, catalogued stars over the grid.
-  for (let i = 0; i < 240 * scale; i++) {
-    const t = rand();
-    point.copy(basis.at(40 + rand() * 40, -50 + t * 70, -30 + t * 26 + gaussian(rand) * 7));
-    cloud.push(point, rand() < 0.6 ? '#1F3C5A' : '#2A4F6E', 3.5 + rand() * 4, 0, rand());
+  // Equatorial torus of the wind nebula and the polar jets.
+  for (let i = 0; i < 520 * scale; i++) {
+    const angle = rand() * Math.PI * 2, radius = 4 + rand() * 9;
+    point.copy(center).addScaledVector(side, Math.cos(angle) * radius).addScaledVector(third, Math.sin(angle) * radius)
+      .addScaledVector(axis, gaussian(rand) * 1.4);
+    cloud.push(point, rand() < 0.6 ? '#1E4A66' : '#3A2A66', 2.2 + rand() * 3.4, 0, rand());
   }
-  for (let c = 0; c < 6; c++) {
-    const core = basis.at(36 + rand() * 30, (rand() - 0.65) * 70, (rand() - 0.55) * 38);
-    for (let i = 0; i < 40 * scale; i++) {
-      point.copy(core).add(new Vector3(gaussian(rand), gaussian(rand), gaussian(rand)).multiplyScalar(2.2));
-      cloud.push(point, rand() < 0.8 ? '#BFE3FF' : '#FFFFFF', 0.07 + rand() * 0.12, 1, rand());
+  for (let i = 0; i < 160 * scale; i++) {
+    const t = rand() * (rand() < 0.5 ? 1 : -1);
+    point.copy(center).addScaledVector(axis, t * 16).addScaledVector(side, gaussian(rand) * (0.6 + Math.abs(t) * 2));
+    cloud.push(point, '#2C6A8A', 1.8 + rand() * 2.2, 0, rand());
+  }
+  // Field lines: r = L sin²θ in planes around the magnetic axis, drawn as fine dots.
+  for (let line = 0; line < 10; line++) {
+    const turn = line / 10 * Math.PI * 2, size = 7 + (line % 3) * 4;
+    const plane = side.clone().multiplyScalar(Math.cos(turn)).addScaledVector(third, Math.sin(turn));
+    for (let i = 0; i < 90 * scale; i++) {
+      const theta = 0.12 + rand() * (Math.PI - 0.24), r = size * Math.sin(theta) ** 2;
+      point.copy(center).addScaledVector(plane, r * Math.sin(theta)).addScaledVector(axis, r * Math.cos(theta));
+      cloud.push(point, '#9FD8FF', 0.05 + rand() * 0.04, 1, rand());
     }
   }
-  return cloud.build();
+  return { geometry: cloud.build(), center, axis, side };
 }
 
 // Experience: a spiral arm sweeping past the camera's inward spiral, dust lanes and HII knots.
@@ -298,9 +259,9 @@ function buildArm(scale) {
 
 // Tint and focus (screen uv) of each region's ambient haze: a hint of colour in the black.
 const HAZE = {
-  nursery: { tint: '#2A1420', focus: [0.12, 0.12] },
+  cluster: { tint: '#24180C', focus: [0.3, 0.3] },
   planetary: { tint: '#0E1630', focus: [0.18, 0.2] },
-  observatory: { tint: '#08202A', focus: [0.3, 0.85] },
+  pulsar: { tint: '#081C2C', focus: [0.25, 0.35] },
   arm: { tint: '#221018', focus: [0.25, 0.1] },
 };
 
@@ -348,20 +309,75 @@ function BiomeCloud({ geometry, weightKey, ring, weights, reduced, depthTest = f
   </points>;
 }
 
-function ObservatoryGrid({ weights }) {
-  const lines = useRef(null);
-  const grid = useMemo(() => buildObservatoryGrid(), []);
-  const uniforms = useMemo(() => ({ uColor: { value: new Color('#7FB4D9') }, uOpacity: { value: 0 } }), []);
-  useEffect(() => () => grid.geometry.dispose(), [grid]);
-  useFrame(() => {
-    if (!lines.current) return;
-    const weight = weights.current.observatory;
-    lines.current.visible = weight > 0.002;
-    lines.current.material.uniforms.uOpacity.value = 0.075 * weight;
+// The pulsar's core and its two sweeping beams: cones around the spin axis's precession,
+// soft along their length, flashing as they cross the line of sight.
+const BEAM_VERT = /* glsl */ `
+  varying float vAlong, vAcross;
+  void main() {
+    vAlong = uv.y;
+    vAcross = abs(uv.x - 0.5) * 2.0;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+  }
+`;
+const BEAM_FRAG = /* glsl */ `
+  uniform float uWeight, uFlash;
+  varying float vAlong, vAcross;
+  void main() {
+    float core = pow(1.0 - vAcross, 3.0);
+    float fall = pow(1.0 - vAlong, 1.6) * smoothstep(0.0, 0.04, vAlong);
+    gl_FragColor = vec4(vec3(0.45, 0.8, 1.0), core * fall * (0.07 + 0.3 * uFlash) * uWeight);
+  }
+`;
+
+function Pulsar({ pulsar, weights, reduced }) {
+  const spin = useRef(null), beams = useRef(null), core = useRef(null);
+  const uniforms = useMemo(() => ({ uWeight: { value: 0 }, uFlash: { value: 0 } }), []);
+  const clock = useRef(0);
+  const orientation = useMemo(() => {
+    // Spin axis tilted from the magnetic axis, so the beams sweep a cone across the frame.
+    const up = new Vector3(0, 1, 0);
+    return new Quaternion().setFromUnitVectors(up, pulsar.axis);
+  }, [pulsar]);
+  useFrame(({ camera }, delta) => {
+    if (!spin.current) return;
+    const weight = weights.current.pulsar;
+    spin.current.visible = weight > 0.002;
+    if (!spin.current.visible) return;
+    if (!reduced) clock.current += Math.min(delta, 0.1);
+    beams.current.rotation.y = clock.current * 1.6;
+    // Flash when a beam swings toward the camera.
+    beams.current.updateWorldMatrix(true, false);
+    const tip = new Vector3(0, 1, 0).applyQuaternion(beams.current.getWorldQuaternion(new Quaternion()));
+    const view = camera.position.clone().sub(pulsar.center).normalize();
+    const flash = Math.pow(Math.max(0, Math.abs(tip.dot(view))), 24);
+    beams.current.traverse(mesh => {
+      if (!mesh.material) return;
+      mesh.material.uniforms.uWeight.value = weight;
+      mesh.material.uniforms.uFlash.value = flash;
+    });
+    core.current.material.uniforms.uWeight.value = weight;
+    core.current.material.uniforms.uFlash.value = flash;
   });
-  return <lineSegments ref={lines} name="biome-observatory-grid" geometry={grid.geometry} frustumCulled={false} renderOrder={7}>
-    <shaderMaterial uniforms={uniforms} vertexShader={GRID_VERT} fragmentShader={GRID_FRAG} transparent depthTest={false} depthWrite={false} toneMapped={false} blending={AdditiveBlending} />
-  </lineSegments>;
+  return <group ref={spin} name="biome-pulsar-beams" position={pulsar.center} quaternion={orientation} renderOrder={8}>
+    <group ref={beams} rotation={[0, 0, 0]}>
+      {[1, -1].map(sign => (
+        <group key={sign} rotation={[0, 0, sign > 0 ? 0.5 : Math.PI + 0.5]}>
+          <mesh position={[0, 30, 0]} renderOrder={8} frustumCulled={false}>
+            <coneGeometry args={[4, 60, 32, 1, true]} />
+            <shaderMaterial uniforms={uniforms} vertexShader={BEAM_VERT} fragmentShader={BEAM_FRAG} transparent depthTest={false} depthWrite={false}
+              toneMapped={false} blending={AdditiveBlending} side={DoubleSide} />
+          </mesh>
+        </group>
+      ))}
+    </group>
+    <mesh ref={core} renderOrder={8}>
+      <sphereGeometry args={[0.4, 16, 12]} />
+      <shaderMaterial uniforms={uniforms} vertexShader={BEAM_VERT} fragmentShader={`
+        uniform float uWeight, uFlash;
+        void main() { gl_FragColor = vec4(vec3(0.85, 0.95, 1.0) * (1.2 + 2.0 * uFlash), uWeight); }
+      `} transparent depthTest={false} depthWrite={false} toneMapped={false} blending={AdditiveBlending} />
+    </mesh>
+  </group>;
 }
 
 function Haze({ weights }) {
@@ -394,9 +410,9 @@ export function ChapterBiomes({ quality = 'high', reduced = false }) {
   const weights = useRef(biomeWeights('hero', 0));
   const scale = COUNTS[quality] ?? 1;
   const clouds = useMemo(() => ({
-    nursery: buildNursery(scale),
+    cluster: buildCluster(scale),
     planetary: buildPlanetary(scale),
-    observatory: buildObservatory(scale),
+    pulsar: buildPulsar(scale),
     arm: buildArm(scale),
   }), [scale]);
   useFrame(() => {
@@ -405,13 +421,11 @@ export function ChapterBiomes({ quality = 'high', reduced = false }) {
   }, -0.75);
   return <group name="chapter-biomes">
     <Haze weights={weights} />
-    <BiomeCloud geometry={clouds.nursery.glow} weightKey="nursery" weights={weights} reduced={reduced} />
-    <BiomeCloud geometry={clouds.nursery.dust} weightKey="nursery" weights={weights} reduced={reduced} dark order={8.5} />
-    <BiomeCloud geometry={clouds.nursery.rim} weightKey="nursery" weights={weights} reduced={reduced} order={8.7} />
+    <BiomeCloud geometry={clouds.cluster} weightKey="cluster" weights={weights} reduced={reduced} />
     <Planet ring={clouds.planetary} weights={weights} />
     <BiomeCloud geometry={clouds.planetary.geometry} ring={clouds.planetary} weightKey="planetary" weights={weights} reduced={reduced} depthTest />
-    <BiomeCloud geometry={clouds.observatory} weightKey="observatory" weights={weights} reduced={reduced} />
-    <ObservatoryGrid weights={weights} />
+    <BiomeCloud geometry={clouds.pulsar.geometry} weightKey="pulsar" weights={weights} reduced={reduced} />
+    <Pulsar pulsar={clouds.pulsar} weights={weights} reduced={reduced} />
     <BiomeCloud geometry={clouds.arm} weightKey="arm" weights={weights} reduced={reduced} />
   </group>;
 }

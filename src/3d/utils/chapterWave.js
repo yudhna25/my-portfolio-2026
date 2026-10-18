@@ -4,8 +4,8 @@
 // so scrolling back replays it exactly. The 3D wave and the DOM reveal read the same state.
 
 // Reading chapters in order, and the sky region each one opens onto.
-export const BIOMES = Object.freeze(['nursery', 'planetary', 'observatory', 'arm']);
-const CHAPTER_BIOME = { about: 'nursery', skills: 'planetary', education: 'observatory', experience: 'arm', departure: 'arm' };
+export const BIOMES = Object.freeze(['cluster', 'planetary', 'pulsar', 'arm']);
+const CHAPTER_BIOME = { about: 'cluster', skills: 'planetary', education: 'pulsar', experience: 'arm', departure: 'arm' };
 const NEXT = { about: 'skills', skills: 'education', education: 'experience', experience: 'departure' };
 
 // The wave plays over the last stretch of the outgoing chapter, so it has finished by the
@@ -53,7 +53,7 @@ export function biomeWeights(chapter, progress, out = {}) {
   for (const biome of BIOMES) out[biome] = 0;
   const p = clamp01(progress);
   if (chapter === 'portal') {
-    out.nursery = smooth(0.62, 0.96, p);
+    out.cluster = smooth(0.62, 0.96, p);
     return out;
   }
   const own = CHAPTER_BIOME[chapter];

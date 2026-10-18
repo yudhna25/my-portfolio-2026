@@ -5,7 +5,7 @@ import { useScrollStore } from '@/stores/useScrollStore';
 import { portalProgress } from '@/3d/utils/portal';
 import { BIOMES, biomeWeights } from '@/3d/utils/chapterWave';
 
-const TINTS = { nursery: new Color('#FFB8A0'), planetary: new Color('#B8C8FF'), observatory: new Color('#A8E4FF'), arm: new Color('#FFC4B4') };
+const TINTS = { cluster: new Color('#FFD6A0'), planetary: new Color('#B8C8FF'), pulsar: new Color('#A8E4FF'), arm: new Color('#FFC4B4') };
 
 // Two parallax layers the far sky cannot give (it rides with the camera): drifting dust
 // right in front of the lens and a mid-distance star shell. Each lives in a box that wraps
