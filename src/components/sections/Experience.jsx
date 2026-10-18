@@ -81,7 +81,7 @@ export default function Experience({ onLayout }) {
                 <h3 key={`company-${i18n.resolvedLanguage}`} id={`experience-${id}`} data-reveal="starlight" className="font-display text-[clamp(1.25rem,2.2vw,2rem)] font-semibold leading-tight tracking-[-0.035em] [overflow-wrap:anywhere]">{position.company}</h3>
                 <p key={`role-${i18n.resolvedLanguage}`} lang="en" data-reveal="signal" className="mt-3 font-mono text-sm leading-relaxed">{position.role}</p>
               </div>
-              <p className="mt-5 font-mono text-xs leading-relaxed text-white/65">{position.period}<span aria-hidden="true"> · </span><span lang="en">{position.type}</span></p>
+              <p data-reveal="items" className="mt-5 font-mono text-xs leading-relaxed text-white/65"><span>{position.period}</span><span aria-hidden="true"> · </span><span lang="en">{position.type}</span></p>
               <p key={`description-${i18n.resolvedLanguage}`} data-reveal="dust" className="mt-6 max-w-[48ch] font-body text-base leading-[1.8] text-white/80">{position.description}</p>
             </article>
           </li>;

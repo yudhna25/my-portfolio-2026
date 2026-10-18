@@ -36,8 +36,9 @@ export default function Skills({ stageRef }) {
   }, { scope: root, dependencies: [anchor], revertOnUpdate: true });
 
   useGSAP((context, contextSafe) => {
-    if (!reduced) revealHeadings(root.current.querySelectorAll('h2'), contextSafe);
+    const forget = reduced ? null : revealHeadings(root.current.querySelectorAll('h2'), contextSafe);
     ScrollTrigger.refresh(true);
+    return forget;
   }, { scope: root, dependencies: [reduced, i18n.resolvedLanguage], revertOnUpdate: true });
 
   useGSAP(() => {
@@ -136,7 +137,7 @@ export default function Skills({ stageRef }) {
               {target === 'ai' && <span className="mt-2 block">{t('skills.aiMembers')}</span>}
             </figcaption>
           </figure>
-          <div className="relative z-10 order-3 min-w-0 bg-linear-to-r from-(--bg-void)/90 via-(--bg-void)/80 to-transparent">
+          <div className="relative z-10 order-3 min-w-0 star-scrim">
             <h3 key={i18n.resolvedLanguage} data-reveal="signal" className="mb-5 font-mono text-xs uppercase tracking-widest text-white/55">{t('skills.competenciesLabel')}</h3>
             <ul data-reveal="items" className="grid grid-cols-2 gap-x-5 md:grid-cols-1">
               {appliedSkills.map((id) => (

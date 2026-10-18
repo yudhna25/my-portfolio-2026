@@ -171,6 +171,18 @@
   color: var(--accent-amber);
 }
 
+/* Reading scrim over the live sky: a feathered pool of shadow with no edges, so text
+ * stays legible without a dark box hiding the universe behind it. */
+.star-scrim { position: relative; isolation: isolate; }
+.star-scrim::before {
+  content: '';
+  position: absolute;
+  inset: -2.5rem -3.5rem;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(closest-side, rgb(7 8 13 / 0.5), rgb(7 8 13 / 0.28) 55%, rgb(7 8 13 / 0));
+}
+
 .split-char { display: inline-block; }
 
 .split-heading { font-kerning: none; text-rendering: optimizeSpeed; }

@@ -117,7 +117,7 @@ function Portfolio({ restore }) {
   // Headings and body copy born from starlight, signal-decoded labels, wired by data-reveal.
   useGSAPSetup((context, contextSafe) => {
     if (loading || staticMotion) return;
-    revealWithin(reading.current, contextSafe);
+    return revealWithin(reading.current, contextSafe);
   }, { scope: root, dependencies: [loading, staticMotion, i18n.resolvedLanguage], revertOnUpdate: true });
 
   useEffect(() => {
