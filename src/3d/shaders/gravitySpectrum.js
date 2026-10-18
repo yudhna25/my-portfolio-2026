@@ -1,7 +1,8 @@
 // Screen-space gravity layer, composited after bloom:
 // 1. Isopotential aura: a few soft contours of the black hole's well (plus a cosmic
-//    undulation and the cursor's own small dent) that fade out with distance from the
-//    hole, drawn only into dark space. Felt more than seen.
+//    undulation and the cursor's own small dent), emitted from the hole and drifting
+//    slowly outward like waves, fading with distance, drawn only into dark space. Tinted
+//    by a radial gradient that follows the chapter's sky. Felt more than seen.
 // 0. Click pulse: a gravitational wave ring that ripples the sky, the aura and the window.
 // 2. Hidden spectrum: inside the cursor field's density the sky is shown at another
 //    wavelength (infrared false colour, edge line-art, dust filaments, a sky grid),
@@ -14,6 +15,8 @@ export const GRAVITY_SPECTRUM_FRAG = /* glsl */ `
   uniform vec2 uViewport;
   uniform float uTime;
   uniform vec4 uPulse; // click uv, age (s), strength
+  uniform vec3 uAuraIn; // aura gradient beside the hole (linear)
+  uniform vec3 uAuraOut; // aura gradient at its outer reach (linear)
 
   float gsHash(vec2 p) {
     p = fract(p * vec2(123.34, 456.21));
@@ -63,7 +66,10 @@ export const GRAVITY_SPECTRUM_FRAG = /* glsl */ `
     float R = max(uHole.z, 1.0);
     float reach = max(R, uViewport.y * 0.05);
     vec2 q = uv * vec2(aspect, 1.0);
-    float phi = 6.0 * sqrt(reach / max(r, R * 0.9));
+    float phi = 7.5 * sqrt(reach / max(r, R * 0.9));
+    // Emission: the potential slides with time, so each contour is born at the hole and
+    // travels outward until it fades, one every few seconds.
+    phi += uTime * 0.16;
     phi += 0.6 * gsFbm(q * 1.4 + vec2(uTime * 0.012, -uTime * 0.008));
     float rc = length((uv - uPointer.xy) * uViewport);
     phi += uPointer.z * 0.5 * sqrt(uViewport.y * 0.03 / max(rc, uViewport.y * 0.012));
@@ -77,7 +83,10 @@ export const GRAVITY_SPECTRUM_FRAG = /* glsl */ `
     // Strongest beside the hole, gone a few radii out.
     line *= smoothstep(R * 1.15, R * 2.2, r) * exp(-max(r - R, 0.0) / (reach * 6.0));
     float darkness = 1.0 - smoothstep(0.06, 0.4, light);
-    vec3 ink = mix(vec3(0.85, 0.83, 0.75), vec3(1.0, 0.37, 0.055), uContour.y);
+    float spread = smoothstep(R * 1.2, R * 2.0 + reach * 3.5, r);
+    float sweep = gsFbm(q * 2.2 - vec2(uTime * 0.02, 0.0));
+    vec3 aura = mix(uAuraIn, uAuraOut, clamp(spread + (sweep - 0.5) * 0.35, 0.0, 1.0));
+    vec3 ink = mix(aura, vec3(1.0, 0.37, 0.055), uContour.y);
     vec3 color = base + ink * line * uContour.x * darkness;
 
     // Hidden spectrum (computed unconditionally: derivatives need uniform control flow).
