@@ -5,6 +5,7 @@ import { Color, Texture, Uniform, Vector2, Vector3, Vector4 } from 'three';
 import { useGravityField } from '@/3d/field/useGravityField';
 import { GRAVITY_SPECTRUM_FRAG } from '@/3d/shaders/gravitySpectrum';
 import { BLACK_HOLE_CENTER } from '@/3d/utils/cameraPath';
+import { CHAPTER_PALETTE } from '@/3d/utils/chapterWave';
 import { finaleSmooth } from '@/3d/utils/finale';
 import { portalProgress, portalState } from '@/3d/utils/portal';
 import { useScrollStore } from '@/stores/useScrollStore';
@@ -14,16 +15,9 @@ const center = new Vector3(...BLACK_HOLE_CENTER);
 const CONTOUR_OPACITY = 0.018;
 // Away from the Hero the window stays, quieter, so the cursor is one gesture site-wide.
 const SPECTRUM_AWAY = 0.45;
-// Aura gradient per chapter, from the chapter skies of "Không gian và chuyển chương"
-// (same shape and values as its CHAPTER_PALETTE, so the two can share one source once
-// merged). Inner = the chapter's light colour beside the hole; outer = its second haze
-// tone lifted to a visible brightness. Hero and the rest keep the ivory-amber signature.
-const CHAPTER_PALETTE = {
-  about: { haze: ['#2A1008', '#06202A'], light: '#FFC2A6' },
-  skills: { haze: ['#04242A', '#1E1A08'], light: '#A6F0E6' },
-  education: { haze: ['#140E34', '#061A34'], light: '#B4C2FF' },
-  experience: { haze: ['#2C0A26', '#180A30'], light: '#FFBCD8' },
-};
+// Aura gradient per chapter, from the chapter skies' single palette. Inner = the chapter's
+// light colour beside the hole; outer = its second haze tone lifted to a visible brightness.
+// Hero and the rest keep the ivory-amber signature.
 const lift = (hex, light) => {
   const color = new Color(hex);
   const peak = Math.max(color.r, color.g, color.b, 1e-4);

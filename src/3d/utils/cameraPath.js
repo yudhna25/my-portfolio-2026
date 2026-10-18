@@ -1,3 +1,5 @@
+import { bandFollow } from './skyPath.js';
+
 // Scene units are Schwarzschild radii. The thin disk occupies r = 3..14, y = 0.
 export const BLACK_HOLE_CENTER = Object.freeze([0, 0, -200]);
 
@@ -108,7 +110,49 @@ function storyDrift(chapter, progress, target) {
   }
 }
 
-export function storyCameraPath(chapter, progress, target = {}, frozen = false, aspect = 1) {
+// Each reading chapter has its own way of moving through its region of sky, layered on the
+// drift: About trucks in along the nebula, Skills arcs and Education cranes up (both mostly
+// under the light band ride, bandFollow), Experience tracks sideways past the rose.
+// Offsets are in the camera's own frame (right, up, forward; position and aim). A chapter's
+// final offset carries into the next and eases out while that one's move eases in, so the
+// path stays continuous across every join.
+const MOVES = {
+  about: { f: 11, u: -1.5, lf: 4, lu: 2, lr: 9 },
+  skills: { r: -14, f: 3, lr: 2 },
+  education: { u: 14, lu: 4 },
+  experience: { r: 17, lr: 11, f: 4, lf: 4, roll: 0.035 },
+};
+const MOVE_PREVIOUS = { skills: 'about', education: 'skills', experience: 'education', departure: 'experience' };
+const MOVE_KEYS = ['r', 'u', 'f', 'lr', 'lu', 'lf', 'roll'];
+const moveOffset = {};
+const basisRight = [0, 0, 0], basisUp = [0, 0, 0], basisForward = [0, 0, 0];
+
+function chapterMove(chapter, progress, target) {
+  for (const key of MOVE_KEYS) moveOffset[key] = 0;
+  const own = MOVES[chapter], previous = MOVES[MOVE_PREVIOUS[chapter]];
+  if (!own && !previous) return;
+  const grow = smootherStep(0.04, 0.82, progress);
+  const fade = 1 - smootherStep(0, chapter === 'departure' ? 0.6 : 0.32, progress);
+  for (const key of MOVE_KEYS) moveOffset[key] = (own?.[key] ?? 0) * grow + (previous?.[key] ?? 0) * fade;
+  // Camera frame of the unmoved pose.
+  let fx = target.lookX - target.x, fy = target.lookY - target.y, fz = target.lookZ - target.z;
+  const fl = Math.hypot(fx, fy, fz) || 1;
+  fx /= fl; fy /= fl; fz /= fl;
+  let rx = -fz, rz = fx;
+  const rl = Math.hypot(rx, rz) || 1;
+  rx /= rl; rz /= rl;
+  basisForward[0] = fx; basisForward[1] = fy; basisForward[2] = fz;
+  basisRight[0] = rx; basisRight[1] = 0; basisRight[2] = rz;
+  basisUp[0] = -rz * fy; basisUp[1] = rz * fx - rx * fz; basisUp[2] = rx * fy;
+  const o = moveOffset;
+  ['x', 'y', 'z'].forEach((axis, i) => {
+    target[axis] += basisRight[i] * o.r + basisUp[i] * o.u + basisForward[i] * o.f;
+    target['look' + axis.toUpperCase()] += basisRight[i] * o.lr + basisUp[i] * o.lu + basisForward[i] * o.lf;
+  });
+  target.roll += o.roll * Math.sin(Math.PI * Math.min(1, progress)) * (own?.roll ? 1 : 0);
+}
+
+export function storyCameraPath(chapter, progress, target = {}, frozen = false, aspect = 1, follow = true) {
   let p = frozen ? 1 : clampStoryProgress(progress);
   let from = HERO, to = HERO;
   switch (chapter) {
@@ -156,7 +200,12 @@ export function storyCameraPath(chapter, progress, target = {}, frozen = false, 
     target.y += Math.cos(q * 913) * shake * 0.7;
     target.roll += Math.sin(q * 1103) * shake * 0.03;
   }
-  if (!frozen) storyDrift(chapter, clampStoryProgress(progress), target);
+  if (!frozen) {
+    storyDrift(chapter, clampStoryProgress(progress), target);
+    chapterMove(chapter, clampStoryProgress(progress), target);
+    // From late About into Education the camera rides the light band instead.
+    if (follow) bandFollow(chapter, clampStoryProgress(progress), target);
+  }
   if (chapter === 'portal' && !frozen) {
     const bend = Math.sin(ease * Math.PI);
     target.x += 2.4 * bend * (progress < 0.47 ? -1 : 1);

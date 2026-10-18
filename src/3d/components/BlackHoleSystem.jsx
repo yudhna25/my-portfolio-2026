@@ -5,6 +5,7 @@ import { BlackHole } from '@/3d/components/BlackHole';
 import { BlackHoleBloomMask } from '@/3d/components/BlackHoleBloomMask';
 import { FinaleGrade } from '@/3d/components/FinaleGrade';
 import { GravitySpectrum } from '@/3d/components/GravitySpectrum';
+import { ChapterWaveEffect } from '@/3d/components/ChapterWave';
 
 export function BlackHoleSystem({ frozen = false, quality = 'high', enableBloom = true, story = false, reduced = false, opening }) {
   const light = useRef(null);
@@ -36,6 +37,7 @@ export function BlackHoleSystem({ frozen = false, quality = 'high', enableBloom 
           luminanceThreshold={1.0} luminanceSmoothing={0.15} radius={0.55} />
         <BlackHoleBloomMask texture={target.texture} portal={portal} />
         {story && <GravitySpectrum portal={portal} reduced={reduced} />}
+        {story && !reduced && <ChapterWaveEffect />}
         {story && <FinaleGrade reduced={reduced} />}
       </EffectComposer>
     </>}

@@ -265,6 +265,10 @@
     "hero": "Khởi đầu",
     "missionProgress": "Tiến độ hành trình"
   },
+  "starMap": {
+    "label": "Bản đồ hành trình",
+    "jump": "Chương {{index}}: bay tới {{name}}"
+  },
   "footer": {
     "label": "Chân trang",
     "copyright": "© 2026 Trần Vũ Anh Duy — Được xây dựng giữa các vì sao.",

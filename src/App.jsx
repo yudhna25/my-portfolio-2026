@@ -2,6 +2,7 @@ import { lazy, Suspense, useCallback, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import { gsap, ScrollTrigger, ScrollSmoother, useGSAPSetup } from '@/hooks/useGSAPSetup';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
+import { useChapterReveal } from '@/hooks/useChapterReveal';
 import { useScrollProgress } from '@/3d/hooks/useScrollProgress';
 import { useLoadingStore } from '@/stores/useLoadingStore';
 import { useScrollStore } from '@/stores/useScrollStore';
@@ -25,6 +26,7 @@ import Contact from '@/components/sections/Contact';
 import Footer from '@/components/Footer';
 import { ConstellationCredits } from '@/components/ui/ConstellationCredits';
 import { revealWithin } from '@/lib/textReveal';
+import { StarMapIndex } from '@/components/ui/StarMapIndex';
 
 const SkillsSymbols = lazy(() => import('@/3d/components/SkillsSymbols').then((module) => ({ default: module.SkillsSymbols })));
 const StoryMeteor = lazy(() => import('@/3d/components/StoryMeteor').then((module) => ({ default: module.StoryMeteor })));
@@ -50,6 +52,7 @@ function Portfolio({ restore }) {
   const setLoading = useLoadingStore((state) => state.setLoading);
 
   useSmoothScroll({ scope: root, paused: loading });
+  useChapterReveal({ scope: root, disabled: staticMotion });
   const progress = useScrollProgress({ scope: root, story: true, locale: i18n.resolvedLanguage, ready: !loading, initialPosition: restore, historyManaged: true, staticMotion });
 
   useGSAPSetup(() => {
@@ -145,6 +148,7 @@ function Portfolio({ restore }) {
     <div ref={root} className="bg-transparent text-(--text-primary) min-h-screen font-sans">
       {loading && <Preloader opening={opening} onComplete={() => setLoading(false)} />}
       <Cursor />
+      {!loading && <StarMapIndex />}
 
       <Suspense fallback={null}>
         <GalaxyScene story freezeAmbient={false} opening={opening}>{quality => <>
