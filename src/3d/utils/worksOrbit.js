@@ -52,10 +52,12 @@ export function worksFigure(progress, origin, index, basis, out) {
   const phase = origin - index * Math.PI * 2 / 3 + Math.PI * 5 / 6;
   const x = basis.orbit.x + Math.cos(phase) * basis.orbit.rx + basis.offsets[index][0];
   const y = basis.orbit.y + Math.sin(phase) * basis.orbit.ry + basis.offsets[index][1];
+  // The ring is seen from just above: the upper arc runs behind the lens, the lower in front.
+  out.depth = -Math.sin(phase) * (basis.depth ?? 0);
   const cosine = Math.cos(out.angle), sine = Math.sin(out.angle);
   out.x = basis.hole.x * out.travel + (x * cosine - y * sine) * out.radius;
   out.y = basis.hole.y * out.travel + (x * sine + y * cosine) * out.radius;
-  out.z = basis.hole.z * out.travel;
+  out.z = basis.hole.z * out.travel + out.depth * out.radius;
   out.scale = basis.scale * out.figure;
   return out;
 }
