@@ -1,6 +1,6 @@
 // Works as a sky full of hidden phenomena. Each constellation keeps a real one inside it
-// (Omega Centauri in the Centaur, the Eskimo Nebula in the Twins, Tabby's Star in the
-// Swan), and the project's picture is made of that phenomenon's light:
+// (Omega Centauri in the Centaur, the Geminid meteors in the Twins, the double star Albireo
+// in the Swan), and the project's picture is made of that phenomenon's light:
 //   rest   the cursor's trail lets you glimpse it behind the figure,
 //   hover  it blooms from the brightest star and the picture forms out of it,
 //   open   the mythological drawing breaks into dust and the picture clears into colour,
@@ -86,7 +86,7 @@ export const PHENOMENON_FRAG = /* glsl */ `
   uniform sampler2D uMap;
   uniform sampler2D uField;
   uniform vec4 uPulse;
-  uniform vec2 uViewport;
+  uniform vec2 uViewport, uAnchor;
   uniform float uKind, uDraw, uOpen, uTime, uOpacity, uAspect, uPad, uGrain;
   varying vec2 vUv;
   ${SCREEN}
@@ -130,6 +130,39 @@ export const PHENOMENON_FRAG = /* glsl */ `
     return core * present * (born * (0.45 + light) * twinkle + flash * 0.9);
   }
 
+  // Geminids. The radiant is Castor itself (uAnchor). Angles are measured so their seam points
+  // up and away from Castor, out of the sky, never through a trail.
+  const mat2 SEAM = mat2(0.82, 0.57, -0.57, 0.82);
+  float lineAt(float a, float softness) {
+    float width = fwidth(a);
+    return (1.0 - smoothstep(0.4, softness, abs(fract(a) - 0.5) / max(width, 1e-5))) * step(width, 0.5);
+  }
+  // One family of trails, one per angular lane, each with its own reach and length. Like a
+  // long exposure, more of them gather while the figure is held.
+  float trails(float angle, float dist, float lanes, float seed, float bloom, out float hue) {
+    float a = angle * lanes, lane = floor(a);
+    hue = hash(vec2(lane, seed + 7.7));
+    float start = 0.12 + hash(vec2(lane, seed)) * 1.1, len = 0.1 + hash(vec2(lane, seed + 1.7)) * 0.4;
+    float along = clamp((dist - start) / len, 0.0, 1.0);
+    // Each trail brightens toward its end, where the meteor burned hottest, then is gone.
+    float body = smoothstep(0.0, 0.5, along) * (1.0 - smoothstep(0.88, 1.0, along)) * step(start, dist) * step(dist, start + len);
+    return lineAt(a, 1.4) * body * step(hash(vec2(lane, seed + 3.1)), bloom * 0.6);
+  }
+  // Meteors falling now: a few lanes fire at their own moments, a bright head and a fading tail.
+  float meteors(float angle, float dist, float lanes, float seed) {
+    float a = angle * lanes, lane = floor(a);
+    float rate = hash(vec2(lane, seed + 2.3));
+    float t = fract(uTime * (0.08 + rate * 0.06) + hash(vec2(lane, seed)));
+    float head = 0.15 + t / 0.12 * 1.6;
+    float behind = (head - dist) / 0.35;
+    float tail = step(0.0, behind) * (1.0 - smoothstep(0.0, 1.0, behind)) * (1.0 - behind);
+    return step(0.62, rate) * step(t, 0.12) * lineAt(a, 1.6) * (tail + exp(-pow((dist - head) * 40.0, 2.0)) * 1.5);
+  }
+
+  // Albireo: a gold star and a fainter blue one, side by side at the heart.
+  const vec2 ALBIREO_GOLD = vec2(-0.09, 0.04);
+  const vec2 ALBIREO_BLUE = vec2(0.1, -0.045);
+
   void main() {
     vec4 field = texture2D(uField, vScreen);
     float aspect = uViewport.x / max(uViewport.y, 1.0);
@@ -158,38 +191,41 @@ export const PHENOMENON_FRAG = /* glsl */ `
       // Unresolved starlight: the picture's own glow behind the swarm, as a real cluster has.
       emission += mix(gold, white, 0.6) * (exp(-r * r / 0.03) * 0.3 + exp(-r * r / 0.5) * 0.08 + glowAt(p, r) * 0.22) * bloom;
     } else if (uKind < 1.5) {
-      // Eskimo Nebula: a dying star breathing out shell after shell of gas.
-      float reach = bloom * 1.5;
-      float lobes = fbm(q * 4.0 + vec2(uTime * 0.05, 0.0));
-      float within = smoothstep(reach, reach - 0.14, r + (lobes - 0.5) * 0.18);
-      float shells = pow(0.5 + 0.5 * sin(r * 26.0 - uTime * 0.8 + fbm(q * 5.0) * 2.5), 8.0);
-      float gas = glowAt(p, r) * within * (0.25 + 1.2 * shells) * (0.7 + 0.6 * lobes);
-      float halo = within * shells * 0.35 * exp(-r * 2.2);
-      float rim = exp(-pow((r - reach) * 16.0, 2.0)) * bloom * (1.0 - uOpen) * (0.5 + 0.5 * lobes) * exp(-r * 1.5);
-      vec3 cool = vec3(0.42, 0.8, 0.96);
-      vec3 tint = mix(cool, amber, smoothstep(0.08, 0.7, r));
-      float star = exp(-r * r / 0.0005) * 1.8 + exp(-r * r / 0.012) * 0.3;
-      emission = tint * (gas + halo) + mix(cool, amber, 0.6) * rim * 0.9 + mix(vec3(0.92, 0.96, 1.0), cool, 0.3) * star * bloom;
+      // Geminids: meteors fan out from Castor, brightest where the picture holds light, so
+      // the picture is drawn in their trails.
+      vec2 d = SEAM * (q - uAnchor);
+      float dist = length(d), angle = atan(d.y, d.x);
+      float light = glowAt(p, r);
+      // The shower falls across the picture; trails heading off the other way are left out.
+      vec2 from = q - uAnchor;
+      float across = smoothstep(0.15, 0.6, dot(from, normalize(-uAnchor)) / max(length(from), 1e-4));
+      float hue1, hue2;
+      float near = trails(angle, dist, 70.0, 0.0, bloom, hue1), far = trails(angle, dist, 47.0, 5.3, bloom, hue2) * 0.8;
+      // Geminids burn in many colours: mostly white, some pale gold, a few green.
+      vec3 white = vec3(0.96, 0.95, 0.9), gold = vec3(1.0, 0.84, 0.58), green = vec3(0.72, 1.0, 0.84);
+      vec3 drawn = (mix(mix(white, gold, step(0.6, hue1)), green, step(0.88, hue1)) * near
+        + mix(mix(white, gold, step(0.55, hue2)), green, step(0.9, hue2)) * far) * (0.3 + light * 1.6) * across;
+      float falling = meteors(angle, dist, 14.0, 9.1) * smoothstep(0.0, 0.3, bloom) * across;
+      // The radiant: a faint warm haze around Castor, where every trail points back to.
+      float radiant = exp(-dist * dist / 0.02) * 0.35 + exp(-dist * dist / 0.0008) * 0.6;
+      emission = drawn + mix(white, green, 0.35) * falling * 1.6
+        + vec3(0.78, 0.86, 1.0) * light * 0.28 * bloom + vec3(1.0, 0.9, 0.72) * radiant * bloom;
     } else {
-      // Tabby's Star: a star whose light sinks without warning. It shines through mist and a
-      // drifting swarm of dark shards, so the picture is lit, shadowed and lit again.
-      vec2 dir = q / max(r, 1e-4);
-      float reach = bloom * 1.7;
-      float lit = smoothstep(reach, reach - 0.3, r + (fbm(dir * 2.0 + uTime * 0.1) - 0.5) * 0.2);
-      // Irregular dimmings, deep and slow, never on a rhythm.
-      float dim = 1.0 - 0.45 * smoothstep(0.55, 0.9, noise(vec2(uTime * 0.3, 7.0))) - 0.2 * smoothstep(0.6, 0.95, noise(vec2(uTime * 1.1, 2.0)));
-      // Shards orbit the star, inner ones faster: dark clumps whose star-facing side catches light.
-      float turn = uTime * 0.12 / (0.3 + r);
-      mat2 spin = mat2(cos(turn), sin(turn), -sin(turn), cos(turn));
-      float band = smoothstep(0.08, 0.22, r) * (1.0 - smoothstep(0.75, 1.0, r));
-      float shard = smoothstep(0.5, 0.62, fbm(spin * q * 2.6 + 11.0)) * band;
-      float sunward = smoothstep(0.5, 0.62, fbm(spin * (q - dir * 0.025) * 2.6 + 11.0)) * band;
-      float lining = max(shard - sunward, 0.0);
-      float rays = pow(fbm(dir * 3.5 + vec2(r * 1.5 - uTime * 0.04, 0.0)), 3.0) * 2.0;
-      vec3 warm = vec3(1.0, 0.9, 0.74);
-      float light = (0.5 * (0.35 + rays * 0.8) / (1.0 + r * r / 0.02) + glowAt(p, r) * 1.4 / (1.0 + r * r / 0.3)) * lit * dim;
-      float star = exp(-r * r / 0.0004) * 2.0 + exp(-r * r / 0.008) * 0.4;
-      emission = warm * light * (1.0 - 0.92 * shard) + amber * lining * lit * dim * 0.8 + vec3(1.0, 0.97, 0.9) * star * bloom * dim;
+      // Albireo: the pair lights the picture around it like a reflection nebula, gold on the
+      // gold star's side and sapphire on the blue's, thinning to nothing well before any edge.
+      float toGold = length(q - ALBIREO_GOLD), toBlue = length(q - ALBIREO_BLUE);
+      float edge = (fbm(q * 2.5 + uTime * 0.04) - 0.5) * 0.3;
+      float reach = bloom * 0.56;
+      float lit = smoothstep(reach, reach - 0.36, length(q * vec2(0.72, 1.0)) + edge);
+      float lum = dot(texture2D(uMap, p).rgb, vec3(0.299, 0.587, 0.114));
+      float shape = smoothstep(0.08, 0.85, lum) * cloud(p) * lit;
+      vec3 gold = vec3(1.0, 0.72, 0.36), sapphire = vec3(0.36, 0.55, 1.0);
+      float side = smoothstep(-0.45, 0.45, dot(q - (ALBIREO_GOLD + ALBIREO_BLUE) * 0.5, normalize(ALBIREO_BLUE - ALBIREO_GOLD)));
+      // The pair breathes in counterpoint.
+      float pulse = sin(uTime * 0.9) * 0.15;
+      vec3 pair = gold * (exp(-toGold * toGold / 0.0007) * 2.6 + exp(-toGold * toGold / 0.018) * 0.5 + exp(-toGold * toGold / 0.1) * 0.12) * (0.85 + pulse)
+        + sapphire * (exp(-toBlue * toBlue / 0.0005) * 2.6 + exp(-toBlue * toBlue / 0.012) * 0.45 + exp(-toBlue * toBlue / 0.08) * 0.12) * (0.85 - pulse);
+      emission = mix(gold, sapphire, side) * shape * 1.25 + pair * smoothstep(0.0, 0.2, bloom);
     }
     // Once the picture is open the phenomenon steps back to frame it.
     emission *= shown * (1.0 + wave * 2.5) * (1.0 - 0.35 * uOpen);
