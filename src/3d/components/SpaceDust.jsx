@@ -1,8 +1,11 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { AdditiveBlending, BufferAttribute, BufferGeometry, Matrix4, Vector2, Vector3 } from 'three';
+import { AdditiveBlending, BufferAttribute, BufferGeometry, Color, Matrix4, Vector2, Vector3 } from 'three';
 import { useScrollStore } from '@/stores/useScrollStore';
 import { portalProgress } from '@/3d/utils/portal';
+import { CHAPTER_PALETTE, PALETTE_CHAPTERS, paletteWeights } from '@/3d/utils/chapterWave';
+
+const TINTS = Object.fromEntries(PALETTE_CHAPTERS.map(key => [key, new Color(CHAPTER_PALETTE[key].light)]));
 
 // Two parallax layers the far sky cannot give (it rides with the camera): drifting dust
 // right in front of the lens and a mid-distance star shell. Each lives in a box that wraps
@@ -13,6 +16,8 @@ const VERT = /* glsl */ `
   uniform mat4 uPrevViewProjection;
   uniform vec2 uViewport;
   uniform float uBox, uSize, uPixelRatio, uFocus, uBlur, uOpacity, uTime;
+  uniform vec3 uTint;
+  uniform float uTintMix;
   varying vec3 vColor;
   varying float vAlpha, vStretch, vBokeh;
   varying vec2 vAxis;
@@ -44,6 +49,8 @@ const VERT = /* glsl */ `
     vBokeh = bokeh;
     float tint = fract(aSeed.w * 7.31);
     vColor = mix(vec3(0.78, 0.84, 1.0), vec3(1.0, 0.86, 0.70), step(0.82, tint));
+    // Each chapter's region of sky colours the dust and stars passing the lens.
+    vColor = mix(vColor, uTint, uTintMix * step(tint, 0.7));
     vAlpha = uOpacity * edge * front * (0.35 + 0.65 * fract(aSeed.w * 3.7))
       / pow(1.0 + 2.0 * bokeh, 1.4) / sqrt(vStretch) * min(1.0, size * uPixelRatio);
   }
@@ -67,8 +74,8 @@ const FRAG = /* glsl */ `
 const LAYERS = {
   // Near dust draws over the BH image (it sits between lens and hole); the star shell draws
   // under it, so the shadow and the disk occlude it.
-  dust: { box: 36, size: 9, focus: 9, blur: 1, counts: { high: 1400, medium: 800, low: 360 }, opacity: 0.55, order: 12 },
-  stars: { box: 150, size: 34, focus: 60, blur: 0, counts: { high: 2600, medium: 1600, low: 700 }, opacity: 0.8, order: 9 },
+  dust: { box: 36, size: 9, focus: 9, blur: 1, counts: { high: 2200, medium: 1200, low: 480 }, opacity: 0.55, order: 12 },
+  stars: { box: 150, size: 34, focus: 60, blur: 0, counts: { high: 4200, medium: 2400, low: 900 }, opacity: 0.8, order: 9 },
 };
 
 const smooth = (a, b, value) => {
@@ -90,7 +97,7 @@ function presence(chapter, progress) {
 
 function Layer({ layer, quality, reduced }) {
   const points = useRef(null);
-  const state = useRef({ ready: false, time: 0, camera: new Vector3(), matrix: new Matrix4() });
+  const state = useRef({ ready: false, time: 0, camera: new Vector3(), matrix: new Matrix4(), biomes: {} });
   const config = LAYERS[layer];
   const geometry = useMemo(() => {
     const count = config.counts[quality] ?? config.counts.high;
@@ -108,6 +115,7 @@ function Layer({ layer, quality, reduced }) {
     uCamera: { value: new Vector3() }, uPrevCamera: { value: new Vector3() }, uPrevViewProjection: { value: new Matrix4() },
     uViewport: { value: new Vector2(1, 1) }, uBox: { value: config.box }, uSize: { value: config.size }, uPixelRatio: { value: 1 },
     uFocus: { value: config.focus }, uBlur: { value: config.blur }, uOpacity: { value: 0 }, uTime: { value: 0 },
+    uTint: { value: new Color() }, uTintMix: { value: 0 },
   }), [config]);
   useEffect(() => () => geometry.dispose(), [geometry]);
 
@@ -127,6 +135,15 @@ function Layer({ layer, quality, reduced }) {
     if (points.current.visible) {
       if (!reduced) memory.time += Math.min(delta, 0.1);
       values.uOpacity.value = opacity;
+      paletteWeights(chapter, scroll.chapterProgress, memory.biomes);
+      let mix = 0;
+      values.uTint.value.setRGB(0, 0, 0);
+      for (const biome of PALETTE_CHAPTERS) {
+        const weight = memory.biomes[biome];
+        if (weight > 0) { values.uTint.value.r += TINTS[biome].r * weight; values.uTint.value.g += TINTS[biome].g * weight; values.uTint.value.b += TINTS[biome].b * weight; mix += weight; }
+      }
+      if (mix > 0) values.uTint.value.multiplyScalar(1 / mix);
+      values.uTintMix.value = 0.5 * Math.min(1, mix);
       values.uTime.value = memory.time;
       values.uPixelRatio.value = gl.getPixelRatio();
       values.uViewport.value.set(size.width, size.height);
