@@ -6,6 +6,7 @@ const pointer = {
   touch: false,
   down: false,
   moved: 0, // performance.now() of the last movement
+  presses: 0, // count of pointer presses, so the field can fire a pulse per click
 };
 
 let users = 0;
@@ -17,7 +18,7 @@ const write = (event) => {
   pointer.moved = performance.now();
 };
 const move = (event) => { write(event); pointer.inside = true; };
-const press = (event) => { write(event); pointer.down = true; pointer.inside = true; };
+const press = (event) => { write(event); pointer.down = true; pointer.inside = true; pointer.presses++; };
 const release = () => { pointer.down = false; };
 const leave = () => { pointer.inside = false; pointer.down = false; };
 const visibility = () => { if (document.hidden) leave(); };

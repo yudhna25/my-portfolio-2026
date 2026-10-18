@@ -16,7 +16,7 @@ const STEP_FRAG = /* glsl */ `
   uniform vec2 uTexel;
   uniform vec4 uPointer; // current uv, previous uv
   uniform vec4 uParams; // radius, swirl, idle halo, presence
-  uniform vec3 uDecay; // velocity decay/s, density decay/s, dt
+  uniform vec4 uDecay; // velocity decay/s, density decay/s, dt, click burst
   uniform float uAspect;
   varying vec2 vUv;
   vec2 toSpace(vec2 v) { return vec2(v.x * uAspect, v.y); }
@@ -52,6 +52,10 @@ const STEP_FRAG = /* glsl */ `
     velocity *= min(1.0, speedLimit / max(length(velocity), 1e-4));
 
     density += stroke * min(1.0, speed * 0.8) * dt * 7.0;
+    // A click throws the window wide open and pushes matter outward for an instant.
+    float burst = uDecay.w * exp(-distance * distance / (radius * radius * 2.6));
+    density += burst;
+    velocity += r / max(distance, 1e-4) * burst * 1.4;
     // A resting mass keeps a small open window around itself.
     density = max(density, uParams.z * exp(-distance * distance / (radius * radius * 0.7)) * presence);
     gl_FragColor = vec4(velocity, clamp(density, 0.0, 1.0), well);
@@ -95,6 +99,7 @@ export function createGravityField(options = {}) {
   let presence = 0;
   let lastTime = -1;
   let quiet = 0; // seconds without a pointer
+  let presses = pointer.presses;
 
   const field = {
     params,
@@ -103,6 +108,8 @@ export function createGravityField(options = {}) {
     uniform: new Uniform(targets[0].texture),
     // xy pointer uv (y up), z presence 0..1, w pointer speed (screen heights/s).
     pointer: new Uniform(new Vector4(0.5, 0.5, 0, 0)),
+    // xy click uv, z seconds since the click, w strength: a gravitational-wave pulse.
+    pulse: new Uniform(new Vector4(0.5, 0.5, 9, 0)),
     setEnabled(value) { field.enabled = Boolean(value); },
     step(renderer, delta, time) {
       if (time === lastTime) return; // several consumers, one step per frame
@@ -120,7 +127,11 @@ export function createGravityField(options = {}) {
       if (presence < 0.01) previous.set(pointer.x, pointer.y);
       u.uPointer.value.set(pointer.x, pointer.y, previous.x, previous.y);
       u.uParams.value.set(params.radius, params.swirl, params.idle, presence);
-      u.uDecay.value.set(params.velocityDecay, params.densityDecay, dt, 0);
+      const clicked = pointer.presses !== presses;
+      presses = pointer.presses;
+      if (clicked && present) field.pulse.value.set(pointer.x, pointer.y, 0, 1);
+      else field.pulse.value.z += dt;
+      u.uDecay.value.set(params.velocityDecay, params.densityDecay, dt, clicked && present ? 1 : 0);
       u.uAspect.value = aspect;
       const speed = Math.hypot((pointer.x - previous.x) * aspect, pointer.y - previous.y) / dt;
       field.pointer.value.set(pointer.x, pointer.y, presence, speed);

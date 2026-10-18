@@ -369,33 +369,5 @@
     "catalog": "Star positions:",
     "attribution": "Full attribution",
     "manifest": "Asset manifest"
-  },
-  "chapters": {
-    "about": {
-      "title": "The Navigator",
-      "accent": "Navigator",
-      "coord": "RA 05h 35m 17s · DEC −05° 23′"
-    },
-    "skills": {
-      "title": "Arsenal Nebula",
-      "accent": "Nebula",
-      "coord": "RA 18h 18m 48s · DEC −13° 49′"
-    },
-    "education": {
-      "title": "Star Map",
-      "accent": "Map",
-      "coord": "RA 03h 47m 24s · DEC +24° 07′"
-    },
-    "experience": {
-      "title": "Voyage Log",
-      "accent": "Voyage",
-      "coord": "RA 12h 30m 49s · DEC +12° 23′"
-    },
-    "works": {
-      "title": "Constellations",
-      "accent": "Constellations",
-      "coord": "RA 13h 29m 52s · DEC +47° 11′"
-    },
-    "label": "Chapter"
   }
 }

@@ -24,7 +24,6 @@ import Experience from '@/components/sections/Experience';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/Footer';
 import { ConstellationCredits } from '@/components/ui/ConstellationCredits';
-import { ChapterCard } from '@/components/effects/ChapterCard';
 import { revealWithin } from '@/lib/textReveal';
 
 const SkillsSymbols = lazy(() => import('@/3d/components/SkillsSymbols').then((module) => ({ default: module.SkillsSymbols })));
@@ -115,7 +114,7 @@ function Portfolio({ restore }) {
     return useScrollStore.subscribe(draw);
   }, { scope: root, dependencies: [staticMotion], revertOnUpdate: true });
 
-  // Starlight headings, signal labels and comet paragraphs, wired by data-reveal.
+  // Headings and body copy born from starlight, signal-decoded labels, wired by data-reveal.
   useGSAPSetup((context, contextSafe) => {
     if (loading || staticMotion) return;
     revealWithin(reading.current, contextSafe);
@@ -158,7 +157,6 @@ function Portfolio({ restore }) {
         </>}</GalaxyScene>
       </Suspense>
       <Hero active opening={opening} />
-      {!loading && <ChapterCard />}
 
       <div id="smooth-wrapper" className="z-10">
         <main id="smooth-content" tabIndex={-1}>

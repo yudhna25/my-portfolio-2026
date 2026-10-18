@@ -1,6 +1,8 @@
 // Screen-space gravity layer, composited after bloom:
-// 1. Isopotential lines: thin contours of the black hole's well (plus a soft cosmic
-//    undulation and the cursor's own small dent), drawn only into dark space.
+// 1. Isopotential aura: a few soft contours of the black hole's well (plus a cosmic
+//    undulation and the cursor's own small dent) that fade out with distance from the
+//    hole, drawn only into dark space. Felt more than seen.
+// 0. Click pulse: a gravitational wave ring that ripples the sky, the aura and the window.
 // 2. Hidden spectrum: inside the cursor field's density the sky is shown at another
 //    wavelength (infrared false colour, edge line-art, dust filaments, a sky grid),
 //    and the swirl drags and magnifies the scene like a small mass.
@@ -11,6 +13,7 @@ export const GRAVITY_SPECTRUM_FRAG = /* glsl */ `
   uniform vec4 uContour; // line opacity, amber, inward flow, spectrum strength
   uniform vec2 uViewport;
   uniform float uTime;
+  uniform vec4 uPulse; // click uv, age (s), strength
 
   float gsHash(vec2 p) {
     p = fract(p * vec2(123.34, 456.21));
@@ -39,8 +42,19 @@ export const GRAVITY_SPECTRUM_FRAG = /* glsl */ `
     vec2 toPointer = (uv - uPointer.xy) * vec2(aspect, 1.0);
     float pr = length(toPointer);
     float lens = uPointer.z * spectrum * 0.010 * exp(-pr * pr / 0.005);
-    vec2 sampleUv = uv - field.xy * squash * 0.008 * spectrum - toPointer / max(pr, 1e-4) * squash * lens;
-    vec3 base = texture2D(inputBuffer, sampleUv).rgb;
+    // Click pulse: a thin wave packet expanding from the click, decaying as it travels.
+    vec2 fromPulse = (uv - uPulse.xy) * vec2(aspect, 1.0);
+    float pd = length(fromPulse);
+    float front = uPulse.z * 0.95;
+    float packet = exp(-pow((pd - front) / 0.035, 2.0)) * uPulse.w * exp(-uPulse.z * 1.6);
+    float wave = sin((pd - front) * 120.0) * packet;
+    vec2 pulseDir = fromPulse / max(pd, 1e-4) * squash;
+    vec2 sampleUv = uv - field.xy * squash * 0.008 * spectrum - toPointer / max(pr, 1e-4) * squash * lens
+      + pulseDir * wave * 0.006;
+    // Dispersion: lensed light splits a little at the edge of the mass, like a real Einstein ring.
+    vec2 split = (toPointer / max(pr, 1e-4) * squash * lens + field.xy * squash * 0.0015 * spectrum + pulseDir * packet * 0.004) * 0.7;
+    vec3 base = vec3(texture2D(inputBuffer, sampleUv + split).r, texture2D(inputBuffer, sampleUv).g,
+      texture2D(inputBuffer, sampleUv - split).b);
     float light = gsLuma(base);
 
     // Isopotential lines, denser and more curved towards the hole.
@@ -49,19 +63,19 @@ export const GRAVITY_SPECTRUM_FRAG = /* glsl */ `
     float R = max(uHole.z, 1.0);
     float reach = max(R, uViewport.y * 0.05);
     vec2 q = uv * vec2(aspect, 1.0);
-    float phi = 15.0 * sqrt(reach / max(r, R * 0.9));
-    phi += 0.9 * gsFbm(q * 1.6 + vec2(uTime * 0.012, -uTime * 0.008));
+    float phi = 6.0 * sqrt(reach / max(r, R * 0.9));
+    phi += 0.6 * gsFbm(q * 1.4 + vec2(uTime * 0.012, -uTime * 0.008));
     float rc = length((uv - uPointer.xy) * uViewport);
-    phi += uPointer.z * 1.1 * sqrt(uViewport.y * 0.03 / max(rc, uViewport.y * 0.012));
-    phi += length(field.xy) * 0.35;
-    phi -= uContour.z;
+    phi += uPointer.z * 0.5 * sqrt(uViewport.y * 0.03 / max(rc, uViewport.y * 0.012));
+    phi += length(field.xy) * 0.2 + wave * 0.35;
+    phi -= uContour.z * 0.45;
     float w = fwidth(phi);
     float level = fract(phi);
-    float line = 1.0 - smoothstep(0.5 * w, 1.6 * w, min(level, 1.0 - level));
-    float major = 1.0 - step(0.5, mod(floor(phi + 0.5), 4.0));
-    line *= mix(0.55, 1.0, major);
-    line *= 1.0 - smoothstep(0.22, 0.55, w); // fade where lines would alias
-    line *= smoothstep(R * 1.15, R * 1.9, r);
+    // Soft, slightly wide strokes: an aura rather than a drawing.
+    float line = 1.0 - smoothstep(0.4 * w, 2.4 * w + 0.03, min(level, 1.0 - level));
+    line *= 1.0 - smoothstep(0.18, 0.45, w); // fade where lines would crowd
+    // Strongest beside the hole, gone a few radii out.
+    line *= smoothstep(R * 1.15, R * 2.2, r) * exp(-max(r - R, 0.0) / (reach * 6.0));
     float darkness = 1.0 - smoothstep(0.06, 0.4, light);
     vec3 ink = mix(vec3(0.85, 0.83, 0.75), vec3(1.0, 0.37, 0.055), uContour.y);
     vec3 color = base + ink * line * uContour.x * darkness;
@@ -84,6 +98,8 @@ export const GRAVITY_SPECTRUM_FRAG = /* glsl */ `
     // Only where the window has a sharp edge, so decaying tails do not smear into a band.
     float rim = exp(-pow((field.z - 0.27) / 0.035, 2.0)) * spectrum * clamp(fwidth(field.z) * 30.0 - 0.15, 0.0, 1.0);
     color = mix(color, hidden, mask) + vec3(1.0, 0.57, 0.21) * rim * 0.22;
+    // The wave front catches a little disk light as it passes.
+    color += vec3(1.0, 0.57, 0.21) * max(wave, 0.0) * 0.05 * darkness;
     outputColor = vec4(color, inputColor.a);
   }
 `;

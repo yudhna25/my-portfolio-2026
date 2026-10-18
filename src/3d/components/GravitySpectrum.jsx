@@ -10,8 +10,8 @@ import { portalProgress, portalState } from '@/3d/utils/portal';
 import { useScrollStore } from '@/stores/useScrollStore';
 
 const center = new Vector3(...BLACK_HOLE_CENTER);
-// Linear light: about 9% in sRGB on the off-black sky.
-const CONTOUR_OPACITY = 0.02;
+// Linear light, at its strongest beside the hole (the shader fades it with distance).
+const CONTOUR_OPACITY = 0.018;
 // Away from the Hero the window stays, quieter, so the cursor is one gesture site-wide.
 const SPECTRUM_AWAY = 0.45;
 
@@ -31,6 +31,7 @@ export function GravitySpectrum({ portal, reduced = false }) {
       ['uContour', new Uniform(new Vector4())],
       ['uViewport', new Uniform(new Vector2(1, 1))],
       ['uTime', new Uniform(0)],
+      ['uPulse', new Uniform(new Vector4(0, 0, 9, 0))],
     ]),
   }), []);
   useEffect(() => () => effect.dispose(), [effect]);
@@ -44,6 +45,8 @@ export function GravitySpectrum({ portal, reduced = false }) {
     u.get('uTime').value = time.current;
     u.get('uField').value = field.uniform.value;
     u.get('uPointer').value.copy(field.pointer.value);
+    u.get('uPulse').value.copy(field.pulse.value);
+    u.get('uPulse').value.w *= spectrum.current > 0.01 ? 1 : 0;
 
     // Where the hole is drawn: in its letter O (mini portal) or at the projected centre.
     const p = portalProgress(state.storyChapter, state.chapterProgress, reduced);

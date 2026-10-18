@@ -1,20 +1,22 @@
 import gsap from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 
-// Stellar Odyssey's text system: three reveals by role instead of one slide-up fade.
+// Stellar Odyssey's text system: reveals by role instead of one slide-up fade.
 //   starlight: display headings. Each glyph is born as a scattered point of light,
 //              converges, passes a gravitational lens (shear + amber glow) and locks sharp.
+//   dust:      body copy, the same birth word by word with a tighter scatter.
+//   items:     lists, one point of light per item.
 //   signal:    mono labels decode like a radio transmission.
-//   comet:     paragraphs are written line by line by a travelling comet head.
 // Call inside a GSAP context (useGSAP / contextSafe); reduced motion is the caller's guard.
 
 const AMBER_GLOW = 'rgba(255, 178, 91, 0.85)';
 const SIGNAL_CHARS = '01<>/+·:░▒';
 
-const pendingBelow = (target, scroll) => !scroll || target.getBoundingClientRect().top >= window.innerHeight * 0.85;
-const trigger = (target, scroll) => scroll ? { scrollTrigger: { trigger: target, start: 'top 85%', once: true } } : {};
+// Fire as the line clears the bottom edge, so text is already forming when it is read.
+const pendingBelow = (target, scroll) => !scroll || target.getBoundingClientRect().top >= window.innerHeight * 0.96;
+const trigger = (target, scroll) => scroll ? { scrollTrigger: { trigger: target, start: 'top 96%', once: true } } : {};
 
-export function starlightTimeline(chars, { scatter = 1, glow = 22, ...vars } = {}) {
+export function starlightTimeline(chars, { scatter = 1, glow = 22, pace = 1, ...vars } = {}) {
   return gsap.timeline(vars)
     .fromTo(chars, {
       opacity: 0, scale: 0.06,
@@ -23,14 +25,14 @@ export function starlightTimeline(chars, { scatter = 1, glow = 22, ...vars } = {
       filter: 'blur(8px)',
     }, {
       opacity: 1, scale: 1, x: 0, y: 0, filter: 'blur(0px)',
-      duration: 1.15, ease: 'expo.out', stagger: { each: 0.02, from: 'random' },
-      clearProps: 'filter',
+      duration: 0.95 * Math.max(pace, 0.7), ease: 'expo.out', stagger: { amount: Math.min(0.5, chars.length * 0.014 * pace), from: 'random' },
+      clearProps: 'filter,transform',
     }, 0)
     // The lens: a shear and a flash of disk light that pass along the line.
     .fromTo(chars, { skewX: 0, textShadow: `0 0 0px ${AMBER_GLOW}` }, {
       keyframes: { skewX: [0, -14, 0], textShadow: [`0 0 0px ${AMBER_GLOW}`, `0 0 ${glow}px ${AMBER_GLOW}`, '0 0 0px rgba(255, 178, 91, 0)'] },
-      duration: 0.55, ease: 'power2.inOut', stagger: 0.016, clearProps: 'textShadow,transform',
-    }, 0.5);
+      duration: 0.5, ease: 'power2.inOut', stagger: { amount: Math.min(0.45, chars.length * 0.012 * pace) }, clearProps: 'textShadow',
+    }, 0.35);
 }
 
 export function revealStarlight(target, contextSafe, scroll = true) {
@@ -55,28 +57,35 @@ export function revealSignal(target, scroll = true) {
       onComplete: () => { target.textContent = text; } });
 }
 
-export function revealComet(target, contextSafe, scroll = true) {
+// Body copy gets the same birth from starlight, word by word and closer in, so a
+// section's heading and content arrive together as one constellation.
+export function revealDust(target, contextSafe, scroll = true) {
   const pending = pendingBelow(target, scroll);
   return SplitText.create(target, {
-    type: 'lines', autoSplit: true, linesClass: 'comet-line',
+    type: 'words', autoSplit: true, wordsClass: 'split-word',
     onSplit: contextSafe((split) => {
-      if (!pending) return gsap.set(split.lines, { '--sweep': '115%', '--comet': 0 });
-      return gsap.timeline({ ...trigger(target, scroll) })
-        .fromTo(split.lines, { '--sweep': '0%', '--comet': 1 }, {
-          '--sweep': '115%', duration: 1.1, ease: 'power2.inOut', stagger: 0.14,
-        }, 0)
-        .to(split.lines, { '--comet': 0, duration: 0.3, stagger: 0.14 }, 0.85);
+      if (!pending) return gsap.set(split.words, { opacity: 1 });
+      return starlightTimeline(split.words, { scatter: 0.35, glow: 8, pace: 0.55, ...trigger(target, scroll) });
     }),
   });
 }
 
-/** Wire every `[data-reveal="starlight|signal|comet"]` inside `scope`. */
+// Lists whose items React keeps updating (selection state, masks) are never split:
+// each item is born as one point of light instead.
+export function revealItems(target, scroll = true) {
+  const items = Array.from(target.children);
+  if (!items.length || !pendingBelow(target, scroll)) return null;
+  return starlightTimeline(items, { scatter: 0.3, glow: 6, pace: 2.2, ...trigger(target, scroll) });
+}
+
+/** Wire every `[data-reveal="starlight|dust|items|signal"]` inside `scope`. */
 export function revealWithin(scope, contextSafe) {
   scope.querySelectorAll('[data-reveal]').forEach((node) => {
     if (!node.getClientRects().length) return;
     const kind = node.dataset.reveal;
     if (kind === 'starlight') revealStarlight(node, contextSafe);
     else if (kind === 'signal') revealSignal(node);
-    else if (kind === 'comet') revealComet(node, contextSafe);
+    else if (kind === 'dust') revealDust(node, contextSafe);
+    else if (kind === 'items') revealItems(node);
   });
 }
