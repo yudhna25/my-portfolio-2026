@@ -45,6 +45,9 @@ export function chapterWave(chapter, progress, out = {}) {
   out.phase = 0;
   out.from = null;
   out.to = null;
+  // The chapter this one hands over to, and whether its wave is still to come.
+  out.next = NEXT[chapter] ?? null;
+  out.ahead = out.next !== null && p <= 1 - TAIL;
   if (NEXT[chapter] && p > 1 - TAIL && p < 1) {
     out.phase = (p - (1 - TAIL)) / TAIL;
     out.from = chapter;
