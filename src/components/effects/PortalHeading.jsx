@@ -6,40 +6,25 @@ import { useLoadingStore } from '@/stores/useLoadingStore';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { portalProgress, portalState } from '@/3d/utils/portal';
 import { createPortalTrails } from '@/components/effects/portalTrails';
+import { createYearStream } from '@/components/effects/yearStream';
 import '@/styles/hero.css';
 
 // Contours baked from the installed Unbounded 800; glyph advances stay unchanged.
 const YEAR_CONTOURS = {
   "2": "M31 324 C35.667 264 55.833 212.167 91.5 168.5 C127.167 124.833 174.667 91.333 234 68 C293.333 44.667 360 33 434 33 C504.667 33 566.5 43.667 619.5 65 C672.5 86.333 713.667 115.833 743 153.5 C772.333 191.167 787 235 787 285 C787 324.333 776.167 360.667 754.5 394 C732.833 427.333 699.333 459.833 654 491.5 C608.667 523.167 549.667 555.333 477 588 L286 676 L281 618 L807 618 L807 800 L50 800 L50 640 L373 463 C421.667 436.333 459 414.167 485 396.5 C511 378.833 529.333 362.5 540 347.5 C550.667 332.5 556 316.333 556 299 C556 281 551 265.333 541 252 C531 238.667 516.167 228.333 496.5 221 C476.833 213.667 453 210 425 210 C388.333 210 358.5 215.167 335.5 225.5 C312.5 235.833 295.167 249.667 283.5 267 C271.833 284.333 264.667 303.333 262 324 L31 324 Z",
   "0": "M467 817 C381 817 305.833 800.667 241.5 768 C177.167 735.333 127.333 689.667 92 631 C56.667 572.333 39 503.667 39 425 C39 346.333 56.667 277.667 92 219 C127.333 160.333 177.167 114.667 241.5 82 C305.833 49.333 381 33 467 33 C553.667 33 629.167 49.333 693.5 82 C757.833 114.667 807.667 160.333 843 219 C878.333 277.667 896 346.333 896 425 C896.667 503.667 879.167 572.333 843.5 631 C807.833 689.667 757.833 735.333 693.5 768 C629.167 800.667 553.667 817 467 817 Z M468 629 C530.667 629 579.333 611.167 614 575.5 C648.667 539.833 665.667 489.667 665 425 C665 359.667 647.833 309.333 613.5 274 C579.167 238.667 530.667 221 468 221 C406 221 357.5 238.667 322.5 274 C287.5 309.333 270 359.667 270 425 C270 489.667 287.5 539.833 322.5 575.5 C357.5 611.167 406 629 468 629 Z",
-  "6": "M454 33 C520.667 33 579.833 43.167 631.5 63.5 C683.167 83.833 724.833 111.167 756.5 145.5 C788.167 179.833 807.333 218.667 814 262 L601 262 C592.333 244 576.667 229 554 217 C531.333 205 500 199 460 199 C414.667 199 376.833 207.333 346.5 224 C316.167 240.667 293.5 265 278.5 297 C263.5 329 256 368.333 256 415 C256 467.667 264.167 511.333 280.5 546 C296.833 580.667 320.333 606.667 351 624 C381.667 641.333 419 650 463 650 C491.667 650 516 646 536 638 C556 630 571 619.333 581 606 C591 592.667 596 578 596 562 C596 544 591.167 528.5 581.5 515.5 C571.833 502.5 557.333 492.667 538 486 C518.667 479.333 495 476 467 476 C429 476 392.333 483.833 357 499.5 C321.667 515.167 288.333 539.667 257 573 L182 523 C202 481 228 444.167 260 412.5 C292 380.833 330.167 355.833 374.5 337.5 C418.833 319.167 469.333 310 526 310 C589.333 310 643.5 320.333 688.5 341 C733.5 361.667 768.167 390.333 792.5 427 C816.833 463.667 829 506 829 554 C829 604.667 814.667 649.833 786 689.5 C757.333 729.167 715.667 760.333 661 783 C606.333 805.667 539 817 459 817 C365 817 287 800.333 225 767 C163 733.667 116.833 687.5 86.5 628.5 C56.167 569.5 41 502 41 426 C41 350 56.333 282.333 87 223 C117.667 163.667 163.667 117.167 225 83.5 C286.333 49.833 362.667 33 454 33 Z",
-  "7": "M117 800 L528 168 L528 232 L15 232 L15 50 L742 50 L742 235 L386 800 L117 800 Z"
+  "6": "M454 33 C520.667 33 579.833 43.167 631.5 63.5 C683.167 83.833 724.833 111.167 756.5 145.5 C788.167 179.833 807.333 218.667 814 262 L601 262 C592.333 244 576.667 229 554 217 C531.333 205 500 199 460 199 C414.667 199 376.833 207.333 346.5 224 C316.167 240.667 293.5 265 278.5 297 C263.5 329 256 368.333 256 415 C256 467.667 264.167 511.333 280.5 546 C296.833 580.667 320.333 606.667 351 624 C381.667 641.333 419 650 463 650 C491.667 650 516 646 536 638 C556 630 571 619.333 581 606 C591 592.667 596 578 596 562 C596 544 591.167 528.5 581.5 515.5 C571.833 502.5 557.333 492.667 538 486 C518.667 479.333 495 476 467 476 C429 476 392.333 483.833 357 499.5 C321.667 515.167 288.333 539.667 257 573 L182 523 C202 481 228 444.167 260 412.5 C292 380.833 330.167 355.833 374.5 337.5 C418.833 319.167 469.333 310 526 310 C589.333 310 643.5 320.333 688.5 341 C733.5 361.667 768.167 390.333 792.5 427 C816.833 463.667 829 506 829 554 C829 604.667 814.667 649.833 786 689.5 C757.333 729.167 715.667 760.333 661 783 C606.333 805.667 539 817 459 817 C365 817 287 800.333 225 767 C163 733.667 116.833 687.5 86.5 628.5 C56.167 569.5 41 502 41 426 C41 350 56.333 282.333 87 223 C117.667 163.667 163.667 117.167 225 83.5 C286.333 49.833 362.667 33 454 33 Z"
 };
-const YEAR_STARS = Array.from({ length: 12 }, (_, group) => Array.from({ length: 125 }, (_, point) => {
-  const seed = group * 125 + point + 1;
-  const random = n => { const value = Math.sin(seed * n) * 43758.5453; return value - Math.floor(value); };
-  return { x: random(12.9898) * 3502, y: random(78.233) * 832, r: 1.5 + random(45.164) * 2.5 };
-}));
-const YEAR_INK = { '2': [31, 33, 776, 767], '0': [39, 33, 857, 784], '6': [41, 33, 788, 784], '7': [15, 50, 727, 750] };
-// Rasterize the unchanged stars once; this detached 2D cache is never a scene/DOM Canvas.
-function createYearStarImages() {
-  const canvas = document.createElement('canvas'), context = canvas.getContext('2d');
-  return [0, 850, 1785, 2635].map((offset, index) => Object.fromEntries((index === 3 ? ['6', '7'] : [index === 1 ? '0' : '2']).map(digit => {
-    const [x, y, width, height] = YEAR_INK[digit];
-    canvas.width = width; canvas.height = height;
-    return [digit, YEAR_STARS.map(group => {
-      context.clearRect(0, 0, width, height); context.save(); context.translate(-x, -y);
-      context.clip(new Path2D(YEAR_CONTOURS[digit])); context.fillStyle = context.strokeStyle = 'white'; context.lineWidth = 0.5;
-      context.beginPath();
-      for (const star of group) { context.moveTo(star.x - offset + star.r, star.y); context.arc(star.x - offset, star.y, star.r, 0, Math.PI * 2); }
-      context.fill(); context.stroke(); context.restore();
-      return canvas.toDataURL('image/png');
-    })];
-  })));
-}
-const YEAR_STAR_IMAGES = createYearStarImages();
+const YEAR_ADVANCES = [0, 850, 1785, 2635];
+// One-stroke centrelines of the same glyphs, the spine of the tidal stream. Each starts where
+// the previous digit hands over and the 6 ends at its inner join, beside the black hole's O.
+const YEAR_SPINES = {
+  "2": "M146,330 C150,200 290,121 430,121 C575,121 672,190 672,292 C672,400 560,460 420,540 C300,610 200,660 165,709 L807,709",
+  "0": "M167,560 C137,430 177,127 467,127 C687,127 780,280 780,425 C780,600 667,723 467,723 C297,723 207,640 167,560",
+  "6": "M720,250 C680,170 580,116 454,116 C260,116 148,240 148,426 C148,620 270,734 459,734 C620,734 712,660 712,563 C712,460 620,393 480,393 C360,393 260,450 200,530"
+};
 
-export function PortalHeading({ label, name, year, role, visible = true, opening, glitch = false, children }) {
+export function PortalHeading({ label, name, year, role, visible = true, opening, children }) {
   const scope = useRef(null);
   const reduced = useReducedMotion();
   const fallback = useScrollStore(state => state.sceneFallback);
@@ -51,9 +36,14 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
     const phase = {};
     gsap.set(stage, { opacity: 0 });
     const opacity = gsap.quickSetter(stage, 'opacity');
-    const contours = stage.querySelector('[data-year-contours]');
-    gsap.set(contours, { opacity: 1 });
-    const contourOpacity = gsap.quickSetter(contours, 'opacity');
+    const yearLayer = stage.querySelector('[data-hero-year]');
+    const streamCanvas = yearLayer.querySelector('[data-year-stream]');
+    let stream = createYearStream(streamCanvas, yearLayer.querySelector('svg'), { frozen });
+    const dropStream = () => { stream?.dispose(); stream = null; delete yearLayer.dataset.yearGl; };
+    streamCanvas.addEventListener('streamlost', dropStream);
+    if (stream) yearLayer.dataset.yearGl = 'true';
+    // The trails carry the digits into the portal; the live stream hands over to them.
+    const streamOpacity = gsap.quickSetter(streamCanvas, 'opacity');
     const sources = [
       ...stage.querySelectorAll('[data-portal-year-glyph]'), ...chars.slice(0, -1),
       ...stage.querySelectorAll('[data-hero-decode], [data-hero-role], [data-hero-layer="intro"], [data-hero-layer="indicator"]'),
@@ -64,47 +54,9 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
     const measure = () => {
       if (!active) return;
       trails?.measure();
+      if (stream && !stream.resize()) stream.render();
       draw();
     };
-    const digit = stage.querySelectorAll('[data-year-digit]');
-    const noise = stage.querySelector('[data-year-noise]');
-    const glyphs = stage.querySelectorAll('[data-year-glyph]');
-    const changeDigit = value => {
-      glyphs.forEach(glyph => {
-        if (glyph.tagName === 'path') glyph.setAttribute('d', YEAR_CONTOURS[value]);
-        else glyph.textContent = value;
-      });
-      digit.forEach(node => { node.dataset.digit = value; });
-      stage.querySelectorAll('[data-year-last-star]').forEach(image => {
-        const [x, y, width, height] = YEAR_INK[value];
-        image.setAttribute('href', YEAR_STAR_IMAGES[3][value][+image.dataset.yearLastStar]);
-        for (const [key, number] of Object.entries({ x, y, width, height })) image.setAttribute(key, number);
-      });
-    };
-    const resetDigit = () => changeDigit(year.slice(-1));
-    const meteors = !frozen ? gsap.timeline({ id: 'hero-year-meteors', paused: true }) : null;
-    const twinkle = !frozen ? gsap.timeline({ id: 'hero-year-twinkle', paused: true }) : null;
-    stage.querySelectorAll('[data-year-meteor]').forEach((meteor, index) => {
-      const paths = meteor.querySelectorAll('path');
-      gsap.set(paths, { strokeDashoffset: -index * 197 });
-      meteors?.to(paths, { strokeDashoffset: -index * 197 - 1000, duration: 6.5 + index * 0.35, repeat: -1, ease: 'none' }, 0);
-    });
-    stage.querySelectorAll('[data-year-twinkle]').forEach((group, index) => {
-      twinkle?.to(group, { opacity: 0.95, duration: 1.4 + index % 4 * 0.25, repeat: -1, yoyo: true, repeatDelay: 1.8 + index % 3 * 0.6, ease: 'sine.inOut' }, index * 0.37);
-    });
-    const flash = glitch && !frozen ? gsap.timeline({ id: 'hero-year-glitch', paused: true, repeat: -1 }) : null;
-    if (flash) {
-      for (const [start, next] of [[11, '7'], [17.8, year.slice(-1)]]) {
-        flash.to(noise, { opacity: 0.7, duration: 0.12 }, start)
-          .to(noise, { x: 42, scaleY: 0.86, duration: 0.18, ease: 'power4.in' }, start)
-          .to(digit, { x: -10, skewX: 5, opacity: 0.45, duration: 0.18, ease: 'power3.in' }, start)
-          .set(noise, { x: -26, scaleY: 1.08, opacity: 0.25 }, start + 0.18)
-          .call(() => changeDigit(next), [], start + 0.24)
-          .set(digit, { x: 7, skewX: -2, opacity: 0.85 }, start + 0.26)
-          .to(noise, { x: 0, scaleY: 1, opacity: 0, duration: 0.48, ease: 'expo.out' }, start + 0.28)
-          .to(digit, { x: 0, skewX: 0, opacity: 1, duration: 0.48, ease: 'expo.out' }, start + 0.28);
-      }
-    }
     const nameNode = stage.querySelector('[data-hero-name]');
     const decoded = stage.querySelector('[data-hero-decode]');
     const decode = !frozen ? gsap.timeline({ id: 'hero-name-decode', paused: true }).to(decoded, {
@@ -117,13 +69,8 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
       const p = portalProgress(state.storyChapter, state.chapterProgress, frozen);
       portalState(p, phase);
       opacity(visible && p < 0.44 ? opening?.current.active ? opening.current.reveal : 1 : 0);
-      contourOpacity(p > 0 && p < 0.5 ? 0 : 1);
-      if (p > 0 && running) {
-        flash?.pause(0);
-        gsap.set(noise, { opacity: 0, x: 0, y: 0, scaleY: 1 });
-        gsap.set(digit, { opacity: 1, x: 0, skewX: 0 });
-        decode?.pause(0); decoded.textContent = name; resetDigit();
-      }
+      streamOpacity(Math.max(0, 1 - p / 0.04));
+      if (p > 0 && running) { decode?.pause(0); decoded.textContent = name; }
       trails?.draw(p, state.storyAnchor, visible);
       const hidden = !visible || phase.textOpacity === 0;
       stage.setAttribute('aria-hidden', hidden ? 'true' : 'false');
@@ -135,16 +82,11 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
       stage.dataset.heroIdle = String(idle);
       nameNode.tabIndex = idle ? 0 : -1;
       if (idle) {
-        meteors?.play();
-        twinkle?.play();
-        flash?.play();
+        stream?.play();
         decode?.restart();
       } else {
-        meteors?.pause();
-        twinkle?.pause();
-        flash?.pause();
+        stream?.pause();
         decode?.pause(0);
-        resetDigit();
         decoded.textContent = name;
         if (document.activeElement === nameNode) nameNode.blur();
       }
@@ -171,57 +113,24 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
       document.fonts?.removeEventListener('loadingdone', measure);
       nameNode.removeEventListener('pointerenter', replay);
       nameNode.removeEventListener('focus', replay);
-      resetDigit();
+      streamCanvas.removeEventListener('streamlost', dropStream);
+      dropStream();
       decoded.textContent = name;
     };
-  }, { scope, dependencies: [label, name, year, frozen, visible, glitch, opening], revertOnUpdate: true });
+  }, { scope, dependencies: [label, name, year, frozen, visible, opening], revertOnUpdate: true });
 
-  const prefix = year.slice(0, -1);
-  const lastDigit = year.slice(-1);
   return <header ref={scope} data-portal-stage data-static-motion={frozen} className="portal-heading pointer-events-none fixed inset-0 z-20 flex items-center overflow-hidden text-white">
     <div data-hero-content className="relative isolate mx-4 w-[calc(100%-2rem)] md:ml-[14vw] md:mr-0 md:w-[72vw]">
       <div data-hero-lockup className="relative shrink-0">
       <div data-hero-layer="year" data-hero-year className="relative z-0">
         <span className="sr-only">{year}</span>
-        {[true, false].map(stars => <svg key={String(stars)} data-year-contours={stars ? undefined : true} aria-hidden="true" focusable="false" viewBox="0 0 3502 832"
-          className={`hero-year-svg${stars ? '' : ' absolute left-0 top-0'}`} fill="none" stroke="white" strokeWidth="2">
-          {Array.from(prefix, (char, index) => <g key={index} data-portal-year-glyph={stars ? index : undefined}
-            data-year-contour-glyph={stars ? undefined : index} transform={`translate(${[0, 850, 1785][index]} 0)`}>
-            {stars && <>
-              <path d={YEAR_CONTOURS[char]} className="hero-year-base" />
-              {YEAR_STAR_IMAGES[index][char].map((image, group) => <g key={group} data-year-twinkle className="hero-year-stars">
-                <image href={image} x={YEAR_INK[char][0]} y={YEAR_INK[char][1]} width={YEAR_INK[char][2]} height={YEAR_INK[char][3]} />
-              </g>)}
-            </>}
-            {!stars && (char === '0' ? YEAR_CONTOURS[char].match(/M[^M]+/g) : [YEAR_CONTOURS[char]]).map((path, contour) => <g key={contour} data-year-meteor>
-              <path d={path} pathLength="1000" className="hero-year-tail" />
-              <path d={path} pathLength="1000" className="hero-year-wake" />
-              <path d={path} pathLength="1000" className="hero-year-head" />
-            </g>)}
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 3502 832" className="hero-year-svg">
+          {Array.from(year, (char, index) => <g key={index} data-portal-year-glyph={index} transform={`translate(${YEAR_ADVANCES[index]} 0)`}>
+            <path d={YEAR_CONTOURS[char]} className="hero-year-base" />
+            <path d={YEAR_SPINES[char]} className="hero-year-stream" />
           </g>)}
-          <g data-year-digit data-portal-year-glyph={stars ? 3 : undefined} data-year-contour-glyph={stars ? undefined : 3} data-digit={lastDigit}>
-            <g transform="translate(2635 0)">
-              {stars && <>
-                <path data-year-glyph d={YEAR_CONTOURS[lastDigit]} className="hero-year-base" />
-                {YEAR_STAR_IMAGES[3][lastDigit].map((image, group) => <g key={group} data-year-twinkle className="hero-year-stars">
-                  <image data-year-last-star={group} href={image} x={YEAR_INK[lastDigit][0]} y={YEAR_INK[lastDigit][1]} width={YEAR_INK[lastDigit][2]} height={YEAR_INK[lastDigit][3]} />
-                </g>)}
-              </>}
-              {!stars && <g data-year-meteor>
-                <path data-year-glyph d={YEAR_CONTOURS[lastDigit]} pathLength="1000" className="hero-year-tail" />
-                <path data-year-glyph d={YEAR_CONTOURS[lastDigit]} pathLength="1000" className="hero-year-wake" />
-                <path data-year-glyph d={YEAR_CONTOURS[lastDigit]} pathLength="1000" className="hero-year-head" />
-              </g>}
-            </g>
-          </g>
-          {stars && <g data-year-noise className="opacity-0">
-            <g transform="translate(2635 0)">
-              <path data-year-glyph d={YEAR_CONTOURS[lastDigit]} className="hero-noise-upper" />
-              <path data-year-glyph d={YEAR_CONTOURS[lastDigit]} className="hero-noise-lower" />
-              <path d="M90 232h650M180 474h540M70 650h610" className="hero-noise-signal" />
-            </g>
-          </g>}
-        </svg>)}
+        </svg>
+        <canvas data-year-stream aria-hidden="true" className="hero-year-stream-canvas" />
       </div>
       <h1 id="hero-heading" data-hero-layer="heading" aria-label={label} className="absolute left-0 top-1/2 z-10 -translate-y-1/2 whitespace-nowrap font-display leading-none font-extrabold tracking-[-0.035em]">
         {Array.from(label, (char, index) => <span key={index} aria-hidden="true" data-portal-char className={`relative inline-block${index === label.length - 1 && !fallback ? ' text-transparent' : ''}`}>

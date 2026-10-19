@@ -1,6 +1,6 @@
 import { CanvasTexture, LinearFilter } from 'three';
 
-// Rasterizes the live Hero lockup (year stars, PORTFOLIO without its last O, name and
+// Rasterizes the live Hero lockup (the year's stream, PORTFOLIO without its last O, name and
 // role) at its measured DOM positions, so the opening lens bends exactly what the DOM
 // reveals afterwards. The stage is laid out but transparent while this runs.
 export function createLockupRaster() {
@@ -27,11 +27,13 @@ export function createLockupRaster() {
     clone.setAttribute('width', box.width);
     clone.setAttribute('height', box.height);
     clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-    // CSS classes do not reach an SVG drawn as an image; inline the two that matter.
+    // CSS classes do not reach an SVG drawn as an image; inline the fallback band.
     clone.querySelectorAll('.hero-year-base').forEach(path => path.setAttribute('stroke', 'none'));
-    clone.querySelectorAll('.hero-year-stars').forEach(group => group.setAttribute('opacity', '0.42'));
-    // The glitch layer is hidden by a utility class, which an image cannot see either.
-    clone.querySelectorAll('[data-year-noise]').forEach(group => group.remove());
+    clone.querySelectorAll('.hero-year-stream').forEach(path => {
+      path.setAttribute('fill', 'none'); path.setAttribute('stroke', '#D6DEFF');
+      path.setAttribute('stroke-width', String(box.height * 0.06 / 2.177)); path.setAttribute('stroke-linecap', 'round');
+      path.setAttribute('vector-effect', 'non-scaling-stroke');
+    });
     const image = new Image();
     image.onload = () => { if (!disposed && yearKey === id) { year = image; key = ''; } };
     image.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(new XMLSerializer().serializeToString(clone))}`;
@@ -40,7 +42,8 @@ export function createLockupRaster() {
   const update = (width, height, dpr) => {
     const stage = document.querySelector('[data-portal-stage]');
     if (!stage || !width || !height) return false;
-    const next = `${width}x${height}@${dpr}:${year ? 1 : 0}:${document.fonts?.status}`;
+    const stream = stage.querySelector('[data-year-gl="true"] [data-year-stream][data-ready="true"]');
+    const next = `${width}x${height}@${dpr}:${year ? 1 : 0}:${stream ? 1 : 0}:${document.fonts?.status}`;
     if (next === key) return true;
     key = next;
     canvas.width = Math.round(width * dpr);
@@ -48,8 +51,11 @@ export function createLockupRaster() {
     context.setTransform(dpr, 0, 0, dpr, 0, 0);
     context.clearRect(0, 0, width, height);
 
-    const yearSvg = stage.querySelector('[data-hero-year] svg:not([data-year-contours])');
-    if (yearSvg) {
+    const yearSvg = stage.querySelector('[data-hero-year] svg');
+    if (stream) {
+      const box = stream.getBoundingClientRect();
+      context.drawImage(stream, box.left, box.top, box.width, box.height);
+    } else if (yearSvg) {
       const box = yearSvg.getBoundingClientRect();
       loadYear(yearSvg, box);
       if (year) context.drawImage(year, box.left, box.top, box.width, box.height);

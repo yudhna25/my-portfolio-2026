@@ -74,7 +74,7 @@ function sampleYear(starts, seeds, count) {
   const canvas = document.createElement('canvas');
   canvas.width = canvas.height = MASK;
   const context = canvas.getContext('2d', { willReadFrequently: true });
-  const glyphs = [...document.querySelectorAll('[data-hero-year] svg:not([data-year-contours]) [data-portal-year-glyph]')].flatMap(glyph => {
+  const glyphs = [...document.querySelectorAll('[data-hero-year] svg [data-portal-year-glyph]')].flatMap(glyph => {
     const node = glyph.querySelector('.hero-year-base'), matrix = node?.getScreenCTM();
     if (!matrix || !context) return [];
     const box = node.getBBox(), length = node.getTotalLength();

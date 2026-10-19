@@ -27,21 +27,22 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
   useEffect(() => () => {
     lockup.current?.dispose(); lockup.current = null;
     year.current?.dispose(); year.current = null;
-    const node = document.querySelector('[data-hero-year]');
-    if (node) node.style.maskImage = node.style.webkitMaskImage = '';
+    document.querySelectorAll('[data-hero-year] > svg, [data-hero-year] > canvas').forEach(node => { node.style.maskImage = node.style.webkitMaskImage = ''; });
   }, []);
-  // Complement of the lensed copy's fade (0.8..1 of reach), in the year layer's own box.
+  // Complement of the lensed copy's fade (0.8..1 of reach), in each year layer's own box:
+  // the stream canvas overflows the year box, and a mask clips to the box it is set on.
   const maskYear = target => {
-    const node = document.querySelector('[data-hero-year]');
-    if (!node) return;
-    let next = '';
-    if (target) {
-      const box = node.getBoundingClientRect();
-      next = `radial-gradient(circle at ${(target.x - box.left).toFixed(1)}px ${(target.y - box.top).toFixed(1)}px, transparent ${(target.reach * 0.8).toFixed(1)}px, black ${target.reach.toFixed(1)}px)`;
-    }
-    if (next === yearMask.current) return;
-    yearMask.current = next;
-    node.style.maskImage = node.style.webkitMaskImage = next;
+    const nodes = document.querySelectorAll('[data-hero-year] > svg, [data-hero-year] > canvas');
+    if (!nodes.length) return;
+    const boxes = [...nodes].map(node => node.getBoundingClientRect());
+    const key = target ? `${target.x.toFixed(1)},${target.y.toFixed(1)},${target.reach.toFixed(1)}:${boxes.map(box => `${box.left.toFixed(1)},${box.top.toFixed(1)}`).join(';')}` : '';
+    if (key === yearMask.current) return;
+    yearMask.current = key;
+    nodes.forEach((node, index) => {
+      const box = boxes[index];
+      const next = target ? `radial-gradient(circle at ${(target.x - box.left).toFixed(1)}px ${(target.y - box.top).toFixed(1)}px, transparent ${(target.reach * 0.8).toFixed(1)}px, black ${target.reach.toFixed(1)}px)` : '';
+      node.style.maskImage = node.style.webkitMaskImage = next;
+    });
   };
   const renderer = useMemo(() => {
     const tier = RAY_QUALITY[quality];
