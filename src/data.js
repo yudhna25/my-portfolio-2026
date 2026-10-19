@@ -52,6 +52,16 @@ export const PORTFOLIO_DATA = {
       tags: ['Branding', 'Packaging', 'Visual Identity'],
       imageUrl: '/project3.webp',
     },
+    {
+      id: '04',
+      title: 'STELLAR ODYSSEY',
+      subtitle: 'WEB',
+      category: 'Creative Development',
+      description:
+        'The very site you are travelling through: a portfolio told in gravity across 10 seamless chapters, guided by a black hole, a comet and living nebulae.',
+      tags: ['Creative Development', 'WebGL / GLSL', 'Motion Design'],
+      imageUrl: '/project4.webp',
+    },
   ],
   tools: [
     { id: 'figma', icon: '/icons/figma.png' },

@@ -1,6 +1,7 @@
 // Works as a sky full of hidden phenomena. Each constellation keeps a real one inside it
 // (Omega Centauri in the Centaur, the Jellyfish Nebula in the Twins, the double star Albireo
-// in the Swan), and the project's picture is made of that phenomenon's light:
+// in the Swan, the Ring Nebula in the Lyre), and the project's picture is made of that
+// phenomenon's light:
 //   rest   the cursor's trail lets you glimpse it behind the figure,
 //   hover  it blooms from the brightest star and the picture forms out of it,
 //   open   the mythological drawing breaks into dust and the picture clears into colour,
@@ -87,6 +88,7 @@ export const PHENOMENON_FRAG = /* glsl */ `
   uniform sampler2D uField;
   uniform vec4 uPulse;
   uniform vec2 uViewport;
+  uniform vec2 uSource;
   uniform float uKind, uDraw, uOpen, uTime, uOpacity, uAspect, uPad, uGrain;
   varying vec2 vUv;
   ${SCREEN}
@@ -139,6 +141,12 @@ export const PHENOMENON_FRAG = /* glsl */ `
   // Albireo: a gold star and a fainter blue one, side by side at the heart.
   const vec2 ALBIREO_GOLD = vec2(-0.09, 0.04);
   const vec2 ALBIREO_BLUE = vec2(0.1, -0.045);
+
+  // The Ring Nebula (M57): a dying star's last breath, a slightly oval shell of glowing gas
+  // around a faint white dwarf, teal inside, gold in the ring, ember red at its clumpy rim.
+  // It is born in the lyre's sound box, where M57 really lies (uSource), and rises to the
+  // heart of the picture as it widens: the same O the whole voyage opens through.
+  float shell(float d, float radius, float width) { return exp(-pow((d - radius) / width, 2.0)); }
 
   void main() {
     vec4 field = texture2D(uField, vScreen);
@@ -199,6 +207,33 @@ export const PHENOMENON_FRAG = /* glsl */ `
       vec3 aqua = vec3(0.62, 0.95, 1.0), lilac = vec3(0.78, 0.66, 1.0), rose = vec3(1.0, 0.62, 0.8);
       emission = (mix(lilac, aqua, smoothstep(0.2, 0.9, b.y)) * (rim * 1.25 + folds) + rose * skirt + mix(lilac, rose, 0.5) * tendrils * 0.9
         + mix(lilac, vec3(1.0), 0.5) * (body * (0.1 + light * 0.9))) * wake;
+    } else if (uKind > 2.5) {
+      float rise = smoothstep(0.05, 0.85, bloom);
+      vec2 c = (p - mix(uSource, HEART, rise)) * vec2(uAspect, 1.0);
+      // A gently tilted oval, as the shell is seen slightly from its side.
+      float tilt = 0.55;
+      vec2 e = mat2(cos(tilt), sin(tilt), -sin(tilt), cos(tilt)) * c * vec2(1.0, 1.22);
+      float d = length(e), angle = atan(e.y, e.x);
+      // It exhales: the ring widens as it wakes, breathes while held, and opens to frame the picture.
+      float radius = (0.05 + 0.24 * smoothstep(0.0, 1.0, bloom)) * (1.0 + 0.025 * sin(uTime * 0.6)) + 0.16 * uOpen;
+      float warp = (fbm(vec2(angle * 2.0, uTime * 0.05)) - 0.5) * radius * 0.18;
+      float rd = d + warp;
+      // Dense knots of gas stud the rim, drifting slowly outward like the real shell's globules.
+      float knots = 0.25 + 1.3 * pow(noise(vec2(angle * 26.0, rd * 30.0 - uTime * 0.12)), 2.5);
+      float spokes = 0.6 + 0.4 * noise(vec2(angle * 40.0, uTime * 0.03));
+      float teal = shell(rd, radius * 0.72, radius * 0.32) * 0.55 + exp(-rd * rd / max(radius * radius * 0.5, 1e-4)) * 0.18;
+      float band = shell(rd, radius, radius * 0.14);
+      float rim = shell(rd, radius * 1.17, radius * 0.11) * knots;
+      // Fainter shells the star cast off earlier, broken arcs further out.
+      float arcs = (shell(rd, radius * 1.55, radius * 0.035) * smoothstep(0.35, 0.7, noise(vec2(angle * 3.0, 1.7)))
+        + shell(rd, radius * 1.9, radius * 0.03) * smoothstep(0.4, 0.75, noise(vec2(angle * 2.0, 5.3)))) * 0.2 * rise;
+      // The picture's own light shows through the clear heart of the ring.
+      float inner = glowAt(p, length(c)) * smoothstep(radius * 1.05, radius * 0.5, rd);
+      float dwarf = exp(-dot(c, c) / 0.00012) * (1.6 + 0.4 * sin(uTime * 2.3));
+      vec3 cyan = vec3(0.45, 0.85, 1.0), gold = vec3(1.0, 0.8, 0.45), ember = vec3(1.0, 0.42, 0.28);
+      float wake = smoothstep(0.0, 0.12, bloom);
+      emission = (cyan * (teal * 0.7 + inner * 0.5) + gold * band * spokes * 0.75 + ember * rim * 0.8
+        + mix(ember, amber, 0.5) * arcs + vec3(0.85, 0.92, 1.0) * dwarf) * wake;
     } else {
       // Albireo: the pair lights the picture around it like a reflection nebula, gold on the
       // gold star's side and sapphire on the blue's, thinning to nothing well before any edge.

@@ -615,7 +615,7 @@
           ],
           [
             -0.00012131076220505499,
-            0.000009718177904825063,
+            9.718177904825063e-06,
             1
           ]
         ],
@@ -632,7 +632,7 @@
           ],
           [
             -0.00012131076220505499,
-            0.000009718177904825063,
+            9.718177904825063e-06,
             1
           ]
         ],
@@ -1252,8 +1252,8 @@
             0.4666627422539427
           ],
           [
-            -0.000038166343389462996,
-            -0.000007661863795741649,
+            -3.8166343389462996e-05,
+            -7.661863795741649e-06,
             1
           ]
         ],
@@ -1269,8 +1269,8 @@
             58.340164069083
           ],
           [
-            -0.000038166343389462996,
-            -0.000007661863795741649,
+            -3.8166343389462996e-05,
+            -7.661863795741649e-06,
             1
           ]
         ],
@@ -1759,8 +1759,8 @@
             0.610056604156296
           ],
           [
-            0.0000582212130794179,
-            0.00002341497473543017,
+            5.82212130794179e-05,
+            2.341497473543017e-05,
             1
           ]
         ],
@@ -1776,8 +1776,8 @@
             63.358884687284416
           ],
           [
-            0.0000582212130794179,
-            0.00002341497473543017,
+            5.82212130794179e-05,
+            2.341497473543017e-05,
             1
           ]
         ],
@@ -1819,6 +1819,437 @@
             0.35
           ]
         }
+      }
+    },
+    {
+      "id": "Lyr",
+      "name": "Lyra",
+      "assignment": "STELLAR ODYSSEY",
+      "section": "works",
+      "status": "ready",
+      "nameMeaning": "Lyre",
+      "designInterpretation": "Cây đàn của Orpheus, người đi xuống bóng tối rồi trở về; liên hệ hành trình của chính trang web là diễn giải thiết kế.",
+      "meaningSourceIds": [
+        "iau-names"
+      ],
+      "geometry": {
+        "convention": "Stellarium Modern",
+        "sourceId": "stellarium-modern",
+        "sourceConstellationId": "CON modern Lyr",
+        "polylinesHip": [
+          [
+            91262,
+            91971,
+            92420,
+            93194,
+            92791,
+            91971
+          ]
+        ],
+        "edges": [
+          [
+            "HIP 91262",
+            "HIP 91971"
+          ],
+          [
+            "HIP 91971",
+            "HIP 92420"
+          ],
+          [
+            "HIP 92420",
+            "HIP 93194"
+          ],
+          [
+            "HIP 93194",
+            "HIP 92791"
+          ],
+          [
+            "HIP 92791",
+            "HIP 91971"
+          ]
+        ],
+        "stars": [
+          {
+            "id": "HIP 91262",
+            "hip": 91262,
+            "raDeg": 279.23410832,
+            "decDeg": 38.78299311,
+            "vmag": 0.03,
+            "position": [
+              0.293129798,
+              0.359511276,
+              0
+            ]
+          },
+          {
+            "id": "HIP 91971",
+            "hip": 91971,
+            "raDeg": 281.19306613,
+            "decDeg": 37.60505025,
+            "vmag": 4.34,
+            "position": [
+              0.107858596,
+              0.211075875,
+              0
+            ]
+          },
+          {
+            "id": "HIP 92420",
+            "hip": 92420,
+            "raDeg": 282.51997462,
+            "decDeg": 33.36267788,
+            "vmag": 3.52,
+            "position": [
+              -0.02176022,
+              -0.308079182,
+              0
+            ]
+          },
+          {
+            "id": "HIP 93194",
+            "hip": 93194,
+            "raDeg": 284.73593568,
+            "decDeg": 32.68955312,
+            "vmag": 3.25,
+            "position": [
+              -0.250209813,
+              -0.387671031,
+              0
+            ]
+          },
+          {
+            "id": "HIP 92791",
+            "hip": 92791,
+            "raDeg": 283.62620294,
+            "decDeg": 36.89860518,
+            "vmag": 4.22,
+            "position": [
+              -0.128920392,
+              0.124972952,
+              0
+            ]
+          }
+        ],
+        "supportingStars": [
+          {
+            "id": "HIP 89826",
+            "hip": 89826,
+            "raDeg": 274.96550503,
+            "decDeg": 36.06444696,
+            "vmag": 4.33,
+            "position": [
+              0.726916796,
+              0.049616212,
+              0
+            ]
+          },
+          {
+            "id": "HIP 94713",
+            "hip": 94713,
+            "raDeg": 289.09206426,
+            "decDeg": 38.13372778,
+            "vmag": 4.35,
+            "position": [
+              -0.653902596,
+              0.299055728,
+              0
+            ]
+          },
+          {
+            "id": "HIP 94481",
+            "hip": 94481,
+            "raDeg": 288.43953645,
+            "decDeg": 39.14596968,
+            "vmag": 4.43,
+            "position": [
+              -0.582967035,
+              0.418799006,
+              0
+            ]
+          },
+          {
+            "id": "HIP 91926",
+            "hip": 91926,
+            "raDeg": 281.09489936,
+            "decDeg": 39.61259557,
+            "vmag": 4.59,
+            "position": [
+              0.114317009,
+              0.457044128,
+              0
+            ]
+          },
+          {
+            "id": "HIP 91919",
+            "hip": 91919,
+            "raDeg": 281.08473883,
+            "decDeg": 39.66997686,
+            "vmag": 4.67,
+            "position": [
+              0.115187431,
+              0.46409785,
+              0
+            ]
+          },
+          {
+            "id": "HIP 93279",
+            "hip": 93279,
+            "raDeg": 285.00342257,
+            "decDeg": 32.14549051,
+            "vmag": 4.94,
+            "position": [
+              -0.279625884,
+              -0.453741664,
+              0
+            ]
+          },
+          {
+            "id": "HIP 90191",
+            "hip": 90191,
+            "raDeg": 276.05750733,
+            "decDeg": 39.50724983,
+            "vmag": 5.11,
+            "position": [
+              0.591260505,
+              0.463923821,
+              0
+            ]
+          },
+          {
+            "id": "HIP 95556",
+            "hip": 95556,
+            "raDeg": 291.53801621,
+            "decDeg": 36.31786478,
+            "vmag": 5.17,
+            "position": [
+              -0.912475872,
+              0.096753316,
+              0
+            ]
+          },
+          {
+            "id": "HIP 93017",
+            "hip": 93017,
+            "raDeg": 284.25612303,
+            "decDeg": 32.90162351,
+            "vmag": 5.2,
+            "position": [
+              -0.200244089,
+              -0.362704222,
+              0
+            ]
+          },
+          {
+            "id": "HIP 93917",
+            "hip": 93917,
+            "raDeg": 286.85623123,
+            "decDeg": 32.50166027,
+            "vmag": 5.2,
+            "position": [
+              -0.470063584,
+              -0.403520217,
+              0
+            ]
+          },
+          {
+            "id": "HIP 92405",
+            "hip": 92405,
+            "raDeg": 282.47052043,
+            "decDeg": 32.55108873,
+            "vmag": 5.22,
+            "position": [
+              -0.016875669,
+              -0.407498082,
+              0
+            ]
+          },
+          {
+            "id": "HIP 93903",
+            "hip": 93903,
+            "raDeg": 286.82553958,
+            "decDeg": 36.10016754,
+            "vmag": 5.25,
+            "position": [
+              -0.446478011,
+              0.036905261,
+              0
+            ]
+          }
+        ],
+        "supportingStarPolicy": "At most 12 brightest Johnson V <= 5.5 field stars, excluding stick-figure stars. No edge; a cone may include adjacent constellations. These are context, not members added to the figure.",
+        "fieldStarsReturned": 20
+      },
+      "projection": {
+        "type": "gnomonic",
+        "origin": {
+          "raDeg": 282.30691723862714,
+          "decDeg": 35.88303394626905
+        },
+        "fieldRadiusDeg": 8.130542073953091,
+        "uniformScale": 6.99961629270119,
+        "xDirection": "celestial west right (increasing RA left)",
+        "yDirection": "north up",
+        "z": 0,
+        "view": "sky as seen from Earth, not exterior celestial globe",
+        "normalization": "same scalar for x/y; no independent stretch, mirroring or invented coordinates"
+      },
+      "referenceChart": {
+        "sourceId": "iau-charts",
+        "path": "https://iauarchive.eso.org/public/themes/constellations/",
+        "role": "comparison only; IAU/MacRobert patterns can differ from selected Modern figure"
+      },
+      "notes": [
+        "Phenomenon: Messier 57, the Ring Nebula, RA 283.39625 Dec 33.02917 (ICRS), local -0.1117, -0.3484; it lies on the Sheliak–Sulafat edge."
+      ],
+      "artwork": {
+        "assetId": "Lyr",
+        "url": "/constellations/lyra.svg",
+        "sha256": "d011ed45ef7d9d33e30c384bb087046871be5699abff06d9e521ce266d41d593",
+        "viewBox": [
+          0,
+          0,
+          256,
+          256
+        ],
+        "anchors": [
+          {
+            "hip": 92791,
+            "sourcePixel": [
+              100,
+              96
+            ],
+            "vectorPixel": [
+              108.4265988860765,
+              100.44588579510116
+            ],
+            "localPosition": [
+              -0.12892039234404257,
+              0.12497295215235958,
+              0
+            ],
+            "raDeg": 283.62620294,
+            "decDeg": 36.89860518,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 91262,
+            "sourcePixel": [
+              157,
+              38
+            ],
+            "vectorPixel": [
+              175.96390825303203,
+              62.91459747044389
+            ],
+            "localPosition": [
+              0.29312979756404917,
+              0.35951127642660335,
+              0
+            ],
+            "raDeg": 279.23410832,
+            "decDeg": 38.78299311,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 92420,
+            "sourcePixel": [
+              139,
+              162
+            ],
+            "vectorPixel": [
+              125.57458247865037,
+              169.74374811577718
+            ],
+            "localPosition": [
+              -0.02176021969837753,
+              -0.30807918194666467,
+              0
+            ],
+            "raDeg": 282.51997462,
+            "decDeg": 33.36267788,
+            "role": "line-pattern"
+          }
+        ],
+        "sourcePixelToLocal": [
+          [
+            0.005638209324255605,
+            -0.0017111982536024582,
+            -0.5281979314286529
+          ],
+          [
+            -0.0016019277711002843,
+            -0.005598147070735671,
+            0.8223277040587815
+          ],
+          [
+            -2.652276940136604e-05,
+            5.944526701934801e-06,
+            1.0
+          ]
+        ],
+        "sourcePixelToVector": [
+          [
+            0.8988145097059723,
+            -0.27306216113861775,
+            44.53341431884232
+          ],
+          [
+            0.2531491460018457,
+            0.8965425937346492,
+            -11.146206198215651
+          ],
+          [
+            -2.652276940136604e-05,
+            5.944526701934801e-06,
+            1.0
+          ]
+        ],
+        "vectorPixelToLocal": [
+          [
+            0.006249141309656486,
+            0.0,
+            -0.8064935305085781
+          ],
+          [
+            -0.0,
+            -0.006249141309656486,
+            0.752673486459563
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixConvention": "row-major 3x3, column [x,y,1], divide by third coordinate",
+        "plane": {
+          "center": [
+            -0.006603442872547938,
+            -0.047216601176467254,
+            0
+          ],
+          "width": 1.5997801752720604,
+          "height": 1.5997801752720604,
+          "localZ": -0.01
+        },
+        "opacity": {
+          "idle": [
+            0.08,
+            0.12
+          ],
+          "active": [
+            0.25,
+            0.35
+          ]
+        }
+      },
+      "phenomenon": {
+        "id": "M57",
+        "name": "Ring Nebula",
+        "localPosition": [
+          -0.1117187535001331,
+          -0.3483551478129303
+        ]
       }
     }
   ],

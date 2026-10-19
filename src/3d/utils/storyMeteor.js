@@ -1,4 +1,5 @@
 import { clampStoryProgress, storyCameraPath } from './cameraPath.js';
+import { WORKS_IDS } from './worksOrbit.js';
 
 export const STORY_METEOR_SAMPLES = 128;
 export const STORY_METEOR_TRAIL = 0.24;
@@ -27,18 +28,18 @@ export function meteorVisibility(chapter, progress) {
     : chapter === 'departure' ? 1 - smooth((p - 0.70) / 0.30) : 0;
 }
 
-// The constellations ignite as the comet's three fragments reach them.
+// The constellations ignite as the comet's fragments reach them.
 export function worksArrival(chapter, progress) {
   return chapter === 'departure' ? smooth((progress - 0.45) / 0.50) : 1;
 }
 
-// Departure: the comet breaks into three; each fragment flies to one Works figure.
+// Departure: the comet breaks apart; each fragment flies to one Works figure.
 export function meteorSplit(chapter, progress) {
   return chapter === 'departure' ? smoother((progress - 0.52) / 0.36) : 0;
 }
 
-// World centres of the three Works figures at rest, written by WorksConstellations.
-export const meteorTargets = { ready: false, points: [{ x: 0, y: 0, z: 0 }, { x: 0, y: 0, z: 0 }, { x: 0, y: 0, z: 0 }] };
+// World centres of the Works figures at rest, written by WorksConstellations.
+export const meteorTargets = { ready: false, points: WORKS_IDS.map(() => ({ x: 0, y: 0, z: 0 })) };
 
 function curveSlope(points, index, exitSlope) {
   if (index === 4) return exitSlope;

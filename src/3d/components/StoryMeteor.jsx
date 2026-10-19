@@ -189,7 +189,7 @@ export function StoryMeteor({ layout, frozen = false }) {
     return { geometry, sparks, sparkUniforms: { uViewport: { value: new Vector2(1, 1) }, uJourney: { value: 0 },
       uDpr: { value: 1 }, uCount: { value: 36 }, uOpacity: { value: 0 } },
       head: new PlaneGeometry(2, 2), screen: new Float64Array(STORY_METEOR_SAMPLES * 2), ribbon, wake,
-      headUniforms: headUniforms(), fragments: [headUniforms(), headUniforms(), headUniforms()], ion,
+      headUniforms: headUniforms(), fragments: meteorTargets.points.map(() => headUniforms()), ion,
       ionUniforms: { uHead: { value: new Vector3() }, uViewport: { value: new Vector2(1, 1) }, uDir: { value: new Vector2(0, 1) },
         uLength: { value: 300 }, uWidth: { value: 22 }, uOpacity: { value: 0 }, uTime: { value: 0 } } };
   }, []);
@@ -210,7 +210,7 @@ export function StoryMeteor({ layout, frozen = false }) {
     const head = root.current.children[2].material.uniforms;
     const sparks = root.current.children[3].material.uniforms;
     const departure = state.storyChapter === 'departure', p = state.chapterProgress;
-    // After the break-up the parent comet and its tails dim; three fragments carry on.
+    // After the break-up the parent comet and its tails dim; its fragments carry on.
     const opacity = meteorVisibility(state.storyChapter, p) * (departure ? 1 - smooth((p - 0.54) / 0.14) : 1);
     const pieces = departure ? smooth((p - 0.52) / 0.05) * (1 - smooth((p - 0.84) / 0.14)) : 0;
     root.current.visible = !frozen && !document.hidden && data?.range > 0 && (opacity > 0 || pieces > 0);
@@ -270,15 +270,18 @@ export function StoryMeteor({ layout, frozen = false }) {
     const split = meteorSplit(state.storyChapter, p);
     probe.right.setFromMatrixColumn(camera.matrixWorld, 0);
     probe.up.setFromMatrixColumn(camera.matrixWorld, 1);
-    for (let i = 0; i < 3; i++) {
+    const count = meteorTargets.points.length;
+    for (let i = 0; i < count; i++) {
       const mesh = fragmentMeshes.current[i];
+      // Spread across the camera plane from -1 to 1, the inner fragments bowing upward.
+      const side = i * 2 / (count - 1) - 1;
       if (!mesh) continue;
       const values = mesh.material.uniforms, target = meteorTargets.ready ? meteorTargets.points[i] : null;
-      const t = split > 0 ? Math.min(1, Math.max(0, (p - 0.52 - 0.03 * i) / 0.34)) : 0;
+      const t = split > 0 ? Math.min(1, Math.max(0, (p - 0.52 - 0.06 * i / (count - 1)) / 0.34)) : 0;
       const flight = t * t * t * (t * (t * 6 - 15) + 10), bow = Math.sin(Math.PI * flight) * 2.4;
       values.uHead.value.copy(head.uHead.value);
       if (target) values.uHead.value.lerp(probe.a.set(target.x, target.y, target.z), flight);
-      values.uHead.value.addScaledVector(probe.right, (i - 1) * bow).addScaledVector(probe.up, (i === 1 ? 0.8 : -0.4) * bow);
+      values.uHead.value.addScaledVector(probe.right, side * bow).addScaledVector(probe.up, (Math.abs(side) < 0.5 ? 0.8 : -0.4) * bow);
       probe.a.copy(values.uHead.value).project(camera);
       probe.b.copy(head.uHead.value).project(camera);
       const vx = (probe.b.x - probe.a.x) * size.width, vy = (probe.b.y - probe.a.y) * size.height, vl = Math.hypot(vx, vy);

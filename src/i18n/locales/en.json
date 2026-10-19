@@ -79,6 +79,17 @@
         ],
         "caseStudyLabel": "Case study coming soon",
         "previewAlt": "VIE perfume brand identity cover"
+      },
+      "stellarOdyssey": {
+        "title": "STELLAR ODYSSEY",
+        "category": "Creative Development",
+        "description": "The very site you are travelling through: a portfolio told in gravity across 10 seamless chapters, guided by a black hole, a comet and living nebulae. React 19, Three.js with dozens of hand-written GLSL shaders, GSAP ScrollSmoother, bilingual Vietnamese–English.",
+        "tags": [
+          "Creative Development",
+          "WebGL / GLSL",
+          "Motion Design"
+        ],
+        "previewAlt": "Stellar Odyssey's opening: the word PORTFOLIO with a black hole inside its last O"
       }
     },
     "tagsLabel": "Disciplines",
@@ -88,15 +99,18 @@
     "behanceReference": "Reference on Behance",
     "comingSoon": "Case study coming soon",
     "backToOrbit": "Back to the sky",
+    "voyageAgain": "Return to first light",
     "constellations": {
       "edura": "Centaurus",
       "veris": "Gemini",
-      "vie": "Cygnus"
+      "vie": "Cygnus",
+      "odyssey": "Lyra"
     },
     "myths": {
       "edura": "Chiron, teacher of heroes",
       "veris": "Castor and Pollux, two souls never apart",
-      "vie": "The swan flying along the Milky Way"
+      "vie": "The swan flying along the Milky Way",
+      "odyssey": "The lyre of Orpheus, who walked down into the dark and found his way back"
     },
     "phenomena": {
       "edura": {
@@ -110,6 +124,10 @@
       "vie": {
         "name": "Albireo",
         "line": "A gold star and a blue star lean together at the swan's beak; no one is yet sure they truly belong to each other."
+      },
+      "odyssey": {
+        "name": "Ring Nebula",
+        "line": "In the lyre's sound box a dying star breathes out its last ring of light: the very O this voyage opened through."
       }
     }
   },

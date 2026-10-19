@@ -1,6 +1,6 @@
 import { finaleState } from './finale.js';
 
-export const WORKS_IDS = Object.freeze(['edura', 'veris', 'vie']);
+export const WORKS_IDS = Object.freeze(['edura', 'veris', 'vie', 'odyssey']);
 export const WORKS_ORBIT_SPEED = 0.075; // radians/second; staged orbit, not astronomy.
 
 // Geometry telemetry, not interaction state. App passes this same object to both consumers.
@@ -26,30 +26,23 @@ export function worksStage(width, height, bounds) {
   const heights = bounds.map(b => b.top - b.bottom);
   const drift = mobile ? 4 : 8;
   const desired = Math.min(width * 0.15, height * 0.13) * 1.8;
+  // A fuller sky draws each figure a little smaller, so neighbours on the ring never touch.
+  const crowd = Math.sqrt(3 / bounds.length);
   const scale = mobile ? Math.min(desired, (width - 48) / (Math.max(...widths) * 2.2),
-    Math.max(44, height - 422) / (heights[0] + Math.max(heights[1], heights[2])))
-    : Math.min(desired, (width - 144) / widths.reduce((a, b) => a + b, 0),
+    Math.max(44, height - 422) / (Math.max(...heights) * 2)) * crowd
+    : Math.min(desired * crowd, (width - 144) / widths.reduce((a, b) => a + b, 0) * 1.4,
       (height * 0.52 - 64) / Math.max(...heights));
-  const centers = mobile ? [
-    [width / 2, 148 + heights[0] * scale / 2],
-    [24 + widths[1] * scale / 2, 170 + heights[0] * scale + Math.max(heights[1], heights[2]) * scale / 2],
-    [width - 24 - widths[2] * scale / 2, 170 + heights[0] * scale + Math.max(heights[1], heights[2]) * scale / 2],
-  ] : [[48 + widths[0] * scale / 2, height * 0.4],
-    [width - 48 - widths[1] * scale / 2, height * 0.4], [width / 2, height * 0.74]];
   const top = 148, bottom = mobile ? 220 : 48;
   const orbit = { x: width / 2, y: (top + height - bottom) / 2,
     rx: Math.max(12, (width - (mobile ? 48 : 96) - Math.max(...widths) * scale) / 2),
     ry: Math.max(12, (height - top - bottom - Math.max(...heights) * scale) / 2) };
-  return { scale, drift, orbit, centers: centers.map(([x, y], i) => [
-    x - (bounds[i].left + bounds[i].right) * scale / 2,
-    y + (bounds[i].top + bounds[i].bottom) * scale / 2,
-  ]) };
+  return { scale, drift, orbit };
 }
 
 // One slow shared orbit; the captured pose feeds the unchanged accelerating collapse.
 export function worksFigure(progress, origin, index, basis, out) {
   finaleState(progress, out);
-  const phase = origin - index * Math.PI * 2 / 3 + Math.PI * 5 / 6;
+  const phase = origin - index * Math.PI * 2 / WORKS_IDS.length + Math.PI * 5 / 6;
   const x = basis.orbit.x + Math.cos(phase) * basis.orbit.rx + basis.offsets[index][0];
   const y = basis.orbit.y + Math.sin(phase) * basis.orbit.ry + basis.offsets[index][1];
   // The ring is seen from just above: the upper arc runs behind the lens, the lower in front.
