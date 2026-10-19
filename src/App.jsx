@@ -13,6 +13,7 @@ import { EDURA_ROUTE, useRouteStore, returnToWorks } from '@/stores/useRouteStor
 import Edura from '@/components/pages/Edura';
 
 import Preloader from '@/components/Preloader';
+import LanguageGate from '@/components/LanguageGate';
 import Cursor from '@/components/Cursor';
 import { Nav } from '@/components/layout/Nav';
 import { MenuOverlay } from '@/components/layout/MenuOverlay';
@@ -50,6 +51,14 @@ function Portfolio({ restore }) {
   const staticMotion = reduced || fallback;
   const loading = useLoadingStore((state) => state.isLoading);
   const setLoading = useLoadingStore((state) => state.setLoading);
+  // Fresh visits open on the language gate; its chosen star hands off to the preloader.
+  const [gate, setGate] = useState(() => (useLoadingStore.getState().isLoading ? 'open' : 'done'));
+  const arriveGate = useCallback(() => setGate(state => state === 'open' ? 'handoff' : state), []);
+  const closeGate = useCallback(() => {
+    setGate('done');
+    const focused = document.activeElement;
+    if (!focused || focused === document.body || focused.closest('[data-language-gate]')) document.getElementById('smooth-content')?.focus({ preventScroll: true });
+  }, []);
 
   useSmoothScroll({ scope: root, paused: loading });
   useChapterReveal({ scope: root, disabled: staticMotion });
@@ -146,7 +155,8 @@ function Portfolio({ restore }) {
 
   return (
     <div ref={root} className="bg-transparent text-(--text-primary) min-h-screen font-sans">
-      {loading && <Preloader opening={opening} onComplete={() => setLoading(false)} />}
+      {loading && gate !== 'open' && <Preloader opening={opening} covered onComplete={() => setLoading(false)} />}
+      {gate !== 'done' && <LanguageGate opening={opening} loading={loading} onArrive={arriveGate} onDone={closeGate} />}
       <Cursor />
       {!loading && <StarMapIndex />}
 

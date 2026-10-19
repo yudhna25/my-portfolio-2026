@@ -8,7 +8,7 @@ import { OPENING_SECONDS, openingPose } from '@/3d/utils/opening';
 import '@/styles/opening.css';
 
 let openingSeen = false;
-export function Preloader({ onComplete, opening }) {
+export function Preloader({ onComplete, opening, covered = false }) {
   const root = useRef(null), veil = useRef(null);
   const done = useRef(onComplete), completed = useRef(false), started = useRef(null);
   const local = useRef({ active: false, reveal: 0 });
@@ -38,7 +38,8 @@ export function Preloader({ onComplete, opening }) {
       const width = window.innerWidth, height = window.innerHeight;
       const pose = openingPose(model.p, anchor, width, height, presentation.current);
       pose.active = true;
-      veil.current.style.opacity = String(1 - Math.min(1, model.p / 0.04));
+      // The language gate already covers the first frame and hands its star to the O.
+      veil.current.style.opacity = covered ? '0' : String(1 - Math.min(1, model.p / 0.04));
       root.current.dataset.openingProgress = String(model.p);
     };
     const begin = contextSafe(() => {
@@ -73,7 +74,7 @@ export function Preloader({ onComplete, opening }) {
   if (reduced || fallback) return null;
   return <div ref={root} role="status" aria-label={t('preloader.counterLabel')} aria-live="polite" tabIndex={-1}
     className="stellar-opening fixed inset-0 z-[9999] overflow-hidden" data-preloader>
-    <div ref={veil} className="absolute inset-0 bg-(--bg-void)" data-opening-veil />
+    <div ref={veil} className={`absolute inset-0 bg-(--bg-void) ${covered ? 'opacity-0' : ''}`} data-opening-veil />
   </div>;
 }
 
