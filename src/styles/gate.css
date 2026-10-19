@@ -30,8 +30,9 @@
   }
 }
 
-/* Focus traces a faint orbit around the star and its name instead of a hard frame. */
-.language-gate .language-gate__option:focus-visible {
-  outline: 1px solid rgb(255 178 91 / 0.6); outline-offset: 0; border-radius: 50%; box-shadow: 0 0 1.5rem rgb(255 178 91 / 0.12);
+/* Focus is the canvas ring that circles the selected star in its own colour. */
+.language-gate .language-gate__option:focus-visible { outline: none; box-shadow: none; }
+@media (forced-colors: active) {
+  .language-gate .language-gate__option:focus-visible { outline: 2px solid CanvasText; border-radius: 50%; }
 }
 .language-gate[data-chosen] .language-gate__option { outline: none; box-shadow: none; pointer-events: none; cursor: default; }

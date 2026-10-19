@@ -48,7 +48,7 @@ export function LanguageGate({ opening, loading, onArrive, onDone }) {
 
   useGSAPSetup((context, contextSafe) => {
     const stage = root.current, context2d = canvas.current.getContext('2d');
-    const s = { intro: reduced ? 1 : 0, text: reduced ? 1 : 0, hover: [0, 0], target: -1, chosen: -1, absorb: 0, flight: 0, fade: 0, from: null, to: null };
+    const s = { intro: reduced ? 1 : 0, text: reduced ? 1 : 0, hover: [0, 0], target: -1, chosen: -1, absorb: 0, flight: 0, fade: 0, from: null, to: null, ring: null };
     let width = 0, height = 0, ratio = 1, geometry, field = [], pointer = { x: 0, y: 0 }, leaving = false;
     const start = performance.now();
 
@@ -142,6 +142,32 @@ export function LanguageGate({ opening, loading, onArrive, onDone }) {
       context2d.restore();
     };
 
+    // The ring belongs to whichever language is selected: it glides to that star and takes its colour.
+    const drawRing = (points, time) => {
+      const active = s.chosen >= 0 ? s.chosen : s.target;
+      if (!s.ring) s.ring = { x: 0, y: 0, k: 0, on: 0, time };
+      const ring = s.ring;
+      // Frame-rate independent glide, about a third of a second between the stars.
+      const ease = reduced ? 1 : 1 - Math.exp(-Math.min(0.1, Math.max(0, time - ring.time)) * 11);
+      ring.time = time;
+      if (active >= 0) {
+        const point = points[active];
+        if (ring.on < 0.01) { ring.x = point.x; ring.y = point.y; ring.k = active; }
+        ring.x += (point.x - ring.x) * ease; ring.y += (point.y - ring.y) * ease; ring.k += (active - ring.k) * ease;
+      }
+      const target = active >= 0 ? s.intro * (1 - s.absorb) : 0;
+      ring.on += (target - ring.on) * ease;
+      if (ring.on <= 0.01) return;
+      const breath = reduced ? 1 : 1 + 0.04 * Math.sin(time * 1.6);
+      const radius = geometry.radius * 5.2 * breath * (1 - 0.75 * s.absorb);
+      const color = mix(mix(TINTS[0], TINTS[1], ring.k), [255, 255, 255], 0.2);
+      context2d.save();
+      context2d.beginPath(); context2d.arc(ring.x, ring.y, radius, 0, Math.PI * 2);
+      context2d.filter = 'blur(3px)'; context2d.lineWidth = 3; context2d.strokeStyle = rgba(color, 0.45 * ring.on); context2d.stroke();
+      context2d.filter = 'none'; context2d.lineWidth = 1.2; context2d.strokeStyle = rgba(color, 0.95 * ring.on); context2d.stroke();
+      context2d.restore();
+    };
+
     const draw = () => {
       const time = (performance.now() - start) / 1000;
       const motion = reduced ? 0 : 1;
@@ -179,6 +205,7 @@ export function LanguageGate({ opening, loading, onArrive, onDone }) {
         }
         drawStar(x, y, r, color, intensity, spike);
       }
+      drawRing([a, b], time);
       // Labels ride with their stars.
       for (let i = 0; i < 2; i++) {
         const point = i === 0 ? a : b, button = buttons.current[i];
