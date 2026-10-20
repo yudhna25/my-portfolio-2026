@@ -7,7 +7,6 @@ import { useScrollStore } from '@/stores/useScrollStore';
 import { OPENING_SECONDS, openingPose } from '@/3d/utils/opening';
 import '@/styles/opening.css';
 
-let openingSeen = false;
 export function Preloader({ onComplete, opening, covered = false }) {
   const root = useRef(null), veil = useRef(null);
   const done = useRef(onComplete), completed = useRef(false), started = useRef(null);
@@ -25,7 +24,7 @@ export function Preloader({ onComplete, opening, covered = false }) {
       if (!active || completed.current) return;
       presentation.current.active = false;
       presentation.current.reveal = 1;
-      completed.current = true; openingSeen = true;
+      completed.current = true;
       done.current?.();
     };
     if (reduced || fallback) { complete(); return; }
@@ -47,9 +46,8 @@ export function Preloader({ onComplete, opening, covered = false }) {
       const ready = document.fonts.status === 'loaded' && (useScrollStore.getState().sceneFallback
         || document.querySelector('[data-galaxy-scene]')?.dataset.sceneReady === 'true');
       if ((!ready && !forced) || !measure()?.height) return;
-      const reload = performance.getEntriesByType('navigation')[0]?.type === 'reload';
-      const warm = (openingSeen || reload) && performance.now() - started.current < 1800 && !forced;
-      const duration = warm ? 2 : OPENING_SECONDS;
+      // Every load, a reload included, plays the full First Light at the same pace.
+      const duration = OPENING_SECONDS;
       root.current.dataset.openingDuration = String(duration);
       root.current.dataset.openingReady = forced ? 'watchdog' : 'scene-font';
       timeline = gsap.timeline({ id: 'preloader-intro', onComplete: complete })
