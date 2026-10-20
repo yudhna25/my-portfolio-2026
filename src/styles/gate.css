@@ -1,0 +1,38 @@
+@layer components {
+  /* Sits above the scene and Hero, below the custom cursor (9998) and the preloader (9999). */
+  .language-gate { position: fixed; inset: 0; z-index: 9997; overflow: hidden; background: var(--bg-void); }
+  .language-gate__sky { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .language-gate__prompt {
+    position: absolute; left: 50%; top: 22%; width: min(90vw, 36rem); transform: translateX(-50%);
+    display: grid; gap: 0.5rem; text-align: center; opacity: 0; pointer-events: none;
+  }
+  .language-gate__prompt > :first-child {
+    font-family: var(--font-serif); font-style: italic; font-weight: 300; font-variation-settings: 'opsz' 144;
+    font-size: clamp(1.25rem, 2.4vw, 1.75rem); color: var(--text-primary); letter-spacing: -0.005em;
+  }
+  .language-gate__prompt > :last-child {
+    font-family: var(--font-body); font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-secondary);
+  }
+  .language-gate__option {
+    position: absolute; left: 0; top: 0; display: flex; flex-direction: column; align-items: center;
+    width: 12rem; min-height: 9.25rem; padding: 5rem 0.75rem 0.75rem; border-radius: 1rem;
+    background: transparent; color: var(--text-primary); cursor: pointer; will-change: transform;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .language-gate__label { display: grid; justify-items: center; gap: 0.4rem; opacity: 0; }
+  .language-gate__name {
+    font-family: var(--font-serif); font-style: italic; font-weight: 400; font-variation-settings: 'opsz' 144;
+    font-size: clamp(1.6rem, 2.6vw, 2.1rem); line-height: 1; color: var(--text-primary);
+  }
+  .language-gate__depart {
+    font-family: var(--font-body); font-size: 0.6875rem; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--accent-amber); opacity: 0.75;
+  }
+}
+
+/* Focus is the canvas ring that circles the selected star in its own colour. */
+.language-gate .language-gate__option:focus-visible { outline: none; box-shadow: none; }
+@media (forced-colors: active) {
+  .language-gate .language-gate__option:focus-visible { outline: 2px solid CanvasText; border-radius: 50%; }
+}
+.language-gate[data-chosen] .language-gate__option { outline: none; box-shadow: none; pointer-events: none; cursor: default; }

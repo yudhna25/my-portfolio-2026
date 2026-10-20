@@ -277,6 +277,12 @@
     "websiteLabel": "Trang web",
     "websiteUrl": ""
   },
+  "gate": {
+    "label": "Chọn ngôn ngữ",
+    "prompt": "Chọn ngôn ngữ cho chuyến du hành",
+    "option": "Tiếng Việt",
+    "depart": "Khởi hành"
+  },
   "preloader": {
     "counterLabel": "ĐANG KẾT NỐI VỚI VŨ TRỤ...",
     "counterRange": "0–100%",

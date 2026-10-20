@@ -277,6 +277,12 @@
     "websiteLabel": "Website",
     "websiteUrl": ""
   },
+  "gate": {
+    "label": "Choose a language",
+    "prompt": "Choose the language of your voyage",
+    "option": "English",
+    "depart": "Depart"
+  },
   "preloader": {
     "counterLabel": "LINKING TO THE COSMOS...",
     "counterRange": "0–100%",
