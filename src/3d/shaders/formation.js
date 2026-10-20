@@ -40,13 +40,18 @@ export const FORMATION_GLSL = /* glsl */ `
       + exp(-abs(d.x) / 0.7) * exp(-abs(d.y) / spike));
     // Seconds after the burst on a first visit; the warm 2s replay compresses it.
     float b = (p - 0.40) * ${OPENING_SECONDS.toFixed(2)};
-    float on = step(0.0, b);
-    light += on * exp(-b * 9.0) * (0.12 + exp(-r / (width * 0.22))) * vec3(5.0, 4.8, 4.5);
-    float sweep = on * exp(-b * 2.6);
-    light += sweep * exp(-abs(d.y) / (1.2 + b * 7.0)) * exp(-abs(d.x) / (width * 0.42)) * vec3(1.6, 2.24, 3.2);
-    light += sweep * exp(-abs(d.y) / 0.6) * exp(-abs(d.x) / (width * 0.18)) * 2.0;
-    light += on * exp(-b * 3.6) * exp(-pow((r - b * width * 0.85) / (4.0 + b * 22.0), 2.0)) * vec3(0.9, 0.74, 0.58);
-    light += on * exp(-b * 3.0) * exp(-r / 55.0) * vec3(2.5, 2.25, 2.0);
+    // Gated as a branch, not multiplied by step(): before the burst the widths
+    // (1.2 + 7b, 4 + 22b) reach zero and turn negative, the exponentials overflow,
+    // and 0 * inf = NaN paints the frame black just before the star bursts.
+    if (b >= 0.0) {
+      light += exp(-b * 9.0) * (0.12 + exp(-r / (width * 0.22))) * vec3(5.0, 4.8, 4.5);
+      float sweep = exp(-b * 2.6);
+      light += sweep * exp(-abs(d.y) / (1.2 + b * 7.0)) * exp(-abs(d.x) / (width * 0.42)) * vec3(1.6, 2.24, 3.2);
+      light += sweep * exp(-abs(d.y) / 0.6) * exp(-abs(d.x) / (width * 0.18)) * 2.0;
+      float ring = (r - b * width * 0.85) / (4.0 + b * 22.0);
+      light += exp(-b * 3.6) * exp(-ring * ring) * vec3(0.9, 0.74, 0.58);
+      light += exp(-b * 3.0) * exp(-r / 55.0) * vec3(2.5, 2.25, 2.0);
+    }
     float a = clamp(max(light.r, max(light.g, light.b)), 0.0, 1.0);
     return vec4(light / max(a, 0.00001), a);
   }
