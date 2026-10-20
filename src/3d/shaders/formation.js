@@ -38,7 +38,7 @@ export const FORMATION_GLSL = /* glsl */ `
     float spike = (12.0 + 70.0 * load) * (1.0 - 0.6 * inhale);
     light += pre * energy * 0.35 * vec3(0.86, 0.91, 1.0) * (exp(-abs(d.y) / 0.7) * exp(-abs(d.x) / spike)
       + exp(-abs(d.x) / 0.7) * exp(-abs(d.y) / spike));
-    // Seconds after the burst on a first visit; the warm 2s replay compresses it.
+    // Seconds after the burst.
     float b = (p - 0.40) * ${OPENING_SECONDS.toFixed(2)};
     // Gated as a branch, not multiplied by step(): before the burst the widths
     // (1.2 + 7b, 4 + 22b) reach zero and turn negative, the exponentials overflow,
