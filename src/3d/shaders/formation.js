@@ -52,7 +52,12 @@ export const FORMATION_GLSL = /* glsl */ `
       light += exp(-b * 3.6) * exp(-ring * ring) * vec3(0.9, 0.74, 0.58);
       light += exp(-b * 3.0) * exp(-r / 55.0) * vec3(2.5, 2.25, 2.0);
     }
-    float a = clamp(max(light.r, max(light.g, light.b)), 0.0, 1.0);
+    // The inhale: the sky closes into a horizontal slit through the star from about
+    // 1.5s, shuts at 2.07s and stays dark until the burst opens everything again.
+    // Only the sky is hidden; the star's own light is still added on top.
+    float slit = 88.0 * max(0.0, -7.0 * b - 1.2);
+    float dark = pre * smoothstep(slit, slit * 1.15 + 3.0, abs(d.y));
+    float a = max(clamp(max(light.r, max(light.g, light.b)), 0.0, 1.0), dark);
     return vec4(light / max(a, 0.00001), a);
   }
   vec4 stellarFormation(vec2 uv) {
