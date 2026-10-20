@@ -21,8 +21,11 @@ const YEAR_ADVANCES = [0, 850, 1785, 2635];
 const YEAR_SPINES = {
   "2": "M146,330 C150,200 290,121 430,121 C575,121 672,190 672,292 C672,400 560,460 420,540 C300,610 200,660 165,709 L807,709",
   "0": "M167,560 C137,430 177,127 467,127 C687,127 780,280 780,425 C780,600 667,723 467,723 C297,723 207,640 167,560",
-  "6": "M702,214 C664,150 578,116 454,116 C260,116 148,240 148,426 C148,620 270,734 459,734 C620,734 712,660 712,563 C712,460 620,393 480,393 C360,393 260,450 200,530"
+  "6": "M702,214 C664,150 578,116 454,116 C260,116 148,240 148,426 C148,620 270,734 459,734 C620,734 712,660 712,563 C712,460 620,393 480,393 C360,393 260,450 200,530",
+  "7": "M282,722 L652,232 C685,172 655,141 590,141 L105,141"
 };
+// Every so often the last digit slips to the next year and back.
+const YEAR_ALT = { "6": "7" };
 
 export function PortalHeading({ label, name, year, role, visible = true, opening, children }) {
   const scope = useRef(null);
@@ -57,6 +60,36 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
       if (stream && !stream.resize()) stream.render();
       draw();
     };
+    // A gravitational wave rolls through the last digit and the stream re-forms as the next
+    // year (6 → 7), then back. Without WebGL the spine simply swaps under the same timing.
+    const alt = yearLayer.querySelector('[data-year-alt]');
+    const own = alt?.parentNode.querySelector('.hero-year-stream');
+    const wave = { mix: 0, quake: 0 };
+    let slipped = false;
+    const slip = () => {
+      const next = alt.getAttribute('d');
+      alt.setAttribute('d', own.getAttribute('d'));
+      own.setAttribute('d', next);
+      slipped = !slipped;
+      wave.mix = 0;
+      stream?.shape(0, wave.quake);
+    };
+    const shapeStream = () => stream?.shape(wave.mix, wave.quake);
+    const flash = alt && !frozen ? gsap.timeline({ id: 'hero-year-glitch', paused: true, repeat: -1 }) : null;
+    if (flash) {
+      for (const start of [11, 17.8]) {
+        flash.fromTo(wave, { quake: 0 }, { quake: 1, duration: 0.16, ease: 'power2.in', onUpdate: shapeStream }, start)
+          .fromTo(wave, { mix: 0 }, { mix: 1, duration: 0.42, ease: 'power3.inOut', onUpdate: shapeStream }, start + 0.08)
+          .call(slip, [], start + 0.5)
+          .to(wave, { quake: 0, duration: 0.6, ease: 'expo.out', onUpdate: shapeStream }, start + 0.42);
+      }
+      flash.to({}, { duration: 0.6 });
+    }
+    const settle = () => {
+      flash?.pause(0);
+      Object.assign(wave, { mix: 0, quake: 0 });
+      if (slipped) slip(); else shapeStream();
+    };
     const nameNode = stage.querySelector('[data-hero-name]');
     const decoded = stage.querySelector('[data-hero-decode]');
     const decode = !frozen ? gsap.timeline({ id: 'hero-name-decode', paused: true }).to(decoded, {
@@ -84,7 +117,9 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
       if (idle) {
         stream?.play();
         decode?.restart();
+        flash?.restart();
       } else {
+        settle();
         stream?.pause();
         decode?.pause(0);
         decoded.textContent = name;
@@ -113,6 +148,8 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
       document.fonts?.removeEventListener('loadingdone', measure);
       nameNode.removeEventListener('pointerenter', replay);
       nameNode.removeEventListener('focus', replay);
+      settle();
+      flash?.kill();
       streamCanvas.removeEventListener('streamlost', dropStream);
       dropStream();
       decoded.textContent = name;
@@ -128,6 +165,7 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
           {Array.from(year, (char, index) => <g key={index} data-portal-year-glyph={index} transform={`translate(${YEAR_ADVANCES[index]} 0)`}>
             <path d={YEAR_CONTOURS[char]} className="hero-year-base" />
             <path d={YEAR_SPINES[char]} className="hero-year-stream" />
+            {index === year.length - 1 && YEAR_ALT[char] && <path d={YEAR_SPINES[YEAR_ALT[char]]} data-year-alt className="hero-year-base" />}
           </g>)}
         </svg>
         <canvas data-year-stream aria-hidden="true" className="hero-year-stream-canvas" />

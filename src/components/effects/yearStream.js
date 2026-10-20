@@ -54,12 +54,24 @@ const RESOLVE_VERT = `#version 300 es
 in vec2 aPosition;
 void main() { gl_Position = vec4(aPosition, 0.0, 1.0); }`;
 
+// While the last digit re-forms, a gravitational wave rolls through it: space shears in
+// rippling bands and the light splits into its colours, then settles.
 const RESOLVE_FRAG = `#version 300 es
 precision highp float;
 uniform sampler2D uLight;
+uniform float uQuake, uSeed, uFs;
+uniform vec2 uZone;
 out vec4 o;
+float hash(vec2 p) { p = fract(p * vec2(123.34, 456.21)); p += dot(p, p + 45.32); return fract(p.x * p.y); }
+vec3 fetch(vec2 p) { return texelFetch(uLight, ivec2(clamp(p, vec2(0), vec2(textureSize(uLight, 0) - 1))), 0).rgb; }
 void main() {
-  vec3 x = texelFetch(uLight, ivec2(gl_FragCoord.xy), 0).rgb;
+  vec2 p = gl_FragCoord.xy;
+  float q = uQuake * smoothstep(uZone.x - uFs * 0.3, uZone.x, p.x) * (1.0 - smoothstep(uZone.y, uZone.y + uFs * 0.3, p.x));
+  float band = floor(p.y / (uFs * 0.11));
+  float shear = (hash(vec2(band, uSeed)) - 0.5) * step(0.55, hash(vec2(band, uSeed + 7.0))) * uFs * 0.4;
+  float ripple = sin(p.y / uFs * 7.0 + uSeed * 2.4) * uFs * 0.08;
+  vec2 at = p + vec2((shear + ripple) * q, 0.0), split = vec2(uFs * 0.06 * q, 0.0);
+  vec3 x = q > 0.001 ? vec3(fetch(at + split).r, fetch(at).g, fetch(at - split).b) * (1.0 + q * 0.5) : fetch(p);
   vec3 rgb = clamp((x * (2.51 * x + 0.03)) / (x * (2.43 * x + 0.59) + 0.14), 0.0, 1.0);
   // Premultiplied light over the sky.
   o = vec4(rgb, max(rgb.r, max(rgb.g, rgb.b)));
@@ -128,6 +140,7 @@ export function createYearStream(canvas, svg, { frozen = false } = {}) {
   let vertexCount = 0;
 
   let layout = null, raf = 0, playing = false, lost = false;
+  const shape = { mix: 0, quake: 0 };
   const start = performance.now();
   const onLost = event => { event.preventDefault(); lost = true; canvas.dataset.ready = 'false'; canvas.dispatchEvent(new Event('streamlost')); };
   canvas.addEventListener('webglcontextlost', onLost);
@@ -152,7 +165,15 @@ export function createYearStream(canvas, svg, { frozen = false } = {}) {
       const m = node.getScreenCTM();
       if (!m) return;
       const length = node.getTotalLength(), count = Math.max(12, Math.round(length * Math.hypot(m.a, m.b) / 5));
-      const at = step => { const q = node.getPointAtLength(length * step / count); return [m.a * q.x + m.c * q.y + m.e - box.left, m.b * q.x + m.d * q.y + m.f - box.top]; };
+      // The last digit can be caught between its own spine and the alternate one.
+      const alt = shape.mix > 0 && node.parentNode.querySelector('[data-year-alt]'), altLength = alt ? alt.getTotalLength() : 0;
+      const local = step => {
+        const q = node.getPointAtLength(length * step / count);
+        if (!alt) return q;
+        const r = alt.getPointAtLength(altLength * step / count);
+        return { x: q.x + (r.x - q.x) * shape.mix, y: q.y + (r.y - q.y) * shape.mix };
+      };
+      const at = step => { const q = local(step); return [m.a * q.x + m.c * q.y + m.e - box.left, m.b * q.x + m.d * q.y + m.f - box.top]; };
       if (points.length) {
         const end = points[points.length - 1], before = points[points.length - 2], first = at(0), next = at(1);
         const span = Math.hypot(first[0] - end[0], first[1] - end[1]);
@@ -222,6 +243,22 @@ export function createYearStream(canvas, svg, { frozen = false } = {}) {
     if (!box.width || !box.height || !year.width) return false;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     canvas.width = Math.round(box.width * dpr); canvas.height = Math.round(box.height * dpr);
+    if (!direct) {
+      gl.bindTexture(gl.TEXTURE_2D, light);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA16F, canvas.width, canvas.height, 0, gl.RGBA, gl.HALF_FLOAT, null);
+      gl.bindFramebuffer(gl.FRAMEBUFFER, target);
+      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, light, 0);
+      gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+    }
+    return build();
+  };
+
+  // The ribbon around the current spine; rebuilt alone while the last digit morphs.
+  const build = () => {
+    if (lost || !canvas.width) return false;
+    const box = canvas.getBoundingClientRect(), year = svg.getBoundingClientRect();
+    if (!box.width || !year.width) return false;
+    const dpr = canvas.width / box.width;
     const fs = year.height / 2.177 * dpr, half = fs * RIBBON_HALF_WIDTH;
     const anchor = document.querySelector('[data-story-anchor="portal"]')?.getBoundingClientRect();
     const path = spine(box, anchor, year.height / 2.177), glyphs = path.glyphs ?? path.length;
@@ -266,15 +303,10 @@ export function createYearStream(canvas, svg, { frozen = false } = {}) {
     gl.bindBuffer(gl.ARRAY_BUFFER, ribbonBuffer);
     gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
     vertexCount = points.length * 2;
-    if (!direct) {
-      gl.bindTexture(gl.TEXTURE_2D, light);
-      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA16F, canvas.width, canvas.height, 0, gl.RGBA, gl.HALF_FLOAT, null);
-      gl.bindFramebuffer(gl.FRAMEBUFFER, target);
-      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, light, 0);
-      gl.bindFramebuffer(gl.FRAMEBUFFER, null);
-    }
+    const last = svg.querySelector('[data-year-alt]')?.parentNode.getBoundingClientRect();
+    const zone = last ? [(last.left - box.left) * dpr, (last.right - box.left) * dpr] : [0, 0];
     const hole = anchor ? [(anchor.left + anchor.width / 2 - box.left) * dpr, canvas.height - (anchor.top + anchor.height / 2 - box.top) * dpr, anchor.height * 0.48 * dpr] : [0, 0, 0];
-    layout = { fs, length: total, hole };
+    layout = { fs, length: total, hole, zone };
     render();
     return true;
   };
@@ -302,6 +334,10 @@ export function createYearStream(canvas, svg, { frozen = false } = {}) {
       gl.activeTexture(gl.TEXTURE0);
       gl.bindTexture(gl.TEXTURE_2D, light);
       gl.uniform1i(resolve.uniforms.uLight, 0);
+      gl.uniform1f(resolve.uniforms.uQuake, shape.quake);
+      gl.uniform1f(resolve.uniforms.uSeed, Math.floor(now / 70) % 97);
+      gl.uniform1f(resolve.uniforms.uFs, layout.fs);
+      gl.uniform2f(resolve.uniforms.uZone, ...layout.zone);
       gl.bindVertexArray(resolveArray);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
     }
@@ -313,6 +349,12 @@ export function createYearStream(canvas, svg, { frozen = false } = {}) {
   return {
     resize,
     render: () => render(),
+    // mix: 0 = the digit's own spine, 1 = its alternate; quake: the wave's strength.
+    shape(mix, quake) {
+      const rebuild = mix !== shape.mix;
+      Object.assign(shape, { mix, quake });
+      if (rebuild) build(); else if (!playing) render();
+    },
     play() { if (frozen || playing) return; playing = true; raf ||= requestAnimationFrame(tick); },
     pause() { playing = false; if (raf) cancelAnimationFrame(raf); raf = 0; },
     dispose() {
