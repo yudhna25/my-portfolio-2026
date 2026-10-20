@@ -53,10 +53,12 @@ export const FORMATION_GLSL = /* glsl */ `
       light += exp(-b * 3.0) * exp(-r / 55.0) * vec3(2.5, 2.25, 2.0);
     }
     // The inhale: the sky closes into a horizontal slit through the star from about
-    // 1.5s, shuts at 2.07s and stays dark until the burst opens everything again.
-    // Only the sky is hidden; the star's own light is still added on top.
+    // 1.5s, shuts at 2.07s, then breathes open again just before the burst.
+    // A wide feather keeps the slit's edge felt rather than seen; only the sky is
+    // hidden, the star's own light is still added on top.
     float slit = 88.0 * max(0.0, -7.0 * b - 1.2);
-    float dark = pre * smoothstep(slit, slit * 1.15 + 3.0, abs(d.y));
+    float reopen = 1.0 - smoothstep(0.369, 0.396, p);
+    float dark = pre * reopen * smoothstep(slit * 0.3, slit * 2.2 + 36.0, abs(d.y));
     float a = max(clamp(max(light.r, max(light.g, light.b)), 0.0, 1.0), dark);
     return vec4(light / max(a, 0.00001), a);
   }
