@@ -1212,6 +1212,202 @@
         "normalization": "same scalar for x/y; no independent stretch, mirroring or invented coordinates"
       },
       "calibrationStars": []
+    },
+    {
+      "id": "Lyr",
+      "name": "Lyra",
+      "entityId": "odyssey",
+      "assignment": "STELLAR ODYSSEY",
+      "section": "works",
+      "source": {
+        "url": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/lyra.png",
+        "revision": "daace2add6a1bf886e8ee1934f51e9c69f818d18",
+        "sha256": "53604076248c70ef79ae7e98e6661613d65d22ebdf39a423398c06d71ccb13c1",
+        "size": [
+          256,
+          256
+        ],
+        "metadataSha256": "1f2f5ffd6c9e25a7d0dcfdbf1f756e2db03dd3b8ed4ec016a2839b09f6b0fe1e",
+        "author": "Johan Meuris",
+        "authorPage": "https://johanmeuris.eu/work/stellarium-constellation-art/",
+        "originalLicense": "Free Art License (unversioned source notice)",
+        "date": "2005-10-30 (author portfolio publication date)"
+      },
+      "license": {
+        "artwork": "Free Art License 1.3",
+        "url": "https://artlibre.org/licence/lal/en/",
+        "linePattern": "CC BY-SA 4.0 — Stellarium team",
+        "catalog": "ESA 1997 / CDS VizieR terms; no blanket FAL/CC assignment"
+      },
+      "credit": "Lyra outline derivative, 2026-10-19. Original: Johan Meuris, Stellarium constellation art (2005), Free Art License; vector tracing/calibration: Tran Vu Anh Duy portfolio / Claude. Modified silhouette/ink contours, grayscale, removed shading; not a recovered vector master.",
+      "derivative": {
+        "method": "deterministic pixel-grid contour trace + Douglas-Peucker, three-star projective calibration; no AI/no raster embed/no upscale",
+        "vectorMasterVerified": false,
+        "silhouetteThreshold": 12,
+        "detailLocalContrast": 9,
+        "detailsMinArea": 8,
+        "sourceToVectorApplied": true,
+        "crop": "calibrated silhouette + three anchors, square with 3% margin per side",
+        "outerPaths": 11,
+        "detailContours": 42
+      },
+      "artwork": {
+        "assetId": "Lyr",
+        "url": "/constellations/lyra.svg",
+        "sha256": "d011ed45ef7d9d33e30c384bb087046871be5699abff06d9e521ce266d41d593",
+        "viewBox": [
+          0,
+          0,
+          256,
+          256
+        ],
+        "anchors": [
+          {
+            "hip": 92791,
+            "sourcePixel": [
+              100,
+              96
+            ],
+            "vectorPixel": [
+              108.4265988860765,
+              100.44588579510116
+            ],
+            "localPosition": [
+              -0.12892039234404257,
+              0.12497295215235958,
+              0
+            ],
+            "raDeg": 283.62620294,
+            "decDeg": 36.89860518,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 91262,
+            "sourcePixel": [
+              157,
+              38
+            ],
+            "vectorPixel": [
+              175.96390825303203,
+              62.91459747044389
+            ],
+            "localPosition": [
+              0.29312979756404917,
+              0.35951127642660335,
+              0
+            ],
+            "raDeg": 279.23410832,
+            "decDeg": 38.78299311,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 92420,
+            "sourcePixel": [
+              139,
+              162
+            ],
+            "vectorPixel": [
+              125.57458247865037,
+              169.74374811577718
+            ],
+            "localPosition": [
+              -0.02176021969837753,
+              -0.30807918194666467,
+              0
+            ],
+            "raDeg": 282.51997462,
+            "decDeg": 33.36267788,
+            "role": "line-pattern"
+          }
+        ],
+        "sourcePixelToLocal": [
+          [
+            0.005638209324255605,
+            -0.0017111982536024582,
+            -0.5281979314286529
+          ],
+          [
+            -0.0016019277711002843,
+            -0.005598147070735671,
+            0.8223277040587815
+          ],
+          [
+            -2.652276940136604e-05,
+            5.944526701934801e-06,
+            1.0
+          ]
+        ],
+        "sourcePixelToVector": [
+          [
+            0.8988145097059723,
+            -0.27306216113861775,
+            44.53341431884232
+          ],
+          [
+            0.2531491460018457,
+            0.8965425937346492,
+            -11.146206198215651
+          ],
+          [
+            -2.652276940136604e-05,
+            5.944526701934801e-06,
+            1.0
+          ]
+        ],
+        "vectorPixelToLocal": [
+          [
+            0.006249141309656486,
+            0.0,
+            -0.8064935305085781
+          ],
+          [
+            -0.0,
+            -0.006249141309656486,
+            0.752673486459563
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixConvention": "row-major 3x3, column [x,y,1], divide by third coordinate",
+        "plane": {
+          "center": [
+            -0.006603442872547938,
+            -0.047216601176467254,
+            0
+          ],
+          "width": 1.5997801752720604,
+          "height": 1.5997801752720604,
+          "localZ": -0.01
+        },
+        "opacity": {
+          "idle": [
+            0.08,
+            0.12
+          ],
+          "active": [
+            0.25,
+            0.35
+          ]
+        }
+      },
+      "projection": {
+        "type": "gnomonic",
+        "origin": {
+          "raDeg": 282.30691723862714,
+          "decDeg": 35.88303394626905
+        },
+        "fieldRadiusDeg": 8.130542073953091,
+        "uniformScale": 6.99961629270119,
+        "xDirection": "celestial west right (increasing RA left)",
+        "yDirection": "north up",
+        "z": 0,
+        "view": "sky as seen from Earth, not exterior celestial globe",
+        "normalization": "same scalar for x/y; no independent stretch, mirroring or invented coordinates"
+      },
+      "calibrationStars": []
     }
   ]
 }

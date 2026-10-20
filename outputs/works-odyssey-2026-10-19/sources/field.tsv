@@ -1,0 +1,58 @@
+#
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2026-10-19T07:18:15 [V7.6.1]
+#   In case of problem, please report to:	cds-question@unistra.fr
+#
+#
+#Coosys	J2000:	eq_FK5 J2000
+#INFO	service_protocol=ASU	  IVOID of the protocol through which the data was retrieved
+#INFO	request_date=2026-10-19T07:18:15	  Query execution date
+#INFO	request=https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=I%2F239%2Fhip_main&-c=282.6+36.0&-c.rd=8&Vmag=%3C%3D5.5&-out=HIP,RAICRS,DEICRS,Vmag&-sort=Vmag&-out.max=1000	  Full request URL
+#INFO	contact=cds-question@unistra.fr	  Email or URL to contact publisher
+#INFO	server_software=VizieR/7.6.1	  Software version
+#INFO	publisher=CDS	  Data centre that produced the VOTable
+#INFO	-c=282.600000+36.000000,rd=8.	
+#Constraint -out.max=1000
+
+#RESOURCE=yCat_1239
+#Name: I/239
+#Title: The Hipparcos and Tycho Catalogues (ESA 1997)
+#INFO	ivoid=ivo://cds.vizier/i/239	    IVOID of underlying data collection
+#INFO	data_ivoid=ivo://cds.vizier/i/239	    IVOID of underlying data collection
+#INFO	creator=ESA 1997	    First author or institution
+#INFO	cites=1997HIP...C......0E	    Article or Data origin sources
+#INFO	reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/I/239	    Dataset landing page
+#INFO	publication_date=2021-11-18	    Date of first publication in the data centre
+#INFO	rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html	    Licence URI
+#Coosys	H_1991.250:	ICRS
+#Table	I_239_hip_main:
+#Name: I/239/hip_main
+#Title: The Hipparcos Main Catalogue
+#Column	HIP	(I6)	Identifier (HIP number) (H1)	[ucd=meta.id;meta.main]
+#Column	RAICRS	(F12.8)	? alpha, degrees (ICRS, Epoch=J1991.25) (H8)	[ucd=pos.eq.ra;meta.main]
+#Column	DEICRS	(F12.8)	? delta, degrees (ICRS, Epoch=J1991.25) (H9)	[ucd=pos.eq.dec;meta.main]
+#Column	Vmag	(F5.2)	? Magnitude in Johnson V (H5)	[ucd=phot.mag;em.opt.V]
+HIP	RAICRS	DEICRS	Vmag
+ 	deg	deg	mag
+------	------------	------------	-----
+ 91262	279.23410832	+38.78299311	 0.03
+ 93194	284.73593568	+32.68955312	 3.25
+ 92420	282.51997462	+33.36267788	 3.52
+ 92791	283.62620294	+36.89860518	 4.22
+ 89826	274.96550503	+36.06444696	 4.33
+ 91971	281.19306613	+37.60505025	 4.34
+ 94713	289.09206426	+38.13372778	 4.35
+ 94481	288.43953645	+39.14596968	 4.43
+ 91926	281.09489936	+39.61259557	 4.59
+ 91919	281.08473883	+39.66997686	 4.67
+ 93279	285.00342257	+32.14549051	 4.94
+ 90191	276.05750733	+39.50724983	 5.11
+ 95556	291.53801621	+36.31786478	 5.17
+ 93017	284.25612303	+32.90162351	 5.20
+ 93917	286.85623123	+32.50166027	 5.20
+ 92405	282.47052043	+32.55108873	 5.22
+ 93903	286.82553958	+36.10016754	 5.25
+ 91235	279.15562439	+33.46903738	 5.41
+ 92831	283.71740921	+41.60272814	 5.46
+ 90923	278.20812019	+30.55418062	 5.47
+

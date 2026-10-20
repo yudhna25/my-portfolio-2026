@@ -75,7 +75,7 @@
       "education": "Orion / Scorpius / Leo share the main page renderer and artwork.",
       "experience": "Keep the black hole in the background while reading. The main page uses the DOM-guided meteor.",
       "departure": "Camera handoff from Experience to Works; the DOM-guided meteor is integrated on the main page.",
-      "works": "Three R0.2 figures: Centaurus / Gemini / Cygnus. Slow orbit with preserved orientation and stable selection controls.",
+      "works": "Four figures: Centaurus / Gemini / Cygnus / Lyra. Slow orbit with preserved orientation and stable selection controls.",
       "finale": "2.25 viewports: retract labels → orbit / curved trails → 10% compression → collision / nebula → gas infall / black hole. Every layer uses the same progress; stop or reverse at any point.",
       "contact": "Independent pose: jump directly here without passing through Works. Parked camera with a reading area on the left."
     },
