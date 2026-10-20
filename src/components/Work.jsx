@@ -6,14 +6,14 @@ import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { useScrollStore } from '@/stores/useScrollStore';
 import { PORTFOLIO_DATA } from '@/data';
 import { playRadioClick } from '@/lib/audioEngine';
-import { EDURA_ROUTE, navigateRoute } from '@/stores/useRouteStore';
+import { EDURA_ROUTE, navigateRoute, pushMainAnchor } from '@/stores/useRouteStore';
 import { ConstellationCreditButton } from '@/components/ui/ConstellationCredits';
 import { finaleState } from '@/3d/utils/finale';
-import { placeWorksPreview } from '@/3d/utils/worksOrbit';
+import { placeWorksPreview, WORKS_IDS } from '@/3d/utils/worksOrbit';
 import { revealDust, revealStarlight } from '@/lib/textReveal';
 
 const projects = PORTFOLIO_DATA.projects.map((project, index) => ({
-  ...project, id: ['edura', 'veris', 'vie'][index], key: ['eduraLms', 'verisApp', 'viePerfume'][index],
+  ...project, id: WORKS_IDS[index], key: ['eduraLms', 'verisApp', 'viePerfume', 'stellarOdyssey'][index],
 }));
 const focusRing = 'focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4';
 
@@ -50,6 +50,23 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
     }, 180);
   };
   const dismiss = () => { cancelClose(); cancelAnimationFrame(focusFrame.current); root.current.focus({ preventScroll: true }); clear(); };
+  // Stellar Odyssey is this very site: its only action sends the visitor back to first light.
+  const voyageAgain = event => {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    playRadioClick();
+    cancelClose(); clear();
+    useScrollStore.getState().setStoryManual(false);
+    pushMainAnchor('hero');
+    const smoother = ScrollSmoother.get();
+    if (smoother) smoother.scrollTop(0); else window.scrollTo(0, 0);
+    if (event.detail === 0) document.getElementById('smooth-content')?.focus({ preventScroll: true });
+  };
+  const action = (item, open) => item.id === 'edura' ? null : item.id === 'odyssey'
+    ? <a href="/#hero" data-work-action onClick={voyageAgain}
+      className={`inline-flex min-h-11 min-w-11 items-center font-mono ${open ? 'text-[11px]' : 'text-[10px]'} text-(--color-amber,#FFB45A) underline underline-offset-4 ${focusRing}`}>
+      <span aria-hidden="true" className="mr-2">↺</span>{t('works.voyageAgain')}</a>
+    : <p className={open ? 'min-h-11 py-3 font-mono text-[10px] text-white/55' : 'mt-4 font-mono text-[10px] leading-relaxed text-white/55 sm:text-xs'}>{t('works.comingSoon')}</p>;
   const focusProject = (event, id) => {
     cancelClose();
     if (['touch', 'pen'].includes(pointer.current) || !event.target.matches(':focus-visible')) return;
@@ -206,7 +223,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
               <a href={project.link} data-work-behance onClick={playRadioClick} target="_blank" rel="noopener noreferrer"
                 aria-label={`${t('works.behanceReference')} (${t('common.opensInNewTab')})`}
                 className={`inline-flex min-h-11 min-w-11 items-center font-mono text-[10px] text-white/70 underline decoration-white/25 underline-offset-4 ${focusRing}`}>{t('works.behanceReference')} <span aria-hidden="true" className="ml-2">↗</span></a>
-            </> : <p className="min-h-11 py-3 font-mono text-[10px] text-white/55">{t('works.comingSoon')}</p>}
+            </> : action(project, true)}
           </div>
           <button type="button" data-work-close onClick={dismiss}
             className={`mt-2 inline-flex min-h-11 min-w-11 items-center font-mono text-[11px] text-white/80 hover:text-white ${focusRing}`}>
@@ -228,7 +245,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
               <a href={project.link} data-work-behance onClick={playRadioClick} target="_blank" rel="noopener noreferrer"
                 aria-label={`${t('works.behanceReference')} (${t('common.opensInNewTab')})`}
                 className={`inline-flex min-h-11 min-w-11 items-center font-mono text-[10px] text-white/70 underline decoration-white/25 underline-offset-4 ${focusRing}`}>{t('works.behanceReference')} <span aria-hidden="true" className="ml-2">↗</span></a>
-            </div> : <p className="mt-4 font-mono text-[10px] leading-relaxed text-white/55 sm:text-xs">{t('works.comingSoon')}</p>}
+            </div> : action(project, false)}
           </div>
         </div> : null}
       </div>;
@@ -244,7 +261,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
         <h2 id="works-heading" className="font-display text-[clamp(1rem,2.6vw,2.5rem)] leading-[1.3] font-bold tracking-[-0.04em]">{t('works.heading')}</h2>
         <p id="works-hint" className="pointer-events-none mx-auto mt-3 max-w-sm font-body text-xs leading-relaxed text-white/60">{t('works.interactionHint')}</p>
         </div>
-        <div role="group" aria-label={t('works.selectLabel')} className={fallback ? 'mt-6 grid grid-cols-3 gap-3 sm:gap-8' : ''}>
+        <div role="group" aria-label={t('works.selectLabel')} className={fallback ? 'mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-8' : ''}>
           {projects.map(item => <div key={item.id}><button id={`work-target-${item.id}`} type="button" data-work-target={item.id}
             aria-label={`${t(`works.projects.${item.key}.title`)} · ${t(`works.constellations.${item.id}`)}`}
             aria-pressed={selection === item.id} aria-expanded={target === item.id} aria-controls="work-preview" aria-describedby="works-hint"

@@ -75,7 +75,7 @@
       "education": "Bản đồ Orion / Scorpius / Leo dùng cùng renderer và artwork với trang chính.",
       "experience": "Giữ hố đen trong nền khi đọc kinh nghiệm. Trang chính dùng sao băng theo mốc DOM.",
       "departure": "Pose camera nối Experience với Works; meteor theo DOM được tích hợp trên trang chính.",
-      "works": "Ba hình sao R0.2 cùng hiện: Centaurus / Gemini / Cygnus. Quỹ đạo chậm, hướng đọc giữ nguyên; điều khiển chọn đứng yên.",
+      "works": "Bốn hình sao cùng hiện: Centaurus / Gemini / Cygnus / Lyra. Quỹ đạo chậm, hướng đọc giữ nguyên; điều khiển chọn đứng yên.",
       "finale": "2,25 viewport: rút nhãn → co quỹ đạo / vệt cong → nén 10% → va chạm / tinh vân → khí về tâm / hố đen. Mọi lớp suy từ cùng progress; có thể dừng hoặc đảo tại bất kỳ mốc nào.",
       "contact": "Pose độc lập: có thể jump thẳng tới đây mà không qua Works. Camera nghỉ với vùng đọc trái."
     },

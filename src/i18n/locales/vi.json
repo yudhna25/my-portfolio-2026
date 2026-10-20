@@ -79,6 +79,17 @@
         ],
         "caseStudyLabel": "Case study coming soon",
         "previewAlt": "Ảnh nhận diện thương hiệu nước hoa VIE"
+      },
+      "stellarOdyssey": {
+        "title": "STELLAR ODYSSEY",
+        "category": "Creative Development",
+        "description": "Chính trang web bạn đang du hành: một portfolio kể chuyện bằng lực hấp dẫn qua 10 chương liền mạch, nơi hố đen, sao chổi và những tinh vân sống dẫn lối. React 19, Three.js với hàng chục shader GLSL viết tay, GSAP ScrollSmoother, song ngữ Việt–Anh.",
+        "tags": [
+          "Creative Development",
+          "WebGL / GLSL",
+          "Motion Design"
+        ],
+        "previewAlt": "Màn mở đầu của Stellar Odyssey: chữ PORTFOLIO với hố đen nằm trong chữ O cuối cùng"
       }
     },
     "tagsLabel": "Chuyên môn",
@@ -88,15 +99,18 @@
     "behanceReference": "Tham khảo trên Behance",
     "comingSoon": "Case study sắp ra mắt",
     "backToOrbit": "Trở về bầu trời",
+    "voyageAgain": "Trở về ánh sáng đầu tiên",
     "constellations": {
       "edura": "Centaurus",
       "veris": "Gemini",
-      "vie": "Cygnus"
+      "vie": "Cygnus",
+      "odyssey": "Lyra"
     },
     "myths": {
       "edura": "Chiron, người thầy của các anh hùng",
       "veris": "Castor và Pollux, hai linh hồn không rời",
-      "vie": "Thiên nga bay dọc dải Ngân Hà"
+      "vie": "Thiên nga bay dọc dải Ngân Hà",
+      "odyssey": "Cây đàn của Orpheus, người xuống tận cõi tối rồi tìm được đường về"
     },
     "phenomena": {
       "edura": {
@@ -110,6 +124,10 @@
       "vie": {
         "name": "Albireo",
         "line": "Một ngôi sao vàng và một ngôi sao lam tựa vào nhau nơi mỏ thiên nga; đến nay vẫn chưa ai chắc chúng có thật sự thuộc về nhau."
+      },
+      "odyssey": {
+        "name": "Tinh vân Chiếc Nhẫn",
+        "line": "Trong hộp đàn, một ngôi sao đang tàn thở ra vòng ánh sáng cuối cùng: chính chữ O mà hành trình này đã mở ra từ đầu."
       }
     }
   },
@@ -276,6 +294,12 @@
     "buildCredit": "Xây dựng với GSAP {{version}}",
     "websiteLabel": "Trang web",
     "websiteUrl": ""
+  },
+  "gate": {
+    "label": "Chọn ngôn ngữ",
+    "prompt": "Chọn ngôn ngữ cho chuyến du hành",
+    "option": "Tiếng Việt",
+    "depart": "Khởi hành"
   },
   "preloader": {
     "counterLabel": "ĐANG KẾT NỐI VỚI VŨ TRỤ...",

@@ -7,8 +7,7 @@ import { useScrollStore } from '@/stores/useScrollStore';
 import { OPENING_SECONDS, openingPose } from '@/3d/utils/opening';
 import '@/styles/opening.css';
 
-let openingSeen = false;
-export function Preloader({ onComplete, opening }) {
+export function Preloader({ onComplete, opening, covered = false }) {
   const root = useRef(null), veil = useRef(null);
   const done = useRef(onComplete), completed = useRef(false), started = useRef(null);
   const local = useRef({ active: false, reveal: 0 });
@@ -25,7 +24,7 @@ export function Preloader({ onComplete, opening }) {
       if (!active || completed.current) return;
       presentation.current.active = false;
       presentation.current.reveal = 1;
-      completed.current = true; openingSeen = true;
+      completed.current = true;
       done.current?.();
     };
     if (reduced || fallback) { complete(); return; }
@@ -38,7 +37,8 @@ export function Preloader({ onComplete, opening }) {
       const width = window.innerWidth, height = window.innerHeight;
       const pose = openingPose(model.p, anchor, width, height, presentation.current);
       pose.active = true;
-      veil.current.style.opacity = String(1 - Math.min(1, model.p / 0.04));
+      // The language gate already covers the first frame and hands its star to the O.
+      veil.current.style.opacity = covered ? '0' : String(1 - Math.min(1, model.p / 0.04));
       root.current.dataset.openingProgress = String(model.p);
     };
     const begin = contextSafe(() => {
@@ -46,9 +46,8 @@ export function Preloader({ onComplete, opening }) {
       const ready = document.fonts.status === 'loaded' && (useScrollStore.getState().sceneFallback
         || document.querySelector('[data-galaxy-scene]')?.dataset.sceneReady === 'true');
       if ((!ready && !forced) || !measure()?.height) return;
-      const reload = performance.getEntriesByType('navigation')[0]?.type === 'reload';
-      const warm = (openingSeen || reload) && performance.now() - started.current < 1800 && !forced;
-      const duration = warm ? 2 : OPENING_SECONDS;
+      // Every load, a reload included, plays the full First Light at the same pace.
+      const duration = OPENING_SECONDS;
       root.current.dataset.openingDuration = String(duration);
       root.current.dataset.openingReady = forced ? 'watchdog' : 'scene-font';
       timeline = gsap.timeline({ id: 'preloader-intro', onComplete: complete })
@@ -73,7 +72,7 @@ export function Preloader({ onComplete, opening }) {
   if (reduced || fallback) return null;
   return <div ref={root} role="status" aria-label={t('preloader.counterLabel')} aria-live="polite" tabIndex={-1}
     className="stellar-opening fixed inset-0 z-[9999] overflow-hidden" data-preloader>
-    <div ref={veil} className="absolute inset-0 bg-(--bg-void)" data-opening-veil />
+    <div ref={veil} className={`absolute inset-0 bg-(--bg-void) ${covered ? 'opacity-0' : ''}`} data-opening-veil />
   </div>;
 }
 

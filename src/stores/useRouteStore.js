@@ -3,6 +3,7 @@ import { ScrollSmoother } from '@/hooks/useGSAPSetup';
 import { useScrollStore } from '@/stores/useScrollStore';
 import { useLoadingStore } from '@/stores/useLoadingStore';
 import { storyCameraPath } from '@/3d/utils/cameraPath';
+import { WORKS_IDS } from '@/3d/utils/worksOrbit';
 
 export const EDURA_ROUTE = '/projects/edura';
 const chapters = { hero: 'hero', about: 'about', skills: 'skills', education: 'education', experience: 'experience', work: 'works', transmission: 'contact' };
@@ -15,7 +16,7 @@ export function readMainSnapshot(value) {
     || !value.orbit || !['phase', 'origin', 'velocity', 'captures'].every(key => finite(value.orbit[key]))
     || !['latched', 'visited', 'resumePending'].every(key => typeof value.orbit[key] === 'boolean')
     || !Array.isArray(value.pose) || value.pose.length !== 6 || !value.pose.every(finite)
-    || value.selection !== null && !['edura', 'veris', 'vie'].includes(value.selection)) return null;
+    || value.selection !== null && !WORKS_IDS.includes(value.selection)) return null;
   return value;
 }
 

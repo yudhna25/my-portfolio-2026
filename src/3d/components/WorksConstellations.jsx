@@ -56,7 +56,7 @@ const STREAM_SAMPLES = 24;
 const STREAM_LAG = 0.07;
 const STREAM_VERT = /* glsl */ `
   #define SAMPLES ${STREAM_SAMPLES}
-  uniform vec4 uHistory[SAMPLES * 3];
+  uniform vec4 uHistory[SAMPLES * ${WORKS_IDS.length}];
   uniform float uOpacity, uPixelRatio;
   attribute vec4 aSeed;
   attribute float aSpread;
@@ -77,7 +77,7 @@ const STREAM_VERT = /* glsl */ `
   }
 `;
 // Each figure hides a real phenomenon the project is made of (see worksPhenomena.js).
-const IMAGE_ASPECTS = [1600 / 1131, 16 / 9, 16 / 9];
+const IMAGE_ASPECTS = [1600 / 1131, 16 / 9, 16 / 9, 16 / 9];
 const OPEN_Z = 2;
 const FIGURE_SCALE = 0.9;
 const ART_PIXELS = 1536;
@@ -143,12 +143,14 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
     const rect = new Vector4(plane.center[0], plane.center[1], plane.width, plane.width / aspect);
     const bright = item.geometry.stars.reduce((a, b) => (b.vmag < a.vmag ? b : a));
     const toUv = (x, y, w, h, cx, cy) => new Vector2((x - cx) / w + 0.5, (y - cy) / h + 0.5);
+    // Where the hidden phenomenon really sits in the figure, in picture uv (centre if unrecorded).
+    const source = item.phenomenon ? toUv(...item.phenomenon.localPosition, rect.z, rect.w, rect.x, rect.y) : new Vector2(0.5, 0.5);
     return { points, lines, bounds, corners, projected: new Vector3(), rect, plane,
       artUniforms: { uMap: { value: null }, uField: field.uniform, uViewport: { value: new Vector2(1, 1) },
         uOrigin: { value: toUv(...bright.position.slice(0, 2), plane.width, plane.height, plane.center[0], plane.center[1]) },
         uReveal: { value: 0 }, uDissolve: { value: 0 }, uTime: { value: 0 }, uOpacity: { value: 0 }, uIdle: { value: 0.1 } },
       phenomenonUniforms: { uMap: { value: null }, uField: field.uniform, uPulse: field.pulse, uViewport: { value: new Vector2(1, 1) }, uAspect: { value: aspect },
-        uKind: { value: index }, uPad: { value: PHENOMENON_PAD }, uGrain: { value: 90 }, uDraw: { value: 0 }, uOpen: { value: 0 }, uTime: { value: 0 }, uOpacity: { value: 0 } },
+        uKind: { value: index }, uSource: { value: source }, uPad: { value: PHENOMENON_PAD }, uGrain: { value: 90 }, uDraw: { value: 0 }, uOpen: { value: 0 }, uTime: { value: 0 }, uOpacity: { value: 0 } },
       uniforms: { uPixelRatio: { value: 1 }, uStrength: { value: 1 }, uActive: { value: 0 } } };
   }), [field]);
   const trails = useMemo(() => {
@@ -167,7 +169,7 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
     const positions = new Float32Array(count * 3), seeds = new Float32Array(count * 4), spreads = new Float32Array(count);
     const random = index => { const value = Math.sin((index + 1) * 78.233 + 20261017) * 43758.5453; return value - Math.floor(value); };
     for (let i = 0; i < count; i++) {
-      const figure = i % 3, item = data.constellations[figure], stars = item.geometry.stars;
+      const figure = i % WORKS_IDS.length, item = data.constellations[figure], stars = item.geometry.stars;
       const star = stars[Math.floor(random(i * 5) * stars.length)].position;
       positions.set(star, i * 3);
       // Bias toward the head so the stream reads as bright near each figure.
@@ -179,7 +181,7 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
     geometry.setAttribute('position', new BufferAttribute(positions, 3));
     geometry.setAttribute('aSeed', new BufferAttribute(seeds, 4));
     geometry.setAttribute('aSpread', new BufferAttribute(spreads, 1));
-    return { geometry, uniforms: { uHistory: { value: Array.from({ length: STREAM_SAMPLES * 3 }, () => new Vector4()) },
+    return { geometry, uniforms: { uHistory: { value: Array.from({ length: STREAM_SAMPLES * WORKS_IDS.length }, () => new Vector4()) },
       uOpacity: { value: 0 }, uPixelRatio: { value: 1 } } };
   }, [quality]);
   const basis = useMemo(() => {
@@ -206,8 +208,7 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
     });
     return { center, rotation, hole, units, scale: figureScale, drift: stage.drift * units, depth: distance * 0.08, open,
       orbit: { x: (stage.orbit.x - size.width / 2) * units, y: (size.height / 2 - stage.orbit.y) * units, rx: stage.orbit.rx * units, ry: stage.orbit.ry * units },
-      offsets: figures.map(({ bounds }) => [-(bounds.left + bounds.right) * figureScale / 2, -(bounds.top + bounds.bottom) * figureScale / 2]),
-      centers: stage.centers.map(([x, y]) => [(x - size.width / 2) * units, (size.height / 2 - y) * units]) };
+      offsets: figures.map(({ bounds }) => [-(bounds.left + bounds.right) * figureScale / 2, -(bounds.top + bounds.bottom) * figureScale / 2]) };
   }, [size.width, size.height, figures]);
   useEffect(() => () => figures.forEach(figure => { figure.points.dispose(); figure.lines.dispose(); }), [figures]);
   useEffect(() => {
@@ -319,7 +320,7 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
       const values = streamMesh.current.material.uniforms;
       values.uOpacity.value = authored.streams;
       values.uPixelRatio.value = gl.getPixelRatio();
-      for (let f = 0; f < 3; f++) for (let k = 0; k < STREAM_SAMPLES; k++) {
+      for (let f = 0; f < WORKS_IDS.length; f++) for (let k = 0; k < STREAM_SAMPLES; k++) {
         const pose = worksFigure(Math.max(0, p - k / (STREAM_SAMPLES - 1) * STREAM_LAG), phase, f, basis, sampled.current);
         values.uHistory.value[f * STREAM_SAMPLES + k].set(pose.x, pose.y, pose.z, pose.scale);
       }
