@@ -20,7 +20,7 @@ const RIBBON_FRAG = `#version 300 es
 precision highp float;
 in vec3 vStream;
 out vec4 o;
-uniform float uTime, uFs, uLength, uDirect;
+uniform float uTime, uFs, uLength, uDirect, uDrain;
 // The hole's shadow (canvas px, GL origin) hides the stream where it falls behind it.
 uniform vec3 uHole;
 float hash(vec2 p) { p = fract(p * vec2(123.34, 456.21)); p += dot(p, p + 45.32); return fract(p.x * p.y); }
@@ -44,6 +44,9 @@ void main() {
   float light = (body * (0.3 + 0.7 * clump) * flow * 0.85 + spine * 0.8) * weight * (1.0 + heat * 0.6);
   float glow = exp(-d / (fs * 0.4)) * 0.07 * weight * (1.0 - smoothstep(fs * 0.16, fs * 0.32, d));
   vec3 rgb = tint * (light + glow);
+  // Swallowed: the stream lets go from its first stroke and runs down its own path into the hole.
+  float gone = uDrain * 1.15;
+  rgb *= smoothstep(gone - 0.12, gone, along) * (1.0 + uDrain * heat);
   rgb *= smoothstep(0.0, 0.04, along) * smoothstep(uHole.z * 0.95, uHole.z * 1.15, length(gl_FragCoord.xy - uHole.xy));
   // Without a float target each strand is tone mapped on its own and added on the canvas.
   if (uDirect > 0.5) { rgb = tonemap(rgb); o = vec4(rgb, max(rgb.r, max(rgb.g, rgb.b))); }
@@ -140,7 +143,7 @@ export function createYearStream(canvas, svg, { frozen = false } = {}) {
   let vertexCount = 0;
 
   let layout = null, raf = 0, playing = false, lost = false;
-  const shape = { mix: 0, quake: 0 };
+  const shape = { mix: 0, quake: 0, drain: 0 };
   const start = performance.now();
   const onLost = event => { event.preventDefault(); lost = true; canvas.dataset.ready = 'false'; canvas.dispatchEvent(new Event('streamlost')); };
   canvas.addEventListener('webglcontextlost', onLost);
@@ -319,7 +322,8 @@ export function createYearStream(canvas, svg, { frozen = false } = {}) {
     gl.blendFunc(gl.ONE, gl.ONE);
     gl.useProgram(ribbon.program);
     gl.uniform2f(ribbon.uniforms.uRes, canvas.width, canvas.height);
-    gl.uniform1f(ribbon.uniforms.uTime, frozen ? 6.5 : (now - start) / 1000);
+    gl.uniform1f(ribbon.uniforms.uTime, (frozen ? 6.5 : (now - start) / 1000) + shape.drain * 5);
+    gl.uniform1f(ribbon.uniforms.uDrain, shape.drain);
     gl.uniform1f(ribbon.uniforms.uFs, layout.fs);
     gl.uniform1f(ribbon.uniforms.uLength, layout.length);
     gl.uniform1f(ribbon.uniforms.uDirect, direct ? 1 : 0);
@@ -350,6 +354,12 @@ export function createYearStream(canvas, svg, { frozen = false } = {}) {
     resize,
     render: () => render(),
     // mix: 0 = the digit's own spine, 1 = its alternate; quake: the wave's strength.
+    // 0 = idle, 1 = the whole stream has fallen into the hole.
+    drain(amount) {
+      if (amount === shape.drain) return;
+      shape.drain = amount;
+      if (!playing) render();
+    },
     shape(mix, quake) {
       const rebuild = mix !== shape.mix;
       Object.assign(shape, { mix, quake });

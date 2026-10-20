@@ -4,7 +4,7 @@ import { gsap, useGSAPSetup } from '@/hooks/useGSAPSetup';
 import { useScrollStore } from '@/stores/useScrollStore';
 import { useLoadingStore } from '@/stores/useLoadingStore';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
-import { portalProgress, portalState } from '@/3d/utils/portal';
+import { portalProgress, portalSmooth, portalState } from '@/3d/utils/portal';
 import { createPortalTrails } from '@/components/effects/portalTrails';
 import { createYearStream } from '@/components/effects/yearStream';
 import '@/styles/hero.css';
@@ -45,10 +45,11 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
     const dropStream = () => { stream?.dispose(); stream = null; delete yearLayer.dataset.yearGl; };
     streamCanvas.addEventListener('streamlost', dropStream);
     if (stream) yearLayer.dataset.yearGl = 'true';
-    // The trails carry the digits into the portal; the live stream hands over to them.
+    // The live stream drains into the hole as YearDust rises from its light; without it the
+    // trails carry the SVG digits in instead.
     const streamOpacity = gsap.quickSetter(streamCanvas, 'opacity');
     const sources = [
-      ...stage.querySelectorAll('[data-portal-year-glyph]'), ...chars.slice(0, -1),
+      ...(stream ? [] : stage.querySelectorAll('[data-portal-year-glyph]')), ...chars.slice(0, -1),
       ...stage.querySelectorAll('[data-hero-decode], [data-hero-role], [data-hero-layer="intro"], [data-hero-layer="indicator"]'),
     ];
     const trails = !frozen ? createPortalTrails(sources.map(node => ({ node,
@@ -61,7 +62,8 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
       draw();
     };
     // A gravitational wave rolls through the last digit and the stream re-forms as the next
-    // year (6 → 7), then back. Without WebGL the spine simply swaps under the same timing.
+    // year (6 → 7), then back: 2026 holds for 6 s, 2027 for 7 s. Without WebGL the spine
+    // simply swaps under the same timing.
     const alt = yearLayer.querySelector('[data-year-alt]');
     const own = alt?.parentNode.querySelector('.hero-year-stream');
     const wave = { mix: 0, quake: 0 };
@@ -75,21 +77,27 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
       stream?.shape(0, wave.quake);
     };
     const shapeStream = () => stream?.shape(wave.mix, wave.quake);
-    const flash = alt && !frozen ? gsap.timeline({ id: 'hero-year-glitch', paused: true, repeat: -1 }) : null;
+    const [toNext, toOwn] = [5, 12];
+    const flash = alt && !frozen ? gsap.timeline({ id: 'hero-year-glitch', paused: true, repeat: -1, delay: 0.5 }) : null;
     if (flash) {
-      for (const start of [11, 17.8]) {
+      for (const start of [toNext, toOwn]) {
         flash.fromTo(wave, { quake: 0 }, { quake: 1, duration: 0.16, ease: 'power2.in', onUpdate: shapeStream }, start)
           .fromTo(wave, { mix: 0 }, { mix: 1, duration: 0.42, ease: 'power3.inOut', onUpdate: shapeStream }, start + 0.08)
           .call(slip, [], start + 0.5)
           .to(wave, { quake: 0, duration: 0.6, ease: 'expo.out', onUpdate: shapeStream }, start + 0.42);
       }
-      flash.to({}, { duration: 0.6 });
+      flash.set({}, {}, toOwn + 1.1);
     }
+    // Scrolling away keeps whichever year is showing: a morph past halfway completes, an
+    // earlier one falls back, and the wave calms at once so the stream drains cleanly.
     const settle = () => {
-      flash?.pause(0);
+      flash?.pause();
+      const complete = wave.mix >= 0.5;
       Object.assign(wave, { mix: 0, quake: 0 });
-      if (slipped) slip(); else shapeStream();
+      if (complete) slip(); else shapeStream();
     };
+    // Back at rest the cycle resumes from the year on screen.
+    const resume = () => flash && (slipped ? flash.play(toNext + 1.1) : flash.restart(true));
     const nameNode = stage.querySelector('[data-hero-name]');
     const decoded = stage.querySelector('[data-hero-decode]');
     const decode = !frozen ? gsap.timeline({ id: 'hero-name-decode', paused: true }).to(decoded, {
@@ -102,7 +110,8 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
       const p = portalProgress(state.storyChapter, state.chapterProgress, frozen);
       portalState(p, phase);
       opacity(visible && p < 0.44 ? opening?.current.active ? opening.current.reveal : 1 : 0);
-      streamOpacity(Math.max(0, 1 - p / 0.04));
+      stream?.drain(portalSmooth(0, 0.07, p));
+      streamOpacity(1 - portalSmooth(0.025, 0.075, p));
       if (p > 0 && running) { decode?.pause(0); decoded.textContent = name; }
       trails?.draw(p, state.storyAnchor, visible);
       const hidden = !visible || phase.textOpacity === 0;
@@ -117,10 +126,11 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
       if (idle) {
         stream?.play();
         decode?.restart();
-        flash?.restart();
+        resume();
       } else {
         settle();
         stream?.pause();
+        stream?.render();
         decode?.pause(0);
         decoded.textContent = name;
         if (document.activeElement === nameNode) nameNode.blur();
@@ -148,8 +158,8 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
       document.fonts?.removeEventListener('loadingdone', measure);
       nameNode.removeEventListener('pointerenter', replay);
       nameNode.removeEventListener('focus', replay);
-      settle();
       flash?.kill();
+      if (slipped) slip();
       streamCanvas.removeEventListener('streamlost', dropStream);
       dropStream();
       decoded.textContent = name;
