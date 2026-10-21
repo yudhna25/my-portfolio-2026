@@ -17,7 +17,7 @@ export default function Skills({ stageRef }) {
   const reduced = useReducedMotion();
   const { t, i18n } = useTranslation();
   const target = useSkillsStore(activeSkill);
-  const { interact, clear, setVisible } = useSkillsStore.getState();
+  const { interact, clear, setVisible, setRoute } = useSkillsStore.getState();
   const active = useScrollStore((state) => state.storyChapter === 'skills');
   const fallback = useScrollStore((state) => state.sceneFallback);
   const tool = skillTools.find((item) => item.id === target);
@@ -62,6 +62,16 @@ export default function Skills({ stageRef }) {
         rect.setAttribute('width', label.width + 8);
         rect.setAttribute('height', label.height + 4);
       });
+      // The 3D light band reads the same endpoints in stage units (0.4 of the stage's short side, y up).
+      const unit = Math.min(stage.width, stage.height) * 0.4 || 1;
+      const local = (px, py) => [(px - stage.left - stage.width / 2) / unit, (stage.top + stage.height / 2 - py) / unit];
+      // Stacked on phones, the columns sit below the stage: the band rises from the stage edge and stays off the labels.
+      const sideBySide = window.matchMedia('(min-width: 768px)').matches;
+      setRoute({ tool: tool.id, from: sideBySide ? local(start.right, start.top + start.height / 2) : local(stage.left, stage.top + stage.height * 0.35),
+        to: !sideBySide ? [] : tool.competencies.map((id) => {
+          const end = area.querySelector('[data-skill-ability="' + id + '"]').getBoundingClientRect();
+          return local(end.left, end.top + end.height / 2);
+        }) });
       paths.forEach((path) => {
         const end = area.querySelector('[data-skill-ability="' + path.dataset.skillConnection + '"]').getBoundingClientRect();
         const ex = end.left - box.left, ey = end.top + end.height / 2 - box.top;
@@ -73,7 +83,7 @@ export default function Skills({ stageRef }) {
     observer.observe(area);
     observer.observe(anchor.current);
     ScrollTrigger.addEventListener('refresh', measure);
-    const tween = reduced ? null : gsap.fromTo(paths, { opacity: 0 }, {
+    const tween = reduced || !paths.length ? null : gsap.fromTo(paths, { opacity: 0 }, {
       opacity: 0.55, duration: 0.35, delay: 0.12, stagger: 0.05, ease: 'power3.out',
     });
     if (reduced) gsap.set(paths, { opacity: 0.55 });
@@ -84,8 +94,9 @@ export default function Skills({ stageRef }) {
       observer.disconnect();
       ScrollTrigger.removeEventListener('refresh', measure);
       document.removeEventListener('visibilitychange', visibility);
+      setRoute(null);
     };
-  }, { scope: root, dependencies: [target, reduced, i18n.resolvedLanguage], revertOnUpdate: true });
+  }, { scope: root, dependencies: [target, reduced, fallback, i18n.resolvedLanguage], revertOnUpdate: true });
 
   return (
     <section ref={root} id="skills" lang={i18n.resolvedLanguage} data-theme="dark" aria-labelledby="skills-heading"
@@ -155,7 +166,8 @@ export default function Skills({ stageRef }) {
               {skillTools.map(({ id }) => <rect key={id} data-skill-mask={'[data-skill-tool="' + id + '"] > span:last-child'} fill="black" stroke="none" />)}
               {appliedSkills.map((id) => <rect key={id} data-skill-mask={'[data-skill-ability="' + id + '"] > span:last-child'} fill="black" stroke="none" />)}
             </mask></defs>
-            {tool?.competencies.map((id) => <path key={id} data-skill-connection={id} mask="url(#skills-connection-mask)" opacity="0" vectorEffect="non-scaling-stroke" />)}
+            {/* With the 3D scene, the light band in SymbolStars carries these links instead. */}
+            {fallback && tool?.competencies.map((id) => <path key={id} data-skill-connection={id} mask="url(#skills-connection-mask)" opacity="0" vectorEffect="non-scaling-stroke" />)}
           </svg>
         </div>
         <div className="mt-12 grid gap-8 border-t border-white/10 pt-8 md:grid-cols-[2fr_1fr] lg:mt-16">
