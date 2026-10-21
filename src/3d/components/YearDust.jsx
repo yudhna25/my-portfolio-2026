@@ -4,14 +4,16 @@ import { AdditiveBlending, BufferAttribute, BufferGeometry, Vector2 } from 'thre
 import { portalProgress, portalState } from '@/3d/utils/portal';
 import { useScrollStore } from '@/stores/useScrollStore';
 
-// The Hero year as stardust: sampled from the digits (star-filled interiors and their
-// contours) as the portal opens, then spiralled into the hole with the DOM portal
+// The Hero year as stardust: sampled from the live light stream exactly as it stands (2026
+// or 2027, with its own colours), or without WebGL from the digits' star-filled interiors and
+// contours, as the portal opens, then spiralled into the hole with the DOM portal
 // particles' seeded law, so scrolling back reassembles it exactly. Screen-space, CSS px.
 const PARTICLE = /* glsl */ `
   uniform float uP, uPixelRatio, uCore;
   uniform vec2 uCenter, uViewport;
   attribute vec2 aStart;
   attribute vec3 aSeed;
+  attribute float aHeat;
   attribute float aTail;
   varying vec3 vColor;
   varying float vAlpha;
@@ -41,7 +43,8 @@ const PARTICLE = /* glsl */ `
     // Swallowed at the horizon of the growing shadow.
     float horizon = smoothstep(uCore * 0.95, uCore * 1.25, length(head - uCenter));
     float heat = t * t;
-    vColor = mix(vec3(0.82, 0.88, 1.0), mix(vec3(1.0, 0.86, 0.66), vec3(1.0, 0.62, 0.32), smoothstep(0.55, 1.0, t)), smoothstep(0.15, 0.7, t))
+    vec3 cold = mix(vec3(0.82, 0.88, 1.0), vec3(1.0, 0.74, 0.44), aHeat);
+    vColor = mix(cold, mix(vec3(1.0, 0.86, 0.66), vec3(1.0, 0.62, 0.32), smoothstep(0.55, 1.0, t)), smoothstep(0.15, 0.7, t))
       * (aSeed.y * (1.0 + 2.2 * heat));
     vAlpha = smooth01(0.0, 0.05, uP) * (1.0 - smooth01(0.34, 0.435, uP)) * horizon * (1.0 - 0.4 * t) * (aTail > 0.5 ? 0.0 : 1.0);
   }
@@ -70,11 +73,14 @@ const MASK = 160, OUTLINE = 480;
 // year is not laid out). Glyphs are interleaved, so any prefix of the buffer covers all
 // four digits evenly; each is rasterized once into a coarse mask and flattened into a
 // polyline, so rejection sampling stays cheap on the first portal frame.
-function sampleYear(starts, seeds, count) {
+function sampleYear(starts, seeds, heats, count) {
+  const stream = document.querySelector('[data-hero-year][data-year-gl="true"] [data-year-stream][data-ready="true"]');
+  if (stream) return sampleStream(stream, starts, seeds, heats, count);
+  heats.fill(0);
   const canvas = document.createElement('canvas');
   canvas.width = canvas.height = MASK;
   const context = canvas.getContext('2d', { willReadFrequently: true });
-  const glyphs = [...document.querySelectorAll('[data-hero-year] svg:not([data-year-contours]) [data-portal-year-glyph]')].flatMap(glyph => {
+  const glyphs = [...document.querySelectorAll('[data-hero-year] svg [data-portal-year-glyph]')].flatMap(glyph => {
     const node = glyph.querySelector('.hero-year-base'), matrix = node?.getScreenCTM();
     if (!matrix || !context) return [];
     const box = node.getBBox(), length = node.getTotalLength();
@@ -118,6 +124,40 @@ function sampleYear(starts, seeds, count) {
   return 0;
 }
 
+// The stream's own pixels: dust lands where its light is, as bright as the light and as warm.
+function sampleStream(stream, starts, seeds, heats, count) {
+  const rect = stream.getBoundingClientRect();
+  if (!rect.width || !rect.height) return 0;
+  const scale = Math.min(1, 480 / stream.width), width = Math.max(1, Math.round(stream.width * scale)), height = Math.max(1, Math.round(stream.height * scale));
+  const canvas = document.createElement('canvas');
+  canvas.width = width; canvas.height = height;
+  const context = canvas.getContext('2d', { willReadFrequently: true });
+  if (!context) return 0;
+  context.drawImage(stream, 0, 0, width, height);
+  const pixels = context.getImageData(0, 0, width, height).data;
+  let lit = 0;
+  for (let i = 3; i < pixels.length; i += 4) lit += pixels[i] / 255;
+  if (lit < 1) return 0;
+  // About one grain per 2.5 px² of light: the band is thin, so it needs denser dust than a fill.
+  const total = Math.min(count, Math.max(2000, Math.round(lit * (rect.width / width) * (rect.height / height) / 2.5)));
+  let index = 0;
+  for (let tries = 0; index < total && tries < total * 40; tries++) {
+    const n = index * 7.31 + tries * 0.137;
+    const u = hash(n + 1.1), v = hash(n + 2.2), at = (Math.floor(v * height) * width + Math.floor(u * width)) * 4;
+    const alpha = pixels[at + 3] / 255;
+    if (alpha < 0.08 || hash(n + 3.3) > alpha) continue;
+    starts[index * 2] = rect.left + rect.width * u;
+    starts[index * 2 + 1] = rect.top + rect.height * v;
+    seeds[index * 3] = hash(n + 7.7);
+    seeds[index * 3 + 1] = 0.25 + 0.75 * alpha * (0.6 + 0.4 * hash(n + 6.6));
+    seeds[index * 3 + 2] = hash(n + 8.8) ** 3;
+    // Amber where the stream has heated, starlight white elsewhere.
+    heats[index] = Math.min(1, Math.max(0, (pixels[at] - pixels[at + 2]) / Math.max(1, pixels[at]) * 2.2));
+    index++;
+  }
+  return index;
+}
+
 export function YearDust({ quality = 'high', reduced = false }) {
   const dots = useRef(null);
   const streaks = useRef(null);
@@ -132,11 +172,13 @@ export function YearDust({ quality = 'high', reduced = false }) {
     pointGeometry.setAttribute('position', new BufferAttribute(new Float32Array(count * 3), 3));
     pointGeometry.setAttribute('aStart', new BufferAttribute(starts, 2));
     pointGeometry.setAttribute('aSeed', new BufferAttribute(seeds, 3));
+    pointGeometry.setAttribute('aHeat', new BufferAttribute(new Float32Array(count), 1));
     pointGeometry.setAttribute('aTail', new BufferAttribute(new Float32Array(count), 1));
     const lineGeometry = new BufferGeometry();
     lineGeometry.setAttribute('position', new BufferAttribute(new Float32Array(count * 6), 3));
     lineGeometry.setAttribute('aStart', new BufferAttribute(lineStarts, 2));
     lineGeometry.setAttribute('aSeed', new BufferAttribute(lineSeeds, 3));
+    lineGeometry.setAttribute('aHeat', new BufferAttribute(new Float32Array(count * 2), 1));
     lineGeometry.setAttribute('aTail', new BufferAttribute(tails, 1));
     return { pointGeometry, lineGeometry };
   }, [count]);
@@ -157,7 +199,7 @@ export function YearDust({ quality = 'high', reduced = false }) {
     const key = `${width}x${height}`;
     if (sampled.current !== key) {
       const point = dots.current.geometry.attributes, line = streaks.current.geometry.attributes;
-      const total = sampleYear(point.aStart.array, point.aSeed.array, count);
+      const total = sampleYear(point.aStart.array, point.aSeed.array, point.aHeat.array, count);
       if (!total) { dots.current.visible = streaks.current.visible = false; return; }
       sampled.current = key;
       dots.current.geometry.setDrawRange(0, total);
@@ -166,9 +208,10 @@ export function YearDust({ quality = 'high', reduced = false }) {
         for (let end = 0; end < 2; end++) {
           line.aStart.array.set(point.aStart.array.subarray(i * 2, i * 2 + 2), (i * 2 + end) * 2);
           line.aSeed.array.set(point.aSeed.array.subarray(i * 3, i * 3 + 3), (i * 2 + end) * 3);
+          line.aHeat.array[i * 2 + end] = point.aHeat.array[i];
         }
       }
-      for (const attributes of [point, line]) attributes.aStart.needsUpdate = attributes.aSeed.needsUpdate = true;
+      for (const attributes of [point, line]) attributes.aStart.needsUpdate = attributes.aSeed.needsUpdate = attributes.aHeat.needsUpdate = true;
     }
     portalState(p, phase.current);
     const anchor = state.storyAnchor;

@@ -15,8 +15,6 @@ function visualClone(node, width, height) {
     glyph.removeAttribute('transform');
     const base = node.querySelector('.hero-year-base');
     if (base) glyph.querySelector('.hero-year-base').style.stroke = getComputedStyle(base).stroke;
-    const contour = node.ownerSVGElement.parentElement.querySelector(`[data-year-contour-glyph="${node.dataset.portalYearGlyph}"]`);
-    if (contour) glyph.append(...[...contour.childNodes].map(child => child.cloneNode(true)));
     clone.append(glyph);
     clone.setAttribute('fill', node.ownerSVGElement.getAttribute('fill') || 'none');
     clone.setAttribute('stroke', node.ownerSVGElement.getAttribute('stroke') || 'white');
@@ -34,7 +32,7 @@ function visualClone(node, width, height) {
     clone.style.border = 'none';
     clone.style.borderRadius = computed.borderRadius;
   }
-  clone.querySelectorAll('.sr-only, .invisible, [data-story-anchor], [data-year-noise]').forEach(child => child.remove());
+  clone.querySelectorAll('.sr-only, .invisible, [data-story-anchor]').forEach(child => child.remove());
   for (const element of [clone, ...clone.querySelectorAll('*')]) {
     for (const attribute of [...element.attributes]) {
       if (attribute.name === 'id' || attribute.name.startsWith('on') || attribute.name.startsWith('aria-') || attribute.name.startsWith('data-')
