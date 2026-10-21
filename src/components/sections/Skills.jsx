@@ -74,7 +74,7 @@ export default function Skills({ stageRef }) {
     observer.observe(anchor.current);
     ScrollTrigger.addEventListener('refresh', measure);
     const tween = reduced ? null : gsap.fromTo(paths, { opacity: 0 }, {
-      opacity: 0.55, duration: 0.45, delay: 0.4, stagger: 0.07, ease: 'power3.out',
+      opacity: 0.55, duration: 0.35, delay: 0.12, stagger: 0.05, ease: 'power3.out',
     });
     if (reduced) gsap.set(paths, { opacity: 0.55 });
     const visibility = () => tween?.paused(document.hidden);

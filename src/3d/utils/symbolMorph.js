@@ -109,6 +109,10 @@ const ramp = (value, from, to) => {
   return p * p * (3 - 2 * p);
 };
 
+// Logos answer a hover, so they land in half a second; Education keeps its slower constellation pace.
+const LOGO_TIMING = { formation: [0, 0.28], lines: [0.12, 0.4], logo: [0.2, 0.5], pull: 16 };
+const SKY_TIMING = { formation: [0, 0.45], lines: [0.55, 1], logo: [1.05, 1.5], pull: 9 };
+
 // No tweens or allocation here: interrupted morphs always start at current positions.
 export function advanceSymbolPool(pool, delta, frozen = false) {
   const dt = Math.min(0.05, Math.max(0, delta));
@@ -120,19 +124,21 @@ export function advanceSymbolPool(pool, delta, frozen = false) {
     pool.logo = pool.target?.parts ? 1 : 0;
     return changed;
   }
+  const timing = pool.target?.parts ? LOGO_TIMING : SKY_TIMING;
   pool.elapsed += dt;
-  pool.formation = pool.target ? ramp(pool.elapsed, 0, 0.45) : 0;
-  pool.lines = pool.target ? ramp(pool.elapsed, 0.55, 1) : 0;
-  pool.logo = pool.target?.parts ? ramp(pool.elapsed, 1.05, 1.5) : 0;
-  if (pool.target?.id === 'ai' && pool.settled && pool.elapsed >= 1.5) {
-    pool.phase += Math.min(dt, pool.elapsed - 1.5) * 0.12;
+  pool.formation = pool.target ? ramp(pool.elapsed, ...timing.formation) : 0;
+  pool.lines = pool.target ? ramp(pool.elapsed, ...timing.lines) : 0;
+  pool.logo = pool.target?.parts ? ramp(pool.elapsed, ...timing.logo) : 0;
+  const landed = timing.logo[1];
+  if (pool.target?.id === 'ai' && pool.settled && pool.elapsed >= landed) {
+    pool.phase += Math.min(dt, pool.elapsed - landed) * 0.12;
     writeGoal(pool);
     pool.positions.set(pool.goal);
     pool.updates++;
     return true;
   }
   if (pool.settled) return false;
-  const ease = 1 - Math.exp(-9 * dt);
+  const ease = 1 - Math.exp(-timing.pull * dt);
   let error = 0;
   for (let i = 0; i < pool.positions.length; i++) {
     pool.positions[i] += (pool.goal[i] - pool.positions[i]) * ease;
