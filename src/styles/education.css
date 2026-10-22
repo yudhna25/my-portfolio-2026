@@ -1,0 +1,42 @@
+/* Education: each school is a label beside its star-forming region on Arp 273's arm. In flow
+ * (mobile, no WebGL) the labels stack; on desktop the sky positions them (data-knots="live"). */
+
+.edu-mark line { stroke: var(--accent-amber); stroke-opacity: 0.45; stroke-linecap: round; }
+.edu-mark circle { fill: #fff3e2; opacity: 0.8; }
+
+.edu-stop { transition: opacity 0.6s ease; }
+.edu-stop .edu-name { transition: color 0.6s ease, text-shadow 0.6s ease; }
+.edu-stop[data-active] .edu-name { text-shadow: 0 0 22px rgb(255 140 192 / 0.45), 0 1px 14px rgb(7 8 13 / 0.9); }
+.edu-stop[data-active] .edu-mark line { stroke-opacity: 0.9; }
+.edu-stop[data-active] .edu-mark circle { opacity: 1; }
+
+.edu[data-knots='live'] .edu-stops { display: block; margin: 0; }
+.edu[data-knots='live'] .edu-stop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: min(25rem, 32vw);
+  opacity: calc(var(--knots-presence, 1) * 0.5);
+  will-change: transform;
+}
+/* A quiet school shrinks to its years and a smaller name. */
+.edu[data-knots='live'] .edu-stop:not([data-active]) .edu-name { font-size: 0.62em; padding-block: 0.25rem; }
+.edu[data-knots='live'] .edu-stop[data-active] { opacity: var(--knots-presence, 1); }
+.edu[data-knots='live'] .edu-stop[data-side='left'] { text-align: right; }
+.edu[data-knots='live'] .edu-stop[data-side='left'] p:first-child { justify-content: flex-end; }
+.edu[data-knots='live'] .edu-stop[data-side='left'] .edu-name { text-align: right; }
+.edu[data-knots='live'] .edu-stop[data-side='left'] .edu-details p { margin-left: auto; }
+
+/* Only the school being read opens its details; the others keep their years and name. */
+.edu[data-knots='live'] .edu-details {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.6s ease, opacity 0.5s ease;
+}
+.edu[data-knots='live'] .edu-details > * { min-height: 0; overflow: hidden; }
+.edu[data-knots='live'] .edu-stop[data-active] .edu-details { grid-template-rows: 1fr; opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .edu-stop, .edu-stop .edu-name, .edu[data-knots='live'] .edu-details { transition: none; }
+}

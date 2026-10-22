@@ -2,8 +2,10 @@ import { useEffect, useMemo, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { AdditiveBlending, BufferAttribute, BufferGeometry, Color, CustomBlending, DataTexture, DoubleSide, FloatType, MaxEquation, RGBAFormat, Vector2, Vector3 } from 'three';
 import { useScrollStore } from '@/stores/useScrollStore';
-import { CHAPTER_PALETTE, PALETTE_CHAPTERS, paletteWeights, skyLayers } from '@/3d/utils/chapterWave';
+import { activeEducation, useEducationStore } from '@/stores/useEducationStore';
+import { CHAPTER_PALETTE, PALETTE_CHAPTERS, journey, paletteWeights, skyLayers } from '@/3d/utils/chapterWave';
 import { ARP_RADIUS as RADIUS, REST_PITCH, armAngle, skyLayout } from '@/3d/utils/skyPath';
+import { EDUCATION_KNOTS, educationBeat, knotLabels, knotLocal } from '@/3d/utils/educationKnots';
 
 // One continuous sky across the reading chapters, after real Hubble and JWST plates. About
 // trucks along a nebula ribbon (Veil-like filaments: teal oxygen braided inside ember
@@ -231,6 +233,42 @@ const ARP_VERT = /* glsl */ `
   }
 `;
 
+// Education's three star-forming regions on arm 0 (see educationKnots): pink hydrogen gas
+// round clusters of young blue stars. Their centres are placed in JS each frame, on the
+// arm's morph; the school being read swells and brightens, the others glow quietly.
+const KNOT_VERT = /* glsl */ `
+  attribute vec3 aColor;
+  attribute vec4 aShape; // size, kind, seed, school
+  attribute vec3 aOffset;
+  uniform vec3 uCenter, uX, uY, uZ;
+  uniform vec3 uKnot[3];
+  uniform float uLit[3];
+  uniform float uPixelRatio, uTime, uWeight, uProjection, uForm;
+  varying vec3 vColor;
+  varying float vAlpha, vKind, vSeed;
+  void main() {
+    int school = int(aShape.w + 0.5);
+    float lit = school == 0 ? uLit[0] : school == 1 ? uLit[1] : uLit[2];
+    vec3 centre = school == 0 ? uKnot[0] : school == 1 ? uKnot[1] : uKnot[2];
+    float gas = 1.0 - aShape.y;
+    // Lit gas billows outward a little and breathes; the stars stay put and flare.
+    float breath = 1.0 + 0.08 * sin(uTime * 0.5 + aShape.z * 20.0);
+    vec3 local = centre + aOffset * mix(1.0, 1.0 + 0.35 * lit, gas) * mix(1.0, breath, gas);
+    vec3 world = uCenter + uX * local.x + uY * local.y + uZ * local.z;
+    vec4 view = viewMatrix * vec4(world, 1.0);
+    float depth = -view.z;
+    gl_Position = projectionMatrix * view;
+    float pixels = aShape.x * (1.0 + mix(0.3, 0.35, gas) * lit) * uPixelRatio * uProjection / max(depth, 1.0);
+    gl_PointSize = clamp(pixels, 1.0, mix(8.0, 150.0, gas) * uPixelRatio);
+    vColor = aColor * (1.0 + mix(0.3, 1.8, aShape.y) * lit);
+    vKind = aShape.y;
+    vSeed = aShape.z;
+    float twinkle = mix(1.0, 0.75 + 0.25 * sin(uTime * (0.8 + aShape.z * 1.6) + aShape.z * 50.0), aShape.y);
+    float pulse = 0.85 + 0.15 * sin(uTime * 0.9 + float(school) * 2.1);
+    vAlpha = uWeight * smoothstep(0.55, 1.0, uForm) * twinkle * mix(0.4, pulse * 1.1, lit) * smoothstep(4.0, 14.0, depth) * step(0.0, depth) * min(1.0, pixels);
+  }
+`;
+
 const HAZE_VERT = /* glsl */ `
   varying vec2 vUv;
   void main() { vUv = position.xy * 0.5 + 0.5; gl_Position = vec4(position.xy, 0.999, 1.0); }
@@ -396,6 +434,30 @@ function buildArp(scale, frame) {
   return cloud.build();
 }
 
+function buildKnots(scale) {
+  const rand = random(1810), cloud = createCloud({ aOffset: 3 });
+  const zero = new Vector3(), offset = new Vector3();
+  const blob = (spread, flat = 0.35) => offset.set(gaussian(rand) * spread, gaussian(rand) * spread * 0.7, gaussian(rand) * spread * flat).toArray();
+  EDUCATION_KNOTS.forEach((knot, school) => {
+    // Glowing hydrogen, magenta-pink, with a little blue reflection nebulosity.
+    for (let i = 0; i < 70 * scale; i++) {
+      const hue = rand();
+      cloud.push(zero, hue < 0.55 ? '#9A2E6E' : hue < 0.85 ? '#C4508C' : '#3C4CA8', 0.9 + rand() * 1.6, 0, rand(), school, { aOffset: blob(1.2) });
+    }
+    // The young cluster it is lighting: blue-white stars, a few pink.
+    for (let i = 0; i < 140 * scale; i++) {
+      const hue = rand();
+      cloud.push(zero, hue < 0.3 ? '#FFB0DA' : hue < 0.85 ? '#D4E2FF' : '#FFFFFF', 0.12 + Math.pow(rand(), 3) * 0.32, 1, rand(), school, { aOffset: blob(0.85) });
+    }
+    cloud.push(zero, '#FFE8F4', 0.9, 1, rand(), school, { aOffset: [0, 0, 0] });
+  });
+  return cloud.build();
+}
+
+const smooth = (a, b, x) => {
+  const t = Math.min(1, Math.max(0, (x - a) / (b - a)));
+  return t * t * (3 - 2 * t);
+};
 const projection = (camera, size) => size.height / (2 * Math.tan(camera.fov * Math.PI / 360));
 
 function useCloudMaterial(extra) {
@@ -579,9 +641,9 @@ function BandHead({ band, layers, reduced }) {
   </points>;
 }
 
-function Arp({ geometry, frame, layers, reduced }) {
-  const points = useRef(null);
-  const extra = useMemo(() => {
+// The disk's frame and morph uniforms.
+function useArpFrame(frame) {
+  return useMemo(() => {
     // The companion lies along the line of its fall, tipped nearly edge on.
     const cx = frame.x.clone().multiplyScalar(0.8).addScaledVector(frame.y, -0.6).normalize();
     const cz = frame.normal.clone().applyAxisAngle(cx, 1.25);
@@ -592,6 +654,10 @@ function Arp({ geometry, frame, layers, reduced }) {
       uShift: { value: new Vector2(shift.x, shift.y) }, uRose: { value: 0 }, uBurst: { value: 0 }, uForm: { value: 0 }, uSpin: { value: 0 },
     };
   }, [frame]);
+}
+
+function Arp({ geometry, frame, points, layers, reduced }) {
+  const extra = useArpFrame(frame);
   const uniforms = useCloudMaterial(extra);
   useEffect(() => () => geometry.dispose(), [geometry]);
   useLayer(points, layers, 'arp', reduced, (values, size, delta) => {
@@ -607,6 +673,86 @@ function Arp({ geometry, frame, layers, reduced }) {
   });
   return <points ref={points} name="sky-arp" geometry={geometry} frustumCulled={false} renderOrder={8}>
     <shaderMaterial uniforms={uniforms} vertexShader={ARP_VERT} fragmentShader={FRAG} transparent depthTest={false} depthWrite={false}
+      toneMapped={false} blending={AdditiveBlending} />
+  </points>;
+}
+
+// Places the knots on the arm, lights the school being read, and keeps each Education label
+// beside its knot on screen (desktop; narrower screens keep the labels in flow).
+function Knots({ geometry, frame, arp, layers, reduced }) {
+  const points = useRef(null);
+  const lit = useRef([0, 0, 0]);
+  const scratch = useMemo(() => ({ world: new Vector3(), screen: new Vector3(), hub: new Vector3() }), []);
+  const extra = useMemo(() => ({
+    uCenter: { value: frame.center }, uX: { value: frame.x }, uY: { value: frame.y }, uZ: { value: frame.normal }, uForm: { value: 0 },
+    uKnot: { value: EDUCATION_KNOTS.map(() => new Vector3()) }, uLit: { value: [0, 0, 0] },
+  }), [frame]);
+  const uniforms = useCloudMaterial(extra);
+  useEffect(() => () => geometry.dispose(), [geometry]);
+  const toWorld = (local, out) => out.copy(frame.center).addScaledVector(frame.x, local.x).addScaledVector(frame.y, local.y).addScaledVector(frame.normal, local.z);
+  useLayer(points, layers, 'arp', reduced, (values, size, delta) => {
+    const scroll = useScrollStore.getState();
+    const education = useEducationStore.getState();
+    const reading = scroll.storyChapter === 'education';
+    const chosen = activeEducation(education) ?? (reading ? EDUCATION_KNOTS[educationBeat(scroll.chapterProgress)].id : null);
+    // The disk's own morph state, read from its material so the knots never drift off the arm.
+    const disk = arp.current?.material.uniforms;
+    if (!disk) return;
+    values.uForm.value = disk.uForm.value;
+    const state = { rose: disk.uRose.value, spin: disk.uSpin.value, time: disk.uTime.value, shift: disk.uShift.value };
+    EDUCATION_KNOTS.forEach((knot, index) => {
+      knotLocal(knot, frame, state, values.uKnot.value[index]);
+      const goal = knot.id === chosen ? 1 : 0;
+      lit.current[index] += (goal - lit.current[index]) * (1 - Math.exp(-delta * (reduced ? 30 : 3.5)));
+      values.uLit.value[index] = lit.current[index];
+    });
+  });
+  // Labels follow after the camera has moved this frame.
+  useFrame(({ camera, size }) => {
+    const { section, items } = knotLabels;
+    if (!section) return;
+    const j = journey(useScrollStore.getState().storyChapter, useScrollStore.getState().chapterProgress);
+    const presence = j === null ? 0 : smooth(2.1, 2.28, j) * (1 - smooth(2.9, 3.04, j));
+    const live = size.width >= 1024 && points.current?.visible && presence > 0;
+    if (!live) { if (section.dataset.knots) delete section.dataset.knots; return; }
+    section.dataset.knots = 'live';
+    section.style.setProperty('--knots-presence', presence.toFixed(3));
+    const box = section.getBoundingClientRect();
+    const { world, screen, hub } = scratch;
+    const toScreen = (point, out) => out.copy(point).project(camera).set((out.x + 1) * size.width / 2, (1 - out.y) * size.height / 2, out.z);
+    toScreen(frame.center, hub);
+    // Read every size first, then write, so the frame lays out once.
+    const placed = EDUCATION_KNOTS.map((knot, index) => {
+      const element = items[knot.id];
+      if (!element) return null;
+      toWorld(points.current.material.uniforms.uKnot.value[index], world);
+      toScreen(world, screen);
+      return { element, x: screen.x, y: screen.y, behind: screen.z > 1, width: element.offsetWidth, height: element.offsetHeight };
+    });
+    const margin = { top: 96, bottom: size.height - 24, left: 112, right: size.width - 24 };
+    placed.forEach(item => {
+      if (!item) return;
+      item.right = item.x >= hub.x;
+      const gap = 30;
+      item.left = Math.min(Math.max(item.right ? item.x + gap : item.x - gap - item.width, margin.left), margin.right - item.width);
+      item.top = item.y - item.height / 2;
+    });
+    // Labels on the same side stack in arm order without touching.
+    [true, false].forEach(side => {
+      const column = placed.filter(item => item && item.right === side).sort((a, b) => a.top - b.top);
+      column.forEach((item, index) => { if (index) item.top = Math.max(item.top, column[index - 1].top + column[index - 1].height + 14); });
+      const overflow = column.length ? column[column.length - 1].top + column[column.length - 1].height - margin.bottom : 0;
+      column.forEach(item => { item.top = Math.max(margin.top, item.top - Math.max(0, overflow)); });
+    });
+    placed.forEach(item => {
+      if (!item) return;
+      item.element.style.transform = `translate3d(${(item.left - box.left).toFixed(1)}px, ${(item.top - box.top).toFixed(1)}px, 0)`;
+      item.element.dataset.side = item.right ? 'right' : 'left';
+      item.element.style.visibility = item.behind ? 'hidden' : '';
+    });
+  });
+  return <points ref={points} name="sky-education-knots" geometry={geometry} frustumCulled={false} renderOrder={8}>
+    <shaderMaterial uniforms={uniforms} vertexShader={KNOT_VERT} fragmentShader={FRAG} transparent depthTest={false} depthWrite={false}
       toneMapped={false} blending={AdditiveBlending} />
   </points>;
 }
@@ -650,8 +796,9 @@ export function ChapterBiomes({ quality = 'high', reduced = false }) {
   const sky = useMemo(() => {
     const { ribbon, arp, band } = skyLayout();
     const flow = ribbon.center(1).sub(ribbon.center(0)).normalize();
-    return { nebula: buildNebula(scale, ribbon), flow, band, bandGeometry: buildBand(band), motes: buildMotes(scale), arpFrame: arp, arp: buildArp(scale, arp) };
+    return { nebula: buildNebula(scale, ribbon), flow, band, bandGeometry: buildBand(band), motes: buildMotes(scale), arpFrame: arp, arp: buildArp(scale, arp), knots: buildKnots(scale) };
   }, [scale]);
+  const arp = useRef(null);
   useFrame(() => {
     const state = useScrollStore.getState();
     skyLayers(state.storyChapter, state.chapterProgress, layers.current);
@@ -662,6 +809,7 @@ export function ChapterBiomes({ quality = 'high', reduced = false }) {
     <Band geometry={sky.bandGeometry} band={sky.band} layers={layers} reduced={reduced} />
     <Motes geometry={sky.motes} band={sky.band} layers={layers} reduced={reduced} />
     <BandHead band={sky.band} layers={layers} reduced={reduced} />
-    <Arp geometry={sky.arp} frame={sky.arpFrame} layers={layers} reduced={reduced} />
+    <Arp geometry={sky.arp} frame={sky.arpFrame} points={arp} layers={layers} reduced={reduced} />
+    <Knots geometry={sky.knots} frame={sky.arpFrame} arp={arp} layers={layers} reduced={reduced} />
   </group>;
 }

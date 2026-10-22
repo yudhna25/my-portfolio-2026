@@ -7,14 +7,9 @@ import { navigationSections } from '@/data/navigation';
 import { pushMainAnchor } from '@/stores/useRouteStore';
 import '@/styles/star-map.css';
 
-// Fixed journey index along the left edge: seven chapters as numbered stations with mock
-// celestial coordinates. The current chapter is lit; choosing another flies the camera
+// Fixed journey index along the left edge: seven chapters as numbered stations. The current chapter is lit; choosing another flies the camera
 // there along the real scroll path, so the chapter waves play on the way.
 const NUMERALS = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'];
-const COORDINATES = [
-  'RA 00h 00m · Dec +00°', 'RA 02h 31m · Dec +89°', 'RA 05h 35m · Dec −05°', 'RA 09h 47m · Dec +11°',
-  'RA 13h 25m · Dec −11°', 'RA 18h 36m · Dec +38°', 'RA 23h 59m · Dec −29°',
-];
 const CHAPTER_INDEX = { hero: 0, portal: 0, about: 1, skills: 2, education: 3, experience: 4, departure: 4, works: 5, finale: 5, contact: 6 };
 
 export function StarMapIndex() {
@@ -83,7 +78,6 @@ export function StarMapIndex() {
                 <span key={current ? 'on' : 'off'} aria-hidden="true" data-flash={current || undefined}
                   className="star-map-label flex flex-col rounded-sm bg-(--bg-void)/85 px-2 py-1 leading-tight opacity-0 transition-[opacity,translate] duration-500 -translate-x-1 group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:translate-x-0 group-focus-visible:opacity-100">
                   <span className="font-display text-[11px] font-semibold uppercase tracking-[0.14em] text-white">{name}</span>
-                  <span className="font-mono text-[9px] tracking-[0.08em] text-(--text-secondary)">{COORDINATES[index]}</span>
                 </span>
               </button>
             </li>

@@ -6,24 +6,35 @@ import { educationInstitutions } from '@/data/education';
 import { useEducationStore, activeEducation } from '@/stores/useEducationStore';
 import { useScrollStore } from '@/stores/useScrollStore';
 import { SYMBOL_TARGETS } from '@/3d/utils/symbolMorph';
+import { EDUCATION_KNOTS, educationBeat, knotLabels } from '@/3d/utils/educationKnots';
 import { ConstellationCreditButton } from '@/components/ui/ConstellationCredits';
 import { MixedText } from '@/components/ui/MixedText';
+import '@/styles/education.css';
 
-const regions = [
-  'lg:col-start-1 lg:col-span-5 lg:row-start-1',
-  'lg:col-start-8 lg:col-span-5 lg:row-start-1 lg:translate-y-[18vh]',
-  'lg:col-start-3 lg:col-span-5 lg:row-start-2',
-];
-const windows = ['w-[92%]', 'ml-auto w-[88%]', 'w-[84%] sm:ml-8'];
+// The constellation as a small annotation mark beside the years: its real stick figure,
+// brighter stars drawn larger.
+function ConstellationMark({ id }) {
+  const { geometry, edges } = SYMBOL_TARGETS[id];
+  const stars = geometry.stars.map(star => [star.position[0], -star.position[1], star.vmag]);
+  const xs = stars.map(([x]) => x), ys = stars.map(([, y]) => y);
+  const pad = 0.08, box = [Math.min(...xs) - pad, Math.min(...ys) - pad, Math.max(...xs) - Math.min(...xs) + pad * 2, Math.max(...ys) - Math.min(...ys) + pad * 2];
+  const unit = Math.max(box[2], box[3]) / 40;
+  return <svg aria-hidden="true" viewBox={box.join(' ')} className="edu-mark h-7 w-7 shrink-0 overflow-visible">
+    {edges.map(([a, b], index) => <line key={index} x1={stars[a][0]} y1={stars[a][1]} x2={stars[b][0]} y2={stars[b][1]} strokeWidth={unit * 0.9} />)}
+    {stars.map(([x, y, mag], index) => <circle key={index} cx={x} cy={y} r={unit * Math.max(0.9, 2.6 - mag * 0.45)} />)}
+  </svg>;
+}
 
-export default function Education({ stageRefs }) {
+export default function Education() {
   const root = useRef(null);
+  const items = useRef({});
   const pointer = useRef('');
   const { t, i18n } = useTranslation();
-  const target = useEducationStore(activeEducation);
+  const chosen = useEducationStore(activeEducation);
+  const beat = useScrollStore(state => state.storyChapter === 'education' ? educationBeat(state.chapterProgress) : null);
+  const reading = chosen ?? (beat === null ? null : EDUCATION_KNOTS[beat].id);
   const active = useScrollStore(state => state.storyChapter === 'education');
-  const fallback = useScrollStore(state => state.sceneFallback);
-  const { interact, clear, setVisible } = useEducationStore.getState();
+  const { interact, clear } = useEducationStore.getState();
   const handlers = id => ({
     onPointerEnter: event => { if (event.pointerType === 'mouse') interact('hover', id); },
     onPointerLeave: () => { if (useEducationStore.getState().hover === id) interact('hover', null); },
@@ -39,70 +50,56 @@ export default function Education({ stageRefs }) {
 
   useEffect(() => { if (!active) clear(); }, [active, clear]);
 
-  useGSAP(() => {
-    const visible = new Map();
-    const sync = () => setVisible(visible.get(useEducationStore.getState().anchorId) ?? false);
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        const id = entry.target.dataset.educationStage;
-        visible.set(id, entry.isIntersecting);
-        const state = useEducationStore.getState();
-        // Keep native keyboard ownership through reflow; off-chapter cleanup still clears it.
-        if (!entry.isIntersecting && state.anchorId === id && state.focus !== id) clear();
-      });
-      sync();
-    });
-    root.current.querySelectorAll('[data-education-stage]').forEach(element => observer.observe(element));
-    const unsubscribe = useEducationStore.subscribe(sync);
-    return () => { unsubscribe(); observer.disconnect(); setVisible(false); clear(); };
-  }, { scope: root });
+  // The sky places these labels beside their knots on the galaxy's arm (see Knots).
+  useEffect(() => {
+    const section = root.current;
+    knotLabels.section = section;
+    knotLabels.items = items.current;
+    return () => {
+      if (knotLabels.section === section) { knotLabels.section = null; knotLabels.items = {}; }
+      delete section.dataset.knots;
+      clear();
+    };
+  }, [clear]);
 
   useGSAP(() => { ScrollTrigger.refresh(true); }, { scope: root, dependencies: [i18n.resolvedLanguage], revertOnUpdate: true });
 
   return <section ref={root} id="education" lang={i18n.resolvedLanguage} aria-labelledby="education-heading"
     onKeyDownCapture={event => { pointer.current = 'keyboard'; if (event.key === 'Escape') { clear(); event.stopPropagation(); } }}
-    onClick={event => { if (!event.target.closest('[data-education-item],[data-education-clear]')) clear(); }}
-    className="relative isolate border-y border-white/[0.06] px-6 py-24 text-(--text-primary) sm:px-8 lg:min-h-[175vh] lg:px-12 lg:py-28">
+    onClick={event => { if (!event.target.closest('[data-education-item]')) clear(); }}
+    className="edu relative isolate px-6 py-24 text-(--text-primary) sm:px-8 lg:min-h-[175vh] lg:py-28 lg:pl-28 lg:pr-12">
     <div className="mx-auto max-w-7xl">
       <header className="max-w-3xl star-scrim">
-        <h2 key={i18n.resolvedLanguage} id="education-heading" aria-label={t('education.heading')} data-reveal="starlight" className="font-display text-[clamp(2rem,6vw,6rem)] font-bold uppercase leading-[1.2] tracking-[-0.04em]"><MixedText text={t('education.heading')} accent={t('education.headingAccent')} /></h2>
-        <p key={`note-${i18n.resolvedLanguage}`} data-reveal="dust" className="mt-5 max-w-xl font-body text-sm leading-relaxed text-white/65">{t('education.mapNote')}</p>
-        <p key={`hint-${i18n.resolvedLanguage}`} id="education-hint" data-reveal="signal" className="mt-3 max-w-xl font-mono text-xs leading-relaxed text-white/55">{t('education.interactionHint')}</p>
-        <button type="button" data-education-clear onClick={clear} className="mt-3 min-h-11 px-1 font-mono text-xs text-white/65 underline decoration-white/25 underline-offset-4 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4">{t('education.clearSelection')}</button>
-        <ConstellationCreditButton className="ml-5" />
+        <p key={`label-${i18n.resolvedLanguage}`} lang="en" data-reveal="dust" className="mb-5 font-mono text-xs tracking-[0.2em] text-(--text-secondary)">{t('education.sectionLabel')}</p>
+        <h2 key={i18n.resolvedLanguage} id="education-heading" aria-label={t('education.heading')} data-reveal="starlight" className="font-display text-[clamp(1.75rem,4.5vw,4rem)] font-bold uppercase leading-[1.2] tracking-[-0.035em]"><MixedText text={t('education.heading')} accent={t('education.headingAccent')} /></h2>
+        <p key={`note-${i18n.resolvedLanguage}`} data-reveal="dust" className="mt-5 max-w-md font-body text-base leading-relaxed text-white/75">{t('education.mapNote')}</p>
+        <p id="education-hint" className="sr-only">{t('education.interactionHint')}</p>
       </header>
-      <ul className="mt-8 grid list-none grid-cols-1 gap-y-12 p-0 lg:mt-12 lg:grid-cols-12 lg:gap-x-16 lg:gap-y-10">
-        {educationInstitutions.map(({ id, constellation }, index) => {
+      <ol className="edu-stops mt-16 grid list-none grid-cols-1 gap-y-16 p-0 md:grid-cols-3 md:gap-x-10">
+        {educationInstitutions.map(({ id, constellation }) => {
           const path = 'education.institutions.' + id;
-          const figure = SYMBOL_TARGETS[id], extent = figure.radius * 1.25;
-          return <li key={id} data-education-region={id} className={'relative min-w-0 ' + regions[index]}>
-            <div id={'education-stage-' + id} ref={stageRefs?.[id]} data-education-stage={id} className={'relative h-[min(34vh,18rem)] min-h-56 lg:ml-0 lg:h-[31vh] lg:min-h-64 lg:w-full ' + windows[index]}>
-              <svg viewBox={[-extent, -extent, extent * 2, extent * 2].join(' ')} className="pointer-events-none absolute inset-0 h-full w-full overflow-visible">
-                {fallback && <image href={import.meta.env.BASE_URL + figure.artwork.url.replace(/^\//, '')} x={figure.artwork.plane.center[0] - figure.artwork.plane.width / 2}
-                  y={-figure.artwork.plane.center[1] - figure.artwork.plane.height / 2} width={figure.artwork.plane.width} height={figure.artwork.plane.height}
-                  opacity={target === id ? .3 : .1} aria-hidden="true" />}
-                <polygon points={figure.artwork.hitHull.map(([x, y]) => [x, -y].join(',')).join(' ')} role="button" tabIndex={0}
-                  data-education-item={id} data-education-figure={id} aria-pressed={target === id} aria-describedby="education-hint"
-                  aria-label={t('education.figureLabel', { school: t(path + '.name'), constellation: t('education.constellationNames.' + constellation) })}
-                  {...handlers(id)} onKeyDown={event => { if (['Enter', ' '].includes(event.key)) { event.preventDefault(); interact('focus', id); } }}
-                  vectorEffect="non-scaling-stroke" className="pointer-events-auto cursor-pointer fill-transparent stroke-transparent stroke-1 outline-none! shadow-none! focus-visible:stroke-white/75 focus-visible:stroke-2" />
-              </svg>
-            </div>
-            <div className="relative z-10 star-scrim">
-              <p data-reveal="items" className="flex flex-wrap items-center gap-x-5 gap-y-1 font-mono text-xs text-white/65"><span>{t(path + '.period')}</span><span className="text-white/55">{t('education.constellationNames.' + constellation)}</span></p>
-              <h3 data-reveal="items" className="mt-2 font-display text-[clamp(1.2rem,2.3vw,2.25rem)] font-semibold leading-[1.3] tracking-[-0.03em]">
-              <button type="button" data-education-item={id} aria-pressed={target === id} aria-controls={'education-stage-' + id} aria-describedby="education-hint"
-                {...handlers(id)}
-                className={'block min-h-11 w-full py-3 text-left focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4 ' + (target === id ? 'underline decoration-white/50 underline-offset-8' : '')}>
+          const lit = reading === id;
+          return <li key={id} ref={element => { items.current[id] = element; }} data-education-region={id} data-active={lit || undefined}
+            className="edu-stop relative min-w-0 star-scrim">
+            <p data-reveal="items" className="flex items-center gap-3 font-body text-sm tabular-nums text-white/70">
+              <ConstellationMark id={id} />
+              <span>{t(path + '.period')}</span>
+              <span className="mix-em text-base">{t('education.constellationNames.' + constellation)}</span>
+            </p>
+            <h3 data-reveal="items" className="mt-1 font-display text-[clamp(1.2rem,2vw,1.85rem)] font-semibold leading-[1.25] tracking-[-0.03em]">
+              <button type="button" data-education-item={id} aria-pressed={chosen === id} aria-describedby="education-hint" {...handlers(id)}
+                className="edu-name block min-h-11 w-full py-2 text-left focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4">
                 {t(path + '.name')}
               </button>
-              </h3>
-              <p key={`degree-${i18n.resolvedLanguage}`} data-reveal="dust" className="mt-1 font-body text-base leading-relaxed text-white/85">{t(path + '.degree')}</p>
-              <p key={`description-${i18n.resolvedLanguage}`} data-reveal="dust" className="mt-2 max-w-[48ch] font-body text-sm leading-relaxed text-white/75">{t(path + '.description')}</p>
-            </div>
+            </h3>
+            <div className="edu-details"><div>
+              <p key={`degree-${i18n.resolvedLanguage}`} data-reveal="dust" className="font-body text-base leading-relaxed text-white/85">{t(path + '.degree')}</p>
+              <p key={`description-${i18n.resolvedLanguage}`} data-reveal="dust" className="mt-2 max-w-[44ch] font-body text-sm leading-relaxed text-white/75">{t(path + '.description')}</p>
+            </div></div>
           </li>;
         })}
-      </ul>
+      </ol>
+      <ConstellationCreditButton className="edu-credit mt-12 opacity-70" />
     </div>
   </section>;
 }
