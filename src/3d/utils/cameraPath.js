@@ -1,4 +1,5 @@
 import { bandFollow } from './skyPath.js';
+import { knotFocus } from './educationKnots.js';
 
 // Scene units are Schwarzschild radii. The thin disk occupies r = 3..14, y = 0.
 export const BLACK_HOLE_CENTER = Object.freeze([0, 0, -200]);
@@ -205,6 +206,8 @@ export function storyCameraPath(chapter, progress, target = {}, frozen = false, 
     chapterMove(chapter, clampStoryProgress(progress), target);
     // From late About into Education the camera rides the light band instead.
     if (follow) bandFollow(chapter, clampStoryProgress(progress), target);
+    // Education then closes in on the star-forming region being read.
+    if (follow) knotFocus(chapter, clampStoryProgress(progress), target);
   }
   if (chapter === 'portal' && !frozen) {
     const bend = Math.sin(ease * Math.PI);

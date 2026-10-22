@@ -15,12 +15,14 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: min(25rem, 32vw);
-  opacity: calc(var(--knots-presence, 1) * 0.5);
+  width: min(31rem, 38vw);
+  opacity: calc(var(--knots-presence, 1) * 0.6);
   will-change: transform;
 }
 /* A quiet school shrinks to its years and a smaller name. */
-.edu[data-knots='live'] .edu-stop:not([data-active]) .edu-name { font-size: 0.62em; padding-block: 0.25rem; }
+.edu[data-knots='live'] .edu-stop:not([data-active]) .edu-name { font-size: 0.6em; padding-block: 0.25rem; }
+/* Hidden outside the chapter's reading span; still focusable, so Tab can bring it back. */
+.edu[data-knots='live'][data-knots-away] .edu-stop { pointer-events: none; }
 .edu[data-knots='live'] .edu-stop[data-active] { opacity: var(--knots-presence, 1); }
 .edu[data-knots='live'] .edu-stop[data-side='left'] { text-align: right; }
 .edu[data-knots='live'] .edu-stop[data-side='left'] p:first-child { justify-content: flex-end; }

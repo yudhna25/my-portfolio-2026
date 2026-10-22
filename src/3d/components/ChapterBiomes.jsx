@@ -5,7 +5,7 @@ import { useScrollStore } from '@/stores/useScrollStore';
 import { activeEducation, useEducationStore } from '@/stores/useEducationStore';
 import { CHAPTER_PALETTE, PALETTE_CHAPTERS, journey, paletteWeights, skyLayers } from '@/3d/utils/chapterWave';
 import { ARP_RADIUS as RADIUS, REST_PITCH, armAngle, skyLayout } from '@/3d/utils/skyPath';
-import { EDUCATION_KNOTS, educationBeat, knotLabels, knotLocal } from '@/3d/utils/educationKnots';
+import { EDUCATION_KNOTS, educationBeat, knotLabels, knotLocal, knotState, knotWorld } from '@/3d/utils/educationKnots';
 
 // One continuous sky across the reading chapters, after real Hubble and JWST plates. About
 // trucks along a nebula ribbon (Veil-like filaments: teal oxygen braided inside ember
@@ -702,21 +702,32 @@ function Knots({ geometry, frame, arp, layers, reduced }) {
     const state = { rose: disk.uRose.value, spin: disk.uSpin.value, time: disk.uTime.value, shift: disk.uShift.value };
     EDUCATION_KNOTS.forEach((knot, index) => {
       knotLocal(knot, frame, state, values.uKnot.value[index]);
+      toWorld(values.uKnot.value[index], knotWorld[index]);
       const goal = knot.id === chosen ? 1 : 0;
       lit.current[index] += (goal - lit.current[index]) * (1 - Math.exp(-delta * (reduced ? 30 : 3.5)));
       values.uLit.value[index] = lit.current[index];
     });
+    knotState.ready = true;
   });
   // Labels follow after the camera has moved this frame.
   useFrame(({ camera, size }) => {
     const { section, items } = knotLabels;
     if (!section) return;
     const j = journey(useScrollStore.getState().storyChapter, useScrollStore.getState().chapterProgress);
-    const presence = j === null ? 0 : smooth(2.1, 2.28, j) * (1 - smooth(2.9, 3.04, j));
-    const live = size.width >= 1024 && points.current?.visible && presence > 0;
-    if (!live) { if (section.dataset.knots) delete section.dataset.knots; return; }
+    // Gone before Experience's words arrive; they never fall back into the page's flow mid-scroll.
+    const presence = j === null ? 0 : smooth(2.18, 2.32, j) * (1 - smooth(2.72, 2.86, j));
+    if (size.width < 1024) {
+      if (section.dataset.knots) {
+        delete section.dataset.knots;
+        section.removeAttribute('data-knots-away');
+        Object.values(items).forEach(element => { if (element) element.style.transform = ''; });
+      }
+      return;
+    }
     section.dataset.knots = 'live';
     section.style.setProperty('--knots-presence', presence.toFixed(3));
+    section.toggleAttribute('data-knots-away', presence <= 0.01);
+    if (presence <= 0 || !points.current?.visible) return;
     const box = section.getBoundingClientRect();
     const { world, screen, hub } = scratch;
     const toScreen = (point, out) => out.copy(point).project(camera).set((out.x + 1) * size.width / 2, (1 - out.y) * size.height / 2, out.z);
@@ -733,7 +744,7 @@ function Knots({ geometry, frame, arp, layers, reduced }) {
     placed.forEach(item => {
       if (!item) return;
       item.right = item.x >= hub.x;
-      const gap = 30;
+      const gap = 40;
       item.left = Math.min(Math.max(item.right ? item.x + gap : item.x - gap - item.width, margin.left), margin.right - item.width);
       item.top = item.y - item.height / 2;
     });

@@ -19,7 +19,7 @@ function ConstellationMark({ id }) {
   const xs = stars.map(([x]) => x), ys = stars.map(([, y]) => y);
   const pad = 0.08, box = [Math.min(...xs) - pad, Math.min(...ys) - pad, Math.max(...xs) - Math.min(...xs) + pad * 2, Math.max(...ys) - Math.min(...ys) + pad * 2];
   const unit = Math.max(box[2], box[3]) / 40;
-  return <svg aria-hidden="true" viewBox={box.join(' ')} className="edu-mark h-7 w-7 shrink-0 overflow-visible">
+  return <svg aria-hidden="true" viewBox={box.join(' ')} className="edu-mark h-8 w-8 shrink-0 overflow-visible">
     {edges.map(([a, b], index) => <line key={index} x1={stars[a][0]} y1={stars[a][1]} x2={stars[b][0]} y2={stars[b][1]} strokeWidth={unit * 0.9} />)}
     {stars.map(([x, y, mag], index) => <circle key={index} cx={x} cy={y} r={unit * Math.max(0.9, 2.6 - mag * 0.45)} />)}
   </svg>;
@@ -81,20 +81,20 @@ export default function Education() {
           const lit = reading === id;
           return <li key={id} ref={element => { items.current[id] = element; }} data-education-region={id} data-active={lit || undefined}
             className="edu-stop relative min-w-0 star-scrim">
-            <p data-reveal="items" className="flex items-center gap-3 font-body text-sm tabular-nums text-white/70">
+            <p data-reveal="items" className="flex items-center gap-3 font-body text-base tabular-nums text-white/80">
               <ConstellationMark id={id} />
               <span>{t(path + '.period')}</span>
-              <span className="mix-em text-base">{t('education.constellationNames.' + constellation)}</span>
+              <span className="mix-em text-lg">{t('education.constellationNames.' + constellation)}</span>
             </p>
-            <h3 data-reveal="items" className="mt-1 font-display text-[clamp(1.2rem,2vw,1.85rem)] font-semibold leading-[1.25] tracking-[-0.03em]">
+            <h3 data-reveal="items" className="mt-1 font-display text-[clamp(1.4rem,2.5vw,2.4rem)] font-semibold leading-[1.2] tracking-[-0.03em]">
               <button type="button" data-education-item={id} aria-pressed={chosen === id} aria-describedby="education-hint" {...handlers(id)}
                 className="edu-name block min-h-11 w-full py-2 text-left focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4">
                 {t(path + '.name')}
               </button>
             </h3>
             <div className="edu-details"><div>
-              <p key={`degree-${i18n.resolvedLanguage}`} data-reveal="dust" className="font-body text-base leading-relaxed text-white/85">{t(path + '.degree')}</p>
-              <p key={`description-${i18n.resolvedLanguage}`} data-reveal="dust" className="mt-2 max-w-[44ch] font-body text-sm leading-relaxed text-white/75">{t(path + '.description')}</p>
+              <p key={`degree-${i18n.resolvedLanguage}`} data-reveal="dust" className="font-body text-lg leading-relaxed text-white/90">{t(path + '.degree')}</p>
+              <p key={`description-${i18n.resolvedLanguage}`} data-reveal="dust" className="mt-2 max-w-[46ch] font-body text-base leading-relaxed text-white/85">{t(path + '.description')}</p>
             </div></div>
           </li>;
         })}

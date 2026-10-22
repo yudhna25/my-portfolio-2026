@@ -36,6 +36,28 @@ export function knotLocal(knot, frame, { rose, spin, time, shift }, out = new Ve
   return out.set(Math.cos(angle) * radius + shift.x * pull, Math.sin(angle) * radius + shift.y * pull, 0);
 }
 
+// World centres of the knots as the sky last placed them (spin and winding included), for
+// the camera that closes in on the one being read.
+export const knotWorld = EDUCATION_KNOTS.map(() => new Vector3());
+export const knotState = { ready: false };
+
+const focus = new Vector3();
+// While Education reads, the camera closes part of the way in on the school being read and
+// glides from one region to the next along the arm; never so close that the arm is lost.
+export function knotFocus(chapter, progress, target) {
+  if (chapter !== 'education' || !knotState.ready) return;
+  const w = smoothstep(0.18, 0.36, progress) * (1 - smoothstep(0.7, 0.86, progress));
+  if (w <= 0) return;
+  focus.copy(knotWorld[0]).lerp(knotWorld[1], smoothstep(0.36, 0.48, progress)).lerp(knotWorld[2], smoothstep(0.56, 0.68, progress));
+  const pull = 0.5 * w, aim = 0.8 * w;
+  target.x += (focus.x - target.x) * pull;
+  target.y += (focus.y - target.y) * pull;
+  target.z += (focus.z - target.z) * pull;
+  target.lookX += (focus.x - target.lookX) * aim;
+  target.lookY += (focus.y - target.lookY) * aim;
+  target.lookZ += (focus.z - target.lookZ) * aim;
+}
+
 // The reading layer registers its labels here; the sky writes their screen positions each
 // frame, so a label rides beside its knot as the camera cranes and the arm winds.
 export const knotLabels = { section: null, items: {} };
