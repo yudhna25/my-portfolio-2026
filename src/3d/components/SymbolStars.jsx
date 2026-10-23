@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { AdditiveBlending, BufferAttribute, BufferGeometry, CustomBlending, DataTexture, DynamicDrawUsage, LinearFilter, OneFactor, OneMinusSrcAlphaFactor, PlaneGeometry, ShaderMaterial, SRGBColorSpace, TextureLoader, Vector2, Vector3 } from 'three';
+import { AdditiveBlending, BufferAttribute, BufferGeometry, CustomBlending, DataTexture, DynamicDrawUsage, ImageLoader, LinearFilter, OneFactor, OneMinusSrcAlphaFactor, PlaneGeometry, ShaderMaterial, SRGBColorSpace, TextureLoader, Vector2, Vector3 } from 'three';
 import { useSectionAnchor } from '@/3d/hooks/useSectionAnchor';
 import { bandPoints, leaveBeat, logoBeat, logoDistance, partPlacement, SDF_RANGE, U_OUT, U_RIM } from '@/3d/utils/logoReveal';
 import { useSkillsStore } from '@/stores/useSkillsStore';
 import { advanceSymbolPool, createSymbolPool, resetSymbolPool, setSymbolTarget, SYMBOL_LOGOS, SYMBOL_POOL_COUNT, SYMBOL_TARGETS } from '@/3d/utils/symbolMorph';
 
-const urls = import.meta.glob('../../../outputs/redesign/r0.2/logos/mono/*', { eager: true, query: '?url', import: 'default' });
+const marks = import.meta.glob('../data/logoMarks/*.png', { eager: true, query: '?url', import: 'default' });
 const vertex = /* glsl */ `
   attribute float aSize;
   attribute float aWeight;
@@ -58,8 +58,9 @@ const glowFragment = /* glsl */ `
     gl_FragColor = vec4(vec3(1.0), alpha * uOpacity);
   }
 `;
-// Skills logo as an eclipse: the tile darkens the sky, a thin limb and an amber corona breathe around it.
-const LOGO_EXPAND = 1.7;
+// Skills logo as an eclipse: the bare mark darkens the sky, a thin limb and an amber corona breathe around it.
+// The plane is square and wide, and the corona fades out in a circle, so its rays never meet an edge.
+const LOGO_EXPAND = 3;
 const logoVertex = /* glsl */ `
   varying vec2 vUv;
   void main() {
@@ -68,14 +69,12 @@ const logoVertex = /* glsl */ `
   }
 `;
 const logoFragment = /* glsl */ `
-  uniform sampler2D map;
   uniform sampler2D uSdf;
   uniform vec2 uHalf;
   uniform vec3 uBead;
   uniform float uSilhouette;
   uniform float uCorona;
   uniform float uFade;
-  uniform float uTile;
   uniform float uTime;
   uniform float uSeed;
   varying vec2 vUv;
@@ -86,29 +85,28 @@ const logoFragment = /* glsl */ `
     return mix(mix(hash(i), hash(i + vec2(1.0, 0.0)), f.x), mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0)), f.x), f.y);
   }
   void main() {
-    vec2 p = (vUv - 0.5) * 2.0 * uHalf * ${LOGO_EXPAND.toFixed(2)};
+    vec2 p = (vUv - 0.5) * ${(2 * LOGO_EXPAND).toFixed(1)};
     vec2 uv = clamp(p / (2.0 * uHalf) + 0.5, 0.0, 1.0);
     float beyond = length(max(abs(p) - uHalf, 0.0));
     float d = (texture2D(uSdf, uv).r - 0.5) * ${(2 * SDF_RANGE).toFixed(2)} + beyond;
-    float aa = max(fwidth(d), 1e-4);
+    float aa = max(fwidth(d), 1e-4) * 0.75;
     float inside = 1.0 - smoothstep(-aa, aa, d);
-    vec4 tex = beyond > 0.0 ? vec4(0.0) : texture2D(map, uv);
-    float ink = tex.a * smoothstep(0.35, 0.6, dot(tex.rgb, vec3(0.2126, 0.7152, 0.0722))) * uTile;
-    float o = max(d, 0.0);
-    vec2 dir = p / max(length(p), 1e-4);
-    float rays = noise(dir * 5.0 + vec2(uSeed, uTime * 0.07)) * 0.6 + noise(dir * 13.0 - vec2(uTime * 0.05, uSeed)) * 0.4;
-    rays = pow(rays, 3.0) * 2.2;
-    float breathe = 0.85 + 0.15 * sin(uTime * 1.3 + uSeed);
-    float glow = (exp(-o * 16.0) * 0.5 + exp(-o * 4.5) * 0.1 + rays * exp(-o * 3.2) * 0.35) * breathe;
-    float limb = exp(-abs(d) * 110.0);
+    float o = max(d, 0.0), r = length(p);
+    vec2 dir = p / max(r, 1e-4);
+    // Streamers: angular noise, each with its own reach, drifting slowly like a real corona.
+    float streak = noise(dir * 4.0 + vec2(uSeed, uTime * 0.06)) * 0.65 + noise(dir * 11.0 + vec2(uTime * 0.04, uSeed * 1.7)) * 0.35;
+    streak = pow(streak, 2.4) * 2.0;
+    float reach = mix(5.5, 1.6, clamp(streak, 0.0, 1.0));
+    float glow = exp(-o * 18.0) * 0.45 + exp(-o * 4.0) * 0.045 + streak * exp(-o * reach) * 0.21;
+    glow *= 0.88 + 0.12 * sin(uTime * 1.1 + uSeed);
+    float limb = exp(-abs(d) * 120.0);
     vec3 amber = vec3(1.0, 0.7, 0.36), warm = vec3(1.0, 0.93, 0.82);
     vec3 color = (amber * glow * (1.0 - inside) + warm * limb * 0.8) * uCorona;
     float bead = length(p - uBead.xy);
     color += uBead.z * (warm * exp(-bead * 26.0) * 1.4 + amber * exp(-bead * 7.0) * 0.45);
+    color *= 1.0 - smoothstep(0.55, 0.98, r / ${LOGO_EXPAND.toFixed(1)});
     float alpha = inside * uSilhouette;
-    color += (vec3(0.016, 0.02, 0.03) + warm * ink * 0.5) * alpha;
-    vec2 border = min(vUv, 1.0 - vUv);
-    color *= smoothstep(0.0, 0.12, min(border.x, border.y));
+    color += vec3(0.016, 0.02, 0.03) * alpha;
     gl_FragColor = vec4(color, alpha) * uFade;
   }
 `;
@@ -249,9 +247,8 @@ function revealLogos(data, refs, gl, time, delta, frozen) {
     if (!mesh.visible) continue;
     const step = current ? beat : away.beat ?? beat, band = current ? active : gone;
     const { x, y, scale } = partPlacement(owner, current ? part : oldPart, current ? pool.phase : away.phase);
-    const longest = Math.max(logo.width, logo.height);
     mesh.position.set(x, y, 0.015);
-    mesh.scale.set(scale * logo.width / longest * LOGO_EXPAND, scale * logo.height / longest * LOGO_EXPAND, 1);
+    mesh.scale.set(scale * LOGO_EXPAND, scale * LOGO_EXPAND, 1);
     const u = material.uniforms, end = band.points.end;
     u.uSilhouette.value = step.silhouette; u.uCorona.value = step.corona; u.uFade.value = current ? 1 : leave.logo;
     u.uTime.value = time;
@@ -325,8 +322,8 @@ export function SymbolStars({ anchor, target = null, active = true, frozen = fal
       const longest = Math.max(logo.width, logo.height);
       return new ShaderMaterial({ vertexShader: logoVertex, fragmentShader: logoFragment, transparent: true, depthWrite: false, toneMapped: false,
         blending: CustomBlending, blendSrc: OneFactor, blendDst: OneMinusSrcAlphaFactor,
-        uniforms: { map: { value: null }, uSdf: { value: null }, uHalf: { value: new Vector2(logo.width / longest, logo.height / longest) },
-          uBead: { value: new Vector3() }, uSilhouette: { value: 0 }, uCorona: { value: 0 }, uFade: { value: 1 }, uTile: { value: 0 },
+        uniforms: { uSdf: { value: null }, uHalf: { value: new Vector2(logo.width / longest, logo.height / longest) },
+          uBead: { value: new Vector3() }, uSilhouette: { value: 0 }, uCorona: { value: 0 }, uFade: { value: 1 },
           uTime: { value: 0 }, uSeed: { value: i * 7.31 } } });
     });
     const bands = [createBand(), createBand()].map(band => ({ ...band, material: new ShaderMaterial({ vertexShader: bandVertex,
@@ -338,24 +335,20 @@ export function SymbolStars({ anchor, target = null, active = true, frozen = fal
 
   useEffect(() => {
     runtime.current = resources;
-    const loader = new TextureLoader();
+    const loader = new ImageLoader();
     let alive = true;
-    const textures = SYMBOL_LOGOS.map((logo, i) => loader.load(urls[`../../../${logo.path}`], texture => {
-      if (!alive) { texture.dispose(); return; }
-      texture.colorSpace = SRGBColorSpace;
-      const material = resources.logoMaterials[i], distance = logoDistance(texture.image, logo);
-      const sdf = new DataTexture(distance.data, distance.width, distance.height);
+    // Only the mark's shape is needed: it becomes a signed-distance field once, on load.
+    SYMBOL_LOGOS.forEach((logo, i) => loader.load(marks[`../data/logoMarks/${logo.id}.png`], image => {
+      if (!alive) return;
+      const distance = logoDistance(image, logo), sdf = new DataTexture(distance.data, distance.width, distance.height);
       sdf.minFilter = sdf.magFilter = LinearFilter;
       sdf.needsUpdate = true;
       resources.sdfs[i] = sdf;
-      material.uniforms.map.value = texture;
-      material.uniforms.uSdf.value = sdf;
-      material.uniforms.uTile.value = distance.tile ? 1 : 0;
+      resources.logoMaterials[i].uniforms.uSdf.value = sdf;
     }));
     return () => {
       alive = false;
       runtime.current = null;
-      textures.forEach(texture => texture.dispose());
       resources.stars.dispose(); resources.links.dispose(); resources.halo.dispose(); resources.plane.dispose();
       resources.logoMaterials.forEach(material => material.dispose());
       resources.sdfs.forEach(sdf => sdf?.dispose());
@@ -420,7 +413,8 @@ export function SymbolStars({ anchor, target = null, active = true, frozen = fal
       }
       data.links.setDrawRange(0, edges.length * 2);
     } else data.links.setDrawRange(0, 0);
-    lines.current.material.opacity = pool.lines * (education ? .55 : .12) * (1 - pool.logo * .65);
+    // Logo constellations give way to the eclipse entirely, so no thread crosses between its strokes.
+    lines.current.material.opacity = pool.lines * (education ? .55 : .12) * (1 - pool.logo);
     glow.current.visible = education && pool.lines > 0;
     data.glowUniforms.uOpacity.value = pool.lines;
     data.glowUniforms.uDpr.value = gl.getPixelRatio();
@@ -438,9 +432,10 @@ export function SymbolStars({ anchor, target = null, active = true, frozen = fal
     <mesh ref={glow} name="education-link-glow" geometry={resources.halo} visible={false} frustumCulled={false} renderOrder={1}>
       <shaderMaterial vertexShader={glowVertex} fragmentShader={glowFragment} uniforms={resources.glowUniforms} transparent depthWrite={false} />
     </mesh>
+    {/* After the chapter sky (render orders up to 9), so the eclipse really occludes the nebula behind it. */}
     {SYMBOL_LOGOS.map((logo, i) => <mesh key={logo.id} ref={mesh => { meshes.current[i] = mesh; }} name={`symbol-logo-${logo.id}`}
-      geometry={resources.plane} material={resources.logoMaterials[i]} visible={false} renderOrder={4} />)}
+      geometry={resources.plane} material={resources.logoMaterials[i]} visible={false} renderOrder={10} />)}
     {resources.bands.map((band, i) => <mesh key={i} ref={mesh => { bandMeshes.current[i] = mesh; }} name={`symbol-band-${i}`}
-      geometry={band.geometry} material={band.material} visible={false} frustumCulled={false} renderOrder={5} />)}
+      geometry={band.geometry} material={band.material} visible={false} frustumCulled={false} renderOrder={11} />)}
   </group></group>;
 }

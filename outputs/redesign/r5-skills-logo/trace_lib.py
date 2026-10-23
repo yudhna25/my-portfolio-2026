@@ -1,8 +1,4 @@
-"""Trace ordered outline loops of each Skills logo from its raster (see dump.mjs).
-
-Output units match symbolTargets.json: the logo's longest side spans 2 units, y up.
-Ink = the bright mark; tile = the app-icon tile when a logo has one.
-"""
+"""Marching-squares outline loops shared by marks.py."""
 import base64, json, sys
 import numpy as np
 
@@ -59,35 +55,3 @@ def resample(loop, step):
     s = np.linspace(0, d[-1], n, endpoint=False)
     return np.c_[np.interp(s, d, p[:, 0]), np.interp(s, d, p[:, 1])]
 
-raster = json.load(open(sys.argv[1]))
-out = {}
-for key, item in raster.items():
-    w, h = item['w'], item['h']
-    a = np.frombuffer(base64.b64decode(item['rgba']), np.uint8).reshape(h, w, 4).astype(np.float64) / 255
-    lum = a[..., :3] @ [.2126, .7152, .0722]
-    tile = a[..., 3]
-    ink = tile * np.clip((lum - .31) / .24, 0, 1)
-    fields = [ink]
-    if np.abs(tile - ink).mean() > .05: fields.insert(0, tile)
-    m = max(w, h)
-    shapes = []
-    for field in fields:
-        for loop in loops(blur(field)):
-            r = resample(loop, m / 80)
-            if r is None: continue
-            x = (r[:, 0] - w / 2) / m * 2
-            y = (h / 2 - r[:, 1]) / m * 2
-            pts = np.c_[x, y]
-            i = int(np.argmin(pts[:, 0]))
-            shapes.append(np.roll(pts, -i, axis=0))
-    # A tile with a bright rim traces twice; keep one outline per box.
-    boxes, kept = [], []
-    for s in shapes:
-        box = np.r_[s.min(0), s.max(0)]
-        if any(np.abs(box - b).max() < .12 for b in boxes): continue
-        boxes.append(box); kept.append(s)
-    kept.sort(key=lambda s: s[0, 0])
-    # Flat integer pairs in thousandths of a unit keep the bundle small.
-    out[key] = [[int(round(v * 1000)) for p in s for v in p] for s in kept]
-    print(key, len(out[key]))
-json.dump(out, open(sys.argv[2], 'w'), separators=(',', ':'))

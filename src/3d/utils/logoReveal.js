@@ -1,7 +1,7 @@
-import contours from '@/3d/data/logoContours.json';
+import marks from '@/3d/data/logoMarks.json';
 
-// Outline loops per logo, in symbolTargets units (longest side spans 2, y up). Traced by outputs/redesign/r5-skills-logo.
-export const LOGO_LOOPS = Object.fromEntries(Object.entries(contours).map(([id, loops]) => [id, loops.map(flat => {
+// Outline loops per logo mark, in mark units (longest side spans 2, y up). Built by outputs/redesign/r5-skills-logo.
+export const LOGO_LOOPS = Object.fromEntries(Object.entries(marks).map(([id, mark]) => [id, mark.loops.map(flat => {
   const loop = [];
   for (let i = 0; i < flat.length; i += 2) loop.push([flat[i] / 1000, flat[i + 1] / 1000]);
   return loop;
@@ -94,9 +94,9 @@ export function bandPoints(target, phase, route, out) {
   return out;
 }
 
-// Signed distance to the logo's tile (or its ink when it has no tile), in the same units, packed into a byte texture.
+// Signed distance to the logo mark, in mark units, packed into a byte texture.
 export const SDF_RANGE = 0.6;
-export function logoDistance(image, logo, size = 128) {
+export function logoDistance(image, logo, size = 192) {
   const longest = Math.max(logo.width, logo.height);
   const width = Math.max(8, Math.round(size * logo.width / longest)), height = Math.max(8, Math.round(size * logo.height / longest));
   const canvas = document.createElement('canvas');
@@ -105,12 +105,7 @@ export function logoDistance(image, logo, size = 128) {
   context.drawImage(image, 0, 0, width, height);
   const pixels = context.getImageData(0, 0, width, height).data;
   const inside = new Uint8Array(width * height);
-  let dark = 0, solid = 0;
-  for (let i = 0; i < inside.length; i++) {
-    inside[i] = pixels[i * 4 + 3] > 127 ? 1 : 0;
-    solid += inside[i];
-    if (inside[i] && pixels[i * 4] + pixels[i * 4 + 1] + pixels[i * 4 + 2] < 230) dark++;
-  }
+  for (let i = 0; i < inside.length; i++) inside[i] = pixels[i * 4 + 3] > 127 ? 1 : 0;
   const chamfer = wanted => {
     const d = new Float32Array(width * height);
     for (let i = 0; i < d.length; i++) d[i] = inside[i] === wanted ? 0 : 1e6;
@@ -137,6 +132,5 @@ export function logoDistance(image, logo, size = 128) {
     data[o] = Math.round(Math.max(0, Math.min(1, 0.5 + 0.5 * signed / SDF_RANGE)) * 255);
     data[o + 3] = 255;
   }
-  // App-icon tiles keep their bright letterforms faintly lit inside the eclipse.
-  return { data, width, height, tile: dark > solid * 0.2 };
+  return { data, width, height };
 }

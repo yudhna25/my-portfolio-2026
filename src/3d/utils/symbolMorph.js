@@ -1,10 +1,12 @@
 import data from '@/3d/data/symbolTargets.json';
+import marks from '@/3d/data/logoMarks.json';
 
 export const SYMBOL_POOL_COUNT = data.poolCount;
 export const SYMBOL_TOOL_IDS = ['figma', 'photoshop', 'illustrator', 'after-effects', 'premiere-pro', 'davinci-resolve', 'ai'];
 export const SYMBOL_EDUCATION_IDS = ['saigonUniversity', 'greenAcademy', 'arenaMultimedia'];
-export const SYMBOL_LOGOS = data.logos;
-const logos = Object.fromEntries(data.logos.map(logo => [logo.id, logo]));
+// Each logo is shown as its bare mark (no app-icon tile): size, star points and outline come from logoMarks.json.
+export const SYMBOL_LOGOS = data.logos.map(logo => ({ ...logo, ...marks[logo.id] }));
+const logos = Object.fromEntries(SYMBOL_LOGOS.map(logo => [logo.id, logo]));
 
 // Prepared once. Only the small stage pool morphs; StarField keeps its own shell.
 export const SYMBOL_TARGETS = Object.fromEntries([
