@@ -177,6 +177,7 @@
     "headingAccent": "Tinh Vân"
   },
   "education": {
+    "sectionLabel": "Stellar Nursery",
     "heading": "Bản Đồ Sao",
     "institutions": {
       "saigonUniversity": {
@@ -198,15 +199,13 @@
         "description": "Loại Distinction. Trọng tâm: VFX compositing, motion graphics. Học viên xuất sắc — Premiere & After Effects."
       }
     },
-    "mapNote": "Ba hướng học tập song song, cùng nuôi dưỡng tư duy thiết kế.",
-    "interactionHint": "Di chuột hoặc dùng Tab để đánh thức một chòm sao. Chạm để chọn; chạm nền hoặc Escape để bỏ chọn.",
-    "clearSelection": "Tan về nền sao",
+    "mapNote": "Ba vùng sinh sao trên cùng một cánh tay thiên hà, nơi tư duy thiết kế lần đầu bắt sáng.",
+    "interactionHint": "Cuộn theo cánh tay thiên hà, hoặc di chuột, dùng Tab hay chạm vào một trường để đánh thức vùng sinh sao của nó. Chạm nền hoặc nhấn Escape để bỏ chọn.",
     "constellationNames": {
       "Orion": "Orion",
       "Scorpius": "Scorpius",
       "Leo": "Leo"
     },
-    "figureLabel": "{{school}} — {{constellation}}",
     "headingAccent": "Sao"
   },
   "experience": {

@@ -177,6 +177,7 @@
     "headingAccent": "Nebula"
   },
   "education": {
+    "sectionLabel": "Stellar Nursery",
     "heading": "Star Map",
     "institutions": {
       "saigonUniversity": {
@@ -198,15 +199,13 @@
         "description": "Distinction. Focus: VFX compositing, motion graphics. Top-performing student — Premiere & After Effects."
       }
     },
-    "mapNote": "Three overlapping paths of study, shaping one design practice.",
-    "interactionHint": "Hover or use Tab to awaken a constellation. Tap to select; tap the background or press Escape to clear.",
-    "clearSelection": "Return to the star field",
+    "mapNote": "Three star-forming regions along one galactic arm, where a design practice first caught light.",
+    "interactionHint": "Scroll along the galactic arm, or hover, Tab to or tap a school to wake its star-forming region. Tap the background or press Escape to clear.",
     "constellationNames": {
       "Orion": "Orion",
       "Scorpius": "Scorpius",
       "Leo": "Leo"
     },
-    "figureLabel": "{{school}} — {{constellation}}",
     "headingAccent": "Map"
   },
   "experience": {
