@@ -179,7 +179,7 @@ function Portfolio({ restore }) {
           <div data-story-chapter="about"><About portrait={portrait} /></div>
           <div ref={reading} data-story-content className="invisible">
             <div data-story-chapter="skills"><Skills stageRef={skillsStage} /></div>
-            <div data-story-chapter="education"><Education stageRefs={educationStages} /></div>
+            <div data-story-chapter="education"><Education /></div>
             <div data-story-chapter="experience"><Experience onLayout={captureMeteorLayout} /></div>
             <div data-story-chapter="works"><Work layoutRef={worksLayout} /></div>
             <div data-story-chapter="finale" aria-hidden="true" className={staticMotion ? 'min-h-0' : 'min-h-[400vh]'} />
