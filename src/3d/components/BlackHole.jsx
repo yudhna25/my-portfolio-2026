@@ -49,7 +49,7 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
     const material = new ShaderMaterial({
       vertexShader: BLACK_HOLE_VERT,
       fragmentShader: BLACK_HOLE_FRAG,
-      defines: { TRACE_STEPS: tier.steps, TRACE_STEP: tier.step },
+      defines: { TRACE_STEPS: tier.steps, TRACE_STEP: tier.step, DISK_OCTAVES: tier.octaves, DISK_CROSSINGS: tier.crossings },
       uniforms: {
         uTime: { value: 0 },
         uDiskIntensity: { value: 1 },

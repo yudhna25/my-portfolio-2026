@@ -45,11 +45,16 @@ export const BLACK_HOLE_FRAG = /* glsl */ `
   uniform mat4 uInverseProjection;
   uniform mat3 uDiskFrame;
   uniform float uDiskWarm;
+  // Angular speed at the innermost stable orbit (rad/s) and the flow-layer period (s).
+  #define DISK_SPIN 0.85
+  #define DISK_FLOW 7.0
   ${PORTAL_IMAGE_GLSL}
-  // Finale/Contact grade: dim gas glows amber, the hottest lanes stay near white.
-  vec3 diskColor(float light) {
-    vec3 warm = light * mix(vec3(1.7, 0.86, 0.32), vec3(1.3, 1.14, 0.94), smoothstep(0.2, 1.4, light));
-    return mix(vec3(light), warm, uDiskWarm);
+  // Soft amber blackbody seen through the disk's own glare: embers, orange, gold,
+  // warm cream at the hottest inner lanes. Never blue-white, never saturated red.
+  vec3 diskPalette(float t) {
+    vec3 c = mix(vec3(0.62, 0.17, 0.03), vec3(1.0, 0.43, 0.10), smoothstep(0.05, 0.42, t));
+    c = mix(c, vec3(1.0, 0.64, 0.27), smoothstep(0.38, 0.74, t));
+    return mix(c, vec3(1.0, 0.84, 0.60), smoothstep(0.72, 1.2, t));
   }
   varying vec2 vUv;
 
@@ -70,29 +75,60 @@ export const BLACK_HOLE_FRAG = /* glsl */ `
     return noise(p) * 0.55 + noise(p * 2.03) * 0.3 + noise(p * 4.01) * 0.15;
   }
   ${FORMATION_GLSL}
-  float diskEmission(vec3 p, vec3 ray) {
-    float r = length(p.xz);
+  // Gas streaks, periodic in angle: radially fine, azimuthally long. Octaves finer
+  // than the pixel footprint settle to their mean instead of aliasing into rings.
+  float diskGas(float r, float phase, float seed, float footprint) {
+    vec3 q = vec3(r * 2.4 + seed, cos(phase) * 1.7, sin(phase) * 1.7);
+    float sum = 0.0, amplitude = 0.5, scale = 2.4;
+    for (int i = 0; i < DISK_OCTAVES; i++) {
+      float keep = 1.0 - smoothstep(0.25, 0.75, footprint * scale);
+      sum += amplitude * mix(0.5, noise(q), keep);
+      q = q * vec3(2.3, 2.0, 2.0) + vec3(1.7, 3.1, 0.6);
+      amplitude *= 0.5; scale *= 2.3;
+    }
+    return sum / (1.0 - amplitude * 2.0);
+  }
+  // Emission (rgb) and opacity (a) where a ray crosses the disk plane.
+  vec4 diskEmission(vec3 p, vec3 ray, float footprint) {
+    float r = length(p);
     float angle = atan(p.z, p.x);
-    // Keplerian shear: inner lanes move faster, bright knots are stretched.
-    float phase = angle + uTime * 0.65 * pow(3.0 / r, 1.5);
-    vec3 domain = vec3(r * 1.35, cos(phase) * 8.0, sin(phase) * 8.0);
-    float knots = turbulence(domain);
-    float lanePhase = r * 13.0 + knots * 9.0 + sin(phase * 3.0 + r) * 0.7;
-    float finePhase = r * 38.0 + noise(domain * 2.7) * 7.0;
-    // Filter only subpixel frequencies; preserve resolved detail during the approach.
-    float lane = sin(lanePhase) * (1.0 - smoothstep(0.8, 3.0, fwidth(lanePhase)));
-    float fine = sin(finePhase) * (1.0 - smoothstep(0.8, 3.0, fwidth(finePhase)));
-    float bands = 0.10 + 0.64 * pow(0.5 + 0.5 * lane, 2.0)
-      + 0.26 * pow(0.5 + 0.5 * fine, 3.0);
-    float profile = pow(3.0 / r, 3.2) * smoothstep(3.0, 3.25, r)
-      * (1.0 - smoothstep(5.5, 9.0, r));
-    float speed = sqrt(0.5 / (r - 1.0));
+    // Keplerian shear: inner lanes turn faster. Two staggered flow layers restart
+    // in turn, each faded out at its reset, so the shear never winds the gas into
+    // ever finer rings however long the page is open.
+    float omega = DISK_SPIN * pow(3.0 / max(r, 2.2), 1.5);
+    float cycle = uTime / DISK_FLOW;
+    float ta = fract(cycle), tb = fract(cycle + 0.5);
+    float wa = 1.0 - abs(2.0 * ta - 1.0), wb = 1.0 - wa;
+    float base = uTime * DISK_SPIN * 0.12;
+    float ga = diskGas(r, angle + base + omega * ta * DISK_FLOW, floor(cycle) * 7.31, footprint);
+    float gb = diskGas(r, angle + base + omega * tb * DISK_FLOW, floor(cycle + 0.5) * 7.31 + 3.7, footprint);
+    // Restore the contrast the crossfade averages away.
+    float gas = 0.5 + (ga * wa + gb * wb - 0.5) / sqrt(wa * wa + wb * wb);
+    float streak = smoothstep(0.30, 0.80, gas);
+    // Hot knots: shorter clumps riding the same two flows, faded below a pixel.
+    float knotScale = 1.0 - smoothstep(0.2, 0.6, footprint * 9.0);
+    float ka = noise(vec3(r * 9.0 + floor(cycle) * 5.1, cos(angle + base + omega * ta * DISK_FLOW) * 4.5, sin(angle + base + omega * ta * DISK_FLOW) * 4.5));
+    float kb = noise(vec3(r * 9.0 + floor(cycle + 0.5) * 5.1 + 2.3, cos(angle + base + omega * tb * DISK_FLOW) * 4.5, sin(angle + base + omega * tb * DISK_FLOW) * 4.5));
+    float knots = mix(1.0, 0.55 + 0.9 * smoothstep(0.35, 0.9, 0.5 + (ka * wa + kb * wb - 0.5) / sqrt(wa * wa + wb * wb)), knotScale);
+    // Broad annuli breathe under the streaks; low frequency, never a vinyl groove.
+    float annuli = 0.78 + 0.22 * sin(r * 4.3 + gas * 5.0);
+    float inner = smoothstep(2.95, 3.3, r);
+    float profile = pow(3.0 / r, 2.6) * inner * (1.0 - smoothstep(5.8, 9.0, r));
+    // Gas past the innermost stable orbit spirals in as faint, reddened threads.
+    float plunge = smoothstep(1.7, 3.0, r) * (1.0 - inner) * 0.16;
+    float density = (profile * annuli + plunge) * (0.22 + 1.55 * streak * streak) * knots;
+    float orbit = max(r, 3.0);
+    float speed = sqrt(0.5 / (orbit - 1.0));
     vec3 velocity = vec3(p.z, 0.0, -p.x) / r;
     float towardObserver = dot(velocity, -normalize(ray));
-    float shift = sqrt((1.0 - 1.0 / r) / (1.0 - 1.0 / length(uObserver)))
+    float shift = sqrt(max(1.0 - 1.0 / r, 0.02) / (1.0 - 1.0 / length(uObserver)))
       * sqrt(1.0 - speed * speed) / (1.0 - speed * towardObserver);
-    // Relativistic beaming, monochrome at the user's explicit preference.
-    return uDiskIntensity * 2.8 * profile * bands * (0.4 + 0.9 * knots * knots) * pow(shift, 3.0);
+    // Observed temperature: hotter inward, blue-shifted (here: whiter) where the gas
+    // approaches, redder where it recedes; the finale grade leans it to embers.
+    float temperature = pow(3.0 / orbit, 0.62) * shift * (0.86 + 0.28 * streak) - 0.12 * uDiskWarm;
+    float intensity = uDiskIntensity * 2.5 * density * pow(shift, 3.0);
+    float opacity = clamp((inner * (1.0 - smoothstep(6.5, 9.0, r)) * (0.30 + 0.75 * streak) + plunge) * 1.1, 0.0, 0.94);
+    return vec4(diskPalette(temperature) * intensity, opacity);
   }
   vec3 acceleration(vec3 p, float angularMomentum2) {
     // RK4 substages can cross the horizon; bound gravity before any division.
@@ -131,10 +167,14 @@ export const BLACK_HOLE_FRAG = /* glsl */ `
     float momentum2 = dot(momentum, momentum);
     // No emission beyond r=9: b=9/sqrt(1-1/9)=9.546 cannot reach the disk.
     if (sqrt(momentum2) > 9.6 || (observerRadius > 9.0 && dot(p, v) > 0.0)) { gl_FragColor = formation; return; }
-    float light = 0.0;
+    vec3 light = vec3(0.0);
+    float transmit = 1.0;
     float coverage = 0.0;
+    int crossings = 0;
     float impact = sqrt(momentum2);
     float rimWidth = max(fwidth(impact), 0.0005);
+    // Pixel footprint on the disk, taken here in uniform control flow.
+    float footprint = rimWidth * 1.6;
     vec3 diskNormal = vec3(uDiskFrame[0].y, uDiskFrame[1].y, uDiskFrame[2].y);
     for (int i = 0; i < TRACE_STEPS; i++) {
       vec3 previous = p;
@@ -159,14 +199,19 @@ export const BLACK_HOLE_FRAG = /* glsl */ `
         }
         vec3 hit = previous + t * (c1 + t * (c2 + t * c3));
         float diskRadius = length(hit);
-        if (diskRadius >= 3.0 && diskRadius <= 9.0) {
-          light = diskEmission(uDiskFrame * hit, uDiskFrame * mix(previousVelocity, v, t));
-          coverage = 1.0;
-          break;
+        if (diskRadius >= 1.7 && diskRadius <= 9.0) {
+          // The disk is translucent: rays pass on to its lensed far side and to the
+          // higher-order images that thread the photon ring, each one demagnified.
+          vec4 gas = diskEmission(uDiskFrame * hit, uDiskFrame * mix(previousVelocity, v, t),
+            footprint * pow(23.0, float(crossings)));
+          light += transmit * gas.rgb;
+          transmit *= 1.0 - gas.a;
+          crossings++;
+          if (transmit < 0.04 || crossings >= DISK_CROSSINGS) { coverage = 1.0 - transmit; break; }
         }
       }
       if (radius < 1.01) { coverage = 1.0; break; }
-      if (radius > max(observerRadius + 1.0, 24.0) && dot(p, v) > 0.0) break;
+      if (radius > max(observerRadius + 1.0, 24.0) && dot(p, v) > 0.0) { coverage = 1.0 - transmit; break; }
       // Critical rays beyond the finite budget must not expose background stars.
       if (i == TRACE_STEPS - 1) coverage = 1.0;
     }
@@ -175,13 +220,17 @@ export const BLACK_HOLE_FRAG = /* glsl */ `
     float rim = exp(-pow((impact - 2.598076) / rimWidth, 2.0))
       * smoothstep(2.598076 - rimWidth * 0.4, 2.598076 + rimWidth * 0.4, impact)
       * step(dot(direction, radial), 0.0);
-    light += rim * 1.65 * uDiskIntensity;
+    light += rim * 0.85 * uDiskIntensity * diskPalette(1.05);
     coverage = max(coverage, rim);
+    // Light is already premultiplied by the disk's own opacity; keep a little cover
+    // under faint translucent gas so the half-float division stays finite.
+    float glow = max(light.r, max(light.g, light.b));
+    coverage = max(coverage, min(glow * 0.25, 1.0));
     float holeAlpha = coverage * aperture * birth;
-    if (uOpening.x > 0.5 && light < 0.00001) holeAlpha = coverage * aperture
+    if (uOpening.x > 0.5 && dot(light, vec3(1.0)) < 0.00001) holeAlpha = coverage * aperture
       * (uFinaleEnabled > 0.5 ? smoothstep(0.0, 0.2, uFinaleHole) : smoothstep(0.40, 0.44, uOpening.y));
     float a = holeAlpha + formation.a * (1.0 - holeAlpha);
-    gl_FragColor = vec4((diskColor(light) * holeAlpha + formation.rgb * formation.a * (1.0 - holeAlpha)) / max(a, 0.00001), a);
+    gl_FragColor = vec4((light * aperture * birth + formation.rgb * formation.a * (1.0 - holeAlpha)) / max(a, 0.00001), a);
   }
 `;
 

@@ -106,7 +106,7 @@ export const FORMATION_GLSL = /* glsl */ `
     float threads = pow(0.5 + 0.5 * sin(angle * 47.0 + prominence * 16.0 + outside * 8.0), 4.0);
     float corona = exp(-outside * (15.0 - plume * 9.0)) * (0.06 + plume * 0.6 + threads * plume * 0.22);
     corona *= (1.0 - surface) * (1.0 + compression * 0.4) * (1.0 - smoothstep(0.38, 0.60, time));
-    // A rotating, inclined envelope feeds the very same ray-traced disk below.
+    // A rotating, inclined amber envelope feeds the very same ray-traced disk below.
     vec2 disk = mat2(0.573576, -0.819152, 0.819152, 0.573576) * px;
     disk.y /= mix(0.90, 0.19, collapse);
     float r = length(disk);
@@ -122,7 +122,7 @@ export const FORMATION_GLSL = /* glsl */ `
     // The ray-traced horizon owns the shadow; no second painted circular hole.
     corona *= arrive;
     float a = clamp(surface * life + corona + gas, 0.0, 1.0);
-    vec3 light = vec3(luminance) * surface * life + vec3(1.05) * corona + vec3(0.72) * gas;
+    vec3 light = vec3(luminance) * surface * life + vec3(1.05) * corona + vec3(0.86, 0.58, 0.30) * gas;
     // Hot plasma grade: dim filaments burn orange, the brightest knots stay white-gold.
     float heat = smoothstep(0.25, 1.1, dot(light, vec3(0.333)));
     light *= mix(vec3(1.0), mix(vec3(1.35, 0.62, 0.26), vec3(1.08, 0.98, 0.86), heat), uDiskWarm);
