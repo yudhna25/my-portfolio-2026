@@ -159,7 +159,7 @@ export function storyCameraPath(chapter, progress, target = {}, frozen = false, 
   switch (chapter) {
     case 'portal':
       if (p < 0.47) { from = HERO; to = CLOSE; p = clampStoryProgress(p / 0.44); }
-      else { from = CLOSE; to = ABOUT; p = clampStoryProgress((p - 0.50) / 0.44); }
+      else { from = CLOSE; to = ABOUT; p = clampStoryProgress((p - 0.56) / 0.38); }
       break;
     case 'about': from = to = ABOUT; break;
     case 'contact': from = to = CONTACT; break;

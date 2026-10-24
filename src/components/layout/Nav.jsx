@@ -9,7 +9,6 @@ import { SoundToggle } from '@/components/ui/SoundToggle';
 import { playRadioClick } from '@/lib/audioEngine';
 import { navigateRoute, pushMainAnchor } from '@/stores/useRouteStore';
 import { portalProgress, portalState } from '@/3d/utils/portal';
-import { createPortalTrails } from '@/components/effects/portalTrails';
 
 const focusRing = 'focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4';
 
@@ -64,17 +63,13 @@ export function Nav({ onMenuClick, menuOpen = false, reader = false }) {
 
   useGSAP(() => {
     const stage = root.current.querySelector('[data-portal-controls]');
-    let active = true;
     const phase = {};
     gsap.set(stage, { transform: 'none', opacity: 1 });
     const opacity = gsap.quickSetter(stage, 'opacity');
-    const trails = !reader && !menuOpen && !reducedMotion && !fallback
-      ? createPortalTrails([...stage.querySelectorAll('nav a, nav button')].map(node => ({ node })), 'portal-trails--nav') : null;
     const draw = () => {
       const state = useScrollStore.getState();
       const p = reader || menuOpen ? 0 : portalProgress(state.storyChapter, state.chapterProgress, reducedMotion || fallback);
       portalState(p, phase);
-      trails?.draw(p, state.storyAnchor);
       opacity(phase.controlsOpacity);
       stage.inert = !phase.controlsInteractive;
       stage.dataset.absorbing = String(p > 0 && p < 0.5);
@@ -82,16 +77,9 @@ export function Nav({ onMenuClick, menuOpen = false, reader = false }) {
       stage.style.visibility = phase.controlsOpacity === 0 ? 'hidden' : 'visible';
       if (stage.inert && stage.contains(document.activeElement)) document.getElementById('smooth-content')?.focus({ preventScroll: true });
     };
-    const measure = () => {
-      if (!active) return;
-      trails?.measure();
-      draw();
-    };
-    measure();
+    draw();
     const unsubscribe = useScrollStore.subscribe(draw);
-    window.addEventListener('resize', measure);
-    document.fonts?.ready.then(() => { if (active) measure(); });
-    return () => { active = false; trails?.dispose(); unsubscribe(); window.removeEventListener('resize', measure); };
+    return unsubscribe;
   }, { scope: root, dependencies: [reader, menuOpen, reducedMotion, fallback], revertOnUpdate: true });
 
   function navigate(event, id) {

@@ -15,7 +15,7 @@ export const BLACK_HOLE_VERT = /* glsl */ `
 
 // The HDR pass already traces composed screen pixels; copy/mask never magnify it.
 export const PORTAL_IMAGE_GLSL = /* glsl */ `
-  uniform float uPortalEnabled, uPortalMini, uPortalScale, uPortalVisibility, uPortalDust, uPortalPull;
+  uniform float uPortalEnabled, uPortalMini, uPortalScale, uPortalVisibility;
   uniform vec2 uPortalCenter, uRayCenter, uPortalRadius, uPortalViewport;
   uniform float uFinaleEnabled, uFinaleHole, uFinaleOrigin, uFinaleScale;
   uniform vec4 uFinaleGas;
@@ -371,28 +371,6 @@ export const BLACK_HOLE_COPY = /* glsl */ `
     }
     return vec4(rgb, alpha);
   }
-  // Authored photon echoes bracket the dark crossing; their clock is scroll, not time.
-  float portalEcho(vec2 uv) {
-    float p = uPortalPull;
-    float pull = smoothstep(0.06, 0.18, p) * (1.0 - smoothstep(0.35, 0.43, p));
-    float release = smoothstep(0.50, 0.56, p) * (1.0 - smoothstep(0.75, 0.88, p));
-    if (pull + release < 0.0001 || uOpening.x > 0.5) return 0.0;
-    vec2 px = (uv - uPortalCenter) * uPortalViewport;
-    float r = length(px), angle = atan(px.y, px.x);
-    float core = uPortalRadius.x * (0.48 / 2.8);
-    float eject = clamp((p - 0.50) / 0.38, 0.0, 1.0);
-    float light = 0.0;
-    for (int i = 0; i < 3; i++) {
-      float lane = float(i);
-      float radius = p < 0.5 ? core * (1.22 + lane * 0.32) + 12.0
-        : uPortalViewport.y * (0.035 + pow(eject, 0.8) * (0.6 + lane * 0.15));
-      float wave = sin(angle * 3.0 + p * 18.0 + lane) * radius * 0.012;
-      float line = exp(-pow((r - radius - wave) / max(fwidth(r), 1.1), 2.0));
-      float arc = pow(max(0.0, sin(angle * 2.0 - p * 12.0 + lane * 1.7)), 6.0);
-      light += line * arc / (1.0 + lane);
-    }
-    return light * (pull * 0.32 + release * 0.55);
-  }
   void main() {
     vec4 image = portalImage(uImage, vUv);
     if (uFinaleEnabled > 0.5) {
@@ -404,25 +382,15 @@ export const BLACK_HOLE_COPY = /* glsl */ `
       return;
     }
     if (uPortalEnabled > 0.5) {
-      float a = 1.0 - uPortalVisibility + image.a * uPortalVisibility;
-      vec3 rgb = image.rgb * image.a * uPortalVisibility;
+      // Hidden means transparent: the bridge veil owns the screen while the hole is away.
+      float a = image.a * uPortalVisibility;
+      vec3 rgb = image.rgb * a;
       // The lockup sits behind the hole and its disk.
       vec4 text = openingText(vUv);
       rgb += text.rgb * (1.0 - a);
       a += text.a * (1.0 - a);
-      vec2 dustPx = (vUv - uPortalCenter) * uPortalViewport;
-      float twist = uPortalPull * 0.5 * exp(-length(dustPx) / 120.0);
-      dustPx = mat2(cos(twist), -sin(twist), sin(twist), cos(twist)) * dustPx * (1.0 + uPortalPull * 2.0);
-      vec2 cell = floor(dustPx / 7.0);
-      float grain = fract(sin(dot(cell, vec2(127.1, 311.7))) * 43758.5453);
-      float dust = step(0.99, grain) * exp(-dot(fract(dustPx / 7.0) - 0.5, fract(dustPx / 7.0) - 0.5) * 80.0)
-        * exp(-length(dustPx) / 100.0) * uPortalDust * (1.0 - image.a);
-      a = max(a, dust);
-      rgb += vec3(dust * 0.7);
-      float echo = portalEcho(vUv) * (1.0 - image.a);
-      a = max(a, echo);
-      rgb += vec3(echo * 0.85);
-      gl_FragColor = vec4(rgb / max(a, 0.00001), a);
+      if (a < 0.00001) discard;
+      gl_FragColor = vec4(rgb / a, a);
       return;
     }
     if (image.a < 0.001) discard;

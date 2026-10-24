@@ -33,8 +33,6 @@ export default function About({ portrait }) {
     let active = true;
     const frames = q('[data-about-motion]');
     gsap.set([...frames, ...q('[data-about-group]')], { transform: 'none', opacity: 1 });
-    const groups = q('[data-about-group]').map(node => ({ node, x: 0, y: 0,
-      transform: value => { node.style.transform = value; }, opacity: gsap.quickSetter(node, 'opacity') }));
     const phase = {};
     let range = 0;
     gsap.set(stage, { autoAlpha: 0 });
@@ -56,14 +54,7 @@ export default function About({ portrait }) {
       }
       // Only inner visuals move; section/marker/footprint remain in document flow.
       shifts.forEach(shift => shift(`translateY(${entering ? -(1 - p) * range : 0}px)`));
-      groups.forEach((item, index) => {
-        const start = [0.54, 0.60, 0.66][index], end = [0.78, 0.86, 0.94][index];
-        const t = frozen ? 1 : portalSmooth(start, end, p);
-        const dx = window.innerWidth * 0.5 - item.x, dy = window.innerHeight * 0.45 - item.y;
-        const curve = Math.sin(t * Math.PI) * 0.12 * (1 - t);
-        item.transform(`translate(${dx * (1 - t) - dy * curve}px, ${dy * (1 - t) + dx * curve}px) rotate(${(index - 1) * 12 * (1 - t)}deg) scale(${Math.max(0.015, t * (1 + 0.22 * Math.sin(t * Math.PI)))}, ${Math.max(0.015, t * t)})`);
-        item.opacity(portalSmooth(start, start + 0.09, p));
-      });
+      // The bridge's light echo reveals the chapter shell by shell (see PortalBridge).
       backdrop(phase.aboutOpacity);
       if (portrait && portraitButton.current) {
         const data = portrait.current;
@@ -80,12 +71,10 @@ export default function About({ portrait }) {
     const measure = () => {
       if (!active) return;
       shifts.forEach(shift => shift('none'));
-      groups.forEach(item => item.transform('none'));
       const base = stage.getBoundingClientRect();
       const content = document.getElementById('smooth-content');
       const portal = content?.querySelector('[data-story-chapter="portal"]');
       range = portal ? base.top - portal.getBoundingClientRect().top : 0;
-      groups.forEach(item => { const rect = item.node.getBoundingClientRect(); item.x = rect.left + rect.width / 2; item.y = rect.top - base.top + rect.height / 2; });
       draw();
     };
     measure();
@@ -106,8 +95,8 @@ export default function About({ portrait }) {
   }, { scope: root, dependencies: [frozen, i18n.resolvedLanguage, portrait], revertOnUpdate: true });
 
   return <section ref={root} id="about" aria-labelledby="about-heading" className="relative isolate min-h-screen px-6 py-28 text-(--text-primary) sm:px-8 lg:px-16 lg:py-36">
-    <div data-about-motion data-about-backdrop aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_72%_62%,rgba(7,8,13,0.44)_15%,rgba(7,8,13,0.18)_42%,transparent_78%)]" />
-    <div data-about-motion className="mx-auto grid max-w-7xl grid-cols-12 items-start gap-y-10 lg:gap-x-16 lg:gap-y-8">
+    <div data-about-motion data-echo-mask data-about-backdrop aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_72%_62%,rgba(7,8,13,0.44)_15%,rgba(7,8,13,0.18)_42%,transparent_78%)]" />
+    <div data-about-motion data-echo-mask className="mx-auto grid max-w-7xl grid-cols-12 items-start gap-y-10 lg:gap-x-16 lg:gap-y-8">
       <header data-about-group="heading" className="col-span-12 min-w-0 lg:col-span-7 lg:col-start-6 lg:row-start-1">
         <p className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-(--text-secondary)">{t('about.sectionLabel')}</p>
         <h2 key={i18n.resolvedLanguage} id="about-heading" aria-label={t('hero.name')} className="font-display text-[clamp(1.75rem,5vw,4rem)] font-bold uppercase leading-[1.18] tracking-[-0.035em]">

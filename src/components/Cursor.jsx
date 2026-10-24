@@ -5,7 +5,6 @@ import { gsap } from '@/hooks/useGSAPSetup';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { useScrollStore } from '@/stores/useScrollStore';
 import { portalProgress, portalState } from '@/3d/utils/portal';
-import { createPortalTrails } from '@/components/effects/portalTrails';
 
 const desktopQuery = typeof window === 'undefined'
   ? null
@@ -262,20 +261,15 @@ function DesktopCursor() {
     const phase = {};
     gsap.set(stage, { transform: 'none', opacity: 1 });
     const opacity = gsap.quickSetter(stage, 'opacity');
-    const trails = !reducedMotion && !fallback ? createPortalTrails([
-      { node: stage.querySelector('.gsap-cursor-ring') },
-      { node: stage.querySelector('.gsap-cursor-dot') },
-    ], 'portal-trails--cursor') : null;
     const draw = () => {
       const state = useScrollStore.getState();
       const p = portalProgress(state.storyChapter, state.chapterProgress, reducedMotion || fallback);
       portalState(p, phase);
-      trails?.draw(p, state.storyAnchor, Boolean(lastPointer.current));
       opacity(phase.controlsOpacity);
     };
     draw();
     const unsubscribe = useScrollStore.subscribe(draw);
-    return () => { unsubscribe(); trails?.dispose(); };
+    return unsubscribe;
   }, { scope: root, dependencies: [reducedMotion, fallback], revertOnUpdate: true });
 
   return (

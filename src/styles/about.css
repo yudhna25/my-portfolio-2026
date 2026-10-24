@@ -1,4 +1,12 @@
 @layer components {
+  /* Coming out of the bridge, About is lit by the light echo: a bright leading shell, a
+     fainter one behind it, and everything inside the front already revealed. */
+  [data-echo-mask][data-echo='on'] {
+    --echo-mask: radial-gradient(circle at var(--echo-x) var(--echo-y), #000 calc(var(--echo-r) * 0.8),
+      rgb(0 0 0 / 0.55) calc(var(--echo-r) * 0.9), #000 calc(var(--echo-r) * 0.97), transparent var(--echo-r));
+    mask-image: var(--echo-mask);
+    -webkit-mask-image: var(--echo-mask);
+  }
   [data-portrait][data-stars-ready='true'] .avatar-img { opacity: var(--portrait-photo, 0); }
   @media (prefers-reduced-motion: reduce) {
     [data-portrait][data-stars-ready='true'] .avatar-img { opacity: 1; }
