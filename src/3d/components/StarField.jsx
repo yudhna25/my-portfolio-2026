@@ -176,8 +176,7 @@ export function StarField({ count = QUALITY.high, frozen = false, story = false,
     values.uOpeningZoom.value = !frozen && opening?.current.active ? 1 + 0.65 * (1 - opening.current.move) : 1;
     values.uPortal.value = portal ? 1 : 0;
     values.uIntake.value = phase.current.intake;
-    const eject = Math.min(1, Math.max(0, (p - 0.50) / 0.32));
-    values.uEject.value = eject * eject * (3 - 2 * eject);
+    values.uEject.value = phase.current.eject;
     values.uEjecting.value = p >= 0.50 ? 1 : 0;
     values.uViewport.value.set(state.size.width, state.size.height);
     values.uFlow.value = story && !reduced ? cameraMotion.speed : 0;

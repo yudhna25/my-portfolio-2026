@@ -14,7 +14,7 @@ export function BlackHoleSystem({ frozen = false, quality = 'high', enableBloom 
     uPortalEnabled: { value: 0 }, uPortalMini: { value: 0 },
     uPortalCenter: { value: new Vector2(0.5, 0.5) }, uRayCenter: { value: new Vector2(0.5, 0.5) },
     uPortalScale: { value: 1 }, uPortalRadius: { value: new Vector2(1, 1) },
-    uPortalVisibility: { value: 1 }, uPortalDust: { value: 0 }, uPortalPull: { value: 0 }, uPortalViewport: { value: new Vector2(1, 1) },
+    uPortalVisibility: { value: 1 }, uPortalViewport: { value: new Vector2(1, 1) },
     uFinaleEnabled: { value: 0 }, uFinaleHole: { value: 1 }, uFinaleOrigin: { value: 0 }, uFinaleScale: { value: 1 },
     uFinaleGas: { value: new Vector4() },
     uOpening: { value: new Vector4() },

@@ -4,8 +4,7 @@ import { gsap, useGSAPSetup } from '@/hooks/useGSAPSetup';
 import { useScrollStore } from '@/stores/useScrollStore';
 import { useLoadingStore } from '@/stores/useLoadingStore';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
-import { portalProgress, portalSmooth, portalState } from '@/3d/utils/portal';
-import { createPortalTrails } from '@/components/effects/portalTrails';
+import { portalProgress, portalState } from '@/3d/utils/portal';
 import { createYearStream } from '@/components/effects/yearStream';
 import '@/styles/hero.css';
 
@@ -35,7 +34,6 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
   useGSAPSetup(() => {
     const stage = scope.current;
     let active = true;
-    const chars = Array.from(stage.querySelectorAll('[data-portal-char]'));
     const phase = {};
     gsap.set(stage, { opacity: 0 });
     const opacity = gsap.quickSetter(stage, 'opacity');
@@ -45,19 +43,10 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
     const dropStream = () => { stream?.dispose(); stream = null; delete yearLayer.dataset.yearGl; };
     streamCanvas.addEventListener('streamlost', dropStream);
     if (stream) yearLayer.dataset.yearGl = 'true';
-    // The live stream drains into the hole as YearDust rises from its light; without it the
-    // trails carry the SVG digits in instead.
-    const streamOpacity = gsap.quickSetter(streamCanvas, 'opacity');
-    const sources = [
-      ...(stream ? [] : stage.querySelectorAll('[data-portal-year-glyph]')), ...chars.slice(0, -1),
-      ...stage.querySelectorAll('[data-hero-decode], [data-hero-role], [data-hero-layer="intro"], [data-hero-layer="indicator"]'),
-    ];
-    const trails = !frozen ? createPortalTrails(sources.map(node => ({ node,
-      words: node.matches('[data-hero-decode], [data-hero-role], [data-hero-layer="intro"], [data-hero-layer="indicator"]'),
-    }))) : null;
+    // Once scrolling starts the scene carries a raster of this lockup down the bridge's
+    // funnel, so the live DOM steps aside on the first scrolled pixel.
     const measure = () => {
       if (!active) return;
-      trails?.measure();
       if (stream && !stream.resize()) stream.render();
       draw();
     };
@@ -109,12 +98,9 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
       const state = useScrollStore.getState();
       const p = portalProgress(state.storyChapter, state.chapterProgress, frozen);
       portalState(p, phase);
-      opacity(visible && p < 0.44 ? opening?.current.active ? opening.current.reveal : 1 : 0);
-      stream?.drain(portalSmooth(0, 0.07, p));
-      streamOpacity(1 - portalSmooth(0.025, 0.075, p));
+      opacity(visible && phase.heroOpacity > 0 ? opening?.current.active ? opening.current.reveal : 1 : 0);
       if (p > 0 && running) { decode?.pause(0); decoded.textContent = name; }
-      trails?.draw(p, state.storyAnchor, visible);
-      const hidden = !visible || phase.textOpacity === 0;
+      const hidden = !visible || phase.heroOpacity === 0;
       stage.setAttribute('aria-hidden', hidden ? 'true' : 'false');
       stage.inert = hidden;
       const loadingOpening = useLoadingStore.getState().isLoading && document.querySelector('[data-preloader]');
@@ -149,7 +135,6 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
     nameNode.addEventListener('focus', replay);
     return () => {
       active = false;
-      trails?.dispose();
       unsubscribe();
       unsubscribeLoading();
       if (opening) gsap.ticker.remove(drawOpening);

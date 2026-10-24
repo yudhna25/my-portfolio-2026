@@ -84,7 +84,8 @@ export function GravitySpectrum({ portal, reduced = false }) {
     // to amber and stream inward until the collision swallows them. Contact stays untouched.
     const loading = Boolean(document.querySelector('[data-preloader]'));
     const finale = state.storyChapter === 'finale' ? state.chapterProgress : state.storyChapter === 'contact' ? 1 : 0;
-    const visible = state.storyChapter === 'portal' ? phase.current.visibility : 1;
+    // The bridge sheet draws its own funnel, so the lines wait for the light echo to settle.
+    const visible = state.storyChapter === 'portal' ? p === 0 ? 1 : phase.current.lit : 1;
     const opacity = loading ? 0 : CONTOUR_OPACITY * visible * (1 - finaleSmooth(0.40, 0.50, finale));
     const contour = u.get('uContour').value;
     const heroIdle = state.storyChapter === 'hero' && p === 0;
