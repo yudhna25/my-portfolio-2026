@@ -144,7 +144,8 @@ export function PortalBridge({ quality = 'high', reduced = false }) {
     vu.uSpeed.value = ph.speed;
     // Scroll drives the flight; time only keeps it from freezing when the reader pauses.
     vu.uTravel.value = p * 160 + time * (0.15 + ph.speed * 1.5);
-    vu.uRing.value = height * (0.012 + 0.11 * ph.speed * ph.speed) + Math.hypot(width, height) * 1.3 * ph.pass;
+    // The far mouth swells as we close in, then sweeps past the frame as we pass through.
+    vu.uRing.value = height * (0.02 + 0.26 * Math.pow(ph.speed, 2.2)) + Math.hypot(width, height) * 1.3 * ph.pass;
     vu.uRingGlow.value = ph.ring;
     vu.uReveal.value = ph.reveal;
     vu.uRibbon.value = ph.ribbon;

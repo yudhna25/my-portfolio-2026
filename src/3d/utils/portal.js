@@ -31,7 +31,7 @@ export function portalState(progress, out = {}) {
   // We fly through the ring: it sweeps past the frame and leaves the About sky inside it.
   out.pass = portalSmooth(0.555, 0.645, p);
   out.ring = portalSmooth(0.42, 0.50, p) * (1 - portalSmooth(0.62, 0.66, p));
-  out.reveal = portalSmooth(0.55, 0.58, p);
+  out.reveal = portalSmooth(0.60, 0.64, p);
   // Looking back, the mouth unwinds what fell in: About rides spiral ribbons into place.
   out.emerge = 1 - portalSmooth(0.61, 0.88, p);
   out.outflow = portalSmooth(0.60, 0.63, p) * (1 - portalSmooth(0.88, 0.93, p));
@@ -41,7 +41,7 @@ export function portalState(progress, out = {}) {
   out.bridge = p > 0 && p < 1;
   // The exterior observer is rebased inside the throat, while the tunnel hides the hole.
   out.mini = p < 0.5 ? 1 : 0;
-  out.visibility = p < 0.5 ? 1 - portalSmooth(0.39, 0.45, p) : portalSmooth(0.57, 0.63, p);
+  out.visibility = p < 0.5 ? 1 - portalSmooth(0.39, 0.45, p) : portalSmooth(0.60, 0.66, p);
   out.backdrop = p < 0.06 || p > 0.55;
   out.heroOpacity = p > 0 ? 0 : 1;
   out.aboutOpacity = p > 0.58 ? 1 : 0;

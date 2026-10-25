@@ -122,46 +122,34 @@ export const BRIDGE_VEIL_FRAG = /* glsl */ `
   // Inside the throat the dark leans to indigo.
   const vec3 DEEP = vec3(0.0026, 0.0024, 0.0072);
 
-  // Noise around a circle (u in 0..1) with no seam where the angle wraps.
-  float fbmRing(float u, float count, float y) {
-    u = fract(u);
-    return mix(fbm2(vec2(u * count, y)), fbm2(vec2((u - 1.0) * count, y)), u);
+  float starDot(vec2 p, float scale, float density) {
+    vec2 c = floor(p * scale), f = fract(p * scale) - 0.5;
+    float h = hash12(c);
+    vec2 o = vec2(hash12(c + 3.1), hash12(c + 7.7)) - 0.5;
+    vec2 e = f - o * 0.6;
+    // Sharp points; only the rare bright one gets a soft halo.
+    float b = fract(h * 37.0);
+    return step(1.0 - density, h) * (exp(-dot(e, e) * 900.0) + exp(-dot(e, e) * 120.0) * 0.25 * step(0.85, b)) * (0.3 + 0.7 * b * b);
   }
-
-  // Starlight rushing past in log-polar space around the point we fly towards, wound into
-  // a spiral by the spinning throat. Aberration crowds it ahead; ahead is blueshifted.
-  vec3 starLayer(float seen, float u, float count, float seed, float travel, float len, float wind) {
-    float r = seen * (1.0 + 2.5 * uSpeed * uSpeed);
-    float z = log(r + 0.002) * 3.2 - travel;
-    float lane = fract(u + wind * log(r + 0.02)) * count;
-    float column = mod(floor(lane), count);
-    // Constant width in pixels: an angular cell is r * TAU / count wide.
-    float width = 0.7 / max(seen * uViewport.y * TAU / count, 0.001);
-    float tail = 0.0, bright = 0.0;
-    // A streak can outrun its own cell, so look back over the cells behind this one.
-    for (int k = 0; k < 3; k++) {
-      float row = floor(z) - float(k);
-      float h = hash12(vec2(column, row) + seed);
-      if (h < 0.76) continue;
-      float head = 0.15 + 0.7 * hash12(vec2(column, row) + seed + 4.7);
-      float t = z - row - head;
-      // Bright head, tail thinning away like a comet's.
-      float s = exp(-max(t, 0.0) * 40.0) * smoothstep(-len - 0.02, 0.0, t) * pow(clamp(1.0 + t / (len + 0.02), 0.0, 1.0), 1.6);
-      float across = fract(lane) - 0.2 - 0.6 * hash12(vec2(column, row) + seed + 9.3);
-      s *= exp(-across * across / (width * width));
-      float b = 0.35 + 0.65 * fract(h * 13.0);
-      if (s * b > tail * bright) { tail = s; bright = b; }
-    }
-    float shift = clamp(seen * 1.5, 0.0, 1.0);
-    vec3 tint = mix(vec3(0.72, 0.84, 1.0), mix(vec3(1.0, 0.93, 0.84), vec3(1.0, 0.62, 0.48), smoothstep(0.55, 1.0, shift)), smoothstep(0.12, 0.5, shift));
-    return tint * tail * bright;
+  // The sky we leave behind: dark, its stars about to be bent by the mouth's lens.
+  vec3 skyHere(vec2 q) {
+    vec3 c = DEEP + vec3(0.020, 0.011, 0.005) * pow(fbm2(q * 1.1 + 4.0), 5.0);
+    c += vec3(1.0, 0.92, 0.80) * (starDot(q, 6.0, 0.14) * 2.2 + starDot(q + 3.0, 15.0, 0.16) * 1.0 + starDot(q + 9.0, 34.0, 0.16) * 0.5);
+    return c;
   }
-
-  // What lies beyond the far mouth before we see it for real: a rose and teal haze.
-  vec3 beyond(vec2 q) {
-    float n = fbm2(q * 3.0 + vec2(uTime * 0.05, 0.0));
-    float m = fbm2(q * 6.0 - 4.0);
-    return mix(vec3(0.05, 0.11, 0.14), vec3(0.32, 0.10, 0.16), smoothstep(0.35, 0.7, n)) * (0.6 + 0.8 * m) * 0.5;
+  // The sky on the far side, seen through the mouth before we reach it: a rose and teal
+  // band of the About nebula with a dark dust lane edge.
+  vec3 skyThere(vec2 q) {
+    float y = q.y * 0.9 + 0.3 * sin(q.x * 0.7);
+    float band = gauss(y * 2.45);
+    float n = fbm2(q * 2.2 + 11.0), m = fbm2(q * 6.0 - 3.0);
+    float dust = smoothstep(0.45, 0.75, fbm2(q * 3.5 + 2.0)) * gauss((y + 0.05) * 5.5);
+    vec3 c = vec3(0.003, 0.005, 0.010);
+    c += mix(vec3(0.05, 0.16, 0.20), vec3(0.30, 0.08, 0.15), smoothstep(0.4, 0.7, n)) * band * pow(m, 1.5) * 0.9;
+    c += vec3(0.9, 0.85, 0.8) * band * gauss(y * 6.3) * 0.25;
+    c *= 1.0 - dust * 0.85;
+    c += vec3(0.95, 0.94, 1.0) * (starDot(q, 10.0, 0.16) * 1.4 + starDot(q + 5.0, 26.0, 0.18) * 0.6) * (0.6 + band);
+    return c;
   }
 
   void main() {
@@ -171,41 +159,39 @@ export const BRIDGE_VEIL_FRAG = /* glsl */ `
     float alpha = uCover;
     vec2 d = px - uCenter;
     float seen = length(d) / H;
-    float u = atan(d.y, d.x) / TAU + 0.5;
     float ringR = uRing / H;
     float inside = 1.0 - smoothstep(ringR * 0.985, ringR, seen);
     if (uWarp > 0.0) {
-      float lr = log(seen + 0.01);
-      float wind = 0.04 + 0.10 * uSpeed;
-      // Nebular gas lining the throat: soft filaments flowing past, never dashes.
-      float flow = uTravel * 0.22;
-      float g1 = fbmRing(u + lr * wind * 1.4, 7.0, lr * 1.1 - flow);
-      float g2 = fbmRing(u + lr * wind * 2.0 + 0.37, 17.0, lr * 1.9 - flow * 1.6);
-      float gas = pow(g1, 2.6) * 0.9 + pow(g2, 3.2) * 0.6;
-      float tone = fbm2(vec2(lr * 0.8 - flow * 0.3, 3.0));
-      vec3 gasCol = mix(mix(vec3(0.14, 0.12, 0.40), vec3(0.06, 0.30, 0.34), tone), vec3(0.85, 0.50, 0.36), exp(-seen * 4.0));
-      float veilFade = smoothstep(0.02, 0.18, seen) * (1.0 - 0.5 * smoothstep(0.5, 1.2, seen));
-      float len = 0.05 + uSpeed * uSpeed * 2.0;
-      vec3 stars = starLayer(seen, u, 90.0, 1.0, uTravel, len, wind) + starLayer(seen, u, 170.0, 9.0, uTravel * 1.35, len, wind) * 0.7;
-      vec3 throat = DEEP + gasCol * gas * 0.22 * (0.4 + 0.6 * uSpeed) * veilFade + stars * 1.3 * smoothstep(0.0, 0.04, seen - ringR);
-      // The far mouth's photon ring, split by the lens into blue inside and amber outside.
+      // The far mouth is a sphere holding the other sky. Around it our own sky is bent by
+      // its lens: every star shows twice and both images slide along the Einstein ring.
+      float spin = uTime * 0.04 + uSpeed * 1.4;
+      mat2 turn = mat2(cos(spin), -sin(spin), sin(spin), cos(spin));
+      vec2 dir = d / max(seen * H, 0.0001);
+      float einstein = ringR * 1.25;
+      vec2 src = dir * (seen - einstein * einstein / max(seen, 0.0001));
+      vec3 throat = skyHere(turn * src * (1.0 + uSpeed * 1.5) + vec2(uTime * 0.008, 0.0));
+      // Light piles up towards the ring.
+      float mag = clamp(1.0 / abs(1.0 - pow(einstein / max(seen, 0.0001), 4.0)), 1.0, 14.0);
+      throat *= mix(1.0, mag, 0.55);
+      throat *= 1.0 - 0.35 * smoothstep(0.5, 1.1, seen);
+      // The photon ring at the sphere's edge, split blue inside and amber outside.
       float w = 0.0025 + ringR * 0.012;
-      // As it sweeps past us the ring spreads its light thin.
       float spread = 1.0 / (1.0 + ringR * 1.5);
       vec3 ring = vec3(gauss((seen - ringR * 0.992) / w), gauss((seen - ringR) / w), gauss((seen - ringR * 1.01) / w)) * vec3(0.9, 0.95, 1.0)
         + vec3(1.0, 0.72, 0.42) * gauss((seen - ringR * 1.04) / (w * 3.0)) * 0.35
         + vec3(0.7, 0.8, 1.0) * exp(-abs(seen - ringR) / (w * 8.0)) * 0.12 * spread;
-      ring *= spread;
-      throat += ring * uRingGlow * 1.6;
-      // Through the ring: a haze from the other side, until the real sky can show.
-      throat = mix(throat, beyond(d / H / max(ringR, 0.01)) + ring * uRingGlow * 1.6, inside * (1.0 - uReveal));
-      float a = uWarp * (1.0 - inside * uReveal);
+      ring *= spread * uRingGlow * 1.05;
+      // Inside the sphere: the far sky, wide-angle, until the real one can show.
+      float k = seen / max(ringR, 0.0001);
+      vec2 q = dir * (k / sqrt(max(1.0 - k * k * 0.92, 0.05))) * (2.2 - uSpeed * 1.3);
+      vec3 there = skyThere(turn * q * 1.6) * (1.0 - 0.6 * smoothstep(0.85, 1.0, k));
+      throat = mix(throat, there, inside * (1.0 - uReveal)) + ring;
       col = mix(col, throat, uWarp);
-      alpha = max(alpha * (1.0 - inside * uReveal), a);
+      alpha = max(alpha * (1.0 - inside * uReveal), uWarp * (1.0 - inside * uReveal));
       // Once revealed, only the ring's own light is laid over the sky inside.
       if (inside * uReveal > 0.0) {
-        float glow = clamp(max(ring.r, max(ring.g, ring.b)) * uRingGlow * 1.6, 0.0, 1.0);
-        col = mix(col, ring * uRingGlow * 1.6 / max(glow, 0.001), inside * uReveal);
+        float glow = clamp(max(ring.r, max(ring.g, ring.b)), 0.0, 1.0);
+        col = mix(col, ring / max(glow, 0.001), inside * uReveal);
         alpha = mix(alpha, glow, inside * uReveal);
       }
     }
