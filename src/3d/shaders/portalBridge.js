@@ -47,7 +47,7 @@ export const BRIDGE_SHEET_VERT = /* glsl */ `
 export const BRIDGE_SHEET_FRAG = /* glsl */ `
   uniform sampler2D uLockup;
   uniform vec2 uViewport, uOrigin;
-  uniform float uLockupReady, uSlide, uAlpha, uDepthAmount, uTime;
+  uniform float uLockupReady, uSlide, uAlpha, uDepthAmount, uTime, uBare;
   varying vec2 vSheet;
   varying float vW, vSlope, vDeep;
   ${NOISE}
@@ -95,6 +95,14 @@ export const BRIDGE_SHEET_FRAG = /* glsl */ `
     // Swallowed matter fades into the throat; the far sheet melts into the void.
     float swallow = smoothstep(0.02, 0.18, stretch);
     float horizon = 1.0 - smoothstep(3.0, 7.0, vW);
+    if (uBare > 0.5) {
+      // The far mouth gives back only what fell in: hot letters on clear sky, cooling to
+      // ivory as they settle.
+      float hot = 1.0 - stretch;
+      vec3 glyph = mix(lockup.rgb, vec3(1.0, 0.86, 0.62) * 1.6, clamp(hot * 1.4, 0.0, 0.9));
+      gl_FragColor = vec4(glyph, lockup.a * swallow * uAlpha);
+      return;
+    }
     gl_FragColor = vec4(mix(VOID, col, swallow), uAlpha * horizon);
   }
 `;
@@ -105,126 +113,88 @@ export const BRIDGE_VEIL_VERT = /* glsl */ `
 `;
 
 export const BRIDGE_VEIL_FRAG = /* glsl */ `
-  uniform vec2 uViewport, uMouth;
-  uniform float uCover, uTunnel, uFuture, uFlash, uExit, uEcho, uLit, uFront, uTime, uScroll, uFar;
+  uniform vec2 uViewport, uCenter, uMouth;
+  uniform float uCover, uWarp, uSpeed, uTravel, uBurst, uGlare, uTime;
   varying vec2 vUv;
   ${NOISE}
   #define TAU 6.28318530718
   const vec3 VOID = vec3(0.0018, 0.002, 0.0032);
 
-  // Log-spiral galaxy in a unit disc: core, arms and dust.
-  vec3 galaxy(vec2 p, float size, float spin, vec3 arm, vec3 core) {
-    p /= size;
-    float r = length(p), a = atan(p.y, p.x);
-    float lane = 0.5 + 0.5 * cos(2.0 * (a - spin - log(r + 0.02) * 2.6));
-    float body = exp(-r * 3.2) * (0.25 + 0.75 * pow(lane, 3.0)) * (0.7 + 0.6 * fbm2(p * 9.0));
-    return arm * body * 1.6 + core * exp(-r * r * 60.0);
-  }
-  float starfield(vec2 p, float scale) {
-    vec2 c = floor(p * scale), f = fract(p * scale) - 0.5;
-    float h = hash12(c);
-    return step(0.94, h) * exp(-dot(f, f) * 40.0) * fract(h * 53.0);
-  }
-  // Each later chapter, as a glimpse framed in a unit disc.
-  vec3 chapterSky(int k, vec2 p) {
-    vec3 col = vec3(0.02, 0.022, 0.04) + vec3(0.9) * starfield(p + float(k), 18.0);
-    if (k == 0) {
-      // Skills: the light band.
-      float d = dot(p, normalize(vec2(-0.5, 0.86)));
-      float band = exp(-d * d * 60.0) * (0.75 + 0.5 * noise2(vec2(dot(p, vec2(0.86, 0.5)) * 14.0 - uTime, d * 40.0)));
-      col += vec3(1.0, 0.76, 0.42) * band * 1.4;
-    } else if (k == 1) {
-      // Education: Arp 273, a rose and its small blue companion.
-      col += galaxy(p - vec2(-0.22, 0.05), 0.55, 0.6, vec3(0.95, 0.45, 0.62), vec3(1.0, 0.85, 0.7));
-      col += galaxy(p - vec2(0.36, -0.22), 0.22, 2.0, vec3(0.45, 0.62, 1.0), vec3(0.9, 0.95, 1.0));
-    } else if (k == 2) {
-      // Experience: the rose galaxy.
-      col += galaxy(p, 0.8, -0.4, vec3(1.0, 0.42, 0.55), vec3(1.0, 0.8, 0.6));
-    } else if (k == 3) {
-      // Works: constellations drawn faintly between bright stars.
-      vec2 s[6];
-      s[0] = vec2(-0.55, -0.15); s[1] = vec2(-0.3, -0.38); s[2] = vec2(-0.02, -0.22);
-      s[3] = vec2(0.2, -0.45); s[4] = vec2(0.42, -0.1); s[5] = vec2(0.12, 0.25);
-      for (int i = 0; i < 6; i++) {
-        col += vec3(1.0, 0.95, 0.88) * exp(-dot(p - s[i], p - s[i]) * 900.0) * 1.6;
-        if (i < 5) {
-          vec2 a = s[i], b = s[i + 1], ab = b - a;
-          float t = clamp(dot(p - a, ab) / dot(ab, ab), 0.0, 1.0);
-          float d = length(p - a - ab * t);
-          col += vec3(0.8, 0.85, 1.0) * exp(-d * d * 20000.0) * 0.25;
-        }
-      }
-    } else {
-      // Contact: the kilonova blooming around the final hole.
-      float r = length(p);
-      float shell = gauss((r - 0.32) / 0.11) * (0.6 + 0.8 * fbm2(normalize(p + 0.0001) * 2.0 + vec2(r * 8.0 - uTime, 0.0)));
-      col += vec3(1.0, 0.68, 0.30) * shell * 1.5 + vec3(1.0, 0.9, 0.7) * exp(-r * 6.0) * 0.6;
-      col *= smoothstep(0.08, 0.13, r);
+  // Stars rushing past at relativistic speed, in log-polar space around the point we fly
+  // towards. Aberration crowds them ahead; ahead is blueshifted, the rim reddened.
+  vec3 starLayer(vec2 d, float count, float seed, float travel, float len) {
+    float seen = length(d) / uViewport.y;
+    // Aberration: at speed the sky ahead crowds into a narrowing cone.
+    float r = seen * (1.0 + 2.5 * uSpeed * uSpeed);
+    float u = atan(d.y, d.x) / TAU + 0.5;
+    float lane = u * count;
+    // Cells wrap around the circle, so there is no seam where the angle jumps.
+    float column = mod(floor(lane), count);
+    float z = log(r + 0.002) * 3.2 - travel;
+    // Constant width in pixels: an angular cell is r * TAU / count wide.
+    // A streak can outrun its own cell, so look back over the cells behind this one.
+    float width = 0.9 / max(seen * uViewport.y * TAU / count, 0.001);
+    float tail = 0.0, bright = 0.0;
+    for (int k = 0; k < 3; k++) {
+      float row = floor(z) - float(k);
+      float h = hash12(vec2(column, row) + seed);
+      if (h < 0.72) continue;
+      float head = 0.15 + 0.7 * hash12(vec2(column, row) + seed + 4.7);
+      // Behind its head a star leaves a streak; at rest it is a point.
+      float t = z - row - head;
+      float s = smoothstep(-len - 0.02, 0.0, t) * (1.0 - smoothstep(0.0, 0.03, t)) * (0.35 + 0.65 * smoothstep(-len, 0.0, t));
+      // Off the lane centre, so the sky does not read as spokes.
+      float across = fract(lane) - 0.2 - 0.6 * hash12(vec2(column, row) + seed + 9.3);
+      s *= exp(-across * across / (width * width));
+      float b = 0.4 + 0.6 * fract(h * 13.0);
+      if (s * b > tail * bright) { tail = s; bright = b; }
     }
-    return col;
+    float shift = clamp(seen * 1.6, 0.0, 1.0);
+    vec3 tint = mix(vec3(0.70, 0.82, 1.0), mix(vec3(1.0, 0.92, 0.80), vec3(1.0, 0.55, 0.32), smoothstep(0.5, 1.0, shift)), smoothstep(0.1, 0.5, shift));
+    return tint * tail * bright * 1.6;
   }
-  // Noise around a circle with no seam where the angle wraps.
-  float ring(float a, float count, float y) {
-    float u = a / TAU + 0.5;
-    return mix(noise2(vec2(u * count, y)), noise2(vec2((u - 1.0) * count, y)), u);
-  }
-  // Streaks flowing along a tunnel around c; direction > 0 runs inward.
-  float walls(vec2 px, vec2 c, float direction, float speed) {
-    vec2 d = px - c;
-    float r = length(d) / uViewport.y, a = atan(d.y, d.x);
-    float depth = log(r + 0.004);
-    float s = ring(a, 160.0, depth * 1.2 + direction * speed);
-    float s2 = ring(a, 64.0, depth * 0.7 + direction * speed * 0.8 + 11.0);
-    return pow(s, 6.0) * 1.6 + pow(s2, 4.0) * 0.6;
-  }
+
   void main() {
     vec2 px = vec2(vUv.x, 1.0 - vUv.y) * uViewport;
+    float H = uViewport.y;
     vec3 col = VOID;
     float alpha = uCover;
-    // Faint far stars above the leaning sheet.
-    col += vec3(0.8) * starfield(px / uViewport.y, 70.0) * 0.5 * uFar;
-    if (uTunnel > 0.0) {
+    if (uWarp > 0.0) {
+      vec2 d = px - uCenter;
+      float r = length(d) / H;
+      float len = 0.04 + uSpeed * uSpeed * 2.2;
+      vec3 stars = starLayer(d, 70.0, 1.0, uTravel, len) + starLayer(d, 130.0, 9.0, uTravel * 1.3, len)
+        + starLayer(d, 220.0, 17.0, uTravel * 1.7, len) * 0.7;
+      // The far mouth: a point of light ahead that swells as we close in.
+      float ahead = 0.004 + 0.05 * uSpeed * uSpeed;
+      vec3 mouth = vec3(0.85, 0.92, 1.0) * exp(-r / ahead) * (0.6 + uSpeed) + vec3(1.0, 0.86, 0.66) * exp(-r / (ahead * 4.0)) * 0.25 * uSpeed;
+      float edge = 1.0 - smoothstep(0.35, 1.1, r) * 0.6;
+      col = mix(col, VOID + stars * edge + mouth, uWarp);
+      alpha = max(alpha, uWarp);
+    }
+    if (uBurst > 0.0) {
+      // Bursting through: the mouth's light swallows the frame from the centre out.
+      float r = length(px - uCenter) / H;
+      float fill = 1.0 - smoothstep(uBurst * 2.2 - 0.6, uBurst * 2.2, r + 0.05);
+      vec3 light = mix(vec3(1.0, 0.88, 0.70), vec3(1.0, 0.98, 0.95), exp(-r * 2.0));
+      col = mix(col, light, fill * uBurst);
+      alpha = max(alpha, fill * uBurst);
+    }
+    if (uGlare > 0.0) {
+      // Out of the far mouth: the glare drains back into it and leaves clear sky behind;
+      // the last of the light keeps streaming outward as it slows.
       vec2 d = px - uMouth;
-      float r = length(d) / uViewport.y;
-      float flow = uTime * 0.35 + uScroll * 40.0;
-      float w = walls(px, uMouth, 1.0, flow);
-      vec3 wallCol = mix(vec3(0.93, 0.88, 0.80), vec3(1.0, 0.68, 0.34), noise2(normalize(d + 0.0001) * 3.0 + 5.0));
-      vec3 tunnel = VOID + wallCol * w * smoothstep(0.02, 0.35, r) * 0.55;
-      // Every later chapter rushes past, nearest on top; blueshifted at the peak.
-      for (int k = 4; k >= 0; k--) {
-        float u = (uFuture - float(k) * 0.17) / 0.32;
-        if (u <= 0.0 || u >= 1.15) continue;
-        float radius = 0.012 * exp(u * 6.2);
-        float inside = 1.0 - smoothstep(radius * 0.97, radius, r);
-        if (inside <= 0.0) continue;
-        vec3 sky = chapterSky(k, d / uViewport.y / radius);
-        float fade = smoothstep(0.0, 0.12, u) * (1.0 - smoothstep(0.85, 1.12, u));
-        tunnel = mix(tunnel, sky, inside * fade);
-        tunnel += vec3(0.75, 0.85, 1.0) * gauss((r - radius) / (0.006 + radius * 0.03)) * 0.6 * fade;
-      }
-      float blue = sin(3.14159 * clamp(uFuture, 0.0, 1.0)) * 0.22;
-      tunnel = mix(tunnel, vec3(dot(tunnel, vec3(0.3, 0.4, 0.3))) * vec3(0.75, 0.9, 1.25), blue);
-      col = mix(col, tunnel, uTunnel);
-      alpha = max(alpha, uTunnel);
+      float r = length(d) / H;
+      float reach = mix(0.03, 2.6, uGlare * uGlare * uGlare);
+      float glow = exp(-r / (reach * 0.35)) + 0.6 * exp(-r / reach);
+      float u = atan(d.y, d.x) / TAU + 0.5;
+      float n = mix(noise2(vec2(u * 90.0, log(r + 0.01) * 2.0 - uTravel)), noise2(vec2((u - 1.0) * 90.0, log(r + 0.01) * 2.0 - uTravel)), u);
+      float rays = pow(n, 5.0) * smoothstep(0.02, 0.2, r) * uGlare * 0.9;
+      vec3 light = mix(vec3(1.0, 0.80, 0.55), vec3(1.0, 0.97, 0.92), clamp(glow * 0.7, 0.0, 1.0));
+      float a = clamp(glow * uGlare + rays, 0.0, 1.0);
+      col = alpha > 0.001 ? mix(col, light, a) : light;
+      alpha = max(alpha, a);
     }
-    if (uEcho > 0.0 || uExit > 0.0) {
-      // Far side: dark dust lit shell by shell by the flash from the throat.
-      float r = length(px - uMouth);
-      float shell = gauss((r - uFront) / (uFront * 0.035 + 6.0)) + 0.7 * gauss((r - uFront * 0.84) / (uFront * 0.03 + 6.0));
-      float behind = 1.0 - smoothstep(uFront * 0.9, uFront, r);
-      float lit = clamp(uLit + (1.0 - uLit) * (behind * 0.55 + shell), 0.0, 1.0);
-      float dark = (1.0 - lit) * (1.0 - uLit);
-      float grain = 0.55 + 0.9 * fbm2(px / uViewport.y * 6.0);
-      vec3 rim = vec3(1.0, 0.84, 0.66) * shell * grain * 0.28 * (1.0 - uLit);
-      float out_ = walls(px, uMouth, -1.0, uTime * 0.35 + uScroll * 40.0) * uExit * smoothstep(0.0, 0.25, r / uViewport.y);
-      vec3 streak = vec3(0.95, 0.86, 0.72) * out_ * 0.5;
-      col = VOID * dark + rim + streak;
-      alpha = max(dark, max(max(rim.r, streak.r), 0.0));
-      // Premultiplied light over transparent dark: lift alpha so the rim shows.
-      col /= max(alpha, 0.0001);
-    }
-    col = mix(col, vec3(1.0, 0.97, 0.92), uFlash);
-    alpha = max(alpha, uFlash);
     gl_FragColor = vec4(col, alpha);
   }
 `;

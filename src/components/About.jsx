@@ -54,7 +54,7 @@ export default function About({ portrait }) {
       }
       // Only inner visuals move; section/marker/footprint remain in document flow.
       shifts.forEach(shift => shift(`translateY(${entering ? -(1 - p) * range : 0}px)`));
-      // The bridge's light echo reveals the chapter shell by shell (see PortalBridge).
+      // The text itself pours out of the far mouth first (see PortalBridge).
       backdrop(phase.aboutOpacity);
       if (portrait && portraitButton.current) {
         const data = portrait.current;
@@ -95,9 +95,9 @@ export default function About({ portrait }) {
   }, { scope: root, dependencies: [frozen, i18n.resolvedLanguage, portrait], revertOnUpdate: true });
 
   return <section ref={root} id="about" aria-labelledby="about-heading" className="relative isolate min-h-screen px-6 py-28 text-(--text-primary) sm:px-8 lg:px-16 lg:py-36">
-    <div data-about-motion data-echo-mask data-about-backdrop aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_72%_62%,rgba(7,8,13,0.44)_15%,rgba(7,8,13,0.18)_42%,transparent_78%)]" />
-    <div data-about-motion data-echo-mask className="mx-auto grid max-w-7xl grid-cols-12 items-start gap-y-10 lg:gap-x-16 lg:gap-y-8">
-      <header data-about-group="heading" className="col-span-12 min-w-0 lg:col-span-7 lg:col-start-6 lg:row-start-1">
+    <div data-about-motion data-about-backdrop aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_72%_62%,rgba(7,8,13,0.44)_15%,rgba(7,8,13,0.18)_42%,transparent_78%)]" />
+    <div data-about-motion className="mx-auto grid max-w-7xl grid-cols-12 items-start gap-y-10 lg:gap-x-16 lg:gap-y-8">
+      <header data-about-group="heading" data-about-flow className="col-span-12 min-w-0 lg:col-span-7 lg:col-start-6 lg:row-start-1">
         <p className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-(--text-secondary)">{t('about.sectionLabel')}</p>
         <h2 key={i18n.resolvedLanguage} id="about-heading" aria-label={t('hero.name')} className="font-display text-[clamp(1.75rem,5vw,4rem)] font-bold uppercase leading-[1.18] tracking-[-0.035em]">
           <span className="sr-only">{t('hero.name')}</span>
@@ -121,7 +121,7 @@ export default function About({ portrait }) {
         <p id="about-portrait-hint" className="mx-auto mt-5 max-w-md text-center font-body text-xs leading-relaxed text-(--text-secondary)">{t('about.portraitHint')}</p>
       </figure>
 
-      <div data-about-group="bio" className="col-span-12 min-w-0 lg:col-span-7 lg:col-start-6 lg:row-start-2">
+      <div data-about-group="bio" data-about-flow className="col-span-12 min-w-0 lg:col-span-7 lg:col-start-6 lg:row-start-2">
         <div className="max-w-[56ch] space-y-6 font-body text-base leading-[1.8] lg:text-lg">
           <p data-about-bio className="text-base leading-[1.8] lg:text-lg">
             <span key={i18n.resolvedLanguage} className="relative block">

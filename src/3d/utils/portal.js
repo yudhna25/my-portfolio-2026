@@ -10,33 +10,37 @@ export function portalProgress(chapter, progress, frozen = false) {
 }
 
 // Einstein–Rosen bridge. The Hero leans back into a sheet of spacetime that sinks into a
-// funnel at the O; the camera glides down its throat, sees every later chapter flash past,
-// and comes out where a light echo lights the About sky shell by shell.
+// funnel at the O; the camera plunges down its throat at near light speed, bursts out of
+// the far mouth, and About pours back out of it, letter by letter, into its place.
 export function portalState(progress, out = {}) {
   const p = clampStoryProgress(progress);
   // The sheet replaces the live Hero from the first scrolled pixel.
   out.sheet = p > 0 ? 1 - portalSmooth(0.42, 0.47, p) : 0;
-  out.cover = portalSmooth(0, 0.05, p);
+  out.cover = portalSmooth(0, 0.05, p) * (1 - portalSmooth(0.60, 0.62, p));
   out.tilt = 0.14 * portalSmooth(0.02, 0.22, p) * (1 - portalSmooth(0.28, 0.42, p));
   out.depth = portalSmooth(0.04, 0.30, p);
   out.slide = portalSmooth(0.06, 0.42, p);
   const dive = portalSmooth(0.20, 0.47, p);
   out.dolly = dive * dive;
   out.pan = portalSmooth(0.03, 0.30, p);
-  out.tunnel = portalSmooth(0.38, 0.45, p) * (1 - portalSmooth(0.585, 0.62, p));
-  out.future = clampStoryProgress((p - 0.43) / 0.15);
-  out.flash = portalSmooth(0.565, 0.60, p) * (1 - portalSmooth(0.60, 0.67, p));
-  out.exit = portalSmooth(0.575, 0.60, p) * (1 - portalSmooth(0.62, 0.78, p));
-  out.echo = portalSmooth(0.62, 0.88, p);
-  out.lit = portalSmooth(0.74, 0.93, p);
+  // A short plunge: starlight streaks past, ahead blueshifted, and the far mouth swells.
+  out.warp = portalSmooth(0.40, 0.45, p) * (1 - portalSmooth(0.585, 0.61, p));
+  out.speed = portalSmooth(0.42, 0.58, p);
+  out.burst = portalSmooth(0.55, 0.60, p) * (1 - portalSmooth(0.60, 0.63, p));
+  // Out of the far mouth the glare drains back into it while About streams out.
+  out.glare = p < 0.6 ? 0 : 1 - portalSmooth(0.60, 0.76, p);
+  out.emerge = 1 - portalSmooth(0.60, 0.88, p);
+  out.outflow = portalSmooth(0.60, 0.63, p) * (1 - portalSmooth(0.88, 0.93, p));
+  out.aboutText = portalSmooth(0.87, 0.92, p);
+  out.lit = portalSmooth(0.80, 0.95, p);
   out.bridge = p > 0 && p < 1;
   // The exterior observer is rebased inside the throat, while the tunnel hides the hole.
   out.mini = p < 0.5 ? 1 : 0;
-  out.visibility = p < 0.5 ? 1 - portalSmooth(0.39, 0.45, p) : portalSmooth(0.64, 0.72, p);
+  out.visibility = p < 0.5 ? 1 - portalSmooth(0.39, 0.45, p) : portalSmooth(0.65, 0.72, p);
   out.backdrop = p < 0.06 || p > 0.55;
   out.heroOpacity = p > 0 ? 0 : 1;
   out.aboutOpacity = p > 0.58 ? 1 : 0;
-  out.aboutInteractive = p >= 0.84;
+  out.aboutInteractive = p >= 0.9;
   out.controlsOpacity = p < 0.5 ? 1 - portalSmooth(0, 0.05, p) : portalSmooth(0.90, 0.96, p);
   out.controlsInteractive = p === 0 || p >= 0.96;
   // The backdrop keeps its own shape; the bridge carries all of the motion.
@@ -79,9 +83,4 @@ export function bridgeProject(camera, x, y, out = {}) {
   out.x = camera.pivotX + x / Math.max(w, 0.0001);
   out.y = camera.pivotY + ry / Math.max(w, 0.0001);
   return out;
-}
-
-// Light echo front around the hole, in CSS pixels.
-export function echoRadius(phase, width, height) {
-  return Math.hypot(width, height) * 1.14 * phase.echo;
 }
