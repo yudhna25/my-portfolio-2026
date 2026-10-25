@@ -10,33 +10,38 @@ export function portalProgress(chapter, progress, frozen = false) {
 }
 
 // Einstein–Rosen bridge. The Hero leans back into a sheet of spacetime that sinks into a
-// funnel at the O; the camera plunges down its throat at near light speed, bursts out of
-// the far mouth, and About pours back out of it, letter by letter, into its place.
+// funnel at the O; the camera plunges down its spinning throat, flies through the far
+// mouth's ring of light, and About unwinds back out of the hole into its place.
 export function portalState(progress, out = {}) {
   const p = clampStoryProgress(progress);
   // The sheet replaces the live Hero from the first scrolled pixel.
   out.sheet = p > 0 ? 1 - portalSmooth(0.42, 0.47, p) : 0;
-  out.cover = portalSmooth(0, 0.05, p) * (1 - portalSmooth(0.60, 0.62, p));
+  out.cover = portalSmooth(0, 0.05, p) * (1 - portalSmooth(0.64, 0.66, p));
   out.tilt = 0.14 * portalSmooth(0.02, 0.22, p) * (1 - portalSmooth(0.28, 0.42, p));
   out.depth = portalSmooth(0.04, 0.30, p);
   out.slide = portalSmooth(0.06, 0.42, p);
   const dive = portalSmooth(0.20, 0.47, p);
   out.dolly = dive * dive;
   out.pan = portalSmooth(0.03, 0.30, p);
-  // A short plunge: starlight streaks past, ahead blueshifted, and the far mouth swells.
-  out.warp = portalSmooth(0.40, 0.45, p) * (1 - portalSmooth(0.585, 0.61, p));
+  // The plunge: starlight and nebular gas wound into a spiral by the spinning throat, and
+  // ahead the far mouth's photon ring, a window onto the other side.
+  out.warp = portalSmooth(0.40, 0.45, p) * (1 - portalSmooth(0.63, 0.66, p));
   out.speed = portalSmooth(0.42, 0.58, p);
-  out.burst = portalSmooth(0.55, 0.60, p) * (1 - portalSmooth(0.60, 0.63, p));
-  // Out of the far mouth the glare drains back into it while About streams out.
-  out.glare = p < 0.6 ? 0 : 1 - portalSmooth(0.60, 0.76, p);
-  out.emerge = 1 - portalSmooth(0.60, 0.88, p);
+  out.drift = portalSmooth(0.46, 0.56, p);
+  // We fly through the ring: it sweeps past the frame and leaves the About sky inside it.
+  out.pass = portalSmooth(0.555, 0.645, p);
+  out.ring = portalSmooth(0.42, 0.50, p) * (1 - portalSmooth(0.62, 0.66, p));
+  out.reveal = portalSmooth(0.55, 0.58, p);
+  // Looking back, the mouth unwinds what fell in: About rides spiral ribbons into place.
+  out.emerge = 1 - portalSmooth(0.61, 0.88, p);
   out.outflow = portalSmooth(0.60, 0.63, p) * (1 - portalSmooth(0.88, 0.93, p));
+  out.ribbon = portalSmooth(0.60, 0.66, p) * (1 - portalSmooth(0.80, 0.92, p));
   out.aboutText = portalSmooth(0.87, 0.92, p);
   out.lit = portalSmooth(0.80, 0.95, p);
   out.bridge = p > 0 && p < 1;
   // The exterior observer is rebased inside the throat, while the tunnel hides the hole.
   out.mini = p < 0.5 ? 1 : 0;
-  out.visibility = p < 0.5 ? 1 - portalSmooth(0.39, 0.45, p) : portalSmooth(0.65, 0.72, p);
+  out.visibility = p < 0.5 ? 1 - portalSmooth(0.39, 0.45, p) : portalSmooth(0.57, 0.63, p);
   out.backdrop = p < 0.06 || p > 0.55;
   out.heroOpacity = p > 0 ? 0 : 1;
   out.aboutOpacity = p > 0.58 ? 1 : 0;

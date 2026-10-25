@@ -75,8 +75,8 @@ export function PortalBridge({ quality = 'high', reduced = false }) {
   const outflowUniforms = useMemo(sheetUniforms, []);
   const veilUniforms = useMemo(() => ({
     uViewport: { value: new Vector2(1, 1) }, uCenter: { value: new Vector2() }, uMouth: { value: new Vector2() },
-    uCover: { value: 0 }, uWarp: { value: 0 }, uSpeed: { value: 0 }, uTravel: { value: 0 }, uBurst: { value: 0 },
-    uGlare: { value: 0 }, uTime: { value: 0 },
+    uCover: { value: 0 }, uWarp: { value: 0 }, uSpeed: { value: 0 }, uTravel: { value: 0 }, uRing: { value: 0 },
+    uRingGlow: { value: 0 }, uReveal: { value: 0 }, uRibbon: { value: 0 }, uTime: { value: 0 },
   }), []);
 
   useFrame((state, delta) => {
@@ -109,10 +109,11 @@ export function PortalBridge({ quality = 'high', reduced = false }) {
     applyCamera(su, cam, width, height);
     su.uSlide.value = ph.slide;
     su.uAlpha.value = ph.sheet;
-    su.uDepthAmount.value = ph.depth;
+    // Inside the throat the walls stop catching the hole's light.
+    su.uDepthAmount.value = ph.depth * (1 - ph.dolly);
     su.uTime.value = time;
 
-    // Far side: the real hole, once the glare has hidden the jump to it.
+    // Far side: the real hole, the mouth we fly out of.
     hole.set(...BLACK_HOLE_CENTER).project(state.camera);
     const mx = (hole.x * 0.5 + 0.5) * width, my = (0.5 - hole.y * 0.5) * height;
     outflow.current.visible = ph.outflow > 0;
@@ -135,15 +136,18 @@ export function PortalBridge({ quality = 'high', reduced = false }) {
     }
 
     vu.uViewport.value.set(width, height);
-    vu.uCenter.value.set(cam.pivotX, cam.pivotY);
+    // The flight bends towards where the far mouth will be, so we come out facing it.
+    vu.uCenter.value.set(cam.pivotX + (mx - cam.pivotX) * ph.drift, cam.pivotY + (my - cam.pivotY) * ph.drift);
     vu.uMouth.value.set(mx, my);
     vu.uCover.value = ph.cover;
     vu.uWarp.value = ph.warp;
     vu.uSpeed.value = ph.speed;
     // Scroll drives the flight; time only keeps it from freezing when the reader pauses.
     vu.uTravel.value = p * 160 + time * (0.15 + ph.speed * 1.5);
-    vu.uBurst.value = ph.burst;
-    vu.uGlare.value = ph.glare;
+    vu.uRing.value = height * (0.012 + 0.11 * ph.speed * ph.speed) + Math.hypot(width, height) * 1.3 * ph.pass;
+    vu.uRingGlow.value = ph.ring;
+    vu.uReveal.value = ph.reveal;
+    vu.uRibbon.value = ph.ribbon;
     publishFlow(p > 0.58 ? ph.aboutText : null);
   });
 

@@ -4,7 +4,7 @@ import { useGSAP } from '@gsap/react';
 import { gsap, ScrollTrigger } from '@/hooks/useGSAPSetup';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { useScrollStore } from '@/stores/useScrollStore';
-import { portalProgress, portalState, portalSmooth } from '@/3d/utils/portal';
+import { portalProgress, portalState } from '@/3d/utils/portal';
 import '@/styles/about.css';
 
 export default function About({ portrait }) {
@@ -64,8 +64,9 @@ export default function About({ portrait }) {
         const rect = portraitButton.current.getBoundingClientRect();
         data.rect = rect;
         data.visible = rect.bottom > 0 && rect.top < window.innerHeight;
-        data.morph = portalSmooth(0.76, 1, p);
-        data.opacity = portalSmooth(0.60, 0.74, p);
+        // The photo rides out of the bridge with the text, so no stars gather into it.
+        data.morph = 1;
+        data.opacity = 0;
       }
     };
     const measure = () => {
@@ -109,7 +110,7 @@ export default function About({ portrait }) {
         <p className="mt-5 font-body text-sm text-(--text-secondary) sm:text-base">{t('about.subLabel')}</p>
       </header>
 
-      <figure data-about-group="avatar" className="col-span-12 m-0 min-w-0 lg:col-span-5 lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:self-center">
+      <figure data-about-group="avatar" data-about-flow className="col-span-12 m-0 min-w-0 lg:col-span-5 lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:self-center">
         <button ref={portraitButton} data-portrait type="button" aria-label={t('about.portraitToggle')} aria-describedby="about-portrait-hint" aria-pressed={held}
           onPointerEnter={() => setHovered(true)} onPointerLeave={() => setHovered(false)}
           onFocus={() => setFocused(true)} onBlur={() => setFocused(false)}

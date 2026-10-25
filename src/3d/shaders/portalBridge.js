@@ -114,44 +114,54 @@ export const BRIDGE_VEIL_VERT = /* glsl */ `
 
 export const BRIDGE_VEIL_FRAG = /* glsl */ `
   uniform vec2 uViewport, uCenter, uMouth;
-  uniform float uCover, uWarp, uSpeed, uTravel, uBurst, uGlare, uTime;
+  uniform float uCover, uWarp, uSpeed, uTravel, uRing, uRingGlow, uReveal, uRibbon, uTime;
   varying vec2 vUv;
   ${NOISE}
   #define TAU 6.28318530718
   const vec3 VOID = vec3(0.0018, 0.002, 0.0032);
+  // Inside the throat the dark leans to indigo.
+  const vec3 DEEP = vec3(0.0026, 0.0024, 0.0072);
 
-  // Stars rushing past at relativistic speed, in log-polar space around the point we fly
-  // towards. Aberration crowds them ahead; ahead is blueshifted, the rim reddened.
-  vec3 starLayer(vec2 d, float count, float seed, float travel, float len) {
-    float seen = length(d) / uViewport.y;
-    // Aberration: at speed the sky ahead crowds into a narrowing cone.
+  // Noise around a circle (u in 0..1) with no seam where the angle wraps.
+  float fbmRing(float u, float count, float y) {
+    u = fract(u);
+    return mix(fbm2(vec2(u * count, y)), fbm2(vec2((u - 1.0) * count, y)), u);
+  }
+
+  // Starlight rushing past in log-polar space around the point we fly towards, wound into
+  // a spiral by the spinning throat. Aberration crowds it ahead; ahead is blueshifted.
+  vec3 starLayer(float seen, float u, float count, float seed, float travel, float len, float wind) {
     float r = seen * (1.0 + 2.5 * uSpeed * uSpeed);
-    float u = atan(d.y, d.x) / TAU + 0.5;
-    float lane = u * count;
-    // Cells wrap around the circle, so there is no seam where the angle jumps.
-    float column = mod(floor(lane), count);
     float z = log(r + 0.002) * 3.2 - travel;
+    float lane = fract(u + wind * log(r + 0.02)) * count;
+    float column = mod(floor(lane), count);
     // Constant width in pixels: an angular cell is r * TAU / count wide.
-    // A streak can outrun its own cell, so look back over the cells behind this one.
-    float width = 0.9 / max(seen * uViewport.y * TAU / count, 0.001);
+    float width = 0.7 / max(seen * uViewport.y * TAU / count, 0.001);
     float tail = 0.0, bright = 0.0;
+    // A streak can outrun its own cell, so look back over the cells behind this one.
     for (int k = 0; k < 3; k++) {
       float row = floor(z) - float(k);
       float h = hash12(vec2(column, row) + seed);
-      if (h < 0.72) continue;
+      if (h < 0.76) continue;
       float head = 0.15 + 0.7 * hash12(vec2(column, row) + seed + 4.7);
-      // Behind its head a star leaves a streak; at rest it is a point.
       float t = z - row - head;
-      float s = smoothstep(-len - 0.02, 0.0, t) * (1.0 - smoothstep(0.0, 0.03, t)) * (0.35 + 0.65 * smoothstep(-len, 0.0, t));
-      // Off the lane centre, so the sky does not read as spokes.
+      // Bright head, tail thinning away like a comet's.
+      float s = exp(-max(t, 0.0) * 40.0) * smoothstep(-len - 0.02, 0.0, t) * pow(clamp(1.0 + t / (len + 0.02), 0.0, 1.0), 1.6);
       float across = fract(lane) - 0.2 - 0.6 * hash12(vec2(column, row) + seed + 9.3);
       s *= exp(-across * across / (width * width));
-      float b = 0.4 + 0.6 * fract(h * 13.0);
+      float b = 0.35 + 0.65 * fract(h * 13.0);
       if (s * b > tail * bright) { tail = s; bright = b; }
     }
-    float shift = clamp(seen * 1.6, 0.0, 1.0);
-    vec3 tint = mix(vec3(0.70, 0.82, 1.0), mix(vec3(1.0, 0.92, 0.80), vec3(1.0, 0.55, 0.32), smoothstep(0.5, 1.0, shift)), smoothstep(0.1, 0.5, shift));
-    return tint * tail * bright * 1.6;
+    float shift = clamp(seen * 1.5, 0.0, 1.0);
+    vec3 tint = mix(vec3(0.72, 0.84, 1.0), mix(vec3(1.0, 0.93, 0.84), vec3(1.0, 0.62, 0.48), smoothstep(0.55, 1.0, shift)), smoothstep(0.12, 0.5, shift));
+    return tint * tail * bright;
+  }
+
+  // What lies beyond the far mouth before we see it for real: a rose and teal haze.
+  vec3 beyond(vec2 q) {
+    float n = fbm2(q * 3.0 + vec2(uTime * 0.05, 0.0));
+    float m = fbm2(q * 6.0 - 4.0);
+    return mix(vec3(0.05, 0.11, 0.14), vec3(0.32, 0.10, 0.16), smoothstep(0.35, 0.7, n)) * (0.6 + 0.8 * m) * 0.5;
   }
 
   void main() {
@@ -159,41 +169,63 @@ export const BRIDGE_VEIL_FRAG = /* glsl */ `
     float H = uViewport.y;
     vec3 col = VOID;
     float alpha = uCover;
+    vec2 d = px - uCenter;
+    float seen = length(d) / H;
+    float u = atan(d.y, d.x) / TAU + 0.5;
+    float ringR = uRing / H;
+    float inside = 1.0 - smoothstep(ringR * 0.985, ringR, seen);
     if (uWarp > 0.0) {
-      vec2 d = px - uCenter;
-      float r = length(d) / H;
-      float len = 0.04 + uSpeed * uSpeed * 2.2;
-      vec3 stars = starLayer(d, 70.0, 1.0, uTravel, len) + starLayer(d, 130.0, 9.0, uTravel * 1.3, len)
-        + starLayer(d, 220.0, 17.0, uTravel * 1.7, len) * 0.7;
-      // The far mouth: a point of light ahead that swells as we close in.
-      float ahead = 0.004 + 0.05 * uSpeed * uSpeed;
-      vec3 mouth = vec3(0.85, 0.92, 1.0) * exp(-r / ahead) * (0.6 + uSpeed) + vec3(1.0, 0.86, 0.66) * exp(-r / (ahead * 4.0)) * 0.25 * uSpeed;
-      float edge = 1.0 - smoothstep(0.35, 1.1, r) * 0.6;
-      col = mix(col, VOID + stars * edge + mouth, uWarp);
-      alpha = max(alpha, uWarp);
+      float lr = log(seen + 0.01);
+      float wind = 0.04 + 0.10 * uSpeed;
+      // Nebular gas lining the throat: soft filaments flowing past, never dashes.
+      float flow = uTravel * 0.22;
+      float g1 = fbmRing(u + lr * wind * 1.4, 7.0, lr * 1.1 - flow);
+      float g2 = fbmRing(u + lr * wind * 2.0 + 0.37, 17.0, lr * 1.9 - flow * 1.6);
+      float gas = pow(g1, 2.6) * 0.9 + pow(g2, 3.2) * 0.6;
+      float tone = fbm2(vec2(lr * 0.8 - flow * 0.3, 3.0));
+      vec3 gasCol = mix(mix(vec3(0.14, 0.12, 0.40), vec3(0.06, 0.30, 0.34), tone), vec3(0.85, 0.50, 0.36), exp(-seen * 4.0));
+      float veilFade = smoothstep(0.02, 0.18, seen) * (1.0 - 0.5 * smoothstep(0.5, 1.2, seen));
+      float len = 0.05 + uSpeed * uSpeed * 2.0;
+      vec3 stars = starLayer(seen, u, 90.0, 1.0, uTravel, len, wind) + starLayer(seen, u, 170.0, 9.0, uTravel * 1.35, len, wind) * 0.7;
+      vec3 throat = DEEP + gasCol * gas * 0.22 * (0.4 + 0.6 * uSpeed) * veilFade + stars * 1.3 * smoothstep(0.0, 0.04, seen - ringR);
+      // The far mouth's photon ring, split by the lens into blue inside and amber outside.
+      float w = 0.0025 + ringR * 0.012;
+      // As it sweeps past us the ring spreads its light thin.
+      float spread = 1.0 / (1.0 + ringR * 1.5);
+      vec3 ring = vec3(gauss((seen - ringR * 0.992) / w), gauss((seen - ringR) / w), gauss((seen - ringR * 1.01) / w)) * vec3(0.9, 0.95, 1.0)
+        + vec3(1.0, 0.72, 0.42) * gauss((seen - ringR * 1.04) / (w * 3.0)) * 0.35
+        + vec3(0.7, 0.8, 1.0) * exp(-abs(seen - ringR) / (w * 8.0)) * 0.12 * spread;
+      ring *= spread;
+      throat += ring * uRingGlow * 1.6;
+      // Through the ring: a haze from the other side, until the real sky can show.
+      throat = mix(throat, beyond(d / H / max(ringR, 0.01)) + ring * uRingGlow * 1.6, inside * (1.0 - uReveal));
+      float a = uWarp * (1.0 - inside * uReveal);
+      col = mix(col, throat, uWarp);
+      alpha = max(alpha * (1.0 - inside * uReveal), a);
+      // Once revealed, only the ring's own light is laid over the sky inside.
+      if (inside * uReveal > 0.0) {
+        float glow = clamp(max(ring.r, max(ring.g, ring.b)) * uRingGlow * 1.6, 0.0, 1.0);
+        col = mix(col, ring * uRingGlow * 1.6 / max(glow, 0.001), inside * uReveal);
+        alpha = mix(alpha, glow, inside * uReveal);
+      }
     }
-    if (uBurst > 0.0) {
-      // Bursting through: the mouth's light swallows the frame from the centre out.
-      float r = length(px - uCenter) / H;
-      float fill = 1.0 - smoothstep(uBurst * 2.2 - 0.6, uBurst * 2.2, r + 0.05);
-      vec3 light = mix(vec3(1.0, 0.88, 0.70), vec3(1.0, 0.98, 0.95), exp(-r * 2.0));
-      col = mix(col, light, fill * uBurst);
-      alpha = max(alpha, fill * uBurst);
-    }
-    if (uGlare > 0.0) {
-      // Out of the far mouth: the glare drains back into it and leaves clear sky behind;
-      // the last of the light keeps streaming outward as it slows.
-      vec2 d = px - uMouth;
-      float r = length(d) / H;
-      float reach = mix(0.03, 2.6, uGlare * uGlare * uGlare);
-      float glow = exp(-r / (reach * 0.35)) + 0.6 * exp(-r / reach);
-      float u = atan(d.y, d.x) / TAU + 0.5;
-      float n = mix(noise2(vec2(u * 90.0, log(r + 0.01) * 2.0 - uTravel)), noise2(vec2((u - 1.0) * 90.0, log(r + 0.01) * 2.0 - uTravel)), u);
-      float rays = pow(n, 5.0) * smoothstep(0.02, 0.2, r) * uGlare * 0.9;
-      vec3 light = mix(vec3(1.0, 0.80, 0.55), vec3(1.0, 0.97, 0.92), clamp(glow * 0.7, 0.0, 1.0));
-      float a = clamp(glow * uGlare + rays, 0.0, 1.0);
-      col = alpha > 0.001 ? mix(col, light, a) : light;
-      alpha = max(alpha, a);
+    if (uRibbon > 0.0) {
+      // Time-reversed accretion: light ribbons unwinding out of the mouth.
+      vec2 m = px - uMouth;
+      float r = length(m) / H;
+      float a = atan(m.y, m.x);
+      float lr = log(r + 0.02);
+      float phase = uTravel * 0.35 + uTime * 0.25;
+      float arm = 0.5 + 0.5 * cos(2.0 * a - 4.2 * lr + phase);
+      float silk = 0.65 + 0.7 * fbm2(vec2(cos(a), sin(a)) * 2.0 + vec2(lr * 3.0 - phase * 0.4, 0.0));
+      // Fine filaments, many of them, rather than two broad arms.
+      float arm2 = 0.5 + 0.5 * cos(5.0 * a - 7.0 * lr + phase * 1.3 + 1.7);
+      float band = pow(arm, 60.0) * silk + pow(arm2, 90.0) * silk * 0.6;
+      float fade = smoothstep(0.04, 0.14, r) * exp(-r / 0.45);
+      float rib = clamp(band * fade * uRibbon * 0.45, 0.0, 1.0);
+      vec3 ribCol = mix(vec3(1.0, 0.66, 0.36), vec3(1.0, 0.92, 0.80), silk - 0.5);
+      col = alpha > 0.001 ? mix(col, ribCol, rib) : ribCol;
+      alpha = max(alpha, rib);
     }
     gl_FragColor = vec4(col, alpha);
   }
