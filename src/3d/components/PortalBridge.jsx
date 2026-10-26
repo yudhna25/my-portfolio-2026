@@ -76,7 +76,7 @@ export function PortalBridge({ quality = 'high', reduced = false }) {
   const veilUniforms = useMemo(() => ({
     uViewport: { value: new Vector2(1, 1) }, uCenter: { value: new Vector2() }, uMouth: { value: new Vector2() },
     uCover: { value: 0 }, uWarp: { value: 0 }, uSpeed: { value: 0 }, uTravel: { value: 0 }, uRing: { value: 0 },
-    uRingGlow: { value: 0 }, uReveal: { value: 0 }, uRibbon: { value: 0 }, uTime: { value: 0 }, uPlunge: { value: 0 },
+    uRingGlow: { value: 0 }, uReveal: { value: 0 }, uRibbon: { value: 0 }, uTime: { value: 0 }, uPlunge: { value: 0 }, uFlow: { value: 0 },
   }), []);
 
   useFrame((state, delta) => {
@@ -143,6 +143,10 @@ export function PortalBridge({ quality = 'high', reduced = false }) {
     vu.uWarp.value = ph.warp;
     vu.uSpeed.value = ph.speed;
     vu.uPlunge.value = Math.min(1, Math.max(0, (p - 0.40) / 0.22));
+    // Idle flow slows almost to a stop while time freezes at the horizon (see the veil).
+    const plunge = vu.uPlunge.value;
+    const freeze = Math.min(1, Math.max(0, (plunge - 0.53) / 0.05)) * (1 - Math.min(1, Math.max(0, (plunge - 0.66) / 0.04)));
+    vu.uFlow.value += Math.min(delta, 0.05) * (1 - 0.94 * freeze);
     // Scroll drives the flight; time only keeps it from freezing when the reader pauses.
     vu.uTravel.value = p * 160 + time * (0.15 + ph.speed * 1.5);
     // The far mouth swells as we close in, then sweeps past the frame as we pass through.

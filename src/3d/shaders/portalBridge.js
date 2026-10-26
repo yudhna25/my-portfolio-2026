@@ -133,7 +133,7 @@ export const BRIDGE_VEIL_VERT = /* glsl */ `
 
 export const BRIDGE_VEIL_FRAG = /* glsl */ `
   uniform vec2 uViewport, uCenter, uMouth;
-  uniform float uCover, uWarp, uSpeed, uTravel, uRing, uRingGlow, uReveal, uRibbon, uTime, uPlunge;
+  uniform float uCover, uWarp, uSpeed, uTravel, uRing, uRingGlow, uReveal, uRibbon, uTime, uPlunge, uFlow;
   varying vec2 vUv;
   ${NOISE}
   ${NOISE3}
@@ -176,36 +176,65 @@ export const BRIDGE_VEIL_FRAG = /* glsl */ `
     float ringR = uRing / H;
     float inside = 1.0 - smoothstep(ringR * 0.985, ringR, seen);
     if (uWarp > 0.0) {
-      // The throat of a spinning hole: frame dragging winds its walls of plasma into
-      // helices. Calm and deep red on entry, tighter, hotter and lit by flare rings in the
-      // middle, until the far mouth opens into the ring we fly through.
+      // The throat of a spinning hole, in five acts: frame dragging winds its walls of
+      // plasma into a slow red river, then tighter and hotter helices with a cold indigo
+      // veil turning the other way inside. Near the horizon time all but stops: the river
+      // freezes into silver threads and one gravitational-wave pulse crosses the frame.
+      // Then time returns at once, and the far mouth opens into the ring we fly through.
+      // uFlow is the idle clock, slowed by the same freeze on the JS side.
       float P = uPlunge;
-      float mid = smoothstep(0.30, 0.62, P);
+      float build = smoothstep(0.30, 0.55, P);
+      float freeze = smoothstep(0.53, 0.58, P) * (1.0 - smoothstep(0.66, 0.70, P));
+      float burst = smoothstep(0.66, 0.74, P) * (1.0 - smoothstep(0.86, 0.95, P));
+      float opening = smoothstep(0.78, 1.0, P);
+      float Pw = P - 0.9 * (clamp(P, 0.56, 0.68) - 0.56);
+      float pr = (P - 0.565) / 0.10;
+      float pulse = pr > 0.0 && pr < 1.0 ? gauss((seen - pr * 1.4) / 0.045) * (1.0 - pr) : 0.0;
+      float sr = seen * (1.0 + 0.05 * pulse);
       float a = atan(d.y, d.x);
-      float z = 0.32 / max(seen, 0.002);
-      float travel = uTime * 0.35 + P * 5.0 + P * P * P * 22.0;
-      float spin = uTime * 0.12 + P * P * 7.0;
-      float th = a + z * (0.25 + 1.3 * mid) - spin;
+      float z = 0.32 / max(sr, 0.002);
+      float travel = uFlow * 0.35 + Pw * 5.0 + Pw * Pw * Pw * 22.0;
+      float spin = uFlow * 0.12 + Pw * Pw * 7.0;
+      float th = a + z * (0.25 + 1.3 * build) - spin;
       // Noise on the wound circle itself, so there is no seam where the angle wraps.
       vec3 q = vec3(cos(th) * 1.6, sin(th) * 1.6, z * 0.55 - travel);
       float n = fbm3(q);
       float thread = 1.0 - abs(fbm3(q * vec3(1.4, 1.4, 0.6) + 9.0) * 2.0 - 1.0);
-      float heat = n * n * (0.5 + 0.4 * mid) + pow(thread, 10.0) * (0.4 + 0.5 * mid);
+      float heat = n * n * (0.5 + 0.25 * build) + pow(thread, 10.0) * (0.4 + 0.3 * build);
       // Plasma coming toward us is brighter on one side.
       float doppler = 1.0 + 0.55 * cos(a - 2.6);
-      heat = clamp(heat * doppler, 0.0, 1.6);
+      heat = clamp(heat * doppler * (1.0 + 0.5 * burst), 0.0, 1.6);
       vec3 fire = mix(vec3(0.0), vec3(0.45, 0.04, 0.02), clamp(heat / 0.35, 0.0, 1.0));
       fire = mix(fire, vec3(1.0, 0.45, 0.12), clamp((heat - 0.35) / 0.45, 0.0, 1.0));
       fire = mix(fire, vec3(1.0, 0.88, 0.66), clamp((heat - 0.8) / 0.5, 0.0, 1.0));
       fire *= 0.15 + 0.8 * heat;
-      fire += vec3(0.25, 0.35, 0.8) * pow(thread, 14.0) * max(doppler - 1.0, 0.0) * mid;
-      // Magnetic flare rings rushing toward us through the middle stretch.
-      float f = fract(z * 0.35 - travel * 0.18);
-      fire += vec3(1.0, 0.78, 0.5) * gauss((f - 0.5) * 14.0) * smoothstep(0.32, 0.5, P) * n * n * 1.6;
-      // The walls sink into the dark throat and fall away around the opening mouth.
-      fire *= exp(-z * 0.10) * smoothstep(0.0, 0.25, seen * 3.0) * smoothstep(ringR, ringR * 1.6, seen);
-      // Enter softly: the first stretch is a slow, dim river.
       fire *= 0.35 + 0.65 * smoothstep(0.0, 0.4, P);
+      // Thin-film iridescence on the edges of the hottest threads.
+      float edge = smoothstep(0.78, 0.88, thread) * (1.0 - smoothstep(0.9, 0.97, thread));
+      vec3 irid = 0.5 + 0.5 * cos(TAU * (thread * 4.0 + vec3(0.0, 0.33, 0.67)) + uFlow * 0.4);
+      fire += irid * edge * edge * n * 0.10 * build * (1.0 - opening);
+      // Frozen: the river turns to silver crystal.
+      vec3 ice = vec3(0.55, 0.68, 0.95) * pow(thread, 18.0) * (0.6 + n) * 1.4 + vec3(0.04, 0.05, 0.09) * n;
+      fire = mix(fire, ice, freeze * 0.9);
+      // Magnetic flare rings rushing toward us, strongest when time returns.
+      float f = fract(z * 0.35 - travel * 0.18);
+      fire += vec3(1.0, 0.78, 0.5) * gauss((f - 0.5) * 14.0) * smoothstep(0.32, 0.5, P) * (1.0 - opening) * (1.0 - freeze) * n * n * (1.6 + 2.0 * burst);
+      // The inner veil of cold indigo gas, turning the other way: two depths at once.
+      float z2 = 0.18 / max(sr, 0.002);
+      float th2 = a - z2 * 0.8 + spin * 0.7 + 1.3;
+      float gas = fbm3(vec3(cos(th2) * 2.2, sin(th2) * 2.2, z2 * 0.9 - travel * 0.6));
+      vec3 cold = mix(vec3(0.10, 0.10, 0.42), vec3(0.04, 0.32, 0.40), smoothstep(0.4, 0.7, fbm2(d / H * 3.0 + uFlow * 0.05)));
+      fire += cold * pow(1.0 - abs(gas * 2.0 - 1.0), 16.0) * build * (1.0 - opening) * (0.5 + 0.3 * freeze) * smoothstep(0.05, 0.3, sr) * 0.6;
+      // The walls sink into the dark throat and fall away around the opening mouth.
+      fire *= exp(-z * 0.10) * smoothstep(0.0, 0.25, sr * 3.0) * smoothstep(ringR, ringR * 1.6, sr);
+      // The whole outside sky, squeezed by aberration into a ring of blue-silver stars ahead.
+      float halo = max(mix(0.42, 0.16, P), ringR * 2.2);
+      vec2 sc = vec2((a / TAU + 0.5) * 240.0 + uFlow * 1.5, log(sr) * 34.0);
+      vec2 cf = fract(sc) - 0.5;
+      float sh = hash12(floor(sc));
+      float star = step(0.93, sh) * exp(-dot(cf, cf) * 22.0) * (0.4 + 0.6 * fract(sh * 31.0));
+      fire += vec3(0.75, 0.85, 1.0) * star * gauss((sr - halo) / (0.02 + 0.03 * (1.0 - P))) * 2.2 * (1.0 - opening);
+      fire += vec3(0.85, 0.9, 1.0) * pulse * 0.25;
       fire = 1.0 - exp(-fire * 1.15);
       vec3 throat = DEEP + fire;
       // The photon ring at the mouth's edge, split blue inside and amber outside.
