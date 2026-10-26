@@ -23,6 +23,25 @@ const NOISE = /* glsl */ `
   }
 `;
 
+const NOISE3 = /* glsl */ `
+  float hash13(vec3 p) {
+    p = fract(p * 0.1031);
+    p += dot(p, p.zyx + 31.32);
+    return fract((p.x + p.y) * p.z);
+  }
+  float noise3(vec3 p) {
+    vec3 i = floor(p), f = fract(p);
+    f = f * f * (3.0 - 2.0 * f);
+    return mix(mix(mix(hash13(i), hash13(i + vec3(1, 0, 0)), f.x), mix(hash13(i + vec3(0, 1, 0)), hash13(i + vec3(1, 1, 0)), f.x), f.y),
+               mix(mix(hash13(i + vec3(0, 0, 1)), hash13(i + vec3(1, 0, 1)), f.x), mix(hash13(i + vec3(0, 1, 1)), hash13(i + vec3(1, 1, 1)), f.x), f.y), f.z);
+  }
+  float fbm3(vec3 p) {
+    float s = 0.0, a = 0.5;
+    for (int i = 0; i < 4; i++) { s += a * noise3(p); p = p * 2.07 + 5.3; a *= 0.52; }
+    return s;
+  }
+`;
+
 export const BRIDGE_SHEET_VERT = /* glsl */ `
   attribute vec2 aPolar;
   uniform vec2 uViewport, uPivot;
@@ -114,9 +133,10 @@ export const BRIDGE_VEIL_VERT = /* glsl */ `
 
 export const BRIDGE_VEIL_FRAG = /* glsl */ `
   uniform vec2 uViewport, uCenter, uMouth;
-  uniform float uCover, uWarp, uSpeed, uTravel, uRing, uRingGlow, uReveal, uRibbon, uTime;
+  uniform float uCover, uWarp, uSpeed, uTravel, uRing, uRingGlow, uReveal, uRibbon, uTime, uPlunge;
   varying vec2 vUv;
   ${NOISE}
+  ${NOISE3}
   #define TAU 6.28318530718
   const vec3 VOID = vec3(0.0018, 0.002, 0.0032);
   // Inside the throat the dark leans to indigo.
@@ -130,12 +150,6 @@ export const BRIDGE_VEIL_FRAG = /* glsl */ `
     // Sharp points; only the rare bright one gets a soft halo.
     float b = fract(h * 37.0);
     return step(1.0 - density, h) * (exp(-dot(e, e) * 900.0) + exp(-dot(e, e) * 120.0) * 0.25 * step(0.85, b)) * (0.3 + 0.7 * b * b);
-  }
-  // The sky we leave behind: dark, its stars about to be bent by the mouth's lens.
-  vec3 skyHere(vec2 q) {
-    vec3 c = DEEP + vec3(0.020, 0.011, 0.005) * pow(fbm2(q * 1.1 + 4.0), 5.0);
-    c += vec3(1.0, 0.92, 0.80) * (starDot(q, 6.0, 0.14) * 2.2 + starDot(q + 3.0, 15.0, 0.16) * 1.0 + starDot(q + 9.0, 34.0, 0.16) * 0.5);
-    return c;
   }
   // The sky on the far side, seen through the mouth before we reach it: a rose and teal
   // band of the About nebula with a dark dust lane edge.
@@ -162,29 +176,53 @@ export const BRIDGE_VEIL_FRAG = /* glsl */ `
     float ringR = uRing / H;
     float inside = 1.0 - smoothstep(ringR * 0.985, ringR, seen);
     if (uWarp > 0.0) {
-      // The far mouth is a sphere holding the other sky. Around it our own sky is bent by
-      // its lens: every star shows twice and both images slide along the Einstein ring.
-      float spin = uTime * 0.04 + uSpeed * 1.4;
-      mat2 turn = mat2(cos(spin), -sin(spin), sin(spin), cos(spin));
-      vec2 dir = d / max(seen * H, 0.0001);
-      float einstein = ringR * 1.25;
-      vec2 src = dir * (seen - einstein * einstein / max(seen, 0.0001));
-      vec3 throat = skyHere(turn * src * (1.0 + uSpeed * 1.5) + vec2(uTime * 0.008, 0.0));
-      // Light piles up towards the ring.
-      float mag = clamp(1.0 / abs(1.0 - pow(einstein / max(seen, 0.0001), 4.0)), 1.0, 14.0);
-      throat *= mix(1.0, mag, 0.55);
-      throat *= 1.0 - 0.35 * smoothstep(0.5, 1.1, seen);
-      // The photon ring at the sphere's edge, split blue inside and amber outside.
+      // The throat of a spinning hole: frame dragging winds its walls of plasma into
+      // helices. Calm and deep red on entry, tighter, hotter and lit by flare rings in the
+      // middle, until the far mouth opens into the ring we fly through.
+      float P = uPlunge;
+      float mid = smoothstep(0.30, 0.62, P);
+      float a = atan(d.y, d.x);
+      float z = 0.32 / max(seen, 0.002);
+      float travel = uTime * 0.35 + P * 5.0 + P * P * P * 22.0;
+      float spin = uTime * 0.12 + P * P * 7.0;
+      float th = a + z * (0.25 + 1.3 * mid) - spin;
+      // Noise on the wound circle itself, so there is no seam where the angle wraps.
+      vec3 q = vec3(cos(th) * 1.6, sin(th) * 1.6, z * 0.55 - travel);
+      float n = fbm3(q);
+      float thread = 1.0 - abs(fbm3(q * vec3(1.4, 1.4, 0.6) + 9.0) * 2.0 - 1.0);
+      float heat = n * n * (0.5 + 0.4 * mid) + pow(thread, 10.0) * (0.4 + 0.5 * mid);
+      // Plasma coming toward us is brighter on one side.
+      float doppler = 1.0 + 0.55 * cos(a - 2.6);
+      heat = clamp(heat * doppler, 0.0, 1.6);
+      vec3 fire = mix(vec3(0.0), vec3(0.45, 0.04, 0.02), clamp(heat / 0.35, 0.0, 1.0));
+      fire = mix(fire, vec3(1.0, 0.45, 0.12), clamp((heat - 0.35) / 0.45, 0.0, 1.0));
+      fire = mix(fire, vec3(1.0, 0.88, 0.66), clamp((heat - 0.8) / 0.5, 0.0, 1.0));
+      fire *= 0.15 + 0.8 * heat;
+      fire += vec3(0.25, 0.35, 0.8) * pow(thread, 14.0) * max(doppler - 1.0, 0.0) * mid;
+      // Magnetic flare rings rushing toward us through the middle stretch.
+      float f = fract(z * 0.35 - travel * 0.18);
+      fire += vec3(1.0, 0.78, 0.5) * gauss((f - 0.5) * 14.0) * smoothstep(0.32, 0.5, P) * n * n * 1.6;
+      // The walls sink into the dark throat and fall away around the opening mouth.
+      fire *= exp(-z * 0.10) * smoothstep(0.0, 0.25, seen * 3.0) * smoothstep(ringR, ringR * 1.6, seen);
+      // Enter softly: the first stretch is a slow, dim river.
+      fire *= 0.35 + 0.65 * smoothstep(0.0, 0.4, P);
+      fire = 1.0 - exp(-fire * 1.15);
+      vec3 throat = DEEP + fire;
+      // The photon ring at the mouth's edge, split blue inside and amber outside.
       float w = 0.0025 + ringR * 0.012;
       float spread = 1.0 / (1.0 + ringR * 1.5);
       vec3 ring = vec3(gauss((seen - ringR * 0.992) / w), gauss((seen - ringR) / w), gauss((seen - ringR * 1.01) / w)) * vec3(0.9, 0.95, 1.0)
         + vec3(1.0, 0.72, 0.42) * gauss((seen - ringR * 1.04) / (w * 3.0)) * 0.35
         + vec3(0.7, 0.8, 1.0) * exp(-abs(seen - ringR) / (w * 8.0)) * 0.12 * spread;
       ring *= spread * uRingGlow * 1.05;
-      // Inside the sphere: the far sky, wide-angle, until the real one can show.
+      // Through the mouth: the far sky, wide-angle and softly lit, until the real one shows.
+      float spinThere = uTime * 0.04 + uSpeed * 1.4;
+      mat2 turn = mat2(cos(spinThere), -sin(spinThere), sin(spinThere), cos(spinThere));
+      vec2 dir = d / max(seen * H, 0.0001);
       float k = seen / max(ringR, 0.0001);
-      vec2 q = dir * (k / sqrt(max(1.0 - k * k * 0.92, 0.05))) * (2.2 - uSpeed * 1.3);
-      vec3 there = skyThere(turn * q * 1.6) * (1.0 - 0.6 * smoothstep(0.85, 1.0, k));
+      vec2 qs = dir * (k / sqrt(max(1.0 - k * k * 0.92, 0.05))) * (2.2 - uSpeed * 1.3);
+      vec3 there = skyThere(turn * qs * 1.6) * (1.0 - 0.6 * smoothstep(0.85, 1.0, k))
+        + vec3(0.9, 0.93, 1.0) * exp(-k * 2.5) * 0.12;
       throat = mix(throat, there, inside * (1.0 - uReveal)) + ring;
       col = mix(col, throat, uWarp);
       alpha = max(alpha * (1.0 - inside * uReveal), uWarp * (1.0 - inside * uReveal));

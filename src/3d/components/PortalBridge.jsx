@@ -76,7 +76,7 @@ export function PortalBridge({ quality = 'high', reduced = false }) {
   const veilUniforms = useMemo(() => ({
     uViewport: { value: new Vector2(1, 1) }, uCenter: { value: new Vector2() }, uMouth: { value: new Vector2() },
     uCover: { value: 0 }, uWarp: { value: 0 }, uSpeed: { value: 0 }, uTravel: { value: 0 }, uRing: { value: 0 },
-    uRingGlow: { value: 0 }, uReveal: { value: 0 }, uRibbon: { value: 0 }, uTime: { value: 0 },
+    uRingGlow: { value: 0 }, uReveal: { value: 0 }, uRibbon: { value: 0 }, uTime: { value: 0 }, uPlunge: { value: 0 },
   }), []);
 
   useFrame((state, delta) => {
@@ -142,10 +142,11 @@ export function PortalBridge({ quality = 'high', reduced = false }) {
     vu.uCover.value = ph.cover;
     vu.uWarp.value = ph.warp;
     vu.uSpeed.value = ph.speed;
+    vu.uPlunge.value = Math.min(1, Math.max(0, (p - 0.40) / 0.22));
     // Scroll drives the flight; time only keeps it from freezing when the reader pauses.
     vu.uTravel.value = p * 160 + time * (0.15 + ph.speed * 1.5);
     // The far mouth swells as we close in, then sweeps past the frame as we pass through.
-    vu.uRing.value = height * (0.02 + 0.26 * Math.pow(ph.speed, 2.2)) + Math.hypot(width, height) * 1.3 * ph.pass;
+    vu.uRing.value = height * (0.02 + 0.2 * Math.pow(ph.speed, 4)) + Math.hypot(width, height) * 1.3 * ph.pass;
     vu.uRingGlow.value = ph.ring;
     vu.uReveal.value = ph.reveal;
     vu.uRibbon.value = ph.ribbon;
