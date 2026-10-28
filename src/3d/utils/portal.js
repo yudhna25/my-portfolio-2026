@@ -5,26 +5,42 @@ export const portalSmooth = (a, b, value) => {
   return t * t * (3 - 2 * t);
 };
 
+// The crossing has no middle act: the scroll goes straight from the swallowed Hero to the
+// far mouth. Scroll position maps to story time, skipping the plunge between them.
+const PORTAL_SCROLL = [0, 0.44, 0.50, 1];
+const PORTAL_STORY = [0, 0.44, 0.60, 1];
+function piecewise(value, from, to) {
+  const v = clampStoryProgress(value);
+  for (let i = 1; i < from.length; i++) {
+    if (v <= from[i]) return to[i - 1] + (to[i] - to[i - 1]) * (v - from[i - 1]) / (from[i] - from[i - 1]);
+  }
+  return to[to.length - 1];
+}
+export const portalStoryTime = scroll => piecewise(scroll, PORTAL_SCROLL, PORTAL_STORY);
+export const portalScrollAt = story => piecewise(story, PORTAL_STORY, PORTAL_SCROLL);
+
 export function portalProgress(chapter, progress, frozen = false) {
   return chapter === 'hero' ? 0 : chapter === 'portal' ? frozen ? 1 : clampStoryProgress(progress) : 1;
 }
 
 // Einstein–Rosen bridge. The Hero leans back into a sheet of spacetime that sinks into a
-// funnel at the O; the camera plunges down its spinning throat, flies through the far
-// mouth's ring of light, and About unwinds back out of the hole into its place.
+// funnel at the O; the camera falls through the throat and the far mouth's ring of light,
+// and About unwinds back out of the hole into its place.
 export function portalState(progress, out = {}) {
   const p = clampStoryProgress(progress);
   // The sheet replaces the live Hero from the first scrolled pixel.
   out.sheet = p > 0 ? 1 - portalSmooth(0.42, 0.47, p) : 0;
   out.cover = portalSmooth(0, 0.05, p) * (1 - portalSmooth(0.64, 0.66, p));
-  out.tilt = 0.14 * portalSmooth(0.02, 0.22, p) * (1 - portalSmooth(0.28, 0.42, p));
-  out.depth = portalSmooth(0.04, 0.30, p);
-  out.slide = portalSmooth(0.06, 0.42, p);
+  // Everything answers the first scrolled pixel: the pull starts at once and gathers, as
+  // gravity does, so the Hero never sits still as a copy of itself.
+  out.tilt = 0.14 * portalSmooth(0, 0.22, p) * (1 - portalSmooth(0.28, 0.42, p));
+  out.depth = portalSmooth(0, 0.30, p);
+  const fall = clampStoryProgress(p / 0.42);
+  out.slide = fall * (0.3 + 0.7 * fall * (3 - 2 * fall));
   const dive = portalSmooth(0.20, 0.47, p);
   out.dolly = dive * dive;
-  out.pan = portalSmooth(0.03, 0.30, p);
-  // The plunge: starlight and nebular gas wound into a spiral by the spinning throat, and
-  // ahead the far mouth's photon ring, a window onto the other side.
+  out.pan = portalSmooth(0, 0.30, p);
+  // Down the throat it is dark but for the far mouth's photon ring, a window onto About.
   out.warp = portalSmooth(0.40, 0.45, p) * (1 - portalSmooth(0.63, 0.66, p));
   out.speed = portalSmooth(0.42, 0.58, p);
   out.drift = portalSmooth(0.46, 0.56, p);
@@ -34,7 +50,8 @@ export function portalState(progress, out = {}) {
   out.reveal = portalSmooth(0.60, 0.64, p);
   // Looking back, the mouth unwinds what fell in: About rides spiral ribbons into place.
   out.emerge = 1 - portalSmooth(0.61, 0.88, p);
-  out.outflow = portalSmooth(0.60, 0.63, p) * (1 - portalSmooth(0.88, 0.93, p));
+  // The raster stays whole until the DOM above it is fully in, then steps aside unseen.
+  out.outflow = portalSmooth(0.60, 0.63, p) * (1 - portalSmooth(0.92, 0.94, p));
   out.ribbon = portalSmooth(0.60, 0.66, p) * (1 - portalSmooth(0.80, 0.92, p));
   out.aboutText = portalSmooth(0.87, 0.92, p);
   out.lit = portalSmooth(0.80, 0.95, p);

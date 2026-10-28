@@ -33,7 +33,9 @@ export function createTextRaster(selector) {
       const w = image.naturalWidth * scale, h = image.naturalHeight * scale;
       context.drawImage(image, box.left + (box.width - w) / 2, box.top + (box.height - h) / 2, w, h);
     });
-    context.textBaseline = 'middle';
+    // Draw on the font's own baseline: a word's box is its content area, ascent over descent,
+    // so the raster lands on the DOM glyphs to the pixel and the handoff cannot be seen.
+    context.textBaseline = 'alphabetic';
     roots.forEach(root => {
       const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
       for (let text = walker.nextNode(); text; text = walker.nextNode()) {
@@ -45,14 +47,22 @@ export function createTextRaster(selector) {
         context.fillStyle = style.color;
         context.letterSpacing = style.letterSpacing === 'normal' ? '0px' : style.letterSpacing;
         const upper = style.textTransform === 'uppercase';
+        const metrics = context.measureText('Hg');
+        const size = parseFloat(style.fontSize);
+        const ascent = metrics.fontBoundingBoxAscent ?? size * 0.8, descent = metrics.fontBoundingBoxDescent ?? size * 0.2;
+        // Line reveals clip their text (tall Vietnamese marks included); clip the same way.
+        const clip = clipOf(parent, root);
+        context.save();
+        if (clip) { context.beginPath(); context.rect(clip.left, clip.top, clip.width, clip.height); context.clip(); }
         for (const match of text.textContent.matchAll(/\S+/g)) {
           range.setStart(text, match.index);
           range.setEnd(text, match.index + match[0].length);
           const box = range.getBoundingClientRect();
           if (box.width > 1 && box.height > 1 && box.bottom > 0 && box.top < height) {
-            context.fillText(upper ? match[0].toUpperCase() : match[0], box.left, box.top + box.height / 2);
+            context.fillText(upper ? match[0].toUpperCase() : match[0], box.left, box.top + (box.height - ascent - descent) / 2 + ascent);
           }
         }
+        context.restore();
       }
     });
     context.letterSpacing = '0px';
@@ -61,4 +71,19 @@ export function createTextRaster(selector) {
   };
 
   return { texture, update, dispose: () => texture.dispose() };
+}
+
+// The visible window of a node: the overlap of every clipping ancestor up to the root.
+function clipOf(node, root) {
+  let clip = null;
+  for (let el = node; el && el !== root.parentElement; el = el.parentElement) {
+    const style = getComputedStyle(el);
+    if (style.overflowX === 'visible' && style.overflowY === 'visible') continue;
+    const box = el.getBoundingClientRect();
+    clip = clip ? {
+      left: Math.max(clip.left, box.left), top: Math.max(clip.top, box.top),
+      right: Math.min(clip.right, box.right), bottom: Math.min(clip.bottom, box.bottom),
+    } : { left: box.left, top: box.top, right: box.right, bottom: box.bottom };
+  }
+  return clip && { left: clip.left, top: clip.top, width: Math.max(0, clip.right - clip.left), height: Math.max(0, clip.bottom - clip.top) };
 }

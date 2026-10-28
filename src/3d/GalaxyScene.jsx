@@ -95,7 +95,7 @@ export function GalaxyScene({ children, count, quality: chosenQuality, rayQualit
               </PortalBackdrop>
               <BlackHoleSystem frozen={ambientFrozen} reduced={frozen} story={story} quality={quality} enableBloom={enableBloom} opening={opening} />
               {story && <Select enabled><FinaleParticles quality={quality} reduced={frozen} /></Select>}
-              {story && <PortalBridge quality={quality} reduced={frozen} />}
+              {story && <PortalBridge quality={quality} reduced={frozen} linear={enableBloom && quality !== 'low'} />}
               <SceneReady />
               {!hidden && !ambientFrozen && <ShootingStars frozen={frozen} story={story} />}
               {typeof children === 'function' ? children(quality) : children}
