@@ -1,9 +1,9 @@
 import { CanvasTexture, LinearFilter } from 'three';
 
 // Rasterizes the live Hero lockup (the year's stream, PORTFOLIO without its last O, name and
-// role) at its measured DOM positions, so the opening lens bends exactly what the DOM
+// role; optionally the intro) at its measured DOM positions, so the opening lens bends exactly what the DOM
 // reveals afterwards. The stage is laid out but transparent while this runs.
-export function createLockupRaster() {
+export function createLockupRaster({ intro: withIntro = false } = {}) {
   const canvas = document.createElement('canvas');
   const context = canvas.getContext('2d');
   const texture = new CanvasTexture(canvas);
@@ -74,6 +74,24 @@ export function createLockupRaster() {
     });
     context.letterSpacing = '0px';
 
+    // The intro paragraph wraps, so each word is drawn at its own line box.
+    const intro = withIntro && stage.querySelector('[data-hero-layer="intro"]');
+    if (intro) {
+      const style = getComputedStyle(intro);
+      context.font = fontOf(style);
+      context.textBaseline = 'middle';
+      context.fillStyle = style.color;
+      const walker = document.createTreeWalker(intro, NodeFilter.SHOW_TEXT);
+      const range = document.createRange();
+      for (let text = walker.nextNode(); text; text = walker.nextNode()) {
+        for (const match of text.textContent.matchAll(/\S+/g)) {
+          range.setStart(text, match.index); range.setEnd(text, match.index + match[0].length);
+          const box = range.getBoundingClientRect();
+          if (box.width) context.fillText(match[0], box.left, box.top + box.height / 2);
+        }
+      }
+    }
+
     for (const [selector, alpha] of [['[data-hero-decode]', 1], ['[data-hero-role]', 0.7]]) {
       const node = stage.querySelector(selector);
       if (!node) continue;
@@ -87,5 +105,5 @@ export function createLockupRaster() {
     return true;
   };
 
-  return { texture, update, dispose: () => { disposed = true; texture.dispose(); } };
+  return { texture, update, refresh: () => { key = ''; }, dispose: () => { disposed = true; texture.dispose(); } };
 }

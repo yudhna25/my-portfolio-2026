@@ -12,8 +12,9 @@ const MASK_FRAG = /* glsl */ `
     // cross the shadow; a circular cutout would incorrectly erase that light.
     float captured = smoothstep(0.97, 1.0, ray.a) * (1.0 - step(0.0001, ray.r));
     if (uFinaleEnabled > 0.5) captured *= smoothstep(0.0, 0.2, uFinaleHole);
-    float visibility = uPortalEnabled > 0.5 ? uPortalVisibility : 1.0;
-    outputColor = vec4(inputColor.rgb * (1.0 - captured) * visibility, inputColor.a);
+    // A hidden hole captures nothing; the frame itself belongs to the bridge then.
+    if (uPortalEnabled > 0.5) captured *= uPortalVisibility;
+    outputColor = vec4(inputColor.rgb * (1.0 - captured), inputColor.a);
   }
 `;
 

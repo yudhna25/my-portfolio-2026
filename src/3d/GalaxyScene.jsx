@@ -11,7 +11,7 @@ import { Nebula } from '@/3d/components/Nebula';
 import { BlackHoleSystem } from '@/3d/components/BlackHoleSystem';
 import { CameraRig } from '@/3d/components/CameraRig';
 import { FinaleParticles } from '@/3d/components/FinaleParticles';
-import { YearDust } from '@/3d/components/YearDust';
+import { PortalBridge } from '@/3d/components/PortalBridge';
 import { SpaceDust } from '@/3d/components/SpaceDust';
 import { ChapterBiomes } from '@/3d/components/ChapterBiomes';
 import { ChapterWaveDriver } from '@/3d/components/ChapterWave';
@@ -94,7 +94,8 @@ export function GalaxyScene({ children, count, quality: chosenQuality, rayQualit
                 {story && <SpaceDust quality={quality} reduced={frozen} />}
               </PortalBackdrop>
               <BlackHoleSystem frozen={ambientFrozen} reduced={frozen} story={story} quality={quality} enableBloom={enableBloom} opening={opening} />
-              {story && <Select enabled><FinaleParticles quality={quality} reduced={frozen} /><YearDust quality={quality} reduced={frozen} /></Select>}
+              {story && <Select enabled><FinaleParticles quality={quality} reduced={frozen} /></Select>}
+              {story && <PortalBridge quality={quality} reduced={frozen} linear={enableBloom && quality !== 'low'} />}
               <SceneReady />
               {!hidden && !ambientFrozen && <ShootingStars frozen={frozen} story={story} />}
               {typeof children === 'function' ? children(quality) : children}

@@ -5,7 +5,7 @@ import { RAY_QUALITY } from '@/3d/quality';
 import { BLACK_HOLE_CENTER } from '@/3d/utils/cameraPath';
 import { BLACK_HOLE_VERT, BLACK_HOLE_FRAG, BLACK_HOLE_COPY } from '@/3d/shaders/blackHole';
 import { useScrollStore } from '@/stores/useScrollStore';
-import { portalProgress, portalState } from '@/3d/utils/portal';
+import { bridgeCamera, bridgeProject, portalProgress, portalSmooth, portalState } from '@/3d/utils/portal';
 import { finaleScreenScale, finaleState } from '@/3d/utils/finale';
 import { createLockupRaster } from '@/3d/utils/openingLockup';
 import { createYearMirror } from '@/3d/utils/yearMirror';
@@ -15,6 +15,8 @@ const center = new Vector3(...BLACK_HOLE_CENTER);
 export function BlackHole({ target, frozen = false, quality = 'high', story = false, reduced = false, portal, opening }) {
   const rendererRef = useRef(null);
   const phase = useRef({});
+  const bridge = useRef({});
+  const mouth = useRef({});
   const finale = useRef({});
   const copyDefines = useMemo(() => ({ FINALE_OCTAVES: quality === 'low' ? 2 : 3, FIRE_STEPS: quality === 'low' ? 10 : quality === 'medium' ? 16 : 22 }), [quality]);
   const projected = useMemo(() => new Vector3(), []);
@@ -107,9 +109,10 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
       const cssWidth = window.innerWidth, cssHeight = window.innerHeight;
       const width = anchor?.width || 32, height = anchor?.height || 40;
       const left = anchor?.left ?? cssWidth * 0.75, top = anchor?.top ?? cssHeight * 0.2;
-      const anchorX = (left + width / 2) / cssWidth, anchorY = 1 - (top + height / 2) / cssHeight;
-      portal.uPortalCenter.value.set(anchorX + (0.5 - anchorX) * phase.current.center,
-        anchorY + (0.55 - anchorY) * phase.current.center);
+      // The hole rests in the O and, once the Hero leans back, sits at the funnel's throat.
+      const throat = bridgeProject(bridgeCamera(phase.current, anchor, cssWidth, cssHeight, bridge.current), 0, 0, mouth.current);
+      const dive = 1 / Math.max(throat.w, 0.05) * (1 + 2.5 * portalSmooth(0.34, 0.46, p));
+      portal.uPortalCenter.value.set(throat.x / cssWidth, 1 - throat.y / cssHeight);
       portal.uPortalViewport.value.set(cssWidth, cssHeight);
       projected.copy(center).project(camera);
       portal.uRayCenter.value.set(Number.isFinite(projected.x) ? projected.x * 0.5 + 0.5 : 0.5,
@@ -125,18 +128,15 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
       portal.uFireball.value.set(ending ? screenRadius : 0, authored.fireHeat, authored.fireDensity, authored.flatten);
       portal.uFinaleZoom.value = ending ? authored.zoom : 1;
       // The anchor is the cap-height slot, not the counter of a visible O glyph.
-      portal.uPortalScale.value = Math.max(0.001, height * 0.48 / shadow) * phase.current.growth;
-      portal.uPortalRadius.value.set(height * 2.8 * phase.current.growth, height * 1.4 * phase.current.growth);
+      portal.uPortalScale.value = Math.max(0.001, height * 0.48 / shadow) * dive;
+      portal.uPortalRadius.value.set(height * 2.8 * dive, height * 1.4 * dive);
       portal.uPortalMini.value = phase.current.mini;
       portal.uPortalVisibility.value = phase.current.visibility;
-      portal.uPortalDust.value = phase.current.dust;
-      portal.uPortalPull.value = phase.current.pull;
       if (intro) {
         portal.uPortalCenter.value.set(intro.x / cssWidth, 1 - intro.y / cssHeight);
         portal.uPortalScale.value *= intro.shadow / (height * 0.48);
         portal.uPortalRadius.value.set(intro.shadow * 2.8 / 0.48, intro.shadow * 1.4 / 0.48);
         portal.uPortalVisibility.value = 1;
-        portal.uPortalDust.value = 0;
       }
       // Bend a raster of the Hero lockup until the DOM copy is revealed in place.
       const lens = portal.uOpeningLens.value;

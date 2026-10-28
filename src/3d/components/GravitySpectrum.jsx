@@ -7,7 +7,7 @@ import { GRAVITY_SPECTRUM_FRAG } from '@/3d/shaders/gravitySpectrum';
 import { BLACK_HOLE_CENTER } from '@/3d/utils/cameraPath';
 import { CHAPTER_PALETTE } from '@/3d/utils/chapterWave';
 import { finaleSmooth } from '@/3d/utils/finale';
-import { portalProgress, portalState } from '@/3d/utils/portal';
+import { portalProgress, portalSmooth, portalState } from '@/3d/utils/portal';
 import { useScrollStore } from '@/stores/useScrollStore';
 
 const center = new Vector3(...BLACK_HOLE_CENTER);
@@ -84,7 +84,9 @@ export function GravitySpectrum({ portal, reduced = false }) {
     // to amber and stream inward until the collision swallows them. Contact stays untouched.
     const loading = Boolean(document.querySelector('[data-preloader]'));
     const finale = state.storyChapter === 'finale' ? state.chapterProgress : state.storyChapter === 'contact' ? 1 : 0;
-    const visible = state.storyChapter === 'portal' ? phase.current.visibility : 1;
+    // The lines ease out as the pull begins (the sheet draws its own funnel), and come back
+    // once the light echo has settled.
+    const visible = state.storyChapter === 'portal' ? p < 0.5 ? 1 - portalSmooth(0, 0.12, p) : phase.current.lit : 1;
     const opacity = loading ? 0 : CONTOUR_OPACITY * visible * (1 - finaleSmooth(0.40, 0.50, finale));
     const contour = u.get('uContour').value;
     const heroIdle = state.storyChapter === 'hero' && p === 0;

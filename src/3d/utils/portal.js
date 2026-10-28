@@ -1,109 +1,108 @@
-import { clampStoryProgress, portalFall } from './cameraPath.js';
+import { clampStoryProgress } from './cameraPath.js';
 
 export const portalSmooth = (a, b, value) => {
   const t = clampStoryProgress((value - a) / (b - a));
   return t * t * (3 - 2 * t);
 };
 
+// The crossing has no middle act: the scroll goes straight from the swallowed Hero to the
+// far mouth. Scroll position maps to story time, skipping the plunge between them.
+const PORTAL_SCROLL = [0, 0.44, 0.50, 1];
+const PORTAL_STORY = [0, 0.44, 0.60, 1];
+function piecewise(value, from, to) {
+  const v = clampStoryProgress(value);
+  for (let i = 1; i < from.length; i++) {
+    if (v <= from[i]) return to[i - 1] + (to[i] - to[i - 1]) * (v - from[i - 1]) / (from[i] - from[i - 1]);
+  }
+  return to[to.length - 1];
+}
+export const portalStoryTime = scroll => piecewise(scroll, PORTAL_SCROLL, PORTAL_STORY);
+export const portalScrollAt = story => piecewise(story, PORTAL_STORY, PORTAL_SCROLL);
+
 export function portalProgress(chapter, progress, frozen = false) {
   return chapter === 'hero' ? 0 : chapter === 'portal' ? frozen ? 1 : clampStoryProgress(progress) : 1;
 }
 
+// Einstein–Rosen bridge. The Hero leans back into a sheet of spacetime that sinks into a
+// funnel at the O; the camera falls through the throat and the far mouth's ring of light,
+// and About unwinds back out of the hole into its place.
 export function portalState(progress, out = {}) {
   const p = clampStoryProgress(progress);
-  out.pull = p;
-  out.intake = portalFall(p);
-  out.eject = portalSmooth(0.50, 0.94, p);
-  out.center = portalSmooth(0.04, 0.35, p);
-  // Rebase the exterior observer only while every composed layer is black.
-  out.mini = p < 0.47 ? 1 : 0;
-  out.visibility = p < 0.47 ? 1 - portalSmooth(0.425, 0.44, p) : portalSmooth(0.50, 0.56, p);
-  out.growth = Math.exp(Math.log(120) * out.intake);
-  out.textOpacity = 1 - portalSmooth(0.34, 0.44, p);
-  out.backdrop = p < 0.44 || p > 0.50;
-  out.aboutOpacity = portalSmooth(0.54, 0.66, p);
-  out.aboutInteractive = p >= 0.84;
-  out.controlsOpacity = p < 0.5 ? out.textOpacity : portalSmooth(0.90, 0.96, p);
+  // The sheet replaces the live Hero from the first scrolled pixel.
+  out.sheet = p > 0 ? 1 - portalSmooth(0.42, 0.47, p) : 0;
+  out.cover = portalSmooth(0, 0.05, p) * (1 - portalSmooth(0.64, 0.66, p));
+  // Everything answers the first scrolled pixel: the pull starts at once and gathers, as
+  // gravity does, so the Hero never sits still as a copy of itself.
+  out.tilt = 0.14 * portalSmooth(0, 0.22, p) * (1 - portalSmooth(0.28, 0.42, p));
+  out.depth = portalSmooth(0, 0.30, p);
+  const fall = clampStoryProgress(p / 0.42);
+  out.slide = fall * (0.3 + 0.7 * fall * (3 - 2 * fall));
+  const dive = portalSmooth(0.20, 0.47, p);
+  out.dolly = dive * dive;
+  out.pan = portalSmooth(0, 0.30, p);
+  // Down the throat it is dark but for the far mouth's photon ring, a window onto About.
+  out.warp = portalSmooth(0.40, 0.45, p) * (1 - portalSmooth(0.63, 0.66, p));
+  out.speed = portalSmooth(0.42, 0.58, p);
+  out.drift = portalSmooth(0.46, 0.56, p);
+  // We fly through the ring: it sweeps past the frame and leaves the About sky inside it.
+  out.pass = portalSmooth(0.555, 0.645, p);
+  out.ring = portalSmooth(0.42, 0.50, p) * (1 - portalSmooth(0.62, 0.66, p));
+  out.reveal = portalSmooth(0.60, 0.64, p);
+  // Looking back, the mouth unwinds what fell in: About rides spiral ribbons into place.
+  out.emerge = 1 - portalSmooth(0.61, 0.88, p);
+  // The raster stays whole until the DOM above it is fully in, then steps aside unseen.
+  out.outflow = portalSmooth(0.60, 0.63, p) * (1 - portalSmooth(0.92, 0.94, p));
+  out.ribbon = portalSmooth(0.60, 0.66, p) * (1 - portalSmooth(0.80, 0.92, p));
+  out.aboutText = portalSmooth(0.87, 0.92, p);
+  out.lit = portalSmooth(0.80, 0.95, p);
+  out.bridge = p > 0 && p < 1;
+  // The exterior observer is rebased inside the throat, while the tunnel hides the hole.
+  out.mini = p < 0.5 ? 1 : 0;
+  out.visibility = p < 0.5 ? 1 - portalSmooth(0.39, 0.45, p) : portalSmooth(0.60, 0.66, p);
+  out.backdrop = p < 0.06 || p > 0.55;
+  out.heroOpacity = p > 0 ? 0 : 1;
+  out.aboutOpacity = p > 0.58 ? 1 : 0;
+  out.aboutInteractive = p >= 0.9;
+  out.controlsOpacity = p < 0.5 ? 1 - portalSmooth(0, 0.05, p) : portalSmooth(0.90, 0.96, p);
   out.controlsInteractive = p === 0 || p >= 0.96;
-  out.dust = 0.08 * out.textOpacity;
+  // The backdrop keeps its own shape; the bridge carries all of the motion.
+  out.intake = 0;
+  out.eject = 1;
+  out.center = 0;
   return out;
 }
 
-// Seeded offsets sample the scroll clock, so disintegration can be reversed exactly.
-export function portalParticle(p, x, y, seed, cx, cy, out = {}) {
-  const fall = portalFall(p);
-  const t = Math.min(1, fall + seed * 0.16 * portalSmooth(0.01, 0.22, p) * (1 - fall));
-  const dx = x - cx, dy = y - cy;
-  const r = Math.hypot(dx, dy) * Math.pow(1 - t, 0.72);
-  const angle = Math.atan2(dy, dx) + (5.2 + seed * 2.4) * t * t;
-  const scatter = Math.sin(seed * 113 + t * 13) * Math.sin(t * Math.PI) * (4 + seed * 14);
-  out.x = cx + Math.cos(angle) * r + Math.cos(angle + 1.57) * scatter;
-  out.y = cy + Math.sin(angle) * r * (1 - 0.18 * t) + Math.sin(angle + 1.57) * scatter;
-  out.t = t;
-  return out;
-}
-
-// Layout is cached without transforms; motion never changes the measured O slot.
-export function portalIntake(p, layout, anchor, width, height, index = 0, out = {}) {
-  let t = funnelSmooth(Math.min(index, 50) * 0.0005, 0.435, p);
-  // Stagger arrival along the same funnel instead of stacking opaque glyphs at its join.
-  t += (index % 16) * 0.015 * funnelSmooth(0.08, 0.38, t) * (1 - t);
-  return portalIntakeSample(p, t, layout, anchor, width, height, index, out);
-}
-
-// Every branch joins the same funnel; sampling ahead creates a bounded afterimage ribbon.
-const funnelSmooth = (a, b, value) => {
-  const t = clampStoryProgress((value - a) / (b - a));
-  return t * t * t * (t * (6 * t - 15) + 10);
-};
-const funnelSlope = (a, b, value) => {
-  const t = clampStoryProgress((value - a) / (b - a));
-  return 30 * t * t * (t - 1) * (t - 1) / (b - a);
-};
-
-export function portalIntakeSample(p, t, layout, anchor, width, height, index = 0, out = {}) {
-  t = clampStoryProgress(t);
-  const center = portalSmooth(0.04, 0.35, p);
+// Pixel-space camera over the sheet, shared by the scene and the DOM so both agree on
+// where the throat is. Sheet points are relative to the O; z points away from the viewer.
+export function bridgeCamera(phase, anchor, width, height, out = {}) {
   const ox = anchor ? anchor.left + anchor.width / 2 : width * 0.75;
   const oy = anchor ? anchor.top + anchor.height / 2 : height * 0.4;
-  const cx = ox + (width * 0.5 - ox) * center;
-  const cy = oy + (height * 0.45 - oy) * center;
-  const dx = layout.x - cx, dy = layout.y - cy;
-  const radius = Math.hypot(dx, dy);
-  const start = Math.atan2(dy, dx);
-  const join = funnelSmooth(0.04, 0.46, t);
-  // Unwrap the entry angle before blending so no branch takes a sudden long turn.
-  const launch = start + Math.atan2(Math.sin(-Math.PI * 0.75 - start), Math.cos(-Math.PI * 0.75 - start));
-  const angle = start + (launch - start) * join + Math.PI * 2.5 * funnelSmooth(0.08, 1, t);
-  const funnel = Math.min(width, height) * 0.43 * (1 + (index % 5 - 2) * 0.006 * (1 - t));
-  const radial = radius * (1 - join) + funnel * join;
-  const r = radial * Math.pow(1 - t, 1.45);
-  const depth = 0.76 + 0.24 * funnelSmooth(0, 0.46, t);
-  out.x = cx + Math.cos(angle) * r - layout.x;
-  out.y = cy + Math.sin(angle) * r * depth - layout.y;
-  // Preserve the source pose exactly at rest, including its vertical distance from O.
-  out.y += dy * (1 - depth) * (1 - join);
-  const joinSlope = funnelSlope(0.04, 0.46, t);
-  const angleSlope = (launch - start) * joinSlope + Math.PI * 2.5 * funnelSlope(0.08, 1, t);
-  const funnelSlopeAt = -Math.min(width, height) * 0.43 * (index % 5 - 2) * 0.006;
-  const radiusSlope = ((funnel - radius) * joinSlope + funnelSlopeAt * join) * Math.pow(1 - t, 1.45)
-    - 1.45 * radial * Math.pow(1 - t, 0.45);
-  const depthSlope = 0.24 * funnelSlope(0, 0.46, t);
-  const vx = Math.cos(angle) * radiusSlope - Math.sin(angle) * r * angleSlope;
-  const vy = (Math.sin(angle) * radiusSlope + Math.cos(angle) * r * angleSlope) * depth
-    + Math.sin(angle) * r * depthSlope - dy * (depthSlope * (1 - join) + (1 - depth) * joinSlope);
-  const tangentBase = angle + Math.PI;
-  const tangent = tangentBase + Math.atan2(Math.sin(Math.atan2(vy, vx) - tangentBase), Math.cos(Math.atan2(vy, vx) - tangentBase));
-  out.rotation = tangent * 180 / Math.PI * funnelSmooth(0.12, 0.38, t);
-  const uniform = Math.pow(1 - t, 1.15);
-  const stretch = 1 + 1.5 * funnelSmooth(0.20, 0.78, t) * (1 - funnelSmooth(0.78, 1, t));
-  const span = layout.width || 1;
-  const fit = ((1 - join) * span + join * Math.max(6, r * 0.32)) / span;
-  out.scaleX = Math.max(0.001, Math.min(uniform * stretch, fit));
-  out.scaleY = Math.max(0.001, uniform * (1 - 0.62 * funnelSmooth(0.25, 0.85, t)));
-  out.opacity = (1 - portalSmooth(0.34, 0.435, p)) * (1 - funnelSmooth(0.12, 0.33, t));
-  out.t = t;
-  out.tangent = tangent;
-  out.radius = r;
+  out.originX = ox; out.originY = oy;
+  out.pivotX = ox + (width * 0.5 - ox) * phase.pan;
+  out.pivotY = oy + (height * 0.56 - oy) * phase.pan;
+  out.focal = height * 1.1;
+  // Past the rim the camera is inside the funnel, looking down its throat.
+  out.distance = out.focal * (1 - 1.9 * phase.dolly);
+  out.depth = phase.depth * height * 2.2;
+  out.throat = height * 0.08;
+  out.tilt = phase.tilt;
+  out.cos = Math.cos(phase.tilt); out.sin = Math.sin(phase.tilt);
+  // Tilting swings the deep throat down the screen; lift the sheet halfway so neither the
+  // throat nor the rim leaves the frame.
+  out.lift = out.depth * out.sin * 0.5;
+  return out;
+}
+
+export function bridgeDepth(camera, r) {
+  return camera.depth * Math.pow(camera.throat / (r + camera.throat), 1.3);
+}
+
+export function bridgeProject(camera, x, y, out = {}) {
+  const z = bridgeDepth(camera, Math.hypot(x, y));
+  const ry = y * camera.cos + z * camera.sin - camera.lift, rz = -y * camera.sin + z * camera.cos;
+  const w = (camera.distance + rz) / camera.focal;
+  out.w = w;
+  out.x = camera.pivotX + x / Math.max(w, 0.0001);
+  out.y = camera.pivotY + ry / Math.max(w, 0.0001);
   return out;
 }

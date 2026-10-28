@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { gsap, ScrollSmoother, ScrollTrigger, useGSAPSetup } from '@/hooks/useGSAPSetup';
 import { useScrollStore } from '@/stores/useScrollStore';
 import { clampStoryProgress, segmentProgress } from '@/3d/utils/cameraPath';
+import { portalScrollAt, portalStoryTime } from '@/3d/utils/portal';
 
 export function useScrollProgress({ scope, story = false, locale, ready = true, initialPosition, historyManaged = false, staticMotion = false } = {}) {
   const controls = useRef(null);
@@ -25,7 +26,7 @@ export function useScrollProgress({ scope, story = false, locale, ready = true, 
       const section = sections.find(item => item.id === id || item.domId === id);
       if (!story || !section) return;
       const p = clampStoryProgress(value);
-      const scroll = section.top + (section.end - section.top) * p;
+      const scroll = section.top + (section.end - section.top) * (section.id === 'portal' ? portalScrollAt(p) : p);
       // Pause before moving the DOM: no ticker can overwrite the explicit endpoint.
       useScrollStore.getState().setStoryPosition(section.id, p, maxScroll ? scroll / maxScroll : 0, manual);
       const smoother = ScrollSmoother.get();
@@ -50,7 +51,8 @@ export function useScrollProgress({ scope, story = false, locale, ready = true, 
         }
         if (chapter) {
           const p = segmentProgress(scroll, chapter.top, chapter.end);
-          state.setStoryPosition(chapter.id === 'portal' && p === 0 ? 'hero' : chapter.id, p, progress, false);
+          const portal = chapter.id === 'portal';
+          state.setStoryPosition(portal && p === 0 ? 'hero' : chapter.id, portal ? portalStoryTime(p) : p, progress, false);
         }
         return;
       }
