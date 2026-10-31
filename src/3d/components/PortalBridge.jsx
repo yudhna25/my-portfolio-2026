@@ -2,15 +2,13 @@ import { useEffect, useMemo, useRef } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import { BufferAttribute, BufferGeometry, Color, DoubleSide, HalfFloatType, LinearFilter, MirroredRepeatWrapping, NormalBlending, Vector2, Vector3, WebGLRenderTarget } from 'three';
 import { BLACK_HOLE_CENTER } from '@/3d/utils/cameraPath';
-import { bridgeCamera, portalProgress, portalState } from '@/3d/utils/portal';
+import { bridgeCamera, bridgeMouth, portalProgress, portalState } from '@/3d/utils/portal';
 import { createLockupRaster } from '@/3d/utils/openingLockup';
-import { createTextRaster } from '@/3d/utils/textRaster';
 import { BRIDGE_SHEET_FRAG, BRIDGE_SHEET_VERT, BRIDGE_VEIL_FRAG, BRIDGE_VEIL_VERT } from '@/3d/shaders/portalBridge';
 import { useScrollStore } from '@/stores/useScrollStore';
 
 const RESOLUTION = { low: [90, 120], medium: [130, 180], high: [170, 240] };
 const hole = new Vector3();
-const FLOW = '[data-about-flow]';
 const SKY = new Color('#07080D');
 const clear = new Color();
 const buffer = new Vector2();
@@ -42,7 +40,7 @@ const sheetUniforms = () => ({
   uLift: { value: 0 }, uFocal: { value: 1 }, uDistance: { value: 1 }, uDepth: { value: 0 }, uThroat: { value: 1 }, uCos: { value: 1 }, uSin: { value: 0 },
   uRmax: { value: 1 }, uLockup: { value: null }, uLockupReady: { value: 0 }, uSky: { value: null }, uSkyReady: { value: 0 }, uLinear: { value: 0 },
   uSlide: { value: 0 }, uAlpha: { value: 0 },
-  uDepthAmount: { value: 0 }, uTime: { value: 0 }, uBare: { value: 0 },
+  uDepthAmount: { value: 0 }, uTime: { value: 0 },
 });
 
 function applyCamera(u, cam, width, height) {
@@ -62,13 +60,10 @@ function applyCamera(u, cam, width, height) {
 export function PortalBridge({ quality = 'high', reduced = false, linear = true }) {
   const { gl, scene, camera: view } = useThree();
   const sheet = useRef(null);
-  const outflow = useRef(null);
   const veil = useRef(null);
   const phase = useRef({});
   const camera = useRef({});
-  const exit = useRef({});
   const lockup = useRef(null);
-  const about = useRef(null);
   const wasAtRest = useRef(true);
   const geometry = useMemo(() => sheetGeometry(...RESOLUTION[quality]), [quality]);
   useEffect(() => () => geometry.dispose(), [geometry]);
@@ -82,18 +77,16 @@ export function PortalBridge({ quality = 'high', reduced = false, linear = true 
   // Compile the crossing up front, so the first scrolled frame does not stall on it.
   useEffect(() => {
     if (reduced) return;
-    const meshes = [veil.current, sheet.current, outflow.current].filter(Boolean);
+    const meshes = [veil.current, sheet.current].filter(Boolean);
     meshes.forEach(mesh => { mesh.visible = true; });
     gl.compile(scene, view);
     meshes.forEach(mesh => { mesh.visible = false; });
   }, [gl, scene, view, reduced, geometry]);
   useEffect(() => () => {
     lockup.current?.dispose(); lockup.current = null;
-    about.current?.dispose(); about.current = null;
-    publishFlow(null);
+    bridgeMouth.ready = false;
   }, []);
   const inflowUniforms = useMemo(sheetUniforms, []);
-  const outflowUniforms = useMemo(sheetUniforms, []);
   const veilUniforms = useMemo(() => ({
     uViewport: { value: new Vector2(1, 1) }, uCenter: { value: new Vector2() }, uMouth: { value: new Vector2() },
     uCover: { value: 0 }, uWarp: { value: 0 }, uSpeed: { value: 0 }, uTravel: { value: 0 }, uRing: { value: 0 },
@@ -101,34 +94,36 @@ export function PortalBridge({ quality = 'high', reduced = false, linear = true 
   }), []);
 
   useFrame((state, delta) => {
-    if (!sheet.current || !outflow.current || !veil.current) return;
+    if (!sheet.current || !veil.current) return;
     // The materials keep their own uniform objects; write through them.
-    const su = sheet.current.material.uniforms, ou = outflow.current.material.uniforms, vu = veil.current.material.uniforms;
+    const su = sheet.current.material.uniforms, vu = veil.current.material.uniforms;
     const scroll = useScrollStore.getState();
     const p = portalProgress(scroll.storyChapter, scroll.chapterProgress, reduced);
     const width = window.innerWidth, height = window.innerHeight;
     const dpr = Math.min(2, window.devicePixelRatio || 1);
     const busy = document.querySelector('[data-preloader]');
-    // Keep a raster of the resting Hero; re-take it the moment the crossing starts so the
-    // sheet carries exactly what was on screen, glitched year included.
+    // Keep a raster of the resting year's stream; re-take it the moment the crossing starts so
+    // the sheet carries exactly what was on screen, glitched year included. The letters and
+    // words stay live DOM and ride the same flow (see PortalHeading).
     if (!reduced && !busy && (p === 0 || wasAtRest.current)) {
       // Premultiplied, as the page composites it: the year's glow is light with little alpha.
-      lockup.current ??= premultiplied(createLockupRaster({ intro: true }));
+      lockup.current ??= premultiplied(createLockupRaster({ text: false }));
       if (p > 0) lockup.current.refresh();
       su.uLockupReady.value = lockup.current.update(width, height, dpr) ? 1 : 0;
       su.uLockup.value = lockup.current.texture;
     }
     wasAtRest.current = p === 0;
     const active = !reduced && p > 0 && p < 1 && !busy;
-    sheet.current.visible = outflow.current.visible = veil.current.visible = active;
-    if (!active) { publishFlow(null); return; }
+    sheet.current.visible = veil.current.visible = active;
+    bridgeMouth.ready = active;
+    if (!active) return;
     const ph = portalState(p, phase.current);
     const time = (vu.uTime.value += Math.min(delta, 0.05));
 
     // Near side: the Hero sheet sinking into the funnel.
     const cam = bridgeCamera(ph, scroll.storyAnchor, width, height, camera.current);
     sheet.current.visible = ph.sheet > 0;
-    su.uLinear.value = ou.uLinear.value = linear ? 1 : 0;
+    su.uLinear.value = linear ? 1 : 0;
     const backdrop = ph.sheet > 0 && state.scene.getObjectByName('portal-backdrop');
     if (backdrop) {
       gl.getDrawingBufferSize(buffer);
@@ -156,24 +151,8 @@ export function PortalBridge({ quality = 'high', reduced = false, linear = true 
     // Far side: the real hole, the mouth we fly out of.
     hole.set(...BLACK_HOLE_CENTER).project(state.camera);
     const mx = (hole.x * 0.5 + 0.5) * width, my = (0.5 - hole.y * 0.5) * height;
-    outflow.current.visible = ph.outflow > 0;
-    if (ph.outflow > 0) {
-      about.current ??= premultiplied(createTextRaster(FLOW));
-      ou.uLockupReady.value = about.current.update(width, height, dpr) ? 1 : 0;
-      ou.uLockup.value = about.current.texture;
-      // About climbs out of a shallow well at the mouth and unwinds into place.
-      const e = exit.current;
-      e.originX = e.pivotX = mx; e.originY = e.pivotY = my;
-      e.focal = e.distance = height * 1.1;
-      e.depth = height * 0.6 * ph.emerge; e.throat = height * 0.08;
-      e.lift = 0; e.cos = 1; e.sin = 0;
-      applyCamera(ou, e, width, height);
-      ou.uSlide.value = ph.emerge;
-      ou.uAlpha.value = ph.outflow;
-      ou.uDepthAmount.value = ph.emerge;
-      ou.uTime.value = time;
-      ou.uBare.value = 1;
-    }
+    // About pours back out of it as live DOM (see About), so it needs to know where it is.
+    bridgeMouth.x = mx; bridgeMouth.y = my;
 
     vu.uViewport.value.set(width, height);
     // The flight bends towards where the far mouth will be, so we come out facing it.
@@ -189,7 +168,6 @@ export function PortalBridge({ quality = 'high', reduced = false, linear = true 
     vu.uRingGlow.value = ph.ring;
     vu.uReveal.value = ph.reveal;
     vu.uRibbon.value = ph.ribbon;
-    publishFlow(p > 0.58 ? ph.aboutText : null);
   });
 
   return <>
@@ -203,25 +181,10 @@ export function PortalBridge({ quality = 'high', reduced = false, linear = true 
       <shaderMaterial vertexShader={BRIDGE_SHEET_VERT} fragmentShader={BRIDGE_SHEET_FRAG} uniforms={inflowUniforms} side={DoubleSide}
         transparent blending={NormalBlending} depthTest depthWrite toneMapped={false} />
     </mesh>
-    <mesh ref={outflow} name="portal-bridge-outflow" geometry={geometry} frustumCulled={false} renderOrder={9.8} visible={false}>
-      <shaderMaterial vertexShader={BRIDGE_SHEET_VERT} fragmentShader={BRIDGE_SHEET_FRAG} uniforms={outflowUniforms} side={DoubleSide}
-        transparent blending={NormalBlending} depthTest={false} depthWrite={false} toneMapped={false} />
-    </mesh>
   </>;
 }
 
 function premultiplied(raster) {
   raster.texture.premultiplyAlpha = true;
   return raster;
-}
-
-// The DOM text waits under its raster and takes over once every letter has landed.
-let published = null;
-function publishFlow(opacity) {
-  if (opacity === published) return;
-  published = opacity;
-  document.querySelectorAll(FLOW).forEach(node => {
-    if (opacity === null) node.style.removeProperty('opacity');
-    else node.style.opacity = opacity.toFixed(3);
-  });
 }

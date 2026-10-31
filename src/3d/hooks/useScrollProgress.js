@@ -37,7 +37,10 @@ export function useScrollProgress({ scope, story = false, locale, ready = true, 
     const update = () => {
       if (ScrollTrigger.isRefreshing) return;
       // Publish the visible DOM position, including the smoother's settling frames.
-      const scroll = ScrollSmoother.get()?.scrollTop() ?? window.scrollY;
+      const raw = ScrollSmoother.get()?.scrollTop() ?? window.scrollY;
+      // On touch screens normalizeScroll parks the page 1px down to keep the address bar
+      // still; that pixel is still the top, or the Hero would sit frozen mid-crossing.
+      const scroll = raw <= 1.5 ? 0 : raw;
       const progress = maxScroll > 0 ? scroll / maxScroll : 0;
       const state = useScrollStore.getState();
       if (story) {

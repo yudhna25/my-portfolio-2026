@@ -1,9 +1,9 @@
 import { CanvasTexture, LinearFilter } from 'three';
 
 // Rasterizes the live Hero lockup (the year's stream, PORTFOLIO without its last O, name and
-// role; optionally the intro) at its measured DOM positions, so the opening lens bends exactly what the DOM
-// reveals afterwards. The stage is laid out but transparent while this runs.
-export function createLockupRaster({ intro: withIntro = false } = {}) {
+// role; optionally the intro, or the year alone) at its measured DOM positions, so the opening lens bends
+// exactly what the DOM reveals afterwards. The stage is laid out but transparent while this runs.
+export function createLockupRaster({ intro: withIntro = false, text = true } = {}) {
   const canvas = document.createElement('canvas');
   const context = canvas.getContext('2d');
   const texture = new CanvasTexture(canvas);
@@ -61,6 +61,7 @@ export function createLockupRaster({ intro: withIntro = false } = {}) {
       if (year) context.drawImage(year, box.left, box.top, box.width, box.height);
     }
 
+    if (!text) { texture.needsUpdate = true; return true; }
     const chars = [...stage.querySelectorAll('[data-portal-char]')];
     context.fillStyle = '#EDEBE3';
     context.textBaseline = 'alphabetic';

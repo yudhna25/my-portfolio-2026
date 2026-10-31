@@ -4,7 +4,8 @@ import { useGSAP } from '@gsap/react';
 import { gsap, ScrollTrigger } from '@/hooks/useGSAPSetup';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { useScrollStore } from '@/stores/useScrollStore';
-import { portalProgress, portalState } from '@/3d/utils/portal';
+import { bridgeMouth, exitCamera, portalProgress, portalState } from '@/3d/utils/portal';
+import { funnelMatrix, matrixCss, parseColor, splitWords } from '@/3d/utils/funnelFlow';
 import '@/styles/about.css';
 
 export default function About({ portrait }) {
@@ -40,6 +41,46 @@ export default function About({ portrait }) {
     const shifts = frames.map(node => value => { node.style.transform = value; });
     const backdrop = gsap.quickSetter(q('[data-about-backdrop]')[0], 'opacity');
     gsap.set(stage, { opacity: 1 });
+    // About pours out of the far mouth as itself: every word and the portrait ride the
+    // bridge's exit flow out of a shallow well at the hole and settle into their places.
+    const roots = q('[data-about-flow]');
+    const cam = {}, flow = {};
+    let outflow = null;
+    const enterOutflow = () => {
+      const words = splitWords(roots);
+      const nodes = [...words.units, ...roots.flatMap(node => [...node.querySelectorAll('img')])];
+      const units = nodes.map(node => {
+        const root = roots.find(item => item.contains(node));
+        const box = node.getBoundingClientRect(), base = root.getBoundingClientRect();
+        node.style.willChange = 'transform, opacity';
+        const color = node.tagName === 'IMG' ? null : parseColor(getComputedStyle(node).color);
+        return { node, root, x: box.left + box.width / 2 - base.left, y: box.top + box.height / 2 - base.top, color };
+      });
+      outflow = { units, restore: words.restore };
+    };
+    const leaveOutflow = () => {
+      if (!outflow) return;
+      outflow.units.forEach(({ node }) => ['transform', 'opacity', 'color', 'will-change'].forEach(key => node.style.removeProperty(key)));
+      outflow.restore();
+      outflow = null;
+    };
+    const pour = () => {
+      if (!outflow) return;
+      const height = window.innerHeight;
+      exitCamera(phase, bridgeMouth, height, cam);
+      const bases = new Map(roots.map(node => [node, node.getBoundingClientRect()]));
+      outflow.units.forEach(unit => {
+        const base = bases.get(unit.root);
+        funnelMatrix(cam, phase.emerge, height, base.left + unit.x, base.top + unit.y, flow, unit.color ? undefined : PICTURE);
+        const alpha = flow.alpha * phase.outflow;
+        const style = unit.node.style;
+        style.opacity = alpha.toFixed(3);
+        if (alpha < 0.002) return;
+        style.transform = matrixCss(flow);
+        // Fresh out of the mouth the words run hot, cooling to their own colour as they settle.
+        if (unit.color) style.color = hot(unit.color, 1 - flow.stretch);
+      });
+    };
     const draw = () => {
       const state = useScrollStore.getState();
       const p = portalProgress(state.storyChapter, state.chapterProgress, frozen);
@@ -54,8 +95,11 @@ export default function About({ portrait }) {
       }
       // Only inner visuals move; section/marker/footprint remain in document flow.
       shifts.forEach(shift => shift(`translateY(${entering ? -(1 - p) * range : 0}px)`));
-      // The text itself pours out of the far mouth first (see PortalBridge).
       backdrop(phase.aboutOpacity);
+      const pouring = entering && visible && phase.emerge > 0 && bridgeMouth.ready;
+      if (pouring && !outflow) { enterOutflow(); gsap.ticker.add(pour); }
+      else if (!pouring && outflow) { gsap.ticker.remove(pour); leaveOutflow(); }
+      pour();
       if (portrait && portraitButton.current) {
         const data = portrait.current;
         data.node = portraitButton.current;
@@ -71,6 +115,8 @@ export default function About({ portrait }) {
     };
     const measure = () => {
       if (!active) return;
+      // Rest offsets are taken with nothing moved; take them again for the new layout.
+      if (outflow) { gsap.ticker.remove(pour); leaveOutflow(); }
       shifts.forEach(shift => shift('none'));
       const base = stage.getBoundingClientRect();
       const content = document.getElementById('smooth-content');
@@ -89,6 +135,8 @@ export default function About({ portrait }) {
     return () => {
       active = false;
       unsubscribe();
+      gsap.ticker.remove(pour);
+      leaveOutflow();
       observer.disconnect();
       window.removeEventListener('resize', measure);
       ScrollTrigger.removeEventListener('refresh', measure);
@@ -104,7 +152,7 @@ export default function About({ portrait }) {
           <span className="sr-only">{t('hero.name')}</span>
           {name.map(line => <span key={line} aria-hidden="true" className="relative block">
             <span className="invisible block">{line}</span>
-            <span data-about-decode className="absolute inset-0 overflow-clip">{line}</span>
+            <span data-about-decode className="absolute inset-0">{line}</span>
           </span>)}
         </h2>
         <p className="mt-5 font-body text-sm text-(--text-secondary) sm:text-base">{t('about.subLabel')}</p>
@@ -128,7 +176,7 @@ export default function About({ portrait }) {
             <span key={i18n.resolvedLanguage} className="relative block">
               <span className="sr-only">{opening}</span>
               <span aria-hidden="true" className="invisible block">{opening}</span>
-              <span aria-hidden="true" data-about-decode className="absolute inset-0 overflow-clip">{opening}</span>
+              <span aria-hidden="true" data-about-decode className="absolute inset-0">{opening}</span>
             </span>{bio.slice(split)}
           </p>
           <p data-about-bio className="text-base leading-[1.8] lg:text-lg">{t('about.bioSecond')}</p>
@@ -137,4 +185,14 @@ export default function About({ portrait }) {
       </div>
     </div>
   </section>;
+}
+
+// The portrait comes out whole: turned and growing to size, never smeared.
+const PICTURE = { rigid: true, limit: 1 };
+const GLOW = [255, 219, 158];
+
+function hot([r, g, b, a], heat) {
+  const t = Math.min(0.9, Math.max(0, heat * 1.4));
+  const mix = (from, to) => Math.round(Math.min(255, from + (Math.min(255, to * 1.6) - from) * t));
+  return `rgba(${mix(r, GLOW[0])},${mix(g, GLOW[1])},${mix(b, GLOW[2])},${a})`;
 }

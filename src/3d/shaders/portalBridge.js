@@ -1,6 +1,6 @@
 // Einstein–Rosen bridge for the Hero → About crossing. Two passes share one pixel-space
-// camera (see bridgeCamera in utils/portal.js): a polar sheet mesh that carries the Hero
-// lockup and its stars down the funnel, and a full-screen veil for the void around the
+// camera (see bridgeCamera in utils/portal.js): a polar sheet mesh that carries the Hero's
+// live sky and year down the funnel (its letters ride the same flow as DOM, funnelFlow.js), and a full-screen veil for the void around the
 // sheet, the throat, the flash of every later chapter, and the light echo on the far side.
 
 const NOISE = /* glsl */ `
@@ -54,7 +54,7 @@ export const BRIDGE_SHEET_VERT = /* glsl */ `
 export const BRIDGE_SHEET_FRAG = /* glsl */ `
   uniform sampler2D uLockup, uSky;
   uniform vec2 uViewport, uOrigin;
-  uniform float uLockupReady, uSkyReady, uLinear, uSlide, uAlpha, uDepthAmount, uTime, uBare;
+  uniform float uLockupReady, uSkyReady, uLinear, uSlide, uAlpha, uDepthAmount, uTime;
   varying vec2 vSheet;
   varying float vW, vSlope, vDeep;
   ${NOISE}
@@ -94,15 +94,6 @@ export const BRIDGE_SHEET_FRAG = /* glsl */ `
     // Swallowed matter fades into the throat; the far sheet melts into the void.
     float swallow = smoothstep(0.02, 0.18, stretch);
     float horizon = 1.0 - smoothstep(3.0, 7.0, vW);
-    if (uBare > 0.5) {
-      // The far mouth gives back only what fell in: hot letters on clear sky, cooling to
-      // ivory as they settle.
-      float hot = 1.0 - stretch;
-      vec3 ink = lockup.rgb / max(lockup.a, 0.0001);
-      vec3 glyph = mix(uLinear > 0.5 ? toLinear(ink) : ink, vec3(1.0, 0.86, 0.62) * 1.6, clamp(hot * 1.4, 0.0, 0.9));
-      gl_FragColor = vec4(glyph, lockup.a * swallow * uAlpha);
-      return;
-    }
     gl_FragColor = vec4(mix(VOID, col, swallow), uAlpha * horizon);
   }
 `;
