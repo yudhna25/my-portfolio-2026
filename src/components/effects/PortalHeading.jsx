@@ -4,7 +4,8 @@ import { gsap, useGSAPSetup } from '@/hooks/useGSAPSetup';
 import { useScrollStore } from '@/stores/useScrollStore';
 import { useLoadingStore } from '@/stores/useLoadingStore';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
-import { portalProgress, portalState } from '@/3d/utils/portal';
+import { bridgeCamera, portalProgress, portalState } from '@/3d/utils/portal';
+import { flowColor, funnelMatrix, matrixCss, parseColor, splitWords } from '@/3d/utils/funnelFlow';
 import { createYearStream } from '@/components/effects/yearStream';
 import '@/styles/hero.css';
 
@@ -43,11 +44,14 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
     const dropStream = () => { stream?.dispose(); stream = null; delete yearLayer.dataset.yearGl; };
     streamCanvas.addEventListener('streamlost', dropStream);
     if (stream) yearLayer.dataset.yearGl = 'true';
-    // Once scrolling starts the scene carries a raster of this lockup down the bridge's
-    // funnel, so the live DOM steps aside on the first scrolled pixel.
+    // Once scrolling starts the live lockup itself is pulled down the bridge's funnel: each
+    // letter and word rides the same flow as the sky the scene drags in behind it. Only the
+    // year's stream, a canvas of its own, is handed to the scene (frozen on its last frame).
     const measure = () => {
       if (!active) return;
       if (stream && !stream.resize()) stream.render();
+      // Rest positions are taken with the page still; re-take them for the new layout.
+      leaveCrossing();
       draw();
     };
     // A gravitational wave rolls through the last digit and the stream re-forms as the next
@@ -92,6 +96,43 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
     const decode = !frozen ? gsap.timeline({ id: 'hero-name-decode', paused: true }).to(decoded, {
       duration: 0.6, ease: 'none', scrambleText: { text: name, chars: 'upperAndLowerCase', tweenLength: false, revealDelay: 0.2 },
     }) : null;
+    const details = stage.querySelector('[data-hero-details]');
+    const cam = {}, flow = {};
+    let crossing = null;
+    const enterCrossing = () => {
+      details.style.overflow = 'visible';
+      const words = splitWords([decoded, ...stage.querySelectorAll('[data-hero-role], [data-hero-layer="intro"]')]);
+      const chars = [...stage.querySelectorAll('[data-portal-char]')].slice(0, -1);
+      const units = [...chars, ...words.units].map(node => {
+        const box = node.getBoundingClientRect();
+        node.style.willChange = 'transform, opacity';
+        return { node, x: box.left + box.width / 2, y: box.top + box.height / 2, color: parseColor(getComputedStyle(node).color) };
+      });
+      yearLayer.style.visibility = 'hidden';
+      crossing = { units, restore: words.restore };
+    };
+    const leaveCrossing = () => {
+      if (!crossing) return;
+      crossing.units.forEach(({ node }) => ['transform', 'opacity', 'color', 'will-change'].forEach(key => node.style.removeProperty(key)));
+      crossing.restore();
+      details.style.removeProperty('overflow');
+      yearLayer.style.removeProperty('visibility');
+      crossing = null;
+    };
+    const pull = state => {
+      const width = window.innerWidth, height = window.innerHeight;
+      bridgeCamera(phase, state.storyAnchor, width, height, cam);
+      const heatAmount = phase.depth * (1 - phase.dolly);
+      crossing.units.forEach(unit => {
+        funnelMatrix(cam, phase.slide, height, unit.x, unit.y, flow);
+        const alpha = flow.alpha * phase.sheet;
+        const style = unit.node.style;
+        style.opacity = alpha.toFixed(3);
+        if (alpha < 0.002) return;
+        style.transform = matrixCss(flow);
+        style.color = flowColor(unit.color, (1 - flow.stretch) * heatAmount, 1 - 0.7 * flow.deep * flow.deep * heatAmount);
+      });
+    };
     let running;
     const replay = () => { if (running) decode?.restart(); };
     const draw = () => {
@@ -100,27 +141,33 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
       portalState(p, phase);
       opacity(visible && phase.heroOpacity > 0 ? opening?.current.active ? opening.current.reveal : 1 : 0);
       if (p > 0 && running) { decode?.pause(0); decoded.textContent = name; }
-      const hidden = !visible || phase.heroOpacity === 0;
+      const hidden = !visible || p > 0;
       stage.setAttribute('aria-hidden', hidden ? 'true' : 'false');
       stage.inert = hidden;
       const loadingOpening = useLoadingStore.getState().isLoading && document.querySelector('[data-preloader]');
       const idle = visible && !loadingOpening && !document.hidden && p === 0;
-      if (idle === running) return;
-      running = idle;
-      stage.dataset.heroIdle = String(idle);
-      nameNode.tabIndex = idle ? 0 : -1;
-      if (idle) {
-        stream?.play();
-        decode?.restart();
-        resume();
-      } else {
-        settle();
-        stream?.pause();
-        stream?.render();
-        decode?.pause(0);
-        decoded.textContent = name;
-        if (document.activeElement === nameNode) nameNode.blur();
+      if (idle !== running) {
+        running = idle;
+        stage.dataset.heroIdle = String(idle);
+        nameNode.tabIndex = idle ? 0 : -1;
+        if (idle) {
+          stream?.play();
+          decode?.restart();
+          resume();
+        } else {
+          settle();
+          stream?.pause();
+          stream?.render();
+          decode?.pause(0);
+          decoded.textContent = name;
+          if (document.activeElement === nameNode) nameNode.blur();
+        }
       }
+      // After the idle switch, which resets the name's text that the crossing splits.
+      const pulling = visible && !frozen && p > 0 && phase.heroOpacity > 0;
+      if (pulling && !crossing) enterCrossing();
+      else if (!pulling && crossing) leaveCrossing();
+      if (crossing) pull(state);
     };
     measure();
     const unsubscribe = useScrollStore.subscribe(draw);
@@ -147,6 +194,7 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
       if (slipped) slip();
       streamCanvas.removeEventListener('streamlost', dropStream);
       dropStream();
+      leaveCrossing();
       decoded.textContent = name;
     };
   }, { scope, dependencies: [label, name, year, frozen, visible, opening], revertOnUpdate: true });

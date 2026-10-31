@@ -50,17 +50,17 @@ export function portalState(progress, out = {}) {
   out.reveal = portalSmooth(0.60, 0.64, p);
   // Looking back, the mouth unwinds what fell in: About rides spiral ribbons into place.
   out.emerge = 1 - portalSmooth(0.61, 0.88, p);
-  // The raster stays whole until the DOM above it is fully in, then steps aside unseen.
-  out.outflow = portalSmooth(0.60, 0.63, p) * (1 - portalSmooth(0.92, 0.94, p));
+  // About's own text and portrait ride out of the mouth (see About).
+  out.outflow = portalSmooth(0.60, 0.63, p);
   out.ribbon = portalSmooth(0.60, 0.66, p) * (1 - portalSmooth(0.80, 0.92, p));
-  out.aboutText = portalSmooth(0.87, 0.92, p);
   out.lit = portalSmooth(0.80, 0.95, p);
   out.bridge = p > 0 && p < 1;
   // The exterior observer is rebased inside the throat, while the tunnel hides the hole.
   out.mini = p < 0.5 ? 1 : 0;
   out.visibility = p < 0.5 ? 1 - portalSmooth(0.39, 0.45, p) : portalSmooth(0.60, 0.66, p);
   out.backdrop = p < 0.06 || p > 0.55;
-  out.heroOpacity = p > 0 ? 0 : 1;
+  // The live Hero stays on screen and is pulled in itself (see PortalHeading).
+  out.heroOpacity = p < 0.47 ? 1 : 0;
   out.aboutOpacity = p > 0.58 ? 1 : 0;
   out.aboutInteractive = p >= 0.9;
   out.controlsOpacity = p < 0.5 ? 1 - portalSmooth(0, 0.05, p) : portalSmooth(0.90, 0.96, p);
@@ -69,6 +69,18 @@ export function portalState(progress, out = {}) {
   out.intake = 0;
   out.eject = 1;
   out.center = 0;
+  return out;
+}
+
+// Where the far mouth is on screen, published each frame by the bridge for the DOM.
+export const bridgeMouth = { x: 0, y: 0, ready: false };
+
+// The shallow well About climbs out of at the far mouth, as a bridge camera.
+export function exitCamera(phase, mouth, height, out = {}) {
+  out.originX = out.pivotX = mouth.x; out.originY = out.pivotY = mouth.y;
+  out.focal = out.distance = height * 1.1;
+  out.depth = height * 0.6 * phase.emerge; out.throat = height * 0.08;
+  out.lift = 0; out.cos = 1; out.sin = 0;
   return out;
 }
 
