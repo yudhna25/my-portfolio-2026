@@ -21,7 +21,7 @@ export function SceneFallback() {
   }, []);
 
   return (
-    <div ref={root} data-scene-fallback className="flex h-full flex-col items-start justify-end bg-(--bg-void) p-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] text-left text-(--text-primary) sm:p-10">
+    <div ref={root} data-scene-fallback className="flex h-full flex-col items-start justify-end sm:items-end bg-(--bg-void) p-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] text-left text-(--text-primary) sm:p-10">
       <div className={`max-w-xs transition-opacity duration-700 ${opening ? 'opacity-100' : 'opacity-0'}`}>
         <strong className="font-serif text-lg font-normal italic">{t('fallback.title')}</strong>
         <p className="mt-2 font-body text-sm leading-relaxed text-(--text-secondary)">{t('fallback.description')}</p>
