@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Matrix3, Matrix4, Mesh, OrthographicCamera, PlaneGeometry, Scene, ShaderMaterial, Vector2, Vector3 } from 'three';
-import { RAY_QUALITY } from '@/3d/quality';
+import { Matrix3, Matrix4, Mesh, OrthographicCamera, PlaneGeometry, Scene, ShaderMaterial, Vector2, Vector3, Vector4 } from 'three';
+import { RAY_QUALITY, renderBudget } from '@/3d/quality';
 import { BLACK_HOLE_CENTER } from '@/3d/utils/cameraPath';
 import { BLACK_HOLE_VERT, BLACK_HOLE_FRAG, BLACK_HOLE_COPY } from '@/3d/shaders/blackHole';
 import { useScrollStore } from '@/stores/useScrollStore';
@@ -11,6 +11,69 @@ import { createLockupRaster } from '@/3d/utils/openingLockup';
 import { createYearMirror } from '@/3d/utils/yearMirror';
 
 const center = new Vector3(...BLACK_HOLE_CENTER);
+
+// The ray pass returns the (transparent) formation for every ray whose impact parameter
+// exceeds 9.6 (see BLACK_HOLE_FRAG). Those rays fill a cone around the hole's direction;
+// outside its screen footprint the pass provably writes transparent black, so it is
+// scissored to that box. Pixels inside are traced exactly as before.
+const RAY_REACH = 9.6;
+const CONE_SAMPLES = 48;
+const coneAxis = new Vector3(), coneU = new Vector3(), coneV = new Vector3(), coneDirection = new Vector3();
+const coneClip = new Vector4();
+const UP = new Vector3(0, 1, 0), SIDE = new Vector3(1, 0, 0);
+
+// Drawing-buffer box {x, y, w, h} that holds every pixel the ray pass can light, or null
+// when that is (nearly) the whole frame or cannot be bounded safely.
+function rayBounds(camera, observer, portal, width, height, out) {
+  const radius = Math.max(observer.length(), 1.1);
+  // Largest sine (to the hole's direction) whose impact parameter stays within reach.
+  const reach = RAY_REACH * Math.sqrt(1 - 1 / radius) / radius;
+  if (!(reach < 0.94)) return null;
+  const theta = Math.asin(reach) + 0.03;
+  const cos = Math.cos(theta), sin = Math.sin(theta);
+  coneAxis.copy(observer).multiplyScalar(-1 / observer.length());
+  coneU.crossVectors(coneAxis, Math.abs(coneAxis.y) < 0.9 ? UP : SIDE).normalize();
+  coneV.crossVectors(coneAxis, coneU);
+  let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+  for (let i = 0; i < CONE_SAMPLES; i++) {
+    const angle = i / CONE_SAMPLES * Math.PI * 2;
+    coneDirection.copy(coneAxis).multiplyScalar(cos)
+      .addScaledVector(coneU, sin * Math.cos(angle)).addScaledVector(coneV, sin * Math.sin(angle));
+    coneClip.set(coneDirection.x, coneDirection.y, coneDirection.z, 0)
+      .applyMatrix4(camera.matrixWorldInverse).applyMatrix4(camera.projectionMatrix);
+    if (!(coneClip.w > 0.0001)) return null;
+    const x = coneClip.x / coneClip.w * 0.5 + 0.5, y = coneClip.y / coneClip.w * 0.5 + 0.5;
+    minX = Math.min(minX, x); maxX = Math.max(maxX, x); minY = Math.min(minY, y); maxY = Math.max(maxY, y);
+  }
+  // The inscribed polygon of samples undershoots the cone's outline by < 0.3%.
+  const padX = (maxX - minX) * 0.01, padY = (maxY - minY) * 0.01;
+  minX -= padX; maxX += padX; minY -= padY; maxY += padY;
+  // Ray UV -> screen UV, the inverse of portalRayUV().
+  const ray = portal.uRayCenter.value;
+  const mini = portal.uPortalEnabled.value > 0.5 && portal.uPortalMini.value > 0.5;
+  if (portal.uFinaleEnabled.value > 0.5) {
+    const scale = Math.max(portal.uFinaleScale.value, 0.001);
+    minX = ray.x + (minX - ray.x) * scale; maxX = ray.x + (maxX - ray.x) * scale;
+    minY = ray.y + (minY - ray.y) * scale; maxY = ray.y + (maxY - ray.y) * scale;
+  } else if (mini) {
+    const scale = Math.max(portal.uPortalScale.value, 0.001), target = portal.uPortalCenter.value;
+    minX = target.x + (minX - ray.x) * scale; maxX = target.x + (maxX - ray.x) * scale;
+    minY = target.y + (minY - ray.y) * scale; maxY = target.y + (maxY - ray.y) * scale;
+  }
+  if (mini) {
+    // portalCoverage(): nothing is lit outside the (rotated) aperture ellipse.
+    const view = portal.uPortalViewport.value, size = portal.uPortalRadius.value;
+    const extent = Math.max(size.x, size.y, 1), target = portal.uPortalCenter.value;
+    minX = Math.max(minX, target.x - extent / view.x); maxX = Math.min(maxX, target.x + extent / view.x);
+    minY = Math.max(minY, target.y - extent / view.y); maxY = Math.min(maxY, target.y + extent / view.y);
+  }
+  if (![minX, minY, maxX, maxY].every(Number.isFinite)) return null;
+  const x0 = Math.max(0, Math.floor(minX * width) - 4), x1 = Math.min(width, Math.ceil(maxX * width) + 4);
+  const y0 = Math.max(0, Math.floor(minY * height) - 4), y1 = Math.min(height, Math.ceil(maxY * height) + 4);
+  const w = Math.max(0, x1 - x0), h = Math.max(0, y1 - y0);
+  if (w * h > width * height * 0.85) return null;
+  return out.set(x0, y0, w, h);
+}
 
 export function BlackHole({ target, frozen = false, quality = 'high', story = false, reduced = false, portal, opening }) {
   const rendererRef = useRef(null);
@@ -22,6 +85,7 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
   const projected = useMemo(() => new Vector3(), []);
   const bufferSize = useMemo(() => new Vector2(), []);
   const diskTime = useRef(0);
+  const scissor = useMemo(() => new Vector4(), []);
   const lockup = useRef(null);
   const year = useRef(null);
   const yearPull = useRef(0);
@@ -86,7 +150,10 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
     if (!active) return;
     const uniforms = active.material.uniforms;
     gl.getDrawingBufferSize(bufferSize);
-    if (target.width !== bufferSize.x || target.height !== bufferSize.y) target.setSize(bufferSize.x, bufferSize.y);
+    // Full resolution unless AdaptiveQuality had to trade sharpness for frame rate.
+    const rayWidth = Math.max(1, Math.round(bufferSize.x * renderBudget.ray));
+    const rayHeight = Math.max(1, Math.round(bufferSize.y * renderBudget.ray));
+    if (target.width !== rayWidth || target.height !== rayHeight) target.setSize(rayWidth, rayHeight);
     const state = useScrollStore.getState();
     const intro = opening?.current.active && !reduced ? opening.current : null;
     portal.uOpening.value.set(intro ? 1 : 0, intro?.p || 0, intro?.collapse || 0, intro?.shadow || 1);
@@ -186,13 +253,25 @@ export function BlackHole({ target, frozen = false, quality = 'high', story = fa
     const autoClear = gl.autoClear;
     const xr = gl.xr.enabled;
     const clearAlpha = gl.getClearAlpha();
+    // The pre-burst/opening formation paints the whole frame; otherwise only the ray cone can.
+    const formation = portal.uOpening.value.x > 0.5 && portal.uFinaleEnabled.value < 0.5;
+    const box = formation ? null : rayBounds(camera, observer, portal, target.width, target.height, scissor);
     try {
       gl.xr.enabled = false;
       gl.autoClear = true;
       gl.setRenderTarget(target);
       gl.setClearAlpha(0);
-      gl.render(active.scene, active.camera);
+      if (box) {
+        // Clear everything, then trace only the box (scissor also limits clear, so clear first).
+        gl.clear(true, false, false);
+        target.scissor.copy(box);
+        target.scissorTest = true;
+        gl.setRenderTarget(target);
+        gl.autoClear = false;
+      }
+      if (!box || (box.z > 0 && box.w > 0)) gl.render(active.scene, active.camera);
     } finally {
+      target.scissorTest = false;
       gl.setClearAlpha(clearAlpha);
       gl.setRenderTarget(previousTarget);
       gl.autoClear = autoClear;

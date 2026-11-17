@@ -15,6 +15,7 @@ import { PortalBridge } from '@/3d/components/PortalBridge';
 import { SpaceDust } from '@/3d/components/SpaceDust';
 import { ChapterBiomes } from '@/3d/components/ChapterBiomes';
 import { ChapterWaveDriver } from '@/3d/components/ChapterWave';
+import { AdaptiveQuality } from '@/3d/components/AdaptiveQuality';
 import { QUALITY } from '@/3d/quality';
 import { INITIAL_CAMERA_POSITION } from '@/3d/utils/cameraPath';
 import { portalProgress, portalState } from '@/3d/utils/portal';
@@ -97,6 +98,7 @@ export function GalaxyScene({ children, count, quality: chosenQuality, rayQualit
               {story && <Select enabled><FinaleParticles quality={quality} reduced={frozen} /></Select>}
               {story && <PortalBridge quality={quality} reduced={frozen} linear={enableBloom && quality !== 'low'} />}
               <SceneReady />
+              <AdaptiveQuality />
               {!hidden && !ambientFrozen && <ShootingStars frozen={frozen} story={story} />}
               {typeof children === 'function' ? children(quality) : children}
             </Selection>
