@@ -403,7 +403,7 @@ export function MenuOverlay({ open, onClose, reader = false }) {
 
           <nav aria-labelledby="stellar-menu-title" className="col-start-2 col-end-24 min-w-0">
 
-            <h2 key={i18n.resolvedLanguage} id="stellar-menu-title" aria-label={t('nav.menuTitle')} className="mb-6 font-mono text-xs font-normal uppercase tracking-[0.2em] text-(--text-secondary)">
+            <h2 key={i18n.resolvedLanguage} id="stellar-menu-title" aria-label={t('nav.menuTitle')} className="mb-6 font-mono text-sm font-normal uppercase tracking-[0.2em] text-(--text-secondary)">
 
               {t('nav.menuTitle')}
 
@@ -425,7 +425,7 @@ export function MenuOverlay({ open, onClose, reader = false }) {
 
                   >
 
-                    <span aria-hidden="true" className="shrink-0 font-mono text-xs text-(--text-secondary)">
+                    <span aria-hidden="true" className="shrink-0 font-mono text-sm text-(--text-secondary)">
 
                       {String(index + 1).padStart(2, '0')}
 

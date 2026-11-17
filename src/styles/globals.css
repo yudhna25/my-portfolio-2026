@@ -102,6 +102,9 @@
     font-family: var(--font-body);
   }
 
+  /* Reading scrims feather past the edges; clip them so phones never pan sideways. */
+  html, body { overflow-x: clip; }
+
   body {
     font-family: var(--font-body);
     font-size: var(--text-body);
@@ -126,6 +129,9 @@
     font-size: var(--text-body);
     line-height: var(--text-body--line-height);
   }
+
+  /* No lone word on a paragraph's last line. */
+  p, li, blockquote, figcaption { text-wrap: pretty; }
 
   label, code, kbd, samp {
     font-family: var(--font-mono);

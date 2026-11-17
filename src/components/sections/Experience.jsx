@@ -69,7 +69,7 @@ export default function Experience({ onLayout }) {
   return <section ref={root} id="experience" lang={i18n.resolvedLanguage} data-theme="dark" aria-labelledby="experience-heading" className="relative px-6 pt-24 text-(--text-primary) sm:px-8 lg:px-12">
     <div className="mx-auto max-w-7xl">
       <header className="mb-24 max-w-4xl lg:mb-32">
-        <p key={`label-${i18n.resolvedLanguage}`} lang="en" data-reveal="signal" className="mb-5 font-mono text-xs tracking-[0.2em] text-(--text-secondary)">{t('experience.sectionLabel')}</p>
+        <p key={`label-${i18n.resolvedLanguage}`} lang="en" data-reveal="signal" className="mb-5 font-mono text-sm tracking-[0.2em] text-(--text-secondary)">{t('experience.sectionLabel')}</p>
         <h2 key={i18n.resolvedLanguage} id="experience-heading" aria-label={t('experience.heading')} data-reveal="starlight" className="font-display text-[clamp(1.75rem,4.5vw,4rem)] font-bold uppercase leading-[1.2] tracking-[-0.035em]"><MixedText text={t('experience.heading')} accent={t('experience.headingAccent')} /></h2>
       </header>
       <ul className="m-0 list-none space-y-[18vh] p-0 pb-[50vh] lg:space-y-[12vh]">
@@ -81,7 +81,7 @@ export default function Experience({ onLayout }) {
                 <h3 key={`company-${i18n.resolvedLanguage}`} id={`experience-${id}`} data-reveal="starlight" className="font-display text-[clamp(1.25rem,2.2vw,2rem)] font-semibold leading-tight tracking-[-0.035em] [overflow-wrap:anywhere]">{position.company}</h3>
                 <p key={`role-${i18n.resolvedLanguage}`} lang="en" data-reveal="signal" className="mt-3 font-mono text-sm leading-relaxed">{position.role}</p>
               </div>
-              <p data-reveal="items" className="mt-5 font-mono text-xs leading-relaxed text-white/65"><span>{position.period}</span><span aria-hidden="true"> · </span><span lang="en">{position.type}</span></p>
+              <p data-reveal="items" className="mt-5 font-mono text-sm leading-relaxed text-white/65"><span>{position.period}</span><span aria-hidden="true"> · </span><span lang="en">{position.type}</span></p>
               <p key={`description-${i18n.resolvedLanguage}`} data-reveal="dust" className="mt-6 max-w-[48ch] font-body text-base leading-[1.8] text-white/80">{position.description}</p>
             </article>
           </li>;

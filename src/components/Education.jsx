@@ -70,7 +70,7 @@ export default function Education() {
     className="edu relative isolate px-6 py-24 text-(--text-primary) sm:px-8 lg:min-h-[175vh] lg:py-28 lg:pl-28 lg:pr-12">
     <div className="mx-auto max-w-7xl">
       <header className="max-w-3xl star-scrim">
-        <p key={`label-${i18n.resolvedLanguage}`} lang="en" data-reveal="dust" className="mb-5 font-mono text-xs tracking-[0.2em] text-(--text-secondary)">{t('education.sectionLabel')}</p>
+        <p key={`label-${i18n.resolvedLanguage}`} lang="en" data-reveal="dust" className="mb-5 font-mono text-sm tracking-[0.2em] text-(--text-secondary)">{t('education.sectionLabel')}</p>
         <h2 key={i18n.resolvedLanguage} id="education-heading" aria-label={t('education.heading')} data-reveal="starlight" className="font-display text-[clamp(1.75rem,4.5vw,4rem)] font-bold uppercase leading-[1.2] tracking-[-0.035em]"><MixedText text={t('education.heading')} accent={t('education.headingAccent')} /></h2>
         <p key={`note-${i18n.resolvedLanguage}`} data-reveal="dust" className="mt-5 max-w-md font-body text-base leading-relaxed text-white/75">{t('education.mapNote')}</p>
         <p id="education-hint" className="sr-only">{t('education.interactionHint')}</p>

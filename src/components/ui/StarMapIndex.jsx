@@ -17,10 +17,15 @@ export function StarMapIndex() {
   const reduced = useReducedMotion();
   const flight = useRef(null);
   const route = useRef(null);
+  const routeSmall = useRef(null);
   const chapter = useScrollStore(state => state.storyChapter);
   // The route fill follows scroll without re-rendering the index every frame.
   useEffect(() => {
-    const draw = state => { if (route.current) route.current.style.transform = `scaleY(${state.scrollProgress.toFixed(4)})`; };
+    const draw = state => {
+      const fill = `scaleY(${state.scrollProgress.toFixed(4)})`;
+      if (route.current) route.current.style.transform = fill;
+      if (routeSmall.current) routeSmall.current.style.transform = fill;
+    };
     draw(useScrollStore.getState());
     return useScrollStore.subscribe(draw);
   }, []);
@@ -53,7 +58,19 @@ export function StarMapIndex() {
     flight.current = gsap.to(smoother, { scrollTop: y, duration, ease: 'power2.inOut', onComplete: land });
   };
 
-  return (
+  return (<>
+    {/* Phones: the same seven stations as a quiet thread of stars on the right edge. Navigation stays in the menu. */}
+    <div aria-hidden="true" data-star-map-compact
+      className={`pointer-events-none fixed right-[max(0.375rem,env(safe-area-inset-right))] top-1/2 z-[60] -translate-y-1/2 transition-opacity duration-700 lg:hidden ${shown ? 'opacity-100' : 'opacity-0'}`}>
+      <span className="absolute top-1 bottom-1 left-1/2 w-px -translate-x-1/2 bg-white/10">
+        <span ref={routeSmall} className="absolute inset-0 origin-top scale-y-0 bg-[var(--accent-amber,#F2A65A)] opacity-60" />
+      </span>
+      <ol className="relative flex flex-col items-center gap-3">
+        {NUMERALS.map((numeral, index) => <li key={numeral} className="grid size-2.5 place-items-center">
+          <span className={`rounded-full transition-all duration-500 ${index === active ? 'size-2 bg-[var(--accent-amber,#F2A65A)] shadow-[0_0_8px_var(--accent-amber,#F2A65A)]' : 'size-1 bg-white/40'}`} />
+        </li>)}
+      </ol>
+    </div>
     <nav aria-label={t('starMap.label')} data-star-map
       className={`fixed left-[max(0.75rem,env(safe-area-inset-left))] top-1/2 z-[60] hidden -translate-y-1/2 transition-opacity duration-700 lg:block ${shown ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
       inert={!shown}>
@@ -73,11 +90,11 @@ export function StarMapIndex() {
                 <span aria-hidden="true" className={`relative z-10 grid size-[1.375rem] place-items-center rounded-full border bg-(--bg-void) transition-colors duration-500 ${current ? 'border-[var(--accent-amber,#F2A65A)]' : 'border-white/15 group-hover:border-white/50'}`}>
                   <span className={`size-1.5 rounded-full transition-all duration-500 ${current ? 'bg-[var(--accent-amber,#F2A65A)] shadow-[0_0_10px_var(--accent-amber,#F2A65A)]' : 'bg-white/30 group-hover:bg-white/70'}`} />
                 </span>
-                <span aria-hidden="true" className={`w-6 font-mono text-[10px] tracking-[0.2em] transition-colors duration-500 ${current ? 'text-white' : 'text-(--text-secondary) group-hover:text-white'}`}>{NUMERALS[index]}</span>
+                <span aria-hidden="true" className={`w-6 font-mono text-sm tracking-[0.2em] transition-colors duration-500 ${current ? 'text-white' : 'text-(--text-secondary) group-hover:text-white'}`}>{NUMERALS[index]}</span>
                 {/* Names stay hidden over the reading column; the current one flashes on arrival. */}
                 <span key={current ? 'on' : 'off'} aria-hidden="true" data-flash={current || undefined}
                   className="star-map-label flex flex-col rounded-sm bg-(--bg-void)/85 px-2 py-1 leading-tight opacity-0 transition-[opacity,translate] duration-500 -translate-x-1 group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:translate-x-0 group-focus-visible:opacity-100">
-                  <span className="font-display text-[11px] font-semibold uppercase tracking-[0.14em] text-white">{name}</span>
+                  <span className="font-display text-sm font-semibold uppercase tracking-[0.14em] text-white">{name}</span>
                 </span>
               </button>
             </li>
@@ -85,5 +102,5 @@ export function StarMapIndex() {
         })}
       </ol>
     </nav>
-  );
+  </>);
 }

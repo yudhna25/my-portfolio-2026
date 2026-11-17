@@ -4,18 +4,18 @@
     "year": "2026",
     "name": "TRAN VU ANH DUY",
     "tagline": "Creative Designer",
-    "subTagline": "Bridging the gap between functional UI and cinematic storytelling.",
+    "subTagline": "Interfaces built to be used, framed like a film.",
     "scrollIndicator": "SCROLL TO BEGIN THE JOURNEY"
   },
   "about": {
     "sectionLabel": "The Navigator",
     "heading": "TRAN VU / ANH DUY",
-    "subLabel": "Creative Designer — UX/UI & Motion",
-    "bioFirst": "Design is not just about visuals — it's about solving problems. I craft seamless user journeys where UX logic meets UI aesthetics to deliver tangible business value.",
-    "bioSecond": "From the first sketch to the product living in people's hands, I follow one rule: every pixel must earn its place. My multimedia background gives me a cinematic eye — and I bring that eye to every screen I design.",
-    "quote": "I design small universes — where every touch means something.",
-    "photoCaption": "FIG.01 — THE NAVIGATOR",
-    "avatarAlt": "Portrait of Tran Vu Anh Duy — Creative Designer",
+    "subLabel": "Creative Designer · UX/UI & Motion",
+    "bioFirst": "I graduated with High Honors in Information Technology from Saigon University, then learned to cut film at Green Academy and Arena Multimedia. Those two orbits shape how I work: research and structure come first, then light, rhythm and motion.",
+    "bioSecond": "In 2026, KINTRA won the TOKEN LEADER award at Designathon. Before that I shot and edited TVCs at Hosana Media, then designed interfaces as a UX/UI intern at Designveloper. Every screen is still a frame to me: what will the eye find first?",
+    "quote": "Every interface is a small sky. I choose the star you see first.",
+    "photoCaption": "FIG.01 · THE NAVIGATOR",
+    "avatarAlt": "Portrait of Tran Vu Anh Duy, Creative Designer",
     "toolsLabel": "SOFTWARE ARSENAL",
     "skillsLabel": "CORE COMPETENCIES",
     "tools": {
@@ -107,7 +107,7 @@
     "tagsLabel": "Disciplines",
     "viewCaseStudy": "View case study",
     "selectLabel": "Select a project",
-    "interactionHint": "Sweep across the sky to glimpse what hides there. Rest on a constellation or use Tab to wake it, press to open; press again, tap the background or press Escape to return.",
+    "interactionHint": "Sweep across the sky to glimpse what hides there. Tap or rest on a constellation to wake it, tap again to open; tap the background to return.",
     "behanceReference": "Reference on Behance",
     "comingSoon": "Case study coming soon",
     "backToOrbit": "Back to the sky",
@@ -158,7 +158,7 @@
     "technicalLabel": "Technical",
     "commonLabel": "Common Skills",
     "stageLabel": "Star logo stage",
-    "interactionHint": "Hover or use Tab to select a tool. Tap to select, tap again or press Escape to clear.",
+    "interactionHint": "Tap or rest on a tool to light its logo. Tap again or tap the background to clear.",
     "clearSelection": "Clear tool selection",
     "activeTool": "Selected {{tool}}",
     "idleStage": "Select a tool to see its star logo and related abilities.",
@@ -216,7 +216,7 @@
         "name": "Green Academy",
         "period": "2022–2023",
         "degree": "Certificate in Professional Video Editing",
-        "description": "Distinction. Focus: VFX compositing, motion graphics. Top-performing student — Premiere & After Effects."
+        "description": "Distinction. Focus: VFX compositing, motion graphics. Top-performing student in Premiere and After Effects."
       }
     },
     "mapNote": "Three star-forming regions along one galactic arm, where a design practice first caught light.",
@@ -260,21 +260,18 @@
     "sectionLabel": "Transmission",
     "heading": "LET'S CONNECT",
     "alternateHeading": "HÃY KẾT NỐI",
-    "subHeading": "Send a transmission — my frequency is always open.",
-    "emailCta": "SEND A SIGNAL",
+    "subHeading": "Send a signal. My frequency has never closed.",
     "email": "anhduy25work@gmail.com",
     "emailUrl": "mailto:anhduy25work@gmail.com",
     "phone": "0822 021 418",
-    "telemetryFreq": "FREQUENCY: 1420.405 MHz // HYDROGEN LINE (HI)",
-    "radioTerminal": "DEEP SPACE TRANSCEIVER",
-    "copyDispatch": "COPY DISPATCH",
-    "signalTransmitted": "SIGNAL TRANSMITTED // PACKET DELIVERED TO COCKPIT",
     "facebookUrl": "https://www.facebook.com/tvad.25",
     "linkedinUrl": "",
     "behanceUrl": "",
     "facebookLabel": "Facebook",
     "linkedinLabel": "LinkedIn",
-    "behanceLabel": "Behance"
+    "behanceLabel": "Behance",
+    "copyAddress": "Copy address",
+    "copied": "Address copied to clipboard"
   },
   "nav": {
     "menuLabel": "Menu",
@@ -289,7 +286,7 @@
     "socialPending": "This link is being updated.",
     "logo": "ANH DUY",
     "label": "Main navigation",
-    "homeLabel": "ANH DUY — Back to top",
+    "homeLabel": "ANH DUY · Back to top",
     "skip": "Skip to main content",
     "openMenu": "Open navigation menu",
     "menuPending": "The navigation menu is being prepared.",
@@ -308,11 +305,9 @@
   },
   "footer": {
     "label": "Site footer",
-    "copyright": "© 2026 Tran Vu Anh Duy — Built among the stars.",
+    "copyright": "© 2026 Tran Vu Anh Duy. Built among the stars.",
     "disciplines": "Graphic / Multimedia / UX/UI",
-    "buildCredit": "Built with GSAP {{version}}",
-    "websiteLabel": "Website",
-    "websiteUrl": ""
+    "closing": "The voyage ends here. The sky does not."
   },
   "gate": {
     "label": "Choose a language",
@@ -323,13 +318,13 @@
   "preloader": {
     "counterLabel": "LINKING TO THE COSMOS...",
     "counterRange": "0–100%",
-    "minimalLabel": "STELLAR ODYSSEY — 2026"
+    "minimalLabel": "STELLAR ODYSSEY · 2026"
   },
   "common": {
     "opensInNewTab": "opens in a new tab",
     "audio": {
       "label": "Space audio",
-      "prefix": "SOUND:",
+      "prefix": "SOUND",
       "on": "ON",
       "off": "OFF",
       "turnOn": "Turn space audio on",
@@ -348,7 +343,7 @@
     }
   },
   "edura": {
-    "metaTitle": "EDURA LMS — UI/UX concept · Tran Vu Anh Duy",
+    "metaTitle": "EDURA LMS · UI/UX concept · Tran Vu Anh Duy",
     "metaDescription": "The final UX/UI semester project at Arena Multimedia: an EDURA LMS concept and Figma prototype. Lead UI scope, interface decisions and the project's constraints.",
     "overview": {
       "intro": {

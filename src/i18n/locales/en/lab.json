@@ -4,13 +4,13 @@
   "scene": "Monochrome black hole with bent light and a camera approaching the accretion disk",
   "fps": "FPS",
   "fpsValue": "{{value}} FPS",
-  "waiting": "—",
+  "waiting": "…",
   "scroll": "Scroll",
   "controls": "Scene controls",
   "quality": {
-    "high": "High — {{count}}k stars",
-    "medium": "Medium — {{count}}k",
-    "low": "Low — {{count}}k"
+    "high": "High · {{count}}k stars",
+    "medium": "Medium · {{count}}k",
+    "low": "Low · {{count}}k"
   },
   "bloomOff": "Disable bloom",
   "bloomOn": "Enable bloom",

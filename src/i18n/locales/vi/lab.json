@@ -4,13 +4,13 @@
   "scene": "Hố đen mono với ánh sáng bị bẻ cong, camera tiến sát đĩa bồi tụ",
   "fps": "FPS",
   "fpsValue": "{{value}} FPS",
-  "waiting": "—",
+  "waiting": "…",
   "scroll": "Cuộn trang",
   "controls": "Điều khiển scene",
   "quality": {
-    "high": "Cao — {{count}}k sao",
-    "medium": "Trung bình — {{count}}k",
-    "low": "Thấp — {{count}}k"
+    "high": "Cao · {{count}}k sao",
+    "medium": "Trung bình · {{count}}k",
+    "low": "Thấp · {{count}}k"
   },
   "bloomOff": "Tắt bloom",
   "bloomOn": "Bật bloom",

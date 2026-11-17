@@ -20,7 +20,7 @@
   will-change: transform;
 }
 /* A quiet school shrinks to its years and a smaller name. */
-.edu[data-knots='live'] .edu-stop:not([data-active]) .edu-name { font-size: 0.6em; padding-block: 0.25rem; }
+.edu[data-knots='live'] .edu-stop:not([data-active]) .edu-name { font-size: max(0.875rem, 0.6em); padding-block: 0.25rem; }
 /* Hidden outside the chapter's reading span; still focusable, so Tab can bring it back. */
 .edu[data-knots='live'][data-knots-away] .edu-stop { pointer-events: none; }
 .edu[data-knots='live'] .edu-stop[data-active] { opacity: var(--knots-presence, 1); }

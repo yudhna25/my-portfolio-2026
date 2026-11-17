@@ -8,7 +8,7 @@ const linkClass = 'inline-flex min-h-11 items-center underline decoration-white/
 export function ConstellationCreditButton({ className = '', compact = false }) {
   const { t } = useTranslation();
   return <button type="button" popoverTarget={id} aria-label={t('constellationCredits.label')} title={t('constellationCredits.label')}
-    className={`inline-flex min-h-11 min-w-11 items-center justify-center gap-2 font-mono text-xs text-white/65 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white ${className}`}>
+    className={`inline-flex min-h-11 min-w-11 items-center justify-center gap-2 font-mono text-sm text-white/85 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white ${className}`}>
     <Info size={16} aria-hidden="true" />{!compact && t('constellationCredits.label')}
   </button>;
 }
