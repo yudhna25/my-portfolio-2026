@@ -31,7 +31,7 @@ export function SoundToggle() {
           <path d="M11 4 6 8H3v8h3l5 4V4Z" strokeLinejoin="round" />
           {active ? <path d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14" strokeLinecap="round" /> : <path d="m16 9 6 6m0-6-6 6" strokeLinecap="round" />}
         </svg>
-        <span className="flex flex-col items-start sm:flex-row sm:gap-1">
+        <span className="hidden sm:flex sm:flex-row sm:gap-1">
           <span>{t('common.audio.prefix')}</span>
           <span className={active ? 'text-(--color-amber,#FFB25B)' : 'text-white/70'}>{t(`common.audio.${active ? 'on' : 'off'}`)}</span>
         </span>

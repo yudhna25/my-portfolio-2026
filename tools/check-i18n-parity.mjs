@@ -158,7 +158,6 @@ await i18n.init({
 const allowedEmpty = new Set([
   'contact.linkedinUrl',
   'contact.behanceUrl',
-  'footer.websiteUrl',
   'end.line2',
 ]);
 

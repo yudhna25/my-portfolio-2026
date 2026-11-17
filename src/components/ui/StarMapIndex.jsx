@@ -17,10 +17,15 @@ export function StarMapIndex() {
   const reduced = useReducedMotion();
   const flight = useRef(null);
   const route = useRef(null);
+  const routeSmall = useRef(null);
   const chapter = useScrollStore(state => state.storyChapter);
   // The route fill follows scroll without re-rendering the index every frame.
   useEffect(() => {
-    const draw = state => { if (route.current) route.current.style.transform = `scaleY(${state.scrollProgress.toFixed(4)})`; };
+    const draw = state => {
+      const fill = `scaleY(${state.scrollProgress.toFixed(4)})`;
+      if (route.current) route.current.style.transform = fill;
+      if (routeSmall.current) routeSmall.current.style.transform = fill;
+    };
     draw(useScrollStore.getState());
     return useScrollStore.subscribe(draw);
   }, []);
@@ -53,7 +58,19 @@ export function StarMapIndex() {
     flight.current = gsap.to(smoother, { scrollTop: y, duration, ease: 'power2.inOut', onComplete: land });
   };
 
-  return (
+  return (<>
+    {/* Phones: the same seven stations as a quiet thread of stars on the right edge. Navigation stays in the menu. */}
+    <div aria-hidden="true" data-star-map-compact
+      className={`pointer-events-none fixed right-[max(0.375rem,env(safe-area-inset-right))] top-1/2 z-[60] -translate-y-1/2 transition-opacity duration-700 lg:hidden ${shown ? 'opacity-100' : 'opacity-0'}`}>
+      <span className="absolute top-1 bottom-1 left-1/2 w-px -translate-x-1/2 bg-white/10">
+        <span ref={routeSmall} className="absolute inset-0 origin-top scale-y-0 bg-[var(--accent-amber,#F2A65A)] opacity-60" />
+      </span>
+      <ol className="relative flex flex-col items-center gap-3">
+        {NUMERALS.map((numeral, index) => <li key={numeral} className="grid size-2.5 place-items-center">
+          <span className={`rounded-full transition-all duration-500 ${index === active ? 'size-2 bg-[var(--accent-amber,#F2A65A)] shadow-[0_0_8px_var(--accent-amber,#F2A65A)]' : 'size-1 bg-white/40'}`} />
+        </li>)}
+      </ol>
+    </div>
     <nav aria-label={t('starMap.label')} data-star-map
       className={`fixed left-[max(0.75rem,env(safe-area-inset-left))] top-1/2 z-[60] hidden -translate-y-1/2 transition-opacity duration-700 lg:block ${shown ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
       inert={!shown}>
@@ -85,5 +102,5 @@ export function StarMapIndex() {
         })}
       </ol>
     </nav>
-  );
+  </>);
 }

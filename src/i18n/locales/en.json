@@ -307,9 +307,7 @@
     "label": "Site footer",
     "copyright": "© 2026 Tran Vu Anh Duy. Built among the stars.",
     "disciplines": "Graphic / Multimedia / UX/UI",
-    "buildCredit": "Built with GSAP {{version}}",
-    "websiteLabel": "Website",
-    "websiteUrl": ""
+    "closing": "The voyage ends here. The sky does not."
   },
   "gate": {
     "label": "Choose a language",

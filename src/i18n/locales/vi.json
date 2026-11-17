@@ -307,9 +307,7 @@
     "label": "Chân trang",
     "copyright": "© 2026 Trần Vũ Anh Duy. Được dựng giữa các vì sao.",
     "disciplines": "Đồ họa / Đa phương tiện / UX/UI",
-    "buildCredit": "Xây dựng với GSAP {{version}}",
-    "websiteLabel": "Trang web",
-    "websiteUrl": ""
+    "closing": "Hành trình dừng ở đây. Bầu trời thì không."
   },
   "gate": {
     "label": "Chọn ngôn ngữ",

@@ -102,6 +102,9 @@
     font-family: var(--font-body);
   }
 
+  /* Reading scrims feather past the edges; clip them so phones never pan sideways. */
+  html, body { overflow-x: clip; }
+
   body {
     font-family: var(--font-body);
     font-size: var(--text-body);
