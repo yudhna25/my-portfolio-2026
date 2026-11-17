@@ -1,0 +1,49 @@
+#
+#   VizieR Astronomical Server vizier.cfa.harvard.edu
+#    Date: 2026-11-17T10:13:17 [V7.6.1]
+#   In case of problem, please report to:	cds-question@unistra.fr
+#
+#
+#Coosys	J2000:	eq_FK5 J2000
+#INFO	service_protocol=ASU	  IVOID of the protocol through which the data was retrieved
+#INFO	request_date=2026-11-17T10:13:17	  Query execution date
+#INFO	request=https://vizier.cfa.harvard.edu/viz-bin/asu-tsv?-source=I%2f239%2fhip_main&HIP=25428%2c21881%2c20889%2c21421%2c26451%2c20205%2c20455%2c18724%2c15900%2c20894%2c20648%2c17847%2c17999&-out=HIP%2cRAICRS%2cDEICRS%2cVmag&-out.max=1000	  Full request URL
+#INFO	contact=cds-question@unistra.fr	  Email or URL to contact publisher
+#INFO	server_software=VizieR/7.6.1	  Software version
+#INFO	publisher=CDS	  Data centre that produced the VOTable
+
+#RESOURCE=yCat_1239
+#Name: I/239
+#Title: The Hipparcos and Tycho Catalogues (ESA 1997)
+#INFO	ivoid=ivo://cds.vizier/i/239	    IVOID of underlying data collection
+#INFO	data_ivoid=ivo://cds.vizier/i/239	    IVOID of underlying data collection
+#INFO	creator=ESA 1997	    First author or institution
+#INFO	cites=1997HIP...C......0E	    Article or Data origin sources
+#INFO	reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/I/239	    Dataset landing page
+#INFO	publication_date=2021-11-18	    Date of first publication in the data centre
+#INFO	rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html	    Licence URI
+#Coosys	H_1991.250:	ICRS
+#Table	I_239_hip_main:
+#Name: I/239/hip_main
+#Title: The Hipparcos Main Catalogue
+#Column	HIP	(I6)	Identifier (HIP number) (H1)	[ucd=meta.id;meta.main]
+#Column	RAICRS	(F12.8)	? alpha, degrees (ICRS, Epoch=J1991.25) (H8)	[ucd=pos.eq.ra;meta.main]
+#Column	DEICRS	(F12.8)	? delta, degrees (ICRS, Epoch=J1991.25) (H9)	[ucd=pos.eq.dec;meta.main]
+#Column	Vmag	(F5.2)	? Magnitude in Johnson V (H5)	[ucd=phot.mag;em.opt.V]
+HIP	RAICRS	DEICRS	Vmag
+ 	deg	deg	mag
+------	------------	------------	-----
+ 15900	051.20349011	+09.02906504	 3.61
+ 17847	057.29054669	+24.05352412	 3.62
+ 17999	057.71840155	+23.96158078	 6.95
+ 18724	060.17008591	+12.49037571	 3.41
+ 20205	064.94805793	+15.62770031	 3.65
+ 20455	065.73344722	+17.54258430	 3.77
+ 20648	066.37215593	+17.92798917	 4.30
+ 20889	067.15388879	+19.18052092	 3.53
+ 20894	067.16531219	+15.87094680	 3.40
+ 21421	068.98000195	+16.50976164	 0.87
+ 21881	070.56126452	+22.95697545	 4.27
+ 25428	081.57290804	+28.60787346	 1.65
+ 26451	084.41118447	+21.14259299	 2.97
+

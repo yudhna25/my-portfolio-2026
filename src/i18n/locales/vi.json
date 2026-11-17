@@ -90,6 +90,18 @@
           "Motion Design"
         ],
         "previewAlt": "Màn mở đầu của Stellar Odyssey: chữ PORTFOLIO với hố đen nằm trong chữ O cuối cùng"
+      },
+      "kintra": {
+        "title": "KINTRA",
+        "category": "Product Design",
+        "award": "Giải TOKEN LEADER · Designathon 2026",
+        "description": "Dự án đoạt giải TOKEN LEADER tại Designathon 2026. KINTRA nối khoảng 60.000 lao động Việt đang sống ở Aichi, Nhật Bản với những nhà máy đang cần người: AI đọc thẻ cư trú, chấm mức phù hợp cho từng việc và cho thấy lương thực nhận trước khi ứng tuyển, còn nhà máy hứa trả lời trong 24 giờ.",
+        "tags": [
+          "Product Design",
+          "UX Research",
+          "AI Matching"
+        ],
+        "previewAlt": "Trang việc làm của KINTRA ở chế độ tối: thẻ việc nổi bật Vận hành máy tiện CNC tại Aichi kèm lương thực nhận mỗi tháng"
       }
     },
     "tagsLabel": "Chuyên môn",
@@ -100,17 +112,21 @@
     "comingSoon": "Case study sắp ra mắt",
     "backToOrbit": "Trở về bầu trời",
     "voyageAgain": "Trở về ánh sáng đầu tiên",
+    "openPrototype": "Mở bản prototype",
+    "sourceCode": "Mã nguồn trên GitHub",
     "constellations": {
       "edura": "Centaurus",
       "veris": "Gemini",
       "vie": "Cygnus",
-      "odyssey": "Lyra"
+      "odyssey": "Lyra",
+      "kintra": "Taurus"
     },
     "myths": {
       "edura": "Chiron, người thầy của các anh hùng",
       "veris": "Castor và Pollux, hai linh hồn không rời",
       "vie": "Thiên nga bay dọc dải Ngân Hà",
-      "odyssey": "Cây đàn của Orpheus, người xuống tận cõi tối rồi tìm được đường về"
+      "odyssey": "Cây đàn của Orpheus, người xuống tận cõi tối rồi tìm được đường về",
+      "kintra": "Con bò trắng đưa nàng Europa vượt biển sang một miền đất mới"
     },
     "phenomena": {
       "edura": {
@@ -128,6 +144,10 @@
       "odyssey": {
         "name": "Tinh vân Chiếc Nhẫn",
         "line": "Trong hộp đàn, một ngôi sao đang tàn thở ra vòng ánh sáng cuối cùng: chính chữ O mà hành trình này đã mở ra từ đầu."
+      },
+      "kintra": {
+        "name": "Chòm Tua Rua",
+        "line": "Trên vai con bò, bảy chị em sinh ra từ cùng một đám mây vẫn rong ruổi bên nhau qua bầu trời; người Nhật gọi họ là Subaru, nghĩa là tụ lại."
       }
     }
   },

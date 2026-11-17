@@ -1408,6 +1408,202 @@
         "normalization": "same scalar for x/y; no independent stretch, mirroring or invented coordinates"
       },
       "calibrationStars": []
+    },
+    {
+      "id": "Tau",
+      "name": "Taurus",
+      "entityId": "kintra",
+      "assignment": "KINTRA",
+      "section": "works",
+      "source": {
+        "url": "https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/taurus.png",
+        "revision": "daace2add6a1bf886e8ee1934f51e9c69f818d18",
+        "sha256": "019f267b9fee7fe3188944c2fe265c58c216119a919fd72475a8cd3c1676162a",
+        "size": [
+          512,
+          512
+        ],
+        "metadataSha256": "1f2f5ffd6c9e25a7d0dcfdbf1f756e2db03dd3b8ed4ec016a2839b09f6b0fe1e",
+        "author": "Johan Meuris",
+        "authorPage": "https://johanmeuris.eu/work/stellarium-constellation-art/",
+        "originalLicense": "Free Art License (unversioned source notice)",
+        "date": "2005-10-30 (author portfolio publication date)"
+      },
+      "license": {
+        "artwork": "Free Art License 1.3",
+        "url": "https://artlibre.org/licence/lal/en/",
+        "linePattern": "CC BY-SA 4.0 — Stellarium team",
+        "catalog": "ESA 1997 / CDS VizieR terms; no blanket FAL/CC assignment"
+      },
+      "credit": "Taurus outline derivative, 2026-11-17. Original: Johan Meuris, Stellarium constellation art (2005), Free Art License; vector tracing/calibration: Tran Vu Anh Duy portfolio / Claude. Modified silhouette/ink contours, grayscale, removed shading; not a recovered vector master.",
+      "derivative": {
+        "method": "deterministic pixel-grid contour trace + Douglas-Peucker, three-star projective calibration; no AI/no raster embed/no upscale",
+        "vectorMasterVerified": false,
+        "silhouetteThreshold": 12,
+        "detailLocalContrast": 9,
+        "detailsMinArea": 8,
+        "sourceToVectorApplied": true,
+        "crop": "calibrated silhouette + three anchors, square with 3% margin per side",
+        "outerPaths": 15,
+        "detailContours": 21
+      },
+      "artwork": {
+        "assetId": "Tau",
+        "url": "/constellations/taurus.svg",
+        "sha256": "ad63867bcc58f2e94b7366edfde53a9b3c04889676867de926fbeff8c0900f28",
+        "viewBox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "anchors": [
+          {
+            "hip": 26451,
+            "sourcePixel": [
+              13,
+              92
+            ],
+            "vectorPixel": [
+              23.870058910248755,
+              209.6965516747374
+            ],
+            "localPosition": [
+              -0.6810748825431856,
+              0.14085233177000367,
+              0
+            ],
+            "raDeg": 84.41118447,
+            "decDeg": 21.14259299,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 15900,
+            "sourcePixel": [
+              399,
+              438
+            ],
+            "vectorPixel": [
+              452.26206377985477,
+              376.16481244444464
+            ],
+            "localPosition": [
+              0.6575042676254054,
+              -0.37930430163631595,
+              0
+            ],
+            "raDeg": 51.20349011,
+            "decDeg": 9.02906504,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 17999,
+            "sourcePixel": [
+              382,
+              192
+            ],
+            "vectorPixel": [
+              353.0282774667889,
+              181.2091485925778
+            ],
+            "localPosition": [
+              0.3474324739387171,
+              0.22986576660250993,
+              0
+            ],
+            "raDeg": 57.71840155,
+            "decDeg": 23.96158078,
+            "role": "line-pattern"
+          }
+        ],
+        "sourcePixelToLocal": [
+          [
+            0.0025040062271949933,
+            0.0010136851743724558,
+            -0.7985993723164074
+          ],
+          [
+            0.0009392051496069038,
+            -0.002524480332585415,
+            0.3591811073510263
+          ],
+          [
+            0.000113129341880979,
+            -0.00014823549434245898,
+            1.0
+          ]
+        ],
+        "sourcePixelToVector": [
+          [
+            0.8287282562885732,
+            0.28856566193683336,
+            -13.74187594536815
+          ],
+          [
+            -0.2717559597111425,
+            0.770155155234736,
+            139.82373027295426
+          ],
+          [
+            0.000113129341880979,
+            -0.00014823549434245898,
+            1.0
+          ]
+        ],
+        "vectorPixelToLocal": [
+          [
+            0.0031246595056694097,
+            0.0,
+            -0.755660689017983
+          ],
+          [
+            -0.0,
+            -0.0031246595056694097,
+            0.7960826552665684
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixConvention": "row-major 3x3, column [x,y,1], divide by third coordinate",
+        "plane": {
+          "center": [
+            0.044252144433385876,
+            -0.00383017818480047,
+            0
+          ],
+          "width": 1.5998256669027378,
+          "height": 1.5998256669027378,
+          "localZ": -0.01
+        },
+        "opacity": {
+          "idle": [
+            0.08,
+            0.12
+          ],
+          "active": [
+            0.25,
+            0.35
+          ]
+        }
+      },
+      "projection": {
+        "type": "gnomonic",
+        "origin": {
+          "raDeg": 66.95229669307265,
+          "decDeg": 18.61173057165895
+        },
+        "fieldRadiusDeg": 23.206504105937476,
+        "uniformScale": 2.332443524759942,
+        "xDirection": "celestial west right (increasing RA left)",
+        "yDirection": "north up",
+        "z": 0,
+        "view": "sky as seen from Earth, not exterior celestial globe",
+        "normalization": "same scalar for x/y; no independent stretch, mirroring or invented coordinates"
+      },
+      "calibrationStars": []
     }
   ]
 }

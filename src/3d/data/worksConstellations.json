@@ -2251,6 +2251,732 @@
           -0.3483551478129303
         ]
       }
+    },
+    {
+      "id": "Tau",
+      "name": "Taurus",
+      "assignment": "KINTRA",
+      "section": "works",
+      "status": "ready",
+      "nameMeaning": "Bull",
+      "designInterpretation": "Con bò mang trên vai chòm Tua Rua (Pleiades, tiếng Nhật là Subaru, \"tụ lại\"): bảy chị em sinh cùng nhau và cùng du hành; liên hệ việc kết nối người lao động với đúng nhà máy là diễn giải thiết kế.",
+      "meaningSourceIds": [
+        "iau-names"
+      ],
+      "geometry": {
+        "convention": "Stellarium Modern",
+        "sourceId": "stellarium-modern",
+        "sourceConstellationId": "CON modern Tau",
+        "polylinesHip": [
+          [
+            25428,
+            21881,
+            20889
+          ],
+          [
+            21421,
+            26451
+          ],
+          [
+            20205,
+            20455
+          ],
+          [
+            20205,
+            18724,
+            15900
+          ],
+          [
+            21421,
+            20889
+          ],
+          [
+            21421,
+            20894,
+            20205
+          ],
+          [
+            20889,
+            20648,
+            20455,
+            17847
+          ]
+        ],
+        "edges": [
+          [
+            "HIP 25428",
+            "HIP 21881"
+          ],
+          [
+            "HIP 21881",
+            "HIP 20889"
+          ],
+          [
+            "HIP 21421",
+            "HIP 26451"
+          ],
+          [
+            "HIP 20205",
+            "HIP 20455"
+          ],
+          [
+            "HIP 20205",
+            "HIP 18724"
+          ],
+          [
+            "HIP 18724",
+            "HIP 15900"
+          ],
+          [
+            "HIP 21421",
+            "HIP 20889"
+          ],
+          [
+            "HIP 21421",
+            "HIP 20894"
+          ],
+          [
+            "HIP 20894",
+            "HIP 20205"
+          ],
+          [
+            "HIP 20889",
+            "HIP 20648"
+          ],
+          [
+            "HIP 20648",
+            "HIP 20455"
+          ],
+          [
+            "HIP 20455",
+            "HIP 17847"
+          ]
+        ],
+        "stars": [
+          {
+            "id": "HIP 25428",
+            "hip": 25428,
+            "raDeg": 81.57290804,
+            "decDeg": 28.60787346,
+            "vmag": 1.65,
+            "position": [
+              -0.539602517,
+              0.444766737,
+              0
+            ]
+          },
+          {
+            "id": "HIP 21881",
+            "hip": 21881,
+            "raDeg": 70.56126452,
+            "decDeg": 22.95697545,
+            "vmag": 4.27,
+            "position": [
+              -0.135816703,
+              0.178903432,
+              0
+            ]
+          },
+          {
+            "id": "HIP 20889",
+            "hip": 20889,
+            "raDeg": 67.15388879,
+            "decDeg": 19.18052092,
+            "vmag": 3.53,
+            "position": [
+              -0.007751423,
+              0.023160025,
+              0
+            ]
+          },
+          {
+            "id": "HIP 21421",
+            "hip": 21421,
+            "raDeg": 68.98000195,
+            "decDeg": 16.50976164,
+            "vmag": 0.87,
+            "position": [
+              -0.079224109,
+              -0.085208389,
+              0
+            ]
+          },
+          {
+            "id": "HIP 26451",
+            "hip": 26451,
+            "raDeg": 84.41118447,
+            "decDeg": 21.14259299,
+            "vmag": 2.97,
+            "position": [
+              -0.681074883,
+              0.140852332,
+              0
+            ]
+          },
+          {
+            "id": "HIP 20205",
+            "hip": 20205,
+            "raDeg": 64.94805793,
+            "decDeg": 15.62770031,
+            "vmag": 3.65,
+            "position": [
+              0.078708648,
+              -0.121214913,
+              0
+            ]
+          },
+          {
+            "id": "HIP 20455",
+            "hip": 20455,
+            "raDeg": 65.73344722,
+            "decDeg": 17.5425843,
+            "vmag": 3.77,
+            "position": [
+              0.047324698,
+              -0.04337698,
+              0
+            ]
+          },
+          {
+            "id": "HIP 18724",
+            "hip": 18724,
+            "raDeg": 60.17008591,
+            "decDeg": 12.49037571,
+            "vmag": 3.41,
+            "position": [
+              0.272247225,
+              -0.246636623,
+              0
+            ]
+          },
+          {
+            "id": "HIP 15900",
+            "hip": 15900,
+            "raDeg": 51.20349011,
+            "decDeg": 9.02906504,
+            "vmag": 3.61,
+            "position": [
+              0.657504268,
+              -0.379304302,
+              0
+            ]
+          },
+          {
+            "id": "HIP 20894",
+            "hip": 20894,
+            "raDeg": 67.16531219,
+            "decDeg": 15.8709468,
+            "vmag": 3.4,
+            "position": [
+              -0.008350634,
+              -0.111655002,
+              0
+            ]
+          },
+          {
+            "id": "HIP 20648",
+            "hip": 20648,
+            "raDeg": 66.37215593,
+            "decDeg": 17.92798917,
+            "vmag": 4.3,
+            "position": [
+              0.022472364,
+              -0.027800603,
+              0
+            ]
+          },
+          {
+            "id": "HIP 17847",
+            "hip": 17847,
+            "raDeg": 57.29054669,
+            "decDeg": 24.05352412,
+            "vmag": 3.62,
+            "position": [
+              0.363566314,
+              0.234778157,
+              0
+            ]
+          }
+        ],
+        "supportingStars": [
+          {
+            "id": "HIP 25336",
+            "hip": 25336,
+            "raDeg": 81.28278416,
+            "decDeg": 6.34973451,
+            "vmag": 1.64,
+            "position": [
+              -0.605322193,
+              -0.498321942,
+              0
+            ]
+          },
+          {
+            "id": "HIP 23015",
+            "hip": 23015,
+            "raDeg": 74.24840098,
+            "decDeg": 33.16613537,
+            "vmag": 2.69,
+            "position": [
+              -0.257889215,
+              0.614867592,
+              0
+            ]
+          },
+          {
+            "id": "HIP 18246",
+            "hip": 18246,
+            "raDeg": 58.53299363,
+            "decDeg": 31.88365776,
+            "vmag": 2.84,
+            "position": [
+              0.300618026,
+              0.562167826,
+              0
+            ]
+          },
+          {
+            "id": "HIP 22449",
+            "hip": 22449,
+            "raDeg": 72.45890935,
+            "decDeg": 6.96124744,
+            "vmag": 3.19,
+            "position": [
+              -0.22785637,
+              -0.479567973,
+              0
+            ]
+          },
+          {
+            "id": "HIP 26207",
+            "hip": 26207,
+            "raDeg": 83.78449043,
+            "decDeg": 9.93416294,
+            "vmag": 3.39,
+            "position": [
+              -0.701356549,
+              -0.337870395,
+              0
+            ]
+          },
+          {
+            "id": "HIP 22549",
+            "hip": 22549,
+            "raDeg": 72.80152507,
+            "decDeg": 5.60510146,
+            "vmag": 3.68,
+            "position": [
+              -0.244024254,
+              -0.537521554,
+              0
+            ]
+          },
+          {
+            "id": "HIP 22797",
+            "hip": 22797,
+            "raDeg": 73.5628985,
+            "decDeg": 2.44067149,
+            "vmag": 3.71,
+            "position": [
+              -0.281163905,
+              -0.675640104,
+              0
+            ]
+          },
+          {
+            "id": "HIP 16083",
+            "hip": 16083,
+            "raDeg": 51.79217049,
+            "decDeg": 9.7327724,
+            "vmag": 3.73,
+            "position": [
+              0.629188014,
+              -0.350047073,
+              0
+            ]
+          },
+          {
+            "id": "HIP 17448",
+            "hip": 17448,
+            "raDeg": 56.07969347,
+            "decDeg": 32.28827325,
+            "vmag": 3.84,
+            "position": [
+              0.388533049,
+              0.58790484,
+              0
+            ]
+          },
+          {
+            "id": "HIP 20885",
+            "hip": 20885,
+            "raDeg": 67.14346805,
+            "decDeg": 15.96221721,
+            "vmag": 3.84,
+            "position": [
+              -0.007490329,
+              -0.107932067,
+              0
+            ]
+          },
+          {
+            "id": "HIP 18907",
+            "hip": 18907,
+            "raDeg": 60.78907003,
+            "decDeg": 5.98930909,
+            "vmag": 3.91,
+            "position": [
+              0.256648192,
+              -0.520843929,
+              0
+            ]
+          },
+          {
+            "id": "HIP 21444",
+            "hip": 21444,
+            "raDeg": 69.07975243,
+            "decDeg": -3.352448,
+            "vmag": 3.93,
+            "position": [
+              -0.093268591,
+              -0.940781691,
+              0
+            ]
+          },
+          {
+            "id": "HIP 17702",
+            "hip": 17702,
+            "raDeg": 56.87110065,
+            "decDeg": 24.10524193,
+            "vmag": 2.85,
+            "position": [
+              0.379487461,
+              0.238055611,
+              0
+            ]
+          },
+          {
+            "id": "HIP 17499",
+            "hip": 17499,
+            "raDeg": 56.21884811,
+            "decDeg": 24.1134484,
+            "vmag": 3.72,
+            "position": [
+              0.404473317,
+              0.240254659,
+              0
+            ]
+          },
+          {
+            "id": "HIP 17573",
+            "hip": 17573,
+            "raDeg": 56.45663804,
+            "decDeg": 24.36785796,
+            "vmag": 3.87,
+            "position": [
+              0.394721468,
+              0.250150954,
+              0
+            ]
+          },
+          {
+            "id": "HIP 17608",
+            "hip": 17608,
+            "raDeg": 56.58150135,
+            "decDeg": 23.94846207,
+            "vmag": 4.14,
+            "position": [
+              0.390960698,
+              0.23234695,
+              0
+            ]
+          },
+          {
+            "id": "HIP 17531",
+            "hip": 17531,
+            "raDeg": 56.30200876,
+            "decDeg": 24.46737879,
+            "vmag": 4.3,
+            "position": [
+              0.400395998,
+              0.254748389,
+              0
+            ]
+          },
+          {
+            "id": "HIP 17851",
+            "hip": 17851,
+            "raDeg": 57.29668368,
+            "decDeg": 24.13682565,
+            "vmag": 5.05,
+            "position": [
+              0.363144031,
+              0.238220533,
+              0
+            ]
+          },
+          {
+            "id": "HIP 17489",
+            "hip": 17489,
+            "raDeg": 56.20084227,
+            "decDeg": 24.28957712,
+            "vmag": 5.45,
+            "position": [
+              0.404720383,
+              0.247641207,
+              0
+            ]
+          }
+        ],
+        "supportingStarPolicy": "At most 12 brightest Johnson V <= 5.5 field stars, excluding stick-figure stars, plus the Pleiades sisters in the field (V <= 5.5). No edge; a cone may include adjacent constellations. These are context, not members added to the figure.",
+        "fieldStarsReturned": 168
+      },
+      "projection": {
+        "type": "gnomonic",
+        "origin": {
+          "raDeg": 66.95229669307265,
+          "decDeg": 18.61173057165895
+        },
+        "fieldRadiusDeg": 23.206504105937476,
+        "uniformScale": 2.332443524759942,
+        "xDirection": "celestial west right (increasing RA left)",
+        "yDirection": "north up",
+        "z": 0,
+        "view": "sky as seen from Earth, not exterior celestial globe",
+        "normalization": "same scalar for x/y; no independent stretch, mirroring or invented coordinates"
+      },
+      "referenceChart": {
+        "sourceId": "iau-charts",
+        "path": "https://iauarchive.eso.org/public/themes/constellations/",
+        "role": "comparison only; IAU/MacRobert patterns can differ from selected Modern figure"
+      },
+      "notes": [
+        "Phenomenon: Messier 45, the Pleiades, RA 56.75 Dec 24.1167 (ICRS), local 0.3841, 0.2389; the back line ends at Atlas, one of the cluster."
+      ],
+      "artwork": {
+        "assetId": "Tau",
+        "url": "/constellations/taurus.svg",
+        "sha256": "ad63867bcc58f2e94b7366edfde53a9b3c04889676867de926fbeff8c0900f28",
+        "viewBox": [
+          0,
+          0,
+          512,
+          512
+        ],
+        "anchors": [
+          {
+            "hip": 26451,
+            "sourcePixel": [
+              13,
+              92
+            ],
+            "vectorPixel": [
+              23.870058910248755,
+              209.6965516747374
+            ],
+            "localPosition": [
+              -0.6810748825431856,
+              0.14085233177000367,
+              0
+            ],
+            "raDeg": 84.41118447,
+            "decDeg": 21.14259299,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 15900,
+            "sourcePixel": [
+              399,
+              438
+            ],
+            "vectorPixel": [
+              452.26206377985477,
+              376.16481244444464
+            ],
+            "localPosition": [
+              0.6575042676254054,
+              -0.37930430163631595,
+              0
+            ],
+            "raDeg": 51.20349011,
+            "decDeg": 9.02906504,
+            "role": "line-pattern"
+          },
+          {
+            "hip": 17999,
+            "sourcePixel": [
+              382,
+              192
+            ],
+            "vectorPixel": [
+              353.0282774667889,
+              181.2091485925778
+            ],
+            "localPosition": [
+              0.3474324739387171,
+              0.22986576660250993,
+              0
+            ],
+            "raDeg": 57.71840155,
+            "decDeg": 23.96158078,
+            "role": "line-pattern"
+          }
+        ],
+        "sourcePixelToLocal": [
+          [
+            0.0025040062271949933,
+            0.0010136851743724558,
+            -0.7985993723164074
+          ],
+          [
+            0.0009392051496069038,
+            -0.002524480332585415,
+            0.3591811073510263
+          ],
+          [
+            0.000113129341880979,
+            -0.00014823549434245898,
+            1.0
+          ]
+        ],
+        "sourcePixelToVector": [
+          [
+            0.8287282562885732,
+            0.28856566193683336,
+            -13.74187594536815
+          ],
+          [
+            -0.2717559597111425,
+            0.770155155234736,
+            139.82373027295426
+          ],
+          [
+            0.000113129341880979,
+            -0.00014823549434245898,
+            1.0
+          ]
+        ],
+        "vectorPixelToLocal": [
+          [
+            0.0031246595056694097,
+            0.0,
+            -0.755660689017983
+          ],
+          [
+            -0.0,
+            -0.0031246595056694097,
+            0.7960826552665684
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "matrixConvention": "row-major 3x3, column [x,y,1], divide by third coordinate",
+        "plane": {
+          "center": [
+            0.044252144433385876,
+            -0.00383017818480047,
+            0
+          ],
+          "width": 1.5998256669027378,
+          "height": 1.5998256669027378,
+          "localZ": -0.01
+        },
+        "opacity": {
+          "idle": [
+            0.08,
+            0.12
+          ],
+          "active": [
+            0.25,
+            0.35
+          ]
+        }
+      },
+      "phenomenon": {
+        "id": "M45",
+        "name": "Pleiades",
+        "localPosition": [
+          0.38409664467849125,
+          0.2388675990787449
+        ],
+        "members": [
+          {
+            "hip": 17702,
+            "name": "Alcyone",
+            "vmag": 2.85,
+            "localPosition": [
+              0.37948746131084715,
+              0.2380556114870661
+            ]
+          },
+          {
+            "hip": 17847,
+            "name": "Atlas",
+            "vmag": 3.62,
+            "localPosition": [
+              0.3635663141359758,
+              0.23477815675380737
+            ]
+          },
+          {
+            "hip": 17499,
+            "name": "Electra",
+            "vmag": 3.72,
+            "localPosition": [
+              0.40447331726562147,
+              0.24025465936557147
+            ]
+          },
+          {
+            "hip": 17573,
+            "name": "Maia",
+            "vmag": 3.87,
+            "localPosition": [
+              0.39472146777725864,
+              0.2501509538345429
+            ]
+          },
+          {
+            "hip": 17608,
+            "name": "Merope",
+            "vmag": 4.14,
+            "localPosition": [
+              0.3909606975390093,
+              0.23234694980926168
+            ]
+          },
+          {
+            "hip": 17531,
+            "name": "Taygeta",
+            "vmag": 4.3,
+            "localPosition": [
+              0.4003959976918605,
+              0.25474838929973714
+            ]
+          },
+          {
+            "hip": 17851,
+            "name": "Pleione",
+            "vmag": 5.05,
+            "localPosition": [
+              0.3631440311358983,
+              0.2382205332762956
+            ]
+          },
+          {
+            "hip": 17489,
+            "name": "Celaeno",
+            "vmag": 5.45,
+            "localPosition": [
+              0.4047203831030453,
+              0.2476412073328557
+            ]
+          }
+        ]
+      }
     }
   ],
   "sourceFile": "outputs/redesign/r0.2/constellation-data.json",

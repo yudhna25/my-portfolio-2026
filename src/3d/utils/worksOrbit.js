@@ -1,6 +1,6 @@
 import { finaleState } from './finale.js';
 
-export const WORKS_IDS = Object.freeze(['edura', 'veris', 'vie', 'odyssey']);
+export const WORKS_IDS = Object.freeze(['edura', 'veris', 'vie', 'odyssey', 'kintra']);
 export const WORKS_ORBIT_SPEED = 0.075; // radians/second; staged orbit, not astronomy.
 
 // Geometry telemetry, not interaction state. App passes this same object to both consumers.

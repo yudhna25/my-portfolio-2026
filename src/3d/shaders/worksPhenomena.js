@@ -1,6 +1,7 @@
 // Works as a sky full of hidden phenomena. Each constellation keeps a real one inside it
 // (Omega Centauri in the Centaur, the Jellyfish Nebula in the Twins, the double star Albireo
-// in the Swan, the Ring Nebula in the Lyre), and the project's picture is made of that
+// in the Swan, the Ring Nebula in the Lyre, the Pleiades on the Bull's shoulder), and the
+// project's picture is made of that
 // phenomenon's light:
 //   rest   the cursor's trail lets you glimpse it behind the figure,
 //   hover  it blooms from the brightest star and the picture forms out of it,
@@ -90,6 +91,8 @@ export const PHENOMENON_FRAG = /* glsl */ `
   uniform vec2 uViewport;
   uniform vec2 uSource;
   uniform float uKind, uDraw, uOpen, uTime, uOpacity, uAspect, uPad, uGrain;
+  // The Pleiades' brightest members around their cluster centre: offset (unit circle) + brightness.
+  uniform vec3 uSisters[8];
   varying vec2 vUv;
   ${SCREEN}
   ${NOISE}
@@ -147,6 +150,18 @@ export const PHENOMENON_FRAG = /* glsl */ `
   // It is born in the lyre's sound box, where M57 really lies (uSource), and rises to the
   // heart of the picture as it widens: the same O the whole voyage opens through.
   float shell(float d, float radius, float width) { return exp(-pow((d - radius) / width, 2.0)); }
+
+  // The Pleiades (M45, Subaru): seven sisters born together and still travelling together,
+  // wrapped in the blue dust they happen to be crossing. They wake at their real place on
+  // the bull's shoulder (uSource), drift in from the dark to gather, and rise to the heart;
+  // their light combs the dust into the fine parallel streaks the real cluster shows.
+  const float COMB = -0.5;
+  float combed(vec2 q, float t) {
+    mat2 turn = mat2(cos(COMB), sin(COMB), -sin(COMB), cos(COMB));
+    vec2 s = turn * q;
+    float streaks = fbm(vec2(s.x * 2.2 + t, s.y * 15.0)) * 0.7 + fbm(vec2(s.x * 4.0 - t * 0.6, s.y * 34.0 + 3.1)) * 0.3;
+    return smoothstep(0.32, 0.85, streaks);
+  }
 
   void main() {
     vec4 field = texture2D(uField, vScreen);
@@ -207,6 +222,36 @@ export const PHENOMENON_FRAG = /* glsl */ `
       vec3 aqua = vec3(0.62, 0.95, 1.0), lilac = vec3(0.78, 0.66, 1.0), rose = vec3(1.0, 0.62, 0.8);
       emission = (mix(lilac, aqua, smoothstep(0.2, 0.9, b.y)) * (rim * 1.25 + folds) + rose * skirt + mix(lilac, rose, 0.5) * tendrils * 0.9
         + mix(lilac, vec3(1.0), 0.5) * (body * (0.1 + light * 0.9))) * wake;
+    } else if (uKind > 3.5) {
+      float rise = smoothstep(0.05, 0.85, bloom);
+      vec2 centre = (mix(uSource, HEART, rise) - HEART) * vec2(uAspect, 1.0);
+      // The cluster widens from its true size to fill the picture, and opens a little more to frame it.
+      float spread = mix(0.05, 0.36, smoothstep(0.0, 1.0, bloom)) * (1.0 + 0.012 * sin(uTime * 0.5)) + 0.12 * uOpen;
+      // Before they gather the sisters wander a little further out and turned, then settle.
+      float apart = 1.0 - smoothstep(0.0, 0.7, bloom);
+      float swing = apart * 0.9;
+      mat2 turn = mat2(cos(swing), sin(swing), -sin(swing), cos(swing));
+      vec3 blue = vec3(0.42, 0.6, 1.0), deep = vec3(0.2, 0.3, 0.95), white = vec3(0.86, 0.92, 1.0);
+      float suns = 0.0, halo = 0.0, lit = 0.0, glints = 0.0;
+      for (int i = 0; i < 8; i++) {
+        vec3 sister = uSisters[i];
+        vec2 at = centre + turn * sister.xy * spread * (1.0 + apart * 0.7);
+        vec2 d = q - at;
+        float r2 = dot(d, d);
+        // Each sister wakes on her own, brightest first.
+        float born = smoothstep(0.0, 0.18, bloom * 1.6 - (1.0 - sister.z) * 0.55 - float(i) * 0.03);
+        float twinkle = 0.85 + 0.15 * sin(uTime * (1.1 + float(i) * 0.37) + float(i) * 2.4);
+        suns += (exp(-r2 / (0.00006 + sister.z * 0.00012)) * 2.4 + exp(-r2 / (0.0025 + sister.z * 0.003)) * 0.35) * sister.z * born * twinkle;
+        // The dust only shines where a sister lights it.
+        lit += exp(-r2 / (0.012 + sister.z * 0.03 * spread / 0.36)) * sister.z * born;
+        glints += (ribbon(d.x, 0.0025) * ribbon(d.y, 0.05 + sister.z * 0.05) + ribbon(d.y, 0.0025) * ribbon(d.x, 0.05 + sister.z * 0.05)) * sister.z * born * 0.5;
+      }
+      float dust = combed(q - centre, uTime * 0.02) * min(lit, 1.4);
+      // A wider, fainter veil holds the whole family together.
+      float veil = exp(-dot(q - centre, q - centre) / max(spread * spread * 1.6, 1e-4)) * (0.4 + 0.6 * fbm(q * 3.0 + uTime * 0.03)) * smoothstep(0.0, 0.3, bloom);
+      float light = glowAt(p, length(q - centre));
+      emission = deep * veil * 0.35 + mix(deep, blue, 0.6) * dust * 0.9 + blue * light * 0.5 * smoothstep(0.0, 0.4, bloom)
+        + white * (suns + glints);
     } else if (uKind > 2.5) {
       float rise = smoothstep(0.05, 0.85, bloom);
       vec2 c = (p - mix(uSource, HEART, rise)) * vec2(uAspect, 1.0);

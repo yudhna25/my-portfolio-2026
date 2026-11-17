@@ -90,6 +90,18 @@
           "Motion Design"
         ],
         "previewAlt": "Stellar Odyssey's opening: the word PORTFOLIO with a black hole inside its last O"
+      },
+      "kintra": {
+        "title": "KINTRA",
+        "category": "Product Design",
+        "award": "TOKEN LEADER award · Designathon 2026",
+        "description": "Winner of the TOKEN LEADER award at Designathon 2026. KINTRA connects the roughly 60,000 Vietnamese workers already living in Aichi, Japan with factories that need them: AI reads the residence card, scores the fit for every job and shows take-home pay before applying, while factories promise an answer within 24 hours.",
+        "tags": [
+          "Product Design",
+          "UX Research",
+          "AI Matching"
+        ],
+        "previewAlt": "KINTRA's job board in dark mode: a featured CNC lathe operator role in Aichi with its monthly take-home pay"
       }
     },
     "tagsLabel": "Disciplines",
@@ -100,17 +112,21 @@
     "comingSoon": "Case study coming soon",
     "backToOrbit": "Back to the sky",
     "voyageAgain": "Return to first light",
+    "openPrototype": "Open the prototype",
+    "sourceCode": "Source on GitHub",
     "constellations": {
       "edura": "Centaurus",
       "veris": "Gemini",
       "vie": "Cygnus",
-      "odyssey": "Lyra"
+      "odyssey": "Lyra",
+      "kintra": "Taurus"
     },
     "myths": {
       "edura": "Chiron, teacher of heroes",
       "veris": "Castor and Pollux, two souls never apart",
       "vie": "The swan flying along the Milky Way",
-      "odyssey": "The lyre of Orpheus, who walked down into the dark and found his way back"
+      "odyssey": "The lyre of Orpheus, who walked down into the dark and found his way back",
+      "kintra": "The white bull that carried Europa across the sea to a new land"
     },
     "phenomena": {
       "edura": {
@@ -128,6 +144,10 @@
       "odyssey": {
         "name": "Ring Nebula",
         "line": "In the lyre's sound box a dying star breathes out its last ring of light: the very O this voyage opened through."
+      },
+      "kintra": {
+        "name": "Pleiades",
+        "line": "On the bull's shoulder, seven sisters born of one cloud still travel the sky together; in Japan they are called Subaru, “gathered together”."
       }
     }
   },

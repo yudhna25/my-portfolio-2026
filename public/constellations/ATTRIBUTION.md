@@ -1,8 +1,8 @@
 # Stellar Odyssey constellation derivatives
 
-Seven outline derivatives: six dated 2026-10-09, Lyra dated 2026-10-19. Original illustrations: **Johan Meuris**, Stellarium constellation art. Vector tracing, simplified grayscale contours and three-star calibration: **Trần Vũ Anh Duy portfolio / Codex** (Lyra: same method, **Claude**).
+Eight outline derivatives: six dated 2026-10-09, Lyra dated 2026-10-19, Taurus dated 2026-11-17. Original illustrations: **Johan Meuris**, Stellarium constellation art. Vector tracing, simplified grayscale contours and three-star calibration: **Trần Vũ Anh Duy portfolio / Codex** (Lyra and Taurus: same method, **Claude**).
 
-These are modified derivatives of the publicly distributed raster illustrations. No original vector master or higher resolution master has been verified. Gemini and Lyra references are 256×256; the five other references are 512×512. Derivative SVGs contain real vector paths, no raster image payloads or AI-generated astronomy.
+These are modified derivatives of the publicly distributed raster illustrations. No original vector master or higher resolution master has been verified. Gemini and Lyra references are 256×256; the six other references are 512×512. Derivative SVGs contain real vector paths, no raster image payloads or AI-generated astronomy.
 
 Copyleft: these illustration derivatives are free works; you can copy, distribute and modify them under the **[Free Art License 1.3](https://artlibre.org/licence/lal/en/)**. The author's source notice says Free Art License without specifying a version; derivative distribution uses version 1.3. Preserve author names, modification notice, original access and license link. The SVGs are separately accessible assets; this notice does not assign this license to the website code or star catalog.
 
@@ -17,6 +17,7 @@ Author and original project: [Johan Meuris — Stellarium constellation art](htt
 | [Gemini](gemini.svg) | [gemini.png](https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/gemini.png) |
 | [Cygnus](cygnus.svg) | [cygnus.png](https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/cygnus.png) |
 | [Lyra](lyra.svg) | [lyra.png](https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/lyra.png) |
+| [Taurus](taurus.svg) | [taurus.png](https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/illustrations/taurus.png) |
 
 Star-line patterns: **Stellarium team, Modern sky culture, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)**. [Source metadata](https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/index.json), [license notice](https://raw.githubusercontent.com/Stellarium/stellarium/daace2add6a1bf886e8ee1934f51e9c69f818d18/skycultures/modern/description.md). Coordinate projection and Education assignment are adaptations. The IAU defines constellation boundaries; these line patterns are the selected Stellarium convention, not an IAU-prescribed stick figure.
 
