@@ -12,6 +12,23 @@ import '@/styles/star-map.css';
 const NUMERALS = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'];
 const CHAPTER_INDEX = { hero: 0, portal: 0, about: 1, skills: 2, education: 3, experience: 4, departure: 4, works: 5, finale: 5, contact: 6 };
 
+
+const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), summary, [tabindex]:not([tabindex="-1"])';
+const SECTION_SELECTOR = navigationSections.filter(item => item.id !== 'hero').map(item => `#${item.id}`).join(', ');
+const isTabbable = el => !el.closest('[inert]') && el.getAttribute('tabindex') !== '-1'
+  && (el.checkVisibility ? el.checkVisibility({ visibilityProperty: true }) : el.getClientRects().length > 0);
+// The chapter the next Tab stop waits in, when that chapter is still inert. Null lets the browser move focus.
+const pendingChapter = (from) => {
+  const start = from && from !== document.body ? from : null;
+  for (const el of document.querySelectorAll(FOCUSABLE)) {
+    if (start && (el === start || !(start.compareDocumentPosition(el) & Node.DOCUMENT_POSITION_FOLLOWING))) continue;
+    if (isTabbable(el)) return null;
+    const section = el.closest(SECTION_SELECTOR);
+    if (section) return section;
+  }
+  return null;
+};
+
 export function StarMapIndex() {
   const { t } = useTranslation();
   const reduced = useReducedMotion();
@@ -38,6 +55,13 @@ export function StarMapIndex() {
       const target = event.target;
       if (target instanceof HTMLElement && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName))) return;
       if (document.querySelector('[data-language-gate], [data-preloader]')) return;
+      if (event.key === 'Tab') {
+        // Chapters still waiting off-screen are inert, so Tab would skip them. Fly there first.
+        const inLayer = document.activeElement?.closest('dialog, [role="dialog"], [popover]');
+        const section = event.shiftKey || inLayer ? null : pendingChapter(document.activeElement);
+        if (section) { event.preventDefault(); flyRef.current(section.id); }
+        return;
+      }
       if (event.key === '?') { event.preventDefault(); document.getElementById('key-legend')?.togglePopover(); return; }
       const index = Number(event.key) - 1;
       if (Number.isInteger(index) && index >= 0 && index < navigationSections.length) {

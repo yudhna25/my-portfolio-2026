@@ -66,7 +66,7 @@ export default function Experience({ onLayout }) {
     };
   }, { scope: root, dependencies: [reduced, i18n.resolvedLanguage, onLayout], revertOnUpdate: true });
 
-  return <section ref={root} id="experience" lang={i18n.resolvedLanguage} data-theme="dark" aria-labelledby="experience-heading" className="relative px-6 pt-24 text-(--text-primary) sm:px-8 lg:px-12">
+  return <section ref={root} id="experience" lang={i18n.resolvedLanguage} data-theme="dark" aria-labelledby="experience-heading" className="relative px-6 pt-24 text-(--text-primary) sm:px-8 lg:pr-12 lg:pl-28">
     <div className="mx-auto max-w-7xl">
       <header className="mb-24 max-w-4xl lg:mb-32">
         <p key={`label-${i18n.resolvedLanguage}`} lang="en" data-reveal="signal" className="mb-5 font-mono text-sm tracking-[0.2em] text-(--text-secondary)">{t('experience.sectionLabel')}</p>

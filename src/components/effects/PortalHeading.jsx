@@ -26,7 +26,7 @@ const YEAR_SPINES = {
 // Every so often the last digit slips to the next year and back.
 const YEAR_ALT = { "6": "7" };
 
-export function PortalHeading({ label, name, year, role, visible = true, opening, children }) {
+export function PortalHeading({ label, heading, name, year, role, visible = true, opening, children }) {
   const scope = useRef(null);
   const reduced = useReducedMotion();
   const fallback = useScrollStore(state => state.sceneFallback);
@@ -108,7 +108,6 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
       if (idle === running) return;
       running = idle;
       stage.dataset.heroIdle = String(idle);
-      nameNode.tabIndex = idle ? 0 : -1;
       if (idle) {
         stream?.play();
         decode?.restart();
@@ -155,7 +154,6 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
     <div data-hero-content className="relative isolate mx-4 w-[calc(100%-2rem)] md:ml-[14vw] md:mr-0 md:w-[72vw]">
       <div data-hero-lockup className="relative shrink-0">
       <div data-hero-layer="year" data-hero-year className="relative z-0">
-        <span className="sr-only">{year}</span>
         <svg aria-hidden="true" focusable="false" viewBox="0 0 3502 832" className="hero-year-svg">
           {Array.from(year, (char, index) => <g key={index} data-portal-year-glyph={index} transform={`translate(${YEAR_ADVANCES[index]} 0)`}>
             <path d={YEAR_CONTOURS[char]} className="hero-year-base" />
@@ -165,7 +163,7 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
         </svg>
         <canvas data-year-stream aria-hidden="true" className="hero-year-stream-canvas" />
       </div>
-      <h1 id="hero-heading" data-hero-layer="heading" aria-label={label} className="absolute left-0 top-1/2 z-10 -translate-y-1/2 whitespace-nowrap font-display leading-none font-extrabold tracking-[-0.035em]">
+      <h1 id="hero-heading" data-hero-layer="heading" aria-label={heading || label} className="absolute left-0 top-1/2 z-10 -translate-y-1/2 whitespace-nowrap font-display leading-none font-extrabold tracking-[-0.035em]">
         {Array.from(label, (char, index) => <span key={index} aria-hidden="true" data-portal-char className={`relative inline-block${index === label.length - 1 && !fallback ? ' text-transparent' : ''}`}>
           {char}
           {index === label.length - 1 && <span data-story-anchor="portal" className="hero-o-anchor" />}
@@ -174,8 +172,8 @@ export function PortalHeading({ label, name, year, role, visible = true, opening
       </div>
       <div data-hero-details className="min-h-0 overflow-y-auto">
       <div data-hero-layer="identity" className="relative z-10 mt-[16px] flex flex-col items-start gap-[4px] font-body text-[clamp(0.875rem,1.25vw,1.5rem)] md:flex-row md:items-center md:gap-6">
-        <p data-hero-name tabIndex={0} className="relative inline-grid min-h-[44px] max-w-full items-center whitespace-nowrap rounded-sm px-[4px] leading-relaxed focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-white">
-          <span className="sr-only">{name}</span>
+        <p data-hero-name aria-hidden={heading ? 'true' : undefined} className="relative inline-grid min-h-[44px] max-w-full items-center whitespace-nowrap rounded-sm px-[4px] leading-relaxed focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-white">
+          {!heading && <span className="sr-only">{name}</span>}
           <span aria-hidden="true" className="invisible col-start-1 row-start-1">{name}</span>
           <span aria-hidden="true" data-hero-decode className="absolute inset-x-[4px] inset-y-0 flex items-center">{name}</span>
         </p>

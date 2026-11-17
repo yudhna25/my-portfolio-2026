@@ -39,7 +39,7 @@ export default function Footer() {
       data-theme="dark"
       role="contentinfo"
       aria-label={t('footer.label')}
-      className="relative z-10 border-t border-white/[0.08] px-6 pt-14 pb-[max(2.5rem,env(safe-area-inset-bottom))] text-(--text-primary) sm:px-8 md:px-12 lg:px-16"
+      className="relative z-10 border-t border-white/[0.08] px-6 pt-14 pb-[max(2.5rem,env(safe-area-inset-bottom))] text-(--text-primary) sm:px-8 md:px-12 lg:pr-16 lg:pl-28"
     >
       <div className="mx-auto flex max-w-[1600px] flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <p className="footer-fade max-w-md font-serif text-[clamp(1.25rem,2.2vw,1.75rem)] leading-snug font-light italic">

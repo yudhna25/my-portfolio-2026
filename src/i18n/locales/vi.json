@@ -1,6 +1,7 @@
 {
   "hero": {
     "portfolio": "PORTFOLIO",
+    "heading": "Trần Vũ Anh Duy. Portfolio 2026",
     "year": "2026",
     "name": "TRẦN VŨ ANH DUY",
     "tagline": "Creative Designer",
@@ -108,6 +109,7 @@
     "viewCaseStudy": "Xem case study",
     "selectLabel": "Chọn dự án",
     "interactionHint": "Chọn một chòm sao để đánh thức nó, chọn lần nữa để mở.",
+    "fallbackHint": "Chọn một dự án để xem.",
     "behanceReference": "Tham khảo trên Behance",
     "comingSoon": "Case study sắp ra mắt",
     "backToOrbit": "Trở về bầu trời",
