@@ -204,19 +204,19 @@
     "institutions": {
       "saigonUniversity": {
         "name": "Saigon University",
-        "period": "2021–2026",
+        "period": "2021 – 2026",
         "degree": "Bachelor's Degree in Information Technology",
         "description": "Graduated with High Honors in Information Technology. Focus: System Analysis and Design, HCI, Usability Testing, Web/App Prototyping."
       },
       "arenaMultimedia": {
         "name": "Arena Multimedia",
-        "period": "2024–Present",
+        "period": "2024 – Present",
         "degree": "Advanced Diploma in Multimedia",
         "description": "Awarded Distinction in Semester 2 (UX/UI). Focus: user-centric design, mobile prototyping, wireframing, responsive web."
       },
       "greenAcademy": {
         "name": "Green Academy",
-        "period": "2022–2023",
+        "period": "2022 – 2023",
         "degree": "Certificate in Professional Video Editing",
         "description": "Distinction. Focus: VFX compositing, motion graphics. Top-performing student in Premiere and After Effects."
       }

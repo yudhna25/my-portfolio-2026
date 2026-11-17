@@ -203,22 +203,22 @@
     "heading": "Bản Đồ Sao",
     "institutions": {
       "saigonUniversity": {
-        "name": "Saigon University",
-        "period": "2021–2026",
+        "name": "Đại học Sài Gòn",
+        "period": "2021 – 2026",
         "degree": "Cử nhân Công nghệ Thông tin",
         "description": "Tốt nghiệp loại Giỏi. Trọng tâm: Phân tích & Thiết kế Hệ thống, HCI, Usability Testing, Prototyping Web/App."
       },
       "arenaMultimedia": {
         "name": "Arena Multimedia",
-        "period": "2024–nay",
-        "degree": "Advanced Diploma in Multimedia",
-        "description": "Loại Distinction kỳ 2 (UX/UI). Trọng tâm: Thiết kế lấy người dùng làm trung tâm, prototyping mobile, wireframing, web responsive."
+        "period": "2024 – nay",
+        "degree": "Văn bằng Cao cấp Đa phương tiện",
+        "description": "Loại Xuất sắc kỳ 2 (UX/UI). Trọng tâm: Thiết kế lấy người dùng làm trung tâm, prototyping mobile, wireframing, web responsive."
       },
       "greenAcademy": {
         "name": "Green Academy",
-        "period": "2022–2023",
+        "period": "2022 – 2023",
         "degree": "Chứng chỉ Dựng phim Chuyên nghiệp",
-        "description": "Loại Distinction. Trọng tâm: VFX compositing, motion graphics. Học viên xuất sắc môn Premiere và After Effects."
+        "description": "Loại Xuất sắc. Trọng tâm: VFX compositing, motion graphics. Học viên xuất sắc môn Premiere và After Effects."
       }
     },
     "mapNote": "Ba vùng sinh sao trên cùng một cánh tay thiên hà, nơi tư duy thiết kế lần đầu bắt sáng.",
@@ -236,23 +236,23 @@
     "positions": {
       "hosanaMedia": {
         "company": "HOSANA MEDIA",
-        "role": "Multimedia Executive",
-        "period": "Sep 2024 – Feb 2025",
-        "type": "Full-time",
+        "role": "Chuyên viên Đa phương tiện",
+        "period": "09/2024 – 02/2025",
+        "type": "Toàn thời gian",
         "description": "Sản xuất ấn phẩm marketing có sức ảnh hưởng cao (bao bì, banner). Quản lý trọn vẹn quy trình quay dựng TVC & MV."
       },
       "upwork": {
         "company": "UPWORK",
-        "role": "Multimedia Creator",
+        "role": "Nhà sáng tạo Đa phương tiện",
         "period": "2024 – nay",
-        "type": "Freelance",
+        "type": "Tự do",
         "description": "Sáng tạo và tối ưu nội dung video cho tăng trưởng đa nền tảng. Quay dựng video quảng bá. Dịch vụ thiết kế UI/Visual."
       },
       "designveloper": {
         "company": "DESIGNVELOPER",
-        "role": "UX/UI Designer Intern",
-        "period": "Sep 2025 – Dec 2025",
-        "type": "Internship",
+        "role": "Thực tập sinh UX/UI",
+        "period": "09/2025 – 12/2025",
+        "type": "Thực tập",
         "description": "Nghiên cứu UX qua khảo sát. Thiết kế UI nhất quán thương hiệu, tối ưu layout và typography. Bàn giao thiết kế cho đội ngũ phát triển."
       }
     },

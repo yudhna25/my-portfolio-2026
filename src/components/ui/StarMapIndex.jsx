@@ -128,6 +128,7 @@ export function StarMapIndex() {
     <nav aria-label={t('starMap.label')} data-star-map
       className={`fixed left-[max(0.75rem,env(safe-area-inset-left))] top-1/2 z-[60] hidden -translate-y-1/2 transition-opacity duration-700 lg:block ${shown ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
       inert={!shown}>
+      <div className="relative">
       {/* The route line, filled to the journey's progress. */}
       <span aria-hidden="true" className="absolute top-3 bottom-3 left-[0.6875rem] w-px bg-white/10">
         <span ref={route} className="absolute inset-0 origin-top scale-y-0 bg-[var(--accent-amber,#F2A65A)] opacity-70" />
@@ -144,9 +145,9 @@ export function StarMapIndex() {
                 <span aria-hidden="true" className={`relative z-10 grid size-[1.375rem] place-items-center rounded-full border bg-(--bg-void) transition-colors duration-500 ${current ? 'border-[var(--accent-amber,#F2A65A)]' : 'border-white/15 group-hover:border-white/50'}`}>
                   <span className={`size-1.5 rounded-full transition-all duration-500 ${current ? 'bg-[var(--accent-amber,#F2A65A)] shadow-[0_0_10px_var(--accent-amber,#F2A65A)]' : 'bg-white/30 group-hover:bg-white/70'}`} />
                 </span>
-                <span aria-hidden="true" className={`w-6 font-mono text-sm tracking-[0.2em] transition-colors duration-500 ${current ? 'text-white' : 'text-(--text-secondary) group-hover:text-white'}`}>{NUMERALS[index]}</span>
-                {/* Names stay hidden over the reading column; the current one flashes on arrival. */}
-                <span key={current ? 'on' : 'off'} aria-hidden="true" data-flash={current || undefined}
+                <span aria-hidden="true" className={`w-6 font-mono text-sm tracking-[0.2em] transition-colors duration-500 ${current ? 'text-white' : 'text-white/75 group-hover:text-white'}`}>{NUMERALS[index]}</span>
+                {/* Names stay hidden over the reading column until hover or focus; the current one is named below the rail. */}
+                <span aria-hidden="true"
                   className="star-map-label flex flex-col rounded-sm bg-(--bg-void)/85 px-2 py-1 leading-tight opacity-0 transition-[opacity,translate] duration-500 -translate-x-1 group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:translate-x-0 group-focus-visible:opacity-100">
                   <span className="font-display text-sm font-semibold uppercase tracking-[0.14em] text-white">{name}</span>
                 </span>
@@ -155,6 +156,8 @@ export function StarMapIndex() {
           );
         })}
       </ol>
+      </div>
+      <p aria-hidden="true" className="mt-4 w-20 pl-1 font-mono text-sm uppercase leading-snug tracking-[0.12em] text-white/85">{t(`nav.${navigationSections[active].key}`)}</p>
     </nav>
   </>);
 }
