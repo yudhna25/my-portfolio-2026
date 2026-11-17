@@ -25,7 +25,7 @@ export function SoundToggle() {
         aria-describedby={error ? statusId : undefined}
         title={t(`common.audio.${active ? 'turnOff' : 'turnOn'}`)}
         onClick={toggleSound}
-        className="inline-flex min-h-11 shrink-0 cursor-pointer items-center gap-2 px-1 font-mono text-sm leading-tight text-white hover:text-white/80 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4 sm:px-2"
+        className="inline-flex min-h-11 min-w-11 shrink-0 cursor-pointer items-center justify-center gap-2 px-1 font-mono text-sm leading-tight text-white hover:text-white/80 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4 sm:px-2"
       >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="size-6 shrink-0" aria-hidden="true" focusable="false">
           <path d="M11 4 6 8H3v8h3l5 4V4Z" strokeLinejoin="round" />
