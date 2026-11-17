@@ -77,7 +77,7 @@ const STREAM_VERT = /* glsl */ `
   }
 `;
 // Each figure hides a real phenomenon the project is made of (see worksPhenomena.js).
-const IMAGE_ASPECTS = [1600 / 1131, 16 / 9, 16 / 9, 16 / 9];
+const IMAGE_ASPECTS = [1600 / 1131, 16 / 9, 16 / 9, 16 / 9, 16 / 9];
 const OPEN_Z = 2;
 const FIGURE_SCALE = 0.9;
 const ART_PIXELS = 1536;
@@ -145,12 +145,20 @@ export function WorksConstellations({ frozen = false, quality = 'high', layoutRe
     const toUv = (x, y, w, h, cx, cy) => new Vector2((x - cx) / w + 0.5, (y - cy) / h + 0.5);
     // Where the hidden phenomenon really sits in the figure, in picture uv (centre if unrecorded).
     const source = item.phenomenon ? toUv(...item.phenomenon.localPosition, rect.z, rect.w, rect.x, rect.y) : new Vector2(0.5, 0.5);
+    // A cluster's real members, around its centre: offset on the unit circle (picture height units) + brightness.
+    const members = item.phenomenon?.members ?? [];
+    const reach = Math.max(1e-6, ...members.map(m => Math.hypot(m.localPosition[0] - item.phenomenon.localPosition[0], m.localPosition[1] - item.phenomenon.localPosition[1])));
+    const sisters = Array.from({ length: 8 }, (_, k) => {
+      const m = members[k];
+      return m ? new Vector3((m.localPosition[0] - item.phenomenon.localPosition[0]) / reach, (m.localPosition[1] - item.phenomenon.localPosition[1]) / reach,
+        Math.min(1, Math.sqrt(10 ** (-0.4 * (m.vmag - Math.min(...members.map(n => n.vmag))))))) : new Vector3();
+    });
     return { points, lines, bounds, corners, projected: new Vector3(), rect, plane,
       artUniforms: { uMap: { value: null }, uField: field.uniform, uViewport: { value: new Vector2(1, 1) },
         uOrigin: { value: toUv(...bright.position.slice(0, 2), plane.width, plane.height, plane.center[0], plane.center[1]) },
         uReveal: { value: 0 }, uDissolve: { value: 0 }, uTime: { value: 0 }, uOpacity: { value: 0 }, uIdle: { value: 0.1 } },
       phenomenonUniforms: { uMap: { value: null }, uField: field.uniform, uPulse: field.pulse, uViewport: { value: new Vector2(1, 1) }, uAspect: { value: aspect },
-        uKind: { value: index }, uSource: { value: source }, uPad: { value: PHENOMENON_PAD }, uGrain: { value: 90 }, uDraw: { value: 0 }, uOpen: { value: 0 }, uTime: { value: 0 }, uOpacity: { value: 0 } },
+        uKind: { value: index }, uSource: { value: source }, uSisters: { value: sisters }, uPad: { value: PHENOMENON_PAD }, uGrain: { value: 90 }, uDraw: { value: 0 }, uOpen: { value: 0 }, uTime: { value: 0 }, uOpacity: { value: 0 } },
       uniforms: { uPixelRatio: { value: 1 }, uStrength: { value: 1 }, uActive: { value: 0 } } };
   }), [field]);
   const trails = useMemo(() => {

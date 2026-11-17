@@ -13,7 +13,7 @@ import { placeWorksPreview, WORKS_IDS } from '@/3d/utils/worksOrbit';
 import { revealDust, revealStarlight } from '@/lib/textReveal';
 
 const projects = PORTFOLIO_DATA.projects.map((project, index) => ({
-  ...project, id: WORKS_IDS[index], key: ['eduraLms', 'verisApp', 'viePerfume', 'stellarOdyssey'][index],
+  ...project, id: WORKS_IDS[index], key: ['eduraLms', 'verisApp', 'viePerfume', 'stellarOdyssey', 'kintra'][index],
 }));
 const focusRing = 'focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4';
 
@@ -62,7 +62,13 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
     if (smoother) smoother.scrollTop(0); else window.scrollTo(0, 0);
     if (event.detail === 0) document.getElementById('smooth-content')?.focus({ preventScroll: true });
   };
-  const action = (item, open) => item.id === 'edura' ? null : item.id === 'odyssey'
+  const external = (href, label, onDark) => <a href={href} onClick={playRadioClick} target="_blank" rel="noopener noreferrer"
+    aria-label={`${label} (${t('common.opensInNewTab')})`}
+    className={`inline-flex min-h-11 min-w-11 items-center font-mono text-[10px] underline underline-offset-4 ${onDark ? 'text-(--color-amber,#FFB45A)' : 'text-white/70 decoration-white/25'} ${focusRing}`}>{label} <span aria-hidden="true" className="ml-2">↗</span></a>;
+  const action = (item, open) => item.id === 'edura' ? null : item.id === 'kintra'
+    ? <div className={`flex flex-wrap gap-x-4 ${open ? '' : `justify-center ${fallback ? '' : 'lg:justify-start'}`}`}>
+      {external(item.link, t('works.openPrototype'), true)}{external(item.repo, t('works.sourceCode'), false)}</div>
+    : item.id === 'odyssey'
     ? <a href="/#hero" data-work-action onClick={voyageAgain}
       className={`inline-flex min-h-11 min-w-11 items-center font-mono ${open ? 'text-[11px]' : 'text-[10px]'} text-(--color-amber,#FFB45A) underline underline-offset-4 ${focusRing}`}>
       <span aria-hidden="true" className="mr-2">↺</span>{t('works.voyageAgain')}</a>
@@ -209,6 +215,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
           className="works-open-column rounded-sm border border-(--border-glass-subtle) bg-(--color-glass-surface) p-4 text-left backdrop-blur-md lg:border-0 lg:bg-transparent lg:p-0 lg:backdrop-blur-none">
           <p data-work-ink className="font-mono text-[10px] tracking-[0.18em] text-white/55 uppercase">{t(`works.constellations.${project.id}`)} · {t(`works.phenomena.${project.id}.name`)}</p>
           <h3 data-work-star className="mt-3 font-display text-xl leading-tight font-bold tracking-[-0.03em] lg:text-3xl">{t(`${path}.title`)}</h3>
+          {project.award && <p data-work-ink className="mt-2 font-mono text-[10px] tracking-[0.16em] text-(--color-amber,#FFB25B) uppercase"><span aria-hidden="true" className="mr-2">✦</span>{t(`${path}.award`)}</p>}
           <p data-work-dust className="mt-2 font-serif text-sm text-white/80 italic lg:text-base">{t(`works.myths.${project.id}`)}</p>
           <p data-work-dust className="mt-4 font-serif text-[13px] leading-relaxed text-(--color-amber,#FFB25B) italic lg:text-sm">{t(`works.phenomena.${project.id}.line`)}</p>
           <p data-work-ink className="mt-4 font-mono text-[10px] tracking-[0.12em] text-white/55 uppercase">{t(`${path}.category`)}</p>
@@ -238,6 +245,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
           <div className="min-w-0">
             <p className="mb-2 font-mono text-[9px] tracking-[0.18em] text-white/45 uppercase">{t(`works.phenomena.${project.id}.name`)}</p>
             <h3 className="font-display text-sm leading-tight font-bold tracking-[-0.03em] lg:text-base">{t(`${path}.title`)}</h3>
+            {project.award && <p className="mt-1 font-mono text-[9px] tracking-[0.14em] text-(--color-amber,#FFB25B) uppercase"><span aria-hidden="true" className="mr-1.5">✦</span>{t(`${path}.award`)}</p>}
             <p className="mt-2 font-body text-[11px] leading-relaxed text-white/70">{t(`${path}.category`)}</p>
             {project.id === 'edura' ? <div className={`flex flex-wrap justify-center gap-x-4 ${fallback ? '' : 'lg:justify-start'}`}>
               <a id="work-case-edura" href={EDURA_ROUTE} data-work-action onClick={event => { playRadioClick(); if (!nativeNavigation) navigateRoute(event, EDURA_ROUTE); }}
@@ -261,7 +269,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
         <h2 id="works-heading" className="font-display text-[clamp(1rem,2.6vw,2.5rem)] leading-[1.3] font-bold tracking-[-0.04em]">{t('works.heading')}</h2>
         <p id="works-hint" className="pointer-events-none mx-auto mt-3 max-w-sm font-body text-xs leading-relaxed text-white/60">{t('works.interactionHint')}</p>
         </div>
-        <div role="group" aria-label={t('works.selectLabel')} className={fallback ? 'mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-8' : ''}>
+        <div role="group" aria-label={t('works.selectLabel')} className={fallback ? 'mt-6 grid grid-cols-2 gap-3 sm:grid-cols-5 sm:gap-6' : ''}>
           {projects.map(item => <div key={item.id}><button id={`work-target-${item.id}`} type="button" data-work-target={item.id}
             aria-label={`${t(`works.projects.${item.key}.title`)} · ${t(`works.constellations.${item.id}`)}`}
             aria-pressed={selection === item.id} aria-expanded={target === item.id} aria-controls="work-preview" aria-describedby="works-hint"
@@ -287,7 +295,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
       </header>
 
       {!project && <div id="work-preview" data-work-preview data-active="empty" hidden />}
-      <p aria-live="polite" aria-atomic="true" className="sr-only">{project ? `${t(`${path}.title`)} — ${t(`${path}.category`)}` : t('works.selectLabel')}</p>
+      <p aria-live="polite" aria-atomic="true" className="sr-only">{project ? `${t(`${path}.title`)} — ${project.award ? `${t(`${path}.award`)} — ` : ''}${t(`${path}.category`)}` : t('works.selectLabel')}</p>
     </div>
   </section>;
 }

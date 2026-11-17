@@ -62,6 +62,19 @@ export const PORTFOLIO_DATA = {
       tags: ['Creative Development', 'WebGL / GLSL', 'Motion Design'],
       imageUrl: '/project4.webp',
     },
+    {
+      id: '05',
+      title: 'KINTRA',
+      subtitle: 'PRODUCT',
+      category: 'Product Design',
+      description:
+        'TOKEN LEADER at Designathon 2026: a platform that matches Vietnamese workers already living in Aichi, Japan with factories that need them, with a 24-hour HR answer.',
+      tags: ['Product Design', 'AI Matching', 'Prototype'],
+      imageUrl: '/project5.webp',
+      link: 'https://team7designathon-viecnhanh.vercel.app/hub',
+      repo: 'https://github.com/yudhna25/Designathon-team7',
+      award: true,
+    },
   ],
   tools: [
     { id: 'figma', icon: '/icons/figma.png' },
