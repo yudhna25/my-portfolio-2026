@@ -65,6 +65,22 @@ export default defineConfig({
       },
     }),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        // Long-lived vendor chunks: a content edit no longer re-downloads ~1.3 MB of
+        // libraries, and the browser fetches them in parallel with the app code.
+        manualChunks(id) {
+          if (!id.includes('node_modules')) return undefined;
+          if (/node_modules\/three\//.test(id)) return 'vendor-three';
+          if (/node_modules\/(react|react-dom|scheduler)\//.test(id)) return 'vendor-react';
+          if (/node_modules\/(gsap|@gsap)\//.test(id)) return 'vendor-gsap';
+          if (/node_modules\/(i18next|react-i18next)\//.test(id)) return 'vendor-i18n';
+          return undefined;
+        },
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
