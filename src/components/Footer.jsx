@@ -326,7 +326,7 @@ export default function Footer() {
 
         <span>{t('footer.copyright')}</span>
 
-        <span className="hidden text-(--text-muted) md:inline">{t('footer.disciplines')}</span>
+        <span className="hidden text-(--text-secondary) md:inline">{t('footer.disciplines')}</span>
 
         <span className="text-(--text-secondary)">{t('footer.buildCredit', { version: '3.15' })}</span>
 

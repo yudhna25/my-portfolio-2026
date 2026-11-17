@@ -286,7 +286,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
               pointer.current = '';
             }}
             className={`min-h-11 min-w-11 cursor-pointer rounded-sm text-center ${focusRing} ${fallback ? 'border-b border-white/25 px-1 py-2' : 'absolute top-0 left-0'} ${target === item.id ? 'text-white' : 'text-white/65 hover:text-white'}`}>
-            <span className={`${fallback ? 'block' : 'absolute inset-x-0 -bottom-6 block'} transition-opacity duration-500 ${open && item.id !== project.id ? 'opacity-0' : ''}`}>
+            <span className={`${fallback ? 'block' : 'absolute -bottom-6 left-1/2 block w-max max-w-28 lg:max-w-44 -translate-x-1/2'} transition-opacity duration-500 ${open && item.id !== project.id ? 'opacity-0' : ''}`}>
               <span className="block font-body text-sm lg:text-base font-medium">{t(`works.projects.${item.key}.title`)}</span>
               <span className="block font-mono text-sm text-white/55">{t(`works.constellations.${item.id}`)}</span>
             </span>

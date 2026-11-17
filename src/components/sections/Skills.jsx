@@ -109,7 +109,7 @@ export default function Skills({ stageRef }) {
       <div className="mx-auto max-w-7xl">
         <header className="mb-10 lg:mb-14">
           <h2 key={i18n.resolvedLanguage} aria-label={t('skills.heading')} id="skills-heading" className="split-heading font-display text-[clamp(2rem,6vw,6rem)] font-bold uppercase leading-[1.2] tracking-[-0.04em]"><MixedText text={t('skills.heading')} accent={t('skills.headingAccent')} /></h2>
-          <p key={`hint-${i18n.resolvedLanguage}`} data-reveal="signal" className="mt-5 max-w-2xl font-mono text-sm leading-relaxed text-white/55">{t('skills.interactionHint')}</p>
+          <p key={`hint-${i18n.resolvedLanguage}`} data-reveal="signal" className="mt-5 max-w-2xl font-body text-sm leading-relaxed text-white/60">{t('skills.interactionHint')}</p>
         </header>
         <div ref={region} className="relative grid gap-5 md:grid-cols-[minmax(0,1fr)_minmax(0,1.8fr)_minmax(0,1fr)] lg:gap-8">
           <div className="relative z-10 order-2 min-w-0 md:order-1">
@@ -144,7 +144,7 @@ export default function Skills({ stageRef }) {
           <figure id="skills-stage" aria-label={t('skills.stageLabel')} className="relative order-1 h-[min(40vh,22rem)] min-h-64 min-w-0 md:order-2 md:h-full md:min-h-104">
             <div ref={anchor} data-skills-stage className="absolute inset-x-0 bottom-12 top-11" />
             <button type="button" data-skill-clear onClick={clear} className="absolute right-0 top-0 z-20 min-h-11 px-2 font-mono text-sm uppercase tracking-wider text-white/55 underline decoration-white/20 underline-offset-4 hover:text-white focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4">{t('skills.clearSelection')}</button>
-            <figcaption role="status" aria-live="polite" className="absolute inset-x-0 bottom-0 z-10 mx-auto max-w-64 text-center font-mono text-sm leading-relaxed text-white/55">
+            <figcaption role="status" aria-live="polite" className="absolute inset-x-0 bottom-0 z-10 mx-auto max-w-64 text-center font-body text-sm leading-relaxed text-white/60">
               {tool ? t('skills.activeTool', { tool: t('skills.toolNames.' + tool.id) }) : t('skills.idleStage')}
               {target === 'ai' && <span className="mt-2 block">{t('skills.aiMembers')}</span>}
             </figcaption>
