@@ -73,11 +73,11 @@ export function StarMapIndex() {
                 <span aria-hidden="true" className={`relative z-10 grid size-[1.375rem] place-items-center rounded-full border bg-(--bg-void) transition-colors duration-500 ${current ? 'border-[var(--accent-amber,#F2A65A)]' : 'border-white/15 group-hover:border-white/50'}`}>
                   <span className={`size-1.5 rounded-full transition-all duration-500 ${current ? 'bg-[var(--accent-amber,#F2A65A)] shadow-[0_0_10px_var(--accent-amber,#F2A65A)]' : 'bg-white/30 group-hover:bg-white/70'}`} />
                 </span>
-                <span aria-hidden="true" className={`w-6 font-mono text-[10px] tracking-[0.2em] transition-colors duration-500 ${current ? 'text-white' : 'text-(--text-secondary) group-hover:text-white'}`}>{NUMERALS[index]}</span>
+                <span aria-hidden="true" className={`w-6 font-mono text-sm tracking-[0.2em] transition-colors duration-500 ${current ? 'text-white' : 'text-(--text-secondary) group-hover:text-white'}`}>{NUMERALS[index]}</span>
                 {/* Names stay hidden over the reading column; the current one flashes on arrival. */}
                 <span key={current ? 'on' : 'off'} aria-hidden="true" data-flash={current || undefined}
                   className="star-map-label flex flex-col rounded-sm bg-(--bg-void)/85 px-2 py-1 leading-tight opacity-0 transition-[opacity,translate] duration-500 -translate-x-1 group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:translate-x-0 group-focus-visible:opacity-100">
-                  <span className="font-display text-[11px] font-semibold uppercase tracking-[0.14em] text-white">{name}</span>
+                  <span className="font-display text-sm font-semibold uppercase tracking-[0.14em] text-white">{name}</span>
                 </span>
               </button>
             </li>

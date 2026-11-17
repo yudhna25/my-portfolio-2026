@@ -11,7 +11,7 @@
     font-size: clamp(1.25rem, 2.4vw, 1.75rem); color: var(--text-primary); letter-spacing: -0.005em;
   }
   .language-gate__prompt > :last-child {
-    font-family: var(--font-body); font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-secondary);
+    font-family: var(--font-body); font-size: 0.875rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-secondary);
   }
   .language-gate__option {
     position: absolute; left: 0; top: 0; display: flex; flex-direction: column; align-items: center;
@@ -25,8 +25,8 @@
     font-size: clamp(1.6rem, 2.6vw, 2.1rem); line-height: 1; color: var(--text-primary);
   }
   .language-gate__depart {
-    font-family: var(--font-body); font-size: 0.6875rem; letter-spacing: 0.24em; text-transform: uppercase;
-    color: var(--accent-amber); opacity: 0.75;
+    font-family: var(--font-body); font-size: 0.875rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--accent-amber); opacity: 0.9;
   }
 }
 

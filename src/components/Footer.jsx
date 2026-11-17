@@ -322,7 +322,7 @@ export default function Footer() {
 
 
 
-      <div className="mx-auto mt-16 flex max-w-[1600px] flex-col items-center justify-between gap-4 border-t border-white/[0.08] pt-8 font-mono text-xs uppercase tracking-wider text-(--text-secondary) sm:flex-row sm:flex-wrap">
+      <div className="mx-auto mt-16 flex max-w-[1600px] flex-col items-center justify-between gap-4 border-t border-white/[0.08] pt-8 font-mono text-sm uppercase tracking-wider text-(--text-secondary) sm:flex-row sm:flex-wrap">
 
         <span>{t('footer.copyright')}</span>
 

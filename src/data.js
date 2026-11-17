@@ -99,7 +99,7 @@ export const PORTFOLIO_DATA = {
       id: 'hosanaMedia',
       company: 'HOSANA MEDIA',
       role: 'Multimedia Executive',
-      year: 'Sep 2024 — Feb 2025',
+      year: 'Sep 2024 – Feb 2025',
       type: 'Full-time',
       details:
         'Produced high-impact marketing assets (packaging, banners). Managed end-to-end filming and editing for TVCs & MVs.',
@@ -108,7 +108,7 @@ export const PORTFOLIO_DATA = {
       id: 'upwork',
       company: 'UPWORK',
       role: 'Multimedia Creator',
-      year: '2024 — Present',
+      year: '2024 – Present',
       type: 'Freelance',
       details:
         'Created and optimized video content for cross-platform growth. Filmed and edited promotional videos. UI/Visual design services.',
@@ -117,7 +117,7 @@ export const PORTFOLIO_DATA = {
       id: 'designveloper',
       company: 'DESIGNVELOPER',
       role: 'UX/UI Designer Intern',
-      year: 'Sep 2025 — Dec 2025',
+      year: 'Sep 2025 – Dec 2025',
       type: 'Internship',
       details:
         'Conducted UX research via surveys. Designed brand-consistent UI, optimizing layout and typography. Design handoff with Developers.',
@@ -127,23 +127,23 @@ export const PORTFOLIO_DATA = {
     {
       school: 'Saigon University',
       degree: "Bachelor's Degree in Information Technology",
-      year: '2021 — 2026',
+      year: '2021 – 2026',
       details:
         'Graduated Good Tier. Focus: System Analysis and Design, HCI, Usability Testing, Web/App Prototyping.',
     },
     {
       school: 'Arena Multimedia',
       degree: 'Advanced Diploma in Multimedia',
-      year: '2024 — Present',
+      year: '2024 – Present',
       details:
         'Distinction Tier Semester 2 (UX/UI). Focus: user-centric design, mobile prototyping, wireframing, responsive web.',
     },
     {
       school: 'Green Academy',
       degree: 'Certificate in Professional Video Editing',
-      year: '2022 — 2023',
+      year: '2022 – 2023',
       details:
-        'Distinction. Focus: VFX compositing, motion graphics. Top-performing student — Premiere & After Effects.',
+        'Distinction. Focus: VFX compositing, motion graphics. Top-performing student in Premiere and After Effects.',
     },
   ],
 };

@@ -64,15 +64,15 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
   };
   const external = (href, label, onDark) => <a href={href} onClick={playRadioClick} target="_blank" rel="noopener noreferrer"
     aria-label={`${label} (${t('common.opensInNewTab')})`}
-    className={`inline-flex min-h-11 min-w-11 items-center font-mono text-[10px] underline underline-offset-4 ${onDark ? 'text-(--color-amber,#FFB45A)' : 'text-white/70 decoration-white/25'} ${focusRing}`}>{label} <span aria-hidden="true" className="ml-2">↗</span></a>;
+    className={`inline-flex min-h-11 min-w-11 items-center font-mono text-sm underline underline-offset-4 ${onDark ? 'text-(--color-amber,#FFB45A)' : 'text-white/70 decoration-white/25'} ${focusRing}`}>{label} <span aria-hidden="true" className="ml-2">↗</span></a>;
   const action = (item, open) => item.id === 'edura' ? null : item.id === 'kintra'
     ? <div className={`flex flex-wrap gap-x-4 ${open ? '' : `justify-center ${fallback ? '' : 'lg:justify-start'}`}`}>
       {external(item.link, t('works.openPrototype'), true)}{external(item.repo, t('works.sourceCode'), false)}</div>
     : item.id === 'odyssey'
     ? <a href="/#hero" data-work-action onClick={voyageAgain}
-      className={`inline-flex min-h-11 min-w-11 items-center font-mono ${open ? 'text-[11px]' : 'text-[10px]'} text-(--color-amber,#FFB45A) underline underline-offset-4 ${focusRing}`}>
+      className={`inline-flex min-h-11 min-w-11 items-center font-mono ${open ? 'text-sm' : 'text-sm'} text-(--color-amber,#FFB45A) underline underline-offset-4 ${focusRing}`}>
       <span aria-hidden="true" className="mr-2">↺</span>{t('works.voyageAgain')}</a>
-    : <p className={open ? 'min-h-11 py-3 font-mono text-[10px] text-white/55' : 'mt-4 font-mono text-[10px] leading-relaxed text-white/55 sm:text-xs'}>{t('works.comingSoon')}</p>;
+    : <p className={open ? 'min-h-11 py-3 font-mono text-sm text-white/55' : 'mt-4 font-mono text-sm leading-relaxed text-white/55'}>{t('works.comingSoon')}</p>;
   const focusProject = (event, id) => {
     cancelClose();
     if (['touch', 'pen'].includes(pointer.current) || !event.target.matches(':focus-visible')) return;
@@ -213,46 +213,46 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
         {project && open ? <div data-work-content key={`${project.id}-open-${i18n.resolvedLanguage}`}
           onPointerEnter={cancelClose} onFocusCapture={event => focusProject(event, project.id)} onBlurCapture={leave}
           className="works-open-column rounded-sm border border-(--border-glass-subtle) bg-(--color-glass-surface) p-4 text-left backdrop-blur-md lg:border-0 lg:bg-transparent lg:p-0 lg:backdrop-blur-none">
-          <p data-work-ink className="font-mono text-[10px] tracking-[0.18em] text-white/55 uppercase">{t(`works.constellations.${project.id}`)} · {t(`works.phenomena.${project.id}.name`)}</p>
+          <p data-work-ink className="font-mono text-sm tracking-[0.18em] text-white/55 uppercase">{t(`works.constellations.${project.id}`)} · {t(`works.phenomena.${project.id}.name`)}</p>
           <h3 data-work-star className="mt-3 font-display text-xl leading-tight font-bold tracking-[-0.03em] lg:text-3xl">{t(`${path}.title`)}</h3>
-          {project.award && <p data-work-ink className="mt-2 font-mono text-[10px] tracking-[0.16em] text-(--color-amber,#FFB25B) uppercase"><span aria-hidden="true" className="mr-2">✦</span>{t(`${path}.award`)}</p>}
+          {project.award && <p data-work-ink className="mt-2 font-mono text-sm tracking-[0.16em] text-(--color-amber,#FFB25B) uppercase"><span aria-hidden="true" className="mr-2">✦</span>{t(`${path}.award`)}</p>}
           <p data-work-dust className="mt-2 font-serif text-sm text-white/80 italic lg:text-base">{t(`works.myths.${project.id}`)}</p>
-          <p data-work-dust className="mt-4 font-serif text-[13px] leading-relaxed text-(--color-amber,#FFB25B) italic lg:text-sm">{t(`works.phenomena.${project.id}.line`)}</p>
-          <p data-work-ink className="mt-4 font-mono text-[10px] tracking-[0.12em] text-white/55 uppercase">{t(`${path}.category`)}</p>
-          <p data-work-dust className="mt-2 font-body text-xs leading-relaxed text-white/70 lg:text-[13px]">{t(`${path}.description`)}</p>
-          <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-1 font-mono text-[10px] text-white/50" aria-label={t('works.tagsLabel')}>
+          <p data-work-dust className="mt-4 font-serif text-sm leading-relaxed text-(--color-amber,#FFB25B) italic">{t(`works.phenomena.${project.id}.line`)}</p>
+          <p data-work-ink className="mt-4 font-mono text-sm tracking-[0.12em] text-white/55 uppercase">{t(`${path}.category`)}</p>
+          <p data-work-dust className="mt-2 font-body text-sm leading-relaxed text-white/70">{t(`${path}.description`)}</p>
+          <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-1 font-mono text-sm text-white/50" aria-label={t('works.tagsLabel')}>
             {t(`${path}.tags`, { returnObjects: true }).map(tag => <li key={tag}>{tag}</li>)}
           </ul>
           <div className="mt-4 flex flex-wrap items-center gap-x-5">
             {project.id === 'edura' ? <>
               <a id="work-case-edura" href={EDURA_ROUTE} data-work-action onClick={event => { playRadioClick(); if (!nativeNavigation) navigateRoute(event, EDURA_ROUTE); }}
-                className={`inline-flex min-h-11 min-w-11 items-center font-mono text-[11px] text-(--color-amber,#FFB45A) underline underline-offset-4 ${focusRing}`}>{t('works.viewCaseStudy')} <span aria-hidden="true" className="ml-2">→</span></a>
+                className={`inline-flex min-h-11 min-w-11 items-center font-mono text-sm text-(--color-amber,#FFB45A) underline underline-offset-4 ${focusRing}`}>{t('works.viewCaseStudy')} <span aria-hidden="true" className="ml-2">→</span></a>
               <a href={project.link} data-work-behance onClick={playRadioClick} target="_blank" rel="noopener noreferrer"
                 aria-label={`${t('works.behanceReference')} (${t('common.opensInNewTab')})`}
-                className={`inline-flex min-h-11 min-w-11 items-center font-mono text-[10px] text-white/70 underline decoration-white/25 underline-offset-4 ${focusRing}`}>{t('works.behanceReference')} <span aria-hidden="true" className="ml-2">↗</span></a>
+                className={`inline-flex min-h-11 min-w-11 items-center font-mono text-sm text-white/70 underline decoration-white/25 underline-offset-4 ${focusRing}`}>{t('works.behanceReference')} <span aria-hidden="true" className="ml-2">↗</span></a>
             </> : action(project, true)}
           </div>
           <button type="button" data-work-close onClick={dismiss}
-            className={`mt-2 inline-flex min-h-11 min-w-11 items-center font-mono text-[11px] text-white/80 hover:text-white ${focusRing}`}>
+            className={`mt-2 inline-flex min-h-11 min-w-11 items-center font-mono text-sm text-white/80 hover:text-white ${focusRing}`}>
             <span aria-hidden="true" className="mr-2">←</span>{t('works.backToOrbit')}</button>
         </div> : project ? <div data-work-content key={project.id}
           onPointerEnter={event => { cancelClose(); if (event.pointerType === 'mouse') interact('Hover', project.id); }} onPointerLeave={leave}
           onFocusCapture={event => focusProject(event, project.id)}
           onBlurCapture={leave}
-          className={`grid h-48 grid-cols-[minmax(0,.6fr)_minmax(0,1fr)] items-center gap-3 rounded-sm border border-(--border-glass-subtle) bg-(--color-glass-surface) p-3 backdrop-blur-md lg:h-auto lg:grid-cols-1 lg:gap-2 ${fallback ? '' : 'lg:rounded-none lg:border-0 lg:border-l lg:border-white/20 lg:bg-black/60 lg:py-2 lg:pr-4 lg:pl-4 lg:text-left lg:backdrop-blur-sm'}`}>
+          className={`grid min-h-48 grid-cols-[minmax(0,.6fr)_minmax(0,1fr)] items-center gap-3 rounded-sm border border-(--border-glass-subtle) bg-(--color-glass-surface) p-3 backdrop-blur-md lg:h-auto lg:grid-cols-1 lg:gap-2 ${fallback ? '' : 'lg:rounded-none lg:border-0 lg:border-l lg:border-white/20 lg:bg-black/60 lg:py-2 lg:pr-4 lg:pl-4 lg:text-left lg:backdrop-blur-sm'}`}>
           <img data-project-image src={project.imageUrl} alt={t(`${path}.previewAlt`)} width="1600" height={project.id === 'edura' ? 1131 : 900} loading="lazy" decoding="async"
             className={`aspect-[16/10] w-full object-contain ${fallback ? '' : 'lg:hidden'}`} />
           <div className="min-w-0">
-            <p className="mb-2 font-mono text-[9px] tracking-[0.18em] text-white/45 uppercase">{t(`works.phenomena.${project.id}.name`)}</p>
+            <p className="mb-2 font-mono text-sm tracking-[0.18em] text-white/45 uppercase">{t(`works.phenomena.${project.id}.name`)}</p>
             <h3 className="font-display text-sm leading-tight font-bold tracking-[-0.03em] lg:text-base">{t(`${path}.title`)}</h3>
-            {project.award && <p className="mt-1 font-mono text-[9px] tracking-[0.14em] text-(--color-amber,#FFB25B) uppercase"><span aria-hidden="true" className="mr-1.5">✦</span>{t(`${path}.award`)}</p>}
-            <p className="mt-2 font-body text-[11px] leading-relaxed text-white/70">{t(`${path}.category`)}</p>
+            {project.award && <p className="mt-1 font-mono text-sm tracking-[0.14em] text-(--color-amber,#FFB25B) uppercase"><span aria-hidden="true" className="mr-1.5">✦</span>{t(`${path}.award`)}</p>}
+            <p className="mt-2 font-body text-sm leading-relaxed text-white/70">{t(`${path}.category`)}</p>
             {project.id === 'edura' ? <div className={`flex flex-wrap justify-center gap-x-4 ${fallback ? '' : 'lg:justify-start'}`}>
               <a id="work-case-edura" href={EDURA_ROUTE} data-work-action onClick={event => { playRadioClick(); if (!nativeNavigation) navigateRoute(event, EDURA_ROUTE); }}
-                className={`inline-flex min-h-11 min-w-11 items-center font-mono text-[10px] text-white underline underline-offset-4 ${focusRing}`}>{t('works.viewCaseStudy')} <span aria-hidden="true" className="ml-2">↗</span></a>
+                className={`inline-flex min-h-11 min-w-11 items-center font-mono text-sm text-white underline underline-offset-4 ${focusRing}`}>{t('works.viewCaseStudy')} <span aria-hidden="true" className="ml-2">↗</span></a>
               <a href={project.link} data-work-behance onClick={playRadioClick} target="_blank" rel="noopener noreferrer"
                 aria-label={`${t('works.behanceReference')} (${t('common.opensInNewTab')})`}
-                className={`inline-flex min-h-11 min-w-11 items-center font-mono text-[10px] text-white/70 underline decoration-white/25 underline-offset-4 ${focusRing}`}>{t('works.behanceReference')} <span aria-hidden="true" className="ml-2">↗</span></a>
+                className={`inline-flex min-h-11 min-w-11 items-center font-mono text-sm text-white/70 underline decoration-white/25 underline-offset-4 ${focusRing}`}>{t('works.behanceReference')} <span aria-hidden="true" className="ml-2">↗</span></a>
             </div> : action(project, false)}
           </div>
         </div> : null}
@@ -267,7 +267,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
         <div className={`transition-opacity duration-500 ${open ? 'pointer-events-none opacity-0' : ''}`}>
         <ConstellationCreditButton compact className="absolute top-20 left-4 sm:left-8 lg:left-12" />
         <h2 id="works-heading" className="font-display text-[clamp(1rem,2.6vw,2.5rem)] leading-[1.3] font-bold tracking-[-0.04em]">{t('works.heading')}</h2>
-        <p id="works-hint" className="pointer-events-none mx-auto mt-3 max-w-sm font-body text-xs leading-relaxed text-white/60">{t('works.interactionHint')}</p>
+        <p id="works-hint" className="pointer-events-none mx-auto mt-3 max-w-sm font-body text-sm leading-relaxed text-white/60">{t('works.interactionHint')}</p>
         </div>
         <div role="group" aria-label={t('works.selectLabel')} className={fallback ? 'mt-6 grid grid-cols-2 gap-3 sm:grid-cols-5 sm:gap-6' : ''}>
           {projects.map(item => <div key={item.id}><button id={`work-target-${item.id}`} type="button" data-work-target={item.id}
@@ -287,15 +287,15 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
             }}
             className={`min-h-11 min-w-11 cursor-pointer rounded-sm text-center ${focusRing} ${fallback ? 'border-b border-white/25 px-1 py-2' : 'absolute top-0 left-0'} ${target === item.id ? 'text-white' : 'text-white/65 hover:text-white'}`}>
             <span className={`${fallback ? 'block' : 'absolute inset-x-0 -bottom-6 block'} transition-opacity duration-500 ${open && item.id !== project.id ? 'opacity-0' : ''}`}>
-              <span className="block font-body text-[clamp(.65rem,1vw,.85rem)] font-medium">{t(`works.projects.${item.key}.title`)}</span>
-              <span className="block font-mono text-[9px] text-white/55">{t(`works.constellations.${item.id}`)}</span>
+              <span className="block font-body text-sm lg:text-base font-medium">{t(`works.projects.${item.key}.title`)}</span>
+              <span className="block font-mono text-sm text-white/55">{t(`works.constellations.${item.id}`)}</span>
             </span>
           </button>{project?.id === item.id && preview}</div>)}
         </div>
       </header>
 
       {!project && <div id="work-preview" data-work-preview data-active="empty" hidden />}
-      <p aria-live="polite" aria-atomic="true" className="sr-only">{project ? `${t(`${path}.title`)} — ${project.award ? `${t(`${path}.award`)} — ` : ''}${t(`${path}.category`)}` : t('works.selectLabel')}</p>
+      <p aria-live="polite" aria-atomic="true" className="sr-only">{project ? `${t(`${path}.title`)}, ${project.award ? `${t(`${path}.award`)}, ` : ''}${t(`${path}.category`)}` : t('works.selectLabel')}</p>
     </div>
   </section>;
 }

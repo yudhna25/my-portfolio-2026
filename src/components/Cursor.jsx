@@ -300,7 +300,7 @@ function DesktopCursor() {
           </g>
         </svg>
         <span data-cursor-label
-          className="absolute inset-0 grid place-items-center font-display text-[12px] font-medium text-black opacity-0">
+          className="absolute inset-0 grid place-items-center font-display text-sm font-medium text-black opacity-0">
           {t('works.cursorCta')}
         </span>
       </div>

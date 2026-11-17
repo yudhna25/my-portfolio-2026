@@ -4,18 +4,18 @@
     "year": "2026",
     "name": "TRẦN VŨ ANH DUY",
     "tagline": "Creative Designer",
-    "subTagline": "Nối nhịp giữa UI chức năng và cách kể chuyện điện ảnh.",
+    "subTagline": "Giao diện để dùng, kể chuyện như một thước phim.",
     "scrollIndicator": "CUỘN ĐỂ BẮT ĐẦU HÀNH TRÌNH"
   },
   "about": {
     "sectionLabel": "The Navigator",
     "heading": "TRẦN VŨ / ANH DUY",
-    "subLabel": "Creative Designer — UX/UI & Motion",
-    "bioFirst": "Thiết kế không chỉ là hình ảnh — nó là cách giải quyết vấn đề. Tôi xây dựng những hành trình người dùng liền mạch, nơi logic UX hòa vào thẩm mỹ UI để tạo ra giá trị kinh doanh thực tế.",
-    "bioSecond": "Từ bản phác thảo đầu tiên đến sản phẩm sống trong tay người dùng, tôi đi theo một nguyên tắc: mỗi pixel phải có lý do tồn tại. Nền tảng multimedia cho tôi góc nhìn điện ảnh — và tôi mang góc nhìn đó vào từng màn hình tôi thiết kế.",
-    "quote": "Tôi thiết kế những vũ trụ nhỏ — nơi mỗi cú chạm đều có ý nghĩa.",
-    "photoCaption": "FIG.01 — NGƯỜI DẪN ĐƯỜNG",
-    "avatarAlt": "Chân dung Trần Vũ Anh Duy — Creative Designer",
+    "subLabel": "Creative Designer · UX/UI & Motion",
+    "bioFirst": "Tôi tốt nghiệp loại Giỏi ngành Công nghệ Thông tin ở Đại học Sài Gòn, rồi học dựng phim ở Green Academy và Arena Multimedia. Hai quỹ đạo ấy định hình cách tôi làm việc: nghiên cứu và cấu trúc đi trước, ánh sáng, nhịp và chuyển động theo sau.",
+    "bioSecond": "Năm 2026, KINTRA giành giải TOKEN LEADER tại Designathon. Trước đó tôi quay và dựng TVC ở Hosana Media, rồi thiết kế giao diện khi thực tập UX/UI tại Designveloper. Với tôi, mỗi màn hình vẫn là một khung hình: mắt người xem sẽ tìm thấy gì đầu tiên?",
+    "quote": "Mỗi giao diện là một khoảng trời nhỏ. Tôi chọn ngôi sao bạn thấy đầu tiên.",
+    "photoCaption": "FIG.01 · NGƯỜI DẪN ĐƯỜNG",
+    "avatarAlt": "Chân dung Trần Vũ Anh Duy, Creative Designer",
     "toolsLabel": "KHO VŨ KHÍ PHẦN MỀM",
     "skillsLabel": "NĂNG LỰC CỐT LÕI",
     "tools": {
@@ -107,7 +107,7 @@
     "tagsLabel": "Chuyên môn",
     "viewCaseStudy": "Xem case study",
     "selectLabel": "Chọn dự án",
-    "interactionHint": "Lướt chuột qua bầu trời để thoáng thấy điều đang ẩn giấu. Dừng lại hoặc dùng Tab để đánh thức một chòm sao, nhấn để mở; nhấn lại, chạm nền hoặc Escape để trở về.",
+    "interactionHint": "Lướt qua bầu trời để thoáng thấy điều đang ẩn giấu. Chạm hoặc dừng trên một chòm sao để đánh thức nó, chạm lần nữa để mở; chạm vào nền để trở về.",
     "behanceReference": "Tham khảo trên Behance",
     "comingSoon": "Case study sắp ra mắt",
     "backToOrbit": "Trở về bầu trời",
@@ -158,7 +158,7 @@
     "technicalLabel": "Kỹ thuật",
     "commonLabel": "Kỹ năng làm việc chung",
     "stageLabel": "Sân khấu logo sao",
-    "interactionHint": "Di chuột hoặc dùng Tab để chọn công cụ. Chạm để chọn, chạm lại hoặc nhấn Escape để bỏ chọn.",
+    "interactionHint": "Chạm hoặc rê lên một công cụ để thắp logo của nó. Chạm lại hoặc chạm vào nền để bỏ chọn.",
     "clearSelection": "Bỏ chọn công cụ",
     "activeTool": "Đang chọn {{tool}}",
     "idleStage": "Chọn một công cụ để xem logo sao và năng lực liên quan.",
@@ -216,7 +216,7 @@
         "name": "Green Academy",
         "period": "2022–2023",
         "degree": "Chứng chỉ Dựng phim Chuyên nghiệp",
-        "description": "Loại Distinction. Trọng tâm: VFX compositing, motion graphics. Học viên xuất sắc — Premiere & After Effects."
+        "description": "Loại Distinction. Trọng tâm: VFX compositing, motion graphics. Học viên xuất sắc môn Premiere và After Effects."
       }
     },
     "mapNote": "Ba vùng sinh sao trên cùng một cánh tay thiên hà, nơi tư duy thiết kế lần đầu bắt sáng.",
@@ -260,21 +260,18 @@
     "sectionLabel": "Transmission",
     "heading": "HÃY KẾT NỐI",
     "alternateHeading": "LET'S CONNECT",
-    "subHeading": "Gửi một tín hiệu — tôi luôn mở tần số.",
-    "emailCta": "GỬI TÍN HIỆU",
+    "subHeading": "Gửi một tín hiệu. Tần số của tôi chưa bao giờ đóng.",
     "email": "anhduy25work@gmail.com",
     "emailUrl": "mailto:anhduy25work@gmail.com",
     "phone": "0822 021 418",
-    "telemetryFreq": "TẦN SỐ: 1420.405 MHz // ĐƯỜNG HYDROGEN (HI)",
-    "radioTerminal": "BỘ THU PHÁT KHÔNG GIAN SÂU",
-    "copyDispatch": "SAO CHÉP TÍN HIỆU",
-    "signalTransmitted": "ĐÃ TRUYỀN TÍN HIỆU // GÓI TIN ĐÃ GỬI TỚI KHOANG LÁI",
     "facebookUrl": "https://www.facebook.com/tvad.25",
     "linkedinUrl": "",
     "behanceUrl": "",
     "facebookLabel": "Facebook",
     "linkedinLabel": "LinkedIn",
-    "behanceLabel": "Behance"
+    "behanceLabel": "Behance",
+    "copyAddress": "Sao chép địa chỉ",
+    "copied": "Đã chép địa chỉ vào bộ nhớ tạm"
   },
   "nav": {
     "menuLabel": "Menu",
@@ -289,7 +286,7 @@
     "socialPending": "Đường dẫn này đang được cập nhật.",
     "logo": "ANH DUY",
     "label": "Điều hướng chính",
-    "homeLabel": "ANH DUY — Về đầu trang",
+    "homeLabel": "ANH DUY · Về đầu trang",
     "skip": "Chuyển đến nội dung chính",
     "openMenu": "Mở menu điều hướng",
     "menuPending": "Menu điều hướng đang được chuẩn bị.",
@@ -308,7 +305,7 @@
   },
   "footer": {
     "label": "Chân trang",
-    "copyright": "© 2026 Trần Vũ Anh Duy — Được xây dựng giữa các vì sao.",
+    "copyright": "© 2026 Trần Vũ Anh Duy. Được dựng giữa các vì sao.",
     "disciplines": "Đồ họa / Đa phương tiện / UX/UI",
     "buildCredit": "Xây dựng với GSAP {{version}}",
     "websiteLabel": "Trang web",
@@ -323,15 +320,15 @@
   "preloader": {
     "counterLabel": "ĐANG KẾT NỐI VỚI VŨ TRỤ...",
     "counterRange": "0–100%",
-    "minimalLabel": "STELLAR ODYSSEY — 2026"
+    "minimalLabel": "STELLAR ODYSSEY · 2026"
   },
   "common": {
     "opensInNewTab": "mở trong tab mới",
     "audio": {
       "label": "Âm thanh không gian",
-      "prefix": "SOUND:",
-      "on": "ON",
-      "off": "OFF",
+      "prefix": "ÂM THANH",
+      "on": "BẬT",
+      "off": "TẮT",
       "turnOn": "Bật âm thanh không gian",
       "turnOff": "Tắt âm thanh không gian",
       "unavailable": "Không thể bật âm thanh trong trình duyệt này. Bạn có thể thử lại."
@@ -348,7 +345,7 @@
     }
   },
   "edura": {
-    "metaTitle": "EDURA LMS — UI/UX concept · Trần Vũ Anh Duy",
+    "metaTitle": "EDURA LMS · UI/UX concept · Trần Vũ Anh Duy",
     "metaDescription": "Đồ án cuối kỳ UX/UI tại Arena Multimedia: concept và prototype EDURA LMS trên Figma. Vai trò Lead UI, quyết định giao diện và những giới hạn thực tế của dự án.",
     "overview": {
       "intro": {

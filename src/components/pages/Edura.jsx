@@ -18,7 +18,7 @@ function EduraFigure({ id, t, priority = false }) {
     <figcaption className="mt-4 flex flex-col gap-2 font-body text-sm leading-relaxed text-(--text-secondary) sm:flex-row sm:items-start sm:justify-between sm:gap-8">
       <p className="max-w-[75ch]">{t(`edura.figures.${id}.caption`)}</p>
       <a href={src} target="_blank" rel="noopener noreferrer"
-        aria-label={`${t('edura.viewOriginal')} — ${t(`edura.figures.${id}.name`)} (${t('common.opensInNewTab')})`}
+        aria-label={`${t('edura.viewOriginal')}: ${t(`edura.figures.${id}.name`)} (${t('common.opensInNewTab')})`}
         className={`inline-flex min-h-11 shrink-0 items-center gap-2 self-start underline decoration-white/25 underline-offset-4 ${focusRing}`}>
         {t('edura.viewOriginal')} <span aria-hidden="true">↗</span>
       </a>
