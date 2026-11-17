@@ -1,6 +1,6 @@
 {
   "fallback": {
     "title": "Chế độ xem tĩnh",
-    "description": "Trình duyệt chưa tạo được WebGL2. Các điều khiển và nội dung vẫn hiển thị."
+    "description": "Trình duyệt chưa tạo được WebGL2 nên vũ trụ 3D đang nghỉ; mọi nội dung vẫn đọc được. Bật tăng tốc phần cứng trong cài đặt trình duyệt rồi tải lại trang để thấy bầu trời chuyển động."
   }
 }

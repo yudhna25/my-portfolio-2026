@@ -1,6 +1,6 @@
 {
   "fallback": {
     "title": "Static view",
-    "description": "The browser could not create WebGL2. Controls and content remain available."
+    "description": "This browser could not start WebGL2, so the 3D sky is resting; every word is still here. Turn on hardware acceleration in your browser settings and reload to see the sky move."
   }
 }

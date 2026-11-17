@@ -37,7 +37,7 @@
       "Attention to Detail"
     ],
     "portraitToggle": "Giữ các vì sao thành chân dung",
-    "portraitHint": "Cuộn đến hoặc di chuột để các vì sao ngưng tụ. Dùng Tab hay chạm để giữ hình chân dung."
+    "portraitHint": "Dừng lại một chút, các vì sao sẽ ghép thành chân dung."
   },
   "works": {
     "sectionLabel": "Chòm Sao Dự Án",
@@ -107,7 +107,7 @@
     "tagsLabel": "Chuyên môn",
     "viewCaseStudy": "Xem case study",
     "selectLabel": "Chọn dự án",
-    "interactionHint": "Lướt qua bầu trời để thoáng thấy điều đang ẩn giấu. Chạm hoặc dừng trên một chòm sao để đánh thức nó, chạm lần nữa để mở; chạm vào nền để trở về.",
+    "interactionHint": "Chọn một chòm sao để đánh thức nó, chọn lần nữa để mở.",
     "behanceReference": "Tham khảo trên Behance",
     "comingSoon": "Case study sắp ra mắt",
     "backToOrbit": "Trở về bầu trời",
@@ -158,7 +158,7 @@
     "technicalLabel": "Kỹ thuật",
     "commonLabel": "Kỹ năng làm việc chung",
     "stageLabel": "Sân khấu logo sao",
-    "interactionHint": "Chạm hoặc rê lên một công cụ để thắp logo của nó. Chạm lại hoặc chạm vào nền để bỏ chọn.",
+    "interactionHint": "Chọn một công cụ để thắp logo sao của nó.",
     "clearSelection": "Bỏ chọn công cụ",
     "activeTool": "Đang chọn {{tool}}",
     "idleStage": "Chọn một công cụ để xem logo sao và năng lực liên quan.",
@@ -265,13 +265,14 @@
     "emailUrl": "mailto:anhduy25work@gmail.com",
     "phone": "0822 021 418",
     "facebookUrl": "https://www.facebook.com/tvad.25",
-    "linkedinUrl": "",
-    "behanceUrl": "",
+    "linkedinUrl": "https://www.linkedin.com/in/anh-duy-tran-vu-4895a3397",
+    "behanceUrl": "https://www.behance.net/tranvuanhduy",
     "facebookLabel": "Facebook",
     "linkedinLabel": "LinkedIn",
     "behanceLabel": "Behance",
     "copyAddress": "Sao chép địa chỉ",
-    "copied": "Đã chép địa chỉ vào bộ nhớ tạm"
+    "copied": "Đã chép địa chỉ vào bộ nhớ tạm",
+    "copyFailed": "Trình duyệt chưa cho phép sao chép. Bạn chạm vào địa chỉ ở trên để gửi thư, hoặc giữ để chọn và chép."
   },
   "nav": {
     "menuLabel": "Menu",
@@ -318,7 +319,8 @@
   "preloader": {
     "counterLabel": "ĐANG KẾT NỐI VỚI VŨ TRỤ...",
     "counterRange": "0–100%",
-    "minimalLabel": "STELLAR ODYSSEY · 2026"
+    "minimalLabel": "STELLAR ODYSSEY · 2026",
+    "skip": "Bỏ qua"
   },
   "common": {
     "opensInNewTab": "mở trong tab mới",
@@ -431,5 +433,21 @@
     "catalog": "Vị trí sao:",
     "attribution": "Ghi công đầy đủ",
     "manifest": "Danh mục tài sản"
+  },
+  "keys": {
+    "title": "Phím tắt của hành trình",
+    "chapters": {
+      "key": "1 đến 7",
+      "text": "Bay tới chương tương ứng trên bản đồ sao"
+    },
+    "escape": {
+      "key": "Esc",
+      "text": "Bỏ chọn, đóng bảng, hoặc bỏ qua phần mở đầu"
+    },
+    "legend": {
+      "key": "?",
+      "text": "Mở hoặc đóng bảng này"
+    },
+    "menuHint": "Nhấn ? để xem phím tắt"
   }
 }

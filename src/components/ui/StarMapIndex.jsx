@@ -30,6 +30,25 @@ export function StarMapIndex() {
     return useScrollStore.subscribe(draw);
   }, []);
   useEffect(() => () => flight.current?.kill(), []);
+  // Keys 1 to 7 fly to a chapter; "?" opens the key legend. Never while typing or with modifiers.
+  const flyRef = useRef(null);
+  useEffect(() => {
+    const onKey = (event) => {
+      if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey) return;
+      const target = event.target;
+      if (target instanceof HTMLElement && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName))) return;
+      if (document.querySelector('[data-language-gate], [data-preloader]')) return;
+      if (event.key === '?') { event.preventDefault(); document.getElementById('key-legend')?.togglePopover(); return; }
+      const index = Number(event.key) - 1;
+      if (Number.isInteger(index) && index >= 0 && index < navigationSections.length) {
+        event.preventDefault();
+        document.getElementById('key-legend')?.hidePopover?.();
+        flyRef.current(navigationSections[index].id);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
   const active = CHAPTER_INDEX[chapter] ?? 0;
   // Out of the way while the Hero and the portal dive own the frame.
   const shown = chapter !== 'hero' && chapter !== 'portal';
@@ -58,7 +77,18 @@ export function StarMapIndex() {
     flight.current = gsap.to(smoother, { scrollTop: y, duration, ease: 'power2.inOut', onComplete: land });
   };
 
+  useEffect(() => { flyRef.current = fly; });
   return (<>
+    <aside id="key-legend" popover="auto" aria-labelledby="key-legend-title"
+      className="fixed inset-x-4 top-1/2 m-auto max-w-sm -translate-y-1/2 rounded-sm border border-white/15 bg-(--bg-void) p-6 text-(--text-primary) backdrop:bg-black/50">
+      <h2 id="key-legend-title" className="font-serif text-xl font-light italic">{t('keys.title')}</h2>
+      <dl className="mt-4 grid grid-cols-[auto_1fr] gap-x-5 gap-y-3 font-body text-sm text-(--text-secondary)">
+        {['chapters', 'escape', 'legend'].map(row => <div key={row} className="contents">
+          <dt className="font-mono text-(--text-primary)">{t(`keys.${row}.key`)}</dt>
+          <dd>{t(`keys.${row}.text`)}</dd>
+        </div>)}
+      </dl>
+    </aside>
     {/* Phones: the same seven stations as a quiet thread of stars on the right edge. Navigation stays in the menu. */}
     <div aria-hidden="true" data-star-map-compact
       className={`pointer-events-none fixed right-[max(0.375rem,env(safe-area-inset-right))] top-1/2 z-[60] -translate-y-1/2 transition-opacity duration-700 lg:hidden ${shown ? 'opacity-100' : 'opacity-0'}`}>
