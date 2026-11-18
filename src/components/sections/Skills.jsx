@@ -17,6 +17,7 @@ export default function Skills({ stageRef }) {
   const reduced = useReducedMotion();
   const { t, i18n } = useTranslation();
   const target = useSkillsStore(activeSkill);
+  const selected = useSkillsStore((state) => state.selection);
   const { interact, clear, setVisible, setRoute } = useSkillsStore.getState();
   const active = useScrollStore((state) => state.storyChapter === 'skills');
   const fallback = useScrollStore((state) => state.sceneFallback);
@@ -108,10 +109,11 @@ export default function Skills({ stageRef }) {
       className="relative border-y border-white/[0.06] px-6 py-20 text-(--text-primary) sm:px-8 lg:pr-12 lg:pl-28 lg:py-28">
       <div className="mx-auto max-w-7xl">
         <header className="mb-10 lg:mb-14">
+          <p key={`label-${i18n.resolvedLanguage}`} lang="en" data-reveal="signal" className="mb-5 font-mono text-sm tracking-[0.2em] text-(--text-secondary)">{t('skills.sectionLabel')}</p>
           <h2 key={i18n.resolvedLanguage} aria-label={t('skills.heading')} id="skills-heading" className="split-heading font-display text-[clamp(2rem,6vw,6rem)] font-bold uppercase leading-[1.2] tracking-[-0.04em]"><MixedText text={t('skills.heading')} accent={t('skills.headingAccent')} /></h2>
-          <p key={`hint-${i18n.resolvedLanguage}`} data-reveal="signal" className="mt-5 max-w-2xl font-body text-sm leading-relaxed text-white/60">{t('skills.interactionHint')}</p>
+          <p key={`hint-${i18n.resolvedLanguage}`} data-reveal="signal" className="mt-5 max-w-2xl font-body text-sm leading-relaxed text-white/60">{t(fallback ? 'skills.fallbackHint' : 'skills.interactionHint')}</p>
         </header>
-        <div ref={region} className="relative grid gap-5 md:grid-cols-[minmax(0,1fr)_minmax(0,1.8fr)_minmax(0,1fr)] lg:gap-8">
+        <div ref={region} className={`relative grid gap-5 lg:gap-8 ${fallback ? 'md:grid-cols-2 md:gap-x-32' : 'md:grid-cols-[minmax(0,1fr)_minmax(0,1.8fr)_minmax(0,1fr)]'}`}>
           <div className="relative z-10 order-2 min-w-0 md:order-1">
             <h3 key={i18n.resolvedLanguage} data-reveal="signal" className="mb-5 font-mono text-sm uppercase tracking-widest text-white/55">{t('skills.toolsLabel')}</h3>
             <ul data-reveal="items" className="grid grid-cols-2 gap-x-5 md:grid-cols-1">
@@ -141,10 +143,11 @@ export default function Skills({ stageRef }) {
               ))}
             </ul>
           </div>
-          <figure id="skills-stage" aria-label={t('skills.stageLabel')} className="relative order-1 h-[min(40vh,22rem)] min-h-64 min-w-0 md:order-2 md:h-full md:min-h-104">
+          {/* Without the sky there is no logo to light, so the stage folds away and the tools sit beside what they make. */}
+          <figure id="skills-stage" aria-label={t('skills.stageLabel')} className={`${fallback ? 'sr-only' : 'relative'} order-1 h-[min(40vh,22rem)] min-h-64 min-w-0 md:order-2 md:h-full md:min-h-104`}>
             <div ref={anchor} data-skills-stage className="absolute inset-x-0 bottom-12 top-11" />
-            {target && <button type="button" data-skill-clear onClick={() => {
-              const chosen = target;
+            {selected && <button type="button" data-skill-clear onClick={() => {
+              const chosen = selected;
               clear();
               // The button leaves with the selection, so hand focus back to the tool it cleared.
               document.querySelector(`[data-skill-tool="${chosen}"]`)?.focus();

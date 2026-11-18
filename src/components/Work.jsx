@@ -244,7 +244,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
           <img data-project-image src={project.imageUrl} alt={t(`${path}.previewAlt`)} width="1600" height={project.id === 'edura' ? 1131 : 900} loading="lazy" decoding="async"
             className={`aspect-[16/10] w-full object-contain ${fallback ? '' : 'lg:hidden'}`} />
           <div className="min-w-0">
-            <p className="mb-2 font-mono text-sm tracking-[0.18em] text-white/45 uppercase">{t(`works.phenomena.${project.id}.name`)}</p>
+            <p className="mb-2 font-mono text-sm tracking-[0.18em] text-white/60 uppercase">{t(`works.phenomena.${project.id}.name`)}</p>
             <h3 className="font-display text-sm leading-tight font-bold tracking-[-0.03em] lg:text-base">{t(`${path}.title`)}</h3>
             {project.award && <p className="mt-1 font-mono text-sm tracking-[0.14em] text-(--color-amber,#FFB25B) uppercase"><span aria-hidden="true" className="mr-1.5">✦</span>{t(`${path}.award`)}</p>}
             <p className="mt-2 font-body text-sm leading-relaxed text-white/70">{t(`${path}.category`)}</p>
@@ -263,14 +263,15 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
     <div ref={root} data-work-background tabIndex={-1} role="group" aria-labelledby="works-heading"
       onKeyDownCapture={event => { pointer.current = 'keyboard'; if (event.key === 'Escape') { dismiss(); event.stopPropagation(); } }}
       onClick={event => { if (!event.target.closest('button,a,[data-work-content]')) dismiss(); }}
-      className="absolute inset-x-0 top-0 z-20 h-screen px-4 pt-20 text-(--text-primary) sm:px-8 lg:px-12">
-      <header className="mx-auto max-w-5xl text-center">
+      className={`${fallback ? 'relative pb-20' : 'absolute inset-x-0 top-0 h-screen'} z-20 px-4 pt-20 text-(--text-primary) sm:px-8 ${fallback ? 'lg:pr-12 lg:pl-28' : 'lg:px-12'}`}>
+      <header className={`mx-auto text-center ${fallback ? 'max-w-7xl' : 'max-w-5xl'}`}>
         <div className={`transition-opacity duration-500 ${open ? 'pointer-events-none opacity-0' : ''}`}>
         <ConstellationCreditButton compact className="absolute top-20 left-4 sm:left-8 lg:left-12" />
+        <p lang="en" className="mb-3 font-mono text-sm tracking-[0.2em] text-(--text-secondary)">{t('works.sectionLabel')}</p>
         <h2 id="works-heading" className="font-display text-[clamp(1rem,2.6vw,2.5rem)] leading-[1.3] font-bold tracking-[-0.04em]">{t('works.heading')}</h2>
         <p id="works-hint" className="pointer-events-none mx-auto mt-3 max-w-sm font-body text-sm leading-relaxed text-white/60">{t(fallback ? 'works.fallbackHint' : 'works.interactionHint')}</p>
         </div>
-        <div role="group" aria-label={t('works.selectLabel')} className={fallback ? 'mt-6 grid grid-cols-2 gap-3 sm:grid-cols-5 sm:gap-6' : ''}>
+        {!fallback && <div role="group" aria-label={t('works.selectLabel')}>
           {projects.map(item => <div key={item.id}><button id={`work-target-${item.id}`} type="button" data-work-target={item.id}
             aria-label={`${t(`works.projects.${item.key}.title`)} · ${t(`works.constellations.${item.id}`)}`}
             aria-pressed={selection === item.id} aria-expanded={target === item.id} aria-controls="work-preview" aria-describedby="works-hint"
@@ -291,12 +292,32 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
               <span className="block font-body text-sm lg:text-base font-medium">{t(`works.projects.${item.key}.title`)}</span>
               <span className="block font-mono text-sm text-white/55">{t(`works.constellations.${item.id}`)}</span>
             </span>
-          </button>{!fallback && project?.id === item.id && preview}</div>)}
-        </div>
-        {fallback && project && preview}
+          </button>{project?.id === item.id && preview}</div>)}
+        </div>}
+        {/* Without the sky, all five projects sit side by side so they can be compared at a glance. */}
+        {fallback && <ul className="mt-8 grid gap-4 text-left sm:grid-cols-2 lg:grid-cols-5">
+          {projects.map(item => {
+            const base = `works.projects.${item.key}`;
+            return <li key={item.id} className="flex min-w-0 flex-col rounded-sm border border-(--border-glass-subtle) bg-(--color-glass-surface) p-3">
+              <img src={item.imageUrl} alt={t(`${base}.previewAlt`)} width="1600" height={item.id === 'edura' ? 1131 : 900} loading="lazy" decoding="async"
+                className="aspect-[16/10] w-full object-contain" />
+              <p className="mt-3 font-mono text-sm tracking-[0.14em] text-white/60 uppercase">{t(`works.phenomena.${item.id}.name`)}</p>
+              <h3 className="mt-1 font-display text-base leading-tight font-bold tracking-[-0.03em]">{t(`${base}.title`)}</h3>
+              {item.award && <p className="mt-1 font-mono text-sm tracking-[0.14em] text-(--color-amber,#FFB25B) uppercase"><span aria-hidden="true" className="mr-1.5">✦</span>{t(`${base}.award`)}</p>}
+              <p className="mt-2 font-body text-sm leading-relaxed text-white/70">{t(`${base}.category`)}</p>
+              <div className="mt-auto pt-2">{item.id === 'edura' ? <div className="flex flex-wrap gap-x-4">
+                <a id="work-case-edura" href={EDURA_ROUTE} data-work-action onClick={event => { playRadioClick(); if (!nativeNavigation) navigateRoute(event, EDURA_ROUTE); }}
+                  className={`inline-flex min-h-11 min-w-11 items-center font-mono text-sm text-white underline underline-offset-4 ${focusRing}`}>{t('works.viewCaseStudy')} <span aria-hidden="true" className="ml-2">↗</span></a>
+                <a href={item.link} data-work-behance onClick={playRadioClick} target="_blank" rel="noopener noreferrer"
+                  aria-label={`${t('works.behanceReference')} (${t('common.opensInNewTab')})`}
+                  className={`inline-flex min-h-11 min-w-11 items-center font-mono text-sm text-white/70 underline decoration-white/25 underline-offset-4 ${focusRing}`}>{t('works.behanceReference')} <span aria-hidden="true" className="ml-2">↗</span></a>
+              </div> : action(item, false)}</div>
+            </li>;
+          })}
+        </ul>}
       </header>
 
-      {!project && <div id="work-preview" data-work-preview data-active="empty" hidden />}
+      {(!project || fallback) && <div id="work-preview" data-work-preview data-active="empty" hidden />}
       <p aria-live="polite" aria-atomic="true" className="sr-only">{project ? `${t(`${path}.title`)}, ${project.award ? `${t(`${path}.award`)}, ` : ''}${t(`${path}.category`)}` : t('works.selectLabel')}</p>
     </div>
   </section>;

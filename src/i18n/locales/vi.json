@@ -41,7 +41,7 @@
     "portraitHint": "Dừng lại một chút, các vì sao sẽ ghép thành chân dung."
   },
   "works": {
-    "sectionLabel": "Chòm Sao Dự Án",
+    "sectionLabel": "Star Chart",
     "heading": "CHÒM SAO DỰ ÁN",
     "cursorCta": "XEM",
     "projects": {
@@ -109,7 +109,7 @@
     "viewCaseStudy": "Xem case study",
     "selectLabel": "Chọn dự án",
     "interactionHint": "Chọn một chòm sao để đánh thức nó, chọn lần nữa để mở.",
-    "fallbackHint": "Chọn một dự án để xem.",
+    "fallbackHint": "Năm dự án, mỗi dự án ẩn trong một chòm sao.",
     "behanceReference": "Tham khảo trên Behance",
     "comingSoon": "Case study sắp ra mắt",
     "backToOrbit": "Trở về bầu trời",
@@ -157,10 +157,12 @@
     "heading": "Tinh Vân Kỹ Năng",
     "toolsLabel": "Công cụ thiết kế",
     "competenciesLabel": "Năng lực cốt lõi",
+    "sectionLabel": "The Instruments",
     "technicalLabel": "Kỹ thuật",
     "commonLabel": "Kỹ năng làm việc chung",
     "stageLabel": "Sân khấu logo sao",
     "interactionHint": "Chọn một công cụ để thắp logo sao của nó.",
+    "fallbackHint": "Chọn một công cụ để thấy những gì nó làm nên.",
     "clearSelection": "Bỏ chọn công cụ",
     "activeTool": "Đang chọn {{tool}}",
     "idleStage": "Logo sao của công cụ sẽ hiện ở đây.",
