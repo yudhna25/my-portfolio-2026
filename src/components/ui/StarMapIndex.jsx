@@ -122,7 +122,11 @@ export function StarMapIndex() {
   return (<>
     <aside id="key-legend" popover="auto" role="dialog" tabIndex={-1} aria-labelledby="key-legend-title"
       className="fixed inset-x-4 top-1/2 m-auto max-w-sm outline-none -translate-y-1/2 rounded-sm border border-white/15 bg-(--bg-void) p-6 text-(--text-primary) backdrop:bg-black/50">
-      <h2 id="key-legend-title" className="font-serif text-xl font-light italic">{t('keys.title')}</h2>
+      <div className="flex items-start justify-between gap-4">
+        <h2 id="key-legend-title" className="font-serif text-xl font-light italic">{t('keys.title')}</h2>
+        <button type="button" popoverTarget="key-legend" popoverTargetAction="hide"
+          className="-mt-2 -mr-2 inline-flex min-h-11 min-w-11 items-center justify-center font-mono text-sm text-(--text-secondary) hover:text-white focus-visible:outline-2 focus-visible:outline-white">{t('keys.close')}</button>
+      </div>
       <dl className="mt-4 grid grid-cols-[auto_1fr] gap-x-5 gap-y-3 font-body text-sm text-(--text-secondary)">
         {['chapters', 'escape', 'legend'].map(row => <div key={row} className="contents">
           <dt className="font-mono text-(--text-primary)">{t(`keys.${row}.key`)}</dt>

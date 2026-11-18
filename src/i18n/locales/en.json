@@ -164,7 +164,7 @@
     "interactionHint": "Choose a tool to light its star logo.",
     "fallbackHint": "Choose a tool to see what it helps make.",
     "clearSelection": "Clear tool selection",
-    "activeTool": "Selected {{tool}}",
+    "activeTool": "Now tracing {{tool}}",
     "idleStage": "No tool chosen yet.",
     "toolNames": {
       "figma": "Figma",
@@ -440,6 +440,7 @@
   },
   "keys": {
     "title": "Keys for the voyage",
+    "close": "Close",
     "chapters": {
       "key": "1 to 7",
       "text": "Fly to that chapter on the star map"

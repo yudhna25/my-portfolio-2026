@@ -164,7 +164,7 @@
     "interactionHint": "Chọn một công cụ để thắp logo sao của nó.",
     "fallbackHint": "Chọn một công cụ để thấy những gì nó làm nên.",
     "clearSelection": "Bỏ chọn công cụ",
-    "activeTool": "Đang chọn {{tool}}",
+    "activeTool": "Đang soi {{tool}}",
     "idleStage": "Chưa chọn công cụ nào.",
     "toolNames": {
       "figma": "Figma",
@@ -440,6 +440,7 @@
   },
   "keys": {
     "title": "Phím tắt của hành trình",
+    "close": "Đóng",
     "chapters": {
       "key": "1 đến 7",
       "text": "Bay tới chương tương ứng trên bản đồ sao"
