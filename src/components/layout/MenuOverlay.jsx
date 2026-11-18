@@ -485,6 +485,8 @@ export function MenuOverlay({ open, onClose, reader = false }) {
 
             </div>
 
+            <p className="hidden font-body text-sm text-(--text-secondary) lg:block">{t('keys.menuHint')}</p>
+
             <div role="group" aria-label={t('nav.languageLabel')} className="flex items-center gap-1">
 
               {['vi', 'en'].map((language) => (

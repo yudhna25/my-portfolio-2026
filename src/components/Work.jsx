@@ -34,7 +34,8 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
   const finaleSelection = useScrollStore(state => state.storyChapter === 'finale' ? state.worksFinaleSelection : undefined);
   const interact = useScrollStore(state => state.setWorksInteraction);
   const clear = useScrollStore(state => state.clearWorksInteraction);
-  const target = finaleSelection === undefined ? selection ?? focus ?? hover : finaleSelection;
+  // Without the sky there is no constellation to wake, so the static list always shows one project.
+  const target = (finaleSelection === undefined ? selection ?? focus ?? hover : finaleSelection) ?? (fallback ? projects[0].id : undefined);
   const project = projects.find(item => item.id === target);
   const path = project ? `works.projects.${project.key}` : null;
   // A held selection is the open project: its picture clears out of its phenomenon (WorksConstellations).
@@ -209,7 +210,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
   });
 
   const preview = <div id="work-preview" data-work-preview data-active={target ?? 'empty'} data-open={open || undefined}
-        className={`absolute top-0 left-0 z-30 w-[calc(100%-2rem)] lg:w-72 xl:w-80 ${fallback ? 'top-auto! bottom-6! left-4! lg:left-[calc(50%-9rem)]!' : ''}`}>
+        className={`absolute top-0 left-0 z-30 w-[calc(100%-2rem)] lg:w-72 xl:w-80 ${fallback ? 'static! mx-auto mt-8 w-full! max-w-md text-left' : ''}`}>
         {project && open ? <div data-work-content key={`${project.id}-open-${i18n.resolvedLanguage}`}
           onPointerEnter={cancelClose} onFocusCapture={event => focusProject(event, project.id)} onBlurCapture={leave}
           className="works-open-column rounded-sm border border-(--border-glass-subtle) bg-(--color-glass-surface) p-4 text-left backdrop-blur-md lg:border-0 lg:bg-transparent lg:p-0 lg:backdrop-blur-none">
@@ -258,7 +259,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
         </div> : null}
       </div>;
 
-  return <section ref={section} id="work" tabIndex={-1} aria-labelledby="works-heading" className="relative min-h-[160vh]">
+  return <section ref={section} id="work" tabIndex={-1} aria-labelledby="works-heading" className={`relative ${fallback ? 'min-h-screen' : 'min-h-[160vh]'}`}>
     <div ref={root} data-work-background tabIndex={-1} role="group" aria-labelledby="works-heading"
       onKeyDownCapture={event => { pointer.current = 'keyboard'; if (event.key === 'Escape') { dismiss(); event.stopPropagation(); } }}
       onClick={event => { if (!event.target.closest('button,a,[data-work-content]')) dismiss(); }}
@@ -267,7 +268,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
         <div className={`transition-opacity duration-500 ${open ? 'pointer-events-none opacity-0' : ''}`}>
         <ConstellationCreditButton compact className="absolute top-20 left-4 sm:left-8 lg:left-12" />
         <h2 id="works-heading" className="font-display text-[clamp(1rem,2.6vw,2.5rem)] leading-[1.3] font-bold tracking-[-0.04em]">{t('works.heading')}</h2>
-        <p id="works-hint" className="pointer-events-none mx-auto mt-3 max-w-sm font-body text-sm leading-relaxed text-white/60">{t('works.interactionHint')}</p>
+        <p id="works-hint" className="pointer-events-none mx-auto mt-3 max-w-sm font-body text-sm leading-relaxed text-white/60">{t(fallback ? 'works.fallbackHint' : 'works.interactionHint')}</p>
         </div>
         <div role="group" aria-label={t('works.selectLabel')} className={fallback ? 'mt-6 grid grid-cols-2 gap-3 sm:grid-cols-5 sm:gap-6' : ''}>
           {projects.map(item => <div key={item.id}><button id={`work-target-${item.id}`} type="button" data-work-target={item.id}
@@ -282,7 +283,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
               cancelClose();
               const selected = useScrollStore.getState().worksSelection;
               if (['touch', 'pen'].includes(pointer.current)) clear();
-              interact('Selection', selected === item.id ? null : item.id);
+              interact('Selection', selected === item.id && !fallback ? null : item.id);
               pointer.current = '';
             }}
             className={`min-h-11 min-w-11 cursor-pointer rounded-sm text-center ${focusRing} ${fallback ? 'border-b border-white/25 px-1 py-2' : 'absolute top-0 left-0'} ${target === item.id ? 'text-white' : 'text-white/65 hover:text-white'}`}>
@@ -290,8 +291,9 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
               <span className="block font-body text-sm lg:text-base font-medium">{t(`works.projects.${item.key}.title`)}</span>
               <span className="block font-mono text-sm text-white/55">{t(`works.constellations.${item.id}`)}</span>
             </span>
-          </button>{project?.id === item.id && preview}</div>)}
+          </button>{!fallback && project?.id === item.id && preview}</div>)}
         </div>
+        {fallback && project && preview}
       </header>
 
       {!project && <div id="work-preview" data-work-preview data-active="empty" hidden />}

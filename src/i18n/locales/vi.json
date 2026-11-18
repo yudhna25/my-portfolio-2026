@@ -1,6 +1,7 @@
 {
   "hero": {
     "portfolio": "PORTFOLIO",
+    "heading": "Trần Vũ Anh Duy. Portfolio 2026",
     "year": "2026",
     "name": "TRẦN VŨ ANH DUY",
     "tagline": "Creative Designer",
@@ -37,7 +38,7 @@
       "Attention to Detail"
     ],
     "portraitToggle": "Giữ các vì sao thành chân dung",
-    "portraitHint": "Cuộn đến hoặc di chuột để các vì sao ngưng tụ. Dùng Tab hay chạm để giữ hình chân dung."
+    "portraitHint": "Dừng lại một chút, các vì sao sẽ ghép thành chân dung."
   },
   "works": {
     "sectionLabel": "Chòm Sao Dự Án",
@@ -107,7 +108,8 @@
     "tagsLabel": "Chuyên môn",
     "viewCaseStudy": "Xem case study",
     "selectLabel": "Chọn dự án",
-    "interactionHint": "Lướt qua bầu trời để thoáng thấy điều đang ẩn giấu. Chạm hoặc dừng trên một chòm sao để đánh thức nó, chạm lần nữa để mở; chạm vào nền để trở về.",
+    "interactionHint": "Chọn một chòm sao để đánh thức nó, chọn lần nữa để mở.",
+    "fallbackHint": "Chọn một dự án để xem.",
     "behanceReference": "Tham khảo trên Behance",
     "comingSoon": "Case study sắp ra mắt",
     "backToOrbit": "Trở về bầu trời",
@@ -158,7 +160,7 @@
     "technicalLabel": "Kỹ thuật",
     "commonLabel": "Kỹ năng làm việc chung",
     "stageLabel": "Sân khấu logo sao",
-    "interactionHint": "Chạm hoặc rê lên một công cụ để thắp logo của nó. Chạm lại hoặc chạm vào nền để bỏ chọn.",
+    "interactionHint": "Chọn một công cụ để thắp logo sao của nó.",
     "clearSelection": "Bỏ chọn công cụ",
     "activeTool": "Đang chọn {{tool}}",
     "idleStage": "Chọn một công cụ để xem logo sao và năng lực liên quan.",
@@ -201,22 +203,22 @@
     "heading": "Bản Đồ Sao",
     "institutions": {
       "saigonUniversity": {
-        "name": "Saigon University",
-        "period": "2021–2026",
+        "name": "Đại học Sài Gòn",
+        "period": "2021 – 2026",
         "degree": "Cử nhân Công nghệ Thông tin",
         "description": "Tốt nghiệp loại Giỏi. Trọng tâm: Phân tích & Thiết kế Hệ thống, HCI, Usability Testing, Prototyping Web/App."
       },
       "arenaMultimedia": {
         "name": "Arena Multimedia",
-        "period": "2024–nay",
-        "degree": "Advanced Diploma in Multimedia",
-        "description": "Loại Distinction kỳ 2 (UX/UI). Trọng tâm: Thiết kế lấy người dùng làm trung tâm, prototyping mobile, wireframing, web responsive."
+        "period": "2024 – nay",
+        "degree": "Văn bằng Cao cấp Truyền thông Đa phương tiện",
+        "description": "Loại Xuất sắc kỳ 2 (UX/UI). Trọng tâm: Thiết kế lấy người dùng làm trung tâm, prototyping mobile, wireframing, web responsive."
       },
       "greenAcademy": {
         "name": "Green Academy",
-        "period": "2022–2023",
+        "period": "2022 – 2023",
         "degree": "Chứng chỉ Dựng phim Chuyên nghiệp",
-        "description": "Loại Distinction. Trọng tâm: VFX compositing, motion graphics. Học viên xuất sắc môn Premiere và After Effects."
+        "description": "Loại Xuất sắc. Trọng tâm: VFX compositing, motion graphics. Học viên xuất sắc môn Premiere và After Effects."
       }
     },
     "mapNote": "Ba vùng sinh sao trên cùng một cánh tay thiên hà, nơi tư duy thiết kế lần đầu bắt sáng.",
@@ -234,23 +236,23 @@
     "positions": {
       "hosanaMedia": {
         "company": "HOSANA MEDIA",
-        "role": "Multimedia Executive",
-        "period": "Sep 2024 – Feb 2025",
-        "type": "Full-time",
+        "role": "Chuyên viên Đa phương tiện",
+        "period": "09/2024 – 02/2025",
+        "type": "Toàn thời gian",
         "description": "Sản xuất ấn phẩm marketing có sức ảnh hưởng cao (bao bì, banner). Quản lý trọn vẹn quy trình quay dựng TVC & MV."
       },
       "upwork": {
         "company": "UPWORK",
-        "role": "Multimedia Creator",
+        "role": "Nhà sáng tạo Đa phương tiện",
         "period": "2024 – nay",
-        "type": "Freelance",
+        "type": "Tự do",
         "description": "Sáng tạo và tối ưu nội dung video cho tăng trưởng đa nền tảng. Quay dựng video quảng bá. Dịch vụ thiết kế UI/Visual."
       },
       "designveloper": {
         "company": "DESIGNVELOPER",
-        "role": "UX/UI Designer Intern",
-        "period": "Sep 2025 – Dec 2025",
-        "type": "Internship",
+        "role": "Thực tập sinh UX/UI",
+        "period": "09/2025 – 12/2025",
+        "type": "Thực tập",
         "description": "Nghiên cứu UX qua khảo sát. Thiết kế UI nhất quán thương hiệu, tối ưu layout và typography. Bàn giao thiết kế cho đội ngũ phát triển."
       }
     },
@@ -265,13 +267,14 @@
     "emailUrl": "mailto:anhduy25work@gmail.com",
     "phone": "0822 021 418",
     "facebookUrl": "https://www.facebook.com/tvad.25",
-    "linkedinUrl": "",
-    "behanceUrl": "",
+    "linkedinUrl": "https://www.linkedin.com/in/anh-duy-tran-vu-4895a3397",
+    "behanceUrl": "https://www.behance.net/tranvuanhduy",
     "facebookLabel": "Facebook",
     "linkedinLabel": "LinkedIn",
     "behanceLabel": "Behance",
     "copyAddress": "Sao chép địa chỉ",
-    "copied": "Đã chép địa chỉ vào bộ nhớ tạm"
+    "copied": "Đã chép địa chỉ vào bộ nhớ tạm",
+    "copyFailed": "Trình duyệt chưa cho phép sao chép. Bạn chạm vào địa chỉ ở trên để gửi thư, hoặc giữ để chọn và chép."
   },
   "nav": {
     "menuLabel": "Menu",
@@ -318,7 +321,8 @@
   "preloader": {
     "counterLabel": "ĐANG KẾT NỐI VỚI VŨ TRỤ...",
     "counterRange": "0–100%",
-    "minimalLabel": "STELLAR ODYSSEY · 2026"
+    "minimalLabel": "STELLAR ODYSSEY · 2026",
+    "skip": "Bỏ qua"
   },
   "common": {
     "opensInNewTab": "mở trong tab mới",
@@ -431,5 +435,21 @@
     "catalog": "Vị trí sao:",
     "attribution": "Ghi công đầy đủ",
     "manifest": "Danh mục tài sản"
+  },
+  "keys": {
+    "title": "Phím tắt của hành trình",
+    "chapters": {
+      "key": "1 đến 7",
+      "text": "Bay tới chương tương ứng trên bản đồ sao"
+    },
+    "escape": {
+      "key": "Esc",
+      "text": "Bỏ chọn, đóng bảng, hoặc bỏ qua phần mở đầu"
+    },
+    "legend": {
+      "key": "?",
+      "text": "Mở hoặc đóng bảng này"
+    },
+    "menuHint": "Nhấn ? để xem phím tắt"
   }
 }

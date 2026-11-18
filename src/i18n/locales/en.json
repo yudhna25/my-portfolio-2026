@@ -1,6 +1,7 @@
 {
   "hero": {
     "portfolio": "PORTFOLIO",
+    "heading": "Tran Vu Anh Duy. Portfolio 2026",
     "year": "2026",
     "name": "TRAN VU ANH DUY",
     "tagline": "Creative Designer",
@@ -37,7 +38,7 @@
       "Attention to Detail"
     ],
     "portraitToggle": "Keep the stars assembled as a portrait",
-    "portraitHint": "Scroll into view or hover to gather the stars. Use Tab or tap to hold the portrait."
+    "portraitHint": "Linger a moment and the stars gather into a portrait."
   },
   "works": {
     "sectionLabel": "Constellation of Projects",
@@ -107,7 +108,8 @@
     "tagsLabel": "Disciplines",
     "viewCaseStudy": "View case study",
     "selectLabel": "Select a project",
-    "interactionHint": "Sweep across the sky to glimpse what hides there. Tap or rest on a constellation to wake it, tap again to open; tap the background to return.",
+    "interactionHint": "Choose a constellation to wake it, choose again to open.",
+    "fallbackHint": "Choose a project to view it.",
     "behanceReference": "Reference on Behance",
     "comingSoon": "Case study coming soon",
     "backToOrbit": "Back to the sky",
@@ -158,7 +160,7 @@
     "technicalLabel": "Technical",
     "commonLabel": "Common Skills",
     "stageLabel": "Star logo stage",
-    "interactionHint": "Tap or rest on a tool to light its logo. Tap again or tap the background to clear.",
+    "interactionHint": "Choose a tool to light its star logo.",
     "clearSelection": "Clear tool selection",
     "activeTool": "Selected {{tool}}",
     "idleStage": "Select a tool to see its star logo and related abilities.",
@@ -202,19 +204,19 @@
     "institutions": {
       "saigonUniversity": {
         "name": "Saigon University",
-        "period": "2021–2026",
+        "period": "2021 – 2026",
         "degree": "Bachelor's Degree in Information Technology",
         "description": "Graduated with High Honors in Information Technology. Focus: System Analysis and Design, HCI, Usability Testing, Web/App Prototyping."
       },
       "arenaMultimedia": {
         "name": "Arena Multimedia",
-        "period": "2024–Present",
+        "period": "2024 – Present",
         "degree": "Advanced Diploma in Multimedia",
         "description": "Awarded Distinction in Semester 2 (UX/UI). Focus: user-centric design, mobile prototyping, wireframing, responsive web."
       },
       "greenAcademy": {
         "name": "Green Academy",
-        "period": "2022–2023",
+        "period": "2022 – 2023",
         "degree": "Certificate in Professional Video Editing",
         "description": "Distinction. Focus: VFX compositing, motion graphics. Top-performing student in Premiere and After Effects."
       }
@@ -265,13 +267,14 @@
     "emailUrl": "mailto:anhduy25work@gmail.com",
     "phone": "0822 021 418",
     "facebookUrl": "https://www.facebook.com/tvad.25",
-    "linkedinUrl": "",
-    "behanceUrl": "",
+    "linkedinUrl": "https://www.linkedin.com/in/anh-duy-tran-vu-4895a3397",
+    "behanceUrl": "https://www.behance.net/tranvuanhduy",
     "facebookLabel": "Facebook",
     "linkedinLabel": "LinkedIn",
     "behanceLabel": "Behance",
     "copyAddress": "Copy address",
-    "copied": "Address copied to clipboard"
+    "copied": "Address copied to clipboard",
+    "copyFailed": "This browser blocked copying. Tap the address above to write, or press and hold it to select and copy."
   },
   "nav": {
     "menuLabel": "Menu",
@@ -318,7 +321,8 @@
   "preloader": {
     "counterLabel": "LINKING TO THE COSMOS...",
     "counterRange": "0–100%",
-    "minimalLabel": "STELLAR ODYSSEY · 2026"
+    "minimalLabel": "STELLAR ODYSSEY · 2026",
+    "skip": "Skip"
   },
   "common": {
     "opensInNewTab": "opens in a new tab",
@@ -431,5 +435,21 @@
     "catalog": "Star positions:",
     "attribution": "Full attribution",
     "manifest": "Asset manifest"
+  },
+  "keys": {
+    "title": "Keys for the voyage",
+    "chapters": {
+      "key": "1 to 7",
+      "text": "Fly to that chapter on the star map"
+    },
+    "escape": {
+      "key": "Esc",
+      "text": "Clear a selection, close a panel, or skip the opening"
+    },
+    "legend": {
+      "key": "?",
+      "text": "Open or close this panel"
+    },
+    "menuHint": "Press ? for keys"
   }
 }

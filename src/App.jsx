@@ -57,7 +57,8 @@ function Portfolio({ restore }) {
   const closeGate = useCallback(() => {
     setGate('done');
     const focused = document.activeElement;
-    if (!focused || focused === document.body || focused.closest('[data-language-gate]')) document.getElementById('smooth-content')?.focus({ preventScroll: true });
+    // Start from the top of the page like a fresh load, so the first Tab reaches the skip link and the header.
+    if (focused?.closest('[data-language-gate]')) focused.blur();
   }, []);
 
   useSmoothScroll({ scope: root, paused: loading });

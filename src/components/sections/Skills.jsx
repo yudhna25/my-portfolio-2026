@@ -105,7 +105,7 @@ export default function Skills({ stageRef }) {
         if (event.key === 'Escape') { clear(); event.stopPropagation(); }
       }}
       onClick={(event) => { if (!event.target.closest('[data-skill-tool],[data-skill-clear]')) clear(); }}
-      className="relative border-y border-white/[0.06] px-6 py-20 text-(--text-primary) sm:px-8 lg:px-12 lg:py-28">
+      className="relative border-y border-white/[0.06] px-6 py-20 text-(--text-primary) sm:px-8 lg:pr-12 lg:pl-28 lg:py-28">
       <div className="mx-auto max-w-7xl">
         <header className="mb-10 lg:mb-14">
           <h2 key={i18n.resolvedLanguage} aria-label={t('skills.heading')} id="skills-heading" className="split-heading font-display text-[clamp(2rem,6vw,6rem)] font-bold uppercase leading-[1.2] tracking-[-0.04em]"><MixedText text={t('skills.heading')} accent={t('skills.headingAccent')} /></h2>

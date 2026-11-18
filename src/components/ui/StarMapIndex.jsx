@@ -12,6 +12,23 @@ import '@/styles/star-map.css';
 const NUMERALS = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'];
 const CHAPTER_INDEX = { hero: 0, portal: 0, about: 1, skills: 2, education: 3, experience: 4, departure: 4, works: 5, finale: 5, contact: 6 };
 
+
+const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), summary, [tabindex]:not([tabindex="-1"])';
+const SECTION_SELECTOR = navigationSections.filter(item => item.id !== 'hero').map(item => `#${item.id}`).join(', ');
+const isTabbable = el => !el.closest('[inert]') && el.getAttribute('tabindex') !== '-1'
+  && (el.checkVisibility ? el.checkVisibility({ visibilityProperty: true }) : el.getClientRects().length > 0);
+// The chapter the next Tab stop waits in, when that chapter is still inert. Null lets the browser move focus.
+const pendingChapter = (from) => {
+  const start = from && from !== document.body ? from : null;
+  for (const el of document.querySelectorAll(FOCUSABLE)) {
+    if (start && (el === start || !(start.compareDocumentPosition(el) & Node.DOCUMENT_POSITION_FOLLOWING))) continue;
+    if (isTabbable(el)) return null;
+    const section = el.closest(SECTION_SELECTOR);
+    if (section) return section;
+  }
+  return null;
+};
+
 export function StarMapIndex() {
   const { t } = useTranslation();
   const reduced = useReducedMotion();
@@ -30,6 +47,32 @@ export function StarMapIndex() {
     return useScrollStore.subscribe(draw);
   }, []);
   useEffect(() => () => flight.current?.kill(), []);
+  // Keys 1 to 7 fly to a chapter; "?" opens the key legend. Never while typing or with modifiers.
+  const flyRef = useRef(null);
+  useEffect(() => {
+    const onKey = (event) => {
+      if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey) return;
+      const target = event.target;
+      if (target instanceof HTMLElement && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName))) return;
+      if (document.querySelector('[data-language-gate], [data-preloader]')) return;
+      if (event.key === 'Tab') {
+        // Chapters still waiting off-screen are inert, so Tab would skip them. Fly there first.
+        const inLayer = document.activeElement?.closest('dialog, [role="dialog"], [popover]');
+        const section = event.shiftKey || inLayer ? null : pendingChapter(document.activeElement);
+        if (section) { event.preventDefault(); flyRef.current(section.id); }
+        return;
+      }
+      if (event.key === '?') { event.preventDefault(); document.getElementById('key-legend')?.togglePopover(); return; }
+      const index = Number(event.key) - 1;
+      if (Number.isInteger(index) && index >= 0 && index < navigationSections.length) {
+        event.preventDefault();
+        document.getElementById('key-legend')?.hidePopover?.();
+        flyRef.current(navigationSections[index].id);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
   const active = CHAPTER_INDEX[chapter] ?? 0;
   // Out of the way while the Hero and the portal dive own the frame.
   const shown = chapter !== 'hero' && chapter !== 'portal';
@@ -58,7 +101,18 @@ export function StarMapIndex() {
     flight.current = gsap.to(smoother, { scrollTop: y, duration, ease: 'power2.inOut', onComplete: land });
   };
 
+  useEffect(() => { flyRef.current = fly; });
   return (<>
+    <aside id="key-legend" popover="auto" aria-labelledby="key-legend-title"
+      className="fixed inset-x-4 top-1/2 m-auto max-w-sm -translate-y-1/2 rounded-sm border border-white/15 bg-(--bg-void) p-6 text-(--text-primary) backdrop:bg-black/50">
+      <h2 id="key-legend-title" className="font-serif text-xl font-light italic">{t('keys.title')}</h2>
+      <dl className="mt-4 grid grid-cols-[auto_1fr] gap-x-5 gap-y-3 font-body text-sm text-(--text-secondary)">
+        {['chapters', 'escape', 'legend'].map(row => <div key={row} className="contents">
+          <dt className="font-mono text-(--text-primary)">{t(`keys.${row}.key`)}</dt>
+          <dd>{t(`keys.${row}.text`)}</dd>
+        </div>)}
+      </dl>
+    </aside>
     {/* Phones: the same seven stations as a quiet thread of stars on the right edge. Navigation stays in the menu. */}
     <div aria-hidden="true" data-star-map-compact
       className={`pointer-events-none fixed right-[max(0.375rem,env(safe-area-inset-right))] top-1/2 z-[60] -translate-y-1/2 transition-opacity duration-700 lg:hidden ${shown ? 'opacity-100' : 'opacity-0'}`}>
@@ -74,6 +128,7 @@ export function StarMapIndex() {
     <nav aria-label={t('starMap.label')} data-star-map
       className={`fixed left-[max(0.75rem,env(safe-area-inset-left))] top-1/2 z-[60] hidden -translate-y-1/2 transition-opacity duration-700 lg:block ${shown ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
       inert={!shown}>
+      <div className="relative">
       {/* The route line, filled to the journey's progress. */}
       <span aria-hidden="true" className="absolute top-3 bottom-3 left-[0.6875rem] w-px bg-white/10">
         <span ref={route} className="absolute inset-0 origin-top scale-y-0 bg-[var(--accent-amber,#F2A65A)] opacity-70" />
@@ -90,9 +145,9 @@ export function StarMapIndex() {
                 <span aria-hidden="true" className={`relative z-10 grid size-[1.375rem] place-items-center rounded-full border bg-(--bg-void) transition-colors duration-500 ${current ? 'border-[var(--accent-amber,#F2A65A)]' : 'border-white/15 group-hover:border-white/50'}`}>
                   <span className={`size-1.5 rounded-full transition-all duration-500 ${current ? 'bg-[var(--accent-amber,#F2A65A)] shadow-[0_0_10px_var(--accent-amber,#F2A65A)]' : 'bg-white/30 group-hover:bg-white/70'}`} />
                 </span>
-                <span aria-hidden="true" className={`w-6 font-mono text-sm tracking-[0.2em] transition-colors duration-500 ${current ? 'text-white' : 'text-(--text-secondary) group-hover:text-white'}`}>{NUMERALS[index]}</span>
-                {/* Names stay hidden over the reading column; the current one flashes on arrival. */}
-                <span key={current ? 'on' : 'off'} aria-hidden="true" data-flash={current || undefined}
+                <span aria-hidden="true" className={`w-6 font-mono text-sm tracking-[0.2em] transition-colors duration-500 ${current ? 'text-white' : 'text-white/75 group-hover:text-white'}`}>{NUMERALS[index]}</span>
+                {/* Names stay hidden over the reading column until hover or focus; the current one is named below the rail. */}
+                <span aria-hidden="true"
                   className="star-map-label flex flex-col rounded-sm bg-(--bg-void)/85 px-2 py-1 leading-tight opacity-0 transition-[opacity,translate] duration-500 -translate-x-1 group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:translate-x-0 group-focus-visible:opacity-100">
                   <span className="font-display text-sm font-semibold uppercase tracking-[0.14em] text-white">{name}</span>
                 </span>
@@ -101,6 +156,8 @@ export function StarMapIndex() {
           );
         })}
       </ol>
+      </div>
+      <p aria-hidden="true" className="mt-4 w-20 pl-1 font-mono text-sm uppercase leading-snug tracking-[0.12em] text-white/85">{t(`nav.${navigationSections[active].key}`)}</p>
     </nav>
   </>);
 }

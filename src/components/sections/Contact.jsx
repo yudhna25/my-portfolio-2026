@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useGSAP } from '@gsap/react';
 import { gsap } from '@/hooks/useGSAPSetup';
@@ -10,6 +10,8 @@ import { finaleState } from '@/3d/utils/finale';
 export default function Contact() {
   const root = useRef(null);
   const [transmitted, setTransmitted] = useState(false);
+  const copyTimer = useRef(0);
+  useEffect(() => () => window.clearTimeout(copyTimer.current), []);
   const { t, i18n } = useTranslation();
   const reducedMotion = useReducedMotion();
   const language = i18n.resolvedLanguage;
@@ -43,15 +45,15 @@ export default function Contact() {
 
   const handleTransmit = async () => {
     playRadioClick();
+    let ok = false;
     try {
-      if (navigator.clipboard) {
-        await navigator.clipboard.writeText(t('contact.email'));
-      }
+      if (navigator.clipboard) { await navigator.clipboard.writeText(t('contact.email')); ok = true; }
     } catch {
-      // Gracefully handle clipboard rejection in strict browser environments
+      // Strict browsers can refuse clipboard access; say so instead of pretending it worked.
     }
-    setTransmitted(true);
-    setTimeout(() => setTransmitted(false), 3500);
+    setTransmitted(ok ? 'copied' : 'failed');
+    window.clearTimeout(copyTimer.current);
+    copyTimer.current = window.setTimeout(() => setTransmitted(false), ok ? 3500 : 6000);
   };
 
   const linkStyle = 'inline-flex min-h-11 items-center py-2 text-(--text-primary) focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white';
@@ -100,9 +102,11 @@ export default function Contact() {
             onClick={handleTransmit}
             className="inline-flex min-h-11 items-center gap-2 font-body text-sm text-(--text-secondary) underline decoration-white/25 underline-offset-4 transition-colors hover:text-(--text-primary) hover:decoration-(--color-amber,#FFB25B) focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
           >
-            {transmitted ? t('contact.copied') : t('contact.copyAddress')}
+            {transmitted === 'copied' ? t('contact.copied') : t('contact.copyAddress')}
           </button>
-          <p role="status" aria-live="polite" className="sr-only">{transmitted ? t('contact.copied') : ''}</p>
+          <p role="status" aria-live="polite" className={transmitted === 'failed' ? 'max-w-md font-body text-sm text-(--text-secondary)' : 'sr-only'}>
+            {transmitted === 'copied' ? t('contact.copied') : transmitted === 'failed' ? t('contact.copyFailed') : ''}
+          </p>
         </div>
 
         <div data-contact-copy className="mt-16 flex flex-row flex-wrap items-center gap-x-8 gap-y-2 border-t border-(--bg-elevated) py-6 font-body text-sm sm:gap-x-10 lg:mt-24">
