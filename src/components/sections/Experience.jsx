@@ -40,7 +40,8 @@ export default function Experience({ onLayout }) {
       labels.forEach((label, i) => {
         const box = label.getBoundingClientRect();
         const y = box.top - rect.top - 24;
-        points[(i + 1) * 2] = (box.left + box.width * (i === 1 ? 0.72 : 0.35)) / width;
+        // Phones have no free column beside the text, so the meteor keeps to the left margin there.
+        points[(i + 1) * 2] = width < 1024 ? 12 / width : (box.left + box.width * (i === 1 ? 0.72 : 0.35)) / width;
         points[(i + 1) * 2 + 1] = y;
         layout.milestones[i] = y;
       });
@@ -76,7 +77,7 @@ export default function Experience({ onLayout }) {
         {PORTFOLIO_DATA.experience.map(({ id }, index) => {
           const position = t(`experience.positions.${id}`, { returnObjects: true });
           return <li key={id} data-experience-item={id} className="grid grid-cols-1 lg:grid-cols-12">
-            <article aria-labelledby={`experience-${id}`} className={`relative min-w-0 lg:col-span-5 ${placement[index]}`}>
+            <article aria-labelledby={`experience-${id}`} className={`star-scrim relative min-w-0 lg:col-span-5 ${placement[index]}`}>
               <div data-meteor-label>
                 <h3 key={`company-${i18n.resolvedLanguage}`} id={`experience-${id}`} data-reveal="starlight" className="font-display text-[clamp(1.25rem,2.2vw,2rem)] font-semibold leading-tight tracking-[-0.035em] [overflow-wrap:anywhere]">{position.company}</h3>
                 <p key={`role-${i18n.resolvedLanguage}`} data-reveal="signal" className="mt-3 font-mono text-sm leading-relaxed">{position.role}</p>

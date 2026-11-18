@@ -29,10 +29,11 @@ export function worksStage(width, height, bounds) {
   // A fuller sky draws each figure a little smaller, so neighbours on the ring never touch.
   const crowd = Math.sqrt(3 / bounds.length);
   const scale = mobile ? Math.min(desired, (width - 48) / (Math.max(...widths) * 2.2),
-    Math.max(44, height - 422) / (Math.max(...heights) * 2)) * crowd
+    Math.max(44, height - 382) / (Math.max(...heights) * 2)) * crowd
     : Math.min(desired * crowd, (width - 144) / widths.reduce((a, b) => a + b, 0) * 1.4,
       (height * 0.52 - 64) / Math.max(...heights));
-  const top = 148, bottom = mobile ? 220 : 48;
+  // Phones stack eyebrow, heading and hint above the ring, so the sky starts below them.
+  const top = mobile ? 232 : 148, bottom = mobile ? 150 : 48;
   const orbit = { x: width / 2, y: (top + height - bottom) / 2,
     rx: Math.max(12, (width - (mobile ? 48 : 96) - Math.max(...widths) * scale) / 2),
     ry: Math.max(12, (height - top - bottom - Math.max(...heights) * scale) / 2) };

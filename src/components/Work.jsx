@@ -265,7 +265,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
       onClick={event => { if (!event.target.closest('button,a,[data-work-content]')) dismiss(); }}
       className={`${fallback ? 'relative pb-20' : 'absolute inset-x-0 top-0 h-screen'} z-20 px-4 pt-20 text-(--text-primary) sm:px-8 ${fallback ? 'lg:pr-12 lg:pl-28' : 'lg:px-12'}`}>
       <header className={`mx-auto text-center ${fallback ? 'max-w-7xl' : 'max-w-5xl'}`}>
-        <div className={`transition-opacity duration-500 ${open ? 'pointer-events-none opacity-0' : ''}`}>
+        <div className={`star-scrim transition-opacity duration-500 ${open ? 'pointer-events-none opacity-0' : ''}`}>
         <ConstellationCreditButton compact className="absolute top-20 left-4 sm:left-8 lg:left-12" />
         <p lang="en" className="mb-3 font-mono text-sm tracking-[0.2em] text-(--text-secondary)">{t('works.sectionLabel')}</p>
         <h2 id="works-heading" className="font-display text-[clamp(1rem,2.6vw,2.5rem)] leading-[1.3] font-bold tracking-[-0.04em]">{t('works.heading')}</h2>
@@ -288,7 +288,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
               pointer.current = '';
             }}
             className={`min-h-11 min-w-11 cursor-pointer rounded-sm text-center ${focusRing} ${fallback ? 'border-b border-white/25 px-1 py-2' : 'absolute top-0 left-0'} ${target === item.id ? 'text-white' : 'text-white/65 hover:text-white'}`}>
-            <span className={`${fallback ? 'block' : 'absolute -bottom-6 left-1/2 block w-max max-w-28 lg:max-w-44 -translate-x-1/2'} transition-opacity duration-500 ${open && item.id !== project.id ? 'opacity-0' : ''}`}>
+            <span className={`${fallback ? 'block' : 'absolute -bottom-6 left-1/2 block w-max max-w-28 -translate-x-1/2 rounded-sm bg-(--bg-void)/70 px-1.5 lg:max-w-44 lg:bg-transparent lg:px-0'} transition-opacity duration-500 ${open && item.id !== project.id ? 'opacity-0' : ''}`}>
               <span className="block font-body text-sm lg:text-base font-medium">{t(`works.projects.${item.key}.title`)}</span>
               <span className="block font-mono text-sm text-white/55">{t(`works.constellations.${item.id}`)}</span>
             </span>
