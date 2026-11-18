@@ -85,12 +85,12 @@ export default function Contact() {
         </p>
 
         {/* The address is the signal itself: set in the serif voice, no console around it. */}
-        <div data-contact-copy className="mt-12 flex flex-col items-start gap-3 sm:mt-16">
+        <div data-contact-copy className="star-scrim mt-12 flex flex-col items-start gap-3 sm:mt-16">
           <a
             data-contact-email
             href={t('contact.emailUrl')}
             onClick={playRadioClick}
-            className="group inline-flex min-h-11 max-w-full items-baseline gap-4 font-serif text-[clamp(1.5rem,4.4vw,3.75rem)] [overflow-wrap:normal] leading-[1.1] font-light text-(--text-primary) italic [text-shadow:0_2px_30px_rgba(7,8,13,0.85)] focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-white"
+            className="group inline-flex min-h-11 max-w-full items-baseline gap-4 font-serif text-[clamp(1.25rem,5.4vw,3.75rem)] [overflow-wrap:normal] leading-[1.1] font-light text-(--text-primary) italic [text-shadow:0_2px_30px_rgba(7,8,13,0.85)] focus-visible:outline-2 focus-visible:outline-offset-8 focus-visible:outline-white"
           >
             <span className="bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_1px] bg-bottom-left bg-no-repeat pb-1 transition-[background-size] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:bg-[length:100%_1px] group-focus-visible:bg-[length:100%_1px]">{(([user, domain]) => <>{user}@<wbr />{domain}</>)(t('contact.email').split('@'))}</span>
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" className="size-[0.6em] shrink-0 translate-y-[0.05em] stroke-(--color-amber,#FFB25B) stroke-[1.25] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1 group-hover:-translate-y-1">
@@ -100,7 +100,7 @@ export default function Contact() {
           <button
             type="button"
             onClick={handleTransmit}
-            className="inline-flex min-h-11 items-center gap-2 font-body text-sm text-(--text-secondary) underline decoration-white/25 underline-offset-4 transition-colors hover:text-(--text-primary) hover:decoration-(--color-amber,#FFB25B) focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            className="inline-flex min-h-11 items-center gap-2 font-body text-sm text-(--text-primary) underline decoration-white/40 underline-offset-4 transition-colors hover:text-(--text-primary) hover:decoration-(--color-amber,#FFB25B) focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
           >
             {transmitted === 'copied' ? t('contact.copied') : t('contact.copyAddress')}
           </button>

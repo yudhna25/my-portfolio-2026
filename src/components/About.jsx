@@ -99,7 +99,7 @@ export default function About({ portrait }) {
     <div data-about-motion data-about-backdrop aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_72%_62%,rgba(7,8,13,0.44)_15%,rgba(7,8,13,0.18)_42%,transparent_78%)]" />
     <div data-about-motion className="mx-auto grid max-w-7xl grid-cols-12 items-start gap-y-10 lg:gap-x-16 lg:gap-y-8">
       <header data-about-group="heading" data-about-flow className="col-span-12 min-w-0 lg:col-span-7 lg:col-start-6 lg:row-start-1">
-        <p className="mb-6 font-mono text-sm uppercase tracking-[0.2em] text-(--text-secondary)">{t('about.sectionLabel')}</p>
+        <p lang="en" className="mb-6 font-mono text-sm tracking-[0.2em] text-(--text-secondary)">{t('about.sectionLabel')}</p>
         <h2 key={i18n.resolvedLanguage} id="about-heading" className="font-display text-[clamp(1.75rem,5vw,4rem)] font-bold uppercase leading-[1.18] tracking-[-0.035em]">
           <span className="sr-only">{t('hero.name')}</span>
           {name.map(line => <span key={line} aria-hidden="true" className="relative block">

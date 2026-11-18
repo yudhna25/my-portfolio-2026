@@ -41,7 +41,7 @@
     "portraitHint": "Linger a moment and the stars gather into a portrait."
   },
   "works": {
-    "sectionLabel": "Constellation of Projects",
+    "sectionLabel": "Star Chart",
     "heading": "CONSTELLATION OF PROJECTS",
     "cursorCta": "VIEW",
     "projects": {
@@ -109,7 +109,7 @@
     "viewCaseStudy": "View case study",
     "selectLabel": "Select a project",
     "interactionHint": "Choose a constellation to wake it, choose again to open.",
-    "fallbackHint": "Choose a project to view it.",
+    "fallbackHint": "Five projects, each hidden in a constellation.",
     "behanceReference": "Reference on Behance",
     "comingSoon": "Case study coming soon",
     "backToOrbit": "Back to the sky",
@@ -157,13 +157,15 @@
     "heading": "Arsenal Nebula",
     "toolsLabel": "Design Tools",
     "competenciesLabel": "Core Competencies",
+    "sectionLabel": "The Instruments",
     "technicalLabel": "Technical",
     "commonLabel": "Common Skills",
     "stageLabel": "Star logo stage",
     "interactionHint": "Choose a tool to light its star logo.",
+    "fallbackHint": "Choose a tool to see what it helps make.",
     "clearSelection": "Clear tool selection",
-    "activeTool": "Selected {{tool}}",
-    "idleStage": "Select a tool to see its star logo and related abilities.",
+    "activeTool": "Now tracing {{tool}}",
+    "idleStage": "No tool chosen yet.",
     "toolNames": {
       "figma": "Figma",
       "photoshop": "Photoshop",
@@ -438,6 +440,7 @@
   },
   "keys": {
     "title": "Keys for the voyage",
+    "close": "Close",
     "chapters": {
       "key": "1 to 7",
       "text": "Fly to that chapter on the star map"
