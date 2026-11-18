@@ -165,7 +165,7 @@
     "fallbackHint": "Chọn một công cụ để thấy những gì nó làm nên.",
     "clearSelection": "Bỏ chọn công cụ",
     "activeTool": "Đang chọn {{tool}}",
-    "idleStage": "Logo sao của công cụ sẽ hiện ở đây.",
+    "idleStage": "Chưa chọn công cụ nào.",
     "toolNames": {
       "figma": "Figma",
       "photoshop": "Photoshop",

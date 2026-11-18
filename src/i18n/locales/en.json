@@ -165,7 +165,7 @@
     "fallbackHint": "Choose a tool to see what it helps make.",
     "clearSelection": "Clear tool selection",
     "activeTool": "Selected {{tool}}",
-    "idleStage": "The tool's star logo will appear here.",
+    "idleStage": "No tool chosen yet.",
     "toolNames": {
       "figma": "Figma",
       "photoshop": "Photoshop",

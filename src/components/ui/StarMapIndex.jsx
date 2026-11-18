@@ -174,7 +174,7 @@ export function StarMapIndex() {
         })}
       </ol>
       </div>
-      <p aria-hidden="true" className="mt-4 w-20 pl-1 font-mono text-sm uppercase leading-snug tracking-[0.12em] text-white/85">{t(`nav.${navigationSections[active].key}`)}</p>
+      <p aria-hidden="true" className="mt-4 min-h-[2.75rem] w-20 pl-1 font-mono text-sm uppercase leading-snug tracking-[0.12em] text-white/85">{t(`nav.${navigationSections[active].key}`)}</p>
     </nav>
   </>);
 }
