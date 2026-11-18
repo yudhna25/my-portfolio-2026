@@ -163,7 +163,7 @@
     "interactionHint": "Chọn một công cụ để thắp logo sao của nó.",
     "clearSelection": "Bỏ chọn công cụ",
     "activeTool": "Đang chọn {{tool}}",
-    "idleStage": "Chọn một công cụ để xem logo sao và năng lực liên quan.",
+    "idleStage": "Logo sao của công cụ sẽ hiện ở đây.",
     "toolNames": {
       "figma": "Figma",
       "photoshop": "Photoshop",

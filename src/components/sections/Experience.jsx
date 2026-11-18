@@ -25,7 +25,7 @@ export default function Experience({ onLayout }) {
       const state = useScrollStore.getState();
       labels.forEach((label, i) => {
         const strength = state.storyChapter === 'experience' ? meteorEmphasis(layout, i, state.chapterProgress) : 0;
-        setters[i](reduced ? 1 : 0.72 + strength * 0.28);
+        setters[i](reduced ? 1 : 0.86 + strength * 0.14);
         label.dataset.active = strength > 0.5 ? 'true' : 'false';
       });
     };

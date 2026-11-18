@@ -163,7 +163,7 @@
     "interactionHint": "Choose a tool to light its star logo.",
     "clearSelection": "Clear tool selection",
     "activeTool": "Selected {{tool}}",
-    "idleStage": "Select a tool to see its star logo and related abilities.",
+    "idleStage": "The tool's star logo will appear here.",
     "toolNames": {
       "figma": "Figma",
       "photoshop": "Photoshop",

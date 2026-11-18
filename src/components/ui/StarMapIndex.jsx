@@ -102,9 +102,26 @@ export function StarMapIndex() {
   };
 
   useEffect(() => { flyRef.current = fly; });
+  // The legend takes focus while open and gives it back to where the reader was.
+  useEffect(() => {
+    const legend = document.getElementById('key-legend');
+    if (!legend) return;
+    let returnTo = null;
+    const onToggle = (event) => {
+      if (event.newState === 'open') {
+        returnTo = document.activeElement;
+        legend.focus({ preventScroll: true });
+      } else if (returnTo?.isConnected) {
+        returnTo.focus({ preventScroll: true });
+        returnTo = null;
+      }
+    };
+    legend.addEventListener('toggle', onToggle);
+    return () => legend.removeEventListener('toggle', onToggle);
+  }, []);
   return (<>
-    <aside id="key-legend" popover="auto" aria-labelledby="key-legend-title"
-      className="fixed inset-x-4 top-1/2 m-auto max-w-sm -translate-y-1/2 rounded-sm border border-white/15 bg-(--bg-void) p-6 text-(--text-primary) backdrop:bg-black/50">
+    <aside id="key-legend" popover="auto" role="dialog" tabIndex={-1} aria-labelledby="key-legend-title"
+      className="fixed inset-x-4 top-1/2 m-auto max-w-sm outline-none -translate-y-1/2 rounded-sm border border-white/15 bg-(--bg-void) p-6 text-(--text-primary) backdrop:bg-black/50">
       <h2 id="key-legend-title" className="font-serif text-xl font-light italic">{t('keys.title')}</h2>
       <dl className="mt-4 grid grid-cols-[auto_1fr] gap-x-5 gap-y-3 font-body text-sm text-(--text-secondary)">
         {['chapters', 'escape', 'legend'].map(row => <div key={row} className="contents">

@@ -143,7 +143,12 @@ export default function Skills({ stageRef }) {
           </div>
           <figure id="skills-stage" aria-label={t('skills.stageLabel')} className="relative order-1 h-[min(40vh,22rem)] min-h-64 min-w-0 md:order-2 md:h-full md:min-h-104">
             <div ref={anchor} data-skills-stage className="absolute inset-x-0 bottom-12 top-11" />
-            <button type="button" data-skill-clear onClick={clear} className="absolute right-0 top-0 z-20 min-h-11 px-2 font-mono text-sm uppercase tracking-wider text-white/55 underline decoration-white/20 underline-offset-4 hover:text-white focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4">{t('skills.clearSelection')}</button>
+            {target && <button type="button" data-skill-clear onClick={() => {
+              const chosen = target;
+              clear();
+              // The button leaves with the selection, so hand focus back to the tool it cleared.
+              document.querySelector(`[data-skill-tool="${chosen}"]`)?.focus();
+            }} className="absolute right-0 top-0 z-20 min-h-11 px-2 font-mono text-sm uppercase tracking-wider text-white/55 underline decoration-white/20 underline-offset-4 hover:text-white focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-4">{t('skills.clearSelection')}</button>}
             <figcaption role="status" aria-live="polite" className="absolute inset-x-0 bottom-0 z-10 mx-auto max-w-64 text-center font-body text-sm leading-relaxed text-white/60">
               {tool ? t('skills.activeTool', { tool: t('skills.toolNames.' + tool.id) }) : t('skills.idleStage')}
               {target === 'ai' && <span className="mt-2 block">{t('skills.aiMembers')}</span>}
