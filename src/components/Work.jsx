@@ -68,7 +68,7 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
     className={`inline-flex min-h-11 min-w-11 items-center font-mono text-sm underline underline-offset-4 ${onDark ? 'text-(--color-amber,#FFB45A)' : 'text-white/70 decoration-white/25'} ${focusRing}`}>{label} <span aria-hidden="true" className="ml-2">↗</span></a>;
   const action = (item, open) => item.id === 'edura' ? null : item.id === 'kintra'
     ? <div className={`flex flex-wrap gap-x-4 ${open ? '' : `justify-center ${fallback ? '' : 'lg:justify-start'}`}`}>
-      {external(item.link, t('works.openPrototype'), true)}{external(item.repo, t('works.sourceCode'), false)}</div>
+      {external(item.link, t('works.openPrototype'), true)}{item.caseStudy && external(item.caseStudy, t('works.caseStudyPrd'), false)}{external(item.repo, t('works.sourceCode'), false)}</div>
     : item.id === 'odyssey'
     ? <a href="/#hero" data-work-action onClick={voyageAgain}
       className={`inline-flex min-h-11 min-w-11 items-center font-mono ${open ? 'text-sm' : 'text-sm'} text-(--color-amber,#FFB45A) underline underline-offset-4 ${focusRing}`}>

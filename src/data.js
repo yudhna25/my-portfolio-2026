@@ -72,6 +72,7 @@ export const PORTFOLIO_DATA = {
       tags: ['Product Design', 'AI Matching', 'Prototype'],
       imageUrl: '/project5.webp',
       link: 'https://team7designathon-viecnhanh.vercel.app/hub',
+      caseStudy: '/kintra-prd/',
       repo: 'https://github.com/yudhna25/Designathon-team7',
       award: true,
     },
