@@ -13,6 +13,7 @@ export default defineConfig({
       includeManifestIcons: false,
       workbox: {
         navigateFallback: 'index.html',
+        navigateFallbackDenylist: [/^\/kintra-prd(\/|$)/],
         globPatterns: ["**/*.{js,css,html,woff2,webp,png,svg}"],
         runtimeCaching: [
           {

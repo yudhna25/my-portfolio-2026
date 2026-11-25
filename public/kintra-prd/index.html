@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>KINTRA — Product Case Study &amp; PRD | Trần Vũ Anh Duy</title>
+<meta name="description" content="Product Case Study &amp; PRD cho KINTRA — nền tảng AI ghép lao động Việt tại Aichi (Nhật Bản) với nhà máy cần người. Giải TOKEN LEADER, Designathon 2026.">
+<meta property="og:title" content="KINTRA — Product Case Study &amp; PRD">
+<meta property="og:description" content="AI ghép việc. Con người quyết định. Case study sản phẩm &amp; PRD bởi Trần Vũ Anh Duy (Team 7 · Designathon 2026 · TOKEN LEADER).">
+<meta property="og:type" content="article">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: stacked "slides" on a grey page, mirroring the Team 7 pitch deck (Swiss editorial, navy + red rule) */
+:root{
+  color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --page:#E7E8EE; --paper:#FAFAFA; --ink:#0D0D0D; --navy:#1B22A7; --blue:#4260E6; --sun:#E1261C;
+  --tint:#EEF0FB; --tint-2:#E2E6F8; --muted:rgba(13,13,13,.64); --faint:rgba(13,13,13,.60); --line:rgba(13,13,13,.13);
+  --ok:#17834A; --ok-bg:#E3F4EA; --miss:#C0261C; --miss-bg:#FBE7E5; --unk:#7A6A12; --unk-bg:#F6F0D2;
+  --bar-add:#1B22A7; --bar-cut:#E1261C; --bar-total:#4260E6;
+  --on-navy:#FAFAFA; --on-navy-soft:#C9D0FF;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
+  --jp:'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP','Noto Sans CJK JP',sans-serif;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+img{max-width:100%}
+[hidden]:not([hidden=until-found i]){display:none!important}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --page:#0B0D1C; --paper:#13163A; --ink:#F1F2FA; --navy:#A9B1FF; --blue:#8AA0FF; --sun:#FF6B60;
+  --tint:#1C2052; --tint-2:#252A63; --muted:rgba(241,242,250,.70); --faint:rgba(241,242,250,.64); --line:rgba(241,242,250,.15);
+  --ok:#5BD08F; --ok-bg:#16352A; --miss:#FF8A80; --miss-bg:#3A1C22; --unk:#E8CF6A; --unk-bg:#36311A;
+  --bar-add:#7F8CFF; --bar-cut:#FF6B60; --bar-total:#9DB0FF; --on-navy:#0B0D1C; --on-navy-soft:#262B63; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --page:#0B0D1C; --paper:#13163A; --ink:#F1F2FA; --navy:#A9B1FF; --blue:#8AA0FF; --sun:#FF6B60;
+  --tint:#1C2052; --tint-2:#252A63; --muted:rgba(241,242,250,.70); --faint:rgba(241,242,250,.64); --line:rgba(241,242,250,.15);
+  --ok:#5BD08F; --ok-bg:#16352A; --miss:#FF8A80; --miss-bg:#3A1C22; --unk:#E8CF6A; --unk-bg:#36311A;
+  --bar-add:#7F8CFF; --bar-cut:#FF6B60; --bar-total:#9DB0FF; --on-navy:#0B0D1C; --on-navy-soft:#262B63; color-scheme:dark;}
+
+*{box-sizing:border-box}
+body{margin:0;padding:0;background:var(--page);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--blue);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--page)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--page);border-bottom:1px solid var(--line)}
+.bar-in{max-width:1180px;margin:0 auto;padding-block:10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;gap:16px;align-items:center}
+.brand{font-weight:700;font-size:14px;white-space:nowrap;display:flex;align-items:center;gap:10px}
+.brand span{color:var(--muted);font-weight:500}
+.back-home{font-size:12px;font-weight:600;color:var(--navy);text-decoration:none;padding:5px 10px;border-radius:99px;background:var(--tint-2);white-space:nowrap}
+.back-home:hover{opacity:.85}
+.nav{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;min-width:0;flex:1}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:99px;white-space:nowrap;border:1px solid var(--line);background:var(--paper)}
+.nav a:hover{color:var(--navy);border-color:var(--navy)}
+
+main{max-width:1180px;margin:0 auto;padding-block:24px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:20px}
+
+.slide{background:var(--paper);border-radius:14px;padding:clamp(22px,4vw,52px);display:flex;flex-direction:column;gap:clamp(20px,3vw,32px);box-shadow:0 1px 0 var(--line);scroll-margin-top:72px}
+.meta{display:flex;justify-content:space-between;gap:16px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.eyebrow{color:var(--blue)}
+.h{font-weight:800;text-transform:uppercase;color:var(--navy);font-size:clamp(28px,5vw,58px);line-height:1.04;letter-spacing:-.02em;margin:0;text-wrap:balance}
+.h::before{content:"";display:block;width:44px;height:4px;background:var(--sun);margin-bottom:16px}
+.lede{font-size:clamp(16px,1.6vw,19px);color:var(--muted);max-width:62ch;margin:0;text-wrap:pretty}
+.foot{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:11px;color:var(--faint)}
+.foot .track{width:90px;height:2px;background:var(--line);position:relative}
+.foot .track i{position:absolute;inset:0 auto 0 0;background:var(--sun)}
+h3{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:0 0 10px;font-weight:700}
+p{margin:0}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.panel{background:var(--tint);border-radius:10px;padding:18px 20px;min-width:0}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:5px 12px;border-radius:99px;background:var(--tint-2);color:var(--navy);white-space:nowrap}
+.pill.solid{background:var(--navy);color:var(--on-navy)}
+.pill.ok{background:var(--ok-bg);color:var(--ok)} .pill.miss{background:var(--miss-bg);color:var(--miss)} .pill.unk{background:var(--unk-bg);color:var(--unk)}
+.note{font-size:12.5px;color:var(--faint)}
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:560px}
+th{text-align:left;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:700;padding:10px 12px;border-bottom:2px solid var(--ink)}
+td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top}
+
+.cover{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:stretch}
+.cover .h{font-size:clamp(36px,7vw,88px)}
+.kanji{font-family:var(--jp);writing-mode:vertical-rl;font-size:clamp(48px,7vw,92px);font-weight:700;color:var(--tint-2);line-height:1;letter-spacing:.05em;user-select:none}
+.facts{display:flex;flex-wrap:wrap;gap:8px}
+.links{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:14px;font-weight:600}
+
+.role{position:relative;overflow:hidden;padding-top:24px}
+.role::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:var(--navy)}
+.role.sub::before{background:var(--blue)}
+.role .tag{font-family:var(--mono);font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.08em}
+.role h4{font-size:24px;font-weight:800;margin:4px 0 10px;color:var(--ink)}
+ul.clean{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.clean li{position:relative;padding-left:18px}
+ul.clean li::before{content:"";position:absolute;left:0;top:.68em;width:8px;height:2px;background:var(--sun)}
+
+.stat b{display:block;font-size:clamp(34px,4.6vw,56px);font-weight:800;color:var(--navy);letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:8px;font-size:14px;color:var(--muted)}
+
+.persona dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 16px;margin:0;font-size:14.5px}
+.persona dt{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:700;padding-top:3px}
+.persona dd{margin:0}
+.quote{font-size:clamp(20px,2.4vw,30px);font-weight:700;line-height:1.3;color:var(--ink);border-left:4px solid var(--sun);padding-left:20px;text-wrap:balance}
+.conf{display:flex;flex-direction:column;gap:12px}
+.conf-row{display:grid;grid-template-columns:minmax(0,1fr) 120px;gap:12px;align-items:center;font-size:14px}
+.meter{height:8px;background:var(--line);border-radius:99px;overflow:hidden;display:block}
+.meter i{display:block;height:100%;background:var(--blue);border-radius:99px}
+
+.flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.step{background:var(--tint);border-radius:10px;padding:16px;position:relative;min-width:0}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--sun)}
+.step b{display:block;font-size:17px;font-weight:800;text-transform:uppercase;color:var(--navy);margin:2px 0 6px}
+.step .ch{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--faint);text-transform:uppercase}
+.step p{font-size:13.5px;margin-top:6px}
+.step:not(:last-child)::after{content:"→";position:absolute;right:-5px;top:50%;transform:translate(50%,-50%);color:var(--faint);font-weight:700;z-index:1}
+
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-radius:10px;overflow:hidden}
+.split>div{padding:20px}
+.split .ai{background:var(--tint)} .split .hu{background:var(--navy);color:var(--on-navy)}
+.split .hu h3{color:var(--on-navy);opacity:.75}
+.split .hu ul.clean li::before{background:currentColor;opacity:.6}
+.pipe{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,.8fr) auto minmax(0,1fr);gap:12px;align-items:stretch}
+.pipe .arrow{align-self:center;font-size:22px;color:var(--faint);font-weight:700}
+.pipe .core{background:var(--navy);color:var(--on-navy);border-radius:10px;padding:18px;display:flex;flex-direction:column;justify-content:center;gap:8px}
+.pipe .core b{font-size:20px;font-weight:800;letter-spacing:.02em}
+.pipe .core span{font-size:13px;opacity:.85}
+.io{border:1px solid var(--line);border-radius:10px;padding:16px;min-width:0}
+.io ul{margin:0;padding-left:18px;font-size:13.5px;display:flex;flex-direction:column;gap:4px}
+.band-bar{display:grid;grid-template-columns:60fr 25fr 15fr;height:44px;border-radius:8px;overflow:hidden;font-size:12.5px;font-weight:700;margin-top:8px}
+.band-bar div{display:flex;align-items:center;padding:0 12px;white-space:nowrap;overflow:hidden}
+.b-no{background:var(--miss-bg);color:var(--miss)} .b-maybe{background:var(--tint-2);color:var(--navy)} .b-great{background:var(--navy);color:var(--on-navy)}
+.ticks{position:relative;height:22px;font-family:var(--mono);font-size:11px;color:var(--faint);margin-top:6px}
+.ticks span{position:absolute;transform:translateX(-50%)}
+.ticks span:first-child{transform:none} .ticks span:last-child{transform:translateX(-100%)}
+.crit{display:flex;flex-wrap:wrap;gap:8px}
+.rules td:first-child{font-weight:600;width:34%}
+
+.wf{display:flex;flex-direction:column;gap:6px;font-size:13.5px}
+.wf-row{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr) 96px;gap:12px;align-items:center}
+.wf-row .lab small{display:block;color:var(--faint);font-size:11.5px}
+.wf-track{position:relative;height:22px;background:linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/31.72% 100%}
+.wf-bar{position:absolute;top:3px;bottom:3px;border-radius:3px}
+.wf-row.add .wf-bar{background:var(--bar-add)} .wf-row.cut .wf-bar{background:var(--bar-cut)} .wf-row.total .wf-bar{background:var(--bar-total)}
+.wf-row.total{font-weight:700;border-top:1px solid var(--line);padding-top:6px}
+.wf-row .v{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:12.5px}
+.wf-row.cut .v{color:var(--miss)}
+.wf-axis{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr) 96px;gap:12px}
+.wf-axis div{position:relative;height:16px;font-family:var(--mono);font-size:11px;color:var(--faint)}
+.wf-axis span{position:absolute;transform:translateX(-50%)}
+.wf-axis span:first-child{transform:none}
+.net{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center}
+.net b{font-size:clamp(34px,5vw,60px);font-weight:800;color:var(--navy);letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1}
+
+.story{background:var(--tint);border-radius:10px;padding:18px 20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.story .id{font-family:var(--mono);font-size:11px;color:var(--sun)}
+.story b{font-size:16px}
+.story i{font-style:normal;color:var(--muted);font-size:14px}
+.ac{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;font-size:13.5px}
+.ac li{display:grid;grid-template-columns:16px minmax(0,1fr);gap:8px}
+.ac li::before{content:"";width:12px;height:12px;border:1.5px solid var(--navy);border-radius:3px;margin-top:4px}
+
+.ns{background:var(--navy);color:var(--on-navy);border-radius:10px;padding:22px 24px;display:flex;flex-direction:column;gap:6px}
+.ns small{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.75;font-weight:700}
+.ns b{font-size:clamp(20px,2.6vw,30px);font-weight:800;line-height:1.2}
+.ns span{opacity:.85;font-size:14px}
+.funnel{display:flex;flex-direction:column;gap:6px}
+.funnel div{background:var(--tint-2);border-radius:6px;padding:10px 14px;font-size:13.5px;display:grid;grid-template-columns:90px minmax(0,1fr);gap:12px}
+.funnel div strong{color:var(--navy)}
+.draft{display:inline-flex;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--unk-bg);color:var(--unk);padding:5px 12px;border-radius:99px;align-self:flex-start}
+
+.phases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.phase{border-radius:10px;padding:20px;background:var(--tint);display:flex;flex-direction:column;gap:10px;min-width:0}
+.phase:nth-child(2){background:var(--tint-2)} .phase:nth-child(3){background:var(--navy);color:var(--on-navy)}
+.phase .k{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--sun)}
+.phase b{font-size:22px;font-weight:800;text-transform:uppercase}
+.phase .gate{margin-top:auto;font-size:13px;border-top:1px solid currentColor;padding-top:10px;opacity:.85}
+.phase p{font-size:14px}
+
+.closing{background:var(--navy);color:var(--on-navy)}
+.closing .h{color:var(--on-navy)} .closing .meta,.closing .foot{color:var(--on-navy);opacity:.7} .closing .eyebrow{color:var(--on-navy)}
+.closing .foot .track{background:var(--on-navy-soft)}
+.closing a{color:var(--on-navy);font-weight:600}
+.src{font-size:13px;display:flex;flex-direction:column;gap:6px;opacity:.85}
+.src strong{font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+
+@media (max-width:900px){
+  .g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g3,.phases{grid-template-columns:minmax(0,1fr)}
+  .flow{grid-template-columns:minmax(0,1fr)}
+  .step:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-5px;transform:translate(-50%,50%)}
+  .pipe{grid-template-columns:minmax(0,1fr)}
+  .pipe .arrow{transform:rotate(90deg);justify-self:center}
+}
+@media (max-width:640px){
+  .g2,.split{grid-template-columns:minmax(0,1fr)}
+  .cover{grid-template-columns:minmax(0,1fr)} .kanji{display:none}
+  .wf-row,.wf-axis{grid-template-columns:minmax(0,1fr) 84px}
+  .wf-row .lab{grid-column:1/-1} .wf-axis div:first-child,.wf-axis div:last-child{display:none}
+  .wf-axis{grid-template-columns:minmax(0,1fr) 84px}
+  .funnel div{grid-template-columns:minmax(0,1fr);gap:2px}
+  .conf-row{grid-template-columns:minmax(0,1fr) 72px}
+  .meta span:last-child{display:none}
+}
+@media (prefers-reduced-motion:no-preference){
+  .slide{animation:rise .5s cubic-bezier(.2,0,0,1) both}
+  @keyframes rise{from{transform:translateY(8px)}to{transform:none}}
+}
+@media print{
+  .bar{display:none}
+  body{background:#fff}
+  main{padding:0;gap:0}
+  .slide{box-shadow:none;border-radius:0;break-after:page;page-break-after:always}
+}
+</style>
+</head>
+<body>
+
+<header class="bar"><div class="bar-in">
+  <div class="brand">
+    <a class="back-home" href="/">← Portfolio</a>
+    <span><strong>KINTRA</strong> · Case study</span>
+  </div>
+  <nav class="nav" aria-label="Các phần">
+    <a href="#role">Vai trò</a><a href="#problem">Vấn đề</a><a href="#tradeoffs">Đánh đổi</a><a href="#journey">Hành trình</a><a href="#ai">Hành vi AI</a><a href="#pay">Lương thực nhận</a><a href="#stories">User stories</a><a href="#metrics">Chỉ số</a><a href="#rollout">Triển khai</a><a href="#risks">Rủi ro</a>
+  </nav>
+</div></header>
+
+<main>
+
+<section class="slide" id="cover" aria-labelledby="t0">
+  <div class="meta"><span class="eyebrow">Product case study · PRD</span><span>Team 7 · Leaf it to us</span></div>
+  <div class="cover">
+    <div style="display:flex;flex-direction:column;gap:24px;min-width:0">
+      <h1 class="h" id="t0">AI ghép việc.<br>Con người quyết định.</h1>
+      <p class="lede">KINTRA kết nối lao động người Việt ở Aichi với nhà máy cần người. Việc phù hợp đến qua Zalo, kèm lương thực nhận bóc tách từng khoản và lời giải thích vì sao bạn hợp.</p>
+      <div class="facts">
+        <span class="pill solid">Designathon 2026 · Giải TOKEN LEADER</span>
+        <span class="pill">Lolipop Studio Vietnam</span>
+        <span class="pill">Prototype chạy được · dữ liệu demo</span>
+      </div>
+      <div class="links">
+        <a href="https://team7designathon-viecnhanh.vercel.app/" target="_blank" rel="noopener">Mở prototype ↗</a>
+        <a href="https://leaf-it-to-us-team7.vercel.app/" target="_blank" rel="noopener">Xem bản pitch ↗</a>
+      </div>
+    </div>
+    <div class="kanji" aria-hidden="true">愛知県</div>
+  </div>
+  <div class="foot"><span>01</span><span class="track"><i style="width:8%"></i></span><span>12</span></div>
+</section>
+
+<section class="slide" id="role" aria-labelledby="t1">
+  <div class="meta"><span class="eyebrow">Vai trò của tôi</span><span>Trần Vũ Anh Duy</span></div>
+  <h2 class="h" id="t1">Dẫn dắt UI. Hỗ trợ nghiên cứu.</h2>
+  <div class="grid g2">
+    <div class="panel role">
+      <div class="tag">Vai trò chính</div>
+      <h4>UI Design Lead</h4>
+      <ul class="clean">
+        <li>Dẫn dắt giao diện cho cả hai kênh: onboarding trên Zalo OA bằng nút trả lời nhanh, và web app hiển thị lương bằng yên cùng chi tiết công việc.</li>
+        <li>Xây trên ZEN Kaiz Design System: font Inter, lưới 8px, mobile-first.</li>
+        <li>Thiết kế đủ các trạng thái người dùng thật sự gặp: mức phù hợp, đang chờ, đang xem xét, lỗi.</li>
+        <li>Thiết kế cách AI trình bày lý do: dải điểm phù hợp và danh sách tiêu chí đạt / thiếu.</li>
+      </ul>
+    </div>
+    <div class="panel role sub">
+      <div class="tag">Vai trò phụ</div>
+      <h4>UX Researcher</h4>
+      <ul class="clean">
+        <li>Tổng hợp dữ liệu thị trường lao động ở Aichi và xây persona người lao động.</li>
+        <li>Tham gia phỏng vấn định tính (n = 2): một chủ công ty tuyển dụng, một người lao động ở Nhật.</li>
+        <li>Đưa insight từ phỏng vấn vào thiết kế: chuyển từ chỉ web app sang Zalo OA + web app.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="grid g4">
+    <div class="stat"><b>24,2%</b><span>lao động nước ngoài ở Aichi là người Việt</span></div>
+    <div class="stat"><b>4 / 6</b><span>góp ý của CEO được giữ lại sau khi đối chiếu thực tế</span></div>
+    <div class="stat"><b>5</b><span>bước từ tin nhắn Zalo đến kết quả HR</span></div>
+    <div class="stat"><b>3</b><span>giai đoạn đầu tư, mở dần theo bằng chứng</span></div>
+  </div>
+  <div class="foot"><span>02</span><span class="track"><i style="width:17%"></i></span><span>12</span></div>
+</section>
+
+<section class="slide" id="problem" aria-labelledby="t2">
+  <div class="meta"><span class="eyebrow">Người dùng &amp; vấn đề</span><span>Research</span></div>
+  <h2 class="h" id="t2">Việc có. Người có. Hai bên không gặp nhau.</h2>
+  <p class="quote">Lao động phổ thông người Việt đang sống ở Nhật cần việc để có thêm thu nhập, nhưng vì ít kết nối tuyển dụng nên không thể tìm được việc nhanh.</p>
+  <div class="grid g2">
+    <div class="panel persona">
+      <h3>Persona · Anh Tuấn</h3>
+      <dl>
+        <dt>Ai</dt><dd>27 tuổi, sống ở Nhật, không có bằng đại học</dd>
+        <dt>Câu chuyện</dt><dd>Sang Nhật một mình, đã làm khoảng 1 năm</dd>
+        <dt>Visa</dt><dd>Kỹ năng đặc định (SSW)</dd>
+        <dt>Cần</dt><dd>Thêm thu nhập để trang trải chi phí sống</dd>
+        <dt>Nỗi đau</dt><dd><strong>Thiếu kết nối</strong> tới các đợt tuyển mới nhất</dd>
+      </dl>
+    </div>
+    <div class="panel">
+      <h3>Bằng chứng mạnh đến đâu</h3>
+      <div class="conf">
+        <div class="conf-row"><span>24,2% lao động nước ngoài ở Aichi là người Việt <span class="note">· Cục Lao động Aichi, 10/2025</span></span><span class="meter" role="img" aria-label="Độ tin cậy cao"><i style="width:90%"></i></span></div>
+        <div class="conf-row"><span>Persona Anh Tuấn <span class="note">· tổng hợp nghiên cứu nhóm</span></span><span class="meter" role="img" aria-label="Độ tin cậy trung bình"><i style="width:55%"></i></span></div>
+        <div class="conf-row"><span>Zalo là kênh quen thuộc <span class="note">· 2 phỏng vấn định tính</span></span><span class="meter" role="img" aria-label="Độ tin cậy thấp đến trung bình"><i style="width:35%"></i></span></div>
+        <div class="conf-row"><span>Số liệu Việc Nhanh ở Việt Nam <span class="note">· theo đề bài cuộc thi</span></span><span class="meter" role="img" aria-label="Chưa kiểm chứng"><i style="width:30%"></i></span></div>
+      </div>
+      <p class="note" style="margin-top:14px">Bằng chứng về kênh Zalo còn mỏng, nên giai đoạn 1 là pilot kiểm chứng nhu cầu chứ không xây ngay sản phẩm đầy đủ.</p>
+    </div>
+  </div>
+  <div class="grid g2">
+    <div><h3>Mục tiêu</h3><ul class="clean">
+      <li>Việc phù hợp đến với người lao động, họ không phải đi tìm.</li>
+      <li>Hiểu rõ việc trước khi ứng tuyển: lương thực nhận, ca, địa điểm, mình đạt hay thiếu gì.</li>
+      <li>HR nhận danh sách ứng viên phù hợp nhanh hơn.</li>
+      <li>Kiểm chứng nhu cầu trước khi đầu tư lớn.</li></ul></div>
+    <div><h3>Ngoài phạm vi</h3><ul class="clean">
+      <li>AI không quyết định ai được tuyển, không xác nhận tư cách làm việc hợp pháp.</li>
+      <li>Không cam kết ghép việc trong 24 giờ.</li>
+      <li>Không ứng lương theo ngày ở Nhật.</li>
+      <li>Không mở rộng tỉnh hoặc quốc tịch khác trước khi có bằng chứng ở Aichi.</li></ul></div>
+  </div>
+  <div class="foot"><span>03</span><span class="track"><i style="width:25%"></i></span><span>12</span></div>
+</section>
+
+<section class="slide" id="tradeoffs" aria-labelledby="t3">
+  <div class="meta"><span class="eyebrow">Quyết định đánh đổi</span><span>Localization</span></div>
+  <h2 class="h" id="t3">Không làm theo mọi yêu cầu.</h2>
+  <p class="lede">CEO chuyển cho nhóm 6 góp ý do AI tạo cho mô hình Nhật. Góp ý số 4 và số 6 mâu thuẫn nhau, nên nhóm đối chiếu từng điểm với thực tế pháp lý và di trú ở Nhật.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>#</th><th>Góp ý</th><th>Quyết định</th><th>Lý do</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Cho xem lương, ca, địa điểm trước khi nhận việc</td><td><span class="pill ok">Giữ</span></td><td>Thành tính năng cốt lõi: điều người lao động cần nhất để quyết định</td></tr>
+      <tr><td>2</td><td>Hỗ trợ nhiều ngôn ngữ</td><td><span class="pill ok">Giữ</span></td><td>Zalo OA nói tiếng Việt, web đa ngôn ngữ</td></tr>
+      <tr><td>3</td><td>Đăng ký qua Zalo như ở Việt Nam</td><td><span class="pill ok">Giữ</span></td><td>Kênh người lao động đã dùng hằng ngày</td></tr>
+      <tr><td>4</td><td>Chỉ cần số điện thoại, bỏ kiểm tra giấy tờ cư trú</td><td><span class="pill miss">Bỏ</span></td><td>Mâu thuẫn với #6 và rủi ro pháp lý khi tuyển lao động nước ngoài</td></tr>
+      <tr><td>5</td><td>Ghép việc trong 24 giờ thay vì 48</td><td><span class="pill miss">Bỏ</span></td><td>Đổi công ty với visa SSW phải xin chuyển tư cách lưu trú, thường mất 6–9 tuần. Giữ cam kết tốc độ ở mức khả thi</td></tr>
+      <tr><td>6</td><td>Xác minh đầy đủ mọi hồ sơ trước khi ghép</td><td><span class="pill ok">Giữ</span></td><td>Nhà máy và người lao động đều cần tin nhau</td></tr>
+      <tr><td>+</td><td>Ứng lương theo ngày (có ở mô hình Việt Nam)</td><td><span class="pill miss">Bỏ</span></td><td>Rủi ro pháp lý ở Nhật</td></tr>
+    </tbody>
+  </table></div>
+  <div class="foot"><span>04</span><span class="track"><i style="width:33%"></i></span><span>12</span></div>
+</section>
+
+<section class="slide" id="journey" aria-labelledby="t4">
+  <div class="meta"><span class="eyebrow">Hành trình chính</span><span>UX &amp; service design</span></div>
+  <h2 class="h" id="t4">Từ tin nhắn đến kết quả HR.</h2>
+  <div class="flow">
+    <div class="step"><span class="n">1</span><b>Discover</b><span class="ch">Zalo OA</span><p>Tin gợi ý việc đã khớp visa, kinh nghiệm và khoảng cách.</p></div>
+    <div class="step"><span class="n">2</span><b>Match</b><span class="ch">AI matching</span><p>Mức phù hợp và danh sách tiêu chí đạt / thiếu.</p></div>
+    <div class="step"><span class="n">3</span><b>Explore</b><span class="ch">Web app</span><p>Công ty, lương thực nhận, ca, địa điểm, ký túc xá, người Việt đang làm ở đó.</p></div>
+    <div class="step"><span class="n">4</span><b>Apply</b><span class="ch">Web app</span><p>Ứng tuyển một bước.</p></div>
+    <div class="step"><span class="n">5</span><b>Track</b><span class="ch">Web app · Zalo</span><p>Đang chờ → Đang xem xét → Phỏng vấn → HR quyết định.</p></div>
+  </div>
+  <div class="grid g3">
+    <div class="panel"><h3>Mức phù hợp thấp</h3><p>Hiện rõ thiếu gì. Người dùng chọn <strong>cập nhật hồ sơ</strong> hoặc <strong>vẫn ứng tuyển</strong>. Quyết định thuộc về họ.</p></div>
+    <div class="panel"><h3>HR chậm phản hồi</h3><p>Hiện khung thời gian phản hồi và gợi ý việc thay thế. Chậm không bao giờ được hiển thị như bị từ chối.</p></div>
+    <div class="panel"><h3>Thay đổi sau phỏng vấn</h3><p><strong>Trước:</strong> chỉ web app, người lao động phải tự vào tìm. <strong>Sau:</strong> Zalo OA + web app, việc đến trong kênh họ đang chat.</p></div>
+  </div>
+  <div class="foot"><span>05</span><span class="track"><i style="width:42%"></i></span><span>12</span></div>
+</section>
+
+<section class="slide" id="ai" aria-labelledby="t5">
+  <div class="meta"><span class="eyebrow">Đặc tả hành vi AI</span><span>AI assists · HR decides</span></div>
+  <h2 class="h" id="t5">AI giải thích. Con người xác minh.</h2>
+  <div class="split">
+    <div class="ai"><h3>AI làm</h3><ul class="clean"><li>Tìm kiếm và sàng lọc</li><li>Ghép hồ sơ với yêu cầu của nhà máy</li><li>Giải thích vì sao hợp / chưa hợp</li><li>Đưa danh sách ngắn cho HR</li></ul></div>
+    <div class="hu"><h3>Con người làm</h3><ul class="clean"><li>Xác minh giấy tờ, bằng chứng</li><li>Xét tư cách làm việc hợp pháp</li><li>Ra mọi quyết định tuyển</li></ul></div>
+  </div>
+  <div>
+    <h3>Luồng dữ liệu</h3>
+    <div class="pipe">
+      <div class="io"><strong>Người lao động</strong><ul><li>3 câu hỏi qua Zalo</li><li>Tư cách lưu trú</li><li>Tay nghề, kinh nghiệm</li><li>Trình độ tiếng Nhật</li><li>Nơi ở, ngày có thể bắt đầu</li></ul>
+        <strong style="display:block;margin-top:12px">Việc làm</strong><ul><li>Visa yêu cầu (SSW1/SSW2 sản xuất, định trú, vĩnh trú)</li><li>Kỹ năng, tiếng Nhật tối thiểu</li><li>Địa điểm, ngày bắt đầu, lương, ca</li></ul></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="core"><b>AI MATCHING</b><span>So từng tiêu chí: Đạt / Thiếu / Chưa rõ</span><span>Tính điểm phù hợp 0–100</span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="io"><strong>Cho người lao động</strong><ul><li>Mức phù hợp</li><li>Tiêu chí đạt / thiếu</li><li>Tin gợi ý qua Zalo OA</li></ul>
+        <strong style="display:block;margin-top:12px">Cho HR</strong><ul><li>Danh sách ngắn theo điểm</li><li>Lý do khớp từng ứng viên</li><li>Điểm cần xác minh</li></ul></div>
+    </div>
+  </div>
+  <div class="grid g2">
+    <div>
+      <h3>Dải điểm phù hợp (tạm của prototype)</h3>
+      <div class="band-bar" role="img" aria-label="Thang 0 đến 100: dưới 60 Not Yet a Fit, 60 đến 84 Possible Fit, từ 85 Great Fit"><div class="b-no">Not Yet a Fit</div><div class="b-maybe">Possible</div><div class="b-great">Great</div></div>
+      <div class="ticks"><span style="left:0">0</span><span style="left:60%">60</span><span style="left:85%">85</span><span style="left:100%">100</span></div>
+      <p class="note">Ngưỡng 60 / 85 chưa có căn cứ dữ liệu. Cần hiệu chỉnh bằng tỷ lệ ứng viên Great Fit được HR chấp nhận.</p>
+    </div>
+    <div>
+      <h3>Ví dụ · Vận hành máy tiện CNC, Mikawa Precision</h3>
+      <div class="crit">
+        <span class="pill ok">✓ Visa sản xuất</span><span class="pill miss">✕ Tiện CNC</span><span class="pill miss">✕ Tiếng Nhật N5</span><span class="pill ok">✓ Cách 25 km</span><span class="pill ok">✓ Kịp ngày bắt đầu</span>
+      </div>
+      <p class="note" style="margin-top:10px">Trạng thái thứ ba <span class="pill unk">? Chưa rõ</span> dùng khi thiếu dữ liệu, không bao giờ tính là Đạt.</p>
+    </div>
+  </div>
+  <div class="tbl-wrap"><table class="rules">
+    <thead><tr><th>Tình huống</th><th>AI phải làm</th></tr></thead>
+    <tbody>
+      <tr><td>Chưa trả lời đủ 3 câu</td><td>Không chấm điểm. Hiện lời mời trả lời 3 câu để được chấm.</td></tr>
+      <tr><td>Một tiêu chí chưa rõ</td><td>Đánh dấu Chưa rõ, không tính là Đạt.</td></tr>
+      <tr><td>Visa không khớp</td><td>Hiện là tiêu chí thiếu, không gửi thông báo chủ động cho việc đó, nhắc rằng HR sẽ xác minh.</td></tr>
+      <tr><td>Điểm thấp</td><td>Vẫn cho ứng tuyển, gợi ý cập nhật hồ sơ.</td></tr>
+      <tr><td>Lời giải thích</td><td>Tiếng Việt, ngắn, theo từng tiêu chí, không thuật ngữ kỹ thuật.</td></tr>
+      <tr><td>Lương</td><td>Luôn ghi "ước tính" và cách tính, không trình bày như cam kết.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="foot"><span>06</span><span class="track"><i style="width:50%"></i></span><span>12</span></div>
+</section>
+
+<section class="slide" id="pay" aria-labelledby="t6">
+  <div class="meta"><span class="eyebrow">Tính năng tạo niềm tin</span><span>Lương thực nhận</span></div>
+  <h2 class="h" id="t6">Tiền về tay, không phải lương gộp.</h2>
+  <div class="net">
+    <b>¥221.526</b>
+    <span class="lede">thực nhận mỗi tháng, ước tính (sai số ±5%)<br>≈ 38,1 triệu ₫ · khoảng 70% lương gộp</span>
+  </div>
+  <div class="wf" id="wf" role="img" aria-label="Biểu đồ thác nước: lương gộp 315.240 yên, trừ bảo hiểm, thuế, ký túc xá và điện nước, còn 221.526 yên"></div>
+  <p class="note">Ví dụ: Vận hành máy tiện CNC, Mikawa Precision, Toyota-shi. Cộng thêm thưởng chuyên cần ¥15.000 nếu đi làm đủ ngày; lương trả ngày 25 hằng tháng. Dữ liệu demo của prototype.</p>
+  <div class="foot"><span>07</span><span class="track"><i style="width:58%"></i></span><span>12</span></div>
+</section>
+
+<section class="slide" id="stories" aria-labelledby="t7">
+  <div class="meta"><span class="eyebrow">User stories &amp; tiêu chí nghiệm thu</span><span>PRD</span></div>
+  <h2 class="h" id="t7">Năm câu chuyện, đo được.</h2>
+  <div class="grid g2">
+    <article class="story"><span class="id">US-1</span><b>Nhận việc phù hợp qua Zalo</b><i>Là người lao động Việt ở Aichi, tôi muốn nhận tin việc phù hợp qua Zalo, để không phải tự đi tìm.</i>
+      <ul class="ac"><li>Đăng ký bằng Zalo, trả lời 3 câu chủ yếu bằng nút trả lời nhanh.</li><li>Chỉ gửi việc khi visa khớp và khoảng cách trong giới hạn người dùng chọn.</li><li>Mỗi tin có tên việc, nơi làm, lương thực nhận ước tính, mức phù hợp, nút xem chi tiết.</li><li>Tắt thông báo bằng 1 thao tác.</li></ul></article>
+    <article class="story"><span class="id">US-2</span><b>Hiểu vì sao mình hợp hay chưa</b><i>Là người lao động, tôi muốn biết mình đạt và thiếu tiêu chí nào, để quyết định có ứng tuyển không.</i>
+      <ul class="ac"><li>Mỗi việc có một mức và danh sách tiêu chí Đạt / Thiếu / Chưa rõ.</li><li>Có tiêu chí Thiếu thì hiện "Cập nhật hồ sơ" và "Vẫn ứng tuyển".</li><li>Luôn hiện câu: điểm AI là gợi ý, HR quyết định.</li><li>Chưa đủ dữ liệu thì không hiện điểm.</li></ul></article>
+    <article class="story"><span class="id">US-3</span><b>Biết lương thực nhận trước khi ứng tuyển</b><i>Là người lao động, tôi muốn thấy số tiền thực sự về tay, để so sánh các việc.</i>
+      <ul class="ac"><li>Hiện lương thực nhận (JPY và VND) và tỷ lệ so với lương gộp.</li><li>Bấm vào thì thấy từng khoản cộng / trừ.</li><li>Luôn có nhãn "ước tính" và các giả định.</li></ul></article>
+    <article class="story"><span class="id">US-4</span><b>Theo dõi đơn, không bị bỏ rơi</b><i>Là người lao động, tôi muốn biết đơn đang ở đâu, để không phải chờ trong im lặng.</i>
+      <ul class="ac"><li>Trạng thái: Đang chờ → Đang xem xét → Phỏng vấn → Kết quả HR.</li><li>Quá khung phản hồi thì báo người dùng và gợi ý việc thay thế, không hiển thị như bị từ chối.</li></ul></article>
+    <article class="story" style="grid-column:1/-1"><span class="id">US-5</span><b>HR nhận danh sách ngắn</b><i>Là HR nhà máy, tôi muốn danh sách ứng viên đã sắp theo mức phù hợp kèm lý do, để sàng lọc nhanh hơn.</i>
+      <ul class="ac"><li>Sắp theo điểm, mỗi ứng viên có lý do khớp và điểm cần xác minh.</li><li>HR ghi nhận quyết định; quyết định được lưu để hiệu chỉnh mô hình.</li></ul></article>
+  </div>
+  <div class="foot"><span>08</span><span class="track"><i style="width:67%"></i></span><span>12</span></div>
+</section>
+
+<section class="slide" id="metrics" aria-labelledby="t8">
+  <div class="meta"><span class="eyebrow">Chỉ số đo lường</span><span>Khung đề xuất</span></div>
+  <h2 class="h" id="t8">Đo việc được giữ, không chỉ lượt bấm.</h2>
+  <span class="draft">Đề xuất · chưa có dữ liệu thật</span>
+  <div class="ns"><small>North Star</small><b>Số người lao động được tuyển và vẫn làm việc sau 90 ngày, mỗi tháng</b><span>Gắn với giá trị cho người lao động và với doanh thu, vì nhà tuyển dụng trả phí khi tuyển được người.</span></div>
+  <div class="grid g3">
+    <div><h3>Phễu</h3><div class="funnel">
+      <div><strong>Thu hút</strong><span>Người theo dõi OA · tỷ lệ hoàn thành 3 câu hỏi</span></div>
+      <div><strong>Ghép</strong><span>Tỷ lệ mở tin gợi ý · tỷ lệ xem chi tiết</span></div>
+      <div><strong>Ứng tuyển</strong><span>Tỷ lệ ứng tuyển · ứng viên đạt yêu cầu mỗi việc</span></div>
+      <div><strong>Tuyển</strong><span>Tỷ lệ phỏng vấn, nhận việc · thời gian đến quyết định HR</span></div>
+      <div><strong>Giữ chân</strong><span>Còn làm sau 30 và 90 ngày</span></div>
+    </div></div>
+    <div class="panel"><h3>Chất lượng AI</h3><ul class="clean"><li>Tỷ lệ ứng viên Great Fit được HR chấp nhận, phải cao hơn rõ rệt so với Possible và Not Yet.</li><li>Tỷ lệ HR đi ngược gợi ý của AI.</li></ul></div>
+    <div class="panel"><h3>Chỉ số bảo vệ</h3><ul class="clean"><li>Chênh lệch lương ước tính và lương thực tế, mục tiêu trong ±5%.</li><li>Tỷ lệ chặn hoặc huỷ theo dõi Zalo OA.</li><li>Khiếu nại việc không đúng mô tả.</li></ul></div>
+  </div>
+  <div class="foot"><span>09</span><span class="track"><i style="width:75%"></i></span><span>12</span></div>
+</section>
+
+<section class="slide" id="rollout" aria-labelledby="t9">
+  <div class="meta"><span class="eyebrow">Kế hoạch triển khai</span><span>Prove demand. Then scale.</span></div>
+  <h2 class="h" id="t9">Chứng minh nhu cầu, rồi mới mở rộng.</h2>
+  <div class="phases">
+    <div class="phase"><span class="k">PHASE 1 · TEST</span><b>Zalo OA pilot</b><p>Gửi việc thủ công hoặc bán tự động cho một nhóm nhỏ ở Aichi. Có tiếp cận được người tìm việc không? Họ thích việc nào? Có quan tâm thật đến việc nhà máy không?</p><div class="gate">Sang phase 2 khi có đủ người quan tâm và ứng tuyển để có tuyển dụng thật</div></div>
+    <div class="phase"><span class="k">PHASE 2 · BUILD</span><b>Web app + ứng tuyển</b><p>Khám phá việc, hồ sơ ứng viên, ứng tuyển, theo dõi đơn. Người lao động có tự hoàn thành hồ sơ không? HR có dùng danh sách ứng viên không?</p><div class="gate">Sang phase 3 khi có tuyển dụng thật, đều đặn</div></div>
+    <div class="phase"><span class="k">PHASE 3 · GROW</span><b>AI + mở rộng</b><p>AI matching, mở rộng tỉnh và quốc tịch. AI có làm tăng tỷ lệ tuyển và giảm thời gian sàng lọc không?</p><div class="gate">Giữ nguyên mô hình nhà tuyển dụng trả phí</div></div>
+  </div>
+  <p class="lede">Tầm nhìn dài hạn không đổi. Chỉ thay đổi thứ tự đầu tư.</p>
+  <div class="foot"><span>10</span><span class="track"><i style="width:83%"></i></span><span>12</span></div>
+</section>
+
+<section class="slide" id="risks" aria-labelledby="t10">
+  <div class="meta"><span class="eyebrow">Rủi ro &amp; giả định</span><span>Cần kiểm chứng</span></div>
+  <h2 class="h" id="t10">Những gì có thể sai.</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Rủi ro / giả định</th><th>Cách kiểm chứng hoặc giảm thiểu</th></tr></thead>
+    <tbody>
+      <tr><td>Zalo thật sự là kênh chính (mới có 2 phỏng vấn)</td><td>Pilot phase 1, phỏng vấn thêm người lao động</td></tr>
+      <tr><td>Ước tính lương sai, mất niềm tin</td><td>Ghi rõ "ước tính", so với phiếu lương thật, theo dõi chênh lệch</td></tr>
+      <tr><td>Người dùng hiểu điểm AI là "được nhận"</td><td>Câu cố định "AI gợi ý, HR quyết định", kiểm tra mức hiểu qua usability test</td></tr>
+      <tr><td>Quy định tuyển lao động nước ngoài, chuyển tư cách lưu trú</td><td>Con người xác minh, không hứa mốc thời gian không khả thi</td></tr>
+      <tr><td>Gửi quá nhiều thông báo</td><td>Giới hạn tần suất, theo dõi tỷ lệ chặn OA</td></tr>
+      <tr><td>Nhà máy không tham gia</td><td>Phỏng vấn HR nhà máy trong pilot, đo thời gian tạo danh sách ngắn</td></tr>
+    </tbody>
+  </table></div>
+  <div class="foot"><span>11</span><span class="track"><i style="width:92%"></i></span><span>12</span></div>
+</section>
+
+<section class="slide closing" id="next" aria-labelledby="t11">
+  <div class="meta"><span class="eyebrow">Nếu làm tiếp</span><span>Next steps</span></div>
+  <h2 class="h" id="t11">Hai bên đang tìm nhau. Một cây cầu.</h2>
+  <div class="grid g2">
+    <ul class="clean">
+      <li>Phỏng vấn thêm 5–8 người lao động và 3 HR nhà máy trước khi khoá phạm vi phase 1.</li>
+      <li>Định nghĩa trọng số điểm phù hợp cùng HR, kiểm tra ngưỡng 85 / 60 bằng dữ liệu tuyển thật.</li>
+      <li>Usability test lời giải thích của AI: người dùng có hiểu "Thiếu: tiếng Nhật" nghĩa là gì và nên làm gì không.</li>
+      <li>Đối chiếu công thức lương thực nhận với phiếu lương thật.</li>
+    </ul>
+    <div class="src">
+      <strong>Nguồn &amp; lưu ý dữ liệu</strong>
+      <span>24,2%: Cục Lao động Aichi, 10/2025.</span>
+      <span>1,5 triệu người dùng, 48 giờ, đăng ký qua Zalo: theo đề bài Designathon.</span>
+      <span>~3,48% và 40% trong pitch chưa có nguồn, không dùng làm căn cứ.</span>
+      <span>Phỏng vấn định tính, n = 2. Giao diện và lương là dữ liệu demo.</span>
+      <span>UI trên ZEN Kaiz Design System (bản miễn phí, Dizai Studio). Chưa kiểm định WCAG.</span>
+      <span><a href="https://team7designathon-viecnhanh.vercel.app/" target="_blank" rel="noopener">Prototype ↗</a> · <a href="https://leaf-it-to-us-team7.vercel.app/" target="_blank" rel="noopener">Pitch ↗</a> · <a href="/">Portfolio ↗</a></span>
+    </div>
+  </div>
+  <div class="foot"><span>12</span><span class="track"><i style="width:100%"></i></span><span>12</span></div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  var GROSS=315240;
+  var rows=[
+    {t:'add',l:'Lương cơ bản',s:'¥1.480/giờ × 168 giờ',v:248640},
+    {t:'add',l:'Tăng ca',s:'~20 giờ × 125%',v:37000},
+    {t:'add',l:'Phụ cấp ca đêm',s:'+25%, 22h–5h',v:29600},
+    {t:'total',l:'Tổng trước khấu trừ',s:'',v:0},
+    {t:'cut',l:'Bảo hiểm xã hội',s:'Y tế, hưu trí, thất nghiệp',v:46656},
+    {t:'cut',l:'Thuế thu nhập',s:'Khấu trừ tại nguồn',v:8058},
+    {t:'cut',l:'Thuế cư trú',s:'Giả định',v:9000},
+    {t:'cut',l:'Ký túc xá',s:'',v:22000},
+    {t:'cut',l:'Điện nước',s:'Ước tính',v:8000},
+    {t:'total',l:'Thực nhận',s:'Ước tính',v:0}
+  ];
+  var fmt=function(n){return n.toLocaleString('vi-VN')};
+  var run=0,out=[],net=0;
+  rows.forEach(function(r){
+    var start,width,label;
+    if(r.t==='add'){start=run;run+=r.v;width=r.v;label='+'+fmt(r.v);}
+    else if(r.t==='cut'){run-=r.v;start=run;width=r.v;label='−'+fmt(r.v);}
+    else{start=0;width=run;label=fmt(run);net=run;}
+    out.push('<div class="wf-row '+r.t+'"><div class="lab">'+r.l+(r.s?'<small>'+r.s+'</small>':'')+'</div>'+
+      '<div class="wf-track"><span class="wf-bar" style="left:'+(start/GROSS*100).toFixed(2)+'%;width:'+(width/GROSS*100).toFixed(2)+'%"></span></div>'+
+      '<div class="v">¥'+label+'</div></div>');
+  });
+  var ticks=[0,100000,200000,300000].map(function(x){return '<span style="left:'+(x/GROSS*100).toFixed(2)+'%">'+(x/1000)+'k</span>'}).join('');
+  out.push('<div class="wf-axis"><div></div><div>'+ticks+'</div><div></div></div>');
+  var el=document.getElementById('wf'); el.innerHTML=out.join('');
+  if(net!==221526){el.insertAdjacentHTML('beforeend','<p class="note">Lưu ý: tổng tính được ¥'+fmt(net)+' khác số trên prototype.</p>');}
+})();
+</script>
+
+</body>
+</html>
