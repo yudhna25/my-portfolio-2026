@@ -23,12 +23,12 @@ const unsubscribe = useLangStore.subscribe(({ lang }) => {
 
 const META_COPY = {
   vi: {
-    title: 'Trần Vũ Anh Duy · Creative Designer · Stellar Odyssey Portfolio',
-    description: 'Trần Vũ Anh Duy, Creative Designer chuyên về UX/UI, Motion Graphics và 3D Web tương tác. Trải nghiệm không gian vũ trụ điện ảnh, tối giản và hướng tới người dùng.',
+    title: 'Trần Vũ Anh Duy · AI Product Designer · Stellar Odyssey Portfolio',
+    description: 'Trần Vũ Anh Duy, AI Product Designer chuyên về UX/UI, sản phẩm AI, Motion Graphics và 3D Web tương tác. Trải nghiệm không gian vũ trụ điện ảnh, tối giản và hướng tới người dùng.',
   },
   en: {
-    title: 'Tran Vu Anh Duy · Creative Designer · Stellar Odyssey Portfolio',
-    description: 'Portfolio of Tran Vu Anh Duy, Creative Designer specializing in UX/UI, Motion Graphics, and interactive 3D Web. Minimalist, cinematic, user-centric portfolio experience.',
+    title: 'Tran Vu Anh Duy · AI Product Designer · Stellar Odyssey Portfolio',
+    description: 'Portfolio of Tran Vu Anh Duy, AI Product Designer specializing in UX/UI, AI products, Motion Graphics, and interactive 3D Web. Minimalist, cinematic, user-centric portfolio experience.',
   },
 };
 

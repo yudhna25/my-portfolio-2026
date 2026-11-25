@@ -216,6 +216,7 @@ export function StoryMeteor({ layout, frozen = false }) {
     root.current.visible = !frozen && !document.hidden && data?.range > 0 && (opacity > 0 || pieces > 0);
     if (!root.current.visible) { cache.journey = -1; return; }
     const journey = (state.storyChapter === 'departure' ? 1 : 0) + state.chapterProgress;
+    if (cache.points.length !== data.points.length) cache.points = new Float64Array(data.points.length);
     let changed = journey !== cache.journey || data.width !== cache.width || data.height !== cache.height || data.range !== cache.range;
     for (let i = 0; i < data.points.length; i++) if (data.points[i] !== cache.points[i]) changed = true;
     if (changed) {

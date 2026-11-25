@@ -8,7 +8,7 @@ import { createMeteorLayout, meteorEmphasis } from '@/3d/utils/storyMeteor';
 import { PORTFOLIO_DATA } from '@/data';
 import { MixedText } from '@/components/ui/MixedText';
 
-const placement = ['lg:col-start-1', 'lg:col-start-5', 'lg:col-start-8'];
+const placement = ['lg:col-start-1', 'lg:col-start-5', 'lg:col-start-8', 'lg:col-start-3'];
 
 export default function Experience({ onLayout }) {
   const root = useRef(null);
@@ -17,7 +17,7 @@ export default function Experience({ onLayout }) {
   const reduced = useReducedMotion();
 
   useGSAP(() => {
-    const layout = layoutRef.current ??= createMeteorLayout();
+    const layout = layoutRef.current ??= createMeteorLayout(PORTFOLIO_DATA.experience.length);
     const section = root.current;
     const labels = [...section.querySelectorAll('[data-meteor-label]')];
     const setters = labels.map(label => gsap.quickSetter(label, 'opacity'));
@@ -41,11 +41,12 @@ export default function Experience({ onLayout }) {
         const box = label.getBoundingClientRect();
         const y = box.top - rect.top - 24;
         // Phones have no free column beside the text, so the meteor keeps to the left margin there.
-        points[(i + 1) * 2] = width < 1024 ? 12 / width : (box.left + box.width * (i === 1 ? 0.72 : 0.35)) / width;
+        points[(i + 1) * 2] = width < 1024 ? 12 / width : (box.left + box.width * (i % 2 === 1 ? 0.72 : 0.35)) / width;
         points[(i + 1) * 2 + 1] = y;
         layout.milestones[i] = y;
       });
-      points[8] = 0.62; points[9] = layout.range + height * 0.8;
+      const exitIdx = (labels.length + 1) * 2;
+      points[exitIdx] = 0.62; points[exitIdx + 1] = layout.range + height * 0.8;
       points[1] = Math.min(height * 0.20, points[3] - height * 0.65);
       onLayout(layout);
       draw();

@@ -61,7 +61,8 @@ export function placeWorksPreview(layout, id, width, height, out) {
   if (layout.width < 1024) { out.x = margin; out.y = layout.height - height - 24; return out; }
   const box = layout.figures.find(item => item.id === id);
   if (!box) return out;
-  const clampX = x => Math.max(margin, Math.min(layout.width - width - margin, x));
+  const leftMargin = 120;
+  const clampX = x => Math.max(leftMargin, Math.min(layout.width - width - margin, x));
   const clampY = y => Math.max(132, Math.min(layout.height - height - margin, y));
   const candidates = [[box.right + 20, box.top], [box.left - width - 20, box.top],
     [(box.left + box.right - width) / 2, box.top - height - 20],

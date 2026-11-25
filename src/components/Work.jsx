@@ -180,7 +180,10 @@ export default function Work({ layoutRef, nativeNavigation = false }) {
       }
       if (target && data.ready && (measuredWidth !== data.width || measuredHeight !== data.height)) {
         const panel = preview.getBoundingClientRect();
-        if (open && data.width >= 1024) { position.x = 48; position.y = Math.max(132, (data.height - panel.height) / 2); }
+        if (open && data.width >= 1024) {
+          position.x = 128;
+          position.y = Math.max(88, Math.min(data.height - panel.height - 24, (data.height - panel.height) / 2));
+        }
         else placeWorksPreview(data, target, panel.width, panel.height, position);
         previewX(position.x - rect.left); previewY(position.y - rect.top);
         measuredWidth = data.width; measuredHeight = data.height;

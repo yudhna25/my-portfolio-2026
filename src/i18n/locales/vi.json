@@ -4,19 +4,19 @@
     "heading": "Trần Vũ Anh Duy. Portfolio 2026",
     "year": "2026",
     "name": "TRẦN VŨ ANH DUY",
-    "tagline": "Creative Designer",
+    "tagline": "AI Product Designer",
     "subTagline": "Giao diện để dùng, kể chuyện như một thước phim.",
     "scrollIndicator": "CUỘN ĐỂ BẮT ĐẦU HÀNH TRÌNH"
   },
   "about": {
     "sectionLabel": "The Navigator",
     "heading": "TRẦN VŨ / ANH DUY",
-    "subLabel": "Creative Designer · UX/UI & Motion",
-    "bioFirst": "Tôi tốt nghiệp loại Giỏi ngành Công nghệ Thông tin ở Đại học Sài Gòn, rồi học dựng phim ở Green Academy và Arena Multimedia. Hai quỹ đạo ấy định hình cách tôi làm việc: nghiên cứu và cấu trúc đi trước, ánh sáng, nhịp và chuyển động theo sau.",
-    "bioSecond": "Năm 2026, KINTRA giành giải TOKEN LEADER tại Designathon. Trước đó tôi quay và dựng TVC ở Hosana Media, rồi thiết kế giao diện khi thực tập UX/UI tại Designveloper. Với tôi, mỗi màn hình vẫn là một khung hình: mắt người xem sẽ tìm thấy gì đầu tiên?",
+    "subLabel": "AI Product Designer · UX/UI & Motion",
+    "bioFirst": "Tôi tốt nghiệp loại Khá ngành Công nghệ Thông tin ở Đại học Sài Gòn, rồi học dựng phim ở Green Academy và Arena Multimedia. Hai quỹ đạo ấy định hình cách tôi làm việc: nghiên cứu và cấu trúc đi trước, ánh sáng, nhịp và chuyển động theo sau.",
+    "bioSecond": "Hiện tôi thiết kế UX/UI cho các sản phẩm B2B SaaS ứng dụng AI tại AIPowers, và KINTRA vừa giành giải TOKEN LEADER tại Designathon 2026. Trước đó tôi quay dựng TVC ở Hosana Media rồi thực tập UX/UI tại Designveloper. Với tôi, mỗi màn hình vẫn là một khung hình: mắt người xem sẽ tìm thấy gì đầu tiên?",
     "quote": "Mỗi giao diện là một khoảng trời nhỏ. Tôi chọn ngôi sao bạn thấy đầu tiên.",
     "photoCaption": "FIG.01 · NGƯỜI DẪN ĐƯỜNG",
-    "avatarAlt": "Chân dung Trần Vũ Anh Duy, Creative Designer",
+    "avatarAlt": "Chân dung Trần Vũ Anh Duy, AI Product Designer",
     "toolsLabel": "KHO VŨ KHÍ PHẦN MỀM",
     "skillsLabel": "NĂNG LỰC CỐT LÕI",
     "tools": {
@@ -209,7 +209,7 @@
         "name": "Đại học Sài Gòn",
         "period": "2021 – 2026",
         "degree": "Cử nhân Công nghệ Thông tin",
-        "description": "Tốt nghiệp loại Giỏi. Trọng tâm: Phân tích & Thiết kế Hệ thống, HCI, Usability Testing, Prototyping Web/App."
+        "description": "Tốt nghiệp loại Khá (GPA 3.1/4.0). Trọng tâm: Phân tích & Thiết kế Hệ thống, HCI, Usability Testing, Prototyping Web/App."
       },
       "arenaMultimedia": {
         "name": "Arena Multimedia",
@@ -257,6 +257,13 @@
         "period": "09/2025 – 12/2025",
         "type": "Thực tập",
         "description": "Nghiên cứu UX qua khảo sát. Thiết kế UI nhất quán thương hiệu, tối ưu layout và typography. Bàn giao thiết kế cho đội ngũ phát triển."
+      },
+      "aipowers": {
+        "company": "AIPOWERS",
+        "role": "UX/UI Designer",
+        "period": "2026 – nay",
+        "type": "Toàn thời gian",
+        "description": "Thiết kế UX/UI đầu cuối cho các sản phẩm B2B SaaS ứng dụng AI (dự án nội bộ). Phối hợp cùng PM và kỹ sư chuyển yêu cầu nghiệp vụ thành luồng trải nghiệm rõ ràng, ứng dụng công cụ AI rút ngắn vòng kiểm chứng thiết kế và kiểm tra giao diện trước mỗi đợt phát hành."
       }
     },
     "headingAccent": "Hành Trình"
@@ -345,7 +352,7 @@
     "profile": {
       "displayName": "TRẦN VŨ ANH DUY",
       "englishName": "Tran Vu Anh Duy",
-      "role": "Creative Designer",
+      "role": "AI Product Designer",
       "disciplines": "UX/UI + Đồ họa + Motion"
     }
   },

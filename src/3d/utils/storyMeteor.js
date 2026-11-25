@@ -7,9 +7,10 @@ const smooth = value => { const p = clampStoryProgress(value); return p * p * (3
 const smoother = value => { const p = clampStoryProgress(value); return p * p * p * (10 + p * (-15 + 6 * p)); };
 
 // Frame data shared by the DOM measurement and the single scene renderer.
-export function createMeteorLayout() {
-  return { width: 1, height: 1, range: 0, points: new Float64Array(10), milestones: new Float64Array(3),
-    travel: new Float64Array(4 * 33), bounds: new Float64Array(5) };
+export function createMeteorLayout(milestoneCount = 4) {
+  const pointCount = milestoneCount + 2;
+  return { width: 1, height: 1, range: 0, points: new Float64Array(pointCount * 2), milestones: new Float64Array(milestoneCount),
+    travel: new Float64Array((pointCount - 1) * 33), bounds: new Float64Array(pointCount) };
 }
 
 export function meteorReadingY(layout, progress) {
@@ -42,7 +43,8 @@ export function meteorSplit(chapter, progress) {
 export const meteorTargets = { ready: false, points: WORKS_IDS.map(() => ({ x: 0, y: 0, z: 0 })) };
 
 function curveSlope(points, index, exitSlope) {
-  if (index === 4) return exitSlope;
+  const lastIndex = points.length / 2 - 1;
+  if (index === lastIndex) return exitSlope;
   if (index === 0) return (points[2] - points[0]) / Math.max(1, points[3] - points[1]);
   const left = Math.max(1, points[index * 2 + 1] - points[index * 2 - 1]);
   const right = Math.max(1, points[index * 2 + 3] - points[index * 2 + 1]);
@@ -53,10 +55,11 @@ function curveSlope(points, index, exitSlope) {
 
 // Shared slopes and zero endpoint acceleration prevent short intervals from bending the next leg beyond its anchors.
 function curveX(points, contentY, exitSlope) {
+  const lastIndex = points.length / 2 - 1;
   if (contentY < points[1]) return points[0] + (contentY - points[1]) * curveSlope(points, 0, exitSlope);
-  if (contentY >= points[9]) return points[8];
+  if (contentY >= points[lastIndex * 2 + 1]) return points[lastIndex * 2];
   let segment = 0;
-  while (segment < 3 && contentY > points[(segment + 1) * 2 + 1]) segment++;
+  while (segment < lastIndex - 1 && contentY > points[(segment + 1) * 2 + 1]) segment++;
   const start = segment * 2, end = start + 2;
   const span = Math.max(1, points[end + 1] - points[start + 1]);
   const t = clampStoryProgress((contentY - points[start + 1]) / span);
@@ -93,15 +96,15 @@ export function sampleStoryMeteor(layout, q, out, pose) {
     return worldPoint(curveX(layout.points, contentY, -0.12 / Math.max(1, layout.range + 0.60 * layout.height)),
       0.20 + 0.60 * q, 24, aspect, out, pose);
   }
-  const p = q - 1, ease = smoother(p);
+  const p = q - 1, ease = smoother(p), exitX = layout.points[layout.points.length - 2];
   let startX = 0, startY = 0, startZ = 0;
   if (p < 0.16) {
     storyCameraPath('experience', 1, pose, false, aspect);
-    worldPoint(layout.points[8] - 0.12 * p, 0.8 + 0.6 * p, 24, aspect, out, pose);
+    worldPoint(exitX - 0.12 * p, 0.8 + 0.6 * p, 24, aspect, out, pose);
     startX = out.x; startY = out.y; startZ = out.z;
   }
   storyCameraPath('departure', p, pose, false, aspect);
-  const x = layout.points[8] + (0.5 - layout.points[8]) * ease
+  const x = exitX + (0.5 - exitX) * ease
     - 0.12 * (p - 6 * p * p * p + 8 * p ** 4 - 3 * p ** 5);
   const y = 0.8 + 0.6 * p - 6.6 * p ** 3 + 9.3 * p ** 4 - 3.6 * p ** 5;
   worldPoint(x, y, 24 + 72 * ease, aspect, out, pose);

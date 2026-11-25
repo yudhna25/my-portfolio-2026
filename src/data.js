@@ -10,7 +10,7 @@ export const THEME = {
 export const PORTFOLIO_DATA = {
   profile: {
     name: 'Tran Vu Anh Duy',
-    role: 'Multimedia Designer',
+    role: 'AI Product Designer',
     email: 'anhduy25work@gmail.com',
     phone: '0822 021 418',
     facebook: 'https://www.facebook.com/tvad.25',
@@ -122,6 +122,15 @@ export const PORTFOLIO_DATA = {
       type: 'Internship',
       details:
         'Conducted UX research via surveys. Designed brand-consistent UI, optimizing layout and typography. Design handoff with Developers.',
+    },
+    {
+      id: 'aipowers',
+      company: 'AIPOWERS',
+      role: 'UX/UI Designer',
+      year: '2026 – Present',
+      type: 'Full-time',
+      details:
+        'Design end-to-end UX/UI for AI-powered B2B SaaS products (internal, under NDA). Partner with PM and engineers to turn business requirements into clear flows, apply AI tools to shorten design validation, and check UI quality before each release.',
     },
   ],
   education: [

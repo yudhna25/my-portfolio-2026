@@ -4,19 +4,19 @@
     "heading": "Tran Vu Anh Duy. Portfolio 2026",
     "year": "2026",
     "name": "TRAN VU ANH DUY",
-    "tagline": "Creative Designer",
+    "tagline": "AI Product Designer",
     "subTagline": "Interfaces built to be used, framed like a film.",
     "scrollIndicator": "SCROLL TO BEGIN THE JOURNEY"
   },
   "about": {
     "sectionLabel": "The Navigator",
     "heading": "TRAN VU / ANH DUY",
-    "subLabel": "Creative Designer · UX/UI & Motion",
-    "bioFirst": "I graduated with High Honors in Information Technology from Saigon University, then learned to cut film at Green Academy and Arena Multimedia. Those two orbits shape how I work: research and structure come first, then light, rhythm and motion.",
-    "bioSecond": "In 2026, KINTRA won the TOKEN LEADER award at Designathon. Before that I shot and edited TVCs at Hosana Media, then designed interfaces as a UX/UI intern at Designveloper. Every screen is still a frame to me: what will the eye find first?",
+    "subLabel": "AI Product Designer · UX/UI & Motion",
+    "bioFirst": "I graduated with Good Tier in Information Technology from Saigon University, then learned to cut film at Green Academy and Arena Multimedia. Those two orbits shape how I work: research and structure come first, then light, rhythm and motion.",
+    "bioSecond": "Currently I design UX/UI for AI-powered B2B SaaS products at AIPowers, and KINTRA won the TOKEN LEADER award at Designathon 2026. Before that I shot and edited TVCs at Hosana Media, then designed interfaces as a UX/UI intern at Designveloper. Every screen is still a frame to me: what will the eye find first?",
     "quote": "Every interface is a small sky. I choose the star you see first.",
     "photoCaption": "FIG.01 · THE NAVIGATOR",
-    "avatarAlt": "Portrait of Tran Vu Anh Duy, Creative Designer",
+    "avatarAlt": "Portrait of Tran Vu Anh Duy, AI Product Designer",
     "toolsLabel": "SOFTWARE ARSENAL",
     "skillsLabel": "CORE COMPETENCIES",
     "tools": {
@@ -209,7 +209,7 @@
         "name": "Saigon University",
         "period": "2021 – 2026",
         "degree": "Bachelor's Degree in Information Technology",
-        "description": "Graduated with High Honors in Information Technology. Focus: System Analysis and Design, HCI, Usability Testing, Web/App Prototyping."
+        "description": "Graduated Good Tier (GPA 3.1/4.0). Focus: System Analysis and Design, HCI, Usability Testing, Web/App Prototyping."
       },
       "arenaMultimedia": {
         "name": "Arena Multimedia",
@@ -257,6 +257,13 @@
         "period": "Sep 2025 – Dec 2025",
         "type": "Internship",
         "description": "Conducted UX research via surveys. Designed brand-consistent UI, optimizing layout and typography. Handed off designs to development teams."
+      },
+      "aipowers": {
+        "company": "AIPOWERS",
+        "role": "UX/UI Designer",
+        "period": "2026 – Present",
+        "type": "Full-time",
+        "description": "Design end-to-end UX/UI for AI-powered B2B SaaS products (internal, under NDA). Partner with PM and engineers to turn business requirements into clear flows, apply AI tools to shorten design validation, and verify UI quality before each release."
       }
     },
     "headingAccent": "Voyage"
@@ -345,7 +352,7 @@
     "profile": {
       "displayName": "TRAN VU ANH DUY",
       "englishName": "",
-      "role": "Creative Designer",
+      "role": "AI Product Designer",
       "disciplines": "UX/UI + Graphic + Motion"
     }
   },
